@@ -1,2 +1,2 @@
-export { default } from "./RichTextEditor";
+export { RichTextEditor } from "./RichTextEditor";
 export * from "./RichTextEditor";

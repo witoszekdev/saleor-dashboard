@@ -1,2 +1,2 @@
-export { default } from "./CountryList";
+export { CountryList } from "./CountryList";
 export * from "./CountryList";

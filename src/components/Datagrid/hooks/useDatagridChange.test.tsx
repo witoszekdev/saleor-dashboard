@@ -2,8 +2,9 @@
 import { act, renderHook } from "@testing-library/react-hooks";
 
 import { AvailableColumn } from "../types";
-import useDatagridChange, {
+import {
   DatagridChangeStateContext,
+  useDatagridChange,
   useDatagridChangeState,
 } from "./useDatagridChange";
 

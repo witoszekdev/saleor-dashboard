@@ -34,4 +34,4 @@ const OrderCannotCancelOrderDialog = ({ open, onClose }: DialogProps) => {
 };
 
 OrderCannotCancelOrderDialog.displayName = "OrderCannotCancelOrderDialog";
-export default OrderCannotCancelOrderDialog;
+export { OrderCannotCancelOrderDialog };

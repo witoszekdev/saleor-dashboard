@@ -17,6 +17,6 @@ const StaffMembersIcon = createSvgIcon(
   "StaffMembers",
 );
 
-export default function StaffMembers(props: SvgIconProps) {
+export function StaffMembers(props: SvgIconProps) {
   return <StaffMembersIcon {...props} viewBox="0 0 32 32" />;
 }

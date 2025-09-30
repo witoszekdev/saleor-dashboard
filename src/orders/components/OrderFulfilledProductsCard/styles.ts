@@ -25,4 +25,4 @@ const useStyles = makeStyles(
   { name: "OrderFulfilledProductsCard" },
 );
 
-export default useStyles;
+export { useStyles };

@@ -15,7 +15,7 @@ import { useExtensions } from "@dashboard/extensions/hooks/useExtensions";
 import { CategoryDetailsQuery, PermissionEnum, ProductErrorFragment } from "@dashboard/graphql";
 import { useBackLinkWithState } from "@dashboard/hooks/useBackLinkWithState";
 import { SubmitPromise } from "@dashboard/hooks/useForm";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { TranslationsIcon } from "@dashboard/icons/Translations";
 import { TranslationsButton } from "@dashboard/translations/components/TranslationsButton/TranslationsButton";
 import { languageEntityUrl, TranslatableEntities } from "@dashboard/translations/urls";
@@ -24,11 +24,11 @@ import { Box, sprinkles } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 
 import { ListProps, ListViews, RelayToFlat } from "../../../types";
-import CategoryDetailsForm from "../../components/CategoryDetailsForm";
-import CategoryBackground from "../CategoryBackground";
+import { CategoryDetailsForm } from "../../components/CategoryDetailsForm";
+import { CategoryBackground } from "../CategoryBackground";
 import { CategoryProducts } from "../CategoryProducts";
 import { CategorySubcategories } from "../CategorySubcategories";
-import CategoryUpdateForm, { CategoryUpdateData } from "./form";
+import { CategoryUpdateData, CategoryUpdateForm } from "./form";
 
 export enum CategoryPageTab {
   categories = "categories",

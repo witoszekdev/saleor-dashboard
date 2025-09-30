@@ -1,5 +1,5 @@
 import { AttributeErrorCode, AttributeErrorFragment } from "@dashboard/graphql";
-import getAttributeErrorMessage from "@dashboard/utils/errors/attribute";
+import { getAttributeErrorMessage } from "@dashboard/utils/errors/attribute";
 import { defineMessages, IntlShape } from "react-intl";
 
 const messages = defineMessages({

@@ -1,12 +1,12 @@
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
 import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import Form from "@dashboard/components/Form";
-import FormSpacer from "@dashboard/components/FormSpacer";
+import { Form } from "@dashboard/components/Form";
+import { FormSpacer } from "@dashboard/components/FormSpacer";
 import { DetailPageLayout } from "@dashboard/components/Layouts";
 import { Savebar } from "@dashboard/components/Savebar";
-import WebhookEvents from "@dashboard/custom-apps/components/WebhookEvents";
-import WebhookInfo from "@dashboard/custom-apps/components/WebhookInfo";
-import WebhookStatus from "@dashboard/custom-apps/components/WebhookStatus";
+import { WebhookEvents } from "@dashboard/custom-apps/components/WebhookEvents";
+import { WebhookInfo } from "@dashboard/custom-apps/components/WebhookInfo";
+import { WebhookStatus } from "@dashboard/custom-apps/components/WebhookStatus";
 import {
   createAsyncEventsSelectHandler,
   createSyncEventsSelectHandler,
@@ -21,16 +21,16 @@ import {
   WebhookEventTypeSyncEnum,
 } from "@dashboard/graphql";
 import { SubmitPromise } from "@dashboard/hooks/useForm";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { Box } from "@saleor/macaw-ui-next";
 import { parse, print } from "graphql";
 import { useEffect, useState } from "react";
 import * as React from "react";
 import { useIntl } from "react-intl";
 
-import PermissionAlert from "../PermissionAlert";
-import WebhookHeaders from "../WebhookHeaders";
-import WebhookSubscriptionQuery from "../WebhookSubscriptionQuery";
+import { PermissionAlert } from "../PermissionAlert";
+import { WebhookHeaders } from "../WebhookHeaders";
+import { WebhookSubscriptionQuery } from "../WebhookSubscriptionQuery";
 import { getHeaderTitle, messages } from "./messages";
 import { getWebhookFormInitialFormValues } from "./webhookForm";
 
@@ -167,4 +167,4 @@ const WebhookDetailsPage = ({
 };
 
 WebhookDetailsPage.displayName = "WebhookDetailsPage";
-export default WebhookDetailsPage;
+export { WebhookDetailsPage };

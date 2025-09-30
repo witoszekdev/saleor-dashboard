@@ -1,2 +1,2 @@
-export { default } from "./AssignCollectionDialog";
+export { AssignCollectionDialog } from "./AssignCollectionDialog";
 export * from "./AssignCollectionDialog";

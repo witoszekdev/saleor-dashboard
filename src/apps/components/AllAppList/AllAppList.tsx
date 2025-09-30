@@ -3,7 +3,7 @@ import { AppInstallationFragment } from "@dashboard/graphql";
 import { Box, useTheme } from "@saleor/macaw-ui-next";
 import { PropsWithChildren } from "react";
 
-import AppListRow from "../AppListRow";
+import { AppListRow } from "../AppListRow";
 
 interface AllAppListProps {
   appList: AppstoreApi.SaleorApp[];
@@ -42,4 +42,4 @@ const AllAppList = ({
   );
 };
 
-export default AllAppList;
+export { AllAppList };

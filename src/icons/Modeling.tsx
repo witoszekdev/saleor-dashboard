@@ -38,4 +38,4 @@ const ModelingIcon = () => (
   </svg>
 );
 
-export default ModelingIcon;
+export { ModelingIcon };

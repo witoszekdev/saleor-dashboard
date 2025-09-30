@@ -1,9 +1,9 @@
 // @ts-strict-ignore
-import ActionDialog from "@dashboard/components/ActionDialog";
+import { ActionDialog } from "@dashboard/components/ActionDialog";
 import { Combobox } from "@dashboard/components/Combobox";
 import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import useModalDialogOpen from "@dashboard/hooks/useModalDialogOpen";
-import useStateFromProps from "@dashboard/hooks/useStateFromProps";
+import { useModalDialogOpen } from "@dashboard/hooks/useModalDialogOpen";
+import { useStateFromProps } from "@dashboard/hooks/useStateFromProps";
 import { FetchMoreProps } from "@dashboard/types";
 import { Option } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
@@ -70,4 +70,4 @@ const ProductTypePickerDialog = ({
 };
 
 ProductTypePickerDialog.displayName = "ProductTypePickerDialog";
-export default ProductTypePickerDialog;
+export { ProductTypePickerDialog };

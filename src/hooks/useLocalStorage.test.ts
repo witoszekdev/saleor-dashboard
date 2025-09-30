@@ -1,6 +1,6 @@
 import { renderHook } from "@testing-library/react-hooks";
 
-import useLocalStorage from "./useLocalStorage";
+import { useLocalStorage } from "./useLocalStorage";
 
 const key = "exampleKey";
 const initialValue = "exampleValue";

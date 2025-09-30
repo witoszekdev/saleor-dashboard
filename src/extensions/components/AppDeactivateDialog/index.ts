@@ -1,2 +1,2 @@
 export * from "./AppDeactivateDialog";
-export { default } from "./AppDeactivateDialog";
+export { AppDeactivateDialog } from "./AppDeactivateDialog";

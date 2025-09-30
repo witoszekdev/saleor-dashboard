@@ -126,4 +126,4 @@ function useLocalPaginator(setPaginationState: (paginationState: PaginationState
 
   return paginate;
 }
-export default useLocalPaginator;
+export { useLocalPaginator };

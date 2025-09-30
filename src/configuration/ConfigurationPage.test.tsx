@@ -1,4 +1,4 @@
-import useMediaQuery from "@material-ui/core/useMediaQuery";
+import { useMediaQuery } from "@material-ui/core/useMediaQuery";
 import { render, screen, waitFor } from "@testing-library/react";
 import { useIntl } from "react-intl";
 import { Link } from "react-router-dom";

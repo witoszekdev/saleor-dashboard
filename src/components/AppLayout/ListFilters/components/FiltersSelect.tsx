@@ -6,7 +6,7 @@ import {
   IFilter,
   InvalidFilters,
 } from "@dashboard/components/Filter";
-import useFilter from "@dashboard/components/Filter/useFilter";
+import { useFilter } from "@dashboard/components/Filter/useFilter";
 import { extractInvalidFilters } from "@dashboard/components/Filter/utils";
 import { ClickAwayListener, Grow, Popper } from "@material-ui/core";
 import { DropdownButton, sprinkles } from "@saleor/macaw-ui-next";

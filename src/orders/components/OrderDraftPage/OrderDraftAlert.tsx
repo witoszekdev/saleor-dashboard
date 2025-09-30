@@ -2,11 +2,11 @@ import { ChannelUsabilityDataQuery, OrderDetailsFragment } from "@dashboard/grap
 import { shippingZonesListPath } from "@dashboard/shipping/urls";
 import { Alert, AlertProps } from "@saleor/macaw-ui";
 import { sprinkles } from "@saleor/macaw-ui-next";
-import clsx from "clsx";
+import { clsx } from "clsx";
 import { FormattedMessage, MessageDescriptor, useIntl } from "react-intl";
 import { Link } from "react-router-dom";
 
-import OrderAlerts from "../OrderAlerts";
+import { OrderAlerts } from "../OrderAlerts";
 import { alertMessages } from "./messages";
 import { useAlertStyles } from "./styles";
 
@@ -88,4 +88,4 @@ const OrderDraftAlert = (props: OrderDraftAlertProps) => {
 };
 
 OrderDraftAlert.displayName = "OrderDraftAlert";
-export default OrderDraftAlert;
+export { OrderDraftAlert };

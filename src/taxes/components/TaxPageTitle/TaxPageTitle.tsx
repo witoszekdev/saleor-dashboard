@@ -1,4 +1,4 @@
-import HorizontalSpacer from "@dashboard/components/HorizontalSpacer";
+import { HorizontalSpacer } from "@dashboard/components/HorizontalSpacer";
 import { sectionNames } from "@dashboard/intl";
 import { makeStyles } from "@saleor/macaw-ui";
 import { FormattedMessage } from "react-intl";
@@ -23,4 +23,4 @@ const TaxPageTitle = () => {
   );
 };
 
-export default TaxPageTitle;
+export { TaxPageTitle };

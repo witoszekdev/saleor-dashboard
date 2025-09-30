@@ -1,6 +1,6 @@
 // @ts-strict-ignore
-import DiscountedPrice from "@dashboard/components/DiscountedPrice/DiscountedPrice";
-import Money from "@dashboard/components/Money";
+import { DiscountedPrice } from "@dashboard/components/DiscountedPrice/DiscountedPrice";
+import { Money } from "@dashboard/components/Money";
 import { SearchOrderVariantQuery } from "@dashboard/graphql";
 import { Text } from "@saleor/macaw-ui-next";
 
@@ -30,4 +30,4 @@ const OrderPriceLabel = ({ pricing }: OrderPriceLabelProps) => {
   );
 };
 
-export default OrderPriceLabel;
+export { OrderPriceLabel };

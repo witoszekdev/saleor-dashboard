@@ -1,5 +1,5 @@
 // @ts-strict-ignore
-import ActionDialog from "@dashboard/components/ActionDialog";
+import { ActionDialog } from "@dashboard/components/ActionDialog";
 import { WindowTitle } from "@dashboard/components/WindowTitle";
 import { ExtensionsUrls, PluginUrlDialog, PluginUrlQueryParams } from "@dashboard/extensions/urls";
 import {
@@ -8,12 +8,12 @@ import {
   usePluginQuery,
   usePluginUpdateMutation,
 } from "@dashboard/graphql";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useNotifier from "@dashboard/hooks/useNotifier";
-import useStateFromProps from "@dashboard/hooks/useStateFromProps";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
+import { useNotifier } from "@dashboard/hooks/useNotifier";
+import { useStateFromProps } from "@dashboard/hooks/useStateFromProps";
 import { commonMessages } from "@dashboard/intl";
 import { extractMutationErrors } from "@dashboard/misc";
-import createDialogActionHandlers from "@dashboard/utils/handlers/dialogActionHandlers";
+import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
 import { FormattedMessage, useIntl } from "react-intl";
 
 import { PluginDetailsPageFormData, PluginsDetailsPage } from "./components/PluginsDetailsPage";

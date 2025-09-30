@@ -5,7 +5,7 @@ import {
   SearchPageTypesQuery,
   SearchPageTypesQueryVariables,
 } from "@dashboard/graphql";
-import makeTopLevelSearch from "@dashboard/hooks/makeTopLevelSearch";
+import { makeTopLevelSearch } from "@dashboard/hooks/makeTopLevelSearch";
 
 export const searchPageTypes = gql`
   query SearchPageTypes($after: String, $first: Int!, $query: String!) {
@@ -23,6 +23,7 @@ export const searchPageTypes = gql`
   }
 `;
 
-export default makeTopLevelSearch<SearchPageTypesQuery, SearchPageTypesQueryVariables>(
-  SearchPageTypesDocument,
-);
+export const UsePageTypeSearch = makeTopLevelSearch<
+  SearchPageTypesQuery,
+  SearchPageTypesQueryVariables
+>(SearchPageTypesDocument);

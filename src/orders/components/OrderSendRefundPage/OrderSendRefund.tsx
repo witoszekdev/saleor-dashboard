@@ -1,8 +1,8 @@
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
 import { DashboardCard } from "@dashboard/components/Card";
-import CardSpacer from "@dashboard/components/CardSpacer";
+import { CardSpacer } from "@dashboard/components/CardSpacer";
 import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import Hr from "@dashboard/components/Hr";
+import { Hr } from "@dashboard/components/Hr";
 import { DetailPageLayout } from "@dashboard/components/Layouts";
 import {
   CreateManualTransactionRefundMutationVariables,
@@ -122,4 +122,4 @@ const OrderSendRefundPage = ({
   );
 };
 
-export default OrderSendRefundPage;
+export { OrderSendRefundPage };

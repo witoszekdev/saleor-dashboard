@@ -1,6 +1,6 @@
 import { defineMessages } from "react-intl";
 
-export default defineMessages({
+export const Messages = defineMessages({
   marketplaceError: {
     id: "cMov2n",
     defaultMessage: "Error loading apps marketplace",

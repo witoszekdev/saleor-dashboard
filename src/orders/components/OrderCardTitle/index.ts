@@ -1,2 +1,2 @@
-export { default } from "./OrderCardTitle";
+export { OrderCardTitle } from "./OrderCardTitle";
 export * from "./OrderCardTitle";

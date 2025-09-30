@@ -46,4 +46,4 @@ const TranslationFieldsSave = (props: TranslationFieldsSaveProps) => {
 };
 
 TranslationFieldsSave.displayName = "TranslationFieldsSave";
-export default TranslationFieldsSave;
+export { TranslationFieldsSave };

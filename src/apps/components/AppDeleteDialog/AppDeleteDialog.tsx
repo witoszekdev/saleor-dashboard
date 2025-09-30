@@ -1,11 +1,11 @@
-import ActionDialog from "@dashboard/components/ActionDialog";
+import { ActionDialog } from "@dashboard/components/ActionDialog";
 import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import { getStringOrPlaceholder } from "@dashboard/misc";
 import { Box, Text } from "@saleor/macaw-ui-next";
 import { PropsWithChildren } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import msgs from "./messages";
+import { Messages as msgs } from "./messages";
 
 interface AppDeleteDialogProps {
   confirmButtonState: ConfirmButtonTransitionState;
@@ -78,4 +78,4 @@ const AppDeleteDialog = ({
 };
 
 AppDeleteDialog.displayName = "AppDeleteDialog";
-export default AppDeleteDialog;
+export { AppDeleteDialog };

@@ -74,4 +74,4 @@ export const InstallWithManifestFormButton = ({
   );
 };
 InstallWithManifestFormButton.displayName = "InstallWithManifestFormButton";
-export default InstallWithManifestFormButton;
+export { InstallWithManifestFormButton };

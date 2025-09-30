@@ -1,7 +1,7 @@
 import { DEFAULT_INITIAL_SEARCH_DATA } from "@dashboard/config";
 import { CommonSearchOpts } from "@dashboard/hooks/makeTopLevelSearch/types";
 import { getSearchFetchMoreProps } from "@dashboard/hooks/makeTopLevelSearch/utils";
-import useCollectionSearch from "@dashboard/searches/useCollectionSearch";
+import { UseCollectionSearch as useCollectionSearch } from "@dashboard/searches/useCollectionSearch";
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 
 export const useCollectionOptions = (channel: string | null, conditionId: string | null) => {

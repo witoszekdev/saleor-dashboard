@@ -2,7 +2,7 @@ import { TopNav } from "@dashboard/components/AppLayout/TopNav";
 import { LanguageFragment } from "@dashboard/graphql";
 import { useIntl } from "react-intl";
 
-import TranslationsLanguageList from "../TranslationsLanguageList";
+import { TranslationsLanguageList } from "../TranslationsLanguageList";
 
 interface TranslationsLanguageListPageProps {
   languages: LanguageFragment[];
@@ -25,4 +25,4 @@ const TranslationsLanguageListPage = ({ languages }: TranslationsLanguageListPag
 };
 
 TranslationsLanguageListPage.displayName = "TranslationsLanguageListPage";
-export default TranslationsLanguageListPage;
+export { TranslationsLanguageListPage };

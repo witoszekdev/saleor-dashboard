@@ -1,2 +1,2 @@
-export { default } from "./OrderSummaryCard";
+export { OrderSummaryCard } from "./OrderSummaryCard";
 export * from "./OrderSummaryCard";

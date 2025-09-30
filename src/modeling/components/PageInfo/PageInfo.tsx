@@ -1,12 +1,12 @@
 // @ts-strict-ignore
 import { DashboardCard } from "@dashboard/components/Card";
-import FormSpacer from "@dashboard/components/FormSpacer";
-import RichTextEditor from "@dashboard/components/RichTextEditor";
+import { FormSpacer } from "@dashboard/components/FormSpacer";
+import { RichTextEditor } from "@dashboard/components/RichTextEditor";
 import { RichTextEditorLoading } from "@dashboard/components/RichTextEditor/RichTextEditorLoading";
 import { PageErrorFragment } from "@dashboard/graphql";
 import { commonMessages } from "@dashboard/intl";
 import { getFormErrors } from "@dashboard/utils/errors";
-import getPageErrorMessage from "@dashboard/utils/errors/page";
+import { getPageErrorMessage } from "@dashboard/utils/errors/page";
 import { useRichTextContext } from "@dashboard/utils/richText/context";
 import { TextField } from "@material-ui/core";
 import { makeStyles } from "@saleor/macaw-ui";
@@ -91,4 +91,4 @@ const PageInfo = (props: PageInfoProps) => {
 };
 
 PageInfo.displayName = "PageInfo";
-export default PageInfo;
+export { PageInfo };

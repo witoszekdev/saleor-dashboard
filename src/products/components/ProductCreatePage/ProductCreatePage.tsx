@@ -4,12 +4,12 @@ import {
   getReferenceAttributeEntityTypeFromAttribute,
   handleContainerReferenceAssignment,
 } from "@dashboard/attributes/utils/data";
-import CannotDefineChannelsAvailabilityCard from "@dashboard/channels/components/CannotDefineChannelsAvailabilityCard/CannotDefineChannelsAvailabilityCard";
+import { CannotDefineChannelsAvailabilityCard } from "@dashboard/channels/components/CannotDefineChannelsAvailabilityCard/CannotDefineChannelsAvailabilityCard";
 import { ChannelData } from "@dashboard/channels/utils";
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
-import AssignAttributeValueDialog from "@dashboard/components/AssignAttributeValueDialog";
+import { AssignAttributeValueDialog } from "@dashboard/components/AssignAttributeValueDialog";
 import { AttributeInput, Attributes } from "@dashboard/components/Attributes";
-import ChannelsAvailabilityCard from "@dashboard/components/ChannelsAvailabilityCard";
+import { ChannelsAvailability as ChannelsAvailabilityCard } from "@dashboard/components/ChannelsAvailabilityCard";
 import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import { DetailPageLayout } from "@dashboard/components/Layouts";
 import { Metadata } from "@dashboard/components/Metadata";
@@ -29,8 +29,8 @@ import {
   SearchWarehousesQuery,
   TaxClassBaseFragment,
 } from "@dashboard/graphql";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useStateFromProps from "@dashboard/hooks/useStateFromProps";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
+import { useStateFromProps } from "@dashboard/hooks/useStateFromProps";
 import { ProductOrganization } from "@dashboard/products/components/ProductOrganization/ProductOrganization";
 import { ProductVariantPrice } from "@dashboard/products/components/ProductVariantPrice";
 import { ProductCreateUrlQueryParams, productListUrl } from "@dashboard/products/urls";
@@ -45,9 +45,10 @@ import { FetchMoreProps, RelayToFlat } from "../../../types";
 import { ProductDetailsForm } from "../ProductDetailsForm";
 import { ProductShipping } from "../ProductShipping";
 import { ProductStocks } from "../ProductStocks";
-import ProductTaxes from "../ProductTaxes";
-import ProductCreateForm, {
+import { ProductTaxes } from "../ProductTaxes";
+import {
   ProductCreateData,
+  ProductCreateForm,
   ProductCreateFormData,
   ProductCreateHandlers,
 } from "./form";
@@ -411,4 +412,4 @@ const ProductCreatePage = ({
 };
 
 ProductCreatePage.displayName = "ProductCreatePage";
-export default ProductCreatePage;
+export { ProductCreatePage };

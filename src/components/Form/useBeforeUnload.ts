@@ -15,4 +15,4 @@ const useBeforeUnload = (fn: (event: BeforeUnloadEvent) => void) => {
   }, []);
 };
 
-export default useBeforeUnload;
+export { useBeforeUnload };

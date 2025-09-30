@@ -24,4 +24,4 @@ function useModalDialogOpen(
   }, [open]);
 }
 
-export default useModalDialogOpen;
+export { useModalDialogOpen };

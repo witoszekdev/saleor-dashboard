@@ -1,2 +1,2 @@
-export { default } from "./AttributeOrganization";
+export { AttributeOrganization } from "./AttributeOrganization";
 export * from "./AttributeOrganization";

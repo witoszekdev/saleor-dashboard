@@ -7,7 +7,7 @@ import { AppErrorCode } from "@dashboard/graphql";
 import { ErrorCircle } from "@dashboard/icons/ErrorCircle";
 import { commonMessages } from "@dashboard/intl";
 import { getSpecificManifestErrorDocLink } from "@dashboard/links";
-import commonErrorMessages from "@dashboard/utils/errors/common";
+import { commonErrorMessages } from "@dashboard/utils/errors/common";
 import { Box, BoxProps, Text } from "@saleor/macaw-ui-next";
 import * as React from "react";
 import { FieldError } from "react-hook-form";

@@ -83,4 +83,4 @@ const ProductTypeDetails = (props: ProductTypeDetailsProps) => {
 };
 
 ProductTypeDetails.displayName = "ProductTypeDetails";
-export default ProductTypeDetails;
+export { ProductTypeDetails };

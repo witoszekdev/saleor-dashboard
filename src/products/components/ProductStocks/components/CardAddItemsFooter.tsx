@@ -1,5 +1,5 @@
-import Link from "@dashboard/components/Link";
-import AddIcon from "@material-ui/icons/Add";
+import { Link } from "@dashboard/components/Link";
+import { SvgIcon as AddIcon } from "@material-ui/icons/Add";
 import { IconButton, makeStyles } from "@saleor/macaw-ui";
 import { MutableRefObject, PropsWithChildren } from "react";
 
@@ -51,4 +51,4 @@ const CardAddItemsFooter = ({
   );
 };
 
-export default CardAddItemsFooter;
+export { CardAddItemsFooter };

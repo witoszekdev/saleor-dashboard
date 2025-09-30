@@ -32,4 +32,4 @@ function getShippingErrorMessage(err: ShippingError, intl: IntlShape): string | 
   return getCommonFormFieldErrorMessage(err, intl);
 }
 
-export default getShippingErrorMessage;
+export { getShippingErrorMessage };

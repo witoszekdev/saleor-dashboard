@@ -1,4 +1,4 @@
-import Link from "@dashboard/components/Link";
+import { Link } from "@dashboard/components/Link";
 import { Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage } from "react-intl";
 

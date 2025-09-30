@@ -20,4 +20,4 @@ function getTaxesErrorMessage(
   return getCommonFormFieldErrorMessage(err, intl);
 }
 
-export default getTaxesErrorMessage;
+export { getTaxesErrorMessage };

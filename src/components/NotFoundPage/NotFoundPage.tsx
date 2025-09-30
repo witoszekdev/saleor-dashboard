@@ -2,7 +2,7 @@ import notFoundImage from "@assets/images/not-found-404.svg";
 import { Button } from "@dashboard/components/Button";
 import { makeStyles } from "@saleor/macaw-ui";
 import { Text } from "@saleor/macaw-ui-next";
-import SVG from "react-inlinesvg";
+import { InlineSVG as SVG } from "react-inlinesvg";
 import { FormattedMessage } from "react-intl";
 
 const useStyles = makeStyles(
@@ -102,4 +102,4 @@ const NotFoundPage = (props: NotFoundPageProps) => {
 };
 
 NotFoundPage.displayName = "NotFoundPage";
-export default NotFoundPage;
+export { NotFoundPage };

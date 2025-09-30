@@ -1,4 +1,4 @@
-import TableRowLink from "@dashboard/components/TableRowLink";
+import { TableRowLink } from "@dashboard/components/TableRowLink";
 import { TableCell } from "@material-ui/core";
 import { Skeleton } from "@saleor/macaw-ui-next";
 
@@ -17,4 +17,4 @@ const CustomAppsSkeleton = () => {
 };
 
 CustomAppsSkeleton.displayName = "CustomAppsSkeleton";
-export default CustomAppsSkeleton;
+export { CustomAppsSkeleton };

@@ -1,6 +1,6 @@
 import { renderHook } from "@testing-library/react-hooks";
 
-import useModalDialogOpen from "./useModalDialogOpen";
+import { useModalDialogOpen } from "./useModalDialogOpen";
 
 const onClose = jest.fn();
 const onOpen = jest.fn();

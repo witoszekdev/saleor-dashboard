@@ -1,7 +1,7 @@
 // @ts-strict-ignore
 import { FetchResult } from "@apollo/client";
 import { DashboardCard } from "@dashboard/components/Card";
-import Form from "@dashboard/components/Form";
+import { Form } from "@dashboard/components/Form";
 import {
   Timeline,
   TimelineAddNote,
@@ -15,9 +15,9 @@ import { ORDER_EVENTS_DOCS_URL } from "@dashboard/links";
 import { Box, vars } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import ExtendedTimelineEvent from "./ExtendedTimelineEvent";
+import { ExtendedTimelineEvent } from "./ExtendedTimelineEvent";
 import { HistoryComponentLoader } from "./HistoryComponentLoader";
-import LinkedTimelineEvent from "./LinkedTimelineEvent";
+import { LinkedTimelineEvent } from "./LinkedTimelineEvent";
 import { getEventMessage } from "./messages";
 import { getEventSecondaryTitle, isTimelineEventOfType } from "./utils";
 
@@ -171,4 +171,4 @@ const OrderHistory = ({
 };
 
 OrderHistory.displayName = "OrderHistory";
-export default OrderHistory;
+export { OrderHistory };

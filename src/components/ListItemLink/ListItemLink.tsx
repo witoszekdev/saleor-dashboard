@@ -1,7 +1,7 @@
 import { BaseListItemProps, ListItem, makeStyles } from "@saleor/macaw-ui";
-import clsx from "clsx";
+import { clsx } from "clsx";
 
-import Link from "../Link";
+import { Link } from "../Link";
 
 interface ListItemLinkProps extends Omit<BaseListItemProps, "onClick" | "classes"> {
   href?: string;
@@ -35,4 +35,4 @@ const ListItemLink = ({ href, children, linkClassName, ...props }: ListItemLinkP
   );
 };
 
-export default ListItemLink;
+export { ListItemLink };

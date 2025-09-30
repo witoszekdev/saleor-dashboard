@@ -123,7 +123,7 @@ class ReturnFormDataParser {
   };
 }
 
-export default ReturnFormDataParser;
+export { ReturnFormDataParser };
 
 export const getSuccessMessage = (isGrantRefund, isSendRefund): MessageDescriptor => {
   if (isSendRefund) {

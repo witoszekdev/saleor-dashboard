@@ -46,4 +46,4 @@ function useHandleFormSubmit<TData, TErrors>({
   return handleFormSubmit;
 }
 
-export default useHandleFormSubmit;
+export { useHandleFormSubmit };

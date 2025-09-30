@@ -2,7 +2,7 @@ import { DEFAULT_INITIAL_PAGINATION_DATA } from "@dashboard/config";
 import { Pagination } from "@dashboard/types";
 import { useEffect } from "react";
 
-import useNavigator from "./useNavigator";
+import { useNavigator } from "./useNavigator";
 
 export function usePaginationReset<T extends Pagination>(
   urlFunc: (params: T) => string,

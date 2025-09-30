@@ -1,2 +1,2 @@
-export { default } from "./NavigatorSearch";
+export { NavigatorSearch } from "./NavigatorSearch";
 export * from "./NavigatorSearch";

@@ -451,5 +451,5 @@
     ]
   }
 };
-      export default result;
+      export { result };
     

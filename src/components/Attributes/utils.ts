@@ -8,7 +8,7 @@ import {
   ProductErrorWithAttributesFragment,
 } from "@dashboard/graphql";
 import { getProductErrorMessage } from "@dashboard/utils/errors";
-import getPageErrorMessage from "@dashboard/utils/errors/page";
+import { getPageErrorMessage } from "@dashboard/utils/errors/page";
 import { getEntityUrl } from "@dashboard/utils/maps";
 import { Option } from "@saleor/macaw-ui-next";
 import { IntlShape } from "react-intl";

@@ -1,2 +1,2 @@
-export { default } from "./OrderProductAddDialog";
+export { OrderProductAddDialog } from "./OrderProductAddDialog";
 export * from "./OrderProductAddDialog";

@@ -2,7 +2,7 @@ import { defaultListSettings } from "@dashboard/config";
 import { ListViews } from "@dashboard/types";
 import { renderHook } from "@testing-library/react-hooks";
 
-import useListSettings, { listSettingsStorageKey } from "./useListSettings";
+import { listSettingsStorageKey, useListSettings } from "./useListSettings";
 
 const key = ListViews.CATEGORY_LIST;
 const storedValue = {

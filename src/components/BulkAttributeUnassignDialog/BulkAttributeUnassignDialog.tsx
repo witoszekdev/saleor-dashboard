@@ -1,8 +1,8 @@
-import ActionDialog from "@dashboard/components/ActionDialog";
+import { ActionDialog } from "@dashboard/components/ActionDialog";
 import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import messages from "./messages";
+import { messages } from "./messages";
 
 interface BulkAttributeUnassignDialogProps {
   title: string;
@@ -47,4 +47,4 @@ const BulkAttributeUnassignDialog = ({
 };
 
 BulkAttributeUnassignDialog.displayName = "BulkAttributeUnassignDialog";
-export default BulkAttributeUnassignDialog;
+export { BulkAttributeUnassignDialog };

@@ -1,2 +1,2 @@
-export { default } from "./OrderAlerts";
+export { OrderAlerts } from "./OrderAlerts";
 export * from "./OrderAlerts";

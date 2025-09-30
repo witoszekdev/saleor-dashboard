@@ -1,21 +1,21 @@
 // @ts-strict-ignore
-import BackButton from "@dashboard/components/BackButton";
+import { BackButton } from "@dashboard/components/BackButton";
 import { ConfirmButton, ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import { DashboardModal } from "@dashboard/components/Modal";
-import GiftCardTagInput from "@dashboard/giftCards/components/GiftCardTagInput";
+import { GiftCardTagInput } from "@dashboard/giftCards/components/GiftCardTagInput";
 import {
   GiftCardSettingsExpiryTypeEnum,
   TimePeriodTypeEnum,
   useGiftCardSettingsQuery,
 } from "@dashboard/graphql";
-import useForm from "@dashboard/hooks/useForm";
+import { useForm } from "@dashboard/hooks/useForm";
 import { Divider, TextField } from "@material-ui/core";
 import { Text } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
 
-import GiftCardCreateExpirySelect from "../GiftCardCreateDialog/GiftCardCreateExpirySelect";
+import { GiftCardCreateExpirySelect } from "../GiftCardCreateDialog/GiftCardCreateExpirySelect";
 import { GiftCardCreateMoneyInput } from "../GiftCardCreateDialog/GiftCardCreateMoneyInput";
-import GiftCardCreateRequiresActivationSection from "../GiftCardCreateDialog/GiftCardCreateRequiresActivationSection";
+import { GiftCardCreateRequiresActivationSection } from "../GiftCardCreateDialog/GiftCardCreateRequiresActivationSection";
 import { giftCardCreateMessages as messages } from "../GiftCardCreateDialog/messages";
 import { getGiftCardErrorMessage } from "../GiftCardUpdate/messages";
 import {
@@ -132,4 +132,4 @@ const GiftCardBulkCreateDialogForm = ({
   );
 };
 
-export default GiftCardBulkCreateDialogForm;
+export { GiftCardBulkCreateDialogForm };

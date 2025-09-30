@@ -1,5 +1,5 @@
 import { DragIcon, makeStyles } from "@saleor/macaw-ui";
-import clsx from "clsx";
+import { clsx } from "clsx";
 import { SortableHandle as SortableHandleHoc } from "react-sortable-hoc";
 
 const useStyles = makeStyles(
@@ -31,4 +31,4 @@ const SortableHandle = SortableHandleHoc((props: SortableHandleProps) => {
   );
 });
 
-export default SortableHandle;
+export { SortableHandle };

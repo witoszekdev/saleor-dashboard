@@ -1,14 +1,14 @@
 // @ts-strict-ignore
-import BackButton from "@dashboard/components/BackButton";
+import { BackButton } from "@dashboard/components/BackButton";
 import { Combobox } from "@dashboard/components/Combobox";
 import { ConfirmButton, ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import { DashboardModal } from "@dashboard/components/Modal";
 import { MenuErrorFragment } from "@dashboard/graphql";
-import useModalDialogErrors from "@dashboard/hooks/useModalDialogErrors";
-import useModalDialogOpen from "@dashboard/hooks/useModalDialogOpen";
+import { useModalDialogErrors } from "@dashboard/hooks/useModalDialogErrors";
+import { useModalDialogOpen } from "@dashboard/hooks/useModalDialogOpen";
 import { buttonMessages } from "@dashboard/intl";
 import { getFieldError, getFormErrors } from "@dashboard/utils/errors";
-import getMenuErrorMessage from "@dashboard/utils/errors/menu";
+import { getMenuErrorMessage } from "@dashboard/utils/errors/menu";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Box, Input, Text } from "@saleor/macaw-ui-next";
 import { useEffect } from "react";
@@ -216,4 +216,4 @@ const MenuItemDialog = ({
 };
 
 MenuItemDialog.displayName = "MenuItemDialog";
-export default MenuItemDialog;
+export { MenuItemDialog };

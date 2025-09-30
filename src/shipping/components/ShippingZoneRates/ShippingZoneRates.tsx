@@ -1,14 +1,14 @@
 // @ts-strict-ignore
 import { DashboardCard } from "@dashboard/components/Card";
-import IconButtonTableCell from "@dashboard/components/IconButtonTableCell";
-import Money from "@dashboard/components/Money";
-import MoneyRange from "@dashboard/components/MoneyRange";
-import ResponsiveTable from "@dashboard/components/ResponsiveTable";
+import { IconButtonTableCell } from "@dashboard/components/IconButtonTableCell";
+import { Money } from "@dashboard/components/Money";
+import { MoneyRange } from "@dashboard/components/MoneyRange";
+import { ResponsiveTable } from "@dashboard/components/ResponsiveTable";
 import { TableButtonWrapper } from "@dashboard/components/TableButtonWrapper/TableButtonWrapper";
-import TableRowLink from "@dashboard/components/TableRowLink";
-import WeightRange from "@dashboard/components/WeightRange";
+import { TableRowLink } from "@dashboard/components/TableRowLink";
+import { WeightRange } from "@dashboard/components/WeightRange";
 import { ShippingZoneDetailsFragment } from "@dashboard/graphql";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { ChannelProps } from "@dashboard/types";
 import { TableBody, TableCell, TableHead } from "@material-ui/core";
 import { ICONBUTTON_SIZE, makeStyles } from "@saleor/macaw-ui";
@@ -200,4 +200,4 @@ const ShippingZoneRates = (props: ShippingZoneRatesProps) => {
 };
 
 ShippingZoneRates.displayName = "ShippingZoneRates";
-export default ShippingZoneRates;
+export { ShippingZoneRates };

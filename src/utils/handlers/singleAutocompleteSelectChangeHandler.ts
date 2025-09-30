@@ -16,4 +16,4 @@ function createSingleAutocompleteSelectHandler(
   };
 }
 
-export default createSingleAutocompleteSelectHandler;
+export { createSingleAutocompleteSelectHandler };

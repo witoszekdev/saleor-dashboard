@@ -4,7 +4,7 @@ import { PermissionGroupErrorFragment } from "@dashboard/graphql";
 import { FormChange } from "@dashboard/hooks/useForm";
 import { commonMessages } from "@dashboard/intl";
 import { getFieldError, getFormErrors } from "@dashboard/utils/errors";
-import getPermissionGroupErrorMessage from "@dashboard/utils/errors/permissionGroups";
+import { getPermissionGroupErrorMessage } from "@dashboard/utils/errors/permissionGroups";
 import { TextField } from "@material-ui/core";
 import { useIntl } from "react-intl";
 
@@ -50,4 +50,4 @@ const PermissionGroupInfo = ({ disabled, onChange, data, errors }: PermissionGro
 };
 
 PermissionGroupInfo.displayName = "PermissionGroupInfo";
-export default PermissionGroupInfo;
+export { PermissionGroupInfo };

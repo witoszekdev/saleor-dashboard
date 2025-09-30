@@ -3,7 +3,7 @@ import { useConditionNames } from "@dashboard/discounts/components/DiscountRules
 import { useCondtionTypes } from "@dashboard/discounts/components/DiscountRules/componenets/RuleForm/components/RuleConditionType/useConditionTypes";
 import { useDiscountRulesContext } from "@dashboard/discounts/components/DiscountRules/context";
 import { Condition } from "@dashboard/discounts/models";
-import useLocale from "@dashboard/hooks/useLocale";
+import { useLocale } from "@dashboard/hooks/useLocale";
 import { IntlShape, useIntl } from "react-intl";
 
 import { messages } from "../../messages";

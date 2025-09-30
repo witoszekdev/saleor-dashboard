@@ -1,6 +1,6 @@
 // @ts-strict-ignore
-import TableCellAvatar from "@dashboard/components/TableCellAvatar";
-import TableRowLink from "@dashboard/components/TableRowLink";
+import { TableCellAvatar } from "@dashboard/components/TableCellAvatar";
+import { TableRowLink } from "@dashboard/components/TableRowLink";
 import { FulfillmentFragment, OrderFulfillLineFragment } from "@dashboard/graphql";
 import {
   getAttributesCaption,
@@ -51,4 +51,4 @@ const OrderFulfillStockExceededDialogLine = (props: OrderFulfillStockExceededDia
 };
 
 OrderFulfillStockExceededDialogLine.displayName = "OrderFulfillStockExceededDialogLine";
-export default OrderFulfillStockExceededDialogLine;
+export { OrderFulfillStockExceededDialogLine };

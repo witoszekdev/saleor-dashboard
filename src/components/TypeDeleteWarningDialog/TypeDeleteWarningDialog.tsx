@@ -7,9 +7,9 @@ import { useState } from "react";
 import { useIntl } from "react-intl";
 import { Link } from "react-router-dom";
 
-import DeleteButton from "../DeleteButton";
+import { DeleteButton } from "../DeleteButton";
 import { DashboardModal } from "../Modal";
-import DeleteWarningDialogConsentContent from "./DeleteWarningDialogConsentContent";
+import { DeleteWarningDialogConsentContent } from "./DeleteWarningDialogConsentContent";
 import { CommonTypeDeleteWarningMessages, TypeBaseData, TypeDeleteWarningMessages } from "./types";
 
 export interface TypeDeleteMessages {
@@ -126,4 +126,4 @@ function TypeDeleteWarningDialog<T extends TypeBaseData>({
   );
 }
 
-export default TypeDeleteWarningDialog;
+export { TypeDeleteWarningDialog };

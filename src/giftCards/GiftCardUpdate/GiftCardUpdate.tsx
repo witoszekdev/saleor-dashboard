@@ -1,7 +1,7 @@
-import GiftCardUpdatePage from "./GiftCardUpdatePage";
-import GiftCardDetailsProvider from "./providers/GiftCardDetailsProvider";
-import GiftCardUpdateDialogsProvider from "./providers/GiftCardUpdateDialogsProvider";
-import GiftCardUpdateFormProvider from "./providers/GiftCardUpdateFormProvider/GiftCardUpdateFormProvider";
+import { GiftCardUpdatePage } from "./GiftCardUpdatePage";
+import { GiftCardDetailsProvider } from "./providers/GiftCardDetailsProvider";
+import { GiftCardUpdateDialogsProvider } from "./providers/GiftCardUpdateDialogsProvider";
+import { GiftCardUpdateFormProvider } from "./providers/GiftCardUpdateFormProvider/GiftCardUpdateFormProvider";
 import { GiftCardUpdatePageUrlQueryParams } from "./types";
 
 interface GiftCardUpdateProps {
@@ -19,4 +19,4 @@ const GiftCardUpdate = ({ id, params }: GiftCardUpdateProps) => (
   </GiftCardDetailsProvider>
 );
 
-export default GiftCardUpdate;
+export { GiftCardUpdate };

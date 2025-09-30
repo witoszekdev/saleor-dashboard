@@ -1,15 +1,15 @@
 import { FetchResult } from "@apollo/client";
 import { Channel, isAvailableInChannel } from "@dashboard/channels/utils";
-import BackButton from "@dashboard/components/BackButton";
-import Checkbox from "@dashboard/components/Checkbox";
+import { BackButton } from "@dashboard/components/BackButton";
+import { Checkbox } from "@dashboard/components/Checkbox";
 import { ConfirmButton, ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import { InfiniteScroll } from "@dashboard/components/InfiniteScroll";
 import { DashboardModal } from "@dashboard/components/Modal";
-import ResponsiveTable from "@dashboard/components/ResponsiveTable";
-import TableCellAvatar from "@dashboard/components/TableCellAvatar";
-import TableRowLink from "@dashboard/components/TableRowLink";
+import { ResponsiveTable } from "@dashboard/components/ResponsiveTable";
+import { TableCellAvatar } from "@dashboard/components/TableCellAvatar";
+import { TableRowLink } from "@dashboard/components/TableRowLink";
 import { ShippingPriceExcludeProductMutation } from "@dashboard/graphql";
-import useSearchQuery from "@dashboard/hooks/useSearchQuery";
+import { useSearchQuery } from "@dashboard/hooks/useSearchQuery";
 import { renderCollection } from "@dashboard/misc";
 import { isProductSelected } from "@dashboard/shipping/components/ShippingMethodProductsAddDialog/utils";
 import { FetchMoreProps } from "@dashboard/types";
@@ -228,4 +228,4 @@ const ShippingMethodProductsAddDialog = ({
 };
 
 ShippingMethodProductsAddDialog.displayName = "ShippingMethodProductsAddDialog";
-export default ShippingMethodProductsAddDialog;
+export { ShippingMethodProductsAddDialog };

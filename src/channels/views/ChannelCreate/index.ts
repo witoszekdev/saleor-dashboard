@@ -1,2 +1,2 @@
 export * from "./ChannelCreate";
-export { default } from "./ChannelCreate";
+export { ChannelCreateView } from "./ChannelCreate";

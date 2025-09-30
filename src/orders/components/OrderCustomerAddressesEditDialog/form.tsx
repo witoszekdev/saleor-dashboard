@@ -2,13 +2,14 @@
 import { useExitFormDialog } from "@dashboard/components/Form/useExitFormDialog";
 import { AddressTypeInput } from "@dashboard/customers/types";
 import { AddressFragment, CountryWithCodeFragment, Node } from "@dashboard/graphql";
-import useForm, {
+import {
   CommonUseFormResultWithHandlers,
   FormChange,
   SubmitPromise,
+  useForm,
 } from "@dashboard/hooks/useForm";
-import useHandleFormSubmit from "@dashboard/hooks/useHandleFormSubmit";
-import createSingleAutocompleteSelectHandler from "@dashboard/utils/handlers/singleAutocompleteSelectChangeHandler";
+import { useHandleFormSubmit } from "@dashboard/hooks/useHandleFormSubmit";
+import { createSingleAutocompleteSelectHandler } from "@dashboard/utils/handlers/singleAutocompleteSelectChangeHandler";
 import { Option } from "@saleor/macaw-ui-next";
 import { useEffect, useState } from "react";
 import * as React from "react";
@@ -201,4 +202,4 @@ const OrderCustomerAddressesEditForm = ({
 };
 
 OrderCustomerAddressesEditForm.displayName = "OrderCustomerAddressesEditForm";
-export default OrderCustomerAddressesEditForm;
+export { OrderCustomerAddressesEditForm };

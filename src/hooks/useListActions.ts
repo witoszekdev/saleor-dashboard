@@ -1,4 +1,4 @@
-import useStateFromProps from "./useStateFromProps";
+import { useStateFromProps } from "./useStateFromProps";
 
 function useListActions<TData>(
   initial: TData[] = [],
@@ -44,4 +44,4 @@ function useListActions<TData>(
     toggle,
   };
 }
-export default useListActions;
+export { useListActions };

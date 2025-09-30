@@ -1,2 +1,2 @@
-export { default } from "./RadioGroupField";
+export { RadioGroupField } from "./RadioGroupField";
 export * from "./RadioGroupField";

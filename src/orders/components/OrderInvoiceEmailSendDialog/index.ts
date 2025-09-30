@@ -1,2 +1,2 @@
-export { default } from "./OrderInvoiceEmailSendDialog";
+export { OrderInvoiceEmailSendDialog } from "./OrderInvoiceEmailSendDialog";
 export * from "./OrderInvoiceEmailSendDialog";

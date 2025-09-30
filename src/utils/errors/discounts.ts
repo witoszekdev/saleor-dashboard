@@ -25,4 +25,4 @@ function getDiscountErrorMessage(
   return getCommonFormFieldErrorMessage(err, intl);
 }
 
-export default getDiscountErrorMessage;
+export { getDiscountErrorMessage };

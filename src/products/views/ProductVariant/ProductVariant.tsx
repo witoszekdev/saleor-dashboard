@@ -12,7 +12,7 @@ import {
 } from "@dashboard/attributes/utils/handlers";
 import { createVariantChannels } from "@dashboard/channels/utils";
 import { AttributeInput } from "@dashboard/components/Attributes";
-import NotFoundPage from "@dashboard/components/NotFoundPage";
+import { NotFoundPage } from "@dashboard/components/NotFoundPage";
 import { WindowTitle } from "@dashboard/components/WindowTitle";
 import { DEFAULT_INITIAL_SEARCH_DATA } from "@dashboard/config";
 import {
@@ -29,10 +29,10 @@ import {
   useVariantMediaUnassignMutation,
   useVariantUpdateMutation,
 } from "@dashboard/graphql";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useNotifier from "@dashboard/hooks/useNotifier";
-import useOnSetDefaultVariant from "@dashboard/hooks/useOnSetDefaultVariant";
-import useShop from "@dashboard/hooks/useShop";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
+import { useNotifier } from "@dashboard/hooks/useNotifier";
+import { useOnSetDefaultVariant } from "@dashboard/hooks/useOnSetDefaultVariant";
+import { useShop } from "@dashboard/hooks/useShop";
 import { commonMessages } from "@dashboard/intl";
 import { weight } from "@dashboard/misc";
 import {
@@ -40,22 +40,22 @@ import {
   mapFormsetStockToStockInput,
 } from "@dashboard/products/utils/data";
 import { handleAssignMedia } from "@dashboard/products/utils/handlers";
-import useCategorySearch from "@dashboard/searches/useCategorySearch";
-import useCollectionSearch from "@dashboard/searches/useCollectionSearch";
+import { UseCategorySearch as useCategorySearch } from "@dashboard/searches/useCategorySearch";
+import { UseCollectionSearch as useCollectionSearch } from "@dashboard/searches/useCollectionSearch";
 import {
   useReferencePageSearch,
   useReferenceProductSearch,
 } from "@dashboard/searches/useReferenceSearch";
-import useWarehouseSearch from "@dashboard/searches/useWarehouseSearch";
-import useAttributeValueSearchHandler from "@dashboard/utils/handlers/attributeValueSearchHandler";
-import createDialogActionHandlers from "@dashboard/utils/handlers/dialogActionHandlers";
-import createMetadataUpdateHandler from "@dashboard/utils/handlers/metadataUpdateHandler";
+import { UseWarehouseSearch as useWarehouseSearch } from "@dashboard/searches/useWarehouseSearch";
+import { useAttributeValueSearchHandler } from "@dashboard/utils/handlers/attributeValueSearchHandler";
+import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
+import { createMetadataUpdateHandler } from "@dashboard/utils/handlers/metadataUpdateHandler";
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { warehouseAddPath } from "@dashboard/warehouses/urls";
 import { useEffect, useState } from "react";
 import { useIntl } from "react-intl";
 
-import ProductVariantDeleteDialog from "../../components/ProductVariantDeleteDialog";
+import { ProductVariantDeleteDialog } from "../../components/ProductVariantDeleteDialog";
 import { ProductVariantUpdateSubmitData } from "../../components/ProductVariantPage/form";
 import { ProductVariantPage } from "../../components/ProductVariantPage/ProductVariantPage";
 import {
@@ -364,4 +364,4 @@ const ProductVariant = ({ variantId, params }: ProductUpdateProps) => {
   );
 };
 
-export default ProductVariant;
+export { ProductVariant };

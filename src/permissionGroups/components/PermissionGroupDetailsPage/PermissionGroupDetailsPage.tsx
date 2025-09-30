@@ -1,9 +1,9 @@
 import { useUser } from "@dashboard/auth";
-import AccountPermissions from "@dashboard/components/AccountPermissions";
+import { AccountPermissions } from "@dashboard/components/AccountPermissions";
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
 import { ChannelPermission } from "@dashboard/components/ChannelPermission";
-import Form from "@dashboard/components/Form";
-import FormSpacer from "@dashboard/components/FormSpacer";
+import { Form } from "@dashboard/components/Form";
+import { FormSpacer } from "@dashboard/components/FormSpacer";
 import { DetailPageLayout } from "@dashboard/components/Layouts";
 import { Savebar } from "@dashboard/components/Savebar";
 import {
@@ -15,12 +15,12 @@ import {
 } from "@dashboard/graphql";
 import { useBackLinkWithState } from "@dashboard/hooks/useBackLinkWithState";
 import { FormChange, SubmitPromise } from "@dashboard/hooks/useForm";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { buttonMessages } from "@dashboard/intl";
 import { MembersListUrlSortField, permissionGroupListPath } from "@dashboard/permissionGroups/urls";
 import { ListActions, SortPage } from "@dashboard/types";
 import { getFormErrors } from "@dashboard/utils/errors";
-import getPermissionGroupErrorMessage from "@dashboard/utils/errors/permissionGroups";
+import { getPermissionGroupErrorMessage } from "@dashboard/utils/errors/permissionGroups";
 import { Box } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
 
@@ -31,8 +31,8 @@ import {
   getUserAccessibleChannelsOptions,
   isGroupFullAccess,
 } from "../../utils";
-import PermissionGroupInfo from "../PermissionGroupInfo";
-import PermissionGroupMemberList from "../PermissionGroupMemberList";
+import { PermissionGroupInfo } from "../PermissionGroupInfo";
+import { PermissionGroupMemberList } from "../PermissionGroupMemberList";
 
 export interface PermissionGroupDetailsPageFormData {
   name: string;

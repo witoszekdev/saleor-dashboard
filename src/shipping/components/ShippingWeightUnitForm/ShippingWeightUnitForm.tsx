@@ -1,4 +1,4 @@
-import Form from "@dashboard/components/Form";
+import { Form } from "@dashboard/components/Form";
 import { WeightUnitsEnum } from "@dashboard/graphql";
 import { SubmitPromise } from "@dashboard/hooks/useForm";
 import { buttonMessages } from "@dashboard/intl";
@@ -84,4 +84,4 @@ const ShippingWeightUnitForm = ({
 };
 
 ShippingWeightUnitForm.displayName = "ShippingWeightUnitForm";
-export default ShippingWeightUnitForm;
+export { ShippingWeightUnitForm };

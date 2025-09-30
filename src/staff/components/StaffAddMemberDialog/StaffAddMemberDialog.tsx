@@ -1,11 +1,11 @@
 // @ts-strict-ignore
-import BackButton from "@dashboard/components/BackButton";
+import { BackButton } from "@dashboard/components/BackButton";
 import { ConfirmButton, ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import Form from "@dashboard/components/Form";
+import { Form } from "@dashboard/components/Form";
 import { DashboardModal } from "@dashboard/components/Modal";
 import { SearchPermissionGroupsQuery, StaffErrorFragment } from "@dashboard/graphql";
 import { SubmitPromise } from "@dashboard/hooks/useForm";
-import useModalDialogErrors from "@dashboard/hooks/useModalDialogErrors";
+import { useModalDialogErrors } from "@dashboard/hooks/useModalDialogErrors";
 import { commonMessages } from "@dashboard/intl";
 import { FetchMoreProps, RelayToFlat, SearchPageProps } from "@dashboard/types";
 import { getFormErrors } from "@dashboard/utils/errors";
@@ -121,4 +121,4 @@ const StaffAddMemberDialog = (props: StaffAddMemberDialogProps) => {
 };
 
 StaffAddMemberDialog.displayName = "StaffAddMemberDialog";
-export default StaffAddMemberDialog;
+export { StaffAddMemberDialog };

@@ -1,2 +1,2 @@
-export { default } from "./ShippingZoneDetailsPage";
+export { ShippingZoneDetailsPage } from "./ShippingZoneDetailsPage";
 export * from "./ShippingZoneDetailsPage";

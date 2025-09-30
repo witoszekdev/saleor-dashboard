@@ -1,4 +1,4 @@
-import BackButton from "@dashboard/components/BackButton";
+import { BackButton } from "@dashboard/components/BackButton";
 import { ConfirmButton } from "@dashboard/components/ConfirmButton";
 import { DashboardModal } from "@dashboard/components/Modal";
 import { PermissionEnum } from "@dashboard/graphql";

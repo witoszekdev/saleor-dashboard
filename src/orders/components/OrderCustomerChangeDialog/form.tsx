@@ -1,5 +1,5 @@
-import useForm, { CommonUseFormResult } from "@dashboard/hooks/useForm";
-import useHandleFormSubmit from "@dashboard/hooks/useHandleFormSubmit";
+import { CommonUseFormResult, useForm } from "@dashboard/hooks/useForm";
+import { useHandleFormSubmit } from "@dashboard/hooks/useHandleFormSubmit";
 import * as React from "react";
 
 export enum CustomerChangeActionEnum {
@@ -56,4 +56,4 @@ const OrderCustomerChangeForm = ({ children, initial, onSubmit }: OrderCustomerC
 };
 
 OrderCustomerChangeForm.displayName = "OrderCustomerChangeForm";
-export default OrderCustomerChangeForm;
+export { OrderCustomerChangeForm };

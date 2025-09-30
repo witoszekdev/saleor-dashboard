@@ -1,5 +1,5 @@
-import ActionDialog, { ActionDialogProps } from "@dashboard/components/ActionDialog";
-import DeleteWarningDialogConsentContent from "@dashboard/components/TypeDeleteWarningDialog/DeleteWarningDialogConsentContent";
+import { ActionDialog, ActionDialogProps } from "@dashboard/components/ActionDialog";
+import { DeleteWarningDialogConsentContent } from "@dashboard/components/TypeDeleteWarningDialog/DeleteWarningDialogConsentContent";
 import { GiftCardsListConsumerProps } from "@dashboard/giftCards/GiftCardsList/providers/GiftCardListProvider";
 import { ExtendedGiftCard } from "@dashboard/giftCards/GiftCardUpdate/providers/GiftCardDetailsProvider/types";
 import { GiftCardDataFragment } from "@dashboard/graphql";
@@ -102,4 +102,4 @@ function GiftCardDeleteDialogContent<TGiftCard extends DeleteDialogContentGiftCa
   );
 }
 
-export default GiftCardDeleteDialogContent;
+export { GiftCardDeleteDialogContent };

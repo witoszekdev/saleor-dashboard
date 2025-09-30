@@ -25,4 +25,4 @@ const DeleteButton = ({ onClick, label, testId, disabled = false }: DeleteButton
   );
 };
 
-export default DeleteButton;
+export { DeleteButton };

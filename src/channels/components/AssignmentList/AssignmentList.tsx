@@ -2,9 +2,9 @@ import { ReorderEvent } from "@dashboard/types";
 import { Accordion, Divider, Skeleton, Text } from "@saleor/macaw-ui-next";
 import { defineMessages, useIntl } from "react-intl";
 
-import AssignmentListFooter from "./AssignmentListFooter";
-import Item from "./Item";
-import SortableContainer from "./SortableContainer";
+import { AssignmentListFooter } from "./AssignmentListFooter";
+import { Item } from "./Item";
+import { SortableContainer } from "./SortableContainer";
 import { useStyles } from "./styles";
 import { AssignmentListProps } from "./types";
 
@@ -89,4 +89,4 @@ const AssignmentList = (props: AssignmentListProps) => {
   );
 };
 
-export default AssignmentList;
+export { AssignmentList };

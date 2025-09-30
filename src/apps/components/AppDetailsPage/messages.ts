@@ -1,6 +1,6 @@
 import { defineMessages } from "react-intl";
 
-export default defineMessages({
+export const Messages = defineMessages({
   supportLink: {
     id: "Nsk5WL",
     defaultMessage: "Get support",

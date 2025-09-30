@@ -1,2 +1,2 @@
 export * from "./ProductExportDialog";
-export { default } from "./ProductExportDialog";
+export { ProductExportDialog } from "./ProductExportDialog";

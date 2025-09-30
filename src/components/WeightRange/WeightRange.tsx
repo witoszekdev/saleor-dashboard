@@ -39,4 +39,4 @@ const WeightRange = ({ from, to }: WeightRangeProps) =>
   );
 
 WeightRange.displayName = "WeightRange";
-export default WeightRange;
+export { WeightRange };

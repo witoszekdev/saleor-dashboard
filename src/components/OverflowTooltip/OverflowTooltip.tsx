@@ -1,6 +1,6 @@
 import { makeStyles } from "@material-ui/core";
 import { Tooltip } from "@saleor/macaw-ui-next";
-import clsx from "clsx";
+import { clsx } from "clsx";
 import * as React from "react";
 
 import { useOverflow } from "./useOverflow";
@@ -69,4 +69,4 @@ const OverflowTooltip = ({
   );
 };
 
-export default OverflowTooltip;
+export { OverflowTooltip };

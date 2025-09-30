@@ -1,7 +1,7 @@
 // @ts-strict-ignore
-import TextWithSelectField from "@dashboard/components/TextWithSelectField";
+import { TextWithSelectField } from "@dashboard/components/TextWithSelectField";
 import { ChangeEvent, FormChange } from "@dashboard/hooks/useForm";
-import useLocalStorage from "@dashboard/hooks/useLocalStorage";
+import { useLocalStorage } from "@dashboard/hooks/useLocalStorage";
 import { mapSingleValueNodeToChoice } from "@dashboard/utils/maps";
 import * as React from "react";
 import { useEffect } from "react";

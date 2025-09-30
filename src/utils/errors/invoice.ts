@@ -57,4 +57,4 @@ function getInvoiceErrorMessage(err: InvoiceErrorFragment, intl: IntlShape): str
   return getCommonFormFieldErrorMessage(err, intl);
 }
 
-export default getInvoiceErrorMessage;
+export { getInvoiceErrorMessage };

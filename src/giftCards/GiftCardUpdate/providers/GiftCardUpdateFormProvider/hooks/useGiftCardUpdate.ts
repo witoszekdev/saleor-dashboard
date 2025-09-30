@@ -11,4 +11,4 @@ const useGiftCardUpdate = (): Pick<GiftCardUpdateFormConsumerData, "opts"> => {
   return { opts };
 };
 
-export default useGiftCardUpdate;
+export { useGiftCardUpdate };

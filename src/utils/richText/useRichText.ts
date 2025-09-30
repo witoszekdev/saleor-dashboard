@@ -73,4 +73,4 @@ export function useRichText({
   };
 }
 
-export default useRichText;
+export { useRichText };

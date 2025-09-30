@@ -1,4 +1,4 @@
-import useLocale from "@dashboard/hooks/useLocale";
+import { useLocale } from "@dashboard/hooks/useLocale";
 
 export const EventTime = ({ date }: { date: string }) => {
   const { locale } = useLocale();

@@ -19,4 +19,4 @@ const Arrow = (props: React.SVGProps<SVGSVGElement>) => (
 );
 
 Arrow.displayName = "Arrow";
-export default Arrow;
+export { Arrow };

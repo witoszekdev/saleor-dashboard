@@ -1,6 +1,6 @@
 import { DashboardCard } from "@dashboard/components/Card";
-import Grid from "@dashboard/components/Grid";
-import Hr from "@dashboard/components/Hr";
+import { Grid } from "@dashboard/components/Grid";
+import { Hr } from "@dashboard/components/Hr";
 import { WebhookEventTypeAsyncEnum, WebhookEventTypeSyncEnum } from "@dashboard/graphql";
 import { ChangeEvent } from "@dashboard/hooks/useForm";
 import { capitalize } from "@dashboard/misc";
@@ -188,4 +188,4 @@ const WebhookEvents = ({
 };
 
 WebhookEvents.displayName = "WebhookEvents";
-export default WebhookEvents;
+export { WebhookEvents };

@@ -1,19 +1,19 @@
-import BackButton from "@dashboard/components/BackButton";
-import CompanyAddressForm from "@dashboard/components/CompanyAddressInput/CompanyAddressForm";
+import { BackButton } from "@dashboard/components/BackButton";
+import { CompanyAddressForm } from "@dashboard/components/CompanyAddressInput/CompanyAddressForm";
 import { ConfirmButton, ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import Form from "@dashboard/components/Form";
-import Hr from "@dashboard/components/Hr";
+import { Form } from "@dashboard/components/Form";
+import { Hr } from "@dashboard/components/Hr";
 import { DashboardModal } from "@dashboard/components/Modal";
 import { AddressTypeInput } from "@dashboard/customers/types";
 import { CountryWithCodeFragment, WarehouseErrorFragment } from "@dashboard/graphql";
-import useAddressValidation from "@dashboard/hooks/useAddressValidation";
+import { useAddressValidation } from "@dashboard/hooks/useAddressValidation";
 import { SubmitPromise } from "@dashboard/hooks/useForm";
-import useModalDialogErrors from "@dashboard/hooks/useModalDialogErrors";
-import useModalDialogOpen from "@dashboard/hooks/useModalDialogOpen";
-import useStateFromProps from "@dashboard/hooks/useStateFromProps";
+import { useModalDialogErrors } from "@dashboard/hooks/useModalDialogErrors";
+import { useModalDialogOpen } from "@dashboard/hooks/useModalDialogOpen";
+import { useStateFromProps } from "@dashboard/hooks/useStateFromProps";
 import { buttonMessages } from "@dashboard/intl";
 import { DialogProps } from "@dashboard/types";
-import createSingleAutocompleteSelectHandler from "@dashboard/utils/handlers/singleAutocompleteSelectChangeHandler";
+import { createSingleAutocompleteSelectHandler } from "@dashboard/utils/handlers/singleAutocompleteSelectChangeHandler";
 import { mapCountriesToChoices } from "@dashboard/utils/maps";
 import { TextField } from "@material-ui/core";
 import { FormattedMessage, useIntl } from "react-intl";
@@ -120,4 +120,4 @@ const ShippingZoneAddWarehouseDialog = ({
 };
 
 ShippingZoneAddWarehouseDialog.displayName = "ShippingZoneAddWarehouseDialog";
-export default ShippingZoneAddWarehouseDialog;
+export { ShippingZoneAddWarehouseDialog };

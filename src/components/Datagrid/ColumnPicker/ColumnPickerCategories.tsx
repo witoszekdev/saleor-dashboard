@@ -4,7 +4,7 @@ import { FormattedMessage } from "react-intl";
 import { ColumnPickerAvailableNodes } from "./ColumnPickerAvailableNodes";
 import { ColumnPickerCategoryList } from "./ColumnPickerCategoryList";
 import { ColumnPickerPagination } from "./ColumnPickerPagination";
-import messages from "./messages";
+import { messages } from "./messages";
 import { useAvailableColumnsQuery } from "./useAvailableColumnsQuery";
 import { useCategorySelection } from "./useCategorySelection";
 import { ColumnCategory } from "./useColumns";

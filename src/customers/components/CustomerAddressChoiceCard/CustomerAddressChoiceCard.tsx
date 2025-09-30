@@ -1,11 +1,11 @@
 // @ts-strict-ignore
-import AddressFormatter from "@dashboard/components/AddressFormatter";
+import { AddressFormatter } from "@dashboard/components/AddressFormatter";
 import { DashboardCard } from "@dashboard/components/Card";
 import { AddressFragment } from "@dashboard/graphql";
 import { commonMessages } from "@dashboard/intl";
 import { EditIcon } from "@saleor/macaw-ui";
 import { Text } from "@saleor/macaw-ui-next";
-import clsx from "clsx";
+import { clsx } from "clsx";
 import { useIntl } from "react-intl";
 
 import { useStyles } from "./styles";
@@ -53,4 +53,4 @@ const CustomerAddressChoiceCard = (props: CustomerAddressChoiceCardProps) => {
 };
 
 CustomerAddressChoiceCard.displayName = "CustomerAddressChoiceCard";
-export default CustomerAddressChoiceCard;
+export { CustomerAddressChoiceCard };

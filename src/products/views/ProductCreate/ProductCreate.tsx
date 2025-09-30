@@ -1,8 +1,8 @@
 // @ts-strict-ignore
 import { ChannelData, createSortedChannelsData } from "@dashboard/channels/utils";
-import useAppChannel from "@dashboard/components/AppLayout/AppChannelContext";
+import { useAppChannel } from "@dashboard/components/AppLayout/AppChannelContext";
 import { AttributeInput } from "@dashboard/components/Attributes";
-import ChannelsAvailabilityDialog from "@dashboard/components/ChannelsAvailabilityDialog";
+import { ChannelsAvailabilityDialog } from "@dashboard/components/ChannelsAvailabilityDialog";
 import { WindowTitle } from "@dashboard/components/WindowTitle";
 import { DEFAULT_INITIAL_SEARCH_DATA, VALUES_PAGINATE_BY } from "@dashboard/config";
 import {
@@ -19,13 +19,14 @@ import {
   useVariantCreateMutation,
 } from "@dashboard/graphql";
 import { getSearchFetchMoreProps } from "@dashboard/hooks/makeTopLevelSearch/utils";
-import useChannels from "@dashboard/hooks/useChannels";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useNotifier from "@dashboard/hooks/useNotifier";
-import useShop from "@dashboard/hooks/useShop";
+import { useChannels } from "@dashboard/hooks/useChannels";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
+import { useNotifier } from "@dashboard/hooks/useNotifier";
+import { useShop } from "@dashboard/hooks/useShop";
 import { getMutationErrors } from "@dashboard/misc";
-import ProductCreatePage, {
+import {
   ProductCreateData,
+  ProductCreatePage,
 } from "@dashboard/products/components/ProductCreatePage";
 import {
   productAddUrl,
@@ -33,19 +34,19 @@ import {
   ProductCreateUrlQueryParams,
   productUrl,
 } from "@dashboard/products/urls";
-import useCategorySearch from "@dashboard/searches/useCategorySearch";
-import useCollectionSearch from "@dashboard/searches/useCollectionSearch";
-import useProductTypeSearch from "@dashboard/searches/useProductTypeSearch";
+import { UseCategorySearch as useCategorySearch } from "@dashboard/searches/useCategorySearch";
+import { UseCollectionSearch as useCollectionSearch } from "@dashboard/searches/useCollectionSearch";
+import { UseProductTypeSearch as useProductTypeSearch } from "@dashboard/searches/useProductTypeSearch";
 import {
   useReferencePageSearch,
   useReferenceProductSearch,
 } from "@dashboard/searches/useReferenceSearch";
-import useWarehouseSearch from "@dashboard/searches/useWarehouseSearch";
+import { UseWarehouseSearch as useWarehouseSearch } from "@dashboard/searches/useWarehouseSearch";
 import { useTaxClassFetchMore } from "@dashboard/taxes/utils/useTaxClassFetchMore";
 import { getProductErrorMessage } from "@dashboard/utils/errors";
-import useAttributeValueSearchHandler from "@dashboard/utils/handlers/attributeValueSearchHandler";
-import createDialogActionHandlers from "@dashboard/utils/handlers/dialogActionHandlers";
-import createMetadataCreateHandler from "@dashboard/utils/handlers/metadataCreateHandler";
+import { useAttributeValueSearchHandler } from "@dashboard/utils/handlers/attributeValueSearchHandler";
+import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
+import { createMetadataCreateHandler } from "@dashboard/utils/handlers/metadataCreateHandler";
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { warehouseAddPath } from "@dashboard/warehouses/urls";
 import { useOnboarding } from "@dashboard/welcomePage/WelcomePageOnboarding/onboardingContext";
@@ -358,4 +359,4 @@ const ProductCreateView = ({ params }: ProductCreateProps) => {
   );
 };
 
-export default ProductCreateView;
+export { ProductCreateView };

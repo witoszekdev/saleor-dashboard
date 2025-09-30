@@ -17,6 +17,6 @@ const PermissionGroupsIcon = createSvgIcon(
   "PermissionGroups",
 );
 
-export default function PermissionGroups(props: SvgIconProps) {
+export function PermissionGroups(props: SvgIconProps) {
   return <PermissionGroupsIcon {...props} viewBox="0 0 32 32" />;
 }

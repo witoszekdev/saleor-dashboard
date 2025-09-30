@@ -3,15 +3,15 @@ import {
   useTaxConfigurationsListQuery,
   useTaxConfigurationUpdateMutation,
 } from "@dashboard/graphql";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useNotifier from "@dashboard/hooks/useNotifier";
-import useShop from "@dashboard/hooks/useShop";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
+import { useNotifier } from "@dashboard/hooks/useNotifier";
+import { useShop } from "@dashboard/hooks/useShop";
 import { commonMessages } from "@dashboard/intl";
-import createDialogActionHandlers from "@dashboard/utils/handlers/dialogActionHandlers";
+import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { useIntl } from "react-intl";
 
-import TaxChannelsPage from "../pages/TaxChannelsPage";
+import { TaxChannelsPage } from "../pages/TaxChannelsPage";
 import {
   taxConfigurationListUrl,
   TaxesUrlDialog,
@@ -89,4 +89,4 @@ const TaxChannelsList = ({ id, params }: TaxChannelsListProps) => {
   );
 };
 
-export default TaxChannelsList;
+export { TaxChannelsList };

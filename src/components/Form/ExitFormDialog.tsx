@@ -1,4 +1,4 @@
-import BackButton from "@dashboard/components/BackButton";
+import { BackButton } from "@dashboard/components/BackButton";
 import { DashboardModal } from "@dashboard/components/Modal";
 import { Button } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
@@ -33,4 +33,4 @@ const ExitFormDialog = ({ onLeave, onClose, isOpen }: ExitFormDialogProps) => {
   );
 };
 
-export default ExitFormDialog;
+export { ExitFormDialog };

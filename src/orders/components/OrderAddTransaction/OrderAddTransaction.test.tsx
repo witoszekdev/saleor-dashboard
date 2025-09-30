@@ -1,10 +1,10 @@
 // @ts-strict-ignore
 import { order } from "@dashboard/orders/fixtures";
-import Wrapper from "@test/wrapper";
+import { Wrapper } from "@test/wrapper";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
-import OrderAddTransaction from "./OrderAddTransaction";
+import { OrderAddTransaction } from "./OrderAddTransaction";
 
 describe("OrderAddTransaction", () => {
   it("renders skeleton when order is loading", () => {

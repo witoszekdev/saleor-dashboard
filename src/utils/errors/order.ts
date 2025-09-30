@@ -115,4 +115,4 @@ function getOrderErrorMessage(
   return getCommonFormFieldErrorMessage(err, intl);
 }
 
-export default getOrderErrorMessage;
+export { getOrderErrorMessage };

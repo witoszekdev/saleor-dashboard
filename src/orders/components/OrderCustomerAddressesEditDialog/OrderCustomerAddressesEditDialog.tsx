@@ -1,7 +1,7 @@
 // @ts-strict-ignore
-import Checkbox from "@dashboard/components/Checkbox";
+import { Checkbox } from "@dashboard/components/Checkbox";
 import { ConfirmButton, ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import FormSpacer from "@dashboard/components/FormSpacer";
+import { FormSpacer } from "@dashboard/components/FormSpacer";
 import { DashboardModal } from "@dashboard/components/Modal";
 import { AddressTypeInput } from "@dashboard/customers/types";
 import {
@@ -12,9 +12,9 @@ import {
   Node,
   OrderErrorFragment,
 } from "@dashboard/graphql";
-import useAddressValidation from "@dashboard/hooks/useAddressValidation";
+import { useAddressValidation } from "@dashboard/hooks/useAddressValidation";
 import { SubmitPromise } from "@dashboard/hooks/useForm";
-import useModalDialogErrors from "@dashboard/hooks/useModalDialogErrors";
+import { useModalDialogErrors } from "@dashboard/hooks/useModalDialogErrors";
 import { buttonMessages } from "@dashboard/intl";
 import { getById, transformAddressToAddressInput } from "@dashboard/misc";
 import { mapCountriesToChoices } from "@dashboard/utils/maps";
@@ -23,13 +23,14 @@ import { Text } from "@saleor/macaw-ui-next";
 import { useState } from "react";
 import { FormattedMessage, MessageDescriptor, useIntl } from "react-intl";
 
-import OrderCustomerAddressesEditForm, {
+import {
   AddressInputOptionEnum,
+  OrderCustomerAddressesEditForm,
   OrderCustomerAddressesEditFormData,
 } from "./form";
 import { dialogMessages } from "./messages";
-import OrderCustomerAddressEdit from "./OrderCustomerAddressEdit";
-import OrderCustomerAddressesSearch from "./OrderCustomerAddressesSearch";
+import { OrderCustomerAddressEdit } from "./OrderCustomerAddressEdit";
+import { OrderCustomerAddressesSearch } from "./OrderCustomerAddressesSearch";
 import {
   AddressEditDialogVariant,
   OrderCustomerAddressesEditDialogOutput,
@@ -407,4 +408,4 @@ const OrderCustomerAddressesEditDialog = (props: OrderCustomerAddressesEditDialo
 };
 
 OrderCustomerAddressesEditDialog.displayName = "OrderCustomerAddressesEditDialog";
-export default OrderCustomerAddressesEditDialog;
+export { OrderCustomerAddressesEditDialog };

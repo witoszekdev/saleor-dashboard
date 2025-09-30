@@ -20,12 +20,12 @@ import {
   UseVariableEditorArgs,
   WriteableEditorProps,
 } from "@graphiql/react";
-import clsx from "clsx";
+import { clsx } from "clsx";
 import { ComponentType, PropsWithChildren, ReactNode, useState } from "react";
 import * as React from "react";
 import { useIntl } from "react-intl";
 
-import DryRun from "../DryRun";
+import { DryRun } from "../DryRun";
 import { messages } from "./messages";
 import { useDashboardTheme, useEditorStyles, useGraphiQLThemeSwitcher, useStyles } from "./styles";
 
@@ -318,4 +318,4 @@ function isChildComponentType<T extends ComponentType>(child: any, component: T)
   return child.type === component;
 }
 
-export default GraphiQL;
+export { GraphiQL };

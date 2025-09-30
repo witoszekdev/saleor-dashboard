@@ -1,7 +1,7 @@
 // @ts-strict-ignore
 import { useApolloClient } from "@apollo/client";
 import { MetadataIdSchema } from "@dashboard/components/Metadata";
-import NotFoundPage from "@dashboard/components/NotFoundPage";
+import { NotFoundPage } from "@dashboard/components/NotFoundPage";
 import { Task } from "@dashboard/containers/BackgroundTasks/types";
 import {
   JobStatusEnum,
@@ -11,17 +11,17 @@ import {
   useUpdateMetadataMutation,
   useUpdatePrivateMetadataMutation,
 } from "@dashboard/graphql";
-import useBackgroundTask from "@dashboard/hooks/useBackgroundTask";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useNotifier from "@dashboard/hooks/useNotifier";
+import { useBackgroundTask } from "@dashboard/hooks/useBackgroundTask";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
+import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { commonMessages } from "@dashboard/intl";
 import { createOrderMetadataIdSchema } from "@dashboard/orders/components/OrderDetailsPage/utils";
-import getOrderErrorMessage from "@dashboard/utils/errors/order";
-import createDialogActionHandlers from "@dashboard/utils/handlers/dialogActionHandlers";
-import createMetadataUpdateHandler from "@dashboard/utils/handlers/metadataUpdateHandler";
+import { getOrderErrorMessage } from "@dashboard/utils/errors/order";
+import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
+import { createMetadataUpdateHandler } from "@dashboard/utils/handlers/metadataUpdateHandler";
 import { useIntl } from "react-intl";
 
-import OrderOperations from "../../containers/OrderOperations";
+import { OrderOperations } from "../../containers/OrderOperations";
 import { orderListUrl, orderUrl, OrderUrlDialog, OrderUrlQueryParams } from "../../urls";
 import { OrderDetailsMessages } from "./OrderDetailsMessages";
 import { OrderDraftDetails } from "./OrderDraftDetails";
@@ -254,4 +254,4 @@ const OrderDetails = ({ id, params }: OrderDetailsProps) => {
   );
 };
 
-export default OrderDetails;
+export { OrderDetails };

@@ -49,4 +49,4 @@ const AddressFormatter = ({ address }: AddressFormatterProps) => {
 };
 
 AddressFormatter.displayName = "AddressFormatter";
-export default AddressFormatter;
+export { AddressFormatter };

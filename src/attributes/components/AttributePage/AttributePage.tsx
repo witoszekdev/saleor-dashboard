@@ -15,9 +15,9 @@ import {
 import { useUser } from "@dashboard/auth";
 import { hasPermission } from "@dashboard/auth/misc";
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
-import CardSpacer from "@dashboard/components/CardSpacer";
+import { CardSpacer } from "@dashboard/components/CardSpacer";
 import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import Form from "@dashboard/components/Form";
+import { Form } from "@dashboard/components/Form";
 import { DetailPageLayout } from "@dashboard/components/Layouts";
 import { Metadata } from "@dashboard/components/Metadata/Metadata";
 import { MetadataFormData } from "@dashboard/components/Metadata/types";
@@ -38,25 +38,25 @@ import { CommonSearchOpts } from "@dashboard/hooks/makeTopLevelSearch/types";
 import { getSearchFetchMoreProps } from "@dashboard/hooks/makeTopLevelSearch/utils";
 import { useBackLinkWithState } from "@dashboard/hooks/useBackLinkWithState";
 import { ChangeEvent, SubmitPromise } from "@dashboard/hooks/useForm";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import usePageTypeSearch from "@dashboard/searches/usePageTypeSearch";
-import useProductTypeSearch from "@dashboard/searches/useProductTypeSearch";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
+import { UsePageTypeSearch as usePageTypeSearch } from "@dashboard/searches/usePageTypeSearch";
+import { UseProductTypeSearch as useProductTypeSearch } from "@dashboard/searches/useProductTypeSearch";
 import { TranslationsButton } from "@dashboard/translations/components/TranslationsButton/TranslationsButton";
 import { languageEntityUrl, TranslatableEntities } from "@dashboard/translations/urls";
 import { useCachedLocales } from "@dashboard/translations/useCachedLocales";
 import { ListSettings, ReorderAction } from "@dashboard/types";
 import { mapEdgesToItems, mapMetadataItemToInput } from "@dashboard/utils/maps";
-import useMetadataChangeTrigger from "@dashboard/utils/metadata/useMetadataChangeTrigger";
+import { useMetadataChangeTrigger } from "@dashboard/utils/metadata/useMetadataChangeTrigger";
 import { Option } from "@saleor/macaw-ui-next";
 import * as React from "react";
 import { useIntl } from "react-intl";
-import slugify from "slugify";
+import { slugify } from "slugify";
 
-import AttributeDetails from "../AttributeDetails";
-import AttributeOrganization from "../AttributeOrganization";
-import AttributeProperties from "../AttributeProperties";
+import { AttributeDetails } from "../AttributeDetails";
+import { AttributeOrganization } from "../AttributeOrganization";
+import { AttributeProperties } from "../AttributeProperties";
 import { AttributeReferenceTypesSection } from "../AttributeReferenceTypesSection/AttributeReferenceTypesSection";
-import AttributeValues from "../AttributeValues";
+import { AttributeValues } from "../AttributeValues";
 
 interface AttributePageProps {
   attribute?: AttributeDetailsFragment | null | undefined;
@@ -345,4 +345,4 @@ const AttributePage = ({
 };
 
 AttributePage.displayName = "AttributePage";
-export default AttributePage;
+export { AttributePage };

@@ -1,2 +1,2 @@
-export { default } from "./ShippingMethodTaxes";
+export { ShippingMethodTaxes } from "./ShippingMethodTaxes";
 export * from "./ShippingMethodTaxes";

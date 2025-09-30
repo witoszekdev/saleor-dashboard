@@ -1,8 +1,8 @@
-import AppInProgressDeleteDialog from "@dashboard/apps/components/AppInProgressDeleteDialog";
-import AppListPage from "@dashboard/apps/components/AppListPage/AppListPage";
+import { AppInProgressDeleteDialog } from "@dashboard/apps/components/AppInProgressDeleteDialog";
+import { AppListPage } from "@dashboard/apps/components/AppListPage/AppListPage";
 import { AppListContext, AppListContextValues } from "@dashboard/apps/context";
-import useActiveAppsInstallations from "@dashboard/apps/hooks/useActiveAppsInstallations";
-import useAppstoreApps from "@dashboard/apps/hooks/useAppstoreApps";
+import { useActiveAppsInstallations } from "@dashboard/apps/hooks/useActiveAppsInstallations";
+import { useAppstoreApps } from "@dashboard/apps/hooks/useAppstoreApps";
 import { AppListUrlDialog, AppListUrlQueryParams, AppUrls } from "@dashboard/apps/urls";
 import { getAppInProgressName, getAppstoreAppsLists } from "@dashboard/apps/utils";
 import { getAppsConfig } from "@dashboard/config";
@@ -16,13 +16,13 @@ import {
   useAppsListQuery,
 } from "@dashboard/graphql";
 import { useHasManagedAppsPermission } from "@dashboard/hooks/useHasManagedAppsPermission";
-import useListSettings from "@dashboard/hooks/useListSettings";
-import useLocalPaginator, { useLocalPaginationState } from "@dashboard/hooks/useLocalPaginator";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useNotifier from "@dashboard/hooks/useNotifier";
+import { useListSettings } from "@dashboard/hooks/useListSettings";
+import { useLocalPaginationState, useLocalPaginator } from "@dashboard/hooks/useLocalPaginator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
+import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { PaginatorContext } from "@dashboard/hooks/usePaginator";
 import { ListViews } from "@dashboard/types";
-import createDialogActionHandlers from "@dashboard/utils/handlers/dialogActionHandlers";
+import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { PropsWithChildren, useMemo } from "react";
 import { useIntl } from "react-intl";

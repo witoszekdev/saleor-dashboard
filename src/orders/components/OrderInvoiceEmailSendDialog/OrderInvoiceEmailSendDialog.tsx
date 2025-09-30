@@ -1,11 +1,11 @@
-import BackButton from "@dashboard/components/BackButton";
+import { BackButton } from "@dashboard/components/BackButton";
 import { ConfirmButton, ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import FormSpacer from "@dashboard/components/FormSpacer";
+import { FormSpacer } from "@dashboard/components/FormSpacer";
 import { DashboardModal } from "@dashboard/components/Modal";
 import { InvoiceErrorFragment, InvoiceFragment } from "@dashboard/graphql";
 import { buttonMessages } from "@dashboard/intl";
 import { DialogProps } from "@dashboard/types";
-import getInvoiceErrorMessage from "@dashboard/utils/errors/invoice";
+import { getInvoiceErrorMessage } from "@dashboard/utils/errors/invoice";
 import { Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 
@@ -70,4 +70,4 @@ const OrderInvoiceEmailSendDialog = ({
 };
 
 OrderInvoiceEmailSendDialog.displayName = "OrderInvoiceEmailSendDialog";
-export default OrderInvoiceEmailSendDialog;
+export { OrderInvoiceEmailSendDialog };

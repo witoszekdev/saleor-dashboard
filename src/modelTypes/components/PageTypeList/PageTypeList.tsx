@@ -1,10 +1,10 @@
 // @ts-strict-ignore
-import Checkbox from "@dashboard/components/Checkbox";
-import ResponsiveTable from "@dashboard/components/ResponsiveTable";
-import TableCellHeader from "@dashboard/components/TableCellHeader";
-import TableHead from "@dashboard/components/TableHead";
+import { Checkbox } from "@dashboard/components/Checkbox";
+import { ResponsiveTable } from "@dashboard/components/ResponsiveTable";
+import { TableCellHeader } from "@dashboard/components/TableCellHeader";
+import { TableHead } from "@dashboard/components/TableHead";
 import { TablePaginationWithContext } from "@dashboard/components/TablePagination";
-import TableRowLink from "@dashboard/components/TableRowLink";
+import { TableRowLink } from "@dashboard/components/TableRowLink";
 import { PageTypeFragment } from "@dashboard/graphql";
 import { getPrevLocationState } from "@dashboard/hooks/useBackLinkWithState";
 import { PageTypeListUrlSortField, pageTypeUrl } from "@dashboard/modelTypes/urls";
@@ -121,4 +121,4 @@ const PageTypeList = (props: PageTypeListProps) => {
 };
 
 PageTypeList.displayName = "PageTypeList";
-export default PageTypeList;
+export { PageTypeList };

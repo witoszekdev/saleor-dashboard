@@ -1,17 +1,17 @@
 // @ts-strict-ignore
 import { DashboardCard } from "@dashboard/components/Card";
 import { FormSpacer } from "@dashboard/components/FormSpacer";
-import PriceField from "@dashboard/components/PriceField";
-import RadioGroupField from "@dashboard/components/RadioGroupField";
-import ResponsiveTable from "@dashboard/components/ResponsiveTable";
-import TableHead from "@dashboard/components/TableHead";
-import TableRowLink from "@dashboard/components/TableRowLink";
+import { PriceField } from "@dashboard/components/PriceField";
+import { RadioGroupField } from "@dashboard/components/RadioGroupField";
+import { ResponsiveTable } from "@dashboard/components/ResponsiveTable";
+import { TableHead } from "@dashboard/components/TableHead";
+import { TableRowLink } from "@dashboard/components/TableRowLink";
 import { ChannelInput } from "@dashboard/discounts/handlers";
 import { RequirementsPicker } from "@dashboard/discounts/types";
 import { DiscountErrorFragment } from "@dashboard/graphql";
 import { renderCollection } from "@dashboard/misc";
 import { getFormErrors } from "@dashboard/utils/errors";
-import getDiscountErrorMessage from "@dashboard/utils/errors/discounts";
+import { getDiscountErrorMessage } from "@dashboard/utils/errors/discounts";
 import { TableBody, TableCell, TextField } from "@material-ui/core";
 import { Skeleton, Text } from "@saleor/macaw-ui-next";
 import * as React from "react";
@@ -182,4 +182,4 @@ const VoucherRequirements = ({
   );
 };
 
-export default VoucherRequirements;
+export { VoucherRequirements };

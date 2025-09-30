@@ -1,2 +1,2 @@
-export { default } from "./SaveFilterTabDialog";
+export { SaveFilterTabDialog } from "./SaveFilterTabDialog";
 export * from "./SaveFilterTabDialog";

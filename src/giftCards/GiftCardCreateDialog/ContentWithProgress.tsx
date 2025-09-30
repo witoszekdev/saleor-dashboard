@@ -1,6 +1,6 @@
 import { CircularProgress } from "@material-ui/core";
 import { makeStyles } from "@saleor/macaw-ui";
-import clsx from "clsx";
+import { clsx } from "clsx";
 import { PropsWithChildren } from "react";
 
 interface ContentWithProgressProps {
@@ -36,4 +36,4 @@ const ContentWithProgress = ({
   );
 };
 
-export default ContentWithProgress;
+export { ContentWithProgress };

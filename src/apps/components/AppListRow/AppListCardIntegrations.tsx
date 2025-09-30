@@ -54,4 +54,4 @@ const AppListCardIntegrations = ({ integrations }: AppListCardIntegrationsProps)
 };
 
 AppListCardIntegrations.displayName = "AppListCardIntegrations";
-export default AppListCardIntegrations;
+export { AppListCardIntegrations };

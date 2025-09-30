@@ -1,2 +1,2 @@
-export { default } from "./FilterBar";
+export { FilterBar } from "./FilterBar";
 export * from "./FilterBar";

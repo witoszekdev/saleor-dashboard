@@ -1,4 +1,4 @@
-import TableRowLink from "@dashboard/components/TableRowLink";
+import { TableRowLink } from "@dashboard/components/TableRowLink";
 import { MetadataInput } from "@dashboard/graphql";
 import { FormChange } from "@dashboard/hooks/useForm";
 import { Table, TableBody, TableCell, TableHead } from "@material-ui/core";

@@ -1,2 +1,2 @@
-export { default } from "./OrderFulfillmentApproveDialog";
+export { OrderFulfillmentApproveDialog } from "./OrderFulfillmentApproveDialog";
 export * from "./OrderFulfillmentApproveDialog";

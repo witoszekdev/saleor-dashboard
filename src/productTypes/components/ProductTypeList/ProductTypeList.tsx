@@ -1,10 +1,10 @@
 // @ts-strict-ignore
-import Checkbox from "@dashboard/components/Checkbox";
-import ResponsiveTable from "@dashboard/components/ResponsiveTable";
-import TableCellHeader from "@dashboard/components/TableCellHeader";
-import TableHead from "@dashboard/components/TableHead";
+import { Checkbox } from "@dashboard/components/Checkbox";
+import { ResponsiveTable } from "@dashboard/components/ResponsiveTable";
+import { TableCellHeader } from "@dashboard/components/TableCellHeader";
+import { TableHead } from "@dashboard/components/TableHead";
 import { TablePaginationWithContext } from "@dashboard/components/TablePagination";
-import TableRowLink from "@dashboard/components/TableRowLink";
+import { TableRowLink } from "@dashboard/components/TableRowLink";
 import { ProductTypeFragment } from "@dashboard/graphql";
 import { getPrevLocationState } from "@dashboard/hooks/useBackLinkWithState";
 import { ProductTypeListUrlSortField, productTypeUrl } from "@dashboard/productTypes/urls";
@@ -191,4 +191,4 @@ const ProductTypeList = ({
 };
 
 ProductTypeList.displayName = "ProductTypeList";
-export default ProductTypeList;
+export { ProductTypeList };

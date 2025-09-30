@@ -1,8 +1,8 @@
-import ActionDialog from "@dashboard/components/ActionDialog";
+import { ActionDialog } from "@dashboard/components/ActionDialog";
 import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import { OrderErrorFragment } from "@dashboard/graphql";
-import useModalDialogErrors from "@dashboard/hooks/useModalDialogErrors";
-import getOrderErrorMessage from "@dashboard/utils/errors/order";
+import { useModalDialogErrors } from "@dashboard/hooks/useModalDialogErrors";
+import { getOrderErrorMessage } from "@dashboard/utils/errors/order";
 import { TextField } from "@material-ui/core";
 import { Box, Text } from "@saleor/macaw-ui-next";
 import * as React from "react";
@@ -75,4 +75,4 @@ const OrderMarkAsPaidDialog = ({
 };
 
 OrderMarkAsPaidDialog.displayName = "OrderMarkAsPaidDialog";
-export default OrderMarkAsPaidDialog;
+export { OrderMarkAsPaidDialog };

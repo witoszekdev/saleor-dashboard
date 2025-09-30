@@ -35,4 +35,4 @@ function useLocalPageInfo<T>(values: T[], paginateBy: number) {
     loadPage: setPage,
   };
 }
-export default useLocalPageInfo;
+export { useLocalPageInfo };

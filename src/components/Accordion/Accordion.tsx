@@ -62,4 +62,4 @@ const Accordion = ({
 };
 
 Accordion.displayName = "Accordion";
-export default Accordion;
+export { Accordion };

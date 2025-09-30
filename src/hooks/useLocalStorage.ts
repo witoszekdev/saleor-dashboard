@@ -1,7 +1,7 @@
 import { Dispatch, SetStateAction, useState } from "react";
 
 type UseLocalStorage<T> = [T, Dispatch<SetStateAction<T>>];
-export default function useLocalStorage<T>(
+export function useLocalStorage<T>(
   key: string,
   initialValue: SetStateAction<T>,
 ): UseLocalStorage<T> {

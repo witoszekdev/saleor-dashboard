@@ -1,10 +1,10 @@
-import useAppChannel from "@dashboard/components/AppLayout/AppChannelContext";
+import { useAppChannel } from "@dashboard/components/AppLayout/AppChannelContext";
 import { WindowTitle } from "@dashboard/components/WindowTitle";
 import { DiscountDeleteModal } from "@dashboard/discounts/components/DiscountDeleteModal";
 import { DiscountDetailsPage } from "@dashboard/discounts/components/DiscountDetailsPage";
 import { discountSalesListPath, DiscountUrlQueryParams } from "@dashboard/discounts/discountsUrls";
 import { useBackLinkWithState } from "@dashboard/hooks/useBackLinkWithState";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { commonMessages } from "@dashboard/intl";
 import { getMutationErrors } from "@dashboard/misc";
 import { useState } from "react";

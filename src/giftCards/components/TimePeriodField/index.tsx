@@ -1,2 +1,2 @@
 export * from "./TimePeriodField";
-export { default } from "./TimePeriodField";
+export { TimePeriodField } from "./TimePeriodField";

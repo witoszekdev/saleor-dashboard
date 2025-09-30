@@ -1,2 +1,2 @@
-export { default } from "./PermissionGroupListPage";
+export { PermissionGroupListPage } from "./PermissionGroupListPage";
 export * from "./PermissionGroupListPage";

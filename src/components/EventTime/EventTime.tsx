@@ -1,4 +1,4 @@
-import useLocale from "@dashboard/hooks/useLocale";
+import { useLocale } from "@dashboard/hooks/useLocale";
 
 const EventTime = ({ date, showSeconds }: { date: string; showSeconds?: boolean }) => {
   const { locale } = useLocale();
@@ -15,4 +15,4 @@ const EventTime = ({ date, showSeconds }: { date: string; showSeconds?: boolean 
   return <time dateTime={date}>{intl.format(new Date(date))}</time>;
 };
 
-export default EventTime;
+export { EventTime };

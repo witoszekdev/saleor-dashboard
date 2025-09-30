@@ -1,11 +1,11 @@
 // @ts-strict-ignore
 import { DashboardCard } from "@dashboard/components/Card";
-import Grid from "@dashboard/components/Grid";
-import Hr from "@dashboard/components/Hr";
+import { Grid } from "@dashboard/components/Grid";
+import { Hr } from "@dashboard/components/Hr";
 import { AccountErrorFragment } from "@dashboard/graphql";
 import { commonMessages } from "@dashboard/intl";
 import { getFormErrors } from "@dashboard/utils/errors";
-import getAccountErrorMessage from "@dashboard/utils/errors/account";
+import { getAccountErrorMessage } from "@dashboard/utils/errors/account";
 import { TextField } from "@material-ui/core";
 import { makeStyles } from "@saleor/macaw-ui";
 import { Text } from "@saleor/macaw-ui-next";
@@ -119,4 +119,4 @@ const CustomerInfo = (props: CustomerInfoProps) => {
 };
 
 CustomerInfo.displayName = "CustomerInfo";
-export default CustomerInfo;
+export { CustomerInfo };

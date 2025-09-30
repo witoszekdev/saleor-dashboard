@@ -8,7 +8,7 @@ import { ListPageLayout } from "@dashboard/components/Layouts";
 import { saleAddUrl, SaleListUrlSortField, saleUrl } from "@dashboard/discounts/urls";
 import { SaleFragment } from "@dashboard/graphql";
 import { getPrevLocationState } from "@dashboard/hooks/useBackLinkWithState";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { commonMessages } from "@dashboard/intl";
 import {
   ChannelProps,
@@ -142,4 +142,4 @@ const SaleListPage = ({
 };
 
 SaleListPage.displayName = "SaleListPage";
-export default SaleListPage;
+export { SaleListPage };

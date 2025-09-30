@@ -3,7 +3,7 @@ import { useHasManagedAppsPermission } from "@dashboard/hooks/useHasManagedAppsP
 import { buttonMessages } from "@dashboard/intl";
 import { Box } from "@saleor/macaw-ui-next";
 import { PropsWithChildren } from "react";
-import SVG from "react-inlinesvg";
+import { InlineSVG as SVG } from "react-inlinesvg";
 import { FormattedMessage, useIntl } from "react-intl";
 
 import activateIcon from "../../../../assets/images/activate-icon.svg";
@@ -67,4 +67,4 @@ const HeaderOptions = ({
   );
 };
 
-export default HeaderOptions;
+export { HeaderOptions };

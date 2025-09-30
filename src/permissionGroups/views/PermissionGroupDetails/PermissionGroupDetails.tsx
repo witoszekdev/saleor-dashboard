@@ -1,5 +1,5 @@
 import { useUser } from "@dashboard/auth";
-import useAppChannel from "@dashboard/components/AppLayout/AppChannelContext";
+import { useAppChannel } from "@dashboard/components/AppLayout/AppChannelContext";
 import { Button } from "@dashboard/components/Button";
 import { DEFAULT_INITIAL_SEARCH_DATA } from "@dashboard/config";
 import {
@@ -9,29 +9,29 @@ import {
   usePermissionGroupDetailsQuery,
   usePermissionGroupUpdateMutation,
 } from "@dashboard/graphql";
-import useBulkActions from "@dashboard/hooks/useBulkActions";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useNotifier from "@dashboard/hooks/useNotifier";
-import useShop from "@dashboard/hooks/useShop";
-import useStateFromProps from "@dashboard/hooks/useStateFromProps";
+import { useBulkActions } from "@dashboard/hooks/useBulkActions";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
+import { useNotifier } from "@dashboard/hooks/useNotifier";
+import { useShop } from "@dashboard/hooks/useShop";
+import { useStateFromProps } from "@dashboard/hooks/useStateFromProps";
 import { commonMessages } from "@dashboard/intl";
 import { extractMutationErrors, getStringOrPlaceholder } from "@dashboard/misc";
-import MembersErrorDialog from "@dashboard/permissionGroups/components/MembersErrorDialog";
-import PermissionGroupDeleteDialog from "@dashboard/permissionGroups/components/PermissionGroupDeleteDialog";
-import useStaffMemberSearch from "@dashboard/searches/useStaffMemberSearch";
-import createDialogActionHandlers from "@dashboard/utils/handlers/dialogActionHandlers";
-import createSortHandler from "@dashboard/utils/handlers/sortHandler";
+import { MembersErrorDialog } from "@dashboard/permissionGroups/components/MembersErrorDialog";
+import { PermissionGroupDeleteDialog } from "@dashboard/permissionGroups/components/PermissionGroupDeleteDialog";
+import { UseStaffMemberSearch as useStaffMemberSearch } from "@dashboard/searches/useStaffMemberSearch";
+import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
+import { createSortHandler } from "@dashboard/utils/handlers/sortHandler";
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { getSortParams } from "@dashboard/utils/sort";
 import { useState } from "react";
 import { useIntl } from "react-intl";
 
-import AssignMembersDialog from "../../components/AssignMembersDialog";
+import { AssignMembersDialog } from "../../components/AssignMembersDialog";
 import {
   PermissionGroupDetailsPage,
   PermissionGroupDetailsPageFormData,
 } from "../../components/PermissionGroupDetailsPage";
-import UnassignMembersDialog from "../../components/UnassignMembersDialog";
+import { UnassignMembersDialog } from "../../components/UnassignMembersDialog";
 import {
   permissionGroupDetailsUrl,
   PermissionGroupDetailsUrlDialog,

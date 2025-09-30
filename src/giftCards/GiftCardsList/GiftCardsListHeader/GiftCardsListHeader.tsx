@@ -8,7 +8,7 @@ import {
   getExtensionsItemsForGiftCardOverviewActions,
 } from "@dashboard/extensions/getExtensionsItems";
 import { useExtensions } from "@dashboard/extensions/hooks/useExtensions";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { sectionNames } from "@dashboard/intl";
 import { Box, Button, ChevronRightIcon } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
@@ -132,4 +132,4 @@ const GiftCardsListHeader = () => {
   );
 };
 
-export default GiftCardsListHeader;
+export { GiftCardsListHeader };

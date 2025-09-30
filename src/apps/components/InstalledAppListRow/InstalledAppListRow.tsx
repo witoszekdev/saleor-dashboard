@@ -2,7 +2,7 @@ import { appsMessages } from "@dashboard/apps/messages";
 import { InstalledApp } from "@dashboard/apps/types";
 import { AppPaths, AppUrls } from "@dashboard/apps/urls";
 import { isAppInTunnel } from "@dashboard/apps/utils";
-import Link from "@dashboard/components/Link";
+import { Link } from "@dashboard/components/Link";
 import { StopPropagation } from "@dashboard/components/StopPropagation";
 import { useFlag } from "@dashboard/featureFlags";
 import { Box, Chip, List, sprinkles, Text } from "@saleor/macaw-ui-next";
@@ -128,4 +128,4 @@ const InstalledAppListRow = (props: InstalledApp) => {
   );
 };
 
-export default InstalledAppListRow;
+export { InstalledAppListRow };

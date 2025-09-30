@@ -7,4 +7,4 @@ const Container = ({ children }) => {
   return !!children.length && <div className={classes.container}>{children}</div>;
 };
 
-export default Container;
+export { Container };

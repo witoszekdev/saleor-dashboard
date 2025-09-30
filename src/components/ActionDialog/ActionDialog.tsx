@@ -5,7 +5,7 @@ import { Box } from "@saleor/macaw-ui-next";
 import * as React from "react";
 import { useIntl } from "react-intl";
 
-import BackButton from "../BackButton";
+import { BackButton } from "../BackButton";
 import { DashboardModal, DashboardModalContentSize } from "../Modal";
 import { ActionDialogVariant } from "./types";
 
@@ -64,4 +64,4 @@ const ActionDialog = ({
 };
 
 ActionDialog.displayName = "ActionDialog";
-export default ActionDialog;
+export { ActionDialog };

@@ -1,2 +1,2 @@
-export { default } from "./SiteSettingsPage";
+export { SiteSettingsPage } from "./SiteSettingsPage";
 export * from "./SiteSettingsPage";

@@ -1,6 +1,6 @@
 import { AppPaths } from "@dashboard/apps/urls";
-import EventTime from "@dashboard/components/EventTime";
-import Link from "@dashboard/components/Link";
+import { EventTime } from "@dashboard/components/EventTime";
+import { Link } from "@dashboard/components/Link";
 import { AppListItemFragment } from "@dashboard/graphql";
 import { ExclamationIcon } from "@dashboard/icons/ExclamationIcon";
 import { Box, Text, Tooltip } from "@saleor/macaw-ui-next";

@@ -1,3 +1,3 @@
 export * from "./FilterTab";
-export { default } from "./FilterTabs";
+export { FilterTabs } from "./FilterTabs";
 export * from "./FilterTabs";

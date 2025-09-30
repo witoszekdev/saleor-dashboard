@@ -17,6 +17,6 @@ const ChannelsIcon = createSvgIcon(
   "Channels",
 );
 
-export default function Channels(props: SvgIconProps) {
+export function Channels(props: SvgIconProps) {
   return <ChannelsIcon {...props} viewBox="0 0 32 32" />;
 }

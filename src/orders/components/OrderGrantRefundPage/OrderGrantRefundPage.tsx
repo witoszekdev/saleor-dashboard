@@ -3,15 +3,15 @@ import { DashboardCard } from "@dashboard/components/Card";
 import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import { DetailPageLayout } from "@dashboard/components/Layouts";
 import { formatMoneyAmount } from "@dashboard/components/Money";
-import PriceField from "@dashboard/components/PriceField";
+import { PriceField } from "@dashboard/components/PriceField";
 import { Savebar } from "@dashboard/components/Savebar";
 import {
   OrderDetailsGrantedRefundFragment,
   OrderDetailsGrantRefundFragment,
   OrderLineGrantRefundFragment,
 } from "@dashboard/graphql";
-import useLocale from "@dashboard/hooks/useLocale";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useLocale } from "@dashboard/hooks/useLocale";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { orderUrl } from "@dashboard/orders/urls";
 import { Box, Input, Skeleton, Text } from "@saleor/macaw-ui-next";
 import { useEffect, useMemo } from "react";
@@ -238,4 +238,4 @@ const OrderGrantRefundPage = ({
   );
 };
 
-export default OrderGrantRefundPage;
+export { OrderGrantRefundPage };

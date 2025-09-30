@@ -1,6 +1,6 @@
 import { DashboardCard } from "@dashboard/components/Card";
-import EventTime from "@dashboard/components/EventTime";
-import Money from "@dashboard/components/Money";
+import { EventTime } from "@dashboard/components/EventTime";
+import { Money } from "@dashboard/components/Money";
 import { OrderDetailsGrantRefundFragment, TransactionActionEnum } from "@dashboard/graphql";
 import {
   EventStatus,

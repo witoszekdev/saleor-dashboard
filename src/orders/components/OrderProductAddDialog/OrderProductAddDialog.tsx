@@ -1,27 +1,27 @@
 // @ts-strict-ignore
-import BackButton from "@dashboard/components/BackButton";
-import Checkbox from "@dashboard/components/Checkbox";
+import { BackButton } from "@dashboard/components/BackButton";
+import { Checkbox } from "@dashboard/components/Checkbox";
 import { ConfirmButton, ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import FormSpacer from "@dashboard/components/FormSpacer";
+import { FormSpacer } from "@dashboard/components/FormSpacer";
 import { InfiniteScroll } from "@dashboard/components/InfiniteScroll";
 import { DashboardModal } from "@dashboard/components/Modal";
-import ResponsiveTable from "@dashboard/components/ResponsiveTable";
-import TableCellAvatar from "@dashboard/components/TableCellAvatar";
-import TableRowLink from "@dashboard/components/TableRowLink";
+import { ResponsiveTable } from "@dashboard/components/ResponsiveTable";
+import { TableCellAvatar } from "@dashboard/components/TableCellAvatar";
+import { TableRowLink } from "@dashboard/components/TableRowLink";
 import { OrderErrorFragment, SearchOrderVariantQuery } from "@dashboard/graphql";
-import useModalDialogErrors from "@dashboard/hooks/useModalDialogErrors";
-import useModalDialogOpen from "@dashboard/hooks/useModalDialogOpen";
-import useSearchQuery from "@dashboard/hooks/useSearchQuery";
+import { useModalDialogErrors } from "@dashboard/hooks/useModalDialogErrors";
+import { useModalDialogOpen } from "@dashboard/hooks/useModalDialogOpen";
+import { useSearchQuery } from "@dashboard/hooks/useSearchQuery";
 import { buttonMessages } from "@dashboard/intl";
 import { maybe, renderCollection } from "@dashboard/misc";
 import { FetchMoreProps, RelayToFlat } from "@dashboard/types";
-import getOrderErrorMessage from "@dashboard/utils/errors/order";
+import { getOrderErrorMessage } from "@dashboard/utils/errors/order";
 import { CircularProgress, TableBody, TableCell, TextField } from "@material-ui/core";
 import { Box, Text } from "@saleor/macaw-ui-next";
 import { Fragment, useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import OrderPriceLabel from "../OrderPriceLabel/OrderPriceLabel";
+import { OrderPriceLabel } from "../OrderPriceLabel/OrderPriceLabel";
 import { messages } from "./messages";
 import { useStyles } from "./styles";
 import { hasAllVariantsSelected, isVariantSelected, onProductAdd, onVariantAdd } from "./utils";
@@ -242,4 +242,4 @@ const OrderProductAddDialog = (props: OrderProductAddDialogProps) => {
 };
 
 OrderProductAddDialog.displayName = "OrderProductAddDialog";
-export default OrderProductAddDialog;
+export { OrderProductAddDialog };

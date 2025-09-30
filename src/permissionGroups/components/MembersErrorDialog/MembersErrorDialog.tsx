@@ -1,4 +1,4 @@
-import ActionDialog from "@dashboard/components/ActionDialog";
+import { ActionDialog } from "@dashboard/components/ActionDialog";
 import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import { FormattedMessage, useIntl } from "react-intl";
 
@@ -40,4 +40,4 @@ const MembersErrorDialog = ({
 };
 
 MembersErrorDialog.displayName = "MembersErrorDialog";
-export default MembersErrorDialog;
+export { MembersErrorDialog };

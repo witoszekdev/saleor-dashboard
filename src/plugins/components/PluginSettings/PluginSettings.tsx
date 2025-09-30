@@ -1,11 +1,11 @@
 // @ts-strict-ignore
 import { DashboardCard } from "@dashboard/components/Card";
-import ControlledSwitch from "@dashboard/components/ControlledSwitch";
+import { ControlledSwitch } from "@dashboard/components/ControlledSwitch";
 import { ConfigurationItemFragment, ConfigurationTypeFieldEnum } from "@dashboard/graphql";
 import { UserError } from "@dashboard/types";
 import { getFieldError } from "@dashboard/utils/errors";
 import { TextField } from "@material-ui/core";
-import InfoIcon from "@material-ui/icons/Info";
+import { SvgIcon as InfoIcon } from "@material-ui/icons/Info";
 import { Box, Tooltip } from "@saleor/macaw-ui-next";
 import * as React from "react";
 import { useIntl } from "react-intl";
@@ -100,4 +100,4 @@ const PluginSettings = ({ data, disabled, errors, onChange, fields }: PluginSett
 };
 
 PluginSettings.displayName = "PluginSettings";
-export default PluginSettings;
+export { PluginSettings };

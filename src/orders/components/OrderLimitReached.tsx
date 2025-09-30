@@ -1,4 +1,4 @@
-import LimitReachedAlert from "@dashboard/components/LimitReachedAlert";
+import { LimitReachedAlert } from "@dashboard/components/LimitReachedAlert";
 import { FormattedMessage, useIntl } from "react-intl";
 
 const OrderLimitReached = () => {
@@ -21,4 +21,4 @@ const OrderLimitReached = () => {
 };
 
 OrderLimitReached.displayName = "OrderLimitReached";
-export default OrderLimitReached;
+export { OrderLimitReached };

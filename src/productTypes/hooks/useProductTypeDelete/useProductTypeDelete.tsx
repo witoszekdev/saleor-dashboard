@@ -70,4 +70,4 @@ function useProductTypeDelete({
   };
 }
 
-export default useProductTypeDelete;
+export { useProductTypeDelete };

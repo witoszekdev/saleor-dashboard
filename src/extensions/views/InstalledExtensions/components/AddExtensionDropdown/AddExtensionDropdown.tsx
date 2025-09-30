@@ -2,7 +2,7 @@ import { ButtonWithDropdown } from "@dashboard/components/ButtonWithDropdown";
 import { buttonLabels } from "@dashboard/extensions/messages";
 import { ExtensionsUrls } from "@dashboard/extensions/urls";
 import { useHasManagedAppsPermission } from "@dashboard/hooks/useHasManagedAppsPermission";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { useMemo } from "react";
 import { useIntl } from "react-intl";
 

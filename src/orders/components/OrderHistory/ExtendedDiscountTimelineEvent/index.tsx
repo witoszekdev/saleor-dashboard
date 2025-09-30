@@ -1,2 +1,2 @@
-export { default } from "./ExtendedDiscountTimelineEvent";
+export { ExtendedDiscountTimelineEvent } from "./ExtendedDiscountTimelineEvent";
 export * from "./ExtendedDiscountTimelineEvent";

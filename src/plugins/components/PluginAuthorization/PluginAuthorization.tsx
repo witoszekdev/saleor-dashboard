@@ -1,5 +1,5 @@
 import { DashboardCard } from "@dashboard/components/Card";
-import Hr from "@dashboard/components/Hr";
+import { Hr } from "@dashboard/components/Hr";
 import { ConfigurationItemFragment, ConfigurationTypeFieldEnum } from "@dashboard/graphql";
 import { buttonMessages } from "@dashboard/intl";
 import { isSecretField } from "@dashboard/plugins/utils";
@@ -91,4 +91,4 @@ const PluginAuthorization = (props: PluginAuthorizationProps) => {
 };
 
 PluginAuthorization.displayName = "PluginAuthorization";
-export default PluginAuthorization;
+export { PluginAuthorization };

@@ -1,2 +1,2 @@
 export * from "./EventTime";
-export { default } from "./EventTime";
+export { EventTime } from "./EventTime";

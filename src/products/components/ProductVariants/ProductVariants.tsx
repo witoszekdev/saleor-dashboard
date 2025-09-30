@@ -1,7 +1,7 @@
 import { ChannelData } from "@dashboard/channels/utils";
 import { ColumnPicker } from "@dashboard/components/Datagrid/ColumnPicker/ColumnPicker";
 import { useColumns } from "@dashboard/components/Datagrid/ColumnPicker/useColumns";
-import Datagrid, { GetCellContentOpts } from "@dashboard/components/Datagrid/Datagrid";
+import { Datagrid, GetCellContentOpts } from "@dashboard/components/Datagrid/Datagrid";
 import { DatagridChangeOpts } from "@dashboard/components/Datagrid/hooks/useDatagridChange";
 import {
   AttributeInputTypeEnum,
@@ -10,8 +10,8 @@ import {
   RefreshLimitsQuery,
   useWarehouseListQuery,
 } from "@dashboard/graphql";
-import useStateFromProps from "@dashboard/hooks/useStateFromProps";
-import EditIcon from "@dashboard/icons/Edit";
+import { useStateFromProps } from "@dashboard/hooks/useStateFromProps";
+import { EditIcon } from "@dashboard/icons/Edit";
 import { buttonMessages } from "@dashboard/intl";
 import { ProductVariantListError } from "@dashboard/products/views/ProductUpdate/handlers/errors";
 import { mapEdgesToItems } from "@dashboard/utils/maps";
@@ -29,7 +29,7 @@ import {
   useWarehouseAdapter,
   variantsStaticColumnsAdapter,
 } from "./datagrid";
-import messages from "./messages";
+import { messages } from "./messages";
 import { getData, getError } from "./utils";
 
 interface ProductVariantsProps {
@@ -219,4 +219,4 @@ const ProductVariants = ({
 };
 
 ProductVariants.displayName = "ProductVariants";
-export default ProductVariants;
+export { ProductVariants };

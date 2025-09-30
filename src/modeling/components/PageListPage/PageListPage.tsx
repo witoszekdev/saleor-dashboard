@@ -13,7 +13,7 @@ import {
 import { useExtensions } from "@dashboard/extensions/hooks/useExtensions";
 import { useFlag } from "@dashboard/featureFlags";
 import { getPrevLocationState } from "@dashboard/hooks/useBackLinkWithState";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { sectionNames } from "@dashboard/intl";
 import { Pages } from "@dashboard/modeling/types";
 import { PageListUrlSortField, pageUrl } from "@dashboard/modeling/urls";
@@ -188,4 +188,4 @@ const PageListPage = ({
 };
 
 PageListPage.displayName = "PageListPage";
-export default PageListPage;
+export { PageListPage };

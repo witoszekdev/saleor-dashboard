@@ -4,7 +4,7 @@ import { TopNav } from "@dashboard/components/AppLayout/TopNav";
 import { DashboardCard } from "@dashboard/components/Card";
 import { FilterPresetsSelect } from "@dashboard/components/FilterPresetsSelect";
 import { ListPageLayout } from "@dashboard/components/Layouts";
-import LimitReachedAlert from "@dashboard/components/LimitReachedAlert";
+import { LimitReachedAlert } from "@dashboard/components/LimitReachedAlert";
 import { configurationMenuUrl } from "@dashboard/configuration";
 import { useFlag } from "@dashboard/featureFlags";
 import { RefreshLimitsQuery } from "@dashboard/graphql";
@@ -164,4 +164,4 @@ const StaffListPage = ({
 };
 
 StaffListPage.displayName = "StaffListPage";
-export default StaffListPage;
+export { StaffListPage };

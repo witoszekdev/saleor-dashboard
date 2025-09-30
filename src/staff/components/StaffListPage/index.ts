@@ -1,3 +1,3 @@
 export * from "./filters";
-export { default } from "./StaffListPage";
+export { StaffListPage } from "./StaffListPage";
 export * from "./StaffListPage";

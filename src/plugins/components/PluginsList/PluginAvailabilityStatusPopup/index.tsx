@@ -1,2 +1,2 @@
 export * from "./PluginAvailabilityStatusPopup";
-export { default } from "./PluginAvailabilityStatusPopup";
+export { PluginAvailabilityStatusPopup } from "./PluginAvailabilityStatusPopup";

@@ -1,2 +1,2 @@
-export { default } from "./VisibilityCard";
+export { VisibilityCard } from "./VisibilityCard";
 export * from "./VisibilityCard";

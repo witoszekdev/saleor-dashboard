@@ -15,4 +15,4 @@ export const Hr = ({ className }: { className?: string }) => (
 );
 
 Hr.displayName = "Hr";
-export default Hr;
+export { Hr };

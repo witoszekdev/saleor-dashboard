@@ -3,7 +3,7 @@ import {
   SearchAttributeValuesQueryVariables,
 } from "@dashboard/graphql";
 import { UseSearchResult } from "@dashboard/hooks/makeSearch";
-import useAttributeValueSearch from "@dashboard/searches/useAttributeValueSearch";
+import { UseAttributeValueSearch as useAttributeValueSearch } from "@dashboard/searches/useAttributeValueSearch";
 import { useEffect, useState } from "react";
 
 interface AttributeValueSearchHandlerState {
@@ -68,4 +68,4 @@ function useAttributeValueSearchHandler(
   };
 }
 
-export default useAttributeValueSearchHandler;
+export { useAttributeValueSearchHandler };

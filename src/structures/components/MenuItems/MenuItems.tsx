@@ -76,4 +76,4 @@ const MenuItems = (props: MenuItemsProps) => {
 };
 
 MenuItems.displayName = "MenuItems";
-export default MenuItems;
+export { MenuItems };

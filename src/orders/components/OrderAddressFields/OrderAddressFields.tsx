@@ -9,7 +9,8 @@ import {
 import { SubmitPromise } from "@dashboard/hooks/useForm";
 import { transformAddressToForm } from "@dashboard/misc";
 
-import OrderCustomerAddressesEditDialog, {
+import {
+  OrderCustomerAddressesEditDialog,
   OrderCustomerAddressesEditDialogProps,
 } from "../OrderCustomerAddressesEditDialog";
 import {
@@ -82,4 +83,4 @@ const OrderAddressFields = ({
   );
 };
 
-export default OrderAddressFields;
+export { OrderAddressFields };

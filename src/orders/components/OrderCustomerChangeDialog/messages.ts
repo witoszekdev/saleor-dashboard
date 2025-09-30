@@ -24,4 +24,4 @@ const messages = defineMessages({
   },
 });
 
-export default messages;
+export { messages };

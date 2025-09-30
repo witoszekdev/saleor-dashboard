@@ -28,17 +28,19 @@ import {
   SearchPageTypesQuery,
   SearchProductsQuery,
 } from "@dashboard/graphql";
-import useForm, {
+import {
   CommonUseFormResultWithHandlers,
   FormChange,
   SubmitPromise,
+  useForm,
 } from "@dashboard/hooks/useForm";
-import useFormset, {
+import {
   FormsetChange,
   FormsetData,
   FormsetMetadataChange,
+  useFormset,
 } from "@dashboard/hooks/useFormset";
-import useHandleFormSubmit from "@dashboard/hooks/useHandleFormSubmit";
+import { useHandleFormSubmit } from "@dashboard/hooks/useHandleFormSubmit";
 import {
   getAttributeInputFromPage,
   getAttributeInputFromPageType,
@@ -47,13 +49,13 @@ import { createPageTypeSelectHandler } from "@dashboard/modeling/utils/handlers"
 import { validatePageCreateData } from "@dashboard/modeling/utils/validation";
 import { AttributeValuesMetadata } from "@dashboard/products/utils/data";
 import { FetchMoreProps, RelayToFlat, ReorderEvent } from "@dashboard/types";
-import getPublicationData from "@dashboard/utils/data/getPublicationData";
+import { getPublishedAt as getPublicationData } from "@dashboard/utils/data/getPublicationData";
 import { mapMetadataItemToInput } from "@dashboard/utils/maps";
-import getMetadata from "@dashboard/utils/metadata/getMetadata";
-import useMetadataChangeTrigger from "@dashboard/utils/metadata/useMetadataChangeTrigger";
+import { getMetadata } from "@dashboard/utils/metadata/getMetadata";
+import { useMetadataChangeTrigger } from "@dashboard/utils/metadata/useMetadataChangeTrigger";
 import { RichTextContext } from "@dashboard/utils/richText/context";
 import { useMultipleRichText } from "@dashboard/utils/richText/useMultipleRichText";
-import useRichText from "@dashboard/utils/richText/useRichText";
+import { useRichText } from "@dashboard/utils/richText/useRichText";
 import { OutputData } from "@editorjs/editorjs";
 import { useEffect, useState } from "react";
 import * as React from "react";
@@ -326,4 +328,4 @@ const PageForm = ({ children, page, onSubmit, disabled, ...rest }: PageFormProps
 };
 
 PageForm.displayName = "PageForm";
-export default PageForm;
+export { PageForm };

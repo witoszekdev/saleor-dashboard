@@ -11,4 +11,4 @@ const EditIcon = () => (
   </svg>
 );
 
-export default EditIcon;
+export { EditIcon };

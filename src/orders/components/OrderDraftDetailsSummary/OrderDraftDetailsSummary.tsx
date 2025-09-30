@@ -1,7 +1,7 @@
 // @ts-strict-ignore
 import { ButtonLink } from "@dashboard/components/ButtonLink";
-import HorizontalSpacer from "@dashboard/components/HorizontalSpacer";
-import Money from "@dashboard/components/Money";
+import { HorizontalSpacer } from "@dashboard/components/HorizontalSpacer";
+import { Money } from "@dashboard/components/Money";
 import {
   DiscountValueTypeEnum,
   OrderDetailsFragment,
@@ -10,12 +10,12 @@ import {
 import { OrderDiscountContextConsumerProps } from "@dashboard/products/components/OrderDiscountProviders/OrderDiscountProvider";
 import { OrderDiscountData } from "@dashboard/products/components/OrderDiscountProviders/types";
 import { getFormErrors } from "@dashboard/utils/errors";
-import getOrderErrorMessage from "@dashboard/utils/errors/order";
+import { getOrderErrorMessage } from "@dashboard/utils/errors/order";
 import { makeStyles } from "@saleor/macaw-ui";
 import { Box, Popover, sprinkles, Text } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
 
-import OrderDiscountCommonModal from "../OrderDiscountCommonModal";
+import { OrderDiscountCommonModal } from "../OrderDiscountCommonModal";
 import { ORDER_DISCOUNT } from "../OrderDiscountCommonModal/types";
 import { messages } from "./messages";
 
@@ -225,4 +225,4 @@ const OrderDraftDetailsSummary = (props: OrderDraftDetailsSummaryProps) => {
   );
 };
 
-export default OrderDraftDetailsSummary;
+export { OrderDraftDetailsSummary };

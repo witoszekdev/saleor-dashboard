@@ -46,4 +46,4 @@ const ProductVariantName = ({ value, onChange, disabled, errors }: ProductVarian
 };
 
 ProductVariantName.displayName = "ProductVariantName";
-export default ProductVariantName;
+export { ProductVariantName };

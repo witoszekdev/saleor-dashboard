@@ -1,2 +1,2 @@
-export { default } from "./PriceField";
+export { PriceField } from "./PriceField";
 export * from "./PriceField";

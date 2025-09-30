@@ -1,23 +1,23 @@
 // @ts-strict-ignore
-import ControlledCheckbox from "@dashboard/components/ControlledCheckbox";
-import Hr from "@dashboard/components/Hr";
-import RadioSwitchField from "@dashboard/components/RadioSwitchField";
-import useCurrentDate from "@dashboard/hooks/useCurrentDate";
-import useDateLocalize from "@dashboard/hooks/useDateLocalize";
+import { ControlledCheckbox } from "@dashboard/components/ControlledCheckbox";
+import { Hr } from "@dashboard/components/Hr";
+import { RadioSwitchField } from "@dashboard/components/RadioSwitchField";
+import { useCurrentDate } from "@dashboard/hooks/useCurrentDate";
+import { useDateLocalize } from "@dashboard/hooks/useDateLocalize";
 import { ChangeEvent } from "@dashboard/hooks/useForm";
 import { UserError } from "@dashboard/types";
 import { getFieldError } from "@dashboard/utils/errors";
 import { makeStyles } from "@saleor/macaw-ui";
 import { Box, Checkbox, RadioGroup, Text } from "@saleor/macaw-ui-next";
-import clsx from "clsx";
+import { clsx } from "clsx";
 import { useState } from "react";
 import * as React from "react";
 import { useIntl } from "react-intl";
 
 import { DashboardCard } from "../Card";
 import { DateTimeTimezoneField } from "../DateTimeTimezoneField";
-import FormSpacer from "../FormSpacer";
-import DateVisibilitySelector from "./DateVisibilitySelector";
+import { FormSpacer } from "../FormSpacer";
+import { DateVisibilitySelector } from "./DateVisibilitySelector";
 import { visibilityCardMessages } from "./messages";
 import { isAvailableOrPublished } from "./utils";
 
@@ -337,4 +337,4 @@ const VisibilityCard = (props: VisibilityCardProps) => {
 };
 
 VisibilityCard.displayName = "VisibilityCard";
-export default VisibilityCard;
+export { VisibilityCard };

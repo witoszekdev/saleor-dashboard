@@ -1,9 +1,9 @@
 import { DashboardCard } from "@dashboard/components/Card";
-import CardSpacer from "@dashboard/components/CardSpacer";
+import { CardSpacer } from "@dashboard/components/CardSpacer";
 import { ShippingErrorFragment } from "@dashboard/graphql";
 import { commonMessages } from "@dashboard/intl";
 import { getFormErrors } from "@dashboard/utils/errors";
-import getShippingErrorMessage from "@dashboard/utils/errors/shipping";
+import { getShippingErrorMessage } from "@dashboard/utils/errors/shipping";
 import { TextField } from "@material-ui/core";
 import { makeStyles } from "@saleor/macaw-ui";
 import * as React from "react";
@@ -117,4 +117,4 @@ const ShippingZoneInfo = ({ data, disabled, errors, onChange }: ShippingZoneInfo
 };
 
 ShippingZoneInfo.displayName = "ShippingZoneInfo";
-export default ShippingZoneInfo;
+export { ShippingZoneInfo };

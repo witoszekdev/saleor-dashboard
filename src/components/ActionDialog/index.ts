@@ -1,2 +1,2 @@
-export { default } from "./ActionDialog";
+export { ActionDialog } from "./ActionDialog";
 export * from "./ActionDialog";

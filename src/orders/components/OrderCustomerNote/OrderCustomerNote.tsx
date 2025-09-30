@@ -35,4 +35,4 @@ const OrderCustomerNote = ({ note }: OrderCustomerNoteProps) => {
   );
 };
 
-export default OrderCustomerNote;
+export { OrderCustomerNote };

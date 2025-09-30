@@ -4,7 +4,7 @@ import * as React from "react";
 import { FormattedMessage } from "react-intl";
 
 import { ColumnPickerSearch } from "./ColumnPickerSearch";
-import messages from "./messages";
+import { messages } from "./messages";
 import { ColumnCategory } from "./useColumns";
 
 interface ColumnPickerAvailableNodesProps {

@@ -1,2 +1,2 @@
-export { default } from "./VersionInfo";
+export { VersionInfo } from "./VersionInfo";
 export * from "./VersionInfo";

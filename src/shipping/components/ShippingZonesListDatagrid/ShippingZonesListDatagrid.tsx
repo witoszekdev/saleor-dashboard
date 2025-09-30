@@ -1,5 +1,5 @@
 import { useColumns } from "@dashboard/components/Datagrid/ColumnPicker/useColumns";
-import Datagrid from "@dashboard/components/Datagrid/Datagrid";
+import { Datagrid } from "@dashboard/components/Datagrid/Datagrid";
 import {
   DatagridChangeStateContext,
   useDatagridChangeState,
@@ -7,8 +7,8 @@ import {
 import { TablePaginationWithContext } from "@dashboard/components/TablePagination";
 import { ShippingZoneFragment } from "@dashboard/graphql";
 import { getPrevLocationState } from "@dashboard/hooks/useBackLinkWithState";
-import useLocale from "@dashboard/hooks/useLocale";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useLocale } from "@dashboard/hooks/useLocale";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { shippingZoneUrl } from "@dashboard/shipping/urls";
 import { ListProps } from "@dashboard/types";
 import { Item } from "@glideapps/glide-data-grid";

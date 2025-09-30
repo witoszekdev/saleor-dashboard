@@ -1,12 +1,12 @@
 // @ts-strict-ignore
 import notFoundImage from "@assets/images/what.svg";
-import useAppState from "@dashboard/hooks/useAppState";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useAppState } from "@dashboard/hooks/useAppState";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { Box, Button, sprinkles, Text } from "@saleor/macaw-ui-next";
-import SVG from "react-inlinesvg";
+import { InlineSVG as SVG } from "react-inlinesvg";
 import { FormattedMessage } from "react-intl";
 
-import messages from "./messages";
+import { messages } from "./messages";
 
 interface ErrorPageProps {
   onBack: () => void;
@@ -94,4 +94,4 @@ const ErrorPage = ({ onBack, onRefresh }: ErrorPageProps) => {
 };
 
 ErrorPage.displayName = "ErrorPage";
-export default ErrorPage;
+export { ErrorPage };

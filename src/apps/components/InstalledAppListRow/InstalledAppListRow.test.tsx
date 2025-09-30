@@ -3,11 +3,11 @@ import { activeApp, appWithFailedEventDeliveries } from "@dashboard/apps/fixture
 import { InstalledApp } from "@dashboard/apps/types";
 import { getAppsConfig } from "@dashboard/config";
 import { useFlag } from "@dashboard/featureFlags";
-import Wrapper from "@test/wrapper";
+import { Wrapper } from "@test/wrapper";
 import { fireEvent, render, screen } from "@testing-library/react";
 import { MemoryRouter as Router } from "react-router-dom";
 
-import InstalledAppListRow from "./InstalledAppListRow";
+import { InstalledAppListRow } from "./InstalledAppListRow";
 
 jest.mock("@dashboard/featureFlags");
 (useFlag as jest.Mock).mockReturnValue({ enabled: true });

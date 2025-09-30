@@ -1,2 +1,2 @@
-export { default } from "./TableRowLink";
+export { TableRowLink } from "./TableRowLink";
 export * from "./TableRowLink";

@@ -1,13 +1,13 @@
 import { useExitFormDialog } from "@dashboard/components/Form/useExitFormDialog";
 import { MetadataFormData } from "@dashboard/components/Metadata";
 import { CategoryDetailsFragment } from "@dashboard/graphql";
-import useForm, { CommonUseFormResult, FormChange } from "@dashboard/hooks/useForm";
-import useHandleFormSubmit from "@dashboard/hooks/useHandleFormSubmit";
+import { CommonUseFormResult, FormChange, useForm } from "@dashboard/hooks/useForm";
+import { useHandleFormSubmit } from "@dashboard/hooks/useHandleFormSubmit";
 import { mapMetadataItemToInput } from "@dashboard/utils/maps";
-import getMetadata from "@dashboard/utils/metadata/getMetadata";
-import useMetadataChangeTrigger from "@dashboard/utils/metadata/useMetadataChangeTrigger";
+import { getMetadata } from "@dashboard/utils/metadata/getMetadata";
+import { useMetadataChangeTrigger } from "@dashboard/utils/metadata/useMetadataChangeTrigger";
 import { RichTextContext, RichTextContextValues } from "@dashboard/utils/richText/context";
-import useRichText from "@dashboard/utils/richText/useRichText";
+import { useRichText } from "@dashboard/utils/richText/useRichText";
 import { OutputData } from "@editorjs/editorjs";
 import { useEffect } from "react";
 import * as React from "react";
@@ -126,4 +126,4 @@ const CategoryUpdateForm = ({
 };
 
 CategoryUpdateForm.displayName = "CategoryUpdateForm";
-export default CategoryUpdateForm;
+export { CategoryUpdateForm };

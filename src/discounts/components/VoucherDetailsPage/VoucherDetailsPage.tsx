@@ -4,11 +4,11 @@ import { useUser } from "@dashboard/auth";
 import { hasPermission } from "@dashboard/auth/misc";
 import { ChannelVoucherData } from "@dashboard/channels/utils";
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
-import CardSpacer from "@dashboard/components/CardSpacer";
-import ChannelsAvailabilityCard from "@dashboard/components/ChannelsAvailabilityCard";
+import { CardSpacer } from "@dashboard/components/CardSpacer";
+import { ChannelsAvailability as ChannelsAvailabilityCard } from "@dashboard/components/ChannelsAvailabilityCard";
 import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import CountryList from "@dashboard/components/CountryList";
-import Form from "@dashboard/components/Form";
+import { CountryList } from "@dashboard/components/CountryList";
+import { Form } from "@dashboard/components/Form";
 import { DetailPageLayout } from "@dashboard/components/Layouts";
 import { Metadata, MetadataFormData } from "@dashboard/components/Metadata";
 import { Savebar } from "@dashboard/components/Savebar";
@@ -35,32 +35,32 @@ import {
 import { useBackLinkWithState } from "@dashboard/hooks/useBackLinkWithState";
 import { UseListSettings } from "@dashboard/hooks/useListSettings";
 import { LocalPagination } from "@dashboard/hooks/useLocalPaginator";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { TranslationsButton } from "@dashboard/translations/components/TranslationsButton/TranslationsButton";
 import { languageEntityUrl, TranslatableEntities } from "@dashboard/translations/urls";
 import { useCachedLocales } from "@dashboard/translations/useCachedLocales";
 import { mapEdgesToItems, mapMetadataItemToInput } from "@dashboard/utils/maps";
-import useMetadataChangeTrigger from "@dashboard/utils/metadata/useMetadataChangeTrigger";
+import { useMetadataChangeTrigger } from "@dashboard/utils/metadata/useMetadataChangeTrigger";
 import { Box, Divider, Text } from "@saleor/macaw-ui-next";
 import * as React from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
 import { splitDateTime } from "../../../misc";
 import { ChannelProps, ListProps, TabListActions } from "../../../types";
-import DiscountCategories from "../DiscountCategories";
-import DiscountCollections from "../DiscountCollections";
-import DiscountDates from "../DiscountDates";
-import DiscountProducts from "../DiscountProducts";
-import DiscountVariants from "../DiscountVariants";
+import { DiscountCategories } from "../DiscountCategories";
+import { DiscountCollections } from "../DiscountCollections";
+import { DiscountDates } from "../DiscountDates";
+import { DiscountProducts } from "../DiscountProducts";
+import { DiscountVariants } from "../DiscountVariants";
 import { VoucherCodes } from "../VoucherCodes";
 import { VoucherCode } from "../VoucherCodesDatagrid/types";
 import { GenerateMultipleVoucherCodeFormData } from "../VoucherCodesGenerateDialog";
-import VoucherInfo from "../VoucherInfo";
-import VoucherLimits from "../VoucherLimits";
-import VoucherRequirements from "../VoucherRequirements";
-import VoucherSummary from "../VoucherSummary";
-import VoucherTypes from "../VoucherTypes";
-import VoucherValue from "../VoucherValue";
+import { VoucherInfo } from "../VoucherInfo";
+import { VoucherLimits } from "../VoucherLimits";
+import { VoucherRequirements } from "../VoucherRequirements";
+import { VoucherSummary } from "../VoucherSummary";
+import { VoucherTypes } from "../VoucherTypes";
+import { VoucherValue } from "../VoucherValue";
 
 export enum VoucherDetailsPageTab {
   categories = "categories",
@@ -501,4 +501,4 @@ const VoucherDetailsPage: React.FC<VoucherDetailsPageProps> = ({
 
 VoucherDetailsPage.displayName = "VoucherDetailsPage";
 
-export default VoucherDetailsPage;
+export { VoucherDetailsPage };

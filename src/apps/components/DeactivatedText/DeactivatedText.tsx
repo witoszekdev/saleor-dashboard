@@ -14,4 +14,4 @@ const DeactivatedText = () => {
   );
 };
 
-export default DeactivatedText;
+export { DeactivatedText };

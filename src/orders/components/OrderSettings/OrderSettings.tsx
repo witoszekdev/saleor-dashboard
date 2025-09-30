@@ -1,6 +1,6 @@
 import { DashboardCard } from "@dashboard/components/Card";
-import CardSpacer from "@dashboard/components/CardSpacer";
-import ControlledCheckbox from "@dashboard/components/ControlledCheckbox";
+import { CardSpacer } from "@dashboard/components/CardSpacer";
+import { ControlledCheckbox } from "@dashboard/components/ControlledCheckbox";
 import { Box, Text } from "@saleor/macaw-ui-next";
 import * as React from "react";
 import { FormattedMessage, useIntl } from "react-intl";
@@ -85,4 +85,4 @@ const OrderSettings = ({ data, disabled, onChange }: OrderSettingsProps) => {
 };
 
 OrderSettings.displayName = "OrderSettings";
-export default OrderSettings;
+export { OrderSettings };

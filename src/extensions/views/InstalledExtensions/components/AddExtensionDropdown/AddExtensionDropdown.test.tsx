@@ -1,5 +1,5 @@
 import { useHasManagedAppsPermission } from "@dashboard/hooks/useHasManagedAppsPermission";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 

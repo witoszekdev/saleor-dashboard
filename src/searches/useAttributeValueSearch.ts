@@ -5,7 +5,7 @@ import {
   SearchAttributeValuesQuery,
   SearchAttributeValuesQueryVariables,
 } from "@dashboard/graphql";
-import makeSearch from "@dashboard/hooks/makeSearch";
+import { makeSearch } from "@dashboard/hooks/makeSearch";
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 
 export const searchAttributeValues = gql`
@@ -47,39 +47,39 @@ export function useSearchAttributeValuesSuggestions() {
       );
 }
 
-export default makeSearch<SearchAttributeValuesQuery, SearchAttributeValuesQueryVariables>(
-  SearchAttributeValuesDocument,
-  result => {
-    if (result.data?.attribute.choices.pageInfo.hasNextPage) {
-      result.loadMore(
-        (prev, next) => {
-          if (
-            prev?.attribute?.choices?.pageInfo?.endCursor ===
-            next?.attribute?.choices?.pageInfo?.endCursor
-          ) {
-            return prev;
-          }
+export const UseAttributeValueSearch = makeSearch<
+  SearchAttributeValuesQuery,
+  SearchAttributeValuesQueryVariables
+>(SearchAttributeValuesDocument, result => {
+  if (result.data?.attribute.choices.pageInfo.hasNextPage) {
+    result.loadMore(
+      (prev, next) => {
+        if (
+          prev?.attribute?.choices?.pageInfo?.endCursor ===
+          next?.attribute?.choices?.pageInfo?.endCursor
+        ) {
+          return prev;
+        }
 
-          return {
-            ...prev,
-            attribute: {
-              ...prev.attribute,
-              choices: {
-                ...prev?.attribute.choices,
-                edges: [
-                  ...(prev.attribute.choices?.edges ?? []),
-                  ...(next.attribute.choices?.edges ?? []),
-                ],
-                pageInfo: next.attribute.choices.pageInfo,
-              },
+        return {
+          ...prev,
+          attribute: {
+            ...prev.attribute,
+            choices: {
+              ...prev?.attribute.choices,
+              edges: [
+                ...(prev.attribute.choices?.edges ?? []),
+                ...(next.attribute.choices?.edges ?? []),
+              ],
+              pageInfo: next.attribute.choices.pageInfo,
             },
-          };
-        },
-        {
-          ...result.variables,
-          after: result.data.attribute.choices.pageInfo.endCursor,
-        },
-      );
-    }
-  },
-);
+          },
+        };
+      },
+      {
+        ...result.variables,
+        after: result.data.attribute.choices.pageInfo.endCursor,
+      },
+    );
+  }
+});

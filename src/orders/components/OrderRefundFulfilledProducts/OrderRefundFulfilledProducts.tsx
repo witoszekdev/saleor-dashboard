@@ -1,9 +1,9 @@
 // @ts-strict-ignore
 import { DashboardCard } from "@dashboard/components/Card";
-import Money from "@dashboard/components/Money";
+import { Money } from "@dashboard/components/Money";
 import { QuantityInput } from "@dashboard/components/QuantityInput";
-import TableCellAvatar from "@dashboard/components/TableCellAvatar";
-import TableRowLink from "@dashboard/components/TableRowLink";
+import { TableCellAvatar } from "@dashboard/components/TableCellAvatar";
+import { TableRowLink } from "@dashboard/components/TableRowLink";
 import { OrderRefundDataQuery } from "@dashboard/graphql";
 import { FormsetChange } from "@dashboard/hooks/useFormset";
 import { renderCollection } from "@dashboard/misc";
@@ -213,4 +213,4 @@ const OrderRefundFulfilledProducts = (props: OrderRefundFulfilledProductsProps) 
 };
 
 OrderRefundFulfilledProducts.displayName = "OrderRefundFulfilledProducts";
-export default OrderRefundFulfilledProducts;
+export { OrderRefundFulfilledProducts };

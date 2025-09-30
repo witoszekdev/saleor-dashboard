@@ -1,10 +1,10 @@
 // @ts-strict-ignore
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
-import CardSpacer from "@dashboard/components/CardSpacer";
+import { CardSpacer } from "@dashboard/components/CardSpacer";
 import { LanguageSwitchWithCaching } from "@dashboard/components/LanguageSwitch/LanguageSwitch";
 import { DetailPageLayout } from "@dashboard/components/Layouts";
 import { LanguageCodeEnum, ProductTranslationFragment } from "@dashboard/graphql";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { commonMessages } from "@dashboard/intl";
 import { getStringOrPlaceholder } from "@dashboard/misc";
 import {
@@ -22,7 +22,7 @@ import { Box } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
 
 import { ProductContextSwitcher } from "../ProductContextSwitcher/ProductContextSwitcher";
-import TranslationFields from "../TranslationFields";
+import { TranslationFields } from "../TranslationFields";
 
 interface TranslationsProductsPageProps extends TranslationsEntitiesPageProps {
   data: ProductTranslationFragment;
@@ -183,4 +183,4 @@ const TranslationsProductsPage = ({
 };
 
 TranslationsProductsPage.displayName = "TranslationsProductsPage";
-export default TranslationsProductsPage;
+export { TranslationsProductsPage };

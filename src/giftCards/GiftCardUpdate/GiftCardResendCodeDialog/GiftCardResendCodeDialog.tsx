@@ -1,22 +1,22 @@
 // @ts-strict-ignore
-import ActionDialog from "@dashboard/components/ActionDialog";
+import { ActionDialog } from "@dashboard/components/ActionDialog";
 import { useChannelsSearch } from "@dashboard/components/ChannelsAvailabilityDialog/utils";
 import { Combobox } from "@dashboard/components/Combobox";
 import { IMessage } from "@dashboard/components/messages";
 import { useGiftCardPermissions } from "@dashboard/giftCards/hooks/useGiftCardPermissions";
 import { useChannelsQuery, useGiftCardResendMutation } from "@dashboard/graphql";
-import useForm from "@dashboard/hooks/useForm";
-import useNotifier from "@dashboard/hooks/useNotifier";
+import { useForm } from "@dashboard/hooks/useForm";
+import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { getBySlug } from "@dashboard/misc";
 import { DialogProps } from "@dashboard/types";
-import commonErrorMessages from "@dashboard/utils/errors/common";
+import { commonErrorMessages } from "@dashboard/utils/errors/common";
 import { mapSlugNodeToChoice } from "@dashboard/utils/maps";
 import { Box, Checkbox, Input, Spinner, Text } from "@saleor/macaw-ui-next";
 import { useEffect, useState } from "react";
 import { useIntl } from "react-intl";
 
 import { getGiftCardErrorMessage } from "../messages";
-import useGiftCardDetails from "../providers/GiftCardDetailsProvider/hooks/useGiftCardDetails";
+import { useGiftCardDetails } from "../providers/GiftCardDetailsProvider/hooks/useGiftCardDetails";
 import { giftCardResendCodeDialogMessages as messages } from "./messages";
 import { useDialogFormReset } from "./utils";
 
@@ -143,4 +143,4 @@ const GiftCardResendCodeDialog = ({ open, onClose }: DialogProps) => {
   );
 };
 
-export default GiftCardResendCodeDialog;
+export { GiftCardResendCodeDialog };

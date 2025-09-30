@@ -26,4 +26,4 @@ function useMetadataChangeTrigger() {
   };
 }
 
-export default useMetadataChangeTrigger;
+export { useMetadataChangeTrigger };

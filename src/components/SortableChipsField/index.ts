@@ -1,2 +1,2 @@
-export { default } from "./SortableChipsField";
+export { SortableChipsField } from "./SortableChipsField";
 export * from "./SortableChipsField";

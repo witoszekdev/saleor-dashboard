@@ -1,2 +1,2 @@
 export * from "./OrderTransactionGiftCard";
-export { default } from "./OrderTransactionGiftCard";
+export { OrderTransactionGiftCard } from "./OrderTransactionGiftCard";

@@ -1,6 +1,6 @@
-import CardTitle from "@dashboard/components/CardTitle";
-import ControlledCheckbox from "@dashboard/components/ControlledCheckbox";
-import Grid from "@dashboard/components/Grid";
+import { CardTitle } from "@dashboard/components/CardTitle";
+import { ControlledCheckbox } from "@dashboard/components/ControlledCheckbox";
+import { Grid } from "@dashboard/components/Grid";
 import { Select } from "@dashboard/components/Select";
 import { TaxConfigurationUpdateInput } from "@dashboard/graphql";
 import { FormChange } from "@dashboard/hooks/useForm";
@@ -118,4 +118,4 @@ const TaxSettingsCard = ({
   );
 };
 
-export default TaxSettingsCard;
+export { TaxSettingsCard };

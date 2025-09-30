@@ -1,4 +1,4 @@
-import Link from "@dashboard/components/Link";
+import { Link } from "@dashboard/components/Link";
 import { globalSearchUrl } from "@dashboard/search/urls";
 import { Box, Text } from "@saleor/macaw-ui-next";
 import { useState } from "react";
@@ -6,7 +6,7 @@ import { FormattedMessage } from "react-intl";
 
 import { getShortcutLeadingKey } from "../Sidebar/shortcuts/utils";
 import { Actions } from "./Actions";
-import NavigatorSearchInput from "./NavigatorSearchInput";
+import { NavigatorSearchInput } from "./NavigatorSearchInput";
 import { ResourcesTable } from "./ResourcesTable";
 import { useKeyboardNavigation } from "./useKeyboardNavigation";
 import { useNavigatorSearchContext } from "./useNavigatorSearchContext";

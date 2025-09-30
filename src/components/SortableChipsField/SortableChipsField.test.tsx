@@ -1,6 +1,6 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 
-import SortableChipsField from "./SortableChipsField";
+import { SortableChipsField } from "./SortableChipsField";
 import * as useActiveDragId from "./useActiveDragId";
 import * as useSortableDragOver from "./useSortableDragOver";
 

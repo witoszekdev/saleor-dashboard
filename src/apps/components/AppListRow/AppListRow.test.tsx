@@ -7,11 +7,11 @@ import {
   releasedApp,
 } from "@dashboard/apps/fixtures";
 import { appInstallationStatusMessages } from "@dashboard/apps/messages";
-import Wrapper from "@test/wrapper";
+import { Wrapper } from "@test/wrapper";
 import { render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
-import AppListRow from "./AppListRow";
+import { AppListRow } from "./AppListRow";
 
 jest.mock("@dashboard/apps/context", () => ({
   useAppListContext: jest.fn(() => ({

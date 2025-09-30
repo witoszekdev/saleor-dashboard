@@ -51,4 +51,4 @@ const FilterContentBodyNameField = ({
   );
 };
 
-export default FilterContentBodyNameField;
+export { FilterContentBodyNameField };

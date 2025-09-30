@@ -5,8 +5,8 @@ import { hasPermission } from "@dashboard/auth/misc";
 import { ChannelCollectionData } from "@dashboard/channels/utils";
 import { collectionListPath, CollectionUrlQueryParams } from "@dashboard/collections/urls";
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
-import CardSpacer from "@dashboard/components/CardSpacer";
-import ChannelsAvailabilityCard from "@dashboard/components/ChannelsAvailabilityCard";
+import { CardSpacer } from "@dashboard/components/CardSpacer";
+import { ChannelsAvailability as ChannelsAvailabilityCard } from "@dashboard/components/ChannelsAvailabilityCard";
 import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import { DetailPageLayout } from "@dashboard/components/Layouts";
 import { Metadata } from "@dashboard/components/Metadata/Metadata";
@@ -23,7 +23,7 @@ import {
 } from "@dashboard/graphql";
 import { useBackLinkWithState } from "@dashboard/hooks/useBackLinkWithState";
 import { SubmitPromise } from "@dashboard/hooks/useForm";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { TranslationsButton } from "@dashboard/translations/components/TranslationsButton/TranslationsButton";
 import { languageEntityUrl, TranslatableEntities } from "@dashboard/translations/urls";
 import { useCachedLocales } from "@dashboard/translations/useCachedLocales";
@@ -31,10 +31,10 @@ import { Box, Divider } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
 
 import { ChannelProps, PageListProps } from "../../../types";
-import CollectionDetails from "../CollectionDetails/CollectionDetails";
+import { CollectionDetails } from "../CollectionDetails/CollectionDetails";
 import { CollectionImage } from "../CollectionImage/CollectionImage";
-import CollectionProducts from "../CollectionProducts/CollectionProducts";
-import CollectionUpdateForm, { CollectionUpdateData } from "./form";
+import { CollectionProducts } from "../CollectionProducts/CollectionProducts";
+import { CollectionUpdateData, CollectionUpdateForm } from "./form";
 
 interface CollectionDetailsPageProps extends PageListProps, ChannelProps {
   channelsCount: number;
@@ -202,4 +202,4 @@ const CollectionDetailsPage = ({
 };
 
 CollectionDetailsPage.displayName = "CollectionDetailsPage";
-export default CollectionDetailsPage;
+export { CollectionDetailsPage };

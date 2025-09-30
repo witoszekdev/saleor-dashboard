@@ -10,4 +10,4 @@ function useCurrentDate(): number {
   return currentDate;
 }
 
-export default useCurrentDate;
+export { useCurrentDate };

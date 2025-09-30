@@ -7,7 +7,7 @@ import {
   Radio,
   RadioGroup,
 } from "@material-ui/core";
-import clsx from "clsx";
+import { clsx } from "clsx";
 import * as React from "react";
 import { FormattedMessage } from "react-intl";
 
@@ -110,4 +110,4 @@ const RadioGroupField = (props: RadioGroupFieldProps) => {
 };
 
 RadioGroupField.displayName = "RadioGroupField";
-export default RadioGroupField;
+export { RadioGroupField };

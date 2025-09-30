@@ -27,4 +27,4 @@ const OrderManualTransactionRefund = ({ orderId }: OrderManualTransactionRefundP
   );
 };
 
-export default OrderManualTransactionRefund;
+export { OrderManualTransactionRefund };

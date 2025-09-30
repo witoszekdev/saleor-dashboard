@@ -4,7 +4,7 @@ import {
   CollectionWithTotalProductsFragment,
   SearchProductFragment,
 } from "@dashboard/graphql";
-import useLocalPageInfo from "@dashboard/hooks/useLocalPageInfo";
+import { useLocalPageInfo } from "@dashboard/hooks/useLocalPageInfo";
 
 import { VoucherCreatePageTab } from "../types";
 

@@ -3,7 +3,7 @@ import { TopNav } from "@dashboard/components/AppLayout/TopNav";
 import { LanguageSwitchWithCaching } from "@dashboard/components/LanguageSwitch/LanguageSwitch";
 import { DetailPageLayout } from "@dashboard/components/Layouts";
 import { LanguageCodeEnum, SaleTranslationFragment } from "@dashboard/graphql";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { commonMessages } from "@dashboard/intl";
 import { getStringOrPlaceholder } from "@dashboard/misc";
 import { TranslationsEntitiesPageProps } from "@dashboard/translations/types";
@@ -14,7 +14,7 @@ import {
 } from "@dashboard/translations/urls";
 import { useIntl } from "react-intl";
 
-import TranslationFields from "../TranslationFields";
+import { TranslationFields } from "../TranslationFields";
 
 interface TranslationsSalesPageProps extends TranslationsEntitiesPageProps {
   data: SaleTranslationFragment;
@@ -95,4 +95,4 @@ const TranslationsSalesPage = ({
 };
 
 TranslationsSalesPage.displayName = "TranslationsSalesPage";
-export default TranslationsSalesPage;
+export { TranslationsSalesPage };

@@ -1,8 +1,8 @@
 import { DashboardCard } from "@dashboard/components/Card";
-import ResponsiveTable from "@dashboard/components/ResponsiveTable";
+import { ResponsiveTable } from "@dashboard/components/ResponsiveTable";
 import { SortableTableBody, SortableTableRow } from "@dashboard/components/SortableTable";
-import TablePagination from "@dashboard/components/TablePagination";
-import TableRowLink from "@dashboard/components/TableRowLink";
+import { TablePagination } from "@dashboard/components/TablePagination";
+import { TableRowLink } from "@dashboard/components/TableRowLink";
 import {
   AttributeInputTypeEnum,
   AttributeValueFragment,
@@ -224,4 +224,4 @@ const AttributeValues = ({
 };
 
 AttributeValues.displayName = "AttributeValues";
-export default AttributeValues;
+export { AttributeValues };

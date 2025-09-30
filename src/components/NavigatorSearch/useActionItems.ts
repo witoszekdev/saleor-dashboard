@@ -1,4 +1,4 @@
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { useRef } from "react";
 
 export const useActionItems = () => {

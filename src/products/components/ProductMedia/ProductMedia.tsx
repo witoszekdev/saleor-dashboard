@@ -1,10 +1,10 @@
 // @ts-strict-ignore
 import { DashboardCard } from "@dashboard/components/Card";
-import ImageUpload from "@dashboard/components/ImageUpload";
-import MediaTile from "@dashboard/components/MediaTile";
+import { ImageUpload } from "@dashboard/components/ImageUpload";
+import { MediaTile } from "@dashboard/components/MediaTile";
 import { ProductMediaFragment, ProductMediaType } from "@dashboard/graphql";
 import { ReorderAction } from "@dashboard/types";
-import createMultiFileUploadHandler from "@dashboard/utils/handlers/multiFileUploadHandler";
+import { createMultiFileUploadHandler } from "@dashboard/utils/handlers/multiFileUploadHandler";
 import { Box, Button, Dropdown, List, Skeleton, sprinkles, Text } from "@saleor/macaw-ui-next";
 import * as React from "react";
 import { FormattedMessage, useIntl } from "react-intl";
@@ -222,4 +222,4 @@ const ProductMedia = (props: ProductMediaProps) => {
 };
 
 ProductMedia.displayName = "ProductMedia";
-export default ProductMedia;
+export { ProductMedia };

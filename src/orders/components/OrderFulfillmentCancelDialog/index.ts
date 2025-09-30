@@ -1,2 +1,2 @@
-export { default } from "./OrderFulfillmentCancelDialog";
+export { OrderFulfillmentCancelDialog } from "./OrderFulfillmentCancelDialog";
 export * from "./OrderFulfillmentCancelDialog";

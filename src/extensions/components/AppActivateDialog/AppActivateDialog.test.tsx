@@ -1,8 +1,8 @@
-import Wrapper from "@test/wrapper";
+import { Wrapper } from "@test/wrapper";
 import { render, screen } from "@testing-library/react";
 
-import AppActivateDialog from "./AppActivateDialog";
-import msgs from "./messages";
+import { AppActivateDialog } from "./AppActivateDialog";
+import { Messages as msgs } from "./messages";
 
 describe("Apps AppActivateDialog", () => {
   it("displays action text with app name when app name passed", () => {

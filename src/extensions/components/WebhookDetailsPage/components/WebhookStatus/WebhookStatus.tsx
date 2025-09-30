@@ -30,4 +30,4 @@ const WebhookStatus = ({ data, disabled, setValue }: WebhookStatusProps) => {
 };
 
 WebhookStatus.displayName = "WebhookStatus";
-export default WebhookStatus;
+export { WebhookStatus };

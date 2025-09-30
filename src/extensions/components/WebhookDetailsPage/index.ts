@@ -1,2 +1,2 @@
-export { default } from "./WebhookDetailsPage";
+export { WebhookDetailsPage } from "./WebhookDetailsPage";
 export * from "./WebhookDetailsPage";

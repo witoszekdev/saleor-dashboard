@@ -5,16 +5,16 @@ import {
   useUpdateAttributeValueTranslationsMutation,
   useUpdateProductVariantTranslationsMutation,
 } from "@dashboard/graphql";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useNotifier from "@dashboard/hooks/useNotifier";
-import useShop from "@dashboard/hooks/useShop";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
+import { useNotifier } from "@dashboard/hooks/useNotifier";
+import { useShop } from "@dashboard/hooks/useShop";
 import { commonMessages } from "@dashboard/intl";
 import { OutputData } from "@editorjs/editorjs";
 import { stringify as stringifyQs } from "qs";
 import { useIntl } from "react-intl";
 
 import { extractMutationErrors, maybe } from "../../misc";
-import TranslationsProductVariantsPage from "../components/TranslationsProductVariantsPage";
+import { TranslationsProductsPage as TranslationsProductVariantsPage } from "../components/TranslationsProductVariantsPage";
 import { TranslationField, TranslationInputFieldName } from "../types";
 import { getAttributeValueTranslationsInputData, getParsedTranslationInputData } from "../utils";
 
@@ -121,4 +121,4 @@ const TranslationsProductVariants = ({
 };
 
 TranslationsProductVariants.displayName = "TranslationsProductVariants";
-export default TranslationsProductVariants;
+export { TranslationsProductVariants };

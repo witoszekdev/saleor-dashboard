@@ -32,4 +32,4 @@ const VariantDetailsChannelsAvailabilityCardContainer = ({
   </>
 );
 
-export default VariantDetailsChannelsAvailabilityCardContainer;
+export { VariantDetailsChannelsAvailabilityCardContainer };

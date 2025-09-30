@@ -1,5 +1,5 @@
-import ActionDialog from "@dashboard/components/ActionDialog";
-import NotFoundPage from "@dashboard/components/NotFoundPage";
+import { ActionDialog } from "@dashboard/components/ActionDialog";
+import { NotFoundPage } from "@dashboard/components/NotFoundPage";
 import { WindowTitle } from "@dashboard/components/WindowTitle";
 import {
   CategoryBulkDeleteMutation,
@@ -14,18 +14,19 @@ import {
   useUpdateMetadataMutation,
   useUpdatePrivateMetadataMutation,
 } from "@dashboard/graphql";
-import useListSettings from "@dashboard/hooks/useListSettings";
-import useLocalPaginator, {
+import { useListSettings } from "@dashboard/hooks/useListSettings";
+import {
+  useLocalPaginator,
   useSectionLocalPaginationState,
 } from "@dashboard/hooks/useLocalPaginator";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useNotifier from "@dashboard/hooks/useNotifier";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
+import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { PaginatorContext } from "@dashboard/hooks/usePaginator";
 import { useRowSelection } from "@dashboard/hooks/useRowSelection";
 import { commonMessages, errorMessages } from "@dashboard/intl";
 import { ListViews } from "@dashboard/types";
-import createDialogActionHandlers from "@dashboard/utils/handlers/dialogActionHandlers";
-import createMetadataUpdateHandler from "@dashboard/utils/handlers/metadataUpdateHandler";
+import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
+import { createMetadataUpdateHandler } from "@dashboard/utils/handlers/metadataUpdateHandler";
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { getParsedDataForJsonStringField } from "@dashboard/utils/richText/misc";
 import { Box } from "@saleor/macaw-ui-next";
@@ -385,4 +386,4 @@ const CategoryDetails = ({ id, params }: CategoryDetailsProps) => {
   );
 };
 
-export default CategoryDetails;
+export { CategoryDetails };

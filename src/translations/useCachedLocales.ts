@@ -1,6 +1,6 @@
 import { LanguageCodeEnum } from "@dashboard/graphql";
-import useLocale from "@dashboard/hooks/useLocale";
-import useLocalStorage from "@dashboard/hooks/useLocalStorage";
+import { useLocale } from "@dashboard/hooks/useLocale";
+import { useLocalStorage } from "@dashboard/hooks/useLocalStorage";
 
 export class CachedLocalesStack {
   private members = new Set<LanguageCodeEnum>();

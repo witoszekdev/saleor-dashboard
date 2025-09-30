@@ -10,4 +10,4 @@ function getWebhookErrorMessage(
   return getCommonFormFieldErrorMessage(err, intl);
 }
 
-export default getWebhookErrorMessage;
+export { getWebhookErrorMessage };

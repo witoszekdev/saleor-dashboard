@@ -16,4 +16,4 @@ const useGiftCardUpdate = (): UseGiftCardUpdateFormProps => {
   return omit(giftCardUpdateFormProviderProps, ["opts"]);
 };
 
-export default useGiftCardUpdate;
+export { useGiftCardUpdate };

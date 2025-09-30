@@ -36,4 +36,4 @@ function getAttributeErrorMessage(
   return getCommonFormFieldErrorMessage(err, intl);
 }
 
-export default getAttributeErrorMessage;
+export { getAttributeErrorMessage };

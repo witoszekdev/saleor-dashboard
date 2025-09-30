@@ -1,2 +1,2 @@
-export { default } from "./DiscountCountrySelectDialog";
+export { DiscountCountrySelectDialog } from "./DiscountCountrySelectDialog";
 export * from "./DiscountCountrySelectDialog";

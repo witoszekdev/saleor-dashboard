@@ -1,5 +1,5 @@
 import { makeStyles } from "@saleor/macaw-ui";
-import clsx from "clsx";
+import { clsx } from "clsx";
 import * as React from "react";
 
 type GridVariant = "default" | "inverted" | "uniform";
@@ -60,4 +60,4 @@ Grid.displayName = "Grid";
 Grid.defaultProps = {
   variant: "default",
 };
-export default Grid;
+export { Grid };

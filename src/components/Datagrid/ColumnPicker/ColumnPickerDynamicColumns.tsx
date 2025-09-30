@@ -3,7 +3,7 @@ import * as React from "react";
 import { FormattedMessage } from "react-intl";
 
 import { AvailableColumn } from "../types";
-import messages from "./messages";
+import { messages } from "./messages";
 
 interface ColumnPickerDynamicColumnsProps {
   dynamicColumns?: AvailableColumn[] | null | undefined;

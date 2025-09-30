@@ -22,4 +22,4 @@ const PluginChannelConfigurationCell = ({ plugin }: PluginChannelConfigurationCe
   );
 };
 
-export default PluginChannelConfigurationCell;
+export { PluginChannelConfigurationCell };

@@ -1,6 +1,6 @@
 import { IMessage } from "@dashboard/components/messages";
 import { commonMessages } from "@dashboard/intl";
-import commonErrorMessages from "@dashboard/utils/errors/common";
+import { commonErrorMessages } from "@dashboard/utils/errors/common";
 import { IntlShape } from "react-intl";
 
 export const getDefaultNotifierSuccessErrorData = (errors: any[], intl: IntlShape): IMessage =>

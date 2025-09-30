@@ -16,4 +16,4 @@ const MoneyRange = ({ from, to }: MoneyRangeProps) => {
 };
 
 MoneyRange.displayName = "MoneyRange";
-export default MoneyRange;
+export { MoneyRange };

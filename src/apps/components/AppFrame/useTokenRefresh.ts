@@ -1,4 +1,4 @@
-import jwt_decode from "jwt-decode";
+import { jwtDecode as jwt_decode } from "jwt-decode";
 import { useEffect, useRef } from "react";
 
 interface AppToken {
@@ -58,5 +58,4 @@ const useTokenRefresh = (token?: string, refetch?: () => void) => {
   }, [token]);
 };
 
-/** Use hook from extensions/ */
-export default useTokenRefresh;
+export { useTokenRefresh };

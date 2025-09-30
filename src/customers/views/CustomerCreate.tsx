@@ -1,12 +1,12 @@
 // @ts-strict-ignore
 import { WindowTitle } from "@dashboard/components/WindowTitle";
 import { useCreateCustomerMutation, useCustomerCreateDataQuery } from "@dashboard/graphql";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useNotifier from "@dashboard/hooks/useNotifier";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
+import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { useIntl } from "react-intl";
 
 import { extractMutationErrors, maybe } from "../../misc";
-import CustomerCreatePage, { CustomerCreatePageSubmitData } from "../components/CustomerCreatePage";
+import { CustomerCreatePage, CustomerCreatePageSubmitData } from "../components/CustomerCreatePage";
 import { customerUrl } from "../urls";
 
 const CustomerCreate = () => {
@@ -66,4 +66,4 @@ const CustomerCreate = () => {
   );
 };
 
-export default CustomerCreate;
+export { CustomerCreate };

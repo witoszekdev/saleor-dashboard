@@ -5,7 +5,7 @@ import {
   SearchProductTypesQuery,
   SearchProductTypesQueryVariables,
 } from "@dashboard/graphql";
-import makeTopLevelSearch from "@dashboard/hooks/makeTopLevelSearch";
+import { makeTopLevelSearch } from "@dashboard/hooks/makeTopLevelSearch";
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 
 export const searchProductTypes = gql`
@@ -44,6 +44,7 @@ export function useSearchProductTypes() {
       );
 }
 
-export default makeTopLevelSearch<SearchProductTypesQuery, SearchProductTypesQueryVariables>(
-  SearchProductTypesDocument,
-);
+export const UseProductTypeSearch = makeTopLevelSearch<
+  SearchProductTypesQuery,
+  SearchProductTypesQueryVariables
+>(SearchProductTypesDocument);

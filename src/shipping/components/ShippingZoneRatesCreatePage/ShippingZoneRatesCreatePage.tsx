@@ -1,8 +1,8 @@
 // @ts-strict-ignore
 import { ChannelShippingData } from "@dashboard/channels/utils";
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
-import CardSpacer from "@dashboard/components/CardSpacer";
-import ChannelsAvailabilityCard from "@dashboard/components/ChannelsAvailabilityCard";
+import { CardSpacer } from "@dashboard/components/CardSpacer";
+import { ChannelsAvailability as ChannelsAvailabilityCard } from "@dashboard/components/ChannelsAvailabilityCard";
 import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import { WithFormId } from "@dashboard/components/Form";
 import { DetailPageLayout } from "@dashboard/components/Layouts";
@@ -16,24 +16,24 @@ import {
   ShippingMethodTypeFragment,
   TaxClassBaseFragment,
 } from "@dashboard/graphql";
-import useForm, { SubmitPromise } from "@dashboard/hooks/useForm";
-import useHandleFormSubmit from "@dashboard/hooks/useHandleFormSubmit";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { SubmitPromise, useForm } from "@dashboard/hooks/useForm";
+import { useHandleFormSubmit } from "@dashboard/hooks/useHandleFormSubmit";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { validatePrice } from "@dashboard/products/utils/validation";
 import { handleTaxClassChange } from "@dashboard/productTypes/handlers";
-import OrderValue from "@dashboard/shipping/components/OrderValue";
-import OrderWeight from "@dashboard/shipping/components/OrderWeight";
-import PricingCard from "@dashboard/shipping/components/PricingCard";
-import ShippingRateInfo from "@dashboard/shipping/components/ShippingRateInfo";
+import { OrderValue } from "@dashboard/shipping/components/OrderValue";
+import { OrderWeight } from "@dashboard/shipping/components/OrderWeight";
+import { PricingCard } from "@dashboard/shipping/components/PricingCard";
+import { ShippingRateInfo } from "@dashboard/shipping/components/ShippingRateInfo";
 import { createChannelsChangeHandler } from "@dashboard/shipping/handlers";
 import { FetchMoreProps } from "@dashboard/types";
 import { RichTextContext } from "@dashboard/utils/richText/context";
-import useRichText from "@dashboard/utils/richText/useRichText";
+import { useRichText } from "@dashboard/utils/richText/useRichText";
 import { FormEventHandler, useState } from "react";
 import { useIntl } from "react-intl";
 
-import ShippingMethodTaxes from "../ShippingMethodTaxes";
-import ShippingZonePostalCodes from "../ShippingZonePostalCodes";
+import { ShippingMethodTaxes } from "../ShippingMethodTaxes";
+import { ShippingZonePostalCodes } from "../ShippingZonePostalCodes";
 import { ShippingZoneRateCommonFormData } from "../ShippingZoneRatesPage/types";
 
 interface ShippingZoneRatesCreatePageProps extends WithFormId {
@@ -224,4 +224,4 @@ const ShippingZoneRatesCreatePage = ({
   );
 };
 
-export default ShippingZoneRatesCreatePage;
+export { ShippingZoneRatesCreatePage };

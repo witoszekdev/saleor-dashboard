@@ -1,4 +1,4 @@
-import ListItemLink from "@dashboard/components/ListItemLink";
+import { ListItemLink } from "@dashboard/components/ListItemLink";
 import { TaxConfigurationFragment } from "@dashboard/graphql";
 import { taxesMessages } from "@dashboard/taxes/messages";
 import { taxConfigurationListUrl } from "@dashboard/taxes/urls";
@@ -6,7 +6,7 @@ import { isLastElement } from "@dashboard/taxes/utils/utils";
 import { Card, Divider } from "@material-ui/core";
 import { List, ListHeader, ListItem, ListItemCell } from "@saleor/macaw-ui";
 import { Skeleton } from "@saleor/macaw-ui-next";
-import clsx from "clsx";
+import { clsx } from "clsx";
 import { Fragment } from "react";
 import { FormattedMessage } from "react-intl";
 
@@ -50,4 +50,4 @@ const TaxChannelsMenu = ({ configurations, selectedConfigurationId }: TaxChannel
   );
 };
 
-export default TaxChannelsMenu;
+export { TaxChannelsMenu };

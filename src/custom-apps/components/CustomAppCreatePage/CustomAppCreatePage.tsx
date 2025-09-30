@@ -1,19 +1,19 @@
 // @ts-strict-ignore
-import AccountPermissions from "@dashboard/components/AccountPermissions";
+import { AccountPermissions } from "@dashboard/components/AccountPermissions";
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
 import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import Form from "@dashboard/components/Form";
+import { Form } from "@dashboard/components/Form";
 import { DetailPageLayout } from "@dashboard/components/Layouts";
 import { Savebar } from "@dashboard/components/Savebar";
 import { CustomAppUrls } from "@dashboard/custom-apps/urls";
 import { AppErrorFragment, PermissionEnum, PermissionFragment } from "@dashboard/graphql";
 import { SubmitPromise } from "@dashboard/hooks/useForm";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { getFormErrors } from "@dashboard/utils/errors";
-import getAppErrorMessage from "@dashboard/utils/errors/app";
+import { getAppErrorMessage } from "@dashboard/utils/errors/app";
 import { useIntl } from "react-intl";
 
-import CustomAppInformation from "../CustomAppInformation";
+import { CustomAppInformation } from "../CustomAppInformation";
 
 export interface CustomAppCreatePageFormData {
   hasFullAccess: boolean;
@@ -97,4 +97,4 @@ const CustomAppCreatePage = (props: CustomAppCreatePageProps) => {
 };
 
 CustomAppCreatePage.displayName = "CustomAppCreatePage";
-export default CustomAppCreatePage;
+export { CustomAppCreatePage };

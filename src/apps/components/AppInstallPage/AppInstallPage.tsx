@@ -3,8 +3,8 @@ import saleorLogoDarkMode from "@assets/images/sidebar-deafult-logo-darkMode.png
 import saleorLogoLightMode from "@assets/images/sidebar-default-logo.png";
 import { AppAvatar } from "@dashboard/apps/components/AppAvatar/AppAvatar";
 import { DashboardCard } from "@dashboard/components/Card";
-import CardSpacer from "@dashboard/components/CardSpacer";
-import Hr from "@dashboard/components/Hr";
+import { CardSpacer } from "@dashboard/components/CardSpacer";
+import { Hr } from "@dashboard/components/Hr";
 import { DetailPageLayout } from "@dashboard/components/Layouts";
 import { AppFetchMutation, AppInstallMutation } from "@dashboard/graphql";
 import { SubmitPromise } from "@dashboard/hooks/useForm";
@@ -14,7 +14,7 @@ import { Box, Button, Skeleton, Text } from "@saleor/macaw-ui-next";
 import { PropsWithChildren } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import messages from "./messages";
+import { Messages as messages } from "./messages";
 import { useStyles } from "./styles";
 
 interface AppInstallPageProps {
@@ -160,4 +160,4 @@ const AppInstallPage = ({
 };
 
 AppInstallPage.displayName = "AppInstallPage";
-export default AppInstallPage;
+export { AppInstallPage };

@@ -1,4 +1,4 @@
-import useLocalStorage from "@dashboard/hooks/useLocalStorage";
+import { useLocalStorage } from "@dashboard/hooks/useLocalStorage";
 
 export type LastLoginMethod = string | null;
 

@@ -1,10 +1,10 @@
 // @ts-strict-ignore
-import AccountPermissionGroups from "@dashboard/components/AccountPermissionGroups";
+import { AccountPermissionGroups } from "@dashboard/components/AccountPermissionGroups";
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
 import { DashboardCard } from "@dashboard/components/Card";
-import CardSpacer from "@dashboard/components/CardSpacer";
+import { CardSpacer } from "@dashboard/components/CardSpacer";
 import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import Form from "@dashboard/components/Form";
+import { Form } from "@dashboard/components/Form";
 import { DetailPageLayout } from "@dashboard/components/Layouts";
 import { Savebar } from "@dashboard/components/Savebar";
 import {
@@ -15,18 +15,18 @@ import {
 } from "@dashboard/graphql";
 import { useBackLinkWithState } from "@dashboard/hooks/useBackLinkWithState";
 import { SubmitPromise } from "@dashboard/hooks/useForm";
-import useLocale from "@dashboard/hooks/useLocale";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useLocale } from "@dashboard/hooks/useLocale";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { getUserName } from "@dashboard/misc";
-import UserStatus from "@dashboard/staff/components/UserStatus";
+import { AppStatus as UserStatus } from "@dashboard/staff/components/UserStatus";
 import { staffListPath } from "@dashboard/staff/urls";
 import { getMemberPermissionGroups, isMemberActive } from "@dashboard/staff/utils";
 import { FetchMoreProps, RelayToFlat, SearchPageProps } from "@dashboard/types";
 import { Button, Option, Text } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
 
-import StaffPreferences from "../StaffPreferences";
-import StaffProperties from "../StaffProperties/StaffProperties";
+import { StaffPreferences } from "../StaffPreferences";
+import { StaffProperties } from "../StaffProperties/StaffProperties";
 import { staffDetailsPageMessages as messages } from "./messages";
 
 export interface StaffDetailsFormData {

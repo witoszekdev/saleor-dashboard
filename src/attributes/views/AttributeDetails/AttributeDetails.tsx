@@ -10,24 +10,24 @@ import {
   useUpdateMetadataMutation,
   useUpdatePrivateMetadataMutation,
 } from "@dashboard/graphql";
-import useListSettings from "@dashboard/hooks/useListSettings";
-import useLocalPaginator, { useLocalPaginationState } from "@dashboard/hooks/useLocalPaginator";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useNotifier from "@dashboard/hooks/useNotifier";
+import { useListSettings } from "@dashboard/hooks/useListSettings";
+import { useLocalPaginationState, useLocalPaginator } from "@dashboard/hooks/useLocalPaginator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
+import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { commonMessages } from "@dashboard/intl";
 import { extractMutationErrors, getStringOrPlaceholder } from "@dashboard/misc";
 import { ListViews, ReorderEvent } from "@dashboard/types";
-import getAttributeErrorMessage from "@dashboard/utils/errors/attribute";
-import createDialogActionHandlers from "@dashboard/utils/handlers/dialogActionHandlers";
-import createMetadataUpdateHandler from "@dashboard/utils/handlers/metadataUpdateHandler";
+import { getAttributeErrorMessage } from "@dashboard/utils/errors/attribute";
+import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
+import { createMetadataUpdateHandler } from "@dashboard/utils/handlers/metadataUpdateHandler";
 import { move } from "@dashboard/utils/lists";
 import omit from "lodash/omit";
 import { useIntl } from "react-intl";
 
-import AttributeDeleteDialog from "../../components/AttributeDeleteDialog";
-import AttributePage, { AttributePageFormData } from "../../components/AttributePage";
-import AttributeValueDeleteDialog from "../../components/AttributeValueDeleteDialog";
-import AttributeValueEditDialog from "../../components/AttributeValueEditDialog";
+import { AttributeDeleteDialog } from "../../components/AttributeDeleteDialog";
+import { AttributePage, AttributePageFormData } from "../../components/AttributePage";
+import { AttributeValueDeleteDialog } from "../../components/AttributeValueDeleteDialog";
+import { AttributeValueEditDialog } from "../../components/AttributeValueEditDialog";
 import {
   attributeListUrl,
   attributeUrl,
@@ -323,4 +323,4 @@ const AttributeDetails = ({ id, params }: AttributeDetailsProps) => {
 
 AttributeDetails.displayName = "AttributeDetails";
 
-export default AttributeDetails;
+export { AttributeDetails };

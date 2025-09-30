@@ -1,8 +1,8 @@
 // @ts-strict-ignore
-import ActionDialog from "@dashboard/components/ActionDialog";
-import useAppChannel from "@dashboard/components/AppLayout/AppChannelContext";
+import { ActionDialog } from "@dashboard/components/ActionDialog";
+import { useAppChannel } from "@dashboard/components/AppLayout/AppChannelContext";
 import { AttributeInput } from "@dashboard/components/Attributes";
-import NotFoundPage from "@dashboard/components/NotFoundPage";
+import { NotFoundPage } from "@dashboard/components/NotFoundPage";
 import { useShopLimitsQuery } from "@dashboard/components/Shop/queries";
 import { WindowTitle } from "@dashboard/components/WindowTitle";
 import { DEFAULT_INITIAL_SEARCH_DATA, VALUES_PAGINATE_BY } from "@dashboard/config";
@@ -15,25 +15,25 @@ import {
   useProductMediaReorderMutation,
 } from "@dashboard/graphql";
 import { getSearchFetchMoreProps } from "@dashboard/hooks/makeTopLevelSearch/utils";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useNotifier from "@dashboard/hooks/useNotifier";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
+import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { commonMessages, errorMessages } from "@dashboard/intl";
 import { useSearchAttributeValuesSuggestions } from "@dashboard/searches/useAttributeValueSearch";
-import useCategorySearch from "@dashboard/searches/useCategorySearch";
-import useCollectionSearch from "@dashboard/searches/useCollectionSearch";
+import { UseCategorySearch as useCategorySearch } from "@dashboard/searches/useCategorySearch";
+import { UseCollectionSearch as useCollectionSearch } from "@dashboard/searches/useCollectionSearch";
 import {
   useReferencePageSearch,
   useReferenceProductSearch,
 } from "@dashboard/searches/useReferenceSearch";
 import { useTaxClassFetchMore } from "@dashboard/taxes/utils/useTaxClassFetchMore";
 import { getProductErrorMessage } from "@dashboard/utils/errors";
-import useAttributeValueSearchHandler from "@dashboard/utils/handlers/attributeValueSearchHandler";
-import createDialogActionHandlers from "@dashboard/utils/handlers/dialogActionHandlers";
+import { useAttributeValueSearchHandler } from "@dashboard/utils/handlers/attributeValueSearchHandler";
+import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { FormattedMessage, useIntl } from "react-intl";
 
 import { getMutationState } from "../../../misc";
-import ProductUpdatePage from "../../components/ProductUpdatePage";
+import { ProductUpdatePage } from "../../components/ProductUpdatePage";
 import {
   productListUrl,
   productUrl,
@@ -299,4 +299,4 @@ const ProductUpdate = ({ id, params }: ProductUpdateProps) => {
   );
 };
 
-export default ProductUpdate;
+export { ProductUpdate };

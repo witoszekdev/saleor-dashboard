@@ -1,4 +1,4 @@
-import Hr from "@dashboard/components/Hr";
+import { Hr } from "@dashboard/components/Hr";
 import {
   NewRadioGroupField as RadioGroupField,
   RadioGroupFieldChoice,
@@ -6,7 +6,7 @@ import {
 import { ExportErrorFragment, ExportScope, FileTypesEnum } from "@dashboard/graphql";
 import { ChangeEvent } from "@dashboard/hooks/useForm";
 import { getFormErrors } from "@dashboard/utils/errors";
-import getExportErrorMessage from "@dashboard/utils/errors/export";
+import { getExportErrorMessage } from "@dashboard/utils/errors/export";
 import { Text } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
 
@@ -128,4 +128,4 @@ const ExportDialogSettings = ({
   );
 };
 
-export default ExportDialogSettings;
+export { ExportDialogSettings };

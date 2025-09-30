@@ -1,8 +1,8 @@
 import { validateSalePrice } from "@dashboard/channels/utils";
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
-import ChannelsAvailabilityCard from "@dashboard/components/ChannelsAvailabilityCard";
+import { ChannelsAvailability as ChannelsAvailabilityCard } from "@dashboard/components/ChannelsAvailabilityCard";
 import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import Form from "@dashboard/components/Form";
+import { Form } from "@dashboard/components/Form";
 import { DetailPageLayout } from "@dashboard/components/Layouts";
 import { Metadata, MetadataFormData } from "@dashboard/components/Metadata";
 import { Savebar } from "@dashboard/components/Savebar";
@@ -15,14 +15,14 @@ import {
   SaleType as SaleTypeEnum,
 } from "@dashboard/graphql";
 import { SubmitPromise } from "@dashboard/hooks/useForm";
-import useMetadataChangeTrigger from "@dashboard/utils/metadata/useMetadataChangeTrigger";
+import { useMetadataChangeTrigger } from "@dashboard/utils/metadata/useMetadataChangeTrigger";
 import { useIntl } from "react-intl";
 
-import DiscountDates from "../DiscountDates";
+import { DiscountDates } from "../DiscountDates";
 import { ChannelSaleFormData } from "../SaleDetailsPage";
-import SaleInfo from "../SaleInfo";
-import SaleType from "../SaleType";
-import SaleValue from "../SaleValue";
+import { SaleInfo } from "../SaleInfo";
+import { SaleType } from "../SaleType";
+import { SaleValue } from "../SaleValue";
 
 export interface FormData extends MetadataFormData {
   channelListings: ChannelSaleFormData[];
@@ -145,4 +145,4 @@ const SaleCreatePage = ({
 };
 
 SaleCreatePage.displayName = "SaleCreatePage";
-export default SaleCreatePage;
+export { SaleCreatePage };

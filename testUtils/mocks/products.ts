@@ -274,4 +274,4 @@ export const productsMocks: MockedResponse[] = [
   },
 ];
 
-export default productsMocks;
+export { productsMocks };

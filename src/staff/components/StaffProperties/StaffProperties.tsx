@@ -5,11 +5,11 @@ import { StaffErrorFragment, StaffMemberDetailsFragment, UserFragment } from "@d
 import { commonMessages } from "@dashboard/intl";
 import { getUserInitials } from "@dashboard/misc";
 import { getFormErrors } from "@dashboard/utils/errors";
-import getStaffErrorMessage from "@dashboard/utils/errors/staff";
+import { getStaffErrorMessage } from "@dashboard/utils/errors/staff";
 import { TextField } from "@material-ui/core";
 import { Box, Text } from "@saleor/macaw-ui-next";
 import * as React from "react";
-import SVG from "react-inlinesvg";
+import { InlineSVG as SVG } from "react-inlinesvg";
 import { FormattedMessage, useIntl } from "react-intl";
 
 interface StaffPropertiesProps {
@@ -218,4 +218,4 @@ const StaffProperties = (props: StaffPropertiesProps) => {
 };
 
 StaffProperties.displayName = "StaffProperties";
-export default StaffProperties;
+export { StaffProperties };

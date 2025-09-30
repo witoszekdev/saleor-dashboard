@@ -1,4 +1,4 @@
-import ErrorExclamationCircleIcon from "@dashboard/icons/ErrorExclamationCircle";
+import { ErrorExclamationCircle as ErrorExclamationCircleIcon } from "@dashboard/icons/ErrorExclamationCircle";
 import { Popper, TableCell } from "@material-ui/core";
 import { makeStyles } from "@saleor/macaw-ui";
 import { Text } from "@saleor/macaw-ui-next";
@@ -82,4 +82,4 @@ const ProductErrorCell = ({ hasVariant }: ProductErrorCellProps) => {
   );
 };
 
-export default ProductErrorCell;
+export { ProductErrorCell };

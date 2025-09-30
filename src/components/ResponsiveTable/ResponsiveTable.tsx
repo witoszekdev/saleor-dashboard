@@ -1,6 +1,6 @@
 import { Table } from "@material-ui/core";
 import { makeStyles } from "@saleor/macaw-ui";
-import clsx from "clsx";
+import { clsx } from "clsx";
 import * as React from "react";
 
 const useStyles = makeStyles(
@@ -42,4 +42,4 @@ const ResponsiveTable = (props: ResponsiveTableProps) => {
 };
 
 ResponsiveTable.displayName = "ResponsiveTable";
-export default ResponsiveTable;
+export { ResponsiveTable };

@@ -1,5 +1,5 @@
 import { AppsInstallationsQuery } from "@dashboard/graphql";
-import useLocalStorage from "@dashboard/hooks/useLocalStorage";
+import { useLocalStorage } from "@dashboard/hooks/useLocalStorage";
 import { renderHook } from "@testing-library/react-hooks";
 
 import { useActiveAppsInstallations } from "./useActiveAppsInstallations";

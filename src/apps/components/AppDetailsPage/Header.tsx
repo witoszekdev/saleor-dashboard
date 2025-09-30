@@ -4,7 +4,7 @@ import { useFlag } from "@dashboard/featureFlags";
 import { AppQuery } from "@dashboard/graphql";
 import { PropsWithChildren } from "react";
 
-import HeaderOptions from "./HeaderOptions";
+import { HeaderOptions } from "./HeaderOptions";
 
 interface HeaderProps {
   data: AppQuery["app"];
@@ -62,4 +62,4 @@ const Header = ({
   );
 };
 
-export default Header;
+export { Header };

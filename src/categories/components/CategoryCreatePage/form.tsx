@@ -1,10 +1,10 @@
 import { useExitFormDialog } from "@dashboard/components/Form/useExitFormDialog";
 import { MetadataFormData } from "@dashboard/components/Metadata";
-import useForm, { CommonUseFormResult, FormChange } from "@dashboard/hooks/useForm";
-import useHandleFormSubmit from "@dashboard/hooks/useHandleFormSubmit";
-import useMetadataChangeTrigger from "@dashboard/utils/metadata/useMetadataChangeTrigger";
+import { CommonUseFormResult, FormChange, useForm } from "@dashboard/hooks/useForm";
+import { useHandleFormSubmit } from "@dashboard/hooks/useHandleFormSubmit";
+import { useMetadataChangeTrigger } from "@dashboard/utils/metadata/useMetadataChangeTrigger";
 import { RichTextContext, RichTextContextValues } from "@dashboard/utils/richText/context";
-import useRichText from "@dashboard/utils/richText/useRichText";
+import { useRichText } from "@dashboard/utils/richText/useRichText";
 import { OutputData } from "@editorjs/editorjs";
 import { useEffect } from "react";
 import * as React from "react";
@@ -103,4 +103,4 @@ const CategoryCreateForm = ({ children, onSubmit, disabled }: CategoryCreateForm
 };
 
 CategoryCreateForm.displayName = "CategoryCreateForm";
-export default CategoryCreateForm;
+export { CategoryCreateForm };

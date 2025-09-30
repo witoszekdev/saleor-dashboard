@@ -6,9 +6,9 @@ import { ListPageLayout } from "@dashboard/components/Layouts";
 import { configurationMenuUrl } from "@dashboard/configuration";
 import { useFlag } from "@dashboard/featureFlags";
 import { ProductTypeFragment } from "@dashboard/graphql";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { sectionNames } from "@dashboard/intl";
-import ProductTypeList from "@dashboard/productTypes/components/ProductTypeList/ProductTypeList";
+import { ProductTypeList } from "@dashboard/productTypes/components/ProductTypeList/ProductTypeList";
 import { productTypeAddUrl, ProductTypeListUrlSortField } from "@dashboard/productTypes/urls";
 import { Box, Button, ChevronRightIcon } from "@saleor/macaw-ui-next";
 import { useState } from "react";
@@ -132,4 +132,4 @@ const ProductTypeListPage = ({
 };
 
 ProductTypeListPage.displayName = "ProductTypeListPage";
-export default ProductTypeListPage;
+export { ProductTypeListPage };

@@ -15,8 +15,8 @@ import {
   CategoryUrlQueryParams,
 } from "./urls";
 import { CategoryCreateView } from "./views/CategoryCreate";
-import CategoryDetailsView from "./views/CategoryDetails";
-import CategoryListComponent from "./views/CategoryList";
+import { CategoryDetails as CategoryDetailsView } from "./views/CategoryDetails";
+import { CategoryList as CategoryListComponent } from "./views/CategoryList";
 
 interface CategoryDetailsRouteParams {
   id: string;
@@ -64,4 +64,4 @@ const Component = () => {
   );
 };
 
-export default Component;
+export { Component };

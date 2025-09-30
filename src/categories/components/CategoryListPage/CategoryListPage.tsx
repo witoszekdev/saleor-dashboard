@@ -1,5 +1,5 @@
 import { categoryAddUrl, CategoryListUrlSortField } from "@dashboard/categories/urls";
-import SearchInput from "@dashboard/components/AppLayout/ListFilters/components/SearchInput";
+import { SearchInput } from "@dashboard/components/AppLayout/ListFilters/components/SearchInput";
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
 import { BulkDeleteButton } from "@dashboard/components/BulkDeleteButton";
 import { ButtonGroupWithDropdown } from "@dashboard/components/ButtonGroupWithDropdown";
@@ -13,7 +13,7 @@ import {
 } from "@dashboard/extensions/getExtensionsItems";
 import { useExtensions } from "@dashboard/extensions/hooks/useExtensions";
 import { CategoryFragment } from "@dashboard/graphql";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { sectionNames } from "@dashboard/intl";
 import { PageListProps, SearchPageProps, SortPage, TabPageProps } from "@dashboard/types";
 import { Box, Button, ChevronRightIcon } from "@saleor/macaw-ui-next";

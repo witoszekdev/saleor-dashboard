@@ -3,7 +3,7 @@ import { render, screen, waitFor } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
 import * as React from "react";
 
-import LoginPage from "./LoginPage";
+import { LoginPage } from "./LoginPage";
 
 type AuthType = AvailableExternalAuthenticationsQuery["shop"]["availableExternalAuthentications"];
 

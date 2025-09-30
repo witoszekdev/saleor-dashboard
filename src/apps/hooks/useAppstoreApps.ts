@@ -96,4 +96,4 @@ function useAppstoreApps(appstoreUrl?: string): State {
   return state;
 }
 
-export default useAppstoreApps;
+export { useAppstoreApps };

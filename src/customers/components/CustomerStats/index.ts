@@ -1,2 +1,2 @@
-export { default } from "./CustomerStats";
+export { CustomerStats } from "./CustomerStats";
 export * from "./CustomerStats";

@@ -1,8 +1,8 @@
-import ResponsiveTable from "@dashboard/components/ResponsiveTable";
+import { ResponsiveTable } from "@dashboard/components/ResponsiveTable";
 import { TableButtonWrapper } from "@dashboard/components/TableButtonWrapper/TableButtonWrapper";
-import TableCellHeader from "@dashboard/components/TableCellHeader";
+import { TableCellHeader } from "@dashboard/components/TableCellHeader";
 import { TablePaginationWithContext } from "@dashboard/components/TablePagination";
-import TableRowLink from "@dashboard/components/TableRowLink";
+import { TableRowLink } from "@dashboard/components/TableRowLink";
 import { WarehouseWithShippingFragment } from "@dashboard/graphql";
 import { getPrevLocationState } from "@dashboard/hooks/useBackLinkWithState";
 import { renderCollection } from "@dashboard/misc";
@@ -144,4 +144,4 @@ const WarehouseList = (props: WarehouseListProps) => {
 };
 
 WarehouseList.displayName = "WarehouseList";
-export default WarehouseList;
+export { WarehouseList };

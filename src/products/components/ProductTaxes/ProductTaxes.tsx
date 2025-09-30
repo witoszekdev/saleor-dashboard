@@ -55,4 +55,4 @@ const ProductTaxes = (props: ProductTaxesProps) => {
 };
 
 ProductTaxes.displayName = "ProductTaxes";
-export default ProductTaxes;
+export { ProductTaxes };

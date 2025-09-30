@@ -28,4 +28,4 @@ const SortableHandle = SortableHandleHoc(() => {
   );
 });
 
-export default SortableHandle;
+export { SortableHandle };

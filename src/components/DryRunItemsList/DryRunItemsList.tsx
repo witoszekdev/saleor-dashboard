@@ -17,7 +17,7 @@ import camelCase from "lodash/camelCase";
 import * as React from "react";
 import { useIntl } from "react-intl";
 
-import Avatar from "../TableCellAvatar/Avatar";
+import { Avatar } from "../TableCellAvatar/Avatar";
 import { messages } from "./messages";
 import { DocumentMap, TData, TVariables } from "./utils";
 
@@ -88,4 +88,4 @@ const DryRunItemsList = ({ object, objectId, setObjectId }: DryRunItemsListProps
 };
 
 DryRunItemsList.displayName = "DryRunItemsList";
-export default DryRunItemsList;
+export { DryRunItemsList };

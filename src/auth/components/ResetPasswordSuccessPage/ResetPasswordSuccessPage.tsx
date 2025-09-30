@@ -1,4 +1,4 @@
-import FormSpacer from "@dashboard/components/FormSpacer";
+import { FormSpacer } from "@dashboard/components/FormSpacer";
 import { Button, Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage } from "react-intl";
 
@@ -35,4 +35,4 @@ const ResetPasswordSuccessPage = (props: ResetPasswordSuccessPageProps) => {
 };
 
 ResetPasswordSuccessPage.displayName = "ResetPasswordSuccessPage";
-export default ResetPasswordSuccessPage;
+export { ResetPasswordSuccessPage };

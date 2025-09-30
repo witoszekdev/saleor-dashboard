@@ -1,7 +1,7 @@
 // @ts-strict-ignore
 import { ButtonWithLoader } from "@dashboard/components/ButtonWithLoader/ButtonWithLoader";
 import { DashboardCard } from "@dashboard/components/Card";
-import Hr from "@dashboard/components/Hr";
+import { Hr } from "@dashboard/components/Hr";
 import {
   SimpleRadioGroupField,
   SimpleRadioGroupFieldChoice,
@@ -20,7 +20,7 @@ import {
 } from "../../../OrderRefundPage/form";
 import { OrderReturnFormData } from "../../form";
 import { PaymentSubmitCardValues, PaymentSubmitCardValuesProps } from "./PaymentSubmitCardValues";
-import RefundAmountInput from "./RefundAmountInput";
+import { RefundAmountInput } from "./RefundAmountInput";
 
 const useStyles = makeStyles(
   theme => ({

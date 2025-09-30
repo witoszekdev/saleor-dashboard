@@ -1,8 +1,8 @@
-import BackButton from "@dashboard/components/BackButton";
+import { BackButton } from "@dashboard/components/BackButton";
 import { ConfirmButton } from "@dashboard/components/ConfirmButton";
 import { DashboardModal } from "@dashboard/components/Modal";
 import { ProductMediaFragment } from "@dashboard/graphql";
-import useModalDialogOpen from "@dashboard/hooks/useModalDialogOpen";
+import { useModalDialogOpen } from "@dashboard/hooks/useModalDialogOpen";
 import { buttonMessages } from "@dashboard/intl";
 import { Box } from "@saleor/macaw-ui-next";
 import { useState } from "react";
@@ -111,4 +111,4 @@ const ProductVariantMediaSelectDialog = (props: ProductVariantImageSelectDialogP
 };
 
 ProductVariantMediaSelectDialog.displayName = "ProductVariantMediaSelectDialog";
-export default ProductVariantMediaSelectDialog;
+export { ProductVariantMediaSelectDialog };

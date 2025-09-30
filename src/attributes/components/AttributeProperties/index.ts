@@ -1,2 +1,2 @@
-export { default } from "./AttributeProperties";
+export { AttributeProperties } from "./AttributeProperties";
 export * from "./AttributeProperties";

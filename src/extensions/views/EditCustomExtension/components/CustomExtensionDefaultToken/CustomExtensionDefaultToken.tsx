@@ -59,4 +59,4 @@ const CustomExtensionDefaultToken = (props: CustomExtensionDefaultTokenProps) =>
 };
 
 CustomExtensionDefaultToken.displayName = "CustomAppDefaultToken";
-export default CustomExtensionDefaultToken;
+export { CustomExtensionDefaultToken };

@@ -1,27 +1,29 @@
 // @ts-strict-ignore
-import DeleteFilterTabDialog from "@dashboard/components/DeleteFilterTabDialog";
-import SaveFilterTabDialog, {
+import { DeleteFilterTabDialog } from "@dashboard/components/DeleteFilterTabDialog";
+import {
+  SaveFilterTabDialog,
   SaveFilterTabDialogFormData,
 } from "@dashboard/components/SaveFilterTabDialog";
 import { usePluginsQuery } from "@dashboard/graphql";
 import { useChannelsSearchWithLoadMore } from "@dashboard/hooks/useChannelsSearchWithLoadMore";
-import useListSettings from "@dashboard/hooks/useListSettings";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useListSettings } from "@dashboard/hooks/useListSettings";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { usePaginationReset } from "@dashboard/hooks/usePaginationReset";
-import usePaginator, {
+import {
   createPaginationState,
   PaginatorContext,
+  usePaginator,
 } from "@dashboard/hooks/usePaginator";
 import { maybe } from "@dashboard/misc";
 import { ListViews } from "@dashboard/types";
-import createDialogActionHandlers from "@dashboard/utils/handlers/dialogActionHandlers";
-import createFilterHandlers from "@dashboard/utils/handlers/filterHandlers";
-import createSortHandler from "@dashboard/utils/handlers/sortHandler";
+import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
+import { createFilterHandlers } from "@dashboard/utils/handlers/filterHandlers";
+import { createSortHandler } from "@dashboard/utils/handlers/sortHandler";
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { getSortParams } from "@dashboard/utils/sort";
 import { useMemo } from "react";
 
-import PluginsListPage from "../../components/PluginsListPage/PluginsListPage";
+import { PluginsListPage } from "../../components/PluginsListPage/PluginsListPage";
 import { pluginListUrl, PluginListUrlDialog, PluginListUrlQueryParams } from "../../urls";
 import {
   deleteFilterTab,
@@ -132,4 +134,4 @@ const PluginsList = ({ params }: PluginsListProps) => {
   );
 };
 
-export default PluginsList;
+export { PluginsList };

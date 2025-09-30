@@ -1,15 +1,15 @@
 // @ts-strict-ignore
-import ChannelAllocationStrategy from "@dashboard/channels/components/ChannelAllocationStrategy";
-import ShippingZones from "@dashboard/channels/components/ShippingZones";
-import Warehouses from "@dashboard/channels/components/Warehouses";
+import { ChannelAllocationStrategy } from "@dashboard/channels/components/ChannelAllocationStrategy";
+import { ShippingZones } from "@dashboard/channels/components/ShippingZones";
+import { Warehouses } from "@dashboard/channels/components/Warehouses";
 import { channelsListUrl } from "@dashboard/channels/urls";
 import { validateChannelFormData } from "@dashboard/channels/validation";
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
-import CardSpacer from "@dashboard/components/CardSpacer";
+import { CardSpacer } from "@dashboard/components/CardSpacer";
 import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import Form from "@dashboard/components/Form";
+import { Form } from "@dashboard/components/Form";
 import { DetailPageLayout } from "@dashboard/components/Layouts";
-import RequirePermissions from "@dashboard/components/RequirePermissions";
+import { RequirePermissions } from "@dashboard/components/RequirePermissions";
 import { Savebar } from "@dashboard/components/Savebar";
 import {
   AllocationStrategyEnum,
@@ -29,10 +29,10 @@ import {
 import { SearchData } from "@dashboard/hooks/makeTopLevelSearch";
 import { getParsedSearchData } from "@dashboard/hooks/makeTopLevelSearch/utils";
 import { SubmitPromise } from "@dashboard/hooks/useForm";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useStateFromProps from "@dashboard/hooks/useStateFromProps";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
+import { useStateFromProps } from "@dashboard/hooks/useStateFromProps";
 import { FetchMoreProps, RelayToFlat } from "@dashboard/types";
-import createSingleAutocompleteSelectHandler from "@dashboard/utils/handlers/singleAutocompleteSelectChangeHandler";
+import { createSingleAutocompleteSelectHandler } from "@dashboard/utils/handlers/singleAutocompleteSelectChangeHandler";
 import { mapCountriesToChoices } from "@dashboard/utils/maps";
 import { Option } from "@saleor/macaw-ui-next";
 import { useState } from "react";
@@ -324,4 +324,4 @@ const ChannelDetailsPage = function <TErrors extends ChannelErrorFragment[]>({
 };
 
 ChannelDetailsPage.displayName = "ChannelDetailsPage";
-export default ChannelDetailsPage;
+export { ChannelDetailsPage };

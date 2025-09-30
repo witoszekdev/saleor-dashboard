@@ -1,5 +1,5 @@
 // @ts-strict-ignore
-import AddressFormatter from "@dashboard/components/AddressFormatter";
+import { AddressFormatter } from "@dashboard/components/AddressFormatter";
 import { DashboardCard } from "@dashboard/components/Card";
 import { Hr } from "@dashboard/components/Hr";
 import { CustomerDetailsFragment } from "@dashboard/graphql";
@@ -103,4 +103,4 @@ const CustomerAddresses = (props: CustomerAddressesProps) => {
 };
 
 CustomerAddresses.displayName = "CustomerAddresses";
-export default CustomerAddresses;
+export { CustomerAddresses };

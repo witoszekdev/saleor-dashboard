@@ -1,2 +1,2 @@
-export { default } from "./VoucherList";
+export { VoucherList } from "./VoucherList";
 export * from "./VoucherList";

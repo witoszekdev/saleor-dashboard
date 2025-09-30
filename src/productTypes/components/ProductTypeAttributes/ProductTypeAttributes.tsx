@@ -1,12 +1,12 @@
 // @ts-strict-ignore
 import { attributeUrl } from "@dashboard/attributes/urls";
 import { DashboardCard } from "@dashboard/components/Card";
-import Checkbox from "@dashboard/components/Checkbox";
-import ResponsiveTable from "@dashboard/components/ResponsiveTable";
+import { Checkbox } from "@dashboard/components/Checkbox";
+import { ResponsiveTable } from "@dashboard/components/ResponsiveTable";
 import { SortableTableBody, SortableTableRow } from "@dashboard/components/SortableTable";
 import { TableButtonWrapper } from "@dashboard/components/TableButtonWrapper/TableButtonWrapper";
-import TableHead from "@dashboard/components/TableHead";
-import TableRowLink from "@dashboard/components/TableRowLink";
+import { TableHead } from "@dashboard/components/TableHead";
+import { TableRowLink } from "@dashboard/components/TableRowLink";
 import { AttributeFragment, ProductAttributeType } from "@dashboard/graphql";
 import { maybe, renderCollection } from "@dashboard/misc";
 import { ListActions, ReorderAction } from "@dashboard/types";
@@ -183,4 +183,4 @@ const ProductTypeAttributes = (props: ProductTypeAttributesProps) => {
 };
 
 ProductTypeAttributes.displayName = "ProductTypeAttributes";
-export default ProductTypeAttributes;
+export { ProductTypeAttributes };

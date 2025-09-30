@@ -24,12 +24,12 @@ import {
   ProductVariantEditUrlQueryParams,
   productVariantLegacyEditPath,
 } from "./urls";
-import ProductCreateComponent from "./views/ProductCreate";
-import ProductImageComponent from "./views/ProductImage";
-import ProductListComponent from "./views/ProductList";
-import ProductUpdateComponent from "./views/ProductUpdate";
-import ProductVariantComponent from "./views/ProductVariant";
-import ProductVariantCreateComponent from "./views/ProductVariantCreate";
+import { ProductCreateView as ProductCreateComponent } from "./views/ProductCreate";
+import { ProductImage as ProductImageComponent } from "./views/ProductImage";
+import { ProductList as ProductListComponent } from "./views/ProductList";
+import { ProductUpdate as ProductUpdateComponent } from "./views/ProductUpdate";
+import { ProductVariant as ProductVariantComponent } from "./views/ProductVariant";
+import { ProductVariant as ProductVariantCreateComponent } from "./views/ProductVariantCreate";
 
 interface MatchParams {
   id?: string;
@@ -158,4 +158,4 @@ const Component = () => {
   );
 };
 
-export default Component;
+export { Component };

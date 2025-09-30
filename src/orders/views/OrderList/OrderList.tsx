@@ -1,33 +1,34 @@
 // @ts-strict-ignore
 import { useUser } from "@dashboard/auth";
-import ChannelPickerDialog from "@dashboard/channels/components/ChannelPickerDialog";
-import useAppChannel from "@dashboard/components/AppLayout/AppChannelContext";
+import { ChannelPickerDialog } from "@dashboard/channels/components/ChannelPickerDialog";
+import { useAppChannel } from "@dashboard/components/AppLayout/AppChannelContext";
 import { useConditionalFilterContext } from "@dashboard/components/ConditionalFilter";
 import { createOrderQueryVariables } from "@dashboard/components/ConditionalFilter/queryVariables";
-import DeleteFilterTabDialog from "@dashboard/components/DeleteFilterTabDialog";
-import SaveFilterTabDialog from "@dashboard/components/SaveFilterTabDialog";
+import { DeleteFilterTabDialog } from "@dashboard/components/DeleteFilterTabDialog";
+import { SaveFilterTabDialog } from "@dashboard/components/SaveFilterTabDialog";
 import { useShopLimitsQuery } from "@dashboard/components/Shop/queries";
 import { useOrderDraftCreateMutation, useOrderListQuery } from "@dashboard/graphql";
 import { useFilterHandlers } from "@dashboard/hooks/useFilterHandlers";
 import { useFilterPresets } from "@dashboard/hooks/useFilterPresets";
-import useListSettings from "@dashboard/hooks/useListSettings";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useNotifier from "@dashboard/hooks/useNotifier";
+import { useListSettings } from "@dashboard/hooks/useListSettings";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
+import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { usePaginationReset } from "@dashboard/hooks/usePaginationReset";
-import usePaginator, {
+import {
   createPaginationState,
   PaginatorContext,
+  usePaginator,
 } from "@dashboard/hooks/usePaginator";
 import { ListViews } from "@dashboard/types";
-import createDialogActionHandlers from "@dashboard/utils/handlers/dialogActionHandlers";
-import createSortHandler from "@dashboard/utils/handlers/sortHandler";
+import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
+import { createSortHandler } from "@dashboard/utils/handlers/sortHandler";
 import { mapEdgesToItems, mapNodeToChoice } from "@dashboard/utils/maps";
 import { getSortParams } from "@dashboard/utils/sort";
 import { useOnboarding } from "@dashboard/welcomePage/WelcomePageOnboarding/onboardingContext";
 import { useEffect, useMemo } from "react";
 import { useIntl } from "react-intl";
 
-import OrderListPage from "../../components/OrderListPage/OrderListPage";
+import { OrderListPage } from "../../components/OrderListPage/OrderListPage";
 import {
   orderListUrl,
   OrderListUrlDialog,
@@ -195,4 +196,4 @@ const OrderList = ({ params }: OrderListProps) => {
   );
 };
 
-export default OrderList;
+export { OrderList };

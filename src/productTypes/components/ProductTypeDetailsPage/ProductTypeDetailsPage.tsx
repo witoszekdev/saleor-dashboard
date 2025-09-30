@@ -1,8 +1,8 @@
 // @ts-strict-ignore
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
-import CardSpacer from "@dashboard/components/CardSpacer";
+import { CardSpacer } from "@dashboard/components/CardSpacer";
 import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import Form from "@dashboard/components/Form";
+import { Form } from "@dashboard/components/Form";
 import { DetailPageLayout } from "@dashboard/components/Layouts";
 import { Metadata } from "@dashboard/components/Metadata/Metadata";
 import { MetadataFormData } from "@dashboard/components/Metadata/types";
@@ -16,22 +16,22 @@ import {
 } from "@dashboard/graphql";
 import { useBackLinkWithState } from "@dashboard/hooks/useBackLinkWithState";
 import { SubmitPromise } from "@dashboard/hooks/useForm";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useStateFromProps from "@dashboard/hooks/useStateFromProps";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
+import { useStateFromProps } from "@dashboard/hooks/useStateFromProps";
 import { maybe } from "@dashboard/misc";
 import { handleTaxClassChange } from "@dashboard/productTypes/handlers";
 import { productTypeListPath } from "@dashboard/productTypes/urls";
 import { FetchMoreProps, ListActions, ReorderEvent, UserError } from "@dashboard/types";
 import { mapMetadataItemToInput } from "@dashboard/utils/maps";
-import useMetadataChangeTrigger from "@dashboard/utils/metadata/useMetadataChangeTrigger";
+import { useMetadataChangeTrigger } from "@dashboard/utils/metadata/useMetadataChangeTrigger";
 import { Box, Text, Toggle } from "@saleor/macaw-ui-next";
 import { FormattedMessage } from "react-intl";
 
-import ProductTypeAttributes from "../ProductTypeAttributes/ProductTypeAttributes";
-import ProductTypeDetails from "../ProductTypeDetails/ProductTypeDetails";
-import ProductTypeShipping from "../ProductTypeShipping/ProductTypeShipping";
-import ProductTypeTaxes from "../ProductTypeTaxes/ProductTypeTaxes";
-import ProductTypeVariantAttributes from "../ProductTypeVariantAttributes/ProductTypeVariantAttributes";
+import { ProductTypeAttributes } from "../ProductTypeAttributes/ProductTypeAttributes";
+import { ProductTypeDetails } from "../ProductTypeDetails/ProductTypeDetails";
+import { ProductTypeShipping } from "../ProductTypeShipping/ProductTypeShipping";
+import { ProductTypeTaxes } from "../ProductTypeTaxes/ProductTypeTaxes";
+import { ProductTypeVariantAttributes } from "../ProductTypeVariantAttributes/ProductTypeVariantAttributes";
 
 interface ChoiceType {
   label: string;
@@ -247,4 +247,4 @@ const ProductTypeDetailsPage = ({
 };
 
 ProductTypeDetailsPage.displayName = "ProductTypeDetailsPage";
-export default ProductTypeDetailsPage;
+export { ProductTypeDetailsPage };

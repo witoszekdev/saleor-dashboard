@@ -43,4 +43,4 @@ export const ControlledCheckbox = ({
   />
 );
 ControlledCheckbox.displayName = "ControlledCheckbox";
-export default ControlledCheckbox;
+export { ControlledCheckbox };

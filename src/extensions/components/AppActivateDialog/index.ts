@@ -1,2 +1,2 @@
 export * from "./AppActivateDialog";
-export { default } from "./AppActivateDialog";
+export { AppActivateDialog } from "./AppActivateDialog";

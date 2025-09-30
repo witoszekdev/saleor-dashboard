@@ -151,4 +151,4 @@ const SortableChipsField = ({
 };
 
 SortableChipsField.displayName = "SortableChipsField";
-export default SortableChipsField;
+export { SortableChipsField };

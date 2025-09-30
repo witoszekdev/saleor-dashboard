@@ -1,14 +1,14 @@
 // @ts-strict-ignore
-import Accordion, { AccordionProps } from "@dashboard/components/Accordion";
+import { Accordion, AccordionProps } from "@dashboard/components/Accordion";
 import { useChannelsSearch } from "@dashboard/components/ChannelsAvailabilityDialog/utils";
-import ChannelsAvailabilityDialogChannelsList from "@dashboard/components/ChannelsAvailabilityDialogChannelsList";
-import ChannelsAvailabilityDialogContentWrapper from "@dashboard/components/ChannelsAvailabilityDialogWrapper";
-import Checkbox from "@dashboard/components/Checkbox";
-import Chip from "@dashboard/components/Chip";
-import Hr from "@dashboard/components/Hr";
+import { ChannelsAvailabilityContent as ChannelsAvailabilityDialogChannelsList } from "@dashboard/components/ChannelsAvailabilityDialogChannelsList";
+import { ChannelsAvailabilityContentWrapper as ChannelsAvailabilityDialogContentWrapper } from "@dashboard/components/ChannelsAvailabilityDialogWrapper";
+import { Checkbox } from "@dashboard/components/Checkbox";
+import { Chip } from "@dashboard/components/Chip";
+import { Hr } from "@dashboard/components/Hr";
 import { ChannelFragment, ExportProductsInput, ProductFieldEnum } from "@dashboard/graphql";
 import { ChangeEvent, FormChange } from "@dashboard/hooks/useForm";
-import useSearchQuery from "@dashboard/hooks/useSearchQuery";
+import { useSearchQuery } from "@dashboard/hooks/useSearchQuery";
 import { sectionNames } from "@dashboard/intl";
 import { FetchMoreProps } from "@dashboard/types";
 import { toggle } from "@dashboard/utils/lists";
@@ -18,7 +18,7 @@ import { Option, Text } from "@saleor/macaw-ui-next";
 import { PropsWithChildren } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import useProductExportFieldMessages from "./messages";
+import { useProductExportFieldMessages } from "./messages";
 
 export const attributeNamePrefix = "attribute-";
 export const warehouseNamePrefix = "warehouse-";
@@ -592,4 +592,4 @@ const ProductExportDialogInfo = ({
 };
 
 ProductExportDialogInfo.displayName = "ProductExportDialogInfo";
-export default ProductExportDialogInfo;
+export { ProductExportDialogInfo };

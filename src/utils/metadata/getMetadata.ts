@@ -11,4 +11,4 @@ function getMetadata(
   };
 }
 
-export default getMetadata;
+export { getMetadata };

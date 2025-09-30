@@ -25,4 +25,4 @@ function getShopErrorMessage(
   return getCommonFormFieldErrorMessage(err, intl);
 }
 
-export default getShopErrorMessage;
+export { getShopErrorMessage };

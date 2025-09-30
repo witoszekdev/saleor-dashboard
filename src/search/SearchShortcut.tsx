@@ -1,4 +1,4 @@
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { Box } from "@saleor/macaw-ui-next";
 import { useEffect, useRef } from "react";
 import { useLocation } from "react-router";

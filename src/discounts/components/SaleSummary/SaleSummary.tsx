@@ -1,10 +1,10 @@
 import { DashboardCard } from "@dashboard/components/Card";
-import CardSpacer from "@dashboard/components/CardSpacer";
-import Date from "@dashboard/components/Date";
-import FormSpacer from "@dashboard/components/FormSpacer";
-import Hr from "@dashboard/components/Hr";
-import Money from "@dashboard/components/Money";
-import Percent from "@dashboard/components/Percent";
+import { CardSpacer } from "@dashboard/components/CardSpacer";
+import { Date } from "@dashboard/components/Date";
+import { FormSpacer } from "@dashboard/components/FormSpacer";
+import { Hr } from "@dashboard/components/Hr";
+import { Money } from "@dashboard/components/Money";
+import { Percent } from "@dashboard/components/Percent";
 import { SaleDetailsFragment, SaleType } from "@dashboard/graphql";
 import { commonMessages } from "@dashboard/intl";
 import { ChannelProps } from "@dashboard/types";
@@ -12,7 +12,7 @@ import { Skeleton, Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 
 import { maybe } from "../../../misc";
-import useStyles from "./styles";
+import { useStyles } from "./styles";
 
 interface SaleSummaryProps extends ChannelProps {
   sale: SaleDetailsFragment;
@@ -91,4 +91,4 @@ const SaleSummary = ({ selectedChannelId, sale }: SaleSummaryProps) => {
 };
 
 SaleSummary.displayName = "SaleSummary";
-export default SaleSummary;
+export { SaleSummary };

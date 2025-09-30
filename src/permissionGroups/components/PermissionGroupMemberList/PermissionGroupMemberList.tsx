@@ -1,10 +1,10 @@
 // @ts-strict-ignore
 import { DashboardCard } from "@dashboard/components/Card";
-import Checkbox from "@dashboard/components/Checkbox";
-import ResponsiveTable from "@dashboard/components/ResponsiveTable";
-import TableCellHeader from "@dashboard/components/TableCellHeader";
-import TableHead from "@dashboard/components/TableHead";
-import TableRowLink from "@dashboard/components/TableRowLink";
+import { Checkbox } from "@dashboard/components/Checkbox";
+import { ResponsiveTable } from "@dashboard/components/ResponsiveTable";
+import { TableCellHeader } from "@dashboard/components/TableCellHeader";
+import { TableHead } from "@dashboard/components/TableHead";
+import { TableRowLink } from "@dashboard/components/TableRowLink";
 import { UserAvatar } from "@dashboard/components/UserAvatar";
 import { PermissionGroupMemberFragment } from "@dashboard/graphql";
 import { commonStatusMessages } from "@dashboard/intl";
@@ -16,7 +16,7 @@ import { getArrowDirection } from "@dashboard/utils/sort";
 import { TableBody, TableCell } from "@material-ui/core";
 import { makeStyles } from "@saleor/macaw-ui";
 import { Box, Button, Skeleton, Text, TrashBinIcon, vars } from "@saleor/macaw-ui-next";
-import clsx from "clsx";
+import { clsx } from "clsx";
 import { FormattedMessage, useIntl } from "react-intl";
 
 const useStyles = makeStyles(
@@ -243,4 +243,4 @@ const PermissionGroupMemberList = (props: PermissionGroupProps) => {
 };
 
 PermissionGroupMemberList.displayName = "PermissionGroupMemberList";
-export default PermissionGroupMemberList;
+export { PermissionGroupMemberList };

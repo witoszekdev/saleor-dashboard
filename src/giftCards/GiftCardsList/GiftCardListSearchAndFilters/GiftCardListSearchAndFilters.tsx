@@ -1,17 +1,17 @@
 // @ts-strict-ignore
-import useAppChannel from "@dashboard/components/AppLayout/AppChannelContext";
+import { useAppChannel } from "@dashboard/components/AppLayout/AppChannelContext";
 import { ListFilters } from "@dashboard/components/AppLayout/ListFilters";
 import { BulkDeleteButton } from "@dashboard/components/BulkDeleteButton";
-import DeleteFilterTabDialog from "@dashboard/components/DeleteFilterTabDialog";
-import SaveFilterTabDialog from "@dashboard/components/SaveFilterTabDialog";
+import { DeleteFilterTabDialog } from "@dashboard/components/DeleteFilterTabDialog";
+import { SaveFilterTabDialog } from "@dashboard/components/SaveFilterTabDialog";
 import { DEFAULT_INITIAL_SEARCH_DATA } from "@dashboard/config";
 import { useFlag } from "@dashboard/featureFlags";
 import { useGiftCardCurrenciesQuery } from "@dashboard/graphql";
 import { getSearchFetchMoreProps } from "@dashboard/hooks/makeTopLevelSearch/utils";
-import useLocalStorage from "@dashboard/hooks/useLocalStorage";
-import useCustomerSearch from "@dashboard/searches/useCustomerSearch";
-import useGiftCardTagsSearch from "@dashboard/searches/useGiftCardTagsSearch";
-import useProductSearch from "@dashboard/searches/useProductSearch";
+import { useLocalStorage } from "@dashboard/hooks/useLocalStorage";
+import { UseCustomerSearch as useCustomerSearch } from "@dashboard/searches/useCustomerSearch";
+import { UseGiftCardTagsSearch as useGiftCardTagsSearch } from "@dashboard/searches/useGiftCardTagsSearch";
+import { UseProductSearch as useProductSearch } from "@dashboard/searches/useProductSearch";
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { Box } from "@saleor/macaw-ui-next";
 import compact from "lodash/compact";
@@ -163,4 +163,4 @@ const GiftCardListSearchAndFilters = () => {
   );
 };
 
-export default GiftCardListSearchAndFilters;
+export { GiftCardListSearchAndFilters };

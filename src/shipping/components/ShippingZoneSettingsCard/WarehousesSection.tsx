@@ -1,4 +1,4 @@
-import CardSpacer from "@dashboard/components/CardSpacer";
+import { CardSpacer } from "@dashboard/components/CardSpacer";
 import { Multiselect } from "@dashboard/components/Combobox";
 import { FormChange } from "@dashboard/hooks/useForm";
 import { FetchMoreProps, SearchProps } from "@dashboard/types";
@@ -77,4 +77,4 @@ const WarehousesSection = ({
   );
 };
 
-export default WarehousesSection;
+export { WarehousesSection };

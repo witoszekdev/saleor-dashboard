@@ -25,6 +25,6 @@ const SiteSettingsIcon = createSvgIcon(
   "SiteSettings",
 );
 
-export default function SiteSettings(props: SvgIconProps) {
+export function SiteSettings(props: SvgIconProps) {
   return <SiteSettingsIcon {...props} viewBox="0 0 32 32" />;
 }

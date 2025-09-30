@@ -1,6 +1,6 @@
 import { TopNav } from "@dashboard/components/AppLayout";
 import { useContextualLink } from "@dashboard/components/AppLayout/ContextualLinks/useContextualLink";
-import SearchInput from "@dashboard/components/AppLayout/ListFilters/components/SearchInput";
+import { SearchInput } from "@dashboard/components/AppLayout/ListFilters/components/SearchInput";
 import { DashboardCard } from "@dashboard/components/Card";
 import { ListPageLayout } from "@dashboard/components/Layouts";
 import { headerTitles, messages } from "@dashboard/extensions/messages";
@@ -11,8 +11,8 @@ import {
 } from "@dashboard/extensions/urls";
 import { useInstalledExtensionsFilter } from "@dashboard/extensions/views/InstalledExtensions/hooks/useInstalledExtensionsFilter";
 import { useHasManagedAppsPermission } from "@dashboard/hooks/useHasManagedAppsPermission";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import createDialogActionHandlers from "@dashboard/utils/handlers/dialogActionHandlers";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
+import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
 import { useOnboarding } from "@dashboard/welcomePage/WelcomePageOnboarding/onboardingContext";
 import { Box, ChevronRightIcon, Text } from "@saleor/macaw-ui-next";
 import { useEffect } from "react";

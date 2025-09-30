@@ -1,5 +1,5 @@
-import DefaultCardTitle from "@dashboard/components/CardTitle";
-import HorizontalSpacer from "@dashboard/components/HorizontalSpacer";
+import { CardTitle as DefaultCardTitle } from "@dashboard/components/CardTitle";
+import { HorizontalSpacer } from "@dashboard/components/HorizontalSpacer";
 import { FulfillmentStatus } from "@dashboard/graphql";
 import { StatusType } from "@dashboard/types";
 import { CircleIndicator } from "@saleor/macaw-ui";
@@ -86,4 +86,4 @@ const OrderCardTitle = ({
 };
 
 OrderCardTitle.displayName = "OrderCardTitle";
-export default OrderCardTitle;
+export { OrderCardTitle };

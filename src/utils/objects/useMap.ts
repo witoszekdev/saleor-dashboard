@@ -52,4 +52,4 @@ function useMap<K, V>(initialState: MapOrEntries<K, V> = new Map()): Return<K, V
   return [map, actions];
 }
 
-export default useMap;
+export { useMap };

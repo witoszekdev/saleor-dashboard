@@ -1,4 +1,4 @@
-import useLocalStorage from "@dashboard/hooks/useLocalStorage";
+import { useLocalStorage } from "@dashboard/hooks/useLocalStorage";
 
 import { loginCallbackPath } from "../urls";
 

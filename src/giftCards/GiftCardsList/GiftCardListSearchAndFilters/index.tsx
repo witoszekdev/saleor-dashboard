@@ -1,2 +1,2 @@
 export * from "./GiftCardListSearchAndFilters";
-export { default } from "./GiftCardListSearchAndFilters";
+export { GiftCardListSearchAndFilters } from "./GiftCardListSearchAndFilters";

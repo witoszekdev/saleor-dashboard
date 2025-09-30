@@ -1,6 +1,6 @@
-import useCategorySearch from "@dashboard/searches/useCategorySearch";
-import useCollectionSearch from "@dashboard/searches/useCollectionSearch";
-import usePageSearch from "@dashboard/searches/usePageSearch";
+import { UseCategorySearch as useCategorySearch } from "@dashboard/searches/useCategorySearch";
+import { UseCollectionSearch as useCollectionSearch } from "@dashboard/searches/useCollectionSearch";
+import { UsePageSearch as usePageSearch } from "@dashboard/searches/usePageSearch";
 import { renderHook } from "@testing-library/react-hooks";
 
 import { useLinkValue } from "./useLinkValue";

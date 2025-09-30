@@ -1,13 +1,13 @@
 // @ts-strict-ignore
 import { createSortedShippingChannels } from "@dashboard/channels/utils";
-import ChannelsAvailabilityDialog from "@dashboard/components/ChannelsAvailabilityDialog";
+import { ChannelsAvailabilityDialog } from "@dashboard/components/ChannelsAvailabilityDialog";
 import { WindowTitle } from "@dashboard/components/WindowTitle";
 import { PostalCodeRuleInclusionTypeEnum, useShippingZoneChannelsQuery } from "@dashboard/graphql";
-import useChannels from "@dashboard/hooks/useChannels";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useChannels } from "@dashboard/hooks/useChannels";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { sectionNames } from "@dashboard/intl";
-import ShippingZonePostalCodeRangeDialog from "@dashboard/shipping/components/ShippingZonePostalCodeRangeDialog";
-import ShippingZoneRatesCreatePage from "@dashboard/shipping/components/ShippingZoneRatesCreatePage";
+import { ShippingZonePostalCodeRangeDialog } from "@dashboard/shipping/components/ShippingZonePostalCodeRangeDialog";
+import { ShippingZoneRatesCreatePage } from "@dashboard/shipping/components/ShippingZoneRatesCreatePage";
 import { useShippingRateCreator } from "@dashboard/shipping/handlers";
 import {
   shippingRateCreateUrl,
@@ -15,7 +15,7 @@ import {
   ShippingRateCreateUrlQueryParams,
   shippingZoneUrl,
 } from "@dashboard/shipping/urls";
-import postalCodesReducer from "@dashboard/shipping/views/reducer";
+import { postalCodesReducer } from "@dashboard/shipping/views/reducer";
 import {
   filterPostalCodes,
   getPostalCodeRuleByMinMax,
@@ -23,7 +23,7 @@ import {
 } from "@dashboard/shipping/views/utils";
 import { useTaxClassFetchMore } from "@dashboard/taxes/utils/useTaxClassFetchMore";
 import { MinMax } from "@dashboard/types";
-import createDialogActionHandlers from "@dashboard/utils/handlers/dialogActionHandlers";
+import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
 import { useReducer } from "react";
 import { useIntl } from "react-intl";
 
@@ -151,4 +151,4 @@ const RateCreate = ({ id, params }: RateCreateProps) => {
   );
 };
 
-export default RateCreate;
+export { RateCreate };

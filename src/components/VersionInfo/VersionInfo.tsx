@@ -23,4 +23,4 @@ const VersionInfo = ({ dashboardVersion, coreVersion }: VersionInfoProps) => {
 };
 
 VersionInfo.displayName = "VersionInfo";
-export default VersionInfo;
+export { VersionInfo };

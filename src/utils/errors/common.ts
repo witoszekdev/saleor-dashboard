@@ -51,4 +51,4 @@ export function getCommonFormFieldErrorMessage<ErrorCode>(
   return undefined;
 }
 
-export default commonErrorMessages;
+export { commonErrorMessages };

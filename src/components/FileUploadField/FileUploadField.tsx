@@ -96,4 +96,4 @@ const FileUploadField = (props: FileUploadFieldProps) => {
 };
 
 FileUploadField.displayName = "FileUploadField";
-export default FileUploadField;
+export { FileUploadField };

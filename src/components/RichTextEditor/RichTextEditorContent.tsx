@@ -1,12 +1,12 @@
 import { LogLevels } from "@editorjs/editorjs";
 import { useId } from "@reach/auto-id";
-import clsx from "clsx";
+import { clsx } from "clsx";
 import { createReactEditorJS } from "react-editor-js";
 
 import { tools } from "./consts";
 import { useHasRendered } from "./hooks";
 import { EditorJsProps } from "./RichTextEditor";
-import useStyles from "./styles";
+import { useStyles } from "./styles";
 
 interface RichTextEditorContentProps extends Omit<EditorJsProps, "defaultValue"> {
   id?: string;
@@ -44,4 +44,4 @@ const RichTextEditorContent = ({
 };
 
 RichTextEditorContent.displayName = "RichTextEditorContent";
-export default RichTextEditorContent;
+export { RichTextEditorContent };

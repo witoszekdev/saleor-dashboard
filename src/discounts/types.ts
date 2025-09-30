@@ -1,7 +1,7 @@
 import { DecimalFilterInput, PromotionTypeEnum } from "@dashboard/graphql";
 import { useCategoryWithTotalProductsSearch } from "@dashboard/searches/useCategorySearch";
 import { useCollectionWithTotalProductsSearch } from "@dashboard/searches/useCollectionSearch";
-import useProductSearch from "@dashboard/searches/useProductSearch";
+import { UseProductSearch as useProductSearch } from "@dashboard/searches/useProductSearch";
 
 import { Rule } from "./models";
 

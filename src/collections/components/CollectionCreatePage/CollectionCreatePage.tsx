@@ -3,7 +3,7 @@ import { ChannelCollectionData } from "@dashboard/channels/utils";
 import { collectionListUrl } from "@dashboard/collections/urls";
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
 import { CardSpacer } from "@dashboard/components/CardSpacer";
-import ChannelsAvailabilityCard from "@dashboard/components/ChannelsAvailabilityCard";
+import { ChannelsAvailability as ChannelsAvailabilityCard } from "@dashboard/components/ChannelsAvailabilityCard";
 import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import { DetailPageLayout } from "@dashboard/components/Layouts";
 import { Metadata } from "@dashboard/components/Metadata";
@@ -15,12 +15,12 @@ import {
   PermissionEnum,
 } from "@dashboard/graphql";
 import { SubmitPromise } from "@dashboard/hooks/useForm";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { useIntl } from "react-intl";
 
-import CollectionDetails from "../CollectionDetails/CollectionDetails";
+import { CollectionDetails } from "../CollectionDetails/CollectionDetails";
 import { CollectionImage } from "../CollectionImage/CollectionImage";
-import CollectionCreateForm, { CollectionCreateData } from "./form";
+import { CollectionCreateData, CollectionCreateForm } from "./form";
 
 interface CollectionCreatePageProps {
   channelsCount: number;
@@ -163,4 +163,4 @@ const CollectionCreatePage = ({
 };
 
 CollectionCreatePage.displayName = "CollectionCreatePage";
-export default CollectionCreatePage;
+export { CollectionCreatePage };

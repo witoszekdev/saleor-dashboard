@@ -1,7 +1,7 @@
 // @ts-strict-ignore
 import { Button } from "@dashboard/components/Button";
 import { ConfirmButton, ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import makeCreatorSteps, { Step } from "@dashboard/components/CreatorSteps";
+import { makeCreatorSteps, Step } from "@dashboard/components/CreatorSteps";
 import { DashboardModal } from "@dashboard/components/Modal";
 import {
   ChannelFragment,
@@ -10,23 +10,24 @@ import {
   SearchAttributesQuery,
   WarehouseFragment,
 } from "@dashboard/graphql";
-import useForm, { FormChange } from "@dashboard/hooks/useForm";
-import useModalDialogErrors from "@dashboard/hooks/useModalDialogErrors";
-import useModalDialogOpen from "@dashboard/hooks/useModalDialogOpen";
-import useWizard from "@dashboard/hooks/useWizard";
+import { FormChange, useForm } from "@dashboard/hooks/useForm";
+import { useModalDialogErrors } from "@dashboard/hooks/useModalDialogErrors";
+import { useModalDialogOpen } from "@dashboard/hooks/useModalDialogOpen";
+import { useWizard } from "@dashboard/hooks/useWizard";
 import { buttonMessages } from "@dashboard/intl";
 import { DialogProps, FetchMoreProps, RelayToFlat } from "@dashboard/types";
-import getExportErrorMessage from "@dashboard/utils/errors/export";
+import { getExportErrorMessage } from "@dashboard/utils/errors/export";
 import { toggle } from "@dashboard/utils/lists";
 import { mapNodeToChoice } from "@dashboard/utils/maps";
 import { Box, Option, Text } from "@saleor/macaw-ui-next";
 import { useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import ExportDialogSettings, { ExportItemsQuantity } from "./ExportDialogSettings";
+import { ExportDialogSettings, ExportItemsQuantity } from "./ExportDialogSettings";
 import { productExportDialogMessages as messages } from "./messages";
-import ProductExportDialogInfo, {
+import {
   attributeNamePrefix,
+  ProductExportDialogInfo,
   warehouseNamePrefix,
 } from "./ProductExportDialogInfo";
 import { exportSettingsInitialFormData } from "./types";
@@ -289,4 +290,4 @@ const ProductExportDialog = ({
 };
 
 ProductExportDialog.displayName = "ProductExportDialog";
-export default ProductExportDialog;
+export { ProductExportDialog };

@@ -1,8 +1,8 @@
-import Wrapper from "@test/wrapper";
+import { Wrapper } from "@test/wrapper";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
-import InstallWithManifestFormButton from "./InstallWithManifestFormButton";
+import { InstallWithManifestFormButton } from "./InstallWithManifestFormButton";
 
 describe("Apps InstallWithManifestFormButton", () => {
   it("submit form when valid manifest url value passed", async () => {

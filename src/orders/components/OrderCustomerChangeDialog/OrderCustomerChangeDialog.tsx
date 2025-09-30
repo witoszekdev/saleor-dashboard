@@ -5,8 +5,8 @@ import { FormControlLabel, Radio, RadioGroup } from "@material-ui/core";
 import { Box, Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import OrderCustomerChangeForm, { CustomerChangeActionEnum, OrderCustomerChangeData } from "./form";
-import messages from "./messages";
+import { CustomerChangeActionEnum, OrderCustomerChangeData, OrderCustomerChangeForm } from "./form";
+import { messages } from "./messages";
 import { useStyles } from "./styles";
 
 interface OrderCustomerChangeDialogProps {
@@ -65,4 +65,4 @@ const OrderCustomerChangeDialog = (props: OrderCustomerChangeDialogProps) => {
 };
 
 OrderCustomerChangeDialog.displayName = "OrderCustomerChangeDialog";
-export default OrderCustomerChangeDialog;
+export { OrderCustomerChangeDialog };

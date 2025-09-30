@@ -29,4 +29,4 @@ const Wrapper = ({ children }: { children: React.ReactNode }) => (
   </ApolloMockedProvider>
 );
 
-export default Wrapper;
+export { Wrapper };

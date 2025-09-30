@@ -5,7 +5,7 @@ import { TopNav } from "@dashboard/components/AppLayout/TopNav";
 import { CardSpacer } from "@dashboard/components/CardSpacer";
 import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import { useDevModeContext } from "@dashboard/components/DevModePanel/hooks";
-import Form from "@dashboard/components/Form";
+import { Form } from "@dashboard/components/Form";
 import { DetailPageLayout } from "@dashboard/components/Layouts";
 import { Metadata, MetadataIdSchema } from "@dashboard/components/Metadata";
 import { Savebar } from "@dashboard/components/Savebar";
@@ -22,25 +22,25 @@ import {
 } from "@dashboard/graphql";
 import { useBackLinkWithState } from "@dashboard/hooks/useBackLinkWithState";
 import { SubmitPromise } from "@dashboard/hooks/useForm";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { defaultGraphiQLQuery } from "@dashboard/orders/queries";
 import { orderListUrl } from "@dashboard/orders/urls";
 import { Divider } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
 
 import { getMutationErrors, maybe } from "../../../misc";
-import OrderChannelSectionCard from "../OrderChannelSectionCard";
-import OrderCustomer from "../OrderCustomer";
-import OrderCustomerNote from "../OrderCustomerNote";
-import OrderDraftDetails from "../OrderDraftDetails/OrderDraftDetails";
+import { OrderChannelSectionCard } from "../OrderChannelSectionCard";
+import { OrderCustomer } from "../OrderCustomer";
+import { OrderCustomerNote } from "../OrderCustomerNote";
+import { OrderDraftDetails } from "../OrderDraftDetails/OrderDraftDetails";
 import { FormData as OrderDraftDetailsProductsFormData } from "../OrderDraftDetailsProducts";
-import OrderFulfilledProductsCard from "../OrderFulfilledProductsCard";
-import OrderHistory, { FormData as HistoryFormData } from "../OrderHistory";
-import OrderInvoiceList from "../OrderInvoiceList";
+import { OrderFulfilledProductsCard } from "../OrderFulfilledProductsCard";
+import { FormData as HistoryFormData, OrderHistory } from "../OrderHistory";
+import { OrderInvoiceList } from "../OrderInvoiceList";
 import { OrderPaymentOrTransaction } from "../OrderPaymentOrTransaction/OrderPaymentOrTransaction";
-import OrderUnfulfilledProductsCard from "../OrderUnfulfilledProductsCard";
+import { OrderUnfulfilledProductsCard } from "../OrderUnfulfilledProductsCard";
 import { messages } from "./messages";
-import Title from "./Title";
+import { Title } from "./Title";
 import {
   createMetadataHandler,
   createOrderMetadataIdSchema,
@@ -328,4 +328,4 @@ const OrderDetailsPage = (props: OrderDetailsPageProps) => {
 };
 
 OrderDetailsPage.displayName = "OrderDetailsPage";
-export default OrderDetailsPage;
+export { OrderDetailsPage };

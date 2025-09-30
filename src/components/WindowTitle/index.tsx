@@ -1,4 +1,4 @@
-import useShop from "@dashboard/hooks/useShop";
+import { useShop } from "@dashboard/hooks/useShop";
 import { Helmet } from "react-helmet";
 
 interface WindowTitleProps {

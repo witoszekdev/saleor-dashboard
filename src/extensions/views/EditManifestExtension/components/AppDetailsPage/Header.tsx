@@ -1,4 +1,4 @@
-import AppHeaderOptions from "@dashboard/extensions/components/AppHeaderOptions";
+import { AppHeaderOptions } from "@dashboard/extensions/components/AppHeaderOptions";
 import { ExtensionsUrls } from "@dashboard/extensions/urls";
 import { AppPageNav } from "@dashboard/extensions/views/ViewManifestExtension/components/AppPage/AppPageNav";
 import { AppQuery } from "@dashboard/graphql";
@@ -57,4 +57,4 @@ const Header = ({ data, onAppActivateOpen, onAppDeactivateOpen, onAppDeleteOpen 
   );
 };
 
-export default Header;
+export { Header };

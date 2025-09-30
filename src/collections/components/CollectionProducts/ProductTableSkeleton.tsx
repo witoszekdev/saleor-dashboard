@@ -1,5 +1,5 @@
 import { GridTable } from "@dashboard/components/GridTable";
-import Drag from "@dashboard/icons/Drag";
+import { Drag } from "@dashboard/icons/Drag";
 import { Box, Skeleton } from "@saleor/macaw-ui-next";
 
 const ProductTableItemSkeleton = () => (

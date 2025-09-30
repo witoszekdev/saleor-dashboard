@@ -1,2 +1,2 @@
 export * from "./CustomAppTokens";
-export { default } from "./CustomAppTokens";
+export { CustomAppTokens } from "./CustomAppTokens";

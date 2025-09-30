@@ -29,4 +29,4 @@ class Debounce<T> extends React.Component<DebounceProps<T>> {
   }
 }
 
-export default Debounce;
+export { Debounce };

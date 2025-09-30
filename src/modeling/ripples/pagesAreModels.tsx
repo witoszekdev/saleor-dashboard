@@ -1,4 +1,4 @@
-import Link from "@dashboard/components/Link";
+import { Link } from "@dashboard/components/Link";
 import { Ripple } from "@dashboard/ripples/types";
 import { Paragraph } from "@saleor/macaw-ui-next";
 import { defineMessage } from "react-intl";

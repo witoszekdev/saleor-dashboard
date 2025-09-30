@@ -1,4 +1,4 @@
-import useLocalStorage from "@dashboard/hooks/useLocalStorage";
+import { useLocalStorage } from "@dashboard/hooks/useLocalStorage";
 import { renderHook } from "@testing-library/react-hooks";
 import { useState } from "react";
 import { act } from "react-dom/test-utils";

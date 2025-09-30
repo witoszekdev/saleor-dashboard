@@ -8,7 +8,7 @@ import {
   SearchCollectionsWithTotalProductsQuery,
   SearchCollectionsWithTotalProductsQueryVariables,
 } from "@dashboard/graphql";
-import makeTopLevelSearch from "@dashboard/hooks/makeTopLevelSearch";
+import { makeTopLevelSearch } from "@dashboard/hooks/makeTopLevelSearch";
 
 export const searchCollections = gql`
   query SearchCollections($after: String, $first: Int!, $query: String!, $channel: String) {
@@ -61,6 +61,7 @@ export const useCollectionWithTotalProductsSearch = makeTopLevelSearch<
   SearchCollectionsWithTotalProductsQueryVariables
 >(SearchCollectionsWithTotalProductsDocument);
 
-export default makeTopLevelSearch<SearchCollectionsQuery, SearchCollectionsQueryVariables>(
-  SearchCollectionsDocument,
-);
+export const UseCollectionSearch = makeTopLevelSearch<
+  SearchCollectionsQuery,
+  SearchCollectionsQueryVariables
+>(SearchCollectionsDocument);

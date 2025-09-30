@@ -16,23 +16,23 @@ import {
   useUpdatePrivateMetadataMutation,
 } from "@dashboard/graphql";
 import { getSearchFetchMoreProps } from "@dashboard/hooks/makeTopLevelSearch/utils";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useNotifier from "@dashboard/hooks/useNotifier";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
+import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { getMutationErrors } from "@dashboard/misc";
-import useCategorySearch from "@dashboard/searches/useCategorySearch";
-import useCollectionSearch from "@dashboard/searches/useCollectionSearch";
-import usePageTypeSearch from "@dashboard/searches/usePageTypeSearch";
+import { UseCategorySearch as useCategorySearch } from "@dashboard/searches/useCategorySearch";
+import { UseCollectionSearch as useCollectionSearch } from "@dashboard/searches/useCollectionSearch";
+import { UsePageTypeSearch as usePageTypeSearch } from "@dashboard/searches/usePageTypeSearch";
 import {
   useReferencePageSearch,
   useReferenceProductSearch,
 } from "@dashboard/searches/useReferenceSearch";
-import useAttributeValueSearchHandler from "@dashboard/utils/handlers/attributeValueSearchHandler";
-import createMetadataCreateHandler from "@dashboard/utils/handlers/metadataCreateHandler";
+import { useAttributeValueSearchHandler } from "@dashboard/utils/handlers/attributeValueSearchHandler";
+import { createMetadataCreateHandler } from "@dashboard/utils/handlers/metadataCreateHandler";
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { getParsedDataForJsonStringField } from "@dashboard/utils/richText/misc";
 import { useIntl } from "react-intl";
 
-import PageDetailsPage from "../components/PageDetailsPage";
+import { PageDetailsPage } from "../components/PageDetailsPage";
 import { PageSubmitData } from "../components/PageDetailsPage/form";
 import { pageCreateUrl, PageCreateUrlQueryParams, pageUrl } from "../urls";
 
@@ -240,4 +240,4 @@ const PageCreate = ({ params }: PageCreateProps) => {
 };
 
 PageCreate.displayName = "PageCreate";
-export default PageCreate;
+export { PageCreate };

@@ -48,4 +48,4 @@ const RequirePermissions = ({
 };
 
 RequirePermissions.displayName = "RequirePermissions";
-export default RequirePermissions;
+export { RequirePermissions };

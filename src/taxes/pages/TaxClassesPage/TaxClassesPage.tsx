@@ -1,25 +1,25 @@
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
-import CardTitle from "@dashboard/components/CardTitle";
+import { CardTitle } from "@dashboard/components/CardTitle";
 import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import Grid from "@dashboard/components/Grid";
+import { Grid } from "@dashboard/components/Grid";
 import { DetailPageLayout } from "@dashboard/components/Layouts";
 import { Metadata } from "@dashboard/components/Metadata";
 import { Savebar } from "@dashboard/components/Savebar";
-import VerticalSpacer from "@dashboard/components/VerticalSpacer";
+import { VerticalSpacer } from "@dashboard/components/VerticalSpacer";
 import { configurationMenuUrl } from "@dashboard/configuration";
 import { TaxClassFragment } from "@dashboard/graphql";
 import { useClientPagination } from "@dashboard/hooks/useClientPagination/useClientPagination";
 import { SubmitPromise } from "@dashboard/hooks/useForm";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { getById } from "@dashboard/misc";
 import { parseQuery } from "@dashboard/orders/components/OrderCustomerAddressesEditDialog/utils";
-import TaxPageTitle from "@dashboard/taxes/components/TaxPageTitle";
+import { TaxPageTitle } from "@dashboard/taxes/components/TaxPageTitle";
 import { taxesMessages } from "@dashboard/taxes/messages";
 import { TaxClassesPageFormData } from "@dashboard/taxes/types";
 import { useAutofocus } from "@dashboard/taxes/utils/useAutofocus";
 import { isLastElement } from "@dashboard/taxes/utils/utils";
 import { getFormErrors } from "@dashboard/utils/errors";
-import getTaxesErrorMessage from "@dashboard/utils/errors/taxes";
+import { getTaxesErrorMessage } from "@dashboard/utils/errors/taxes";
 import { Card, CardContent, Divider, InputAdornment, TextField } from "@material-ui/core";
 import {
   List,
@@ -34,11 +34,11 @@ import { Box, Skeleton } from "@saleor/macaw-ui-next";
 import { Fragment, useEffect, useMemo, useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import TaxInput from "../../components/TaxInput";
+import { TaxInput } from "../../components/TaxInput";
 import { TaxPagination } from "../../components/TaxPagination";
-import TaxClassesForm from "./form";
+import { TaxClassesForm } from "./form";
 import { useStyles } from "./styles";
-import TaxClassesMenu from "./TaxClassesMenu";
+import { TaxClassesMenu } from "./TaxClassesMenu";
 
 interface TaxClassesPageProps {
   taxClasses: TaxClassFragment[] | undefined;
@@ -260,4 +260,4 @@ const TaxClassesPage = (props: TaxClassesPageProps) => {
   );
 };
 
-export default TaxClassesPage;
+export { TaxClassesPage };

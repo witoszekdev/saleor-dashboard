@@ -1,5 +1,5 @@
 // @ts-strict-ignore
-import CardSpacer from "@dashboard/components/CardSpacer";
+import { CardSpacer } from "@dashboard/components/CardSpacer";
 import {
   OrderDetailsFragment,
   OrderDetailsQuery,
@@ -9,13 +9,13 @@ import { Box, Text } from "@saleor/macaw-ui-next";
 import { useMemo } from "react";
 import { FormattedMessage } from "react-intl";
 
-import OrderAddTransaction from "../OrderAddTransaction";
+import { OrderAddTransaction } from "../OrderAddTransaction";
 import { OrderDetailsRefundTable } from "../OrderDetailsRefundTable/OrderDetailsRefundTable";
 import { OrderPaymentSummaryCard } from "../OrderPaymentSummaryCard";
-import OrderSummaryCard from "../OrderSummaryCard";
-import OrderTransaction from "../OrderTransaction";
-import OrderTransactionGiftCard from "../OrderTransactionGiftCard";
-import OrderTransactionPayment from "../OrderTransactionPayment";
+import { OrderSummaryCard } from "../OrderSummaryCard";
+import { OrderTransaction } from "../OrderTransaction";
+import { OrderTransactionGiftCard } from "../OrderTransactionGiftCard";
+import { OrderTransactionPayment } from "../OrderTransactionPayment";
 import { getFilteredPayments } from "./utils";
 
 interface OrderTransactionsWrapper {

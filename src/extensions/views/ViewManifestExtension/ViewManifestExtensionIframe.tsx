@@ -1,15 +1,15 @@
-import NotFoundPage from "@dashboard/components/NotFoundPage";
+import { NotFoundPage } from "@dashboard/components/NotFoundPage";
 import { appMessages } from "@dashboard/extensions/messages";
 import { ExtensionsUrls } from "@dashboard/extensions/urls";
 import { useAppQuery } from "@dashboard/graphql";
 import { useHasManagedAppsPermission } from "@dashboard/hooks/useHasManagedAppsPermission";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useNotifier from "@dashboard/hooks/useNotifier";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
+import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { useCallback } from "react";
 import { useIntl } from "react-intl";
 import { useLocation } from "react-router";
 
-import AppPage from "./components/AppPage";
+import { AppPage } from "./components/AppPage";
 
 interface AppProps {
   id: string;

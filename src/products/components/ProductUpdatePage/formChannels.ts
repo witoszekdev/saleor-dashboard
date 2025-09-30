@@ -5,7 +5,7 @@ import {
   ProductChannelListingUpdateInput,
   ProductFragment,
 } from "@dashboard/graphql";
-import useStateFromProps from "@dashboard/hooks/useStateFromProps";
+import { useStateFromProps } from "@dashboard/hooks/useStateFromProps";
 import uniq from "lodash/uniq";
 import uniqBy from "lodash/uniqBy";
 import { useCallback, useRef } from "react";

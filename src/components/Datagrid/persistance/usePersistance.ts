@@ -1,5 +1,5 @@
 import { MetadataItemFragment } from "@dashboard/graphql";
-import useDebounce from "@dashboard/hooks/useDebounce";
+import { useDebounce } from "@dashboard/hooks/useDebounce";
 import { useRef } from "react";
 
 import { byDuplicates } from "./byDuplicates";

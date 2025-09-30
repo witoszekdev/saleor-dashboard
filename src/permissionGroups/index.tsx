@@ -17,7 +17,7 @@ import {
 } from "./urls";
 import { PermissionGroupCreate } from "./views/PermissionGroupCreate";
 import { PermissionGroupDetails as PermissionGroupDetailsComponent } from "./views/PermissionGroupDetails";
-import PermissionGroupListComponent from "./views/PermissionGroupList";
+import { PermissionGroupList as PermissionGroupListComponent } from "./views/PermissionGroupList";
 
 const permissionGroupList = () => {
   const qs = parseQs(location.search.substr(1)) as any;
@@ -58,4 +58,4 @@ const Component = () => {
   );
 };
 
-export default Component;
+export { Component };

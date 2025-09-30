@@ -1,5 +1,5 @@
 // @ts-strict-ignore
-import useLocalStorage from "@dashboard/hooks/useLocalStorage";
+import { useLocalStorage } from "@dashboard/hooks/useLocalStorage";
 import mergeWith from "lodash/mergeWith";
 
 import { AppListViewSettings, defaultListSettings } from "./../config";
@@ -28,7 +28,7 @@ const mergeCustomizer = (objValue: unknown, srcValue: unknown) => {
   }
 };
 
-export default function useListSettings<TColumns extends string = string>(
+export function useListSettings<TColumns extends string = string>(
   listName: ListViews,
 ): UseListSettings<TColumns> {
   const [settings, setListSettings] = useLocalStorage<AppListViewSettings>(

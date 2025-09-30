@@ -1,6 +1,6 @@
 import { defineMessages } from "react-intl";
 
-export default defineMessages({
+export const Messages = defineMessages({
   header: {
     id: "zQX6xO",
     defaultMessage: "Delete App",

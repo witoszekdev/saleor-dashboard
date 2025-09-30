@@ -1,2 +1,2 @@
 export * from "./TypeDeleteWarningDialog";
-export { default } from "./TypeDeleteWarningDialog";
+export { TypeDeleteWarningDialog } from "./TypeDeleteWarningDialog";

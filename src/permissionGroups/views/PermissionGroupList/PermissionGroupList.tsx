@@ -1,18 +1,19 @@
 import { usePermissionGroupListQuery } from "@dashboard/graphql";
-import useListSettings from "@dashboard/hooks/useListSettings";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useListSettings } from "@dashboard/hooks/useListSettings";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { usePaginationReset } from "@dashboard/hooks/usePaginationReset";
-import usePaginator, {
+import {
   createPaginationState,
   PaginatorContext,
+  usePaginator,
 } from "@dashboard/hooks/usePaginator";
 import { ListViews } from "@dashboard/types";
-import createSortHandler from "@dashboard/utils/handlers/sortHandler";
+import { createSortHandler } from "@dashboard/utils/handlers/sortHandler";
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { getSortParams } from "@dashboard/utils/sort";
 import { useMemo } from "react";
 
-import PermissionGroupListPage from "../../components/PermissionGroupListPage";
+import { PermissionGroupListPage } from "../../components/PermissionGroupListPage";
 import { permissionGroupListUrl, PermissionGroupListUrlQueryParams } from "../../urls";
 import { getSortQueryVariables } from "./sort";
 
@@ -60,4 +61,4 @@ const PermissionGroupList = ({ params }: PermissionGroupListProps) => {
   );
 };
 
-export default PermissionGroupList;
+export { PermissionGroupList };

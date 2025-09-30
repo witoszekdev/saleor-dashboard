@@ -87,4 +87,4 @@ function useProductExportFieldMessages() {
   return (field: ProductFieldEnum) => messages[field];
 }
 
-export default useProductExportFieldMessages;
+export { useProductExportFieldMessages };

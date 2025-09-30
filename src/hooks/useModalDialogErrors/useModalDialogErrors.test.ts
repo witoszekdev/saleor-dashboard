@@ -1,6 +1,6 @@
 import { renderHook } from "@testing-library/react-hooks";
 
-import useModalDialogErrors from "./useModalDialogErrors";
+import { useModalDialogErrors } from "./useModalDialogErrors";
 
 const errors = ["err1", "err2"];
 

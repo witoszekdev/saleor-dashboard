@@ -1,4 +1,4 @@
-import RequirePermissions from "@dashboard/components/RequirePermissions";
+import { RequirePermissions } from "@dashboard/components/RequirePermissions";
 import {
   PermissionEnum,
   TransactionRequestRefundForGrantedRefundErrorFragment,

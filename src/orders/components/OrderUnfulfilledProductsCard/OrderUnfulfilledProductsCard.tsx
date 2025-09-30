@@ -1,11 +1,11 @@
 import { DashboardCard } from "@dashboard/components/Card";
-import CardSpacer from "@dashboard/components/CardSpacer";
+import { CardSpacer } from "@dashboard/components/CardSpacer";
 import { OrderLineFragment } from "@dashboard/graphql";
 import { commonMessages } from "@dashboard/intl";
 import { Button, Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage } from "react-intl";
 
-import OrderCardTitle from "../OrderCardTitle";
+import { OrderCardTitle } from "../OrderCardTitle";
 import { OrderDetailsDatagrid } from "../OrderDetailsDatagrid";
 import { useStyles } from "./styles";
 import { toLineWithUnfulfilledQuantity } from "./utils";
@@ -67,4 +67,4 @@ const OrderUnfulfilledProductsCard = ({
   );
 };
 
-export default OrderUnfulfilledProductsCard;
+export { OrderUnfulfilledProductsCard };

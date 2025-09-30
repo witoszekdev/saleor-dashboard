@@ -139,4 +139,4 @@ const DiscountDates = <ErrorCode,>({
   );
 };
 
-export default DiscountDates;
+export { DiscountDates };

@@ -61,4 +61,4 @@ const OrderRefund = (props: OrderRefundProps) => {
 };
 
 OrderRefund.displayName = "OrderRefund";
-export default OrderRefund;
+export { OrderRefund };

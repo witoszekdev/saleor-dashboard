@@ -1,5 +1,5 @@
 import { DashboardCard } from "@dashboard/components/Card";
-import Money from "@dashboard/components/Money";
+import { Money } from "@dashboard/components/Money";
 import { IMoney } from "@dashboard/utils/intl";
 import { Box, BoxProps, Checkbox, Input, Skeleton, Text, Tooltip } from "@saleor/macaw-ui-next";
 import { Control, FieldError, useController } from "react-hook-form";

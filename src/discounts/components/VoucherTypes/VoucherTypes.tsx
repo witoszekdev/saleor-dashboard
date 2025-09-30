@@ -1,10 +1,10 @@
 import { DashboardCard } from "@dashboard/components/Card";
-import Grid from "@dashboard/components/Grid";
-import RadioGroupField from "@dashboard/components/RadioGroupField";
+import { Grid } from "@dashboard/components/Grid";
+import { RadioGroupField } from "@dashboard/components/RadioGroupField";
 import { DiscountTypeEnum } from "@dashboard/discounts/types";
 import { DiscountErrorFragment } from "@dashboard/graphql";
 import { getFormErrors } from "@dashboard/utils/errors";
-import getDiscountErrorMessage from "@dashboard/utils/errors/discounts";
+import { getDiscountErrorMessage } from "@dashboard/utils/errors/discounts";
 import * as React from "react";
 import { useIntl } from "react-intl";
 
@@ -75,4 +75,4 @@ const VoucherTypes = ({ data, disabled, errors, onChange }: VoucherTypesProps) =
   );
 };
 
-export default VoucherTypes;
+export { VoucherTypes };

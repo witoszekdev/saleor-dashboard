@@ -3,13 +3,13 @@ import { FormControl, FormHelperText } from "@material-ui/core";
 import { useId } from "@reach/auto-id";
 import { EditorCore, Props as ReactEditorJSProps } from "@react-editor-js/core";
 import { Box } from "@saleor/macaw-ui-next";
-import clsx from "clsx";
+import { clsx } from "clsx";
 import * as React from "react";
 
 import { tools } from "./consts";
 import { useHasRendered, useUpdateOnRerender } from "./hooks";
 import { ReactEditorJS } from "./ReactEditorJS";
-import useStyles from "./styles";
+import { useStyles } from "./styles";
 
 export type EditorJsProps = Omit<ReactEditorJSProps, "factory">;
 
@@ -133,4 +133,4 @@ const RichTextEditor = ({
 };
 
 RichTextEditor.displayName = "RichTextEditor";
-export default RichTextEditor;
+export { RichTextEditor };

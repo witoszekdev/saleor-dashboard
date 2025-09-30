@@ -1,3 +1,3 @@
 export * from "./form";
-export { default } from "./ProductCreatePage";
+export { ProductCreatePage } from "./ProductCreatePage";
 export * from "./ProductCreatePage";

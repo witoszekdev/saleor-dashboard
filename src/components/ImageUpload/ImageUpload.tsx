@@ -2,11 +2,11 @@
 import { alpha } from "@material-ui/core/styles";
 import { ImageIcon, makeStyles } from "@saleor/macaw-ui";
 import { Text, vars } from "@saleor/macaw-ui-next";
-import clsx from "clsx";
+import { clsx } from "clsx";
 import * as React from "react";
 import { FormattedMessage } from "react-intl";
 
-import Dropzone from "../Dropzone";
+import { Dropzone } from "../Dropzone";
 
 interface ImageUploadProps {
   children?: (props: { isDragActive: boolean }) => React.ReactNode;
@@ -103,4 +103,4 @@ const ImageUpload = (props: ImageUploadProps) => {
 };
 
 ImageUpload.displayName = "ImageUpload";
-export default ImageUpload;
+export { ImageUpload };

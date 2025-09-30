@@ -14,7 +14,7 @@ import {
   TECHNICAL_HELP_CTA_URL,
 } from "@dashboard/links";
 import { Button, HelpIcon, Paragraph, sprinkles } from "@saleor/macaw-ui-next";
-import SVG from "react-inlinesvg";
+import { InlineSVG as SVG } from "react-inlinesvg";
 import { FormattedMessage, IntlShape } from "react-intl";
 
 import { WelcomePageInfoTileProps } from "./WelcomePageInfoTile";

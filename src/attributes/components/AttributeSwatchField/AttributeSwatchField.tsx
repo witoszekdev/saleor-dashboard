@@ -1,7 +1,7 @@
 import { inputTypeMessages } from "@dashboard/attributes/components/AttributeDetails/messages";
 import { AttributeValueEditDialogFormData } from "@dashboard/attributes/utils/data";
 import { ColorPicker, ColorPickerProps } from "@dashboard/components/ColorPicker";
-import FileUploadField from "@dashboard/components/FileUploadField";
+import { FileUploadField } from "@dashboard/components/FileUploadField";
 import { SimpleRadioGroupField } from "@dashboard/components/SimpleRadioGroupField";
 import { UseFormResult } from "@dashboard/hooks/useForm";
 import { Box, Skeleton } from "@saleor/macaw-ui-next";
@@ -99,4 +99,4 @@ const AttributeSwatchField = ({
 };
 
 AttributeSwatchField.displayName = "AttributeSwatchField";
-export default AttributeSwatchField;
+export { AttributeSwatchField };

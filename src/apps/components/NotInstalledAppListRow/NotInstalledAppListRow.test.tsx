@@ -1,10 +1,10 @@
 import * as context from "@dashboard/apps/context";
 import { failedAppInProgress, pendingAppInProgress } from "@dashboard/apps/fixtures";
-import Wrapper from "@test/wrapper";
+import { Wrapper } from "@test/wrapper";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
-import NotInstalledAppListRow from "./NotInstalledAppListRow";
+import { NotInstalledAppListRow } from "./NotInstalledAppListRow";
 
 jest.mock("@dashboard/apps/context", () => ({
   useAppListContext: jest.fn(() => ({

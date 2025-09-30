@@ -1,9 +1,9 @@
-import BackButton from "@dashboard/components/BackButton";
+import { BackButton } from "@dashboard/components/BackButton";
 import { ConfirmButton, ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import { DashboardModal } from "@dashboard/components/Modal";
 import { OrderErrorFragment } from "@dashboard/graphql";
-import useModalDialogErrors from "@dashboard/hooks/useModalDialogErrors";
-import getOrderErrorMessage from "@dashboard/utils/errors/order";
+import { useModalDialogErrors } from "@dashboard/hooks/useModalDialogErrors";
+import { getOrderErrorMessage } from "@dashboard/utils/errors/order";
 import { Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 
@@ -64,4 +64,4 @@ export const OrderCancelDialog = (props: OrderCancelDialogProps) => {
   );
 };
 OrderCancelDialog.displayName = "OrderCancelDialog";
-export default OrderCancelDialog;
+export { OrderCancelDialog };

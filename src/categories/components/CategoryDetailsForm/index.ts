@@ -1,2 +1,2 @@
-export { default } from "./CategoryDetailsForm";
+export { CategoryDetailsForm } from "./CategoryDetailsForm";
 export * from "./CategoryDetailsForm";

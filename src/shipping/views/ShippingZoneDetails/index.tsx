@@ -1,7 +1,7 @@
 // @ts-strict-ignore
-import ActionDialog from "@dashboard/components/ActionDialog";
-import useAppChannel from "@dashboard/components/AppLayout/AppChannelContext";
-import NotFoundPage from "@dashboard/components/NotFoundPage";
+import { ActionDialog } from "@dashboard/components/ActionDialog";
+import { useAppChannel } from "@dashboard/components/AppLayout/AppChannelContext";
+import { NotFoundPage } from "@dashboard/components/NotFoundPage";
 import { DEFAULT_INITIAL_SEARCH_DATA, PAGINATE_BY } from "@dashboard/config";
 import {
   CountryCode,
@@ -17,9 +17,9 @@ import {
   useWarehouseCreateMutation,
 } from "@dashboard/graphql";
 import { useLocalPaginationState } from "@dashboard/hooks/useLocalPaginator";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useNotifier from "@dashboard/hooks/useNotifier";
-import useShop from "@dashboard/hooks/useShop";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
+import { useNotifier } from "@dashboard/hooks/useNotifier";
+import { useShop } from "@dashboard/hooks/useShop";
 import { commonMessages } from "@dashboard/intl";
 import {
   extractMutationErrors,
@@ -27,18 +27,18 @@ import {
   getById,
   getStringOrPlaceholder,
 } from "@dashboard/misc";
-import useWarehouseSearch from "@dashboard/searches/useWarehouseSearch";
-import DeleteShippingRateDialog from "@dashboard/shipping/components/DeleteShippingRateDialog";
-import ShippingZoneAddWarehouseDialog from "@dashboard/shipping/components/ShippingZoneAddWarehouseDialog";
-import ShippingZoneCountriesAssignDialog from "@dashboard/shipping/components/ShippingZoneCountriesAssignDialog";
+import { UseWarehouseSearch as useWarehouseSearch } from "@dashboard/searches/useWarehouseSearch";
+import { DeleteShippingRateDialog } from "@dashboard/shipping/components/DeleteShippingRateDialog";
+import { ShippingZoneAddWarehouseDialog } from "@dashboard/shipping/components/ShippingZoneAddWarehouseDialog";
+import { ShippingZoneCountriesAssignDialog } from "@dashboard/shipping/components/ShippingZoneCountriesAssignDialog";
 import { arrayDiff } from "@dashboard/utils/arrays";
-import createDialogActionHandlers from "@dashboard/utils/handlers/dialogActionHandlers";
-import createMetadataUpdateHandler from "@dashboard/utils/handlers/metadataUpdateHandler";
+import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
+import { createMetadataUpdateHandler } from "@dashboard/utils/handlers/metadataUpdateHandler";
 import { mapCountriesToCountriesCodes, mapEdgesToItems } from "@dashboard/utils/maps";
 import { diff } from "fast-array-diff";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import ShippingZoneDetailsPage from "../../components/ShippingZoneDetailsPage";
+import { ShippingZoneDetailsPage } from "../../components/ShippingZoneDetailsPage";
 import { ShippingZoneUpdateFormData } from "../../components/ShippingZoneDetailsPage/types";
 import {
   shippingRateCreateUrl,
@@ -343,4 +343,4 @@ const ShippingZoneDetails = ({ id, params }: ShippingZoneDetailsProps) => {
   );
 };
 
-export default ShippingZoneDetails;
+export { ShippingZoneDetails };

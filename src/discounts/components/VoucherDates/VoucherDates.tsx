@@ -1,10 +1,10 @@
 import { DashboardCard } from "@dashboard/components/Card";
 import { ControlledCheckbox } from "@dashboard/components/ControlledCheckbox";
-import Grid from "@dashboard/components/Grid";
+import { Grid } from "@dashboard/components/Grid";
 import { DiscountErrorFragment } from "@dashboard/graphql";
 import { commonMessages } from "@dashboard/intl";
 import { getFormErrors } from "@dashboard/utils/errors";
-import getDiscountErrorMessage from "@dashboard/utils/errors/discounts";
+import { getDiscountErrorMessage } from "@dashboard/utils/errors/discounts";
 import { TextField } from "@material-ui/core";
 import * as React from "react";
 import { useIntl } from "react-intl";
@@ -111,4 +111,4 @@ const VoucherDates = ({ data, disabled, errors, onChange }: VoucherDatesProps) =
   );
 };
 
-export default VoucherDates;
+export { VoucherDates };

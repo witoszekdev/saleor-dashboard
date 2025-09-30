@@ -29,12 +29,12 @@ import {
 import { DiscountCreate } from "./views/DiscountCreate";
 import { DiscountDetails } from "./views/DiscountDetails";
 import { DiscountList } from "./views/DiscountList";
-import SaleCreateViewComponent from "./views/SaleCreate/SaleCreate";
-import SaleDetailsViewComponent from "./views/SaleDetails";
-import SaleListViewComponent from "./views/SaleList";
-import VoucherCreateViewComponent from "./views/VoucherCreate";
-import VoucherDetailsViewComponent from "./views/VoucherDetails";
-import VoucherListViewComponent from "./views/VoucherList";
+import { SaleCreateView as SaleCreateViewComponent } from "./views/SaleCreate/SaleCreate";
+import { SaleDetails as SaleDetailsViewComponent } from "./views/SaleDetails";
+import { SaleList as SaleListViewComponent } from "./views/SaleList";
+import { VoucherCreateView as VoucherCreateViewComponent } from "./views/VoucherCreate";
+import { VoucherDetails as VoucherDetailsViewComponent } from "./views/VoucherDetails";
+import { VoucherList as VoucherListViewComponent } from "./views/VoucherList";
 
 const SaleListView = () => {
   const qs = parseQs(location.search.substr(1)) as any;
@@ -120,4 +120,4 @@ const DiscountSection = () => {
   );
 };
 
-export default DiscountSection;
+export { DiscountSection };

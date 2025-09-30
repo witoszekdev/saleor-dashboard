@@ -8,4 +8,4 @@ const useGiftCardDetails = (): GiftCardDetailsConsumerProps => {
   return giftCardDetailsConsumerProps;
 };
 
-export default useGiftCardDetails;
+export { useGiftCardDetails };

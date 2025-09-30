@@ -1,4 +1,4 @@
-import NotFoundPage from "@dashboard/components/NotFoundPage";
+import { NotFoundPage } from "@dashboard/components/NotFoundPage";
 import { WindowTitle } from "@dashboard/components/WindowTitle";
 import {
   CountryCode,
@@ -6,9 +6,9 @@ import {
   useWarehouseDetailsQuery,
   useWarehouseUpdateMutation,
 } from "@dashboard/graphql";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useNotifier from "@dashboard/hooks/useNotifier";
-import useShop from "@dashboard/hooks/useShop";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
+import { useNotifier } from "@dashboard/hooks/useNotifier";
+import { useShop } from "@dashboard/hooks/useShop";
 import { commonMessages } from "@dashboard/intl";
 import {
   extractMutationErrors,
@@ -16,9 +16,10 @@ import {
   getMutationStatus,
   getStringOrPlaceholder,
 } from "@dashboard/misc";
-import createDialogActionHandlers from "@dashboard/utils/handlers/dialogActionHandlers";
-import WarehouseDeleteDialog from "@dashboard/warehouses/components/WarehouseDeleteDialog";
-import WarehouseDetailsPage, {
+import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
+import { WarehouseDeleteDialog } from "@dashboard/warehouses/components/WarehouseDeleteDialog";
+import {
+  WarehouseDetailsPage,
   WarehouseDetailsPageFormData,
 } from "@dashboard/warehouses/components/WarehouseDetailsPage";
 import {
@@ -128,4 +129,4 @@ const WarehouseDetails = ({ id, params }: WarehouseDetailsProps) => {
 };
 
 WarehouseDetails.displayName = "WarehouseDetails";
-export default WarehouseDetails;
+export { WarehouseDetails };

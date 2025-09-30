@@ -1,2 +1,2 @@
-export { default } from "./ProductMedia";
+export { ProductMedia } from "./ProductMedia";
 export * from "./ProductMedia";

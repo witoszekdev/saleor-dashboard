@@ -16,9 +16,9 @@ import {
   attributePath,
   AttributeUrlQueryParams,
 } from "./urls";
-import AttributeCreateComponent from "./views/AttributeCreate";
-import AttributeDetailsComponent from "./views/AttributeDetails";
-import AttributeListComponent from "./views/AttributeList";
+import { AttributeDetails as AttributeCreateComponent } from "./views/AttributeCreate";
+import { AttributeDetails as AttributeDetailsComponent } from "./views/AttributeDetails";
+import { AttributeList as AttributeListComponent } from "./views/AttributeList";
 
 const AttributeList = ({ location }: RouteComponentProps<{}>) => {
   const qs = parseQs(location.search.substr(1)) as any;
@@ -60,4 +60,4 @@ const AttributeSection = () => {
   );
 };
 
-export default AttributeSection;
+export { AttributeSection };

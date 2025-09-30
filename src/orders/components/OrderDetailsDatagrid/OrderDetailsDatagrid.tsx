@@ -1,13 +1,13 @@
 // @ts-strict-ignore
 import { ColumnPicker } from "@dashboard/components/Datagrid/ColumnPicker/ColumnPicker";
 import { useColumns } from "@dashboard/components/Datagrid/ColumnPicker/useColumns";
-import Datagrid from "@dashboard/components/Datagrid/Datagrid";
+import { Datagrid } from "@dashboard/components/Datagrid/Datagrid";
 import {
   DatagridChangeStateContext,
   useDatagridChangeState,
 } from "@dashboard/components/Datagrid/hooks/useDatagridChange";
 import { OrderLineFragment } from "@dashboard/graphql";
-import useListSettings from "@dashboard/hooks/useListSettings";
+import { useListSettings } from "@dashboard/hooks/useListSettings";
 import { productPath } from "@dashboard/products/urls";
 import { ListViews } from "@dashboard/types";
 import { ExternalLinkIcon } from "@saleor/macaw-ui-next";

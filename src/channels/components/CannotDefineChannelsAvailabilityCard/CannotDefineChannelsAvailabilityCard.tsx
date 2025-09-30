@@ -29,4 +29,4 @@ const CannotDefineChannelsAvailabilityCard = () => (
   </DashboardCard>
 );
 
-export default CannotDefineChannelsAvailabilityCard;
+export { CannotDefineChannelsAvailabilityCard };

@@ -1,2 +1,2 @@
-export { default } from "./MenuListPage";
+export { MenuListPage } from "./MenuListPage";
 export * from "./MenuListPage";

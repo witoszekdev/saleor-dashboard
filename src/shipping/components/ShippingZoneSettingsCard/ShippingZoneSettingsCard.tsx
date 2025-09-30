@@ -6,8 +6,8 @@ import { Option } from "@saleor/macaw-ui-next";
 import { defineMessages, useIntl } from "react-intl";
 
 import { ShippingZoneUpdateFormData } from "../../components/ShippingZoneDetailsPage/types";
-import ChannelsSection from "./ChannelsSection";
-import WarehousesSection from "./WarehousesSection";
+import { ChannelsSection } from "./ChannelsSection";
+import { WarehousesSection } from "./WarehousesSection";
 
 const messages = defineMessages({
   title: {
@@ -73,4 +73,4 @@ const ShippingZoneSettingsCard = ({
   );
 };
 
-export default ShippingZoneSettingsCard;
+export { ShippingZoneSettingsCard };

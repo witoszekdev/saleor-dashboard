@@ -1,5 +1,5 @@
 // @ts-strict-ignore
-import useForm, { SubmitPromise, UseFormResult } from "@dashboard/hooks/useForm";
+import { SubmitPromise, useForm, UseFormResult } from "@dashboard/hooks/useForm";
 import * as React from "react";
 
 import { FormId } from "./types";
@@ -66,4 +66,4 @@ function Form<TData, Terrors>({
 }
 Form.displayName = "Form";
 
-export default Form;
+export { Form };

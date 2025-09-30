@@ -65,4 +65,4 @@ function createMetadataCreateHandler<T extends MetadataFormData, TError>(
   };
 }
 
-export default createMetadataCreateHandler;
+export { createMetadataCreateHandler };

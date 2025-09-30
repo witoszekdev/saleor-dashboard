@@ -15,7 +15,7 @@ import { AvailableColumn } from "../types";
 import { ColumnPickerCategories } from "./ColumnPickerCategories";
 import { ColumnPickerDynamicColumns } from "./ColumnPickerDynamicColumns";
 import { ColumnPickerStaticColumns } from "./ColumnPickerStaticColumns";
-import messages from "./messages";
+import { messages } from "./messages";
 import { ColumnCategory } from "./useColumns";
 
 interface ColumnPickerProps {

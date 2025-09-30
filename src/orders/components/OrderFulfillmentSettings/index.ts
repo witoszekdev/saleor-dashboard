@@ -1,2 +1,2 @@
-export { default } from "./OrderFulfillmentSettings";
+export { OrderFulfillmentSettings } from "./OrderFulfillmentSettings";
 export * from "./OrderFulfillmentSettings";

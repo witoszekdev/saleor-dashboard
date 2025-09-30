@@ -1,5 +1,5 @@
 import { AppPaths } from "@dashboard/apps/urls";
-import Link from "@dashboard/components/Link";
+import { Link } from "@dashboard/components/Link";
 import { AppListItemFragment } from "@dashboard/graphql";
 import { DisabledIcon } from "@dashboard/icons/Disabled";
 import { Box, Text, Tooltip } from "@saleor/macaw-ui-next";

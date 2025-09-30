@@ -28,4 +28,4 @@ const IconButtonTableCell = (props: IconButtonTableCellProps) => {
 };
 
 IconButtonTableCell.displayName = "IconButtonTableCell";
-export default IconButtonTableCell;
+export { IconButtonTableCell };

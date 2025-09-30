@@ -4,15 +4,16 @@ import { createChannelsChangeHandler } from "@dashboard/collections/utils";
 import { COLLECTION_CREATE_FORM_ID } from "@dashboard/collections/views/consts";
 import { useExitFormDialog } from "@dashboard/components/Form/useExitFormDialog";
 import { MetadataFormData } from "@dashboard/components/Metadata";
-import useForm, {
+import {
   CommonUseFormResultWithHandlers,
   FormChange,
   SubmitPromise,
+  useForm,
 } from "@dashboard/hooks/useForm";
-import useHandleFormSubmit from "@dashboard/hooks/useHandleFormSubmit";
-import useMetadataChangeTrigger from "@dashboard/utils/metadata/useMetadataChangeTrigger";
+import { useHandleFormSubmit } from "@dashboard/hooks/useHandleFormSubmit";
+import { useMetadataChangeTrigger } from "@dashboard/utils/metadata/useMetadataChangeTrigger";
 import { RichTextContext, RichTextContextValues } from "@dashboard/utils/richText/context";
-import useRichText from "@dashboard/utils/richText/useRichText";
+import { useRichText } from "@dashboard/utils/richText/useRichText";
 import { OutputData } from "@editorjs/editorjs";
 import { useEffect } from "react";
 import * as React from "react";
@@ -151,4 +152,4 @@ const CollectionCreateForm = ({
 };
 
 CollectionCreateForm.displayName = "CollectionCreateForm";
-export default CollectionCreateForm;
+export { CollectionCreateForm };

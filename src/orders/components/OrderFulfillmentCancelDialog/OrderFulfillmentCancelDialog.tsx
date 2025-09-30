@@ -1,13 +1,13 @@
 // @ts-strict-ignore
-import BackButton from "@dashboard/components/BackButton";
+import { BackButton } from "@dashboard/components/BackButton";
 import { Combobox } from "@dashboard/components/Combobox";
 import { ConfirmButton, ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import Form from "@dashboard/components/Form";
+import { Form } from "@dashboard/components/Form";
 import { DashboardModal } from "@dashboard/components/Modal";
 import { FulfillmentStatus, OrderErrorFragment, WarehouseFragment } from "@dashboard/graphql";
 import { buttonMessages } from "@dashboard/intl";
-import getOrderErrorMessage from "@dashboard/utils/errors/order";
-import createSingleAutocompleteSelectHandler from "@dashboard/utils/handlers/singleAutocompleteSelectChangeHandler";
+import { getOrderErrorMessage } from "@dashboard/utils/errors/order";
+import { createSingleAutocompleteSelectHandler } from "@dashboard/utils/handlers/singleAutocompleteSelectChangeHandler";
 import { makeStyles } from "@saleor/macaw-ui";
 import { Text } from "@saleor/macaw-ui-next";
 import { useState } from "react";
@@ -137,4 +137,4 @@ const OrderFulfillmentCancelDialog = (props: OrderFulfillmentCancelDialogProps) 
 };
 
 OrderFulfillmentCancelDialog.displayName = "OrderFulfillmentCancelDialog";
-export default OrderFulfillmentCancelDialog;
+export { OrderFulfillmentCancelDialog };

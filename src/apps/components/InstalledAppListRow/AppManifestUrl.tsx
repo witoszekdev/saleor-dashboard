@@ -1,5 +1,5 @@
 import { Box, CopyIcon, Text, Tooltip } from "@saleor/macaw-ui-next";
-import clsx from "clsx";
+import { clsx } from "clsx";
 import { useState } from "react";
 import { FormattedMessage } from "react-intl";
 

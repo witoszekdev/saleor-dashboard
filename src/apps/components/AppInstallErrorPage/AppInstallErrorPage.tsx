@@ -1,10 +1,10 @@
 import errorImg from "@assets/images/app-install-error.svg";
 import { Box, Button, sprinkles, Text } from "@saleor/macaw-ui-next";
 import { PropsWithChildren } from "react";
-import SVG from "react-inlinesvg";
+import { InlineSVG as SVG } from "react-inlinesvg";
 import { FormattedMessage } from "react-intl";
 
-import messages from "./messages";
+import { Messages as messages } from "./messages";
 
 interface AppInstallErrorPageProps {
   onBack: () => void;

@@ -1,8 +1,8 @@
 import { Button } from "@dashboard/components/Button";
 import { DashboardCard } from "@dashboard/components/Card";
-import Hr from "@dashboard/components/Hr";
-import ImageUpload from "@dashboard/components/ImageUpload";
-import MediaTile from "@dashboard/components/MediaTile";
+import { Hr } from "@dashboard/components/Hr";
+import { ImageUpload } from "@dashboard/components/ImageUpload";
+import { MediaTile } from "@dashboard/components/MediaTile";
 import { CategoryDetailsFragment } from "@dashboard/graphql";
 import { commonMessages } from "@dashboard/intl";
 import { TextField } from "@material-ui/core";
@@ -120,4 +120,4 @@ const CategoryBackground = (props: CategoryBackgroundProps) => {
 };
 
 CategoryBackground.displayName = "CategoryBackground";
-export default CategoryBackground;
+export { CategoryBackground };

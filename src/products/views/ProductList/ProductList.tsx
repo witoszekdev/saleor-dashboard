@@ -1,9 +1,9 @@
 // @ts-strict-ignore
-import ActionDialog from "@dashboard/components/ActionDialog";
-import useAppChannel from "@dashboard/components/AppLayout/AppChannelContext";
+import { ActionDialog } from "@dashboard/components/ActionDialog";
+import { useAppChannel } from "@dashboard/components/AppLayout/AppChannelContext";
 import { useConditionalFilterContext } from "@dashboard/components/ConditionalFilter/context";
-import DeleteFilterTabDialog from "@dashboard/components/DeleteFilterTabDialog";
-import SaveFilterTabDialog from "@dashboard/components/SaveFilterTabDialog";
+import { DeleteFilterTabDialog } from "@dashboard/components/DeleteFilterTabDialog";
+import { SaveFilterTabDialog } from "@dashboard/components/SaveFilterTabDialog";
 import { useShopLimitsQuery } from "@dashboard/components/Shop/queries";
 import {
   DEFAULT_INITIAL_PAGINATION_DATA,
@@ -22,25 +22,26 @@ import {
   useProductListQuery,
   useWarehouseListQuery,
 } from "@dashboard/graphql";
-import useBackgroundTask from "@dashboard/hooks/useBackgroundTask";
+import { useBackgroundTask } from "@dashboard/hooks/useBackgroundTask";
 import { useFilterHandlers } from "@dashboard/hooks/useFilterHandlers";
 import { useFilterPresets } from "@dashboard/hooks/useFilterPresets";
-import useListSettings from "@dashboard/hooks/useListSettings";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useNotifier from "@dashboard/hooks/useNotifier";
+import { useListSettings } from "@dashboard/hooks/useListSettings";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
+import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { usePaginationReset } from "@dashboard/hooks/usePaginationReset";
-import usePaginator, {
+import {
   createPaginationState,
   PaginatorContext,
+  usePaginator,
 } from "@dashboard/hooks/usePaginator";
 import { useRowSelection } from "@dashboard/hooks/useRowSelection";
 import { commonMessages } from "@dashboard/intl";
-import ProductExportDialog from "@dashboard/products/components/ProductExportDialog";
+import { ProductExportDialog } from "@dashboard/products/components/ProductExportDialog";
 import {
   getAttributeIdFromColumnValue,
   isAttributeColumnValue,
 } from "@dashboard/products/components/ProductListPage/utils";
-import ProductTypePickerDialog from "@dashboard/products/components/ProductTypePickerDialog";
+import { ProductTypePickerDialog } from "@dashboard/products/components/ProductTypePickerDialog";
 import {
   productAddUrl,
   productListUrl,
@@ -48,17 +49,17 @@ import {
   ProductListUrlQueryParams,
   ProductListUrlSortField,
 } from "@dashboard/products/urls";
-import useAttributeSearch from "@dashboard/searches/useAttributeSearch";
-import useProductTypeSearch from "@dashboard/searches/useProductTypeSearch";
+import { UseAttributeSearch as useAttributeSearch } from "@dashboard/searches/useAttributeSearch";
+import { UseProductTypeSearch as useProductTypeSearch } from "@dashboard/searches/useProductTypeSearch";
 import { ListViews } from "@dashboard/types";
-import createDialogActionHandlers from "@dashboard/utils/handlers/dialogActionHandlers";
+import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
 import { mapEdgesToItems, mapNodeToChoice } from "@dashboard/utils/maps";
 import { getSortUrlVariables } from "@dashboard/utils/sort";
 import isEqual from "lodash/isEqual";
 import { useCallback, useEffect, useMemo } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import ProductListPage, { ProductFilterKeys } from "../../components/ProductListPage";
+import { ProductFilterKeys, ProductListPage } from "../../components/ProductListPage";
 import { ProductsExportParameters } from "./export";
 import { getFilterQueryParam, getFilterVariables, storageUtils } from "./filters";
 import { DEFAULT_SORT_KEY, getSortQueryVariables } from "./sort";
@@ -409,4 +410,4 @@ const ProductList = ({ params }: ProductListProps) => {
   );
 };
 
-export default ProductList;
+export { ProductList };

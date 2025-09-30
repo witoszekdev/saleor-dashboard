@@ -1,7 +1,7 @@
 import { Route } from "@dashboard/components/Router";
 import { ExtensionsPaths } from "@dashboard/extensions/urls";
 import { useFlag } from "@dashboard/featureFlags";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { sectionNames } from "@dashboard/intl";
 import { asSortParams } from "@dashboard/utils/sort";
 import { parse as parseQs } from "qs";
@@ -16,8 +16,8 @@ import {
   pluginPath,
   PluginUrlQueryParams,
 } from "./urls";
-import PluginsListComponent from "./views/PluginList";
-import PluginsDetailsComponent from "./views/PluginsDetails";
+import { PluginsList as PluginsListComponent } from "./views/PluginList";
+import { PluginsDetails as PluginsDetailsComponent } from "./views/PluginsDetails";
 
 const PluginList = ({ location }: RouteComponentProps<any>) => {
   const qs = parseQs(location.search.substr(1)) as any;
@@ -53,4 +53,4 @@ const Component = () => {
   );
 };
 
-export default Component;
+export { Component };

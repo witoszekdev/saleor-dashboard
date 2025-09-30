@@ -1,2 +1,2 @@
 export * from "./OverflowTooltip";
-export { default } from "./OverflowTooltip";
+export { OverflowTooltip } from "./OverflowTooltip";

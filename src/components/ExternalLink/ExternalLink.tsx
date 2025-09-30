@@ -41,7 +41,7 @@ const ExternalLink = (props: ExternalLinkProps) => {
 };
 
 ExternalLink.displayName = "ExternalLink";
-export default ExternalLink;
+export { ExternalLink };
 
 export const ExternalLinkNext = (
   props: TextProps & Omit<HTMLAttributes<HTMLAnchorElement>, "children">,

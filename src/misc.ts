@@ -16,7 +16,7 @@ import {
   UserError,
 } from "@dashboard/types";
 import { DefaultTheme, ThemeTokensValues } from "@saleor/macaw-ui-next";
-import Fuse from "fuse.js";
+import { Fuse } from "fuse.js";
 import moment from "moment-timezone";
 import { IntlShape } from "react-intl";
 

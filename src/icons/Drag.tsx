@@ -31,4 +31,4 @@ const Drag = createSvgIcon(
   "ArrowSort",
 );
 
-export default Drag;
+export { Drag };

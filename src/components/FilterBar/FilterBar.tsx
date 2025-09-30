@@ -3,11 +3,11 @@ import { makeStyles } from "@saleor/macaw-ui";
 import { FormattedMessage, useIntl } from "react-intl";
 
 import { FilterProps } from "../../types";
-import Filter from "../Filter";
+import { Filter } from "../Filter";
 import { FilterErrorMessages, IFilter } from "../Filter/types";
 import { SearchBarProps } from "../SearchBar";
-import SearchInput from "../SearchBar/SearchInput";
-import FilterTabs, { FilterTab } from "../TableFilter";
+import { SearchInput } from "../SearchBar/SearchInput";
+import { FilterTab, FilterTabs } from "../TableFilter";
 
 interface FilterBarProps<TKeys extends string = string> extends FilterProps<TKeys>, SearchBarProps {
   errorMessages?: FilterErrorMessages<TKeys>;
@@ -104,4 +104,4 @@ const FilterBar = (props: FilterBarProps) => {
 };
 
 FilterBar.displayName = "FilterBar";
-export default FilterBar;
+export { FilterBar };

@@ -3,13 +3,13 @@ import { EmptyInstalledList } from "@dashboard/extensions/components/EmptyListSt
 import { ExtensionsPaths } from "@dashboard/extensions/urls";
 import { useFlag } from "@dashboard/featureFlags";
 import { useHasManagedAppsPermission } from "@dashboard/hooks/useHasManagedAppsPermission";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { ListProps } from "@dashboard/types";
 import { Box, List, Skeleton, Text } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
 
-import InstalledAppListRow from "../InstalledAppListRow";
-import NotInstalledAppListRow from "../NotInstalledAppListRow";
+import { InstalledAppListRow } from "../InstalledAppListRow";
+import { NotInstalledAppListRow } from "../NotInstalledAppListRow";
 import { messages } from "./messages";
 import { appsAreLoading, hasEmptyAppList } from "./utils";
 
@@ -68,4 +68,4 @@ const InstalledAppList = ({ appList, appInstallationList }: InstalledAppListProp
   );
 };
 
-export default InstalledAppList;
+export { InstalledAppList };

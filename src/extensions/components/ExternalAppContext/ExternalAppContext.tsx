@@ -3,8 +3,8 @@ import { APP_VERSION } from "@dashboard/config";
 import { ExtensionsUrls } from "@dashboard/extensions/urls";
 import { AppDialog } from "@dashboard/extensions/views/ViewManifestExtension/components/AppDialog";
 import { AppExtensionTargetEnum } from "@dashboard/graphql";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useShop from "@dashboard/hooks/useShop";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
+import { useShop } from "@dashboard/hooks/useShop";
 import { PropsWithChildren, useContext, useState } from "react";
 
 import { AppData, ExternalAppContext } from "./context";

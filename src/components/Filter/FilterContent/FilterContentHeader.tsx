@@ -56,4 +56,4 @@ const FilterContentHeader = ({ onClear }: FilterContentHeaderProps) => {
   );
 };
 
-export default FilterContentHeader;
+export { FilterContentHeader };

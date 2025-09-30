@@ -1,7 +1,7 @@
 import { OutputData } from "@editorjs/editorjs";
 import { renderHook } from "@testing-library/react-hooks";
 
-import useRichText from "./useRichText";
+import { useRichText } from "./useRichText";
 
 type Fixtures = Record<"short", OutputData>;
 

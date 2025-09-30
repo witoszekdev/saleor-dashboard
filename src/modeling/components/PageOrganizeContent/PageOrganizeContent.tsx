@@ -5,7 +5,7 @@ import { PageDetailsFragment, PageErrorFragment } from "@dashboard/graphql";
 import { FormChange } from "@dashboard/hooks/useForm";
 import { FetchMoreProps } from "@dashboard/types";
 import { getFormErrors } from "@dashboard/utils/errors";
-import getPageErrorMessage from "@dashboard/utils/errors/page";
+import { getPageErrorMessage } from "@dashboard/utils/errors/page";
 import { Option, Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 
@@ -87,4 +87,4 @@ const PageOrganizeContent = (props: PageOrganizeContentProps) => {
 };
 
 PageOrganizeContent.displayName = "PageOrganizeContent";
-export default PageOrganizeContent;
+export { PageOrganizeContent };

@@ -1,8 +1,8 @@
 // @ts-strict-ignore
-import PriceField from "@dashboard/components/PriceField";
+import { PriceField } from "@dashboard/components/PriceField";
 import { OrderErrorFragment } from "@dashboard/graphql";
 import { getFormErrors } from "@dashboard/utils/errors";
-import getOrderErrorMessage from "@dashboard/utils/errors/order";
+import { getOrderErrorMessage } from "@dashboard/utils/errors/order";
 import { IMoney } from "@dashboard/utils/intl";
 import { makeStyles } from "@saleor/macaw-ui";
 import * as React from "react";
@@ -104,4 +104,4 @@ const RefundAmountInput = (props: RefundAmountInputProps) => {
   );
 };
 
-export default RefundAmountInput;
+export { RefundAmountInput };

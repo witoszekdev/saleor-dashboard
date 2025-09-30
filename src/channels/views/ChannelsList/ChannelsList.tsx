@@ -6,14 +6,14 @@ import {
   useChannelDeleteMutation,
   useChannelsQuery,
 } from "@dashboard/graphql";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useNotifier from "@dashboard/hooks/useNotifier";
-import getChannelsErrorMessage from "@dashboard/utils/errors/channels";
-import createDialogActionHandlers from "@dashboard/utils/handlers/dialogActionHandlers";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
+import { useNotifier } from "@dashboard/hooks/useNotifier";
+import { getChannelsErrorMessage } from "@dashboard/utils/errors/channels";
+import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
 import { useIntl } from "react-intl";
 
-import ChannelDeleteDialog from "../../components/ChannelDeleteDialog";
-import ChannelsListPage from "../../pages/ChannelsListPage";
+import { ChannelDeleteDialog } from "../../components/ChannelDeleteDialog";
+import { ChannelsListPage } from "../../pages/ChannelsListPage";
 import { channelsListUrl, ChannelsListUrlDialog, ChannelsListUrlQueryParams } from "../../urls";
 
 interface ChannelsListProps {
@@ -103,4 +103,4 @@ const ChannelsList = ({ params }: ChannelsListProps) => {
 };
 
 ChannelsList.displayName = "ChannelsList";
-export default ChannelsList;
+export { ChannelsList };

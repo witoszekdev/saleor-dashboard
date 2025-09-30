@@ -6,14 +6,15 @@ import { useCommonStyles } from "@dashboard/components/Filter/FilterContent/util
 import { FormControlLabel, Radio, TextField } from "@material-ui/core";
 import { makeStyles } from "@saleor/macaw-ui";
 import { Option, Skeleton } from "@saleor/macaw-ui-next";
-import clsx from "clsx";
+import { clsx } from "clsx";
 import * as React from "react";
 
-import FilterAutocompleteField, {
+import {
   FilterAutocompleteDisplayValues,
+  FilterAutocompleteField,
 } from "../FilterAutocompleteField";
 import { FilterKeyValueField } from "../FilterKeyValueField";
-import FilterOptionField from "../FilterOptionField";
+import { FilterOptionField } from "../FilterOptionField";
 import { FilterReducerAction } from "../reducer";
 import {
   FieldType,
@@ -165,4 +166,4 @@ const FilterContentBody = <K extends string = string>({
   );
 };
 
-export default FilterContentBody;
+export { FilterContentBody };

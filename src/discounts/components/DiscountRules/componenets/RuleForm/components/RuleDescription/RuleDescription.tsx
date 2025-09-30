@@ -1,4 +1,4 @@
-import RichTextEditor from "@dashboard/components/RichTextEditor";
+import { RichTextEditor } from "@dashboard/components/RichTextEditor";
 import { RichTextEditorLoading } from "@dashboard/components/RichTextEditor/RichTextEditorLoading";
 import { useDiscountRulesContext } from "@dashboard/discounts/components/DiscountRules/context";
 import { Rule } from "@dashboard/discounts/models";

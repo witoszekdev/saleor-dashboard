@@ -4,14 +4,14 @@ import { LimitsInfo } from "@dashboard/components/AppLayout/LimitsInfo";
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
 import { DashboardCard } from "@dashboard/components/Card";
 import { ListPageLayout } from "@dashboard/components/Layouts";
-import LimitReachedAlert from "@dashboard/components/LimitReachedAlert";
-import ResponsiveTable from "@dashboard/components/ResponsiveTable";
+import { LimitReachedAlert } from "@dashboard/components/LimitReachedAlert";
+import { ResponsiveTable } from "@dashboard/components/ResponsiveTable";
 import { TableButtonWrapper } from "@dashboard/components/TableButtonWrapper/TableButtonWrapper";
-import TableCellHeader from "@dashboard/components/TableCellHeader";
-import TableRowLink from "@dashboard/components/TableRowLink";
+import { TableCellHeader } from "@dashboard/components/TableCellHeader";
+import { TableRowLink } from "@dashboard/components/TableRowLink";
 import { configurationMenuUrl } from "@dashboard/configuration";
 import { ChannelDetailsFragment, RefreshLimitsQuery } from "@dashboard/graphql";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { sectionNames } from "@dashboard/intl";
 import { renderCollection, stopPropagation } from "@dashboard/misc";
 import { hasLimits, isLimitReached } from "@dashboard/utils/limits";
@@ -150,4 +150,4 @@ const ChannelsListPage = ({ channelsList, limits, onRemove }: ChannelsListPagePr
 };
 
 ChannelsListPage.displayName = "ChannelsListPage";
-export default ChannelsListPage;
+export { ChannelsListPage };

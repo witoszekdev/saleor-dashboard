@@ -1,10 +1,10 @@
 import { DashboardCard } from "@dashboard/components/Card";
-import ControlledCheckbox from "@dashboard/components/ControlledCheckbox";
-import FormSpacer from "@dashboard/components/FormSpacer";
-import Hr from "@dashboard/components/Hr";
+import { ControlledCheckbox } from "@dashboard/components/ControlledCheckbox";
+import { FormSpacer } from "@dashboard/components/FormSpacer";
+import { Hr } from "@dashboard/components/Hr";
 import { PluginErrorCode, PluginErrorFragment } from "@dashboard/graphql";
 import { commonMessages } from "@dashboard/intl";
-import getPluginErrorMessage from "@dashboard/utils/errors/plugins";
+import { getPluginErrorMessage } from "@dashboard/utils/errors/plugins";
 import { Box, Text } from "@saleor/macaw-ui-next";
 import * as React from "react";
 import { FormattedMessage, useIntl } from "react-intl";
@@ -86,4 +86,4 @@ const PluginInfo = ({ data, description, errors, name, onChange }: PluginInfoPro
 };
 
 PluginInfo.displayName = "PluginInfo";
-export default PluginInfo;
+export { PluginInfo };

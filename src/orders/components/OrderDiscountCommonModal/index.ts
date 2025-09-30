@@ -1,2 +1,2 @@
-export { default } from "./OrderDiscountCommonModal";
+export { OrderDiscountCommonModal } from "./OrderDiscountCommonModal";
 export * from "./OrderDiscountCommonModal";

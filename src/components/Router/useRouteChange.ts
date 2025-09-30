@@ -1,6 +1,6 @@
 import { Location, UnregisterCallback } from "history";
 import { useRef } from "react";
-import useRouter from "use-react-router";
+import { useRouter } from "use-react-router";
 
 const compareLocations = (a: Location, b: Location) => {
   return a.pathname === b.pathname && a.search === b.search;

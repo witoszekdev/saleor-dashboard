@@ -1,6 +1,6 @@
 import { DashboardCard } from "@dashboard/components/Card";
 import { Divider } from "@dashboard/components/Divider";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { sectionNames } from "@dashboard/intl";
 import { productVariantAddUrl } from "@dashboard/products/urls";
 import { ReorderAction } from "@dashboard/types";
@@ -100,4 +100,4 @@ const ProductVariantNavigation = (props: ProductVariantNavigationProps) => {
 };
 
 ProductVariantNavigation.displayName = "ProductVariantNavigation";
-export default ProductVariantNavigation;
+export { ProductVariantNavigation };

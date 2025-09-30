@@ -1,7 +1,7 @@
 import { render } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
-import ExitFormDialog from "./ExitFormDialog";
+import { ExitFormDialog } from "./ExitFormDialog";
 
 jest.mock("react-intl", () => ({
   useIntl: jest.fn(() => ({

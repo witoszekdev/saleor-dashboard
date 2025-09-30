@@ -1,2 +1,2 @@
-export { default } from "./AssignProductDialog";
+export { AssignProductDialog } from "./AssignProductDialog";
 export * from "./AssignProductDialog";

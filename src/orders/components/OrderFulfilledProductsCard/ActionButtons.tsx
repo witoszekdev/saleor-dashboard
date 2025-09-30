@@ -1,6 +1,6 @@
 // @ts-strict-ignore
 import { FulfillmentStatus } from "@dashboard/graphql";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { buttonMessages, commonMessages } from "@dashboard/intl";
 import { orderPaymentRefundUrl } from "@dashboard/orders/urls";
 import { CardActions } from "@material-ui/core";
@@ -8,7 +8,7 @@ import { Button, Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage } from "react-intl";
 
 import { actionButtonsMessages } from "./messages";
-import useStyles from "./styles";
+import { useStyles } from "./styles";
 
 interface AcionButtonsProps {
   orderId: string;
@@ -90,4 +90,4 @@ const ActionButtons = ({
   );
 };
 
-export default ActionButtons;
+export { ActionButtons };

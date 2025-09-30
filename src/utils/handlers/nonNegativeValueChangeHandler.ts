@@ -8,4 +8,4 @@ function createNonNegativeValueChangeHandler(change: FormChange) {
   };
 }
 
-export default createNonNegativeValueChangeHandler;
+export { createNonNegativeValueChangeHandler };

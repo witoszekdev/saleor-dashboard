@@ -1,8 +1,8 @@
-import ActionDialog from "@dashboard/components/ActionDialog";
+import { ActionDialog } from "@dashboard/components/ActionDialog";
 import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import messages from "./messages";
+import { messages } from "./messages";
 
 interface AttributeUnassignDialogProps {
   title: string;
@@ -46,4 +46,4 @@ const AttributeUnassignDialog = ({
 };
 
 AttributeUnassignDialog.displayName = "AttributeUnassignDialog";
-export default AttributeUnassignDialog;
+export { AttributeUnassignDialog };

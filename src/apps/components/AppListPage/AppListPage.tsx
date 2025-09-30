@@ -4,17 +4,17 @@ import { RequestExtensionsButton } from "@dashboard/extensions/components/Reques
 import { headerTitles } from "@dashboard/extensions/messages";
 import { useFlag } from "@dashboard/featureFlags";
 import { useHasManagedAppsPermission } from "@dashboard/hooks/useHasManagedAppsPermission";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { sectionNames } from "@dashboard/intl";
 import { ListProps } from "@dashboard/types";
 import { Box, Skeleton, sprinkles, Text } from "@saleor/macaw-ui-next";
 import { useCallback } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import AllAppList from "../AllAppList";
-import InstalledAppList from "../InstalledAppList";
+import { AllAppList } from "../AllAppList";
+import { InstalledAppList } from "../InstalledAppList";
 import { InstallWithManifestFormButton } from "../InstallWithManifestFormButton";
-import MarketplaceAlert from "../MarketplaceAlert";
+import { MarketplaceAlert } from "../MarketplaceAlert";
 import { messages } from "./messages";
 import { MissingAppsFooter } from "./MissingAppsFooter";
 import { useStyles } from "./styles";
@@ -158,4 +158,4 @@ const AppListPage = (props: AppListPageProps) => {
 };
 
 AppListPage.displayName = "AppListPage";
-export default AppListPage;
+export { AppListPage };

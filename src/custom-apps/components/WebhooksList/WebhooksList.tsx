@@ -1,19 +1,19 @@
 import { DashboardCard } from "@dashboard/components/Card";
 import { Pill } from "@dashboard/components/Pill";
-import ResponsiveTable from "@dashboard/components/ResponsiveTable";
+import { ResponsiveTable } from "@dashboard/components/ResponsiveTable";
 import { TableButtonWrapper } from "@dashboard/components/TableButtonWrapper/TableButtonWrapper";
-import TableCellHeader from "@dashboard/components/TableCellHeader";
-import TableRowLink from "@dashboard/components/TableRowLink";
+import { TableCellHeader } from "@dashboard/components/TableCellHeader";
+import { TableRowLink } from "@dashboard/components/TableRowLink";
 import { CustomAppUrls } from "@dashboard/custom-apps/urls";
 import { isUnnamed } from "@dashboard/custom-apps/utils";
 import { WebhookFragment } from "@dashboard/graphql";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { commonMessages, commonStatusMessages, sectionNames } from "@dashboard/intl";
 import { renderCollection, stopPropagation } from "@dashboard/misc";
 import { TableBody, TableCell, TableHead } from "@material-ui/core";
 import { DeleteIcon, IconButton } from "@saleor/macaw-ui";
 import { Button, Skeleton } from "@saleor/macaw-ui-next";
-import clsx from "clsx";
+import { clsx } from "clsx";
 import { FormattedMessage, useIntl } from "react-intl";
 
 import { messages } from "./messages";
@@ -129,4 +129,4 @@ const WebhooksList = ({ webhooks, createHref, onRemove }: WebhooksListProps) => 
 };
 
 WebhooksList.displayName = "WebhooksList";
-export default WebhooksList;
+export { WebhooksList };

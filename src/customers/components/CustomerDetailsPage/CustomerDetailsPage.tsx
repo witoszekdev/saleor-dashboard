@@ -4,34 +4,34 @@ import { TopNav } from "@dashboard/components/AppLayout/TopNav";
 import { Backlink } from "@dashboard/components/Backlink";
 import { CardSpacer } from "@dashboard/components/CardSpacer";
 import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import Form from "@dashboard/components/Form";
+import { Form } from "@dashboard/components/Form";
 import { DetailPageLayout } from "@dashboard/components/Layouts";
 import { Metadata } from "@dashboard/components/Metadata/Metadata";
 import { MetadataFormData } from "@dashboard/components/Metadata/types";
-import RequirePermissions from "@dashboard/components/RequirePermissions";
+import { RequirePermissions } from "@dashboard/components/RequirePermissions";
 import { Savebar } from "@dashboard/components/Savebar";
 import { customerAddressesUrl, customerListPath } from "@dashboard/customers/urls";
 import { extensionMountPoints } from "@dashboard/extensions/extensionMountPoints";
 import { getExtensionsItemsForCustomerDetails } from "@dashboard/extensions/getExtensionsItems";
 import { useExtensions } from "@dashboard/extensions/hooks/useExtensions";
-import CustomerGiftCardsCard from "@dashboard/giftCards/components/GiftCardCustomerCard/CustomerGiftCardsCard";
+import { CustomerGiftCardsCard } from "@dashboard/giftCards/components/GiftCardCustomerCard/CustomerGiftCardsCard";
 import { AccountErrorFragment, CustomerDetailsQuery, PermissionEnum } from "@dashboard/graphql";
 import { useBackLinkWithState } from "@dashboard/hooks/useBackLinkWithState";
 import { SubmitPromise } from "@dashboard/hooks/useForm";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { sectionNames } from "@dashboard/intl";
 import { orderListUrl } from "@dashboard/orders/urls";
 import { mapEdgesToItems, mapMetadataItemToInput } from "@dashboard/utils/maps";
-import useMetadataChangeTrigger from "@dashboard/utils/metadata/useMetadataChangeTrigger";
+import { useMetadataChangeTrigger } from "@dashboard/utils/metadata/useMetadataChangeTrigger";
 import { Divider } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
 
 import { getUserName } from "../../../misc";
-import CustomerAddresses from "../CustomerAddresses";
-import CustomerDetails from "../CustomerDetails";
-import CustomerInfo from "../CustomerInfo";
-import CustomerOrders from "../CustomerOrders";
-import CustomerStats from "../CustomerStats";
+import { CustomerAddresses } from "../CustomerAddresses";
+import { CustomerDetails } from "../CustomerDetails";
+import { CustomerInfo } from "../CustomerInfo";
+import { CustomerOrders } from "../CustomerOrders";
+import { CustomerStats } from "../CustomerStats";
 
 export interface CustomerDetailsPageFormData extends MetadataFormData {
   firstName: string;
@@ -164,4 +164,4 @@ const CustomerDetailsPage = ({
 };
 
 CustomerDetailsPage.displayName = "CustomerDetailsPage";
-export default CustomerDetailsPage;
+export { CustomerDetailsPage };

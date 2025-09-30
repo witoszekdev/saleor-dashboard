@@ -1,9 +1,9 @@
 import { channelsList } from "@dashboard/channels/fixtures";
 import { channelUsabilityData, order } from "@dashboard/orders/fixtures";
-import Wrapper from "@test/wrapper";
+import { Wrapper } from "@test/wrapper";
 import { render, screen } from "@testing-library/react";
 
-import OrderDraftAlert, { OrderDraftAlertProps } from "./OrderDraftAlert";
+import { OrderDraftAlert, OrderDraftAlertProps } from "./OrderDraftAlert";
 
 jest.mock("react-router-dom", () => ({
   Link: jest.fn(({ to, ...props }) => <a href={to} {...props} />),

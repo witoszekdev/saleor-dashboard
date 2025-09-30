@@ -1,8 +1,8 @@
 import { ChannelsAvailabilityDropdown } from "@dashboard/components/ChannelsAvailabilityDropdown";
 import { EmptyImage } from "@dashboard/components/EmptyImage";
 import { GridTable } from "@dashboard/components/GridTable";
-import Link from "@dashboard/components/Link";
-import Drag from "@dashboard/icons/Drag";
+import { Link } from "@dashboard/components/Link";
+import { Drag } from "@dashboard/icons/Drag";
 import { productUrl } from "@dashboard/products/urls";
 import { useSortable } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";

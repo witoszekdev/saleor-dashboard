@@ -21,4 +21,4 @@ const Plugins = createSvgIcon(
   "Plugins",
 );
 
-export default Plugins;
+export { Plugins };

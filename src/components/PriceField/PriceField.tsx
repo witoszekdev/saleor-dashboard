@@ -64,4 +64,4 @@ PriceField.defaultProps = {
   name: "price",
 };
 PriceField.displayName = "PriceField";
-export default PriceField;
+export { PriceField };

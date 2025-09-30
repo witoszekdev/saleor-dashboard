@@ -1,8 +1,8 @@
 import { useApolloClient } from "@apollo/client";
-import NotFoundPage from "@dashboard/components/NotFoundPage";
-import AppActivateDialog from "@dashboard/extensions/components/AppActivateDialog";
-import AppDeactivateDialog from "@dashboard/extensions/components/AppDeactivateDialog";
-import AppDeleteDialog from "@dashboard/extensions/components/AppDeleteDialog";
+import { NotFoundPage } from "@dashboard/components/NotFoundPage";
+import { AppActivateDialog } from "@dashboard/extensions/components/AppActivateDialog";
+import { AppDeactivateDialog } from "@dashboard/extensions/components/AppDeactivateDialog";
+import { AppDeleteDialog } from "@dashboard/extensions/components/AppDeleteDialog";
 import { appMessages } from "@dashboard/extensions/messages";
 import { EXTENSION_LIST_QUERY } from "@dashboard/extensions/queries";
 import {
@@ -18,10 +18,10 @@ import {
   useAppQuery,
 } from "@dashboard/graphql";
 import { useHasManagedAppsPermission } from "@dashboard/hooks/useHasManagedAppsPermission";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useNotifier from "@dashboard/hooks/useNotifier";
-import getAppErrorMessage from "@dashboard/utils/errors/app";
-import createDialogActionHandlers from "@dashboard/utils/handlers/dialogActionHandlers";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
+import { useNotifier } from "@dashboard/hooks/useNotifier";
+import { getAppErrorMessage } from "@dashboard/utils/errors/app";
+import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
 import { useIntl } from "react-intl";
 
 import { AppDetailsPage } from "./components/AppDetailsPage";

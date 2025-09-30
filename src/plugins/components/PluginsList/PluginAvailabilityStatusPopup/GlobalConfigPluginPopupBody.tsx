@@ -1,6 +1,6 @@
 // @ts-strict-ignore
 import { DashboardCard } from "@dashboard/components/Card";
-import CardSpacer from "@dashboard/components/CardSpacer";
+import { CardSpacer } from "@dashboard/components/CardSpacer";
 import { Pill } from "@dashboard/components/Pill";
 import { PluginBaseFragment } from "@dashboard/graphql";
 import { Text } from "@saleor/macaw-ui-next";
@@ -36,4 +36,4 @@ const GlobalConfigPluginPopupBody = ({ plugin }: GlobalConfigPluginPopupBodyProp
   );
 };
 
-export default GlobalConfigPluginPopupBody;
+export { GlobalConfigPluginPopupBody };

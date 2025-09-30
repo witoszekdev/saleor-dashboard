@@ -1,7 +1,7 @@
 // @ts-strict-ignore
 import { ConfirmButton, ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import { DashboardModal } from "@dashboard/components/Modal";
-import CustomerAddressChoiceCard from "@dashboard/customers/components/CustomerAddressChoiceCard";
+import { CustomerAddressChoiceCard } from "@dashboard/customers/components/CustomerAddressChoiceCard";
 import { AddressFragment, AddressTypeEnum } from "@dashboard/graphql";
 import { FormChange } from "@dashboard/hooks/useForm";
 import { buttonMessages } from "@dashboard/intl";
@@ -142,4 +142,4 @@ const OrderCustomerAddressesSearch = (props: OrderCustomerAddressesSearchProps) 
 };
 
 OrderCustomerAddressesSearch.displayName = "OrderCustomerAddressesSearch";
-export default OrderCustomerAddressesSearch;
+export { OrderCustomerAddressesSearch };

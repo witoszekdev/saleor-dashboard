@@ -6,7 +6,7 @@ import { ReactNode } from "react";
 import { ExpressionFilters } from "./components/ExpressionFilters";
 import { FiltersSelect } from "./components/FiltersSelect";
 import { LegacyFiltersPresetsAlert } from "./components/LegacyFiltersPresetsAlert";
-import SearchInput from "./components/SearchInput";
+import { SearchInput } from "./components/SearchInput";
 
 interface NewFilterProps extends SearchPageProps {
   type: "expression-filter";

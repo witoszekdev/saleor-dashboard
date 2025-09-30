@@ -59,4 +59,4 @@ const Title = (props: TitleProps) => {
   );
 };
 
-export default Title;
+export { Title };

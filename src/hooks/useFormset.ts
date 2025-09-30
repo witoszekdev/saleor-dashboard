@@ -1,7 +1,7 @@
 // @ts-strict-ignore
 import { removeAtIndex } from "@dashboard/utils/lists";
 
-import useStateFromProps from "./useStateFromProps";
+import { useStateFromProps } from "./useStateFromProps";
 
 /** @deprecated Use react-hook-form instead */
 export type FormsetChange<TValue = any> = (id: string, value: TValue) => void;
@@ -109,4 +109,4 @@ function useFormset<TData = {}, TValue = any, TMetadata = any>(
   };
 }
 
-export default useFormset;
+export { useFormset };

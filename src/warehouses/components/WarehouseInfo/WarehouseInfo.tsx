@@ -3,7 +3,7 @@ import { WarehouseErrorFragment } from "@dashboard/graphql";
 import { FormChange } from "@dashboard/hooks/useForm";
 import { commonMessages } from "@dashboard/intl";
 import { getFormErrors } from "@dashboard/utils/errors";
-import getWarehouseErrorMessage from "@dashboard/utils/errors/warehouse";
+import { getWarehouseErrorMessage } from "@dashboard/utils/errors/warehouse";
 import { TextField } from "@material-ui/core";
 import { useIntl } from "react-intl";
 
@@ -51,4 +51,4 @@ const WarehouseInfo = ({ data, disabled, errors, onChange }: WarehouseInfoProps)
 };
 
 WarehouseInfo.displayName = "WarehouseInfo";
-export default WarehouseInfo;
+export { WarehouseInfo };

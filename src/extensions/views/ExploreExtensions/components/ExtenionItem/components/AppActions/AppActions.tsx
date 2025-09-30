@@ -1,4 +1,4 @@
-import Link from "@dashboard/components/Link";
+import { Link } from "@dashboard/components/Link";
 import { messages } from "@dashboard/extensions/messages";
 import { ExtensionsUrls } from "@dashboard/extensions/urls";
 import { Box, Button, ExternalLinkIcon } from "@saleor/macaw-ui-next";

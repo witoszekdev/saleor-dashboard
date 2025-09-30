@@ -1,12 +1,12 @@
 // @ts-strict-ignore
-import strikethroughIcon from "@dashboard/icons/StrikethroughIcon";
+import { Strikethrough as strikethroughIcon } from "@dashboard/icons/StrikethroughIcon";
 import { ToolConstructable, ToolSettings } from "@editorjs/editorjs";
-import Embed from "@editorjs/embed";
-import Header from "@editorjs/header";
-import List from "@editorjs/list";
+import { Embed } from "@editorjs/embed";
+import { Header } from "@editorjs/header";
+import { List } from "@editorjs/list";
 import Paragraph from "@editorjs/paragraph";
-import Quote from "@editorjs/quote";
-import createGenericInlineTool from "editorjs-inline-tool";
+import { Quote } from "@editorjs/quote";
+import { createGenericInlineTool } from "editorjs-inline-tool";
 
 const inlineToolbar = ["link", "bold", "italic", "strikethrough"];
 

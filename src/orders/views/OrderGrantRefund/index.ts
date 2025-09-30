@@ -1,2 +1,2 @@
 export * from "./OrderGrantRefund";
-export { default } from "./OrderGrantRefund";
+export { OrderGrantRefund } from "./OrderGrantRefund";

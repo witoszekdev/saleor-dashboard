@@ -30,4 +30,4 @@ const DeleteWarningDialogConsentContent = ({
   </>
 );
 
-export default DeleteWarningDialogConsentContent;
+export { DeleteWarningDialogConsentContent };

@@ -224,4 +224,4 @@ export function useDatagridTheme(readonly?: boolean, hasHeaderClickable?: boolea
   return readonly ? readonylDatagridTheme : datagridTheme;
 }
 
-export default useStyles;
+export { useStyles };

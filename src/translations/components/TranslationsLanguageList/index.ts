@@ -1,2 +1,2 @@
-export { default } from "./TranslationsLanguageList";
+export { TranslationsLanguageList } from "./TranslationsLanguageList";
 export * from "./TranslationsLanguageList";

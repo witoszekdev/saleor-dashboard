@@ -1,2 +1,2 @@
-export { default } from "./VoucherLimits";
+export { VoucherLimits } from "./VoucherLimits";
 export * from "./VoucherLimits";

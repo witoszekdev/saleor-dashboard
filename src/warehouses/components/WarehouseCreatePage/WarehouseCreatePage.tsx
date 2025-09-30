@@ -1,24 +1,24 @@
 // @ts-strict-ignore
 import { createCountryHandler } from "@dashboard/components/AddressEdit/createCountryHandler";
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
-import CardSpacer from "@dashboard/components/CardSpacer";
-import CompanyAddressInput from "@dashboard/components/CompanyAddressInput";
+import { CardSpacer } from "@dashboard/components/CardSpacer";
+import { CompanyAddressInput } from "@dashboard/components/CompanyAddressInput";
 import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import Form from "@dashboard/components/Form";
+import { Form } from "@dashboard/components/Form";
 import { DetailPageLayout } from "@dashboard/components/Layouts";
 import { Savebar } from "@dashboard/components/Savebar";
 import { AddressTypeInput } from "@dashboard/customers/types";
 import { CountryWithCodeFragment, WarehouseErrorFragment } from "@dashboard/graphql";
-import useAddressValidation from "@dashboard/hooks/useAddressValidation";
+import { useAddressValidation } from "@dashboard/hooks/useAddressValidation";
 import { SubmitPromise } from "@dashboard/hooks/useForm";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useStateFromProps from "@dashboard/hooks/useStateFromProps";
-import createSingleAutocompleteSelectHandler from "@dashboard/utils/handlers/singleAutocompleteSelectChangeHandler";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
+import { useStateFromProps } from "@dashboard/hooks/useStateFromProps";
+import { createSingleAutocompleteSelectHandler } from "@dashboard/utils/handlers/singleAutocompleteSelectChangeHandler";
 import { mapCountriesToChoices } from "@dashboard/utils/maps";
 import { warehouseListUrl } from "@dashboard/warehouses/urls";
 import { useIntl } from "react-intl";
 
-import WarehouseInfo from "../WarehouseInfo";
+import { WarehouseInfo } from "../WarehouseInfo";
 
 export interface WarehouseCreatePageFormData extends AddressTypeInput {
   name: string;
@@ -112,4 +112,4 @@ const WarehouseCreatePage = ({
 };
 
 WarehouseCreatePage.displayName = "WarehouseCreatePage";
-export default WarehouseCreatePage;
+export { WarehouseCreatePage };

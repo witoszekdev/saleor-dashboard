@@ -1,2 +1,2 @@
-export { default } from "./VoucherCreate";
+export { VoucherCreateView } from "./VoucherCreate";
 export * from "./VoucherCreate";

@@ -12,4 +12,4 @@ const useRichTextMocked = ({
   isDirty: false,
 });
 
-export default useRichTextMocked;
+export { useRichTextMocked };

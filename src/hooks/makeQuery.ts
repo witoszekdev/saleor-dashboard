@@ -16,8 +16,8 @@ import { DocumentNode } from "graphql";
 import { useEffect } from "react";
 import { useIntl } from "react-intl";
 
-import useAppState from "./useAppState";
-import useNotifier from "./useNotifier";
+import { useAppState } from "./useAppState";
+import { useNotifier } from "./useNotifier";
 
 export { useLazyQuery } from "@apollo/client";
 
@@ -144,4 +144,4 @@ function makeQuery<TData, TVariables>(query: DocumentNode): UseQueryHook<TData, 
   return (opts: QueryHookOptions<TData, TVariables>) => useQuery<TData, TVariables>(query, opts);
 }
 
-export default makeQuery;
+export { makeQuery };

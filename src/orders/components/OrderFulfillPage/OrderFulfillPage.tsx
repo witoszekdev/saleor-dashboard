@@ -1,13 +1,13 @@
 // @ts-strict-ignore
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
 import { DashboardCard } from "@dashboard/components/Card";
-import CardSpacer from "@dashboard/components/CardSpacer";
+import { CardSpacer } from "@dashboard/components/CardSpacer";
 import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import Form from "@dashboard/components/Form";
+import { Form } from "@dashboard/components/Form";
 import { DetailPageLayout } from "@dashboard/components/Layouts";
-import ResponsiveTable from "@dashboard/components/ResponsiveTable";
+import { ResponsiveTable } from "@dashboard/components/ResponsiveTable";
 import { Savebar } from "@dashboard/components/Savebar";
-import TableRowLink from "@dashboard/components/TableRowLink";
+import { TableRowLink } from "@dashboard/components/TableRowLink";
 import {
   FulfillOrderMutation,
   OrderErrorCode,
@@ -17,11 +17,11 @@ import {
   ShopOrderSettingsFragment,
 } from "@dashboard/graphql";
 import { SubmitPromise } from "@dashboard/hooks/useForm";
-import useFormset, { FormsetData } from "@dashboard/hooks/useFormset";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { FormsetData, useFormset } from "@dashboard/hooks/useFormset";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { commonMessages } from "@dashboard/intl";
 import { renderCollection } from "@dashboard/misc";
-import OrderChangeWarehouseDialog from "@dashboard/orders/components/OrderChangeWarehouseDialog";
+import { OrderChangeWarehouseDialog } from "@dashboard/orders/components/OrderChangeWarehouseDialog";
 import {
   OrderFulfillUrlDialog,
   OrderFulfillUrlQueryParams,
@@ -35,12 +35,12 @@ import {
 } from "@dashboard/orders/utils/data";
 import { TableBody, TableCell, TableHead } from "@material-ui/core";
 import { Box, Checkbox, Input, Skeleton, Text, Tooltip } from "@saleor/macaw-ui-next";
-import clsx from "clsx";
+import { clsx } from "clsx";
 import { useEffect, useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import OrderFulfillLine from "../OrderFulfillLine/OrderFulfillLine";
-import OrderFulfillStockExceededDialog from "../OrderFulfillStockExceededDialog";
+import { OrderFulfillLine } from "../OrderFulfillLine/OrderFulfillLine";
+import { OrderFulfillStockExceededDialog } from "../OrderFulfillStockExceededDialog";
 import { messages } from "./messages";
 import { useStyles } from "./styles";
 
@@ -324,4 +324,4 @@ const OrderFulfillPage = (props: OrderFulfillPageProps) => {
 };
 
 OrderFulfillPage.displayName = "OrderFulfillPage";
-export default OrderFulfillPage;
+export { OrderFulfillPage };

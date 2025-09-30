@@ -8,4 +8,4 @@ function useAppState() {
   return stateAndDispatch;
 }
 
-export default useAppState;
+export { useAppState };

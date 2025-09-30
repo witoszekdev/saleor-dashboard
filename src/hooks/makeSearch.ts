@@ -3,8 +3,8 @@ import { QueryResult } from "@apollo/client";
 import { DocumentNode } from "graphql";
 import { useState } from "react";
 
-import makeQuery, { UseQueryResult } from "./makeQuery";
-import useDebounce from "./useDebounce";
+import { makeQuery, UseQueryResult } from "./makeQuery";
+import { useDebounce } from "./useDebounce";
 
 export interface SearchVariables {
   after?: string | null;
@@ -55,4 +55,4 @@ function makeSearch<TData, TVariables extends SearchVariables>(
   return useSearch;
 }
 
-export default makeSearch;
+export { makeSearch };

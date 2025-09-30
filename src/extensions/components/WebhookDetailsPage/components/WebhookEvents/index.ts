@@ -1,2 +1,2 @@
-export { default } from "./WebhookEvents";
+export { WebhookEvents } from "./WebhookEvents";
 export * from "./WebhookEvents";

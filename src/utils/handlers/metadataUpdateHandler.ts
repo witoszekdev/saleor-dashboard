@@ -100,4 +100,4 @@ function createMetadataUpdateHandler<TData extends MetadataFormData, TError>(
   };
 }
 
-export default createMetadataUpdateHandler;
+export { createMetadataUpdateHandler };

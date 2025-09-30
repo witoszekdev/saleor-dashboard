@@ -18,4 +18,4 @@ const VerticalSpacer = ({ spacing = 1 }: VerticalSpacerProps) => {
   return <div className={classes.container} />;
 };
 
-export default VerticalSpacer;
+export { VerticalSpacer };

@@ -1,6 +1,6 @@
 // @ts-strict-ignore
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
-import Form from "@dashboard/components/Form";
+import { Form } from "@dashboard/components/Form";
 import { Grid } from "@dashboard/components/Grid";
 import { DetailPageLayout } from "@dashboard/components/Layouts";
 import { Savebar } from "@dashboard/components/Savebar";
@@ -10,13 +10,13 @@ import {
   useGiftCardSettingsQuery,
   useGiftCardSettingsUpdateMutation,
 } from "@dashboard/graphql";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { getFormErrors } from "@dashboard/utils/errors";
 import { Box, Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 
 import { giftCardsListPath } from "../urls";
-import GiftCardExpirySettingsCard from "./GiftCardExpirySettingsCard";
+import { GiftCardExpirySettingsCard } from "./GiftCardExpirySettingsCard";
 import { giftCardExpirySettingsCard as expirySettingsMessages } from "./GiftCardExpirySettingsCard/messages";
 import { giftCardSettingsPageMessages as messages } from "./messages";
 import { GiftCardSettingsFormData } from "./types";
@@ -85,4 +85,4 @@ const GiftCardSettingsPage = () => {
   );
 };
 
-export default GiftCardSettingsPage;
+export { GiftCardSettingsPage };

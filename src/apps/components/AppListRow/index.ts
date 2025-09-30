@@ -1,3 +1,3 @@
 export * from "./AppListRow";
-export { default } from "./AppListRow";
+export { AppListRow } from "./AppListRow";
 export * from "./AppLogo";

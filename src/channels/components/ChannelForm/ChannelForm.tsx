@@ -5,7 +5,7 @@ import {
 } from "@dashboard/channels/pages/ChannelDetailsPage/types";
 import { DashboardCard } from "@dashboard/components/Card";
 import { Combobox } from "@dashboard/components/Combobox";
-import FormSpacer from "@dashboard/components/FormSpacer";
+import { FormSpacer } from "@dashboard/components/FormSpacer";
 import {
   ChannelErrorFragment,
   CountryCode,
@@ -17,7 +17,7 @@ import { useClipboard } from "@dashboard/hooks/useClipboard";
 import { ChangeEvent, FormChange } from "@dashboard/hooks/useForm";
 import { commonMessages } from "@dashboard/intl";
 import { getFormErrors } from "@dashboard/utils/errors";
-import getChannelsErrorMessage from "@dashboard/utils/errors/channels";
+import { getChannelsErrorMessage } from "@dashboard/utils/errors/channels";
 import { Box, Button, CopyIcon, Input, Option, Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 

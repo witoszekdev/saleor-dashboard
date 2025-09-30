@@ -1,2 +1,2 @@
 export * from "./usePageTypeDelete";
-export { default } from "./usePageTypeDelete";
+export { usePageTypeDelete } from "./usePageTypeDelete";

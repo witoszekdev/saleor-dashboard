@@ -3,7 +3,7 @@ import { DashboardCard } from "@dashboard/components/Card";
 import { AccountErrorFragment, CustomerDetailsQuery } from "@dashboard/graphql";
 import { maybe } from "@dashboard/misc";
 import { getFormErrors } from "@dashboard/utils/errors";
-import getAccountErrorMessage from "@dashboard/utils/errors/account";
+import { getAccountErrorMessage } from "@dashboard/utils/errors/account";
 import { TextField } from "@material-ui/core";
 import { makeStyles } from "@saleor/macaw-ui";
 import { Checkbox, Skeleton, Text } from "@saleor/macaw-ui-next";
@@ -122,4 +122,4 @@ const CustomerDetails = (props: CustomerDetailsProps) => {
 };
 
 CustomerDetails.displayName = "CustomerDetails";
-export default CustomerDetails;
+export { CustomerDetails };

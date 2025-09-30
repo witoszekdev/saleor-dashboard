@@ -1,6 +1,6 @@
 import { makeStyles } from "@saleor/macaw-ui";
 import { Text } from "@saleor/macaw-ui-next";
-import clsx from "clsx";
+import { clsx } from "clsx";
 
 export interface Step<T> {
   label: string;
@@ -76,4 +76,4 @@ function makeCreatorSteps<T extends string | number>() {
   return CreatorSteps;
 }
 
-export default makeCreatorSteps;
+export { makeCreatorSteps };

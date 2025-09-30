@@ -1,5 +1,5 @@
 import { useUser } from "@dashboard/auth";
-import useShop from "@dashboard/hooks/useShop";
+import { useShop } from "@dashboard/hooks/useShop";
 import difference from "lodash/difference";
 
 export const useUserAppCreationPermissions = () => {

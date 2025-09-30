@@ -1,4 +1,4 @@
-import SearchInput from "@dashboard/components/AppLayout/ListFilters/components/SearchInput";
+import { SearchInput } from "@dashboard/components/AppLayout/ListFilters/components/SearchInput";
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
 import { ButtonGroupWithDropdown } from "@dashboard/components/ButtonGroupWithDropdown";
 import { DashboardCard } from "@dashboard/components/Card";
@@ -11,7 +11,7 @@ import {
 } from "@dashboard/extensions/getExtensionsItems";
 import { useExtensions } from "@dashboard/extensions/hooks/useExtensions";
 import { PageTypeFragment } from "@dashboard/graphql";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { sectionNames } from "@dashboard/intl";
 import { pageTypeAddUrl, PageTypeListUrlSortField } from "@dashboard/modelTypes/urls";
 import { Box, Button, ChevronRightIcon } from "@saleor/macaw-ui-next";
@@ -25,7 +25,7 @@ import {
   SortPage,
   TabPageProps,
 } from "../../../types";
-import PageTypeList from "../PageTypeList";
+import { PageTypeList } from "../PageTypeList";
 
 interface PageTypeListPageProps
   extends PageListProps,
@@ -150,4 +150,4 @@ const PageTypeListPage = ({
 };
 
 PageTypeListPage.displayName = "PageTypeListPage";
-export default PageTypeListPage;
+export { PageTypeListPage };

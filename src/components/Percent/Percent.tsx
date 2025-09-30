@@ -10,4 +10,4 @@ const Percent = ({ amount }: PercentProps) => (
 );
 
 Percent.displayName = "Percent";
-export default Percent;
+export { Percent };

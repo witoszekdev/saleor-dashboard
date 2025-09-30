@@ -1,6 +1,6 @@
 import { ColumnPicker } from "@dashboard/components/Datagrid/ColumnPicker/ColumnPicker";
 import { useColumns } from "@dashboard/components/Datagrid/ColumnPicker/useColumns";
-import Datagrid from "@dashboard/components/Datagrid/Datagrid";
+import { Datagrid } from "@dashboard/components/Datagrid/Datagrid";
 import {
   DatagridChangeStateContext,
   useDatagridChangeState,
@@ -10,7 +10,7 @@ import { commonTooltipMessages } from "@dashboard/components/TooltipTableCellHea
 import { SaleListUrlSortField, saleUrl } from "@dashboard/discounts/urls";
 import { SaleFragment } from "@dashboard/graphql";
 import { getPrevLocationState } from "@dashboard/hooks/useBackLinkWithState";
-import useLocale from "@dashboard/hooks/useLocale";
+import { useLocale } from "@dashboard/hooks/useLocale";
 import { ChannelProps, ListProps, SortPage } from "@dashboard/types";
 import { Item } from "@glideapps/glide-data-grid";
 import { Box } from "@saleor/macaw-ui-next";

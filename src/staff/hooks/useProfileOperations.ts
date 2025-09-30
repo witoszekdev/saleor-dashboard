@@ -4,8 +4,8 @@ import {
   useUserAvatarDeleteMutation,
   useUserAvatarUpdateMutation,
 } from "@dashboard/graphql";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useNotifier from "@dashboard/hooks/useNotifier";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
+import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { commonMessages, errorMessages } from "@dashboard/intl";
 import { useIntl } from "react-intl";
 

@@ -8,7 +8,7 @@ import { makeStyles } from "@saleor/macaw-ui";
 import { Box, Button, Text } from "@saleor/macaw-ui-next";
 import { defineMessages, useIntl } from "react-intl";
 
-import CustomerAddress from "../CustomerAddress/CustomerAddress";
+import { CustomerAddress } from "../CustomerAddress/CustomerAddress";
 
 interface CustomerAddressListPageProps {
   customer: CustomerAddressesFragment;
@@ -146,4 +146,4 @@ const CustomerAddressListPage = (props: CustomerAddressListPageProps) => {
 };
 
 CustomerAddressListPage.displayName = "CustomerAddressListPage";
-export default CustomerAddressListPage;
+export { CustomerAddressListPage };

@@ -77,4 +77,4 @@ const Component = () => {
   );
 };
 
-export default Component;
+export { Component };

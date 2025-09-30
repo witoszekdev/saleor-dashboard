@@ -1,6 +1,6 @@
 // @ts-strict-ignore
 import { DashboardCard } from "@dashboard/components/Card";
-import CollectionWithDividers from "@dashboard/components/CollectionWithDividers";
+import { CollectionWithDividers } from "@dashboard/components/CollectionWithDividers";
 import { Pill } from "@dashboard/components/Pill";
 import { PluginsDetailsFragment } from "@dashboard/graphql";
 import {
@@ -93,4 +93,4 @@ const PluginDetailsChannelsCardContent = ({
   );
 };
 
-export default PluginDetailsChannelsCardContent;
+export { PluginDetailsChannelsCardContent };

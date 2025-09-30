@@ -74,4 +74,4 @@ const TimelineEventHeader = ({
   );
 };
 
-export default TimelineEventHeader;
+export { TimelineEventHeader };

@@ -1,5 +1,5 @@
 import { DEFAULT_INITIAL_SEARCH_DATA } from "@dashboard/config";
-import useDebounce from "@dashboard/hooks/useDebounce";
+import { useDebounce } from "@dashboard/hooks/useDebounce";
 import { FetchMoreProps } from "@dashboard/types";
 import { useCallback, useRef } from "react";
 

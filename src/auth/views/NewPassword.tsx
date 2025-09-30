@@ -1,11 +1,11 @@
 import { AccountErrorFragment } from "@dashboard/graphql";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { useAuth } from "@saleor/sdk";
 import { parse as parseQs } from "qs";
 import { useState } from "react";
 import { RouteComponentProps } from "react-router";
 
-import NewPasswordPage, { NewPasswordPageFormData } from "../components/NewPasswordPage";
+import { NewPasswordPage, NewPasswordPageFormData } from "../components/NewPasswordPage";
 import { NewPasswordUrlQueryParams } from "../urls";
 
 const NewPassword = ({ location }: RouteComponentProps) => {
@@ -36,4 +36,4 @@ const NewPassword = ({ location }: RouteComponentProps) => {
 };
 
 NewPassword.displayName = "NewPassword";
-export default NewPassword;
+export { NewPassword };

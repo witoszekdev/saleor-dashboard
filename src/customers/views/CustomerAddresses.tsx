@@ -1,5 +1,5 @@
 // @ts-strict-ignore
-import ActionDialog from "@dashboard/components/ActionDialog";
+import { ActionDialog } from "@dashboard/components/ActionDialog";
 import { WindowTitle } from "@dashboard/components/WindowTitle";
 import {
   useCreateCustomerAddressMutation,
@@ -8,16 +8,16 @@ import {
   useSetCustomerDefaultAddressMutation,
   useUpdateCustomerAddressMutation,
 } from "@dashboard/graphql";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useNotifier from "@dashboard/hooks/useNotifier";
-import useShop from "@dashboard/hooks/useShop";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
+import { useNotifier } from "@dashboard/hooks/useNotifier";
+import { useShop } from "@dashboard/hooks/useShop";
 import { commonMessages } from "@dashboard/intl";
-import createDialogActionHandlers from "@dashboard/utils/handlers/dialogActionHandlers";
+import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
 import { Box } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import CustomerAddressDialog from "../components/CustomerAddressDialog";
-import CustomerAddressListPage from "../components/CustomerAddressListPage";
+import { CustomerAddressDialog } from "../components/CustomerAddressDialog";
+import { CustomerAddressListPage } from "../components/CustomerAddressListPage";
 import {
   customerAddressesUrl,
   CustomerAddressesUrlDialog,
@@ -179,4 +179,4 @@ const CustomerAddresses = ({ id, params }: CustomerAddressesProps) => {
   );
 };
 
-export default CustomerAddresses;
+export { CustomerAddresses };

@@ -1,8 +1,8 @@
 import { Combobox } from "@dashboard/components/Combobox";
 import { ConfirmButton, ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import { DashboardModal } from "@dashboard/components/Modal";
-import useModalDialogOpen from "@dashboard/hooks/useModalDialogOpen";
-import useStateFromProps from "@dashboard/hooks/useStateFromProps";
+import { useModalDialogOpen } from "@dashboard/hooks/useModalDialogOpen";
+import { useStateFromProps } from "@dashboard/hooks/useStateFromProps";
 import { buttonMessages } from "@dashboard/intl";
 import { FetchMoreProps } from "@dashboard/types";
 import { Button, Option } from "@saleor/macaw-ui-next";
@@ -77,4 +77,4 @@ const PageTypePickerDialog = ({
 };
 
 PageTypePickerDialog.displayName = "PageTypePickerDialog";
-export default PageTypePickerDialog;
+export { PageTypePickerDialog };

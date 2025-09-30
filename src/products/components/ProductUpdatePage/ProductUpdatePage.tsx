@@ -8,10 +8,10 @@ import { useUser } from "@dashboard/auth";
 import { hasPermission } from "@dashboard/auth/misc";
 import { ChannelData } from "@dashboard/channels/utils";
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
-import AssignAttributeValueDialog from "@dashboard/components/AssignAttributeValueDialog";
+import { AssignAttributeValueDialog } from "@dashboard/components/AssignAttributeValueDialog";
 import { AttributeInput, Attributes } from "@dashboard/components/Attributes";
-import CardSpacer from "@dashboard/components/CardSpacer";
-import ChannelsAvailabilityCard from "@dashboard/components/ChannelsAvailabilityCard";
+import { CardSpacer } from "@dashboard/components/CardSpacer";
+import { ChannelsAvailability as ChannelsAvailabilityCard } from "@dashboard/components/ChannelsAvailabilityCard";
 import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import { useDevModeContext } from "@dashboard/components/DevModePanel/hooks";
 import { DetailPageLayout } from "@dashboard/components/Layouts";
@@ -40,10 +40,10 @@ import {
 } from "@dashboard/graphql";
 import { useBackLinkWithState } from "@dashboard/hooks/useBackLinkWithState";
 import { SubmitPromise } from "@dashboard/hooks/useForm";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useStateFromProps from "@dashboard/hooks/useStateFromProps";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
+import { useStateFromProps } from "@dashboard/hooks/useStateFromProps";
 import { maybe } from "@dashboard/misc";
-import ProductExternalMediaDialog from "@dashboard/products/components/ProductExternalMediaDialog";
+import { ProductExternalMediaDialog } from "@dashboard/products/components/ProductExternalMediaDialog";
 import { ProductOrganization } from "@dashboard/products/components/ProductOrganization/ProductOrganization";
 import { mapByChannel } from "@dashboard/products/components/ProductUpdatePage/utils";
 import { defaultGraphiQLQuery } from "@dashboard/products/queries";
@@ -61,12 +61,12 @@ import { useIntl } from "react-intl";
 
 import { AttributeValuesMetadata, getChoices } from "../../utils/data";
 import { ProductDetailsForm } from "../ProductDetailsForm";
-import ProductMedia from "../ProductMedia";
-import ProductTaxes from "../ProductTaxes";
-import ProductVariants from "../ProductVariants";
-import ProductUpdateForm from "./form";
+import { ProductMedia } from "../ProductMedia";
+import { ProductTaxes } from "../ProductTaxes";
+import { ProductVariants } from "../ProductVariants";
+import { ProductUpdateForm } from "./form";
 import { messages } from "./messages";
-import ProductChannelsListingsDialog from "./ProductChannelsListingsDialog";
+import { ProductChannelsListingsDialog } from "./ProductChannelsListingsDialog";
 import { ProductUpdateData, ProductUpdateHandlers, ProductUpdateSubmitData } from "./types";
 
 interface ProductUpdatePageProps {
@@ -500,4 +500,4 @@ const ProductUpdatePage = ({
 };
 
 ProductUpdatePage.displayName = "ProductUpdatePage";
-export default ProductUpdatePage;
+export { ProductUpdatePage };

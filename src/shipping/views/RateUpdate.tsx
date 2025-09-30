@@ -5,7 +5,7 @@ import {
   createSortedShippingChannels,
 } from "@dashboard/channels/utils";
 import { Button } from "@dashboard/components/Button";
-import ChannelsAvailabilityDialog from "@dashboard/components/ChannelsAvailabilityDialog";
+import { ChannelsAvailabilityDialog } from "@dashboard/components/ChannelsAvailabilityDialog";
 import { WindowTitle } from "@dashboard/components/WindowTitle";
 import { DEFAULT_INITIAL_SEARCH_DATA, PAGINATE_BY } from "@dashboard/config";
 import {
@@ -22,21 +22,21 @@ import {
   useUpdatePrivateMetadataMutation,
   useUpdateShippingRateMutation,
 } from "@dashboard/graphql";
-import useBulkActions from "@dashboard/hooks/useBulkActions";
-import useChannels from "@dashboard/hooks/useChannels";
-import useLocalPaginator, { useLocalPaginationState } from "@dashboard/hooks/useLocalPaginator";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useNotifier from "@dashboard/hooks/useNotifier";
+import { useBulkActions } from "@dashboard/hooks/useBulkActions";
+import { useChannels } from "@dashboard/hooks/useChannels";
+import { useLocalPaginationState, useLocalPaginator } from "@dashboard/hooks/useLocalPaginator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
+import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { PaginatorContext } from "@dashboard/hooks/usePaginator";
 import { commonMessages, sectionNames } from "@dashboard/intl";
 import { getById, getByUnmatchingId } from "@dashboard/misc";
-import useProductSearch from "@dashboard/searches/useProductSearch";
-import DeleteShippingRateDialog from "@dashboard/shipping/components/DeleteShippingRateDialog";
-import ShippingMethodProductsAddDialog from "@dashboard/shipping/components/ShippingMethodProductsAddDialog";
-import ShippingZonePostalCodeRangeDialog from "@dashboard/shipping/components/ShippingZonePostalCodeRangeDialog";
-import ShippingZoneRatesPage from "@dashboard/shipping/components/ShippingZoneRatesPage";
+import { UseProductSearch as useProductSearch } from "@dashboard/searches/useProductSearch";
+import { DeleteShippingRateDialog } from "@dashboard/shipping/components/DeleteShippingRateDialog";
+import { ShippingMethodProductsAddDialog } from "@dashboard/shipping/components/ShippingMethodProductsAddDialog";
+import { ShippingZonePostalCodeRangeDialog } from "@dashboard/shipping/components/ShippingZonePostalCodeRangeDialog";
+import { ShippingZoneRatesPage } from "@dashboard/shipping/components/ShippingZoneRatesPage";
 import { ShippingZoneRateUpdateFormData } from "@dashboard/shipping/components/ShippingZoneRatesPage/types";
-import UnassignDialog from "@dashboard/shipping/components/UnassignDialog";
+import { UnassignDialog } from "@dashboard/shipping/components/UnassignDialog";
 import {
   getShippingMethodChannelVariables,
   getUpdateShippingPriceRateVariables,
@@ -48,7 +48,7 @@ import {
   ShippingRateUrlQueryParams,
   shippingZoneUrl,
 } from "@dashboard/shipping/urls";
-import postalCodesReducer from "@dashboard/shipping/views/reducer";
+import { postalCodesReducer } from "@dashboard/shipping/views/reducer";
 import {
   filterPostalCodes,
   getPostalCodeRuleByMinMax,
@@ -56,8 +56,8 @@ import {
 } from "@dashboard/shipping/views/utils";
 import { useTaxClassFetchMore } from "@dashboard/taxes/utils/useTaxClassFetchMore";
 import { MinMax } from "@dashboard/types";
-import createDialogActionHandlers from "@dashboard/utils/handlers/dialogActionHandlers";
-import createMetadataUpdateHandler from "@dashboard/utils/handlers/metadataUpdateHandler";
+import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
+import { createMetadataUpdateHandler } from "@dashboard/utils/handlers/metadataUpdateHandler";
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { ShippingMethodPostalCodeRule } from "@saleor/sdk/dist/apollo/types";
 import { useReducer } from "react";
@@ -382,4 +382,4 @@ const RateUpdate = ({ id, rateId, params }: RateUpdateProps) => {
   );
 };
 
-export default RateUpdate;
+export { RateUpdate };

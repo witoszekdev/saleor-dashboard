@@ -6,4 +6,4 @@ function useLocale() {
 
   return localeInfo;
 }
-export default useLocale;
+export { useLocale };

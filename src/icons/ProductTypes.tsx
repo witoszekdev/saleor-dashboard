@@ -19,6 +19,6 @@ const ProductTypesIcon = createSvgIcon(
   "ProductTypes",
 );
 
-export default function ProductTypes(props: SvgIconProps) {
+export function ProductTypes(props: SvgIconProps) {
   return <ProductTypesIcon {...props} viewBox="0 0 44 44" />;
 }

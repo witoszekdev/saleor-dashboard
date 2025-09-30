@@ -1,2 +1,2 @@
 export * from "./ShippingZones";
-export { default } from "./ShippingZones";
+export { ShippingZones } from "./ShippingZones";

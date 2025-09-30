@@ -1,2 +1,2 @@
-export { default } from "./TokenCreateDialog";
+export { TokenCreateDialog } from "./TokenCreateDialog";
 export * from "./TokenCreateDialog";

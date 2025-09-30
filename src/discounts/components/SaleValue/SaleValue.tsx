@@ -1,17 +1,17 @@
 // @ts-strict-ignore
 import { DashboardCard } from "@dashboard/components/Card";
-import ResponsiveTable from "@dashboard/components/ResponsiveTable";
-import TableRowLink from "@dashboard/components/TableRowLink";
+import { ResponsiveTable } from "@dashboard/components/ResponsiveTable";
+import { TableRowLink } from "@dashboard/components/TableRowLink";
 import { DiscountErrorFragment } from "@dashboard/graphql";
 import { renderCollection } from "@dashboard/misc";
 import { getFormErrors } from "@dashboard/utils/errors";
-import getDiscountErrorMessage from "@dashboard/utils/errors/discounts";
+import { getDiscountErrorMessage } from "@dashboard/utils/errors/discounts";
 import { TableBody, TableCell, TableHead } from "@material-ui/core";
 import { Skeleton, Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 
 import { SaleDetailsPageFormData } from "../SaleDetailsPage";
-import SaleValueTextField from "./SaleValueTextField";
+import { SaleValueTextField } from "./SaleValueTextField";
 import { useStyles } from "./styles";
 import { SaleValueInputOnChangeType } from "./types";
 
@@ -108,4 +108,4 @@ const SaleValue = ({ data, disabled, errors, onChange }: SaleValueProps) => {
 };
 
 SaleValue.displayName = "SaleValue";
-export default SaleValue;
+export { SaleValue };

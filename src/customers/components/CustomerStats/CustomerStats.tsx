@@ -1,6 +1,6 @@
 import { DashboardCard } from "@dashboard/components/Card";
 import { DateTime } from "@dashboard/components/Date";
-import RequirePermissions from "@dashboard/components/RequirePermissions";
+import { RequirePermissions } from "@dashboard/components/RequirePermissions";
 import { CustomerDetailsQuery, PermissionEnum } from "@dashboard/graphql";
 import { Divider, Skeleton, Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
@@ -60,4 +60,4 @@ const CustomerStats = (props: CustomerStatsProps) => {
 };
 
 CustomerStats.displayName = "CustomerStats";
-export default CustomerStats;
+export { CustomerStats };

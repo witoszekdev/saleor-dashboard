@@ -1,5 +1,5 @@
 import { useApolloClient } from "@apollo/client";
-import useNotifier from "@dashboard/hooks/useNotifier";
+import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { PropsWithChildren } from "react";
 import { useIntl } from "react-intl";
 
@@ -15,4 +15,4 @@ const AuthProvider = ({ children }: PropsWithChildren) => {
   return <UserContext.Provider value={authProvider}>{children}</UserContext.Provider>;
 };
 
-export default AuthProvider;
+export { AuthProvider };

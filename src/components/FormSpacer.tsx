@@ -22,4 +22,4 @@ export const FormSpacer = (props: FormSpacerProps) => {
 };
 
 FormSpacer.displayName = "FormSpacer";
-export default FormSpacer;
+export { FormSpacer };

@@ -1,2 +1,2 @@
-export { default } from "./useNotifier";
+export { useNotifier } from "./useNotifier";
 export * from "./useNotifier";

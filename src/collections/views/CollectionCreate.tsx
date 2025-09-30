@@ -1,8 +1,8 @@
 // @ts-strict-ignore
 import { ChannelsAction } from "@dashboard/channels/urls";
 import { createCollectionChannels } from "@dashboard/channels/utils";
-import useAppChannel from "@dashboard/components/AppLayout/AppChannelContext";
-import ChannelsAvailabilityDialog from "@dashboard/components/ChannelsAvailabilityDialog";
+import { useAppChannel } from "@dashboard/components/AppLayout/AppChannelContext";
+import { ChannelsAvailabilityDialog } from "@dashboard/components/ChannelsAvailabilityDialog";
 import { WindowTitle } from "@dashboard/components/WindowTitle";
 import {
   CollectionCreateInput,
@@ -11,17 +11,17 @@ import {
   useUpdateMetadataMutation,
   useUpdatePrivateMetadataMutation,
 } from "@dashboard/graphql";
-import useChannels from "@dashboard/hooks/useChannels";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useNotifier from "@dashboard/hooks/useNotifier";
+import { useChannels } from "@dashboard/hooks/useChannels";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
+import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { commonMessages } from "@dashboard/intl";
 import { getMutationErrors } from "@dashboard/misc";
-import createDialogActionHandlers from "@dashboard/utils/handlers/dialogActionHandlers";
-import createMetadataCreateHandler from "@dashboard/utils/handlers/metadataCreateHandler";
+import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
+import { createMetadataCreateHandler } from "@dashboard/utils/handlers/metadataCreateHandler";
 import { getParsedDataForJsonStringField } from "@dashboard/utils/richText/misc";
 import { useIntl } from "react-intl";
 
-import CollectionCreatePage from "../components/CollectionCreatePage/CollectionCreatePage";
+import { CollectionCreatePage } from "../components/CollectionCreatePage/CollectionCreatePage";
 import { CollectionCreateData } from "../components/CollectionCreatePage/form";
 import { collectionAddUrl, CollectionCreateUrlQueryParams, collectionUrl } from "../urls";
 import { COLLECTION_CREATE_FORM_ID } from "./consts";
@@ -165,4 +165,4 @@ const CollectionCreate = ({ params }: CollectionCreateProps) => {
   );
 };
 
-export default CollectionCreate;
+export { CollectionCreate };

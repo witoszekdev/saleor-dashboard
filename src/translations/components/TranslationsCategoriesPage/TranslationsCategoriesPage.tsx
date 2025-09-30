@@ -1,10 +1,10 @@
 // @ts-strict-ignore
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
-import CardSpacer from "@dashboard/components/CardSpacer";
+import { CardSpacer } from "@dashboard/components/CardSpacer";
 import { LanguageSwitchWithCaching } from "@dashboard/components/LanguageSwitch/LanguageSwitch";
 import { DetailPageLayout } from "@dashboard/components/Layouts";
 import { CategoryTranslationFragment, LanguageCodeEnum } from "@dashboard/graphql";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { commonMessages } from "@dashboard/intl";
 import { getStringOrPlaceholder } from "@dashboard/misc";
 import {
@@ -18,7 +18,7 @@ import {
 } from "@dashboard/translations/urls";
 import { useIntl } from "react-intl";
 
-import TranslationFields from "../TranslationFields";
+import { TranslationFields } from "../TranslationFields";
 
 interface TranslationsCategoriesPageProps extends TranslationsEntitiesPageProps {
   data: CategoryTranslationFragment;
@@ -139,4 +139,4 @@ const TranslationsCategoriesPage = ({
 };
 
 TranslationsCategoriesPage.displayName = "TranslationsCategoriesPage";
-export default TranslationsCategoriesPage;
+export { TranslationsCategoriesPage };

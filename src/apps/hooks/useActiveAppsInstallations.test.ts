@@ -1,8 +1,8 @@
 import { AppsInstallationsQuery } from "@dashboard/graphql";
-import useLocalStorage from "@dashboard/hooks/useLocalStorage";
+import { useLocalStorage } from "@dashboard/hooks/useLocalStorage";
 import { renderHook } from "@testing-library/react-hooks";
 
-import useActiveAppsInstallations from "./useActiveAppsInstallations";
+import { useActiveAppsInstallations } from "./useActiveAppsInstallations";
 
 jest.mock("react-intl", () => ({
   useIntl: jest.fn(() => ({

@@ -41,4 +41,4 @@ const AppStatus = ({ data, disabled, label, onChange }: AppStatusProps) => {
 };
 
 AppStatus.displayName = "AppStatus";
-export default AppStatus;
+export { AppStatus };

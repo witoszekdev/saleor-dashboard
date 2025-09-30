@@ -2,7 +2,7 @@ import { IconButton } from "@dashboard/components/IconButton";
 import { CircularProgress } from "@material-ui/core";
 import { DeleteIcon, EditIcon, makeStyles } from "@saleor/macaw-ui";
 import { vars } from "@saleor/macaw-ui-next";
-import clsx from "clsx";
+import { clsx } from "clsx";
 import * as React from "react";
 
 const useStyles = makeStyles(
@@ -147,4 +147,4 @@ const MediaTile = (props: MediaTileProps) => {
 };
 
 MediaTile.displayName = "MediaTile";
-export default MediaTile;
+export { MediaTile };

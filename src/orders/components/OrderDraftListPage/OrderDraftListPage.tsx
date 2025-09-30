@@ -13,7 +13,7 @@ import { useIntl } from "react-intl";
 
 import { OrderDraftListDatagrid } from "../OrderDraftListDatagrid";
 import { OrderDraftListHeader } from "../OrderDraftListHeader/OrderDraftListHeader";
-import OrderLimitReached from "../OrderLimitReached";
+import { OrderLimitReached } from "../OrderLimitReached";
 import { createFilterStructure, OrderDraftFilterKeys, OrderDraftListFilterOpts } from "./filters";
 
 interface OrderDraftListPageProps
@@ -147,4 +147,4 @@ const OrderDraftListPage = ({
 };
 
 OrderDraftListPage.displayName = "OrderDraftListPage";
-export default OrderDraftListPage;
+export { OrderDraftListPage };

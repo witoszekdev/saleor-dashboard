@@ -25,4 +25,4 @@ const Transition = ({ children, ...props }) => (
   </MessageManagerTransition>
 );
 
-export default Transition;
+export { Transition };

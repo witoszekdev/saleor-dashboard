@@ -1,2 +1,2 @@
-export { default } from "./StaffPreferences";
+export { StaffPreferences } from "./StaffPreferences";
 export * from "./StaffPreferences";

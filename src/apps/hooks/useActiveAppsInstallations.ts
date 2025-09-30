@@ -7,7 +7,7 @@ import {
   useAppDeleteFailedInstallationMutation,
   useAppRetryInstallMutation,
 } from "@dashboard/graphql";
-import useLocalStorage from "@dashboard/hooks/useLocalStorage";
+import { useLocalStorage } from "@dashboard/hooks/useLocalStorage";
 import { useEffect, useRef } from "react";
 
 interface UseActiveAppsInstallations {
@@ -175,4 +175,4 @@ function useActiveAppsInstallations({
     },
   };
 }
-export default useActiveAppsInstallations;
+export { useActiveAppsInstallations };

@@ -1,6 +1,6 @@
 import { act, renderHook } from "@testing-library/react-hooks";
 
-import useStateFromProps from "./useStateFromProps";
+import { useStateFromProps } from "./useStateFromProps";
 
 function setupHook() {
   return renderHook(useStateFromProps, {

@@ -1,12 +1,12 @@
 // @ts-strict-ignore
 import { Button } from "@dashboard/components/Button";
 import { DashboardCard } from "@dashboard/components/Card";
-import Checkbox from "@dashboard/components/Checkbox";
-import ResponsiveTable from "@dashboard/components/ResponsiveTable";
-import TableCellAvatar from "@dashboard/components/TableCellAvatar";
-import TableHead from "@dashboard/components/TableHead";
+import { Checkbox } from "@dashboard/components/Checkbox";
+import { ResponsiveTable } from "@dashboard/components/ResponsiveTable";
+import { TableCellAvatar } from "@dashboard/components/TableCellAvatar";
+import { TableHead } from "@dashboard/components/TableHead";
 import { TablePaginationWithContext } from "@dashboard/components/TablePagination";
-import TableRowLink from "@dashboard/components/TableRowLink";
+import { TableRowLink } from "@dashboard/components/TableRowLink";
 import { ShippingZoneQuery } from "@dashboard/graphql";
 import { renderCollection } from "@dashboard/misc";
 import { ListActions, ListProps, RelayToFlat } from "@dashboard/types";
@@ -157,4 +157,4 @@ const ShippingMethodProducts = (props: ShippingMethodProductsProps) => {
 };
 
 ShippingMethodProducts.displayName = "ShippingMethodProducts";
-export default ShippingMethodProducts;
+export { ShippingMethodProducts };

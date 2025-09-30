@@ -1,4 +1,4 @@
-import clsx from "clsx";
+import { clsx } from "clsx";
 import { Link, LinkProps } from "react-router-dom";
 
 import { useStyles } from "./styles";

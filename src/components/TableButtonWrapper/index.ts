@@ -1,2 +1,2 @@
-export { default } from "./TableButtonWrapper";
+export { TableButtonWrapper } from "./TableButtonWrapper";
 export * from "./TableButtonWrapper";

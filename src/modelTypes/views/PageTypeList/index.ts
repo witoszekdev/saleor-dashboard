@@ -1,2 +1,2 @@
-export { default } from "./PageTypeList";
+export { PageTypeList } from "./PageTypeList";
 export * from "./PageTypeList";

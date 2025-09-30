@@ -2,10 +2,10 @@ import { ConfirmButton } from "@dashboard/components/ConfirmButton";
 import { DashboardModal } from "@dashboard/components/Modal";
 import { Task } from "@dashboard/containers/BackgroundTasks/types";
 import { useExportGiftCardsMutation, useGiftCardTotalCountQuery } from "@dashboard/graphql";
-import useBackgroundTask from "@dashboard/hooks/useBackgroundTask";
-import useForm from "@dashboard/hooks/useForm";
-import useNotifier from "@dashboard/hooks/useNotifier";
-import ExportDialogSettings from "@dashboard/products/components/ProductExportDialog/ExportDialogSettings";
+import { useBackgroundTask } from "@dashboard/hooks/useBackgroundTask";
+import { useForm } from "@dashboard/hooks/useForm";
+import { useNotifier } from "@dashboard/hooks/useNotifier";
+import { ExportDialogSettings } from "@dashboard/products/components/ProductExportDialog/ExportDialogSettings";
 import {
   ExportSettingsFormData,
   exportSettingsInitialFormData,
@@ -15,7 +15,7 @@ import { DialogProps } from "@dashboard/types";
 import { Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import ContentWithProgress from "../GiftCardCreateDialog/ContentWithProgress";
+import { ContentWithProgress } from "../GiftCardCreateDialog/ContentWithProgress";
 import { useGiftCardList } from "../GiftCardsList/providers/GiftCardListProvider";
 import { giftCardExportDialogMessages as messages } from "./messages";
 import { getExportGiftCardsInput } from "./utils";
@@ -137,4 +137,4 @@ const GiftCardExportDialog = ({
   );
 };
 
-export default GiftCardExportDialog;
+export { GiftCardExportDialog };

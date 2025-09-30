@@ -1,26 +1,26 @@
 // @ts-strict-ignore
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
-import CardSpacer from "@dashboard/components/CardSpacer";
+import { CardSpacer } from "@dashboard/components/CardSpacer";
 import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import Form from "@dashboard/components/Form";
+import { Form } from "@dashboard/components/Form";
 import { DetailPageLayout } from "@dashboard/components/Layouts";
 import { Metadata, MetadataFormData } from "@dashboard/components/Metadata";
 import { Savebar } from "@dashboard/components/Savebar";
 import { ProductTypeKindEnum, TaxClassBaseFragment, WeightUnitsEnum } from "@dashboard/graphql";
 import { SubmitPromise } from "@dashboard/hooks/useForm";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useStateFromProps from "@dashboard/hooks/useStateFromProps";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
+import { useStateFromProps } from "@dashboard/hooks/useStateFromProps";
 import {
   handleTaxClassChange,
   makeProductTypeKindChangeHandler,
 } from "@dashboard/productTypes/handlers";
 import { productTypeListUrl } from "@dashboard/productTypes/urls";
 import { FetchMoreProps, UserError } from "@dashboard/types";
-import useMetadataChangeTrigger from "@dashboard/utils/metadata/useMetadataChangeTrigger";
+import { useMetadataChangeTrigger } from "@dashboard/utils/metadata/useMetadataChangeTrigger";
 
-import ProductTypeDetails from "../ProductTypeDetails/ProductTypeDetails";
-import ProductTypeShipping from "../ProductTypeShipping/ProductTypeShipping";
-import ProductTypeTaxes from "../ProductTypeTaxes/ProductTypeTaxes";
+import { ProductTypeDetails } from "../ProductTypeDetails/ProductTypeDetails";
+import { ProductTypeShipping } from "../ProductTypeShipping/ProductTypeShipping";
+import { ProductTypeTaxes } from "../ProductTypeTaxes/ProductTypeTaxes";
 
 export interface ProductTypeForm extends MetadataFormData {
   name: string;
@@ -128,4 +128,4 @@ const ProductTypeCreatePage = ({
 };
 
 ProductTypeCreatePage.displayName = "ProductTypeCreatePage";
-export default ProductTypeCreatePage;
+export { ProductTypeCreatePage };

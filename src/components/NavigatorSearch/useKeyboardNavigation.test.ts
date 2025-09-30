@@ -1,4 +1,4 @@
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { globalSearchUrl } from "@dashboard/search/urls";
 import { renderHook } from "@testing-library/react-hooks";
 import { useHotkeys } from "react-hotkeys-hook";

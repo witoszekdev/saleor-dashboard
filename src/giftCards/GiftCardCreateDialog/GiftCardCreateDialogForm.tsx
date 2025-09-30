@@ -1,27 +1,27 @@
 // @ts-strict-ignore
-import BackButton from "@dashboard/components/BackButton";
+import { BackButton } from "@dashboard/components/BackButton";
 import { ConfirmButton, ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import { DashboardModal } from "@dashboard/components/Modal";
-import GiftCardTagInput from "@dashboard/giftCards/components/GiftCardTagInput";
+import { GiftCardTagInput } from "@dashboard/giftCards/components/GiftCardTagInput";
 import {
   GiftCardErrorFragment,
   GiftCardSettingsExpiryTypeEnum,
   TimePeriodTypeEnum,
   useGiftCardSettingsQuery,
 } from "@dashboard/graphql";
-import useForm from "@dashboard/hooks/useForm";
+import { useForm } from "@dashboard/hooks/useForm";
 import { commonMessages } from "@dashboard/intl";
-import Label from "@dashboard/orders/components/OrderHistory/Label";
+import { Label } from "@dashboard/orders/components/OrderHistory/Label";
 import { getFormErrors } from "@dashboard/utils/errors";
 import { Box, Textarea } from "@saleor/macaw-ui-next";
 import { useState } from "react";
 import { useIntl } from "react-intl";
 
-import GiftCardSendToCustomer from "../components/GiftCardSendToCustomer/GiftCardSendToCustomer";
+import { GiftCardSendToCustomer } from "../components/GiftCardSendToCustomer/GiftCardSendToCustomer";
 import { GiftCardCreateCommonFormData } from "../GiftCardBulkCreateDialog/types";
-import GiftCardCreateExpirySelect from "./GiftCardCreateExpirySelect";
+import { GiftCardCreateExpirySelect } from "./GiftCardCreateExpirySelect";
 import { GiftCardCreateMoneyInput } from "./GiftCardCreateMoneyInput";
-import GiftCardCreateRequiresActivationSection from "./GiftCardCreateRequiresActivationSection";
+import { GiftCardCreateRequiresActivationSection } from "./GiftCardCreateRequiresActivationSection";
 import { giftCardCreateMessages as messages } from "./messages";
 import { GiftCardCreateFormCommonProps, GiftCardCreateFormCustomer } from "./types";
 
@@ -176,4 +176,4 @@ const GiftCardCreateDialogForm = ({
   );
 };
 
-export default GiftCardCreateDialogForm;
+export { GiftCardCreateDialogForm };

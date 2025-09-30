@@ -1,13 +1,13 @@
 import { DashboardCard } from "@dashboard/components/Card";
-import FormSpacer from "@dashboard/components/FormSpacer";
-import Hr from "@dashboard/components/Hr";
-import Link from "@dashboard/components/Link";
+import { FormSpacer } from "@dashboard/components/FormSpacer";
+import { Hr } from "@dashboard/components/Hr";
+import { Link } from "@dashboard/components/Link";
 import { Pill } from "@dashboard/components/Pill";
 import { WebhookErrorFragment } from "@dashboard/graphql";
 import { commonMessages } from "@dashboard/intl";
 import { WEBHOOK_PAYLOAD_SIGNATURE_DOCS_URL } from "@dashboard/links";
 import { getFormErrors } from "@dashboard/utils/errors";
-import getWebhookErrorMessage from "@dashboard/utils/errors/webhooks";
+import { getWebhookErrorMessage } from "@dashboard/utils/errors/webhooks";
 import { Popper, TextField } from "@material-ui/core";
 import { Text } from "@saleor/macaw-ui-next";
 import * as React from "react";
@@ -118,4 +118,4 @@ const WebhookInfo = ({ data, disabled, errors, onChange }: WebhookInfoProps) => 
 };
 
 WebhookInfo.displayName = "WebhookInfo";
-export default WebhookInfo;
+export { WebhookInfo };

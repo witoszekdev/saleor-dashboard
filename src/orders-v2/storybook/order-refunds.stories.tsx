@@ -13,7 +13,7 @@ const meta = {
   },
 } satisfies Meta<typeof OrderRefunds>;
 
-export default meta;
+export { meta };
 
 type Story = StoryObj<typeof meta>;
 

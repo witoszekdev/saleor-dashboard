@@ -2,7 +2,7 @@ import { DashboardCard } from "@dashboard/components/Card";
 import { NewRadioGroupField as RadioGroupField } from "@dashboard/components/RadioGroupField";
 import { AllocationStrategyEnum, StockSettingsInput } from "@dashboard/graphql";
 import { ChangeEvent } from "@dashboard/hooks/useForm";
-import HelpOutline from "@material-ui/icons/HelpOutline";
+import { SvgIcon as HelpOutline } from "@material-ui/icons/HelpOutline";
 import { Text, Tooltip } from "@saleor/macaw-ui-next";
 import { FormattedMessage } from "react-intl";
 
@@ -93,4 +93,4 @@ const ChannelAllocationStrategy = ({
 };
 
 ChannelAllocationStrategy.displayName = "ChannelAllocationStrategy";
-export default ChannelAllocationStrategy;
+export { ChannelAllocationStrategy };

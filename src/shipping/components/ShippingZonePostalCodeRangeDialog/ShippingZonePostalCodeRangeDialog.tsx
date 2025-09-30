@@ -1,7 +1,7 @@
-import BackButton from "@dashboard/components/BackButton";
+import { BackButton } from "@dashboard/components/BackButton";
 import { ConfirmButton, ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import Form from "@dashboard/components/Form";
-import Grid from "@dashboard/components/Grid";
+import { Form } from "@dashboard/components/Form";
+import { Grid } from "@dashboard/components/Grid";
 import { DashboardModal } from "@dashboard/components/Modal";
 import { commonMessages } from "@dashboard/intl";
 import { DialogProps, MinMax } from "@dashboard/types";
@@ -97,4 +97,4 @@ const ShippingZonePostalCodeRangeDialog = ({
 };
 
 ShippingZonePostalCodeRangeDialog.displayName = "ShippingZonePostalCodeRangeDialog";
-export default ShippingZonePostalCodeRangeDialog;
+export { ShippingZonePostalCodeRangeDialog };

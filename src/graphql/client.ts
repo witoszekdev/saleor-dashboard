@@ -5,7 +5,7 @@ import { ENABLED_SERVICE_NAME_HEADER, getApiUrl } from "@dashboard/config";
 import { createFetch, createSaleorClient } from "@saleor/sdk";
 import { createUploadLink } from "apollo-upload-client";
 
-import introspectionQueryResultData from "./fragmentTypes.generated";
+import { result as introspectionQueryResultData } from "./fragmentTypes.generated";
 import { TypedTypePolicies } from "./typePolicies.generated";
 
 const attachVariablesLink = new ApolloLink((operation, forward) => {

@@ -1,4 +1,5 @@
-import AssignContainerDialog, {
+import {
+  AssignContainerDialog,
   AssignContainerDialogProps,
 } from "@dashboard/components/AssignContainerDialog";
 import { AttributeEntityTypeEnum } from "@dashboard/graphql";

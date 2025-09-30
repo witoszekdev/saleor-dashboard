@@ -17,6 +17,6 @@ const ShippingMethodsIcons = createSvgIcon(
   "ShippingMethods",
 );
 
-export default function ShippingMethods(props: SvgIconProps) {
+export function ShippingMethods(props: SvgIconProps) {
   return <ShippingMethodsIcons {...props} viewBox="0 0 32 32" />;
 }

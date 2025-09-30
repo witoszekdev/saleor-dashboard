@@ -10,15 +10,15 @@ import {
   useUpdatePrivateMetadataMutation,
 } from "@dashboard/graphql";
 import { MutationResultWithOpts } from "@dashboard/hooks/makeMutation";
-import useForm, { FormChange, UseFormResult } from "@dashboard/hooks/useForm";
-import useHandleFormSubmit from "@dashboard/hooks/useHandleFormSubmit";
-import useNotifier from "@dashboard/hooks/useNotifier";
+import { FormChange, useForm, UseFormResult } from "@dashboard/hooks/useForm";
+import { useHandleFormSubmit } from "@dashboard/hooks/useHandleFormSubmit";
+import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { getDefaultNotifierSuccessErrorData } from "@dashboard/hooks/useNotifier/utils";
 import { getFormErrors } from "@dashboard/utils/errors";
-import createMetadataUpdateHandler from "@dashboard/utils/handlers/metadataUpdateHandler";
+import { createMetadataUpdateHandler } from "@dashboard/utils/handlers/metadataUpdateHandler";
 import { mapMetadataItemToInput } from "@dashboard/utils/maps";
-import getMetadata from "@dashboard/utils/metadata/getMetadata";
-import useMetadataChangeTrigger from "@dashboard/utils/metadata/useMetadataChangeTrigger";
+import { getMetadata } from "@dashboard/utils/metadata/getMetadata";
+import { useMetadataChangeTrigger } from "@dashboard/utils/metadata/useMetadataChangeTrigger";
 import difference from "lodash/difference";
 import { createContext } from "react";
 import * as React from "react";
@@ -28,7 +28,7 @@ import {
   GiftCardCreateFormData,
   initialData as emptyFormData,
 } from "../../../GiftCardCreateDialog/GiftCardCreateDialogForm";
-import useGiftCardDetails from "../GiftCardDetailsProvider/hooks/useGiftCardDetails";
+import { useGiftCardDetails } from "../GiftCardDetailsProvider/hooks/useGiftCardDetails";
 
 interface GiftCardUpdateFormProviderProps {
   children: React.ReactNode;
@@ -158,4 +158,4 @@ const GiftCardUpdateFormProvider = ({ children }: GiftCardUpdateFormProviderProp
   );
 };
 
-export default GiftCardUpdateFormProvider;
+export { GiftCardUpdateFormProvider };

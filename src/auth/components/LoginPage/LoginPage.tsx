@@ -13,8 +13,8 @@ import { Fragment, useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 import { Link } from "react-router-dom";
 
-import useStyles from "../styles";
-import LoginForm, { LoginFormData } from "./form";
+import { useStyles } from "../styles";
+import { LoginForm, LoginFormData } from "./form";
 import { LastLoginIndicator } from "./LastLoginIndicator";
 import { getErrorMessage } from "./messages";
 
@@ -162,4 +162,4 @@ const LoginPage = (props: LoginCardProps) => {
 };
 
 LoginPage.displayName = "LoginPage";
-export default LoginPage;
+export { LoginPage };

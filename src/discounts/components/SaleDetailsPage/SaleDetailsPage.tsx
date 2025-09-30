@@ -1,10 +1,10 @@
 // @ts-strict-ignore
 import { ChannelSaleData, validateSalePrice } from "@dashboard/channels/utils";
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
-import CardSpacer from "@dashboard/components/CardSpacer";
-import ChannelsAvailabilityCard from "@dashboard/components/ChannelsAvailabilityCard";
+import { CardSpacer } from "@dashboard/components/CardSpacer";
+import { ChannelsAvailability as ChannelsAvailabilityCard } from "@dashboard/components/ChannelsAvailabilityCard";
 import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import Form from "@dashboard/components/Form";
+import { Form } from "@dashboard/components/Form";
 import { DetailPageLayout } from "@dashboard/components/Layouts";
 import { Metadata, MetadataFormData } from "@dashboard/components/Metadata";
 import { Savebar } from "@dashboard/components/Savebar";
@@ -25,24 +25,24 @@ import {
 } from "@dashboard/graphql";
 import { useBackLinkWithState } from "@dashboard/hooks/useBackLinkWithState";
 import { SubmitPromise } from "@dashboard/hooks/useForm";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { mapEdgesToItems, mapMetadataItemToInput } from "@dashboard/utils/maps";
-import useMetadataChangeTrigger from "@dashboard/utils/metadata/useMetadataChangeTrigger";
+import { useMetadataChangeTrigger } from "@dashboard/utils/metadata/useMetadataChangeTrigger";
 import { sprinkles } from "@saleor/macaw-ui-next";
 import { useState } from "react";
 import { useIntl } from "react-intl";
 
 import { splitDateTime } from "../../../misc";
 import { ChannelProps, ListProps, TabListActions } from "../../../types";
-import DiscountCategories from "../DiscountCategories";
-import DiscountCollections from "../DiscountCollections";
-import DiscountDates from "../DiscountDates";
-import DiscountProducts from "../DiscountProducts";
-import DiscountVariants from "../DiscountVariants";
-import SaleInfo from "../SaleInfo";
-import SaleSummary from "../SaleSummary";
-import SaleType from "../SaleType";
-import SaleValue from "../SaleValue";
+import { DiscountCategories } from "../DiscountCategories";
+import { DiscountCollections } from "../DiscountCollections";
+import { DiscountDates } from "../DiscountDates";
+import { DiscountProducts } from "../DiscountProducts";
+import { DiscountVariants } from "../DiscountVariants";
+import { SaleInfo } from "../SaleInfo";
+import { SaleSummary } from "../SaleSummary";
+import { SaleType } from "../SaleType";
+import { SaleValue } from "../SaleValue";
 
 export interface ChannelSaleFormData extends ChannelSaleData {
   percentageValue: string;
@@ -312,4 +312,4 @@ const SaleDetailsPage = ({
 };
 
 SaleDetailsPage.displayName = "SaleDetailsPage";
-export default SaleDetailsPage;
+export { SaleDetailsPage };

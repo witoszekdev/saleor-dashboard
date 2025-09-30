@@ -1,12 +1,12 @@
 // @ts-strict-ignore
 import { DashboardCard } from "@dashboard/components/Card";
-import Checkbox from "@dashboard/components/Checkbox";
-import ResponsiveTable from "@dashboard/components/ResponsiveTable";
+import { Checkbox } from "@dashboard/components/Checkbox";
+import { ResponsiveTable } from "@dashboard/components/ResponsiveTable";
 import { TableButtonWrapper } from "@dashboard/components/TableButtonWrapper/TableButtonWrapper";
-import TableCellAvatar from "@dashboard/components/TableCellAvatar";
-import TableHead from "@dashboard/components/TableHead";
+import { TableCellAvatar } from "@dashboard/components/TableCellAvatar";
+import { TableHead } from "@dashboard/components/TableHead";
 import { TablePaginationWithContext } from "@dashboard/components/TablePagination";
-import TableRowLink from "@dashboard/components/TableRowLink";
+import { TableRowLink } from "@dashboard/components/TableRowLink";
 import { SaleDetailsFragment, VoucherDetailsFragment } from "@dashboard/graphql";
 import { productVariantEditPath } from "@dashboard/products/urls";
 import { getLoadableList, mapEdgesToItems } from "@dashboard/utils/maps";
@@ -160,4 +160,4 @@ const DiscountVariants = (props: SaleVariantsProps) => {
 };
 
 DiscountVariants.displayName = "DiscountVariants";
-export default DiscountVariants;
+export { DiscountVariants };

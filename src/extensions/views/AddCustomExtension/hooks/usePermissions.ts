@@ -1,4 +1,4 @@
-import useShop from "@dashboard/hooks/useShop";
+import { useShop } from "@dashboard/hooks/useShop";
 import { useMemo } from "react";
 
 export const usePermissions = () => {

@@ -3,9 +3,9 @@ import {
   ChannelPriceAndPreorderData,
   IChannelPriceAndPreorderArgs,
 } from "@dashboard/channels/utils";
-import ChannelsAvailabilityDialog from "@dashboard/components/ChannelsAvailabilityDialog";
+import { ChannelsAvailabilityDialog } from "@dashboard/components/ChannelsAvailabilityDialog";
 import { FormsetData } from "@dashboard/hooks/useFormset";
-import useModalDialogOpen from "@dashboard/hooks/useModalDialogOpen";
+import { useModalDialogOpen } from "@dashboard/hooks/useModalDialogOpen";
 import { toggle } from "@dashboard/utils/lists";
 import { useState } from "react";
 

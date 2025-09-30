@@ -1,7 +1,7 @@
 import { IMoney } from "@dashboard/utils/intl";
 import { Text } from "@saleor/macaw-ui-next";
 
-import Money from "../Money";
+import { Money } from "../Money";
 import { useStyles } from "./styles";
 
 interface DiscountedPriceProps {
@@ -22,4 +22,4 @@ const DiscountedPrice = ({ regularPrice, discountedPrice }: DiscountedPriceProps
   );
 };
 
-export default DiscountedPrice;
+export { DiscountedPrice };

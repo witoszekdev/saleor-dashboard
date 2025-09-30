@@ -24,4 +24,4 @@ export const CardSpacer = (props: CardSpacerProps) => {
   return <div className={classes.spacer}>{children}</div>;
 };
 CardSpacer.displayName = "CardSpacer";
-export default CardSpacer;
+export { CardSpacer };

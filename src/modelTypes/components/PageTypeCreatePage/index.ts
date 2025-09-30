@@ -1,2 +1,2 @@
-export { default } from "./PageTypeCreatePage";
+export { PageTypeCreatePage } from "./PageTypeCreatePage";
 export * from "./PageTypeCreatePage";

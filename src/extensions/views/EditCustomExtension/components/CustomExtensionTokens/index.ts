@@ -1,2 +1,2 @@
 export * from "./CustomExtensionTokens";
-export { default } from "./CustomExtensionTokens";
+export { CustomExtensionTokens } from "./CustomExtensionTokens";

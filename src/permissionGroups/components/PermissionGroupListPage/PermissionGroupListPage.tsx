@@ -3,7 +3,7 @@ import { DashboardCard } from "@dashboard/components/Card";
 import { ListPageLayout } from "@dashboard/components/Layouts";
 import { configurationMenuUrl } from "@dashboard/configuration";
 import { PermissionGroupFragment } from "@dashboard/graphql";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { sectionNames } from "@dashboard/intl";
 import { Button } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
@@ -49,4 +49,4 @@ const PermissionGroupListPage = (listProps: PermissionGroupListPageProps) => {
 };
 
 PermissionGroupListPage.displayName = "PermissionGroupListPage";
-export default PermissionGroupListPage;
+export { PermissionGroupListPage };

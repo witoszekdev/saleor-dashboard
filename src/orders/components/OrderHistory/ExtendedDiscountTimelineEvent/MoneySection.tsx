@@ -1,10 +1,10 @@
-import HorizontalSpacer from "@dashboard/components/HorizontalSpacer";
+import { HorizontalSpacer } from "@dashboard/components/HorizontalSpacer";
 import { DiscountValueTypeEnum, MoneyFragment } from "@dashboard/graphql";
 import { makeStyles } from "@saleor/macaw-ui";
 import { Text } from "@saleor/macaw-ui-next";
 import { defineMessages, useIntl } from "react-intl";
 
-import Label from "../Label";
+import { Label } from "../Label";
 
 const useStyles = makeStyles(
   () => ({
@@ -101,4 +101,4 @@ const MoneySection = ({
   );
 };
 
-export default MoneySection;
+export { MoneySection };

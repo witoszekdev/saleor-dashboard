@@ -1,2 +1,2 @@
-export { default } from "./AssignVariantDialog";
+export { AssignVariantDialog } from "./AssignVariantDialog";
 export * from "./AssignVariantDialog";

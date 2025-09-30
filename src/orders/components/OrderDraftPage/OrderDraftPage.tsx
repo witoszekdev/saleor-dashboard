@@ -2,7 +2,7 @@
 import { FetchResult } from "@apollo/client";
 import { AppWidgets } from "@dashboard/apps/components/AppWidgets/AppWidgets";
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
-import CardSpacer from "@dashboard/components/CardSpacer";
+import { CardSpacer } from "@dashboard/components/CardSpacer";
 import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import { DateTime } from "@dashboard/components/Date";
 import { DetailPageLayout } from "@dashboard/components/Layouts";
@@ -20,17 +20,17 @@ import {
 } from "@dashboard/graphql";
 import { useBackLinkWithState } from "@dashboard/hooks/useBackLinkWithState";
 import { SubmitPromise } from "@dashboard/hooks/useForm";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import OrderChannelSectionCard from "@dashboard/orders/components/OrderChannelSectionCard";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
+import { OrderChannelSectionCard } from "@dashboard/orders/components/OrderChannelSectionCard";
 import { orderDraftListUrl } from "@dashboard/orders/urls";
 import { FetchMoreProps, RelayToFlat } from "@dashboard/types";
 import { Box, Divider, Skeleton, Text } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
 
-import OrderCustomer, { CustomerEditData } from "../OrderCustomer";
-import OrderDraftDetails from "../OrderDraftDetails/OrderDraftDetails";
-import OrderHistory, { FormData as HistoryFormData } from "../OrderHistory";
-import OrderDraftAlert from "./OrderDraftAlert";
+import { CustomerEditData, OrderCustomer } from "../OrderCustomer";
+import { OrderDraftDetails } from "../OrderDraftDetails/OrderDraftDetails";
+import { FormData as HistoryFormData, OrderHistory } from "../OrderHistory";
+import { OrderDraftAlert } from "./OrderDraftAlert";
 
 interface OrderDraftPageProps extends FetchMoreProps {
   disabled: boolean;
@@ -203,4 +203,4 @@ const OrderDraftPage = (props: OrderDraftPageProps) => {
 };
 
 OrderDraftPage.displayName = "OrderDraftPage";
-export default OrderDraftPage;
+export { OrderDraftPage };

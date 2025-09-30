@@ -47,4 +47,4 @@ const ProductVariantCheckoutSettings = (props: ProductVariantCheckoutSettingsPro
 };
 
 ProductVariantCheckoutSettings.displayName = "ProductVariantCheckoutSettings";
-export default ProductVariantCheckoutSettings;
+export { ProductVariantCheckoutSettings };

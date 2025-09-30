@@ -1,16 +1,16 @@
 import { DashboardCard } from "@dashboard/components/Card";
-import CardSpacer from "@dashboard/components/CardSpacer";
-import VerticalSpacer from "@dashboard/components/VerticalSpacer";
-import GiftCardTagInput from "@dashboard/giftCards/components/GiftCardTagInput";
-import GiftCardUpdateExpirySelect from "@dashboard/giftCards/GiftCardUpdate/GiftCardUpdateExpirySelect";
+import { CardSpacer } from "@dashboard/components/CardSpacer";
+import { VerticalSpacer } from "@dashboard/components/VerticalSpacer";
+import { GiftCardTagInput } from "@dashboard/giftCards/components/GiftCardTagInput";
+import { GiftCardUpdateExpirySelect } from "@dashboard/giftCards/GiftCardUpdate/GiftCardUpdateExpirySelect";
 import { Divider } from "@material-ui/core";
 import { Button, Skeleton, Text } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
 
-import useGiftCardDetails from "../providers/GiftCardDetailsProvider/hooks/useGiftCardDetails";
-import useGiftCardUpdateDialogs from "../providers/GiftCardUpdateDialogsProvider/hooks/useGiftCardUpdateDialogs";
-import useGiftCardUpdateForm from "../providers/GiftCardUpdateFormProvider/hooks/useGiftCardUpdateForm";
-import GiftCardUpdateDetailsBalanceSection from "./GiftCardUpdateDetailsBalanceSection";
+import { useGiftCardDetails } from "../providers/GiftCardDetailsProvider/hooks/useGiftCardDetails";
+import { useGiftCardUpdateDialogs } from "../providers/GiftCardUpdateDialogsProvider/hooks/useGiftCardUpdateDialogs";
+import { useGiftCardUpdate as useGiftCardUpdateForm } from "../providers/GiftCardUpdateFormProvider/hooks/useGiftCardUpdateForm";
+import { GiftCardUpdateDetailsBalanceSection } from "./GiftCardUpdateDetailsBalanceSection";
 import { giftCardUpdateDetailsCardMessages as messages } from "./messages";
 
 const GiftCardUpdateDetailsCard = () => {
@@ -65,4 +65,4 @@ const GiftCardUpdateDetailsCard = () => {
   );
 };
 
-export default GiftCardUpdateDetailsCard;
+export { GiftCardUpdateDetailsCard };

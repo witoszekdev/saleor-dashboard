@@ -1,9 +1,9 @@
 // @ts-strict-ignore
-import Money from "@dashboard/components/Money";
+import { Money } from "@dashboard/components/Money";
 import { IMoney } from "@dashboard/utils/intl";
 import { makeStyles } from "@saleor/macaw-ui";
 import { Skeleton } from "@saleor/macaw-ui-next";
-import clsx from "clsx";
+import { clsx } from "clsx";
 import reduce from "lodash/reduce";
 import { defineMessages, useIntl } from "react-intl";
 

@@ -1,5 +1,5 @@
 import { AppPaths } from "@dashboard/apps/urls";
-import SectionRoute from "@dashboard/auth/components/SectionRoute";
+import { SectionRoute } from "@dashboard/auth/components/SectionRoute";
 import { Route } from "@dashboard/components/Router";
 import { WindowTitle } from "@dashboard/components/WindowTitle";
 import { CustomAppDetailsUrlQueryParams } from "@dashboard/custom-apps/urls";
@@ -13,9 +13,9 @@ import { InstallCustomExtension } from "@dashboard/extensions/views/InstallCusto
 import { InstalledExtensions } from "@dashboard/extensions/views/InstalledExtensions";
 import { useFlag } from "@dashboard/featureFlags";
 import { PermissionEnum } from "@dashboard/graphql";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { sectionNames } from "@dashboard/intl";
-import NotFound from "@dashboard/NotFound";
+import { NotFound } from "@dashboard/NotFound";
 import { PluginUrlQueryParams } from "@dashboard/plugins/urls";
 import { parse as parseQs } from "qs";
 import { useIntl } from "react-intl";

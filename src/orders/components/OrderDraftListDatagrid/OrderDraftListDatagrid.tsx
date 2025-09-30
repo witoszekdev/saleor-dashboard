@@ -1,13 +1,13 @@
 import { ColumnPicker } from "@dashboard/components/Datagrid/ColumnPicker/ColumnPicker";
 import { useColumns } from "@dashboard/components/Datagrid/ColumnPicker/useColumns";
-import Datagrid from "@dashboard/components/Datagrid/Datagrid";
+import { Datagrid } from "@dashboard/components/Datagrid/Datagrid";
 import {
   DatagridChangeStateContext,
   useDatagridChangeState,
 } from "@dashboard/components/Datagrid/hooks/useDatagridChange";
 import { TablePaginationWithContext } from "@dashboard/components/TablePagination";
 import { getPrevLocationState } from "@dashboard/hooks/useBackLinkWithState";
-import useLocale from "@dashboard/hooks/useLocale";
+import { useLocale } from "@dashboard/hooks/useLocale";
 import { OrderDraft } from "@dashboard/orders/types";
 import { OrderDraftListUrlSortField, orderUrl } from "@dashboard/orders/urls";
 import { ListProps, SortPage } from "@dashboard/types";

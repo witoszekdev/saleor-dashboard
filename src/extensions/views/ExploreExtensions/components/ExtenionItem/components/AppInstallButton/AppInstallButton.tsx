@@ -1,6 +1,6 @@
 import { AppUrls } from "@dashboard/apps/urls";
 import { ButtonWithTooltip } from "@dashboard/components/ButtonWithTooltip";
-import Link from "@dashboard/components/Link";
+import { Link } from "@dashboard/components/Link";
 import { IS_CLOUD_INSTANCE } from "@dashboard/config";
 import { messages } from "@dashboard/extensions/messages";
 import { ExtensionsUrls } from "@dashboard/extensions/urls";

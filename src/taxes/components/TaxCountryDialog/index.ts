@@ -1,2 +1,2 @@
-export { default } from "./TaxCountryDialog";
+export { TaxCountryDialog } from "./TaxCountryDialog";
 export * from "./TaxCountryDialog";

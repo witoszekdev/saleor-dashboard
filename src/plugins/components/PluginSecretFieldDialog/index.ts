@@ -1,2 +1,2 @@
-export { default } from "./PluginSecretFieldDialog";
+export { PluginSecretFieldDialog } from "./PluginSecretFieldDialog";
 export * from "./PluginSecretFieldDialog";

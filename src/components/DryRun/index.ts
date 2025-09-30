@@ -1,2 +1,2 @@
-export { default } from "./DryRun";
+export { DryRun } from "./DryRun";
 export * from "./DryRun";

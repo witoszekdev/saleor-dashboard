@@ -1,6 +1,6 @@
 // @ts-strict-ignore
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
-import CardSpacer from "@dashboard/components/CardSpacer";
+import { CardSpacer } from "@dashboard/components/CardSpacer";
 import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import { DetailPageLayout } from "@dashboard/components/Layouts";
 import {
@@ -20,9 +20,9 @@ import { calculateCanRefundShipping } from "../OrderGrantRefundPage/utils";
 import { TransactionSubmitCard } from "./components";
 import { PaymentSubmitCard } from "./components/PaymentSubmitCard";
 import { getReturnProductsAmountValues } from "./components/PaymentSubmitCard/utils";
-import OrderRefundForm, { OrderRefundSubmitData } from "./form";
+import { OrderRefundSubmitData, OrderReturnForm as OrderRefundForm } from "./form";
 import { orderReturnMessages } from "./messages";
-import ItemsCard from "./OrderReturnRefundItemsCard/ReturnItemsCard";
+import { ItemsCard } from "./OrderReturnRefundItemsCard/ReturnItemsCard";
 import {
   getFulfilledFulfillemnts,
   getParsedLines,
@@ -161,4 +161,4 @@ const OrderRefundPage = (props: OrderReturnPageProps) => {
   );
 };
 
-export default OrderRefundPage;
+export { OrderRefundPage };

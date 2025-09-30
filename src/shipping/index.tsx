@@ -16,11 +16,11 @@ import {
   ShippingZonesListUrlQueryParams,
   ShippingZoneUrlQueryParams,
 } from "./urls";
-import RateCreateComponent from "./views/RateCreate";
-import RateUpdateComponent from "./views/RateUpdate";
-import ShippingZoneCreate from "./views/ShippingZoneCreate";
-import ShippingZoneDetailsComponent from "./views/ShippingZoneDetails";
-import ShippingZonesListComponent from "./views/ShippingZonesList";
+import { RateCreate as RateCreateComponent } from "./views/RateCreate";
+import { RateUpdate as RateUpdateComponent } from "./views/RateUpdate";
+import { ShippingZoneCreate } from "./views/ShippingZoneCreate";
+import { ShippingZoneDetails as ShippingZoneDetailsComponent } from "./views/ShippingZoneDetails";
+import { ShippingZonesList as ShippingZonesListComponent } from "./views/ShippingZonesList";
 
 const ShippingZonesList = ({ location }: RouteComponentProps<{}>) => {
   const qs = parseQs(location.search.substr(1));
@@ -83,4 +83,4 @@ const ShippingRouter = () => {
   );
 };
 
-export default ShippingRouter;
+export { ShippingRouter };

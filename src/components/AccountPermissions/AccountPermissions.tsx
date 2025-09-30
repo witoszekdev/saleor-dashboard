@@ -135,4 +135,4 @@ const AccountPermissions = (props: AccountPermissionsProps) => {
 };
 
 AccountPermissions.displayName = "AccountPermissions";
-export default AccountPermissions;
+export { AccountPermissions };

@@ -1,4 +1,4 @@
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { renderHook } from "@testing-library/react-hooks";
 
 import { useRowAnchorHandler } from "./useRowAnchorHandler";

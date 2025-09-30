@@ -48,4 +48,4 @@ function getPermissionGroupErrorMessage(
   return getCommonFormFieldErrorMessage(err, intl);
 }
 
-export default getPermissionGroupErrorMessage;
+export { getPermissionGroupErrorMessage };

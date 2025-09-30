@@ -4,7 +4,8 @@ import {
   PaymentGatewayFragment,
   TransactionActionEnum,
 } from "@dashboard/graphql";
-import OrderTransaction, {
+import {
+  OrderTransaction,
   OrderTransactionProps,
 } from "@dashboard/orders/components/OrderTransaction/OrderTransaction";
 import { FakeTransaction } from "@dashboard/orders/types";
@@ -75,4 +76,4 @@ const OrderTransactionPayment = ({
   );
 };
 
-export default OrderTransactionPayment;
+export { OrderTransactionPayment };

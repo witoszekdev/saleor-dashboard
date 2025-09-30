@@ -1,4 +1,4 @@
-import useRouter from "use-react-router";
+import { useRouter } from "use-react-router";
 
 export const useCollectionId = () => {
   const {

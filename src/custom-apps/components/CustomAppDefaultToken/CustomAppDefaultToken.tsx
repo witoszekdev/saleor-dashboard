@@ -1,6 +1,6 @@
 import { DashboardCard } from "@dashboard/components/Card";
 import { useClipboard } from "@dashboard/hooks/useClipboard";
-import CloseIcon from "@material-ui/icons/Close";
+import { SvgIcon as CloseIcon } from "@material-ui/icons/Close";
 import { Box, Button, Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage } from "react-intl";
 
@@ -54,4 +54,4 @@ const CustomAppDefaultToken = (props: CustomAppDefaultTokenProps) => {
 };
 
 CustomAppDefaultToken.displayName = "CustomAppDefaultToken";
-export default CustomAppDefaultToken;
+export { CustomAppDefaultToken };

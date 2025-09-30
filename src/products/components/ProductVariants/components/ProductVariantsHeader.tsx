@@ -1,10 +1,10 @@
 import { Header as DatagridHeader } from "@dashboard/components/Datagrid/components/Header";
 import { DatagridRenderHeaderProps } from "@dashboard/components/Datagrid/Datagrid";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { productVariantAddUrl } from "@dashboard/products/urls";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import messages from "../messages";
+import { messages } from "../messages";
 
 export const ProductVariantsHeader = ({
   addRowOnDatagrid,

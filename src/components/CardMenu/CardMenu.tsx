@@ -10,7 +10,7 @@ import {
 } from "@material-ui/core";
 import { IconButtonProps, makeStyles, SettingsIcon } from "@saleor/macaw-ui";
 import { Text } from "@saleor/macaw-ui-next";
-import clsx from "clsx";
+import { clsx } from "clsx";
 import { useEffect, useRef, useState } from "react";
 import * as React from "react";
 import { FormattedMessage } from "react-intl";
@@ -210,4 +210,4 @@ const CardMenu = (props: CardMenuProps) => {
 };
 
 CardMenu.displayName = "CardMenu";
-export default CardMenu;
+export { CardMenu };

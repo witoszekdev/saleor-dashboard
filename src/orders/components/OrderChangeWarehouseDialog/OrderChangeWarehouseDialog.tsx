@@ -1,12 +1,12 @@
 // @ts-strict-ignore
-import Debounce from "@dashboard/components/Debounce";
+import { Debounce } from "@dashboard/components/Debounce";
 import { DashboardModal } from "@dashboard/components/Modal";
-import TableRowLink from "@dashboard/components/TableRowLink";
+import { TableRowLink } from "@dashboard/components/TableRowLink";
 import { OrderFulfillLineFragment, WarehouseFragment } from "@dashboard/graphql";
 import { buttonMessages } from "@dashboard/intl";
 import { getById } from "@dashboard/misc";
 import { getLineAvailableQuantityInWarehouse } from "@dashboard/orders/utils/data";
-import useWarehouseSearch from "@dashboard/searches/useWarehouseSearch";
+import { UseWarehouseSearch as useWarehouseSearch } from "@dashboard/searches/useWarehouseSearch";
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 import {
   FormControlLabel,
@@ -198,4 +198,4 @@ const OrderChangeWarehouseDialog = ({
 };
 
 OrderChangeWarehouseDialog.displayName = "OrderChangeWarehouseDialog";
-export default OrderChangeWarehouseDialog;
+export { OrderChangeWarehouseDialog };

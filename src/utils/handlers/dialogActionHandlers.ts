@@ -48,4 +48,4 @@ function createDialogActionHandlers<
   return [open, close];
 }
 
-export default createDialogActionHandlers;
+export { createDialogActionHandlers };

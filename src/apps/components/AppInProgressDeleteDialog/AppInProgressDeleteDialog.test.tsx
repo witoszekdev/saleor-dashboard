@@ -1,8 +1,8 @@
-import Wrapper from "@test/wrapper";
+import { Wrapper } from "@test/wrapper";
 import { render, screen } from "@testing-library/react";
 
-import AppInProgressDeleteDialog from "./AppInProgressDeleteDialog";
-import msgs from "./messages";
+import { AppInProgressDeleteDialog } from "./AppInProgressDeleteDialog";
+import { Messages as msgs } from "./messages";
 
 describe("Apps AppInProgressDeleteDialog", () => {
   it("displays action text with app name when app name passed", () => {

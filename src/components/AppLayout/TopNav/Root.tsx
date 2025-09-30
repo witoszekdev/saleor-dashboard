@@ -3,8 +3,8 @@ import { Box, BoxProps, Text } from "@saleor/macaw-ui-next";
 import { PropsWithChildren } from "react";
 import * as React from "react";
 
-import useAppChannel from "../AppChannelContext";
-import AppChannelSelect from "../AppChannelSelect";
+import { useAppChannel } from "../AppChannelContext";
+import { AppChannelSelect } from "../AppChannelSelect";
 import { ContextualLine } from "../ContextualLinks/ContextualLine";
 import { TopNavLink } from "./TopNavLink";
 import { TopNavWrapper } from "./TopNavWrapper";

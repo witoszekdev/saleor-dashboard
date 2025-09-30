@@ -14,9 +14,9 @@ import {
   getSingleDisplayValue,
   getTruncatedTextValue,
 } from "@dashboard/components/Attributes/utils";
-import FileUploadField from "@dashboard/components/FileUploadField";
-import RichTextEditor from "@dashboard/components/RichTextEditor";
-import SortableChipsField from "@dashboard/components/SortableChipsField";
+import { FileUploadField } from "@dashboard/components/FileUploadField";
+import { RichTextEditor } from "@dashboard/components/RichTextEditor";
+import { SortableChipsField } from "@dashboard/components/SortableChipsField";
 import { AttributeInputTypeEnum } from "@dashboard/graphql";
 import { Box, Input, Select, Text } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
@@ -305,4 +305,4 @@ const AttributeRow = ({
 };
 
 AttributeRow.displayName = "AttributeRow";
-export default AttributeRow;
+export { AttributeRow };

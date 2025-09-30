@@ -1,12 +1,12 @@
 // @ts-strict-ignore
-import AccountPermissions from "@dashboard/components/AccountPermissions";
+import { AccountPermissions } from "@dashboard/components/AccountPermissions";
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
-import CardSpacer from "@dashboard/components/CardSpacer";
+import { CardSpacer } from "@dashboard/components/CardSpacer";
 import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import Form from "@dashboard/components/Form";
+import { Form } from "@dashboard/components/Form";
 import { DetailPageLayout } from "@dashboard/components/Layouts";
 import { Savebar } from "@dashboard/components/Savebar";
-import AppHeaderOptions from "@dashboard/extensions/components/AppHeaderOptions";
+import { AppHeaderOptions } from "@dashboard/extensions/components/AppHeaderOptions";
 import { appMessages } from "@dashboard/extensions/messages";
 import { ExtensionsUrls } from "@dashboard/extensions/urls";
 import { getAppInstallErrorMessage } from "@dashboard/extensions/utils";
@@ -17,14 +17,14 @@ import {
   ShopInfoQuery,
 } from "@dashboard/graphql";
 import { SubmitPromise } from "@dashboard/hooks/useForm";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { getFormErrors } from "@dashboard/utils/errors";
 import { Tooltip } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import CustomExtensionDefaultToken from "../CustomExtensionDefaultToken";
-import CustomExtensionInformation from "../CustomExtensionInformation";
-import CustomExtensionTokens from "../CustomExtensionTokens";
+import { CustomExtensionDefaultToken } from "../CustomExtensionDefaultToken";
+import { CustomExtensionInformation } from "../CustomExtensionInformation";
+import { CustomExtensionTokens } from "../CustomExtensionTokens";
 import { WebhooksList } from "../WebhooksList";
 
 export interface CustomExtensionDetailsPageFormData {
@@ -195,4 +195,4 @@ const CustomExtensionDetailsPage = (props: CustomExtensionDetailsPageProps) => {
 };
 
 CustomExtensionDetailsPage.displayName = "CustomAppDetailsPage";
-export default CustomExtensionDetailsPage;
+export { CustomExtensionDetailsPage };

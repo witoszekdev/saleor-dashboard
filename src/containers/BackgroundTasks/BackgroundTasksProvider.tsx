@@ -1,11 +1,11 @@
 // @ts-strict-ignore
 import { ApolloClient, useApolloClient } from "@apollo/client";
 import { IMessageContext } from "@dashboard/components/messages";
-import useNotifier from "@dashboard/hooks/useNotifier";
+import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { ReactNode, useEffect, useRef } from "react";
 import { IntlShape, useIntl } from "react-intl";
 
-import BackgroundTasksContext from "./context";
+import { BackgroundTasksContext } from "./context";
 import { checkExportFileStatus, checkOrderInvoicesStatus } from "./queries";
 import { handleTask, queueCustom, queueExport, queueInvoiceGenerate } from "./tasks";
 import { QueuedTask, Task, TaskData, TaskStatus } from "./types";
@@ -118,4 +118,4 @@ const BackgroundTasksProvider = ({ children }: { children: ReactNode }) => {
 };
 
 BackgroundTasksProvider.displayName = "BackgroundTasksProvider";
-export default BackgroundTasksProvider;
+export { BackgroundTasksProvider };

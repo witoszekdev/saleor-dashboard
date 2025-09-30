@@ -40,4 +40,4 @@ const AssignContainerDialog = (props: AssignContainerDialogProps) => {
 
 AssignContainerDialog.displayName = "AssignContainerDialog";
 
-export default AssignContainerDialog;
+export { AssignContainerDialog };

@@ -1,6 +1,6 @@
 // @ts-strict-ignore
-import CardSpacer from "@dashboard/components/CardSpacer";
-import HorizontalSpacer from "@dashboard/components/HorizontalSpacer";
+import { CardSpacer } from "@dashboard/components/CardSpacer";
+import { HorizontalSpacer } from "@dashboard/components/HorizontalSpacer";
 import { TimelineEvent } from "@dashboard/components/Timeline";
 import { TitleElement } from "@dashboard/components/Timeline/TimelineEventHeader";
 import { OrderEventFragment, OrderEventsEnum } from "@dashboard/graphql";
@@ -8,8 +8,8 @@ import { makeStyles } from "@saleor/macaw-ui";
 import { Text } from "@saleor/macaw-ui-next";
 import { defineMessages, useIntl } from "react-intl";
 
-import Label from "../Label";
-import MoneySection, { MoneySectionType } from "./MoneySection";
+import { Label } from "../Label";
+import { MoneySection, MoneySectionType } from "./MoneySection";
 
 const useStyles = makeStyles(
   () => ({
@@ -94,4 +94,4 @@ const ExtendedDiscountTimelineEvent = ({ event, titleElements }: ExtendedTimelin
   );
 };
 
-export default ExtendedDiscountTimelineEvent;
+export { ExtendedDiscountTimelineEvent };

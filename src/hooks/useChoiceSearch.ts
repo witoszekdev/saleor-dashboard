@@ -12,4 +12,4 @@ function useChoiceSearch(choices: Option[]) {
   return { search: setQuery, result: sortedChoices };
 }
 
-export default useChoiceSearch;
+export { useChoiceSearch };

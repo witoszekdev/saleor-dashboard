@@ -28,4 +28,4 @@ const GiftCardCreateRequiresActivationSection = ({
   </Checkbox>
 );
 
-export default GiftCardCreateRequiresActivationSection;
+export { GiftCardCreateRequiresActivationSection };

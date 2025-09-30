@@ -1,4 +1,4 @@
-import ActionDialog from "@dashboard/components/ActionDialog";
+import { ActionDialog } from "@dashboard/components/ActionDialog";
 import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import { FormattedMessage, useIntl } from "react-intl";
 
@@ -45,4 +45,4 @@ const WarehouseDeleteDialog = ({
 };
 
 WarehouseDeleteDialog.displayName = "WarehouseDeleteDialog";
-export default WarehouseDeleteDialog;
+export { WarehouseDeleteDialog };

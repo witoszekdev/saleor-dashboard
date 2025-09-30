@@ -1,7 +1,7 @@
 import { messages } from "@dashboard/extensions/messages";
 import { ExtensionsUrls } from "@dashboard/extensions/urls";
 import { PermissionEnum } from "@dashboard/graphql";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { buttonMessages } from "@dashboard/intl";
 import { useUserHasPermissions } from "@dashboard/utils/permissions";
 import { Button, Tooltip } from "@saleor/macaw-ui-next";

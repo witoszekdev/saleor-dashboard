@@ -1,5 +1,5 @@
 import { makeStyles } from "@saleor/macaw-ui";
-import clsx from "clsx";
+import { clsx } from "clsx";
 import * as React from "react";
 
 interface TabContainerProps {

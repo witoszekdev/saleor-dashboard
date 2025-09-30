@@ -6,12 +6,12 @@ import { Metadata } from "@dashboard/components/Metadata";
 import { Savebar } from "@dashboard/components/Savebar";
 import { SeoForm } from "@dashboard/components/SeoForm";
 import { ProductErrorFragment } from "@dashboard/graphql";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { Box } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
 
-import CategoryDetailsForm from "../../components/CategoryDetailsForm";
-import CategoryCreateForm, { CategoryCreateData } from "./form";
+import { CategoryDetailsForm } from "../../components/CategoryDetailsForm";
+import { CategoryCreateData, CategoryCreateForm } from "./form";
 
 interface CategoryCreatePageProps {
   errors: ProductErrorFragment[];
@@ -89,4 +89,4 @@ const CategoryCreatePage = ({
 };
 
 CategoryCreatePage.displayName = "CategoryCreatePage";
-export default CategoryCreatePage;
+export { CategoryCreatePage };

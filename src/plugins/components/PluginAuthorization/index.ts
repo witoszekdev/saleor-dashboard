@@ -1,2 +1,2 @@
-export { default } from "./PluginAuthorization";
+export { PluginAuthorization } from "./PluginAuthorization";
 export * from "./PluginAuthorization";

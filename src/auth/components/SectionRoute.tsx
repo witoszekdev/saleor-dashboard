@@ -2,7 +2,7 @@ import { Route } from "@dashboard/components/Router";
 import { PermissionEnum } from "@dashboard/graphql";
 import { RouteProps } from "react-router-dom";
 
-import NotFound from "../../NotFound";
+import { NotFound } from "../../NotFound";
 import { useUser } from "..";
 import { hasAllPermissions, hasAnyPermissions } from "../misc";
 
@@ -39,4 +39,4 @@ const SectionRoute = ({ permissions, matchPermission = "all", ...props }: Sectio
 };
 
 SectionRoute.displayName = "Route";
-export default SectionRoute;
+export { SectionRoute };

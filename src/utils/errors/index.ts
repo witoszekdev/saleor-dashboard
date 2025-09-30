@@ -53,4 +53,4 @@ export function getFormChannelError<TError extends ChannelError>(
   return formError?.find(error => error.channels?.find(id => id === channelId));
 }
 
-export { default as getProductErrorMessage } from "./product";
+export { getProductErrorMessage as getProductErrorMessage } from "./product";

@@ -1,2 +1,2 @@
-export { default } from "./ShippingZoneInfo";
+export { ShippingZoneInfo } from "./ShippingZoneInfo";
 export * from "./ShippingZoneInfo";

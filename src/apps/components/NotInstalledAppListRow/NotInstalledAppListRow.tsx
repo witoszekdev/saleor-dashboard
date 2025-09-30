@@ -1,7 +1,7 @@
 import { useAppListContext } from "@dashboard/apps/context";
 import { appInstallationStatusMessages, appsMessages } from "@dashboard/apps/messages";
 import { AppInstallation } from "@dashboard/apps/types";
-import TableButtonWrapper from "@dashboard/components/TableButtonWrapper/TableButtonWrapper";
+import { TableButtonWrapper } from "@dashboard/components/TableButtonWrapper/TableButtonWrapper";
 import { JobStatusEnum } from "@dashboard/graphql";
 import { buttonMessages } from "@dashboard/intl";
 import { CircularProgress } from "@material-ui/core";
@@ -108,4 +108,4 @@ const NotInstalledAppListRow = (props: AppInstallation) => {
   );
 };
 
-export default NotInstalledAppListRow;
+export { NotInstalledAppListRow };

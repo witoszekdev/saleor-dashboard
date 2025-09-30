@@ -1,21 +1,21 @@
 import { ChannelVoucherData } from "@dashboard/channels/utils";
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
-import AssignCategoriesDialog from "@dashboard/components/AssignCategoryDialog/AssignCategoryDialog";
-import AssignCollectionDialog from "@dashboard/components/AssignCollectionDialog";
-import AssignProductDialog from "@dashboard/components/AssignProductDialog";
-import AssignVariantDialog from "@dashboard/components/AssignVariantDialog/AssignVariantDialog";
-import CardSpacer from "@dashboard/components/CardSpacer";
-import ChannelsAvailabilityCard from "@dashboard/components/ChannelsAvailabilityCard";
+import { AssignCategoryDialog as AssignCategoriesDialog } from "@dashboard/components/AssignCategoryDialog/AssignCategoryDialog";
+import { AssignCollectionDialog } from "@dashboard/components/AssignCollectionDialog";
+import { AssignProductDialog } from "@dashboard/components/AssignProductDialog";
+import { AssignVariantDialog } from "@dashboard/components/AssignVariantDialog/AssignVariantDialog";
+import { CardSpacer } from "@dashboard/components/CardSpacer";
+import { ChannelsAvailability as ChannelsAvailabilityCard } from "@dashboard/components/ChannelsAvailabilityCard";
 import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import CountryList from "@dashboard/components/CountryList";
+import { CountryList } from "@dashboard/components/CountryList";
 import { DetailPageLayout } from "@dashboard/components/Layouts";
 import { Metadata } from "@dashboard/components/Metadata";
 import { Savebar } from "@dashboard/components/Savebar";
 import { Tab, TabContainer } from "@dashboard/components/Tab";
-import DiscountCategories from "@dashboard/discounts/components/DiscountCategories";
-import DiscountCollections from "@dashboard/discounts/components/DiscountCollections";
-import DiscountCountrySelectDialog from "@dashboard/discounts/components/DiscountCountrySelectDialog";
-import DiscountProducts from "@dashboard/discounts/components/DiscountProducts";
+import { DiscountCategories } from "@dashboard/discounts/components/DiscountCategories";
+import { DiscountCollections } from "@dashboard/discounts/components/DiscountCollections";
+import { DiscountCountrySelectDialog } from "@dashboard/discounts/components/DiscountCountrySelectDialog";
+import { DiscountProducts } from "@dashboard/discounts/components/DiscountProducts";
 import { useSpecificItemsAssign } from "@dashboard/discounts/components/VoucherCreatePage/hooks/useSpecificItemsAssign";
 import { useSpecificItemsPagination } from "@dashboard/discounts/components/VoucherCreatePage/hooks/useSpecificItemsPagination";
 import {
@@ -42,26 +42,26 @@ import {
   VoucherTypeEnum,
 } from "@dashboard/graphql";
 import { UseSearchResult } from "@dashboard/hooks/makeSearch";
-import useForm, { SubmitPromise } from "@dashboard/hooks/useForm";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { SubmitPromise, useForm } from "@dashboard/hooks/useForm";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { PaginatorContext } from "@dashboard/hooks/usePaginator";
 import { buttonMessages } from "@dashboard/intl";
 import { validatePrice } from "@dashboard/products/utils/validation";
 import { ListActionsWithoutToolbar } from "@dashboard/types";
-import useMetadataChangeTrigger from "@dashboard/utils/metadata/useMetadataChangeTrigger";
+import { useMetadataChangeTrigger } from "@dashboard/utils/metadata/useMetadataChangeTrigger";
 import { Button, Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 
 import { RequirementsPicker } from "../../types";
-import DiscountVariants from "../DiscountVariants/DiscountVariants";
+import { DiscountVariants } from "../DiscountVariants/DiscountVariants";
 import { VoucherCodes } from "../VoucherCodes";
 import { GenerateMultipleVoucherCodeFormData } from "../VoucherCodesGenerateDialog";
-import VoucherDates from "../VoucherDates";
-import VoucherInfo from "../VoucherInfo";
-import VoucherLimits from "../VoucherLimits";
-import VoucherRequirements from "../VoucherRequirements";
-import VoucherTypes from "../VoucherTypes";
-import VoucherValue from "../VoucherValue";
+import { VoucherDates } from "../VoucherDates";
+import { VoucherInfo } from "../VoucherInfo";
+import { VoucherLimits } from "../VoucherLimits";
+import { VoucherRequirements } from "../VoucherRequirements";
+import { VoucherTypes } from "../VoucherTypes";
+import { VoucherValue } from "../VoucherValue";
 import { initialForm } from "./const";
 import { useActiveTab } from "./hooks/useActiveTab";
 import { useVoucherCodesPagination } from "./hooks/useVoucherCodesPagination";
@@ -563,4 +563,4 @@ const VoucherCreatePage = ({
 };
 
 VoucherCreatePage.displayName = "VoucherCreatePage";
-export default VoucherCreatePage;
+export { VoucherCreatePage };

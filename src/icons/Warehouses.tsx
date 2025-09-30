@@ -17,6 +17,6 @@ const WarehousesIcon = createSvgIcon(
   "Warehouses",
 );
 
-export default function Warehouses(props: SvgIconProps) {
+export function Warehouses(props: SvgIconProps) {
   return <WarehousesIcon {...props} viewBox="0 0 32 32" />;
 }

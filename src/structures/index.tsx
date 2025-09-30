@@ -4,8 +4,8 @@ import { parse as parseQs } from "qs";
 import { RouteComponentProps, Switch } from "react-router-dom";
 
 import { MenuListUrlQueryParams, MenuListUrlSortField, menuPath, structuresListPath } from "./urls";
-import MenuDetailsComponent from "./views/MenuDetails";
-import MenuListComponent from "./views/MenuList";
+import { MenuDetails as MenuDetailsComponent } from "./views/MenuDetails";
+import { MenuList as MenuListComponent } from "./views/MenuList";
 
 const MenuList = () => {
   const qs = parseQs(location.search.substr(1)) as any;
@@ -25,4 +25,4 @@ const NavigationRouter = () => (
   </Switch>
 );
 
-export default NavigationRouter;
+export { NavigationRouter };

@@ -57,4 +57,4 @@ const RefundShipmentCheckbox = ({
   );
 };
 
-export default RefundShipmentCheckbox;
+export { RefundShipmentCheckbox };

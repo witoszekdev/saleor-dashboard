@@ -1,7 +1,7 @@
 import { DEFAULT_INITIAL_SEARCH_DATA } from "@dashboard/config";
-import useCategorySearch from "@dashboard/searches/useCategorySearch";
-import useCollectionSearch from "@dashboard/searches/useCollectionSearch";
-import usePageSearch from "@dashboard/searches/usePageSearch";
+import { UseCategorySearch as useCategorySearch } from "@dashboard/searches/useCategorySearch";
+import { UseCollectionSearch as useCollectionSearch } from "@dashboard/searches/useCollectionSearch";
+import { UsePageSearch as usePageSearch } from "@dashboard/searches/usePageSearch";
 import { FetchMoreProps } from "@dashboard/types";
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 

@@ -4,15 +4,15 @@ import {
   useUpdateVoucherTranslationsMutation,
   useVoucherTranslationDetailsQuery,
 } from "@dashboard/graphql";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useNotifier from "@dashboard/hooks/useNotifier";
-import useShop from "@dashboard/hooks/useShop";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
+import { useNotifier } from "@dashboard/hooks/useNotifier";
+import { useShop } from "@dashboard/hooks/useShop";
 import { commonMessages } from "@dashboard/intl";
 import { stringifyQs } from "@dashboard/utils/urls";
 import { useIntl } from "react-intl";
 
 import { extractMutationErrors, maybe } from "../../misc";
-import TranslationsVouchersPage from "../components/TranslationsVouchersPage";
+import { TranslationsVouchersPage } from "../components/TranslationsVouchersPage";
 import { TranslationField, TranslationInputFieldName } from "../types";
 import { getParsedTranslationInputData } from "../utils";
 
@@ -91,4 +91,4 @@ const TranslationsVouchers = ({ id, languageCode, params }: TranslationsVouchers
 };
 
 TranslationsVouchers.displayName = "TranslationsVouchers";
-export default TranslationsVouchers;
+export { TranslationsVouchers };

@@ -31,4 +31,4 @@ const useStyles = makeStyles(
   { name: "Login" },
 );
 
-export default useStyles;
+export { useStyles };

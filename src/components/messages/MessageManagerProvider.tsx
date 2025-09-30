@@ -16,4 +16,4 @@ const MessageManagerProvider = ({ children }: PropsWithChildren) => {
   );
 };
 
-export default MessageManagerProvider;
+export { MessageManagerProvider };

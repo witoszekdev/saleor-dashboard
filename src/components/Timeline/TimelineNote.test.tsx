@@ -1,9 +1,9 @@
 import { OrderEventFragment } from "@dashboard/graphql/types.generated";
-import Wrapper from "@test/wrapper";
+import { Wrapper } from "@test/wrapper";
 import { act, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
-import TimelineNote from "./TimelineNote";
+import { TimelineNote } from "./TimelineNote";
 
 const wrapperFriendlyDate = new Date("2018-08-07T14:30:40+00:00").toISOString();
 

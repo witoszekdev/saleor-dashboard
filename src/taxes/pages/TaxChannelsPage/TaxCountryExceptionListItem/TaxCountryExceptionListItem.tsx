@@ -1,5 +1,5 @@
 // @ts-strict-ignore
-import ControlledCheckbox from "@dashboard/components/ControlledCheckbox";
+import { ControlledCheckbox } from "@dashboard/components/ControlledCheckbox";
 import { Select } from "@dashboard/components/Select";
 import { TaxConfigurationUpdateInput } from "@dashboard/graphql";
 import { FormChange } from "@dashboard/hooks/useForm";
@@ -73,4 +73,4 @@ const TaxCountryExceptionListItem = ({
   );
 };
 
-export default TaxCountryExceptionListItem;
+export { TaxCountryExceptionListItem };

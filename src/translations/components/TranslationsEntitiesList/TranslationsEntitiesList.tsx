@@ -1,10 +1,10 @@
-import ResponsiveTable from "@dashboard/components/ResponsiveTable";
+import { ResponsiveTable } from "@dashboard/components/ResponsiveTable";
 import { TablePaginationWithContext } from "@dashboard/components/TablePagination";
-import TableRowLink from "@dashboard/components/TableRowLink";
+import { TableRowLink } from "@dashboard/components/TableRowLink";
 import { TableBody, TableCell, TableFooter, TableHead } from "@material-ui/core";
 import { makeStyles } from "@saleor/macaw-ui";
 import { Skeleton } from "@saleor/macaw-ui-next";
-import clsx from "clsx";
+import { clsx } from "clsx";
 import { FormattedMessage, useIntl } from "react-intl";
 
 import { maybe, renderCollection } from "../../../misc";
@@ -108,4 +108,4 @@ const TranslationsEntitiesList = (props: TranslationsEntitiesListProps) => {
 };
 
 TranslationsEntitiesList.displayName = "TranslationsEntitiesList";
-export default TranslationsEntitiesList;
+export { TranslationsEntitiesList };

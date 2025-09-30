@@ -42,4 +42,4 @@ function reduceFilter<K extends string, T extends FieldType>(
   }
 }
 
-export default reduceFilter;
+export { reduceFilter };

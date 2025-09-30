@@ -1,5 +1,5 @@
 import { getAppMountUri } from "@dashboard/config";
-import useDebounce from "@dashboard/hooks/useDebounce";
+import { useDebounce } from "@dashboard/hooks/useDebounce";
 import { getCellAction } from "@dashboard/products/components/ProductListDatagrid/datagrid";
 import { DataEditorProps, GridMouseEventArgs, Item } from "@glideapps/glide-data-grid";
 import { useCallback, useRef } from "react";

@@ -5,8 +5,8 @@ import {
   TransactionItemFragment,
   useOrderTransactionRequestActionMutation,
 } from "@dashboard/graphql";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useNotifier from "@dashboard/hooks/useNotifier";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
+import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { refundSavebarMessages } from "@dashboard/orders/components/OrderTransactionRefundPage/messages";
 import { orderUrl } from "@dashboard/orders/urls";
 import {

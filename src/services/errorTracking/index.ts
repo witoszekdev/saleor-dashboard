@@ -10,4 +10,4 @@ const errorTracker = ErrorTrackerFactory(
   }),
 );
 
-export default errorTracker;
+export { errorTracker };

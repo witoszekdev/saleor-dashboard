@@ -9,7 +9,7 @@ import { DashboardCard } from "@dashboard/components/Card";
 import { FilterElement } from "@dashboard/components/Filter";
 import { FilterPresetsSelect } from "@dashboard/components/FilterPresetsSelect";
 import { ListPageLayout } from "@dashboard/components/Layouts";
-import LimitReachedAlert from "@dashboard/components/LimitReachedAlert";
+import { LimitReachedAlert } from "@dashboard/components/LimitReachedAlert";
 import { ProductListColumns } from "@dashboard/config";
 import { extensionMountPoints } from "@dashboard/extensions/extensionMountPoints";
 import {
@@ -25,8 +25,8 @@ import {
   useAvailableColumnAttributesLazyQuery,
 } from "@dashboard/graphql";
 import { getPrevLocationState } from "@dashboard/hooks/useBackLinkWithState";
-import useLocalStorage from "@dashboard/hooks/useLocalStorage";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useLocalStorage } from "@dashboard/hooks/useLocalStorage";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { sectionNames } from "@dashboard/intl";
 import {
   ChannelProps,
@@ -302,4 +302,4 @@ const ProductListPage = (props: ProductListPageProps) => {
 };
 
 ProductListPage.displayName = "ProductListPage";
-export default ProductListPage;
+export { ProductListPage };

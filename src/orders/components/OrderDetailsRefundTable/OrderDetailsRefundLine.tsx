@@ -1,5 +1,5 @@
 import { GridTable } from "@dashboard/components/GridTable";
-import Money from "@dashboard/components/Money";
+import { Money } from "@dashboard/components/Money";
 import { UserAvatar } from "@dashboard/components/UserAvatar";
 import { getUserInitials, getUserName, User } from "@dashboard/misc";
 import { refundGridMessages } from "@dashboard/orders/components/OrderDetailsRefundTable/messages";

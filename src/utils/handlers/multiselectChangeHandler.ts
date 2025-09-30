@@ -14,4 +14,4 @@ function createMultiselectChangeHandler(
   };
 }
 
-export default createMultiselectChangeHandler;
+export { createMultiselectChangeHandler };

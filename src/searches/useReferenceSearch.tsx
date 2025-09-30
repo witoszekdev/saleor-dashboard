@@ -1,7 +1,7 @@
 import { DEFAULT_INITIAL_SEARCH_DATA } from "@dashboard/config";
 import { AttributeDetailsFragment, VariantAttributeFragment } from "@dashboard/graphql";
-import usePageSearch from "@dashboard/searches/usePageSearch";
-import useProductSearch from "@dashboard/searches/useProductSearch";
+import { UsePageSearch as usePageSearch } from "@dashboard/searches/usePageSearch";
+import { UseProductSearch as useProductSearch } from "@dashboard/searches/useProductSearch";
 import { useMemo } from "react";
 
 enum ReferenceType {

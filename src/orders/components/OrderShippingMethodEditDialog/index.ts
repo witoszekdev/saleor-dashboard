@@ -1,2 +1,2 @@
-export { default } from "./OrderShippingMethodEditDialog";
+export { OrderShippingMethodEditDialog } from "./OrderShippingMethodEditDialog";
 export * from "./OrderShippingMethodEditDialog";

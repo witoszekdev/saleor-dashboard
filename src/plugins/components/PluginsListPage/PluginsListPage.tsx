@@ -2,7 +2,7 @@
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
 import { DashboardCard } from "@dashboard/components/Card";
 import { ExternalLinkNext } from "@dashboard/components/ExternalLink";
-import FilterBar from "@dashboard/components/FilterBar";
+import { FilterBar } from "@dashboard/components/FilterBar";
 import { ListPageLayout } from "@dashboard/components/Layouts";
 import { configurationMenuUrl } from "@dashboard/configuration";
 import { PluginBaseFragment } from "@dashboard/graphql";
@@ -14,7 +14,7 @@ import { FilterPageProps, PageListProps, SortPage, TabPageProps } from "@dashboa
 import { Box, Text, useTheme } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
 
-import PluginsList from "../PluginsList/PluginsList";
+import { PluginList as PluginsList } from "../PluginsList/PluginsList";
 import { createFilterStructure, PluginFilterKeys, PluginListFilterOpts } from "./filters";
 import { pluginsFilterErrorMessages, pluginsListPageMessages } from "./messages";
 
@@ -97,4 +97,4 @@ const PluginsListPage = ({
 };
 
 PluginsListPage.displayName = "PluginsListPage";
-export default PluginsListPage;
+export { PluginsListPage };

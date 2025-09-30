@@ -1,17 +1,17 @@
 // @ts-strict-ignore
-import ActionDialog from "@dashboard/components/ActionDialog";
-import NotFoundPage from "@dashboard/components/NotFoundPage";
+import { ActionDialog } from "@dashboard/components/ActionDialog";
+import { NotFoundPage } from "@dashboard/components/NotFoundPage";
 import {
   useProductMediaByIdQuery,
   useProductMediaDeleteMutation,
   useProductMediaUpdateMutation,
 } from "@dashboard/graphql";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useNotifier from "@dashboard/hooks/useNotifier";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
+import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { commonMessages } from "@dashboard/intl";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import ProductMediaPage from "../components/ProductMediaPage";
+import { ProductMediaPage } from "../components/ProductMediaPage";
 import { productImageUrl, ProductImageUrlQueryParams, productListUrl, productUrl } from "../urls";
 
 interface ProductMediaProps {
@@ -103,4 +103,4 @@ const ProductImage = ({ mediaId, productId, params }: ProductMediaProps) => {
   );
 };
 
-export default ProductImage;
+export { ProductImage };

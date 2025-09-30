@@ -1,2 +1,2 @@
-export { default } from "./OrderFulfillStockExceededDialogLine";
+export { OrderFulfillStockExceededDialogLine } from "./OrderFulfillStockExceededDialogLine";
 export * from "./OrderFulfillStockExceededDialogLine";

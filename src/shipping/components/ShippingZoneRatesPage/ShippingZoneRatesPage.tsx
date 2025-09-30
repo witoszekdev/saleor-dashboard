@@ -1,7 +1,7 @@
 import { ChannelShippingData } from "@dashboard/channels/utils";
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
-import CardSpacer from "@dashboard/components/CardSpacer";
-import ChannelsAvailabilityCard from "@dashboard/components/ChannelsAvailabilityCard";
+import { CardSpacer } from "@dashboard/components/CardSpacer";
+import { ChannelsAvailability as ChannelsAvailabilityCard } from "@dashboard/components/ChannelsAvailabilityCard";
 import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import { WithFormId } from "@dashboard/components/Form";
 import { DetailPageLayout } from "@dashboard/components/Layouts";
@@ -17,27 +17,27 @@ import {
   ShippingZoneQuery,
   TaxClassBaseFragment,
 } from "@dashboard/graphql";
-import useForm, { SubmitPromise } from "@dashboard/hooks/useForm";
-import useHandleFormSubmit from "@dashboard/hooks/useHandleFormSubmit";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { SubmitPromise, useForm } from "@dashboard/hooks/useForm";
+import { useHandleFormSubmit } from "@dashboard/hooks/useHandleFormSubmit";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { useStateUpdate } from "@dashboard/hooks/useStateUpdate";
 import { validatePrice } from "@dashboard/products/utils/validation";
 import { handleTaxClassChange } from "@dashboard/productTypes/handlers";
-import OrderValue from "@dashboard/shipping/components/OrderValue";
-import OrderWeight from "@dashboard/shipping/components/OrderWeight";
-import PricingCard from "@dashboard/shipping/components/PricingCard";
-import ShippingMethodProducts from "@dashboard/shipping/components/ShippingMethodProducts";
-import ShippingRateInfo from "@dashboard/shipping/components/ShippingRateInfo";
+import { OrderValue } from "@dashboard/shipping/components/OrderValue";
+import { OrderWeight } from "@dashboard/shipping/components/OrderWeight";
+import { PricingCard } from "@dashboard/shipping/components/PricingCard";
+import { ShippingMethodProducts } from "@dashboard/shipping/components/ShippingMethodProducts";
+import { ShippingRateInfo } from "@dashboard/shipping/components/ShippingRateInfo";
 import { createChannelsChangeHandler } from "@dashboard/shipping/handlers";
 import { FetchMoreProps, ListActions, ListProps } from "@dashboard/types";
 import { mapEdgesToItems, mapMetadataItemToInput } from "@dashboard/utils/maps";
-import useMetadataChangeTrigger from "@dashboard/utils/metadata/useMetadataChangeTrigger";
+import { useMetadataChangeTrigger } from "@dashboard/utils/metadata/useMetadataChangeTrigger";
 import { RichTextContext } from "@dashboard/utils/richText/context";
-import useRichText from "@dashboard/utils/richText/useRichText";
+import { useRichText } from "@dashboard/utils/richText/useRichText";
 import { FormEventHandler, useMemo } from "react";
 
-import ShippingMethodTaxes from "../ShippingMethodTaxes";
-import ShippingZonePostalCodes from "../ShippingZonePostalCodes";
+import { ShippingMethodTaxes } from "../ShippingMethodTaxes";
+import { ShippingZonePostalCodes } from "../ShippingZonePostalCodes";
 import { ShippingZoneRateUpdateFormData } from "./types";
 
 interface ShippingZoneRatesPageProps
@@ -247,4 +247,4 @@ const ShippingZoneRatesPage = ({
   );
 };
 
-export default ShippingZoneRatesPage;
+export { ShippingZoneRatesPage };

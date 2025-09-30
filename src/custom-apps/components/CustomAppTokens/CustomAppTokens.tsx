@@ -1,7 +1,7 @@
 // @ts-strict-ignore
 import { DashboardCard } from "@dashboard/components/Card";
-import ResponsiveTable from "@dashboard/components/ResponsiveTable";
-import TableRowLink from "@dashboard/components/TableRowLink";
+import { ResponsiveTable } from "@dashboard/components/ResponsiveTable";
+import { TableRowLink } from "@dashboard/components/TableRowLink";
 import { AppUpdateMutation } from "@dashboard/graphql";
 import { renderCollection } from "@dashboard/misc";
 import { TableBody, TableCell, TableHead } from "@material-ui/core";
@@ -97,4 +97,4 @@ const CustomAppTokens = (props: CustomAppTokensProps) => {
 };
 
 CustomAppTokens.displayName = "CustomAppTokens";
-export default CustomAppTokens;
+export { CustomAppTokens };

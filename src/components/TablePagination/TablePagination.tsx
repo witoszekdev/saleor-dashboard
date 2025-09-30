@@ -1,4 +1,4 @@
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { commonMessages } from "@dashboard/intl";
 import { TableCell } from "@material-ui/core";
 import {
@@ -94,4 +94,4 @@ export const TablePagination = ({
 };
 
 TablePagination.displayName = "TablePagination";
-export default TablePagination;
+export { TablePagination };

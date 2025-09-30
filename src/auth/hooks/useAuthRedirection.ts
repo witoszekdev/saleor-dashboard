@@ -1,7 +1,7 @@
 import { getAppMountUriForRedirect } from "@dashboard/utils/urls";
 import { useEffect } from "react";
 import urlJoin from "url-join";
-import useRouter from "use-react-router";
+import { useRouter } from "use-react-router";
 
 import { useUser } from "..";
 import { loginCallbackPath } from "../urls";

@@ -1,14 +1,14 @@
 // @ts-strict-ignore
 import { useUser } from "@dashboard/auth";
-import ActionDialog from "@dashboard/components/ActionDialog";
-import NotFoundPage from "@dashboard/components/NotFoundPage";
+import { ActionDialog } from "@dashboard/components/ActionDialog";
+import { NotFoundPage } from "@dashboard/components/NotFoundPage";
 import { hasPermissions } from "@dashboard/components/RequirePermissions";
 import { WindowTitle } from "@dashboard/components/WindowTitle";
 import { DEFAULT_INITIAL_SEARCH_DATA } from "@dashboard/config";
 import { PermissionEnum, useStaffMemberDetailsQuery } from "@dashboard/graphql";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { extractMutationErrors, getStringOrPlaceholder } from "@dashboard/misc";
-import usePermissionGroupSearch from "@dashboard/searches/usePermissionGroupSearch";
+import { UsePermissionGroupSearch as usePermissionGroupSearch } from "@dashboard/searches/usePermissionGroupSearch";
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { FormattedMessage, useIntl } from "react-intl";
 

@@ -1,2 +1,2 @@
 export * from "./ChannelDetailsPage";
-export { default } from "./ChannelDetailsPage";
+export { ChannelDetailsPage } from "./ChannelDetailsPage";

@@ -1,2 +1,2 @@
-export { default } from "./TaxCountriesPage";
+export { TaxCountriesPage } from "./TaxCountriesPage";
 export * from "./TaxCountriesPage";

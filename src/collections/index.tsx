@@ -16,9 +16,9 @@ import {
   collectionPath,
   CollectionUrlQueryParams,
 } from "./urls";
-import CollectionCreateView from "./views/CollectionCreate";
-import CollectionDetailsView from "./views/CollectionDetails";
-import CollectionListView from "./views/CollectionList";
+import { CollectionCreate as CollectionCreateView } from "./views/CollectionCreate";
+import { CollectionDetails as CollectionDetailsView } from "./views/CollectionDetails";
+import { CollectionList as CollectionListView } from "./views/CollectionList";
 
 const CollectionList = ({ location }: RouteComponentProps<{}>) => {
   const qs = parseQs(location.search.substr(1)) as any;
@@ -67,4 +67,4 @@ const Component = () => {
   );
 };
 
-export default Component;
+export { Component };

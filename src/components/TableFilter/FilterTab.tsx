@@ -1,6 +1,6 @@
 import { Tab } from "@material-ui/core";
 import { makeStyles } from "@saleor/macaw-ui";
-import clsx from "clsx";
+import { clsx } from "clsx";
 
 const useStyles = makeStyles(
   theme => ({
@@ -54,4 +54,4 @@ export const FilterTab = (props: FilterTabProps) => {
   );
 };
 FilterTab.displayName = "FilterTab";
-export default FilterTab;
+export { FilterTab };

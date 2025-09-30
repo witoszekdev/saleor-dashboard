@@ -1,6 +1,6 @@
 import { ExpressionFilters } from "@dashboard/components/AppLayout/ListFilters/components/ExpressionFilters";
 import { LegacyFiltersPresetsAlert } from "@dashboard/components/AppLayout/ListFilters/components/LegacyFiltersPresetsAlert";
-import SearchInput from "@dashboard/components/AppLayout/ListFilters/components/SearchInput";
+import { SearchInput } from "@dashboard/components/AppLayout/ListFilters/components/SearchInput";
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
 import { ButtonGroupWithDropdown } from "@dashboard/components/ButtonGroupWithDropdown";
 import { DashboardCard } from "@dashboard/components/Card";
@@ -19,7 +19,7 @@ import {
 import { useExtensions } from "@dashboard/extensions/hooks/useExtensions";
 import { PromotionFragment } from "@dashboard/graphql";
 import { getPrevLocationState } from "@dashboard/hooks/useBackLinkWithState";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { commonMessages } from "@dashboard/intl";
 import { FilterPresetsProps, PageListProps, SortPage } from "@dashboard/types";
 import { Box, Button, ChevronRightIcon } from "@saleor/macaw-ui-next";
@@ -153,4 +153,4 @@ const DiscountListPage = ({
 };
 
 DiscountListPage.displayName = "SaleListPage";
-export default DiscountListPage;
+export { DiscountListPage };

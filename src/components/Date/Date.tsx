@@ -1,4 +1,4 @@
-import useDateLocalize from "@dashboard/hooks/useDateLocalize";
+import { useDateLocalize } from "@dashboard/hooks/useDateLocalize";
 import { Tooltip } from "@saleor/macaw-ui-next";
 import moment from "moment-timezone";
 
@@ -43,4 +43,4 @@ const Date = ({ date, plain }: DateProps) => {
 };
 
 Date.displayName = "Date";
-export default Date;
+export { Date };

@@ -2,7 +2,7 @@ import { DashboardCard } from "@dashboard/components/Card";
 import { DiscountErrorFragment } from "@dashboard/graphql";
 import { commonMessages } from "@dashboard/intl";
 import { getFormErrors } from "@dashboard/utils/errors";
-import getDiscountErrorMessage from "@dashboard/utils/errors/discounts";
+import { getDiscountErrorMessage } from "@dashboard/utils/errors/discounts";
 import { Input } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
 
@@ -46,4 +46,4 @@ const VoucherInfo = ({ data, disabled, errors, onChange }: VoucherInfoProps) => 
   );
 };
 
-export default VoucherInfo;
+export { VoucherInfo };

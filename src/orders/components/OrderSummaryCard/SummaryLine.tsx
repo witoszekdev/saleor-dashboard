@@ -1,7 +1,7 @@
-import Money from "@dashboard/components/Money";
+import { Money } from "@dashboard/components/Money";
 import { IMoney } from "@dashboard/utils/intl";
 import { Skeleton } from "@saleor/macaw-ui-next";
-import clsx from "clsx";
+import { clsx } from "clsx";
 import * as React from "react";
 import { useIntl } from "react-intl";
 
@@ -73,4 +73,4 @@ const SummaryLine = ({
   );
 };
 
-export default SummaryLine;
+export { SummaryLine };

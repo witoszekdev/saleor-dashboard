@@ -7,7 +7,7 @@ import { FilterPresetsSelect } from "@dashboard/components/FilterPresetsSelect";
 import { configurationMenuUrl } from "@dashboard/configuration";
 import { useFlag } from "@dashboard/featureFlags";
 import { AttributeFragment } from "@dashboard/graphql";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { sectionNames } from "@dashboard/intl";
 import { Box, Button, ChevronRightIcon } from "@saleor/macaw-ui-next";
 import { useState } from "react";
@@ -148,4 +148,4 @@ const AttributeListPage = ({
 };
 
 AttributeListPage.displayName = "AttributeListPage";
-export default AttributeListPage;
+export { AttributeListPage };

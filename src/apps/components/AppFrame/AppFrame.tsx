@@ -4,13 +4,13 @@ import { AppDetailsUrlQueryParams } from "@dashboard/apps/urls";
 import { useAllFlags } from "@dashboard/featureFlags";
 import { CircularProgress } from "@material-ui/core";
 import { DashboardEventFactory } from "@saleor/app-sdk/app-bridge";
-import clsx from "clsx";
+import { clsx } from "clsx";
 import { PropsWithChildren, useCallback, useRef } from "react";
 
 import { AppIFrame } from "./AppIFrame";
 import { useStyles } from "./styles";
 import { useAppActions } from "./useAppActions";
-import useTokenRefresh from "./useTokenRefresh";
+import { useTokenRefresh } from "./useTokenRefresh";
 
 interface Props {
   src: string;

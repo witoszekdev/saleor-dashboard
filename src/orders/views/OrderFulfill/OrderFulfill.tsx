@@ -6,10 +6,11 @@ import {
   useOrderFulfillDataQuery,
   useOrderFulfillSettingsQuery,
 } from "@dashboard/graphql";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useNotifier from "@dashboard/hooks/useNotifier";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
+import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { getMutationErrors } from "@dashboard/misc";
-import OrderFulfillPage, {
+import {
+  OrderFulfillPage,
   OrderFulfillSubmitData,
 } from "@dashboard/orders/components/OrderFulfillPage";
 import {
@@ -18,7 +19,7 @@ import {
   OrderFulfillUrlQueryParams,
   orderUrl,
 } from "@dashboard/orders/urls";
-import createDialogActionHandlers from "@dashboard/utils/handlers/dialogActionHandlers";
+import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
 import { useIntl } from "react-intl";
 
 interface OrderFulfillProps {
@@ -119,4 +120,4 @@ const OrderFulfill = ({ orderId, params }: OrderFulfillProps) => {
 };
 
 OrderFulfill.displayName = "OrderFulfill";
-export default OrderFulfill;
+export { OrderFulfill };

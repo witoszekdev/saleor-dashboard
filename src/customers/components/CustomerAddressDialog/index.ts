@@ -1,2 +1,2 @@
-export { default } from "./CustomerAddressDialog";
+export { CustomerAddressDialog } from "./CustomerAddressDialog";
 export * from "./CustomerAddressDialog";

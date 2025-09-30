@@ -1,6 +1,6 @@
 // @ts-strict-ignore
-import TableCellAvatar from "@dashboard/components/TableCellAvatar";
-import TableRowLink from "@dashboard/components/TableRowLink";
+import { TableCellAvatar } from "@dashboard/components/TableCellAvatar";
+import { TableRowLink } from "@dashboard/components/TableRowLink";
 import { OrderFulfillLineFragment } from "@dashboard/graphql";
 import { FormsetChange, FormsetData } from "@dashboard/hooks/useFormset";
 import {
@@ -12,7 +12,7 @@ import {
 import { TableCell, TextField } from "@material-ui/core";
 import { ChevronIcon, IconButton, WarningIcon } from "@saleor/macaw-ui";
 import { Box, Skeleton, Text, Tooltip } from "@saleor/macaw-ui-next";
-import clsx from "clsx";
+import { clsx } from "clsx";
 import { useIntl } from "react-intl";
 
 import { messages } from "./messages";
@@ -163,4 +163,4 @@ const OrderFulfillLine = (props: OrderFulfillLineProps) => {
 };
 
 OrderFulfillLine.displayName = "OrderFulfillLine";
-export default OrderFulfillLine;
+export { OrderFulfillLine };

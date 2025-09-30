@@ -22,4 +22,4 @@ const ProductVariantSetDefault = ({ onSetDefaultVariant }: ProductVariantSetDefa
 };
 
 ProductVariantSetDefault.displayName = "ProductVariantSetDefault";
-export default ProductVariantSetDefault;
+export { ProductVariantSetDefault };

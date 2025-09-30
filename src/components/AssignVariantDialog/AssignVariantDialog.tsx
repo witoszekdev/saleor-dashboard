@@ -47,4 +47,4 @@ const AssignVariantDialog = (props: AssignVariantDialogProps) => {
 };
 
 AssignVariantDialog.displayName = "AssignVariantDialog";
-export default AssignVariantDialog;
+export { AssignVariantDialog };

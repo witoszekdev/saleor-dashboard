@@ -37,4 +37,4 @@ const PluginAvailabilityStatus = ({
   );
 };
 
-export default PluginAvailabilityStatus;
+export { PluginAvailabilityStatus };

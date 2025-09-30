@@ -2,10 +2,10 @@
 import { useUser } from "@dashboard/auth";
 import { hasPermission } from "@dashboard/auth/misc";
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
-import CardSpacer from "@dashboard/components/CardSpacer";
+import { CardSpacer } from "@dashboard/components/CardSpacer";
 import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import CountryList from "@dashboard/components/CountryList";
-import Form from "@dashboard/components/Form";
+import { CountryList } from "@dashboard/components/CountryList";
+import { Form } from "@dashboard/components/Form";
 import { DetailPageLayout } from "@dashboard/components/Layouts";
 import { Metadata } from "@dashboard/components/Metadata/Metadata";
 import { Savebar } from "@dashboard/components/Savebar";
@@ -19,21 +19,21 @@ import {
 } from "@dashboard/graphql";
 import { useBackLinkWithState } from "@dashboard/hooks/useBackLinkWithState";
 import { SubmitPromise } from "@dashboard/hooks/useForm";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { shippingZonesListPath } from "@dashboard/shipping/urls";
 import { TranslationsButton } from "@dashboard/translations/components/TranslationsButton/TranslationsButton";
 import { languageEntityUrl, TranslatableEntities } from "@dashboard/translations/urls";
 import { useCachedLocales } from "@dashboard/translations/useCachedLocales";
-import useMetadataChangeTrigger from "@dashboard/utils/metadata/useMetadataChangeTrigger";
+import { useMetadataChangeTrigger } from "@dashboard/utils/metadata/useMetadataChangeTrigger";
 import { Option } from "@saleor/macaw-ui-next";
 import { defineMessages, useIntl } from "react-intl";
 
 import { getStringOrPlaceholder } from "../../../misc";
 import { ChannelProps, FetchMoreProps, SearchProps } from "../../../types";
 import { ShippingZoneUpdateFormData } from "../../components/ShippingZoneDetailsPage/types";
-import ShippingZoneInfo from "../ShippingZoneInfo";
-import ShippingZoneRates from "../ShippingZoneRates";
-import ShippingZoneSettingsCard from "../ShippingZoneSettingsCard";
+import { ShippingZoneInfo } from "../ShippingZoneInfo";
+import { ShippingZoneRates } from "../ShippingZoneRates";
+import { ShippingZoneSettingsCard } from "../ShippingZoneSettingsCard";
 import { getInitialFormData } from "./utils";
 
 const messages = defineMessages({
@@ -211,4 +211,4 @@ const ShippingZoneDetailsPage = ({
 };
 
 ShippingZoneDetailsPage.displayName = "ShippingZoneDetailsPage";
-export default ShippingZoneDetailsPage;
+export { ShippingZoneDetailsPage };

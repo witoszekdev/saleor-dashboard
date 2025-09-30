@@ -2,7 +2,7 @@ import { renderHook } from "@testing-library/react-hooks";
 import { PropsWithChildren, useContext } from "react";
 
 import { MessageContext } from ".";
-import MessageManagerProvider from "./MessageManagerProvider";
+import { MessageManagerProvider } from "./MessageManagerProvider";
 
 // Mock MessageDisplay component since we're not testing its functionality
 jest.mock("./MessageDisplay", () => ({

@@ -42,4 +42,4 @@ export const TableButtonWrapper = <T extends HTMLElement>({ children }: TableBut
   return children;
 };
 TableButtonWrapper.displayName = "TableButtonWrapper";
-export default TableButtonWrapper;
+export { TableButtonWrapper };

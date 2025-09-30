@@ -4,10 +4,10 @@ import { ApiMessageData, Notification } from "@saleor/macaw-ui";
 import { useIntl } from "react-intl";
 import { TransitionGroup } from "react-transition-group";
 
-import Container from "./Container";
+import { Container } from "./Container";
 import { messages as notificationMessages } from "./messages";
 import { useStyles } from "./styles";
-import Transition from "./Transition";
+import { Transition } from "./Transition";
 import { MessageComponentValues } from "./useMessageState";
 
 export const MessageDisplay = ({

@@ -2,7 +2,7 @@ import { useUserPermissions } from "@dashboard/auth/hooks/useUserPermissions";
 import { TopNav } from "@dashboard/components/AppLayout";
 import { DashboardCard } from "@dashboard/components/Card";
 import { DetailPageLayout } from "@dashboard/components/Layouts";
-import Link from "@dashboard/components/Link";
+import { Link } from "@dashboard/components/Link";
 import { hasPermissions } from "@dashboard/components/RequirePermissions";
 import { PermissionEnum, TransactionItemFragment, useModelsOfTypeQuery } from "@dashboard/graphql";
 import { pageListUrl } from "@dashboard/modeling/urls";

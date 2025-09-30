@@ -7,17 +7,17 @@ import {
   useTaxCountryConfigurationDeleteMutation,
   useTaxCountryConfigurationUpdateMutation,
 } from "@dashboard/graphql";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useNotifier from "@dashboard/hooks/useNotifier";
-import useShop from "@dashboard/hooks/useShop";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
+import { useNotifier } from "@dashboard/hooks/useNotifier";
+import { useShop } from "@dashboard/hooks/useShop";
 import { commonMessages } from "@dashboard/intl";
-import createDialogActionHandlers from "@dashboard/utils/handlers/dialogActionHandlers";
+import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { useMemo, useState } from "react";
 import { useIntl } from "react-intl";
 
-import TaxCountryDialog from "../components/TaxCountryDialog";
-import TaxCountriesPage from "../pages/TaxCountriesPage";
+import { TaxCountryDialog } from "../components/TaxCountryDialog";
+import { TaxCountriesPage } from "../pages/TaxCountriesPage";
 import {
   taxCountriesListUrl,
   TaxesUrlDialog,
@@ -171,4 +171,4 @@ const TaxCountriesList = ({ id, params }: TaxCountriesListProps) => {
   );
 };
 
-export default TaxCountriesList;
+export { TaxCountriesList };

@@ -1,2 +1,2 @@
-export { default } from "./UserStatus";
+export { AppStatus } from "./UserStatus";
 export * from "./UserStatus";

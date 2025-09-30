@@ -2,7 +2,8 @@ import { DashboardCard } from "@dashboard/components/Card";
 import { sectionNames } from "@dashboard/intl";
 import { useIntl } from "react-intl";
 
-import PluginDetailsChannelsCardContent, {
+import {
+  PluginDetailsChannelsCardContent,
   PluginDetailsChannelsCardProps,
 } from "./PluginDetailsChannelsCardContent";
 
@@ -19,4 +20,4 @@ const PluginDetailsChannelsCard = (props: PluginDetailsChannelsCardProps) => {
   );
 };
 
-export default PluginDetailsChannelsCard;
+export { PluginDetailsChannelsCard };

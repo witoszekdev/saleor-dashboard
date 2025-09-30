@@ -1,2 +1,2 @@
-export { default } from "./TaxClassesMenu";
+export { TaxClassesMenu } from "./TaxClassesMenu";
 export * from "./TaxClassesMenu";

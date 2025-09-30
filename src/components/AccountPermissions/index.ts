@@ -1,2 +1,2 @@
-export { default } from "./AccountPermissions";
+export { AccountPermissions } from "./AccountPermissions";
 export * from "./AccountPermissions";

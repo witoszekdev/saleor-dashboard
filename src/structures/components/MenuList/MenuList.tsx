@@ -1,13 +1,13 @@
 // @ts-strict-ignore
 import { DashboardCard } from "@dashboard/components/Card";
-import Checkbox from "@dashboard/components/Checkbox";
-import IconButtonTableCell from "@dashboard/components/IconButtonTableCell";
-import ResponsiveTable from "@dashboard/components/ResponsiveTable";
+import { Checkbox } from "@dashboard/components/Checkbox";
+import { IconButtonTableCell } from "@dashboard/components/IconButtonTableCell";
+import { ResponsiveTable } from "@dashboard/components/ResponsiveTable";
 import { TableButtonWrapper } from "@dashboard/components/TableButtonWrapper/TableButtonWrapper";
-import TableCellHeader from "@dashboard/components/TableCellHeader";
-import TableHead from "@dashboard/components/TableHead";
+import { TableCellHeader } from "@dashboard/components/TableCellHeader";
+import { TableHead } from "@dashboard/components/TableHead";
 import { TablePaginationWithContext } from "@dashboard/components/TablePagination";
-import TableRowLink from "@dashboard/components/TableRowLink";
+import { TableRowLink } from "@dashboard/components/TableRowLink";
 import { MenuFragment } from "@dashboard/graphql";
 import { maybe, renderCollection } from "@dashboard/misc";
 import { MenuListUrlSortField, menuUrl } from "@dashboard/structures/urls";
@@ -169,4 +169,4 @@ const MenuList = (props: MenuListProps) => {
 };
 
 MenuList.displayName = "MenuList";
-export default MenuList;
+export { MenuList };

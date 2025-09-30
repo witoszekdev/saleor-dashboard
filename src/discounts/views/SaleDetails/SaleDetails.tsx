@@ -4,17 +4,18 @@ import {
   createChannelsDataWithSaleDiscountPrice,
   createSortedChannelsDataFromSale,
 } from "@dashboard/channels/utils";
-import ActionDialog from "@dashboard/components/ActionDialog";
-import useAppChannel from "@dashboard/components/AppLayout/AppChannelContext";
-import AssignCategoriesDialog from "@dashboard/components/AssignCategoryDialog";
-import AssignCollectionDialog from "@dashboard/components/AssignCollectionDialog";
-import AssignProductDialog from "@dashboard/components/AssignProductDialog";
-import AssignVariantDialog from "@dashboard/components/AssignVariantDialog";
+import { ActionDialog } from "@dashboard/components/ActionDialog";
+import { useAppChannel } from "@dashboard/components/AppLayout/AppChannelContext";
+import { AssignCategoryDialog as AssignCategoriesDialog } from "@dashboard/components/AssignCategoryDialog";
+import { AssignCollectionDialog } from "@dashboard/components/AssignCollectionDialog";
+import { AssignProductDialog } from "@dashboard/components/AssignProductDialog";
+import { AssignVariantDialog } from "@dashboard/components/AssignVariantDialog";
 import { Button } from "@dashboard/components/Button";
-import ChannelsAvailabilityDialog from "@dashboard/components/ChannelsAvailabilityDialog";
+import { ChannelsAvailabilityDialog } from "@dashboard/components/ChannelsAvailabilityDialog";
 import { WindowTitle } from "@dashboard/components/WindowTitle";
 import { DEFAULT_INITIAL_SEARCH_DATA, PAGINATE_BY } from "@dashboard/config";
-import SaleDetailsPage, {
+import {
+  SaleDetailsPage,
   SaleDetailsPageTab,
   SaleTabItemsCount,
 } from "@dashboard/discounts/components/SaleDetailsPage";
@@ -35,22 +36,23 @@ import {
   useUpdateMetadataMutation,
   useUpdatePrivateMetadataMutation,
 } from "@dashboard/graphql";
-import useBulkActions from "@dashboard/hooks/useBulkActions";
-import useChannels from "@dashboard/hooks/useChannels";
-import useLocalPaginator, {
+import { useBulkActions } from "@dashboard/hooks/useBulkActions";
+import { useChannels } from "@dashboard/hooks/useChannels";
+import {
+  useLocalPaginator,
   useSectionLocalPaginationState,
 } from "@dashboard/hooks/useLocalPaginator";
-import useLocalStorage from "@dashboard/hooks/useLocalStorage";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useNotifier from "@dashboard/hooks/useNotifier";
+import { useLocalStorage } from "@dashboard/hooks/useLocalStorage";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
+import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { PaginatorContext } from "@dashboard/hooks/usePaginator";
 import { commonMessages } from "@dashboard/intl";
 import { maybe } from "@dashboard/misc";
 import { useCategoryWithTotalProductsSearch } from "@dashboard/searches/useCategorySearch";
 import { useCollectionWithTotalProductsSearch } from "@dashboard/searches/useCollectionSearch";
-import useProductSearch from "@dashboard/searches/useProductSearch";
-import createDialogActionHandlers from "@dashboard/utils/handlers/dialogActionHandlers";
-import createMetadataUpdateHandler from "@dashboard/utils/handlers/metadataUpdateHandler";
+import { UseProductSearch as useProductSearch } from "@dashboard/searches/useProductSearch";
+import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
+import { createMetadataUpdateHandler } from "@dashboard/utils/handlers/metadataUpdateHandler";
 import { useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
@@ -548,4 +550,4 @@ const SaleDetails = ({ id, params }: SaleDetailsProps) => {
   );
 };
 
-export default SaleDetails;
+export { SaleDetails };

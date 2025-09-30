@@ -3,7 +3,7 @@ import { useHasManagedAppsPermission } from "@dashboard/hooks/useHasManagedAppsP
 import { Accordion, Box, BoxProps, Chip, Skeleton, Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import messages from "../AppDetailsPage/messages";
+import { Messages as messages } from "../AppDetailsPage/messages";
 import { EventDeliveriesList } from "./EventDeliveriesList";
 import { sortWebhooksByDeliveries } from "./utils";
 

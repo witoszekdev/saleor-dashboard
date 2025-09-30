@@ -5,7 +5,7 @@ import {
   SearchAvailableProductAttributesQuery,
   SearchAvailableProductAttributesQueryVariables,
 } from "@dashboard/graphql";
-import makeSearch from "@dashboard/hooks/makeSearch";
+import { makeSearch } from "@dashboard/hooks/makeSearch";
 
 export const searchProductAttributes = gql`
   query SearchAvailableProductAttributes($id: ID!, $after: String, $first: Int!, $query: String!) {
@@ -25,7 +25,7 @@ export const searchProductAttributes = gql`
   }
 `;
 
-export default makeSearch<
+export const UseAvailableProductAttributeSearch = makeSearch<
   SearchAvailableProductAttributesQuery,
   SearchAvailableProductAttributesQueryVariables
 >(SearchAvailableProductAttributesDocument, result =>

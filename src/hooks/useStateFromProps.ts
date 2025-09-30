@@ -36,4 +36,4 @@ function useStateFromProps<T>(
   return [state, setState];
 }
 
-export default useStateFromProps;
+export { useStateFromProps };

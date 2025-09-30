@@ -1,7 +1,7 @@
 import { Avatar as MuiAvatar } from "@material-ui/core";
 import { ImageIcon } from "@saleor/macaw-ui";
 import { Text } from "@saleor/macaw-ui-next";
-import clsx from "clsx";
+import { clsx } from "clsx";
 
 import { useAvatarImageStyles } from "./styles";
 
@@ -35,4 +35,4 @@ const AvatarImage = ({ initials, thumbnail, avatarProps }: AvatarImageProps) => 
   return <MuiAvatar className={clsx(classes.avatar, avatarProps)} src={thumbnail} />;
 };
 
-export default AvatarImage;
+export { AvatarImage };

@@ -1,7 +1,7 @@
 // @ts-strict-ignore
 import { useCollectionTranslationsQuery } from "@dashboard/graphql";
-import usePaginator, { PaginatorContext } from "@dashboard/hooks/usePaginator";
-import TranslationsEntitiesList from "@dashboard/translations/components/TranslationsEntitiesList";
+import { PaginatorContext, usePaginator } from "@dashboard/hooks/usePaginator";
+import { TranslationsEntitiesList } from "@dashboard/translations/components/TranslationsEntitiesList";
 import { languageEntityUrl, TranslatableEntities } from "@dashboard/translations/urls";
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 
@@ -47,4 +47,4 @@ const TranslationsCollectionList = ({ params, variables }: TranslationsEntityLis
   );
 };
 
-export default TranslationsCollectionList;
+export { TranslationsCollectionList };

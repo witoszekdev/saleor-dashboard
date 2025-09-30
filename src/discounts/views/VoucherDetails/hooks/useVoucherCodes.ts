@@ -1,4 +1,4 @@
-import useListSettings from "@dashboard/hooks/useListSettings";
+import { useListSettings } from "@dashboard/hooks/useListSettings";
 import { ListSettings, ListViews } from "@dashboard/types";
 import { useState } from "react";
 

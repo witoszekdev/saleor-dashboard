@@ -1,2 +1,2 @@
-export { default } from "./TaxSettingsCard";
+export { TaxSettingsCard } from "./TaxSettingsCard";
 export * from "./TaxSettingsCard";

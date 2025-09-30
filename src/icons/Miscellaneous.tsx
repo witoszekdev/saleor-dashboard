@@ -37,6 +37,6 @@ const MiscellaneousIcon = createSvgIcon(
   "Miscellaneous",
 );
 
-export default function Miscellaneous(props: SvgIconProps) {
+export function Miscellaneous(props: SvgIconProps) {
   return <MiscellaneousIcon {...props} viewBox="0 0 24 24" fill="none" />;
 }

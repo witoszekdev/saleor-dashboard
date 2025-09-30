@@ -5,7 +5,7 @@ import {
   SearchPermissionGroupsQuery,
   SearchPermissionGroupsQueryVariables,
 } from "@dashboard/graphql";
-import makeTopLevelSearch from "@dashboard/hooks/makeTopLevelSearch";
+import { makeTopLevelSearch } from "@dashboard/hooks/makeTopLevelSearch";
 
 export const searchPermissionGroups = gql`
   query SearchPermissionGroups($after: String, $first: Int!, $query: String!) {
@@ -24,7 +24,7 @@ export const searchPermissionGroups = gql`
   }
 `;
 
-export default makeTopLevelSearch<
+export const UsePermissionGroupSearch = makeTopLevelSearch<
   SearchPermissionGroupsQuery,
   SearchPermissionGroupsQueryVariables
 >(SearchPermissionGroupsDocument);

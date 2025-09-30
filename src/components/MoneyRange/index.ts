@@ -1,3 +1,3 @@
-export { default } from "./MoneyRange";
+export { MoneyRange } from "./MoneyRange";
 export * from "./MoneyRange";
 export { getMoneyRange } from "./utils";

@@ -1,4 +1,4 @@
-import Form from "@dashboard/components/Form";
+import { Form } from "@dashboard/components/Form";
 import { DashboardModal } from "@dashboard/components/Modal";
 import { ProductFragment } from "@dashboard/graphql";
 import { SubmitPromise } from "@dashboard/hooks/useForm";
@@ -82,4 +82,4 @@ const ProductExternalMediaDialog = ({
   );
 };
 
-export default ProductExternalMediaDialog;
+export { ProductExternalMediaDialog };

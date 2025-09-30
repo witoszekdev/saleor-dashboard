@@ -1,5 +1,5 @@
 import { useColumns } from "@dashboard/components/Datagrid/ColumnPicker/useColumns";
-import Datagrid from "@dashboard/components/Datagrid/Datagrid";
+import { Datagrid } from "@dashboard/components/Datagrid/Datagrid";
 import {
   DatagridChangeStateContext,
   useDatagridChangeState,
@@ -7,7 +7,7 @@ import {
 import { useEmptyColumn } from "@dashboard/components/Datagrid/hooks/useEmptyColumn";
 import { TablePaginationWithContext } from "@dashboard/components/TablePagination";
 import { getPrevLocationState } from "@dashboard/hooks/useBackLinkWithState";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { StaffMember, StaffMembers } from "@dashboard/staff/types";
 import { StaffListUrlSortField, staffMemberDetailsUrl } from "@dashboard/staff/urls";
 import { ListProps, SortPage } from "@dashboard/types";

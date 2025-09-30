@@ -1,12 +1,12 @@
 // @ts-strict-ignore
-import AccountPermissions from "@dashboard/components/AccountPermissions";
+import { AccountPermissions } from "@dashboard/components/AccountPermissions";
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
-import CardSpacer from "@dashboard/components/CardSpacer";
+import { CardSpacer } from "@dashboard/components/CardSpacer";
 import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import Form from "@dashboard/components/Form";
+import { Form } from "@dashboard/components/Form";
 import { DetailPageLayout } from "@dashboard/components/Layouts";
 import { Savebar } from "@dashboard/components/Savebar";
-import WebhooksList from "@dashboard/custom-apps/components/WebhooksList";
+import { WebhooksList } from "@dashboard/custom-apps/components/WebhooksList";
 import { CustomAppUrls } from "@dashboard/custom-apps/urls";
 import { ExtensionsUrls } from "@dashboard/extensions/urls";
 import { useFlag } from "@dashboard/featureFlags";
@@ -17,15 +17,15 @@ import {
   ShopInfoQuery,
 } from "@dashboard/graphql";
 import { SubmitPromise } from "@dashboard/hooks/useForm";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { getFormErrors } from "@dashboard/utils/errors";
-import getAppErrorMessage from "@dashboard/utils/errors/app";
+import { getAppErrorMessage } from "@dashboard/utils/errors/app";
 import { Button } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import CustomAppDefaultToken from "../CustomAppDefaultToken";
-import CustomAppInformation from "../CustomAppInformation";
-import CustomAppTokens from "../CustomAppTokens";
+import { CustomAppDefaultToken } from "../CustomAppDefaultToken";
+import { CustomAppInformation } from "../CustomAppInformation";
+import { CustomAppTokens } from "../CustomAppTokens";
 import { useStyles } from "./styles";
 
 export interface CustomAppDetailsPageFormData {
@@ -172,4 +172,4 @@ const CustomAppDetailsPage = (props: CustomAppDetailsPageProps) => {
 };
 
 CustomAppDetailsPage.displayName = "CustomAppDetailsPage";
-export default CustomAppDetailsPage;
+export { CustomAppDetailsPage };

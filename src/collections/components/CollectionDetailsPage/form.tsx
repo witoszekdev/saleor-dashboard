@@ -5,13 +5,13 @@ import { COLLECTION_DETAILS_FORM_ID } from "@dashboard/collections/views/consts"
 import { useExitFormDialog } from "@dashboard/components/Form/useExitFormDialog";
 import { MetadataFormData } from "@dashboard/components/Metadata";
 import { CollectionDetailsFragment } from "@dashboard/graphql";
-import useForm, { CommonUseFormResultWithHandlers, FormChange } from "@dashboard/hooks/useForm";
-import useHandleFormSubmit from "@dashboard/hooks/useHandleFormSubmit";
+import { CommonUseFormResultWithHandlers, FormChange, useForm } from "@dashboard/hooks/useForm";
+import { useHandleFormSubmit } from "@dashboard/hooks/useHandleFormSubmit";
 import { mapMetadataItemToInput } from "@dashboard/utils/maps";
-import getMetadata from "@dashboard/utils/metadata/getMetadata";
-import useMetadataChangeTrigger from "@dashboard/utils/metadata/useMetadataChangeTrigger";
+import { getMetadata } from "@dashboard/utils/metadata/getMetadata";
+import { useMetadataChangeTrigger } from "@dashboard/utils/metadata/useMetadataChangeTrigger";
 import { RichTextContext, RichTextContextValues } from "@dashboard/utils/richText/context";
-import useRichText from "@dashboard/utils/richText/useRichText";
+import { useRichText } from "@dashboard/utils/richText/useRichText";
 import { OutputData } from "@editorjs/editorjs";
 import { useEffect } from "react";
 import * as React from "react";
@@ -154,4 +154,4 @@ const CollectionUpdateForm = ({
 };
 
 CollectionUpdateForm.displayName = "CollectionUpdateForm";
-export default CollectionUpdateForm;
+export { CollectionUpdateForm };

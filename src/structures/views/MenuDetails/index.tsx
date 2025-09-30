@@ -1,7 +1,7 @@
 // @ts-strict-ignore
 import { useUser } from "@dashboard/auth";
 import { hasPermission } from "@dashboard/auth/misc";
-import ActionDialog from "@dashboard/components/ActionDialog";
+import { ActionDialog } from "@dashboard/components/ActionDialog";
 import {
   PermissionEnum,
   useMenuDeleteMutation,
@@ -10,8 +10,8 @@ import {
   useMenuItemUpdateMutation,
   useMenuUpdateMutation,
 } from "@dashboard/graphql";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useNotifier from "@dashboard/hooks/useNotifier";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
+import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { pageUrl } from "@dashboard/modeling/urls";
 import { languageEntityUrl, TranslatableEntities } from "@dashboard/translations/urls";
 import { useCachedLocales } from "@dashboard/translations/useCachedLocales";
@@ -20,9 +20,10 @@ import { FormattedMessage, useIntl } from "react-intl";
 import { categoryUrl } from "../../../categories/urls";
 import { collectionUrl } from "../../../collections/urls";
 import { extractMutationErrors, maybe } from "../../../misc";
-import MenuDetailsPage, { MenuDetailsSubmitData } from "../../components/MenuDetailsPage";
+import { MenuDetailsPage, MenuDetailsSubmitData } from "../../components/MenuDetailsPage";
 import { findNode, getNode } from "../../components/MenuDetailsPage/tree";
-import MenuItemDialog, {
+import {
+  MenuItemDialog,
   MenuItemDialogFormData,
   MenuItemType,
 } from "../../components/MenuItemDialog";
@@ -237,4 +238,4 @@ const MenuDetails = ({ id, params }: MenuDetailsProps) => {
 
 MenuDetails.displayName = "MenuDetails";
 
-export default MenuDetails;
+export { MenuDetails };

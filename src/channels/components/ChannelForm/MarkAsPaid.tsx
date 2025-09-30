@@ -1,4 +1,4 @@
-import Link from "@dashboard/components/Link";
+import { Link } from "@dashboard/components/Link";
 import { PAYMENT_APPS_DOCS_URL, PAYMENT_PLUGINS_DOCS_URL } from "@dashboard/links";
 import { Box, Checkbox, Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage } from "react-intl";

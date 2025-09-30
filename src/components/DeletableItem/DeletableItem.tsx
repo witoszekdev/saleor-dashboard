@@ -15,4 +15,4 @@ const DeletableItem = ({ onDelete, id }: DeletableItemProps) => {
   );
 };
 
-export default DeletableItem;
+export { DeletableItem };

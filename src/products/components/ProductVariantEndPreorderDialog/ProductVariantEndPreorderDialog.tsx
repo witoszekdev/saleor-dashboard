@@ -1,4 +1,4 @@
-import ActionDialog from "@dashboard/components/ActionDialog";
+import { ActionDialog } from "@dashboard/components/ActionDialog";
 import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import { useIntl } from "react-intl";
 
@@ -41,4 +41,4 @@ const ProductVariantEndPreorderDialog = ({
 };
 
 ProductVariantEndPreorderDialog.displayName = "ProductVariantEndPreorderDialog";
-export default ProductVariantEndPreorderDialog;
+export { ProductVariantEndPreorderDialog };

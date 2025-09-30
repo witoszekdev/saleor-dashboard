@@ -1,2 +1,2 @@
-export { default } from "./SaleInfo";
+export { SaleInfo } from "./SaleInfo";
 export * from "./SaleInfo";

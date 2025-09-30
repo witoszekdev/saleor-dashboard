@@ -17,6 +17,6 @@ const AttributesIcons = createSvgIcon(
   "Attributes",
 );
 
-export default function Attributes(props: SvgIconProps) {
+export function Attributes(props: SvgIconProps) {
   return <AttributesIcons {...props} viewBox="0 0 32 32" />;
 }

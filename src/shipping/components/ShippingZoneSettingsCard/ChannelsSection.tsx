@@ -1,4 +1,4 @@
-import CardSpacer from "@dashboard/components/CardSpacer";
+import { CardSpacer } from "@dashboard/components/CardSpacer";
 import { Multiselect } from "@dashboard/components/Combobox";
 import { ChannelFragment } from "@dashboard/graphql";
 import { useChannelsSearch } from "@dashboard/hooks/useChannelsSearch";
@@ -58,4 +58,4 @@ const ChannelsSection = ({
   );
 };
 
-export default ChannelsSection;
+export { ChannelsSection };

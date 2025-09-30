@@ -3,9 +3,9 @@ import { useGiftCardList } from "@dashboard/giftCards/GiftCardsList/providers/Gi
 import { GIFT_CARD_LIST_QUERY } from "@dashboard/giftCards/GiftCardsList/queries";
 import { DialogProps } from "@dashboard/types";
 
-import GiftCardDeleteDialogContent, { SINGLE } from "./GiftCardDeleteDialogContent";
-import useGiftCardBulkDelete from "./useGiftCardBulkDelete";
-import useGiftCardSingleDelete from "./useGiftCardSingleDelete";
+import { GiftCardDeleteDialogContent, SINGLE } from "./GiftCardDeleteDialogContent";
+import { useGiftCardBulkDelete } from "./useGiftCardBulkDelete";
+import { useGiftCardSingleDelete } from "./useGiftCardSingleDelete";
 
 interface GiftCardDeleteDialogProps extends DialogProps {
   refetchQueries?: string[];
@@ -60,4 +60,4 @@ const GiftCardDeleteDialog = ({
   );
 };
 
-export default GiftCardDeleteDialog;
+export { GiftCardDeleteDialog };

@@ -8,11 +8,11 @@ import {
 import { RelayToFlat } from "@dashboard/types";
 import { defineMessages, useIntl } from "react-intl";
 
-import AssignCategoryDialog from "../AssignCategoryDialog";
-import AssignCollectionDialog from "../AssignCollectionDialog";
-import AssignContainerDialog from "../AssignContainerDialog";
-import AssignProductDialog, { AssignProductDialogProps } from "../AssignProductDialog";
-import AssignVariantDialog from "../AssignVariantDialog";
+import { AssignCategoryDialog } from "../AssignCategoryDialog";
+import { AssignCollectionDialog } from "../AssignCollectionDialog";
+import { AssignContainerDialog } from "../AssignContainerDialog";
+import { AssignProductDialog, AssignProductDialogProps } from "../AssignProductDialog";
+import { AssignVariantDialog } from "../AssignVariantDialog";
 import { AttributeInput } from "../Attributes";
 import {
   filterCategoriesByAttributeValues,
@@ -143,4 +143,4 @@ const AssignAttributeValueDialog = ({
 };
 
 AssignAttributeValueDialog.displayName = "AssignAttributeValueDialog";
-export default AssignAttributeValueDialog;
+export { AssignAttributeValueDialog };

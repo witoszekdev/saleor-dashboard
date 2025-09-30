@@ -1,6 +1,6 @@
 import { TopNav } from "@dashboard/components/AppLayout";
 import { useContextualLink } from "@dashboard/components/AppLayout/ContextualLinks/useContextualLink";
-import SearchInput from "@dashboard/components/AppLayout/ListFilters/components/SearchInput";
+import { SearchInput } from "@dashboard/components/AppLayout/ListFilters/components/SearchInput";
 import { DashboardCard } from "@dashboard/components/Card";
 import { ListPageLayout } from "@dashboard/components/Layouts";
 import { Box, ChevronRightIcon, Text } from "@saleor/macaw-ui-next";

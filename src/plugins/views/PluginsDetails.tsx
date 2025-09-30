@@ -1,5 +1,5 @@
 // @ts-strict-ignore
-import ActionDialog from "@dashboard/components/ActionDialog";
+import { ActionDialog } from "@dashboard/components/ActionDialog";
 import { WindowTitle } from "@dashboard/components/WindowTitle";
 import {
   ConfigurationItemFragment,
@@ -7,16 +7,16 @@ import {
   usePluginQuery,
   usePluginUpdateMutation,
 } from "@dashboard/graphql";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useNotifier from "@dashboard/hooks/useNotifier";
-import useStateFromProps from "@dashboard/hooks/useStateFromProps";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
+import { useNotifier } from "@dashboard/hooks/useNotifier";
+import { useStateFromProps } from "@dashboard/hooks/useStateFromProps";
 import { commonMessages } from "@dashboard/intl";
 import { extractMutationErrors } from "@dashboard/misc";
-import createDialogActionHandlers from "@dashboard/utils/handlers/dialogActionHandlers";
+import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import PluginsDetailsPage, { PluginDetailsPageFormData } from "../components/PluginsDetailsPage";
-import PluginSecretFieldDialog from "../components/PluginSecretFieldDialog";
+import { PluginDetailsPageFormData, PluginsDetailsPage } from "../components/PluginsDetailsPage";
+import { PluginSecretFieldDialog } from "../components/PluginSecretFieldDialog";
 import { pluginUrl, PluginUrlDialog, PluginUrlQueryParams } from "../urls";
 import { isSecretField } from "../utils";
 import { getConfigByChannelId, isPluginGlobal } from "./utils";
@@ -162,4 +162,4 @@ const PluginsDetails = ({ id, params }: PluginsDetailsProps) => {
 };
 
 PluginsDetails.displayName = "PluginsDetails";
-export default PluginsDetails;
+export { PluginsDetails };

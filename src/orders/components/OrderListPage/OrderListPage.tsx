@@ -34,7 +34,7 @@ import { Box, Button, ChevronRightIcon, Tooltip } from "@saleor/macaw-ui-next";
 import { useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import OrderLimitReached from "../OrderLimitReached";
+import { OrderLimitReached } from "../OrderLimitReached";
 import { OrderListDatagrid } from "../OrderListDatagrid";
 
 interface OrderListPageProps
@@ -231,4 +231,4 @@ const OrderListPage = ({
 };
 
 OrderListPage.displayName = "OrderListPage";
-export default OrderListPage;
+export { OrderListPage };

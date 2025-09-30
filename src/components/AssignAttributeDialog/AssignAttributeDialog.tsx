@@ -1,14 +1,14 @@
 // @ts-strict-ignore
-import Checkbox from "@dashboard/components/Checkbox";
+import { Checkbox } from "@dashboard/components/Checkbox";
 import { ConfirmButton, ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import { InfiniteScroll } from "@dashboard/components/InfiniteScroll";
 import { DashboardModal } from "@dashboard/components/Modal";
-import ResponsiveTable from "@dashboard/components/ResponsiveTable";
-import TableRowLink from "@dashboard/components/TableRowLink";
+import { ResponsiveTable } from "@dashboard/components/ResponsiveTable";
+import { TableRowLink } from "@dashboard/components/TableRowLink";
 import { AvailableAttributeFragment } from "@dashboard/graphql";
-import useModalDialogErrors from "@dashboard/hooks/useModalDialogErrors";
-import useModalDialogOpen from "@dashboard/hooks/useModalDialogOpen";
-import useSearchQuery from "@dashboard/hooks/useSearchQuery";
+import { useModalDialogErrors } from "@dashboard/hooks/useModalDialogErrors";
+import { useModalDialogOpen } from "@dashboard/hooks/useModalDialogOpen";
+import { useSearchQuery } from "@dashboard/hooks/useSearchQuery";
 import { maybe, renderCollection } from "@dashboard/misc";
 import { FetchMoreProps } from "@dashboard/types";
 import { CircularProgress, TableBody, TableCell, TextField } from "@material-ui/core";
@@ -16,7 +16,7 @@ import { makeStyles } from "@saleor/macaw-ui";
 import { Box, Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import BackButton from "../BackButton";
+import { BackButton } from "../BackButton";
 import { messages } from "./messages";
 
 const useStyles = makeStyles(
@@ -172,4 +172,4 @@ const AssignAttributeDialog = ({
 };
 
 AssignAttributeDialog.displayName = "AssignAttributeDialog";
-export default AssignAttributeDialog;
+export { AssignAttributeDialog };

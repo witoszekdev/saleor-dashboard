@@ -30,18 +30,20 @@ import {
   SearchPagesQuery,
   SearchProductsQuery,
 } from "@dashboard/graphql";
-import useForm, {
+import {
   CommonUseFormResultWithHandlers,
   FormChange,
   FormErrors,
   SubmitPromise,
+  useForm,
 } from "@dashboard/hooks/useForm";
-import useFormset, {
+import {
   FormsetChange,
   FormsetData,
   FormsetMetadataChange,
+  useFormset,
 } from "@dashboard/hooks/useFormset";
-import useHandleFormSubmit from "@dashboard/hooks/useHandleFormSubmit";
+import { useHandleFormSubmit } from "@dashboard/hooks/useHandleFormSubmit";
 import { errorMessages } from "@dashboard/intl";
 import {
   AttributeValuesMetadata,
@@ -57,8 +59,8 @@ import { validateProductVariant } from "@dashboard/products/utils/validation";
 import { FetchMoreProps, RelayToFlat, ReorderEvent } from "@dashboard/types";
 import { arrayDiff } from "@dashboard/utils/arrays";
 import { mapMetadataItemToInput } from "@dashboard/utils/maps";
-import getMetadata from "@dashboard/utils/metadata/getMetadata";
-import useMetadataChangeTrigger from "@dashboard/utils/metadata/useMetadataChangeTrigger";
+import { getMetadata } from "@dashboard/utils/metadata/getMetadata";
+import { useMetadataChangeTrigger } from "@dashboard/utils/metadata/useMetadataChangeTrigger";
 import { useMultipleRichText } from "@dashboard/utils/richText/useMultipleRichText";
 import { useEffect, useState } from "react";
 import * as React from "react";

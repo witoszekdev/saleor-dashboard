@@ -3,13 +3,13 @@ import { ClickAwayListener, Grow, Popper } from "@material-ui/core";
 import { alpha } from "@material-ui/core/styles";
 import { Button, makeStyles } from "@saleor/macaw-ui";
 import { Text, vars } from "@saleor/macaw-ui-next";
-import clsx from "clsx";
+import { clsx } from "clsx";
 import { useMemo, useRef, useState } from "react";
 import { FormattedMessage } from "react-intl";
 
 import { FilterContent } from ".";
 import { FilterElement, FilterErrorMessages, IFilter, InvalidFilters } from "./types";
-import useFilter from "./useFilter";
+import { useFilter } from "./useFilter";
 import { extractInvalidFilters, getSelectedFiltersAmount } from "./utils";
 
 interface FilterProps<TFilterKeys extends string = string> {
@@ -174,4 +174,4 @@ const Filter = (props: FilterProps) => {
 };
 
 Filter.displayName = "Filter";
-export default Filter;
+export { Filter };

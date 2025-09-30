@@ -24,7 +24,7 @@ import { CustomersIcon } from "@dashboard/icons/Customers";
 import { DiscountsIcon } from "@dashboard/icons/Discounts";
 import { HomeIcon } from "@dashboard/icons/Home";
 import { MarketplaceIcon } from "@dashboard/icons/Marketplace";
-import ModelingIcon from "@dashboard/icons/Modeling";
+import { ModelingIcon } from "@dashboard/icons/Modeling";
 import { OrdersIcon } from "@dashboard/icons/Orders";
 import { ProductsIcon } from "@dashboard/icons/Products";
 import { TranslationsIcon } from "@dashboard/icons/Translations";

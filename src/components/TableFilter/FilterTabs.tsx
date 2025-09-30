@@ -28,4 +28,4 @@ const FilterTabs = (props: FilterTabsProps) => {
   );
 };
 
-export default FilterTabs;
+export { FilterTabs };

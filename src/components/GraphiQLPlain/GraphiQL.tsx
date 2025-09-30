@@ -736,4 +736,4 @@ function isChildComponentType<T extends ComponentType>(child: any, component: T)
   return child.type === component;
 }
 
-export default GraphiQL;
+export { GraphiQL };

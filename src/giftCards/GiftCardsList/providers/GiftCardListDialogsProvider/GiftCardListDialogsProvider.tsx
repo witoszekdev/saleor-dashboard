@@ -1,11 +1,11 @@
 import { DashboardModal } from "@dashboard/components/Modal";
-import GiftCardListPageDeleteDialog from "@dashboard/giftCards/components/GiftCardDeleteDialog/GiftCardListPageDeleteDialog";
+import { GiftCardDeleteDialog as GiftCardListPageDeleteDialog } from "@dashboard/giftCards/components/GiftCardDeleteDialog/GiftCardListPageDeleteDialog";
 import { GiftCardBulkCreateDialog } from "@dashboard/giftCards/GiftCardBulkCreateDialog/GiftCardBulkCreateDialog";
-import GiftCardCreateDialogContent from "@dashboard/giftCards/GiftCardCreateDialog";
-import GiftCardExportDialogContent from "@dashboard/giftCards/GiftCardExportDialogContent";
+import { GiftCardCreateDialogContent } from "@dashboard/giftCards/GiftCardCreateDialog";
+import { GiftCardExportDialog as GiftCardExportDialogContent } from "@dashboard/giftCards/GiftCardExportDialogContent";
 import { giftCardListUrl } from "@dashboard/giftCards/urls";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import createDialogActionHandlers from "@dashboard/utils/handlers/dialogActionHandlers";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
+import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
 import { createContext, useContext } from "react";
 import * as React from "react";
 
@@ -81,4 +81,4 @@ const GiftCardListDialogsProvider = ({ children, params }: GiftCardListDialogsPr
   );
 };
 
-export default GiftCardListDialogsProvider;
+export { GiftCardListDialogsProvider };

@@ -1,14 +1,14 @@
 // @ts-strict-ignore
 import { AppUrls } from "@dashboard/apps/urls";
-import CardSpacer from "@dashboard/components/CardSpacer";
-import Link from "@dashboard/components/Link";
+import { CardSpacer } from "@dashboard/components/CardSpacer";
+import { Link } from "@dashboard/components/Link";
 import { customerUrl } from "@dashboard/customers/urls";
 import { ExtensionsUrls } from "@dashboard/extensions/urls";
 import { useFlag } from "@dashboard/featureFlags";
 import { GiftCardEventsEnum } from "@dashboard/graphql";
-import useDateLocalize from "@dashboard/hooks/useDateLocalize";
+import { useDateLocalize } from "@dashboard/hooks/useDateLocalize";
 import { getFullName, getStringOrPlaceholder } from "@dashboard/misc";
-import Label from "@dashboard/orders/components/OrderHistory/Label";
+import { Label } from "@dashboard/orders/components/OrderHistory/Label";
 import { getOrderNumberLinkObject } from "@dashboard/orders/components/OrderHistory/utils";
 import { getByType } from "@dashboard/orders/components/OrderReturnPage/utils";
 import { productUrl } from "@dashboard/products/urls";
@@ -16,7 +16,7 @@ import { staffMemberDetailsUrl } from "@dashboard/staff/urls";
 import { Text } from "@saleor/macaw-ui-next";
 import { MessageDescriptor, useIntl } from "react-intl";
 
-import useGiftCardDetails from "../providers/GiftCardDetailsProvider/hooks/useGiftCardDetails";
+import { useGiftCardDetails } from "../providers/GiftCardDetailsProvider/hooks/useGiftCardDetails";
 import { PLACEHOLDER } from "../types";
 import { giftCardUpdateInfoCardMessages as messages } from "./messages";
 
@@ -131,4 +131,4 @@ const GiftCardUpdateInfoCardContent = () => {
   );
 };
 
-export default GiftCardUpdateInfoCardContent;
+export { GiftCardUpdateInfoCardContent };

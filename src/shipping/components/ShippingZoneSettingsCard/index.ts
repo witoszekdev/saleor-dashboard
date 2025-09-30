@@ -1,2 +1,2 @@
 export * from "./ShippingZoneSettingsCard";
-export { default } from "./ShippingZoneSettingsCard";
+export { ShippingZoneSettingsCard } from "./ShippingZoneSettingsCard";

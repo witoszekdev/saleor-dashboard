@@ -1,2 +1,2 @@
-export { default } from "./CompanyAddressInput";
+export { CompanyAddressInput } from "./CompanyAddressInput";
 export * from "./CompanyAddressInput";

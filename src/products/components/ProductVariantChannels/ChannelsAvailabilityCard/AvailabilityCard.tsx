@@ -9,7 +9,7 @@ import { PropsWithChildren } from "react";
 import { ProductChannelListing } from "./../types";
 import { ChannelsListItem } from "./ChannelsListItem";
 import { useFilteredChannelListing } from "./useFilteredChannelListing";
-import CardContainer from "./VariantDetailsChannelsAvailabilityCardContainer";
+import { VariantDetailsChannelsAvailabilityCardContainer as CardContainer } from "./VariantDetailsChannelsAvailabilityCardContainer";
 
 interface AvailabilityCardProps {
   allAvailableListings: FormsetData<ChannelPriceAndPreorderData, IChannelPriceAndPreorderArgs>;

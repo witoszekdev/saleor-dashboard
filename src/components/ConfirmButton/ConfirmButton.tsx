@@ -1,6 +1,6 @@
 import { buttonMessages, commonMessages } from "@dashboard/intl";
-import CircularProgress from "@material-ui/core/CircularProgress";
-import CheckIcon from "@material-ui/icons/Check";
+import { CircularProgress } from "@material-ui/core/CircularProgress";
+import { SvgIcon as CheckIcon } from "@material-ui/icons/Check";
 import { Button, ButtonProps, sprinkles } from "@saleor/macaw-ui-next";
 import { useEffect, useRef, useState } from "react";
 import { useIntl } from "react-intl";

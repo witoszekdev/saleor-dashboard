@@ -12,11 +12,11 @@ import {
 import { GetCellContentOpts } from "@dashboard/components/Datagrid/Datagrid";
 import { AvailableColumn } from "@dashboard/components/Datagrid/types";
 import { OrderDetailsFragment, OrderErrorFragment } from "@dashboard/graphql";
-import useLocale from "@dashboard/hooks/useLocale";
+import { useLocale } from "@dashboard/hooks/useLocale";
 import { commonMessages } from "@dashboard/intl";
 import { getDatagridRowDataIndex, getStatusColor, isFirstColumn } from "@dashboard/misc";
 import { useOrderLineDiscountContext } from "@dashboard/products/components/OrderDiscountProviders/OrderLineDiscountProvider";
-import getOrderErrorMessage from "@dashboard/utils/errors/order";
+import { getOrderErrorMessage } from "@dashboard/utils/errors/order";
 import { GridCell, Item } from "@glideapps/glide-data-grid";
 import { DefaultTheme, useTheme } from "@saleor/macaw-ui-next";
 import { IntlShape, useIntl } from "react-intl";

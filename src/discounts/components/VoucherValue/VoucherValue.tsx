@@ -1,17 +1,17 @@
 // @ts-strict-ignore
 import { DashboardCard } from "@dashboard/components/Card";
-import ControlledCheckbox from "@dashboard/components/ControlledCheckbox";
+import { ControlledCheckbox } from "@dashboard/components/ControlledCheckbox";
 import { FormSpacer } from "@dashboard/components/FormSpacer";
-import RadioGroupField from "@dashboard/components/RadioGroupField";
-import ResponsiveTable from "@dashboard/components/ResponsiveTable";
-import TableHead from "@dashboard/components/TableHead";
-import TableRowLink from "@dashboard/components/TableRowLink";
+import { RadioGroupField } from "@dashboard/components/RadioGroupField";
+import { ResponsiveTable } from "@dashboard/components/ResponsiveTable";
+import { TableHead } from "@dashboard/components/TableHead";
+import { TableRowLink } from "@dashboard/components/TableRowLink";
 import { ChannelInput } from "@dashboard/discounts/handlers";
 import { DiscountTypeEnum } from "@dashboard/discounts/types";
 import { DiscountErrorFragment } from "@dashboard/graphql";
 import { renderCollection } from "@dashboard/misc";
 import { getFormErrors } from "@dashboard/utils/errors";
-import getDiscountErrorMessage from "@dashboard/utils/errors/discounts";
+import { getDiscountErrorMessage } from "@dashboard/utils/errors/discounts";
 import { TableBody, TableCell } from "@material-ui/core";
 import { Input, Skeleton, Text } from "@saleor/macaw-ui-next";
 import * as React from "react";
@@ -181,4 +181,4 @@ const VoucherValue = (props: VoucherValueProps) => {
   );
 };
 
-export default VoucherValue;
+export { VoucherValue };

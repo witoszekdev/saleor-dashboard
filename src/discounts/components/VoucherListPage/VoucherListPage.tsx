@@ -16,7 +16,7 @@ import {
 import { useExtensions } from "@dashboard/extensions/hooks/useExtensions";
 import { useFlag } from "@dashboard/featureFlags";
 import { VoucherFragment } from "@dashboard/graphql";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { sectionNames } from "@dashboard/intl";
 import {
   ChannelProps,
@@ -184,4 +184,4 @@ const VoucherListPage = ({
 };
 
 VoucherListPage.displayName = "VoucherListPage";
-export default VoucherListPage;
+export { VoucherListPage };

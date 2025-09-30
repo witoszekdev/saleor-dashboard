@@ -1,11 +1,11 @@
-import ActionDialog from "@dashboard/components/ActionDialog";
+import { ActionDialog } from "@dashboard/components/ActionDialog";
 import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import { buttonMessages } from "@dashboard/intl";
 import { getStringOrPlaceholder } from "@dashboard/misc";
 import { Box } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
 
-import msgs from "./messages";
+import { Messages as msgs } from "./messages";
 
 interface AppActivateDialogProps {
   confirmButtonState: ConfirmButtonTransitionState;
@@ -50,4 +50,4 @@ const AppActivateDialog = ({
 };
 
 AppActivateDialog.displayName = "AppActivateDialog";
-export default AppActivateDialog;
+export { AppActivateDialog };

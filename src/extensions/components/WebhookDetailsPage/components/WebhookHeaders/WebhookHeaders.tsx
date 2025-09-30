@@ -1,17 +1,17 @@
 import { DashboardCard } from "@dashboard/components/Card";
-import TableRowLink from "@dashboard/components/TableRowLink";
+import { TableRowLink } from "@dashboard/components/TableRowLink";
 import { FormChange } from "@dashboard/hooks/useForm";
 import { Table, TableCell, TableHead } from "@material-ui/core";
 import { Button, ChervonDownIcon, Skeleton, Text } from "@saleor/macaw-ui-next";
-import clsx from "clsx";
+import { clsx } from "clsx";
 import { useEffect, useMemo, useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
 import { WebhookFormData } from "../../WebhookDetailsPage";
 import { messages } from "./messages";
-import useStyles from "./styles";
+import { useStyles } from "./styles";
 import { hasEmptyHeader, mapHeaders, stringifyHeaders } from "./utils";
-import WebhookHeadersTableBody from "./WebhookHeadersTableBody";
+import { WebhookHeadersTableBody } from "./WebhookHeadersTableBody";
 
 export interface WebhookHeadersProps {
   data: WebhookFormData;
@@ -141,4 +141,4 @@ const WebhookHeaders = ({ data: { customHeaders }, onChange }: WebhookHeadersPro
 };
 
 WebhookHeaders.displayName = "WebhookHeaders";
-export default WebhookHeaders;
+export { WebhookHeaders };

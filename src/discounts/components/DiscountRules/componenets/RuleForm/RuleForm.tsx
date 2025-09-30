@@ -6,7 +6,7 @@ import { commonMessages } from "@dashboard/intl";
 import { getFormErrors } from "@dashboard/utils/errors";
 import { CommonError, getCommonFormFieldErrorMessage } from "@dashboard/utils/errors/common";
 import { RichTextContext } from "@dashboard/utils/richText/context";
-import useRichText from "@dashboard/utils/richText/useRichText";
+import { useRichText } from "@dashboard/utils/richText/useRichText";
 import { Box, Input, Option } from "@saleor/macaw-ui-next";
 import { useEffect, useMemo } from "react";
 import { useController, useFormContext } from "react-hook-form";

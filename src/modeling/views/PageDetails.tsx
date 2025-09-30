@@ -9,7 +9,7 @@ import {
   handleUploadMultipleFiles,
   prepareAttributesInput,
 } from "@dashboard/attributes/utils/handlers";
-import ActionDialog from "@dashboard/components/ActionDialog";
+import { ActionDialog } from "@dashboard/components/ActionDialog";
 import { AttributeInput } from "@dashboard/components/Attributes";
 import { WindowTitle } from "@dashboard/components/WindowTitle";
 import { DEFAULT_INITIAL_SEARCH_DATA, VALUES_PAGINATE_BY } from "@dashboard/config";
@@ -28,23 +28,23 @@ import {
   useUpdateMetadataMutation,
   useUpdatePrivateMetadataMutation,
 } from "@dashboard/graphql";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useNotifier from "@dashboard/hooks/useNotifier";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
+import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { commonMessages } from "@dashboard/intl";
-import useCategorySearch from "@dashboard/searches/useCategorySearch";
-import useCollectionSearch from "@dashboard/searches/useCollectionSearch";
+import { UseCategorySearch as useCategorySearch } from "@dashboard/searches/useCategorySearch";
+import { UseCollectionSearch as useCollectionSearch } from "@dashboard/searches/useCollectionSearch";
 import {
   useReferencePageSearch,
   useReferenceProductSearch,
 } from "@dashboard/searches/useReferenceSearch";
-import useAttributeValueSearchHandler from "@dashboard/utils/handlers/attributeValueSearchHandler";
-import createMetadataUpdateHandler from "@dashboard/utils/handlers/metadataUpdateHandler";
+import { useAttributeValueSearchHandler } from "@dashboard/utils/handlers/attributeValueSearchHandler";
+import { createMetadataUpdateHandler } from "@dashboard/utils/handlers/metadataUpdateHandler";
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { getParsedDataForJsonStringField } from "@dashboard/utils/richText/misc";
 import { FormattedMessage, useIntl } from "react-intl";
 
 import { getStringOrPlaceholder, maybe } from "../../misc";
-import PageDetailsPage from "../components/PageDetailsPage";
+import { PageDetailsPage } from "../components/PageDetailsPage";
 import { PageData, PageSubmitData } from "../components/PageDetailsPage/form";
 import { pageListUrl, pageUrl, PageUrlQueryParams } from "../urls";
 import { getAttributeInputFromPage } from "../utils/data";
@@ -276,4 +276,4 @@ const PageDetails = ({ id, params }: PageDetailsProps) => {
 };
 
 PageDetails.displayName = "PageDetails";
-export default PageDetails;
+export { PageDetails };

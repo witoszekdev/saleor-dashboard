@@ -18,4 +18,4 @@ const CardTitle = ({ className, children, title, subtitle, toolbar, ...rest }: C
 );
 
 CardTitle.displayName = "CardTitle";
-export default CardTitle;
+export { CardTitle };

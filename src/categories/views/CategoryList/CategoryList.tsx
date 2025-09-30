@@ -1,23 +1,24 @@
-import ActionDialog from "@dashboard/components/ActionDialog";
-import DeleteFilterTabDialog from "@dashboard/components/DeleteFilterTabDialog";
-import SaveFilterTabDialog from "@dashboard/components/SaveFilterTabDialog";
+import { ActionDialog } from "@dashboard/components/ActionDialog";
+import { DeleteFilterTabDialog } from "@dashboard/components/DeleteFilterTabDialog";
+import { SaveFilterTabDialog } from "@dashboard/components/SaveFilterTabDialog";
 import {
   CategoryBulkDeleteMutation,
   useCategoryBulkDeleteMutation,
   useRootCategoriesQuery,
 } from "@dashboard/graphql";
 import { useFilterPresets } from "@dashboard/hooks/useFilterPresets";
-import useListSettings from "@dashboard/hooks/useListSettings";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useListSettings } from "@dashboard/hooks/useListSettings";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { usePaginationReset } from "@dashboard/hooks/usePaginationReset";
-import usePaginator, {
+import {
   createPaginationState,
   PaginatorContext,
+  usePaginator,
 } from "@dashboard/hooks/usePaginator";
 import { useRowSelection } from "@dashboard/hooks/useRowSelection";
 import { ListViews } from "@dashboard/types";
-import createDialogActionHandlers from "@dashboard/utils/handlers/dialogActionHandlers";
-import createSortHandler from "@dashboard/utils/handlers/sortHandler";
+import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
+import { createSortHandler } from "@dashboard/utils/handlers/sortHandler";
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { getSortParams } from "@dashboard/utils/sort";
 import { Box } from "@saleor/macaw-ui-next";
@@ -226,4 +227,4 @@ const CategoryList = ({ params }: CategoryListProps) => {
   );
 };
 
-export default CategoryList;
+export { CategoryList };

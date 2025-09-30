@@ -1,11 +1,11 @@
 import { FulfillmentStatus, OrderDetailsFragment } from "@dashboard/graphql";
 import { getStringOrPlaceholder } from "@dashboard/misc";
 import { Box, Paragraph, Text } from "@saleor/macaw-ui-next";
-import clsx from "clsx";
+import { clsx } from "clsx";
 import { FormattedMessage, useIntl } from "react-intl";
 
 import { extraInfoMessages } from "./messages";
-import useStyles from "./styles";
+import { useStyles } from "./styles";
 
 interface ExtraInfoLinesProps {
   fulfillment?: OrderDetailsFragment["fulfillments"][0];
@@ -72,4 +72,4 @@ const ExtraInfoLines = ({ fulfillment }: ExtraInfoLinesProps) => {
   );
 };
 
-export default ExtraInfoLines;
+export { ExtraInfoLines };

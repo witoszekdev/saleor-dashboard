@@ -4,7 +4,7 @@ import { GiftCardBulkCreateFormError } from "@dashboard/giftCards/GiftCardBulkCr
 import { getGiftCardErrorMessage } from "@dashboard/giftCards/GiftCardUpdate/messages";
 import { FormChange } from "@dashboard/hooks/useForm";
 import { commonMessages } from "@dashboard/intl";
-import useGiftCardTagsSearch from "@dashboard/searches/useGiftCardTagsSearch";
+import { UseGiftCardTagsSearch as useGiftCardTagsSearch } from "@dashboard/searches/useGiftCardTagsSearch";
 import { mapEdgesToItems, mapMultiValueNodeToChoice } from "@dashboard/utils/maps";
 import { Box, Option } from "@saleor/macaw-ui-next";
 import compact from "lodash/compact";
@@ -69,4 +69,4 @@ const GiftCardTagInput = ({
   );
 };
 
-export default GiftCardTagInput;
+export { GiftCardTagInput };

@@ -1,3 +1,3 @@
-export { default } from "./DiscountDates";
+export { DiscountDates } from "./DiscountDates";
 export * from "./DiscountDates";
 export * from "./DiscountDatesWithController";

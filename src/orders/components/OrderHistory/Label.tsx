@@ -16,4 +16,4 @@ const Label = ({ text, size = 12 }: LabelProps) => (
   </Text>
 );
 
-export default Label;
+export { Label };

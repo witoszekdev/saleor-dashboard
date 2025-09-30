@@ -1,6 +1,6 @@
 import { Alert, AlertProps } from "@saleor/macaw-ui";
 import { sprinkles } from "@saleor/macaw-ui-next";
-import clsx from "clsx";
+import { clsx } from "clsx";
 
 type LimitReachedAlertProps = Omit<AlertProps, "variant" | "close">;
 
@@ -21,4 +21,4 @@ const LimitReachedAlert = (props: LimitReachedAlertProps) => (
 );
 
 LimitReachedAlert.displayName = "LimitReachedAlert";
-export default LimitReachedAlert;
+export { LimitReachedAlert };

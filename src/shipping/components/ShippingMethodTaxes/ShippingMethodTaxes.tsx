@@ -61,4 +61,4 @@ const ShippingMethodTaxes = (props: ShippingMethodTaxesProps) => {
 };
 
 ShippingMethodTaxes.displayName = "ShippingMethodTaxes";
-export default ShippingMethodTaxes;
+export { ShippingMethodTaxes };

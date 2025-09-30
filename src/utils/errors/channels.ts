@@ -36,4 +36,4 @@ function getChannelsErrorMessage(
   return getCommonFormFieldErrorMessage(err, intl);
 }
 
-export default getChannelsErrorMessage;
+export { getChannelsErrorMessage };

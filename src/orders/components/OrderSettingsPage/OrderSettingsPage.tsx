@@ -4,14 +4,14 @@ import { DetailPageLayout } from "@dashboard/components/Layouts";
 import { Savebar } from "@dashboard/components/Savebar";
 import { OrderSettingsFragment, ShopOrderSettingsFragment } from "@dashboard/graphql";
 import { SubmitPromise } from "@dashboard/hooks/useForm";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { orderListUrl } from "@dashboard/orders/urls";
 import { Box } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
 
-import OrderFulfillmentSettings from "../OrderFulfillmentSettings";
-import OrderSettings from "../OrderSettings/OrderSettings";
-import OrderSettingsForm from "./form";
+import { OrderFulfillmentSettings } from "../OrderFulfillmentSettings";
+import { OrderSettings } from "../OrderSettings/OrderSettings";
+import { OrderSettingsForm } from "./form";
 import { OrderSettingsFormData } from "./types";
 
 interface OrderSettingsPageProps {
@@ -71,4 +71,4 @@ const OrderSettingsPage = ({
 };
 
 OrderSettingsPage.displayName = "OrderSettingsPage";
-export default OrderSettingsPage;
+export { OrderSettingsPage };

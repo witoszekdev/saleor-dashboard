@@ -1,4 +1,4 @@
-import VerticalSpacer from "@dashboard/components/VerticalSpacer";
+import { VerticalSpacer } from "@dashboard/components/VerticalSpacer";
 import { Box, Text } from "@saleor/macaw-ui-next";
 
 interface PageSectionHeaderProps {
@@ -27,4 +27,4 @@ const PageSectionHeader = (props: PageSectionHeaderProps) => {
 };
 
 PageSectionHeader.displayName = "PageSectionHeader";
-export default PageSectionHeader;
+export { PageSectionHeader };

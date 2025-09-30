@@ -1,9 +1,9 @@
 // @ts-strict-ignore
 import { DashboardCard } from "@dashboard/components/Card";
-import Money from "@dashboard/components/Money";
+import { Money } from "@dashboard/components/Money";
 import { QuantityInput } from "@dashboard/components/QuantityInput";
-import TableCellAvatar from "@dashboard/components/TableCellAvatar";
-import TableRowLink from "@dashboard/components/TableRowLink";
+import { TableCellAvatar } from "@dashboard/components/TableCellAvatar";
+import { TableRowLink } from "@dashboard/components/TableRowLink";
 import { OrderDetailsFragment, OrderErrorFragment, OrderLineFragment } from "@dashboard/graphql";
 import { FormsetChange } from "@dashboard/hooks/useFormset";
 import { getById, renderCollection } from "@dashboard/misc";
@@ -14,11 +14,11 @@ import { CSSProperties } from "react";
 import * as React from "react";
 import { FormattedMessage } from "react-intl";
 
-import OrderCardTitle from "../../OrderCardTitle";
+import { OrderCardTitle } from "../../OrderCardTitle";
 import { MaximalButton } from "../components/MaximalButton";
 import { FormsetQuantityData, FormsetReplacementData } from "../form";
 import { getQuantityDataFromItems, getReplacementDataFromItems } from "../utils";
-import ProductErrorCell from "./ProductErrorCell";
+import { ProductErrorCell } from "./ProductErrorCell";
 
 const useStyles = makeStyles(
   theme => {
@@ -214,4 +214,4 @@ const ItemsCard = ({
   );
 };
 
-export default ItemsCard;
+export { ItemsCard };

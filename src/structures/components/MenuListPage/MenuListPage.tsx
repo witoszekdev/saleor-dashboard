@@ -8,14 +8,14 @@ import {
 } from "@dashboard/extensions/getExtensionsItems";
 import { useExtensions } from "@dashboard/extensions/hooks/useExtensions";
 import { MenuFragment } from "@dashboard/graphql";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { sectionNames } from "@dashboard/intl";
 import { menuListUrl, MenuListUrlSortField } from "@dashboard/structures/urls";
 import { ListActions, PageListProps, SortPage } from "@dashboard/types";
 import { Box, Button, ChevronRightIcon, Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import MenuList from "../MenuList";
+import { MenuList } from "../MenuList";
 
 interface MenuListPageProps extends PageListProps, ListActions, SortPage<MenuListUrlSortField> {
   menus: MenuFragment[];
@@ -92,4 +92,4 @@ const MenuListPage = ({ selectedMenuIds, ...listProps }: MenuListPageProps) => {
   );
 };
 
-export default MenuListPage;
+export { MenuListPage };

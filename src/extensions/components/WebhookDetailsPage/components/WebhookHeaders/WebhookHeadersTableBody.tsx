@@ -1,15 +1,15 @@
 // @ts-strict-ignore
-import TableRowLink from "@dashboard/components/TableRowLink";
+import { TableRowLink } from "@dashboard/components/TableRowLink";
 import { FormChange } from "@dashboard/hooks/useForm";
 import { removeAtIndex, updateAtIndex } from "@dashboard/utils/lists";
 import { TableBody, TableCell, TextField } from "@material-ui/core";
 import { DeleteIcon, IconButton } from "@saleor/macaw-ui";
-import clsx from "clsx";
+import { clsx } from "clsx";
 import { ChangeEvent } from "react";
 import { useIntl } from "react-intl";
 
 import { messages } from "./messages";
-import useStyles from "./styles";
+import { useStyles } from "./styles";
 import { Header, stringifyHeaders } from "./utils";
 
 const nameSeparator = ":";
@@ -114,4 +114,4 @@ const WebhookHeadersTableBody = ({ onChange, headers }: WebhookHeadersTableBodyP
 };
 
 WebhookHeadersTableBody.displayName = "WebhookHeadersTableRow";
-export default WebhookHeadersTableBody;
+export { WebhookHeadersTableBody };

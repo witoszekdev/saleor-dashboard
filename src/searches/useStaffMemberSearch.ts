@@ -5,7 +5,7 @@ import {
   SearchStaffMembersQuery,
   SearchStaffMembersQueryVariables,
 } from "@dashboard/graphql";
-import makeTopLevelSearch from "@dashboard/hooks/makeTopLevelSearch";
+import { makeTopLevelSearch } from "@dashboard/hooks/makeTopLevelSearch";
 
 export const searchStaffMembers = gql`
   query SearchStaffMembers($after: String, $first: Int!, $query: String!) {
@@ -30,6 +30,7 @@ export const searchStaffMembers = gql`
   }
 `;
 
-export default makeTopLevelSearch<SearchStaffMembersQuery, SearchStaffMembersQueryVariables>(
-  SearchStaffMembersDocument,
-);
+export const UseStaffMemberSearch = makeTopLevelSearch<
+  SearchStaffMembersQuery,
+  SearchStaffMembersQueryVariables
+>(SearchStaffMembersDocument);

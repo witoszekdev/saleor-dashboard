@@ -3,7 +3,7 @@ import { DashboardCard } from "@dashboard/components/Card";
 import { AccountErrorFragment } from "@dashboard/graphql";
 import { commonMessages } from "@dashboard/intl";
 import { getFormErrors } from "@dashboard/utils/errors";
-import getAccountErrorMessage from "@dashboard/utils/errors/account";
+import { getAccountErrorMessage } from "@dashboard/utils/errors/account";
 import { TextField } from "@material-ui/core";
 import { makeStyles } from "@saleor/macaw-ui";
 import * as React from "react";
@@ -103,4 +103,4 @@ const CustomerCreateDetails = (props: CustomerCreateDetailsProps) => {
 };
 
 CustomerCreateDetails.displayName = "CustomerCreateDetails";
-export default CustomerCreateDetails;
+export { CustomerCreateDetails };

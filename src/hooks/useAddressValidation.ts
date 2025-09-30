@@ -49,4 +49,4 @@ function useAddressValidation<TInput, TOutput>(
   };
 }
 
-export default useAddressValidation;
+export { useAddressValidation };

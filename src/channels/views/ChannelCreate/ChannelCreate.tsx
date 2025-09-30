@@ -9,15 +9,15 @@ import {
   useChannelReorderWarehousesMutation,
 } from "@dashboard/graphql";
 import { getSearchFetchMoreProps } from "@dashboard/hooks/makeTopLevelSearch/utils";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useNotifier from "@dashboard/hooks/useNotifier";
-import useShop from "@dashboard/hooks/useShop";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
+import { useNotifier } from "@dashboard/hooks/useNotifier";
+import { useShop } from "@dashboard/hooks/useShop";
 import { commonMessages } from "@dashboard/intl";
-import getChannelsErrorMessage from "@dashboard/utils/errors/channels";
+import { getChannelsErrorMessage } from "@dashboard/utils/errors/channels";
 import currencyCodes from "currency-codes";
 import { useIntl } from "react-intl";
 
-import ChannelDetailsPage from "../../pages/ChannelDetailsPage";
+import { ChannelDetailsPage } from "../../pages/ChannelDetailsPage";
 import { channelPath } from "../../urls";
 import { useShippingZones } from "../ChannelDetails/useShippingZones";
 import { useWarehouses } from "../ChannelDetails/useWarehouses";
@@ -168,4 +168,4 @@ const ChannelCreateView = () => {
   );
 };
 
-export default ChannelCreateView;
+export { ChannelCreateView };

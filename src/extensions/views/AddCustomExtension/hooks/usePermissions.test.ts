@@ -1,5 +1,5 @@
 import { PermissionEnum, PermissionFragment } from "@dashboard/graphql";
-import useShop from "@dashboard/hooks/useShop";
+import { useShop } from "@dashboard/hooks/useShop";
 import { renderHook } from "@testing-library/react-hooks";
 
 import { usePermissions } from "./usePermissions";

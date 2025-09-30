@@ -49,4 +49,4 @@ const OrderAlerts = ({ alertsHeader, alerts, values }: OrderAlertsProps) => {
 };
 
 OrderAlerts.displayName = "OrderAlerts";
-export default OrderAlerts;
+export { OrderAlerts };

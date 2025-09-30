@@ -1,24 +1,24 @@
 // @ts-strict-ignore
 import { DashboardCard } from "@dashboard/components/Card";
 import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import Grid from "@dashboard/components/Grid";
-import Hr from "@dashboard/components/Hr";
+import { Grid } from "@dashboard/components/Grid";
+import { Hr } from "@dashboard/components/Hr";
 import { TablePaginationWithContext } from "@dashboard/components/TablePagination";
 import { SubmitPromise } from "@dashboard/hooks/useForm";
 import { buttonMessages } from "@dashboard/intl";
 import { TranslationField, TranslationFieldType } from "@dashboard/translations/types";
 import { ListProps } from "@dashboard/types";
 import { OutputData } from "@editorjs/editorjs";
-import ArrowIcon from "@material-ui/icons/ArrowDropDown";
+import { SvgIcon as ArrowIcon } from "@material-ui/icons/ArrowDropDown";
 import { Button, IconButton, makeStyles } from "@saleor/macaw-ui";
 import { Skeleton, Text } from "@saleor/macaw-ui-next";
-import clsx from "clsx";
+import { clsx } from "clsx";
 import { Fragment, useState } from "react";
 import { FormattedMessage } from "react-intl";
 
-import TranslationFieldsLong from "./TranslationFieldsLong";
-import TranslationFieldsRich from "./TranslationFieldsRich";
-import TranslationFieldsShort from "./TranslationFieldsShort";
+import { TranslationFieldsLong } from "./TranslationFieldsLong";
+import { TranslationFieldsRich } from "./TranslationFieldsRich";
+import { TranslationFieldsShort } from "./TranslationFieldsShort";
 
 type Pagination = Pick<ListProps, Exclude<keyof ListProps, "getRowHref" | "disabled">>;
 
@@ -260,4 +260,4 @@ const TranslationFields = (props: TranslationFieldsProps) => {
 };
 
 TranslationFields.displayName = "TranslationFields";
-export default TranslationFields;
+export { TranslationFields };

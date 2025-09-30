@@ -20,4 +20,4 @@ const ArrowSort = createSvgIcon(
   "ArrowSort",
 );
 
-export default ArrowSort;
+export { ArrowSort };

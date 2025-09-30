@@ -1,4 +1,4 @@
-import EditorJS, { EditorConfig, OutputData, ToolConstructable } from "@editorjs/editorjs";
+import { EditorConfig, EditorJS, OutputData, ToolConstructable } from "@editorjs/editorjs";
 import Paragraph from "@editorjs/paragraph";
 import {
   EditorCore,

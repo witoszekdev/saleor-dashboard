@@ -1,5 +1,5 @@
 import { PermissionEnum } from "@dashboard/graphql";
-import useShop from "@dashboard/hooks/useShop";
+import { useShop } from "@dashboard/hooks/useShop";
 
 export const useGetAvailableAppPermissions = () => {
   const shopData = useShop();

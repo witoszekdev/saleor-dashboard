@@ -1,9 +1,9 @@
 // @ts-strict-ignore
 import { createContext } from "react";
 
-import ExitFormDialog from "./ExitFormDialog";
+import { ExitFormDialog } from "./ExitFormDialog";
 import { ExitFormDialogData } from "./types";
-import useBeforeUnload from "./useBeforeUnload";
+import { useBeforeUnload } from "./useBeforeUnload";
 import { useExitFormDialogProvider } from "./useExitFormDialogProvider";
 
 // Do not use this context directly in components
@@ -39,4 +39,4 @@ const ExitFormDialogProvider = ({ children }) => {
   );
 };
 
-export default ExitFormDialogProvider;
+export { ExitFormDialogProvider };

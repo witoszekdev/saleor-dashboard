@@ -1,2 +1,2 @@
 export * from "./AppPage";
-export { default } from "./AppPage";
+export { AppPage } from "./AppPage";

@@ -1,7 +1,7 @@
 // @ts-strict-ignore
 import { useUser } from "@dashboard/auth";
 import { ChannelFragment, useBaseChannelsQuery } from "@dashboard/graphql";
-import useLocalStorage from "@dashboard/hooks/useLocalStorage";
+import { useLocalStorage } from "@dashboard/hooks/useLocalStorage";
 import { getById } from "@dashboard/misc";
 import { useSaleorConfig } from "@saleor/sdk";
 import { createContext, ReactNode, useContext, useEffect, useState } from "react";
@@ -93,4 +93,4 @@ function useAppChannel(enablePicker = true): UseAppChannel {
   return data;
 }
 
-export default useAppChannel;
+export { useAppChannel };

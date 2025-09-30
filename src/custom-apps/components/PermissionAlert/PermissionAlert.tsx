@@ -79,4 +79,4 @@ const PermissionAlert = ({ query }: PermissionAlertProps) => {
 };
 
 PermissionAlert.displayName = "PermissionAlert";
-export default PermissionAlert;
+export { PermissionAlert };

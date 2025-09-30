@@ -5,7 +5,7 @@ import {
   SearchAvailableInGridAttributesQuery,
   SearchAvailableInGridAttributesQueryVariables,
 } from "@dashboard/graphql";
-import makeSearch from "@dashboard/hooks/makeSearch";
+import { makeSearch } from "@dashboard/hooks/makeSearch";
 
 export const availableInGridAttributes = gql`
   query SearchAvailableInGridAttributes($first: Int!, $after: String, $query: String!) {
@@ -28,7 +28,7 @@ export const availableInGridAttributes = gql`
   }
 `;
 
-export default makeSearch<
+export const UseAvailableInGridAttributesSearch = makeSearch<
   SearchAvailableInGridAttributesQuery,
   SearchAvailableInGridAttributesQueryVariables
 >(SearchAvailableInGridAttributesDocument, result => {

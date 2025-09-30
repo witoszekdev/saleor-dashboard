@@ -1,5 +1,5 @@
 import { ExtensionsPaths } from "@dashboard/extensions/urls";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 
 type Errors = "USER_DENIED_PERMISSIONS" | "UPDATE_PERMISSIONS_FAILED";
 

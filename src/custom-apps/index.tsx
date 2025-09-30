@@ -3,7 +3,7 @@ import { Route } from "@dashboard/components/Router";
 import { WindowTitle } from "@dashboard/components/WindowTitle";
 import { ExtensionsUrls } from "@dashboard/extensions/urls";
 import { useFlag } from "@dashboard/featureFlags";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { sectionNames } from "@dashboard/intl";
 import { parse as parseQs } from "qs";
 import { useState } from "react";
@@ -15,11 +15,11 @@ import {
   CustomAppListUrlQueryParams,
   CustomAppPaths,
 } from "./urls";
-import CustomAppCreateView from "./views/CustomAppCreate";
-import CustomAppDetailsView from "./views/CustomAppDetails";
-import CustomAppListView from "./views/CustomAppList";
-import CustomAppWebhookCreateView from "./views/CustomAppWebhookCreate";
-import CustomAppWebhookDetailsView from "./views/CustomAppWebhookDetails";
+import { CustomAppCreate as CustomAppCreateView } from "./views/CustomAppCreate";
+import { CustomAppDetails as CustomAppDetailsView } from "./views/CustomAppDetails";
+import { CustomAppList as CustomAppListView } from "./views/CustomAppList";
+import { CustomAppWebhookCreate as CustomAppWebhookCreateView } from "./views/CustomAppWebhookCreate";
+import { CustomAppWebhookDetails as CustomAppWebhookDetailsView } from "./views/CustomAppWebhookDetails";
 
 interface MatchParams {
   appId?: string;
@@ -121,4 +121,4 @@ const Component = () => {
   );
 };
 
-export default Component;
+export { Component };

@@ -1,4 +1,4 @@
-import SearchInput from "@dashboard/components/AppLayout/ListFilters/components/SearchInput";
+import { SearchInput } from "@dashboard/components/AppLayout/ListFilters/components/SearchInput";
 import { PermissionEnum } from "@dashboard/graphql";
 import { Box, Switch, SwitchItemProps } from "@saleor/macaw-ui-next";
 import { useEffect, useRef } from "react";

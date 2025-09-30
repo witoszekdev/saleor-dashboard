@@ -123,4 +123,4 @@ export const TimelineAddNote = (props: TimelineAddNoteProps) => {
 };
 
 Timeline.displayName = "Timeline";
-export default Timeline;
+export { Timeline };

@@ -29,18 +29,20 @@ import {
   SearchProductsQuery,
   SearchProductTypesQuery,
 } from "@dashboard/graphql";
-import useForm, {
+import {
   CommonUseFormResultWithHandlers,
   FormChange,
   FormErrors,
   SubmitPromise,
+  useForm,
 } from "@dashboard/hooks/useForm";
-import useFormset, {
+import {
   FormsetChange,
   FormsetData,
   FormsetMetadataChange,
+  useFormset,
 } from "@dashboard/hooks/useFormset";
-import useHandleFormSubmit from "@dashboard/hooks/useHandleFormSubmit";
+import { useHandleFormSubmit } from "@dashboard/hooks/useHandleFormSubmit";
 import { errorMessages } from "@dashboard/intl";
 import {
   AttributeValuesMetadata,
@@ -60,12 +62,12 @@ import {
 } from "@dashboard/products/utils/validation";
 import { PRODUCT_CREATE_FORM_ID } from "@dashboard/products/views/ProductCreate/consts";
 import { FetchMoreProps, RelayToFlat, ReorderEvent } from "@dashboard/types";
-import createMultiselectChangeHandler from "@dashboard/utils/handlers/multiselectChangeHandler";
-import createSingleAutocompleteSelectHandler from "@dashboard/utils/handlers/singleAutocompleteSelectChangeHandler";
-import useMetadataChangeTrigger from "@dashboard/utils/metadata/useMetadataChangeTrigger";
+import { createMultiselectChangeHandler } from "@dashboard/utils/handlers/multiselectChangeHandler";
+import { createSingleAutocompleteSelectHandler } from "@dashboard/utils/handlers/singleAutocompleteSelectChangeHandler";
+import { useMetadataChangeTrigger } from "@dashboard/utils/metadata/useMetadataChangeTrigger";
 import { RichTextContext } from "@dashboard/utils/richText/context";
 import { useMultipleRichText } from "@dashboard/utils/richText/useMultipleRichText";
-import useRichText from "@dashboard/utils/richText/useRichText";
+import { useRichText } from "@dashboard/utils/richText/useRichText";
 import { OutputData } from "@editorjs/editorjs";
 import { Option } from "@saleor/macaw-ui-next";
 import { Dispatch, ReactNode, SetStateAction, useEffect, useState } from "react";
@@ -460,4 +462,4 @@ const ProductCreateForm = ({
 };
 
 ProductCreateForm.displayName = "ProductCreateForm";
-export default ProductCreateForm;
+export { ProductCreateForm };

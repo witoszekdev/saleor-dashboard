@@ -6,22 +6,22 @@ import {
   useUpdateMetadataMutation,
   useUpdatePrivateMetadataMutation,
 } from "@dashboard/graphql";
-import useListSettings from "@dashboard/hooks/useListSettings";
-import useLocalPageInfo, { getMaxPage } from "@dashboard/hooks/useLocalPageInfo";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useNotifier from "@dashboard/hooks/useNotifier";
+import { useListSettings } from "@dashboard/hooks/useListSettings";
+import { getMaxPage, useLocalPageInfo } from "@dashboard/hooks/useLocalPageInfo";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
+import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { getMutationErrors, getStringOrPlaceholder } from "@dashboard/misc";
 import { ListViews, ReorderEvent } from "@dashboard/types";
-import createDialogActionHandlers from "@dashboard/utils/handlers/dialogActionHandlers";
-import createMetadataCreateHandler from "@dashboard/utils/handlers/metadataCreateHandler";
+import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
+import { createMetadataCreateHandler } from "@dashboard/utils/handlers/metadataCreateHandler";
 import { add, isSelected, move, remove, updateAtIndex } from "@dashboard/utils/lists";
 import { useEffect, useState } from "react";
 import { useIntl } from "react-intl";
-import slugify from "slugify";
+import { slugify } from "slugify";
 
-import AttributePage, { AttributePageFormData } from "../../components/AttributePage";
-import AttributeValueDeleteDialog from "../../components/AttributeValueDeleteDialog";
-import AttributeValueEditDialog from "../../components/AttributeValueEditDialog";
+import { AttributePage, AttributePageFormData } from "../../components/AttributePage";
+import { AttributeValueDeleteDialog } from "../../components/AttributeValueDeleteDialog";
+import { AttributeValueEditDialog } from "../../components/AttributeValueEditDialog";
 import {
   attributeAddUrl,
   AttributeAddUrlDialog,
@@ -255,4 +255,4 @@ const AttributeDetails = ({ params }: AttributeDetailsProps) => {
 
 AttributeDetails.displayName = "AttributeDetails";
 
-export default AttributeDetails;
+export { AttributeDetails };

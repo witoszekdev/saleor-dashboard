@@ -1,3 +1,3 @@
-export { default } from "./MenuItems";
+export { MenuItems } from "./MenuItems";
 export * from "./MenuItems";
 export * from "./tree";

@@ -1,5 +1,5 @@
 import { IMoney } from "@dashboard/utils/intl";
-import clsx from "clsx";
+import { clsx } from "clsx";
 import { FormattedMessage } from "react-intl";
 
 import { dataLineMessages } from "../messages";

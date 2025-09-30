@@ -1,16 +1,16 @@
-import NotFoundPage from "@dashboard/components/NotFoundPage";
+import { NotFoundPage } from "@dashboard/components/NotFoundPage";
 import { WindowTitle } from "@dashboard/components/WindowTitle";
 import {
   useWebhookDetailsQuery,
   useWebhookUpdateMutation,
   WebhookEventTypeAsyncEnum,
 } from "@dashboard/graphql";
-import useNotifier from "@dashboard/hooks/useNotifier";
+import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { commonMessages } from "@dashboard/intl";
 import { useIntl } from "react-intl";
 
 import { extractMutationErrors, getStringOrPlaceholder } from "../../misc";
-import WebhookDetailsPage, { WebhookFormData } from "../components/WebhookDetailsPage";
+import { WebhookDetailsPage, WebhookFormData } from "../components/WebhookDetailsPage";
 import { useAvailableEvents } from "../hooks";
 import { CustomAppUrls } from "../urls";
 
@@ -83,4 +83,4 @@ const CustomAppWebhookDetails = ({ id }: CustomAppWebhookDetailsProps) => {
 };
 
 CustomAppWebhookDetails.displayName = "CustomAppWebhookDetails";
-export default CustomAppWebhookDetails;
+export { CustomAppWebhookDetails };

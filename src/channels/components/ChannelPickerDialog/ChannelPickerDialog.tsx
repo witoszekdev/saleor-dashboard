@@ -1,8 +1,8 @@
-import ActionDialog from "@dashboard/components/ActionDialog";
+import { ActionDialog } from "@dashboard/components/ActionDialog";
 import { Combobox } from "@dashboard/components/Combobox";
 import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import useChoiceSearch from "@dashboard/hooks/useChoiceSearch";
-import useModalDialogOpen from "@dashboard/hooks/useModalDialogOpen";
+import { useChoiceSearch } from "@dashboard/hooks/useChoiceSearch";
+import { useModalDialogOpen } from "@dashboard/hooks/useModalDialogOpen";
 import { Option } from "@saleor/macaw-ui-next";
 import { useState } from "react";
 import { useIntl } from "react-intl";
@@ -63,4 +63,4 @@ const ChannelPickerDialog = ({
 };
 
 ChannelPickerDialog.displayName = "ChannelPickerDialog";
-export default ChannelPickerDialog;
+export { ChannelPickerDialog };

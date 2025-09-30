@@ -10,7 +10,7 @@ import { prepareMoney } from "@dashboard/orders/utils/data";
 import { Skeleton } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
 
-import OrderTransaction from "../OrderTransaction";
+import { OrderTransaction } from "../OrderTransaction";
 import { transactionGiftCardMessages } from "./messages";
 import { getGiftCardAmount, getUsedInGiftCardEvents } from "./utils";
 
@@ -84,4 +84,4 @@ const OrderTransactionGiftCard = ({ order, giftCard }: OrderTransactionGiftCardP
   );
 };
 
-export default OrderTransactionGiftCard;
+export { OrderTransactionGiftCard };

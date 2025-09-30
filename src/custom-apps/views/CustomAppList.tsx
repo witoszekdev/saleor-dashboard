@@ -1,6 +1,6 @@
 // @ts-strict-ignore
 import { useApolloClient } from "@apollo/client";
-import AppDeleteDialog from "@dashboard/apps/components/AppDeleteDialog";
+import { AppDeleteDialog } from "@dashboard/apps/components/AppDeleteDialog";
 import { EXTENSION_LIST_QUERY } from "@dashboard/apps/queries";
 import { WindowTitle } from "@dashboard/components/WindowTitle";
 import {
@@ -10,17 +10,17 @@ import {
   useAppDeleteMutation,
   useAppsListQuery,
 } from "@dashboard/graphql";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useNotifier from "@dashboard/hooks/useNotifier";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
+import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { sectionNames } from "@dashboard/intl";
 import { findById } from "@dashboard/misc";
-import createDialogActionHandlers from "@dashboard/utils/handlers/dialogActionHandlers";
+import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { useOnboarding } from "@dashboard/welcomePage/WelcomePageOnboarding/onboardingContext";
 import { useEffect } from "react";
 import { useIntl } from "react-intl";
 
-import CustomAppListPage from "../components/CustomAppListPage";
+import { CustomAppListPage } from "../components/CustomAppListPage";
 import { messages } from "../messages";
 import { CustomAppListUrlDialog, CustomAppListUrlQueryParams, CustomAppUrls } from "../urls";
 
@@ -115,4 +115,4 @@ const CustomAppList = ({ params }: CustomAppListProps) => {
 };
 
 CustomAppList.displayName = "CustomAppList";
-export default CustomAppList;
+export { CustomAppList };

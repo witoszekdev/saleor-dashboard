@@ -6,10 +6,10 @@ import { Box } from "@saleor/macaw-ui-next";
 import { useCallback } from "react";
 import { useIntl } from "react-intl";
 
-import AppListCardActions from "./AppListCardActions";
-import AppListCardDescription from "./AppListCardDescription";
-import AppListCardIntegrations from "./AppListCardIntegrations";
-import AppListCardLinks from "./AppListCardLinks";
+import { AppListCardActions } from "./AppListCardActions";
+import { AppListCardDescription } from "./AppListCardDescription";
+import { AppListCardIntegrations } from "./AppListCardIntegrations";
+import { AppListCardLinks } from "./AppListCardLinks";
 
 interface AppListRowProps {
   app: AppstoreApi.SaleorApp;
@@ -87,4 +87,4 @@ const AppListRow = ({
 };
 
 AppListRow.displayName = "AppListRow";
-export default AppListRow;
+export { AppListRow };

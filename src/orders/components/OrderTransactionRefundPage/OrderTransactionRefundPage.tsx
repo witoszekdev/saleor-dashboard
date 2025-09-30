@@ -2,7 +2,7 @@ import { useUserPermissions } from "@dashboard/auth/hooks/useUserPermissions";
 import { TopNav } from "@dashboard/components/AppLayout";
 import { DashboardCard } from "@dashboard/components/Card";
 import { DetailPageLayout } from "@dashboard/components/Layouts";
-import Link from "@dashboard/components/Link";
+import { Link } from "@dashboard/components/Link";
 import { Pill } from "@dashboard/components/Pill";
 import { hasPermissions } from "@dashboard/components/RequirePermissions";
 import { Savebar } from "@dashboard/components/Savebar";
@@ -12,7 +12,7 @@ import {
   useModelsOfTypeQuery,
 } from "@dashboard/graphql";
 import { SubmitPromise } from "@dashboard/hooks/useForm";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { pageListUrl } from "@dashboard/modeling/urls";
 import { refundReasonSelectHelperMessages } from "@dashboard/orders/messages";
 import { rippleNewRefundReasons } from "@dashboard/orders/ripples/newRefundReasons";
@@ -371,4 +371,4 @@ const OrderTransactionRefundPage = ({
   );
 };
 
-export default OrderTransactionRefundPage;
+export { OrderTransactionRefundPage };

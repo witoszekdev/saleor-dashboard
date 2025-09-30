@@ -11,4 +11,4 @@ const useGiftCardUpdateDialogs = (): GiftCardUpdateDialogsConsumerProps => {
   return giftCardUpdateDialogsProps;
 };
 
-export default useGiftCardUpdateDialogs;
+export { useGiftCardUpdateDialogs };

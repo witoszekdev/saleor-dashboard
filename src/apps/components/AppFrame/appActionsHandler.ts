@@ -4,8 +4,8 @@ import { AppUrls } from "@dashboard/apps/urls";
 import { getAppMountUri } from "@dashboard/config";
 import { useExternalApp } from "@dashboard/extensions/components/ExternalAppContext/ExternalAppContext";
 import { ExtensionsUrls } from "@dashboard/extensions/urls";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useNotifier from "@dashboard/hooks/useNotifier";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
+import { useNotifier } from "@dashboard/hooks/useNotifier";
 import {
   DashboardEventFactory,
   DispatchResponseEvent,

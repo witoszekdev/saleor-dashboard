@@ -1,4 +1,4 @@
-import Money from "@dashboard/components/Money";
+import { Money } from "@dashboard/components/Money";
 import { TransactionBaseEventFragment } from "@dashboard/graphql";
 import { Box } from "@saleor/macaw-ui-next";
 

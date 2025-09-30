@@ -1,7 +1,7 @@
 // @ts-strict-ignore
 import { DashboardCard } from "@dashboard/components/Card";
-import Grid from "@dashboard/components/Grid";
-import Hr from "@dashboard/components/Hr";
+import { Grid } from "@dashboard/components/Grid";
+import { Hr } from "@dashboard/components/Hr";
 import { Pill } from "@dashboard/components/Pill";
 import { WebhookEventTypeAsyncEnum, WebhookEventTypeSyncEnum } from "@dashboard/graphql";
 import { ChangeEvent } from "@dashboard/hooks/useForm";
@@ -172,4 +172,4 @@ const WebhookEvents = ({
 };
 
 WebhookEvents.displayName = "WebhookEvents";
-export default WebhookEvents;
+export { WebhookEvents };

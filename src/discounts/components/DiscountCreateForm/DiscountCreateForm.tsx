@@ -2,7 +2,7 @@ import { Rule } from "@dashboard/discounts/models";
 import { DiscoutFormData } from "@dashboard/discounts/types";
 import { PromotionTypeEnum } from "@dashboard/graphql";
 import { RichTextContext } from "@dashboard/utils/richText/context";
-import useRichText from "@dashboard/utils/richText/useRichText";
+import { useRichText } from "@dashboard/utils/richText/useRichText";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { ReactNode } from "react";
 import { FormProvider, SubmitHandler, useForm } from "react-hook-form";

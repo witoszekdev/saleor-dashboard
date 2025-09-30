@@ -23,4 +23,4 @@ const LoginLoading = (props: {}) => {
 };
 
 LoginLoading.displayName = "LoginLoading";
-export default LoginLoading;
+export { LoginLoading };

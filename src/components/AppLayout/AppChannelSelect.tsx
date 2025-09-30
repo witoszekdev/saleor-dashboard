@@ -29,4 +29,4 @@ const AppChannelSelect = ({
 };
 
 AppChannelSelect.displayName = "AppChannelSelect";
-export default AppChannelSelect;
+export { AppChannelSelect };

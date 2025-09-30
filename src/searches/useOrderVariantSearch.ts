@@ -5,7 +5,7 @@ import {
   SearchOrderVariantQuery,
   SearchOrderVariantQueryVariables,
 } from "@dashboard/graphql";
-import makeTopLevelSearch from "@dashboard/hooks/makeTopLevelSearch";
+import { makeTopLevelSearch } from "@dashboard/hooks/makeTopLevelSearch";
 
 export const searchOrderVariant = gql`
   query SearchOrderVariant(

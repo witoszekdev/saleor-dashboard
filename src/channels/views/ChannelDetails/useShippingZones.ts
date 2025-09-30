@@ -6,7 +6,7 @@ import {
   useChannelShippingZonesQuery,
   useShippingZonesCountQuery,
 } from "@dashboard/graphql";
-import useShippingZonesSearch from "@dashboard/searches/useShippingZonesSearch";
+import { UseShippingZonesSearch as useShippingZonesSearch } from "@dashboard/searches/useShippingZonesSearch";
 
 export const useShippingZones = (channelId?: string) => {
   const userPermissions = useUserPermissions();

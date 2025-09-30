@@ -5,7 +5,7 @@ import { PropsWithChildren } from "react";
 import { FormattedMessage } from "react-intl";
 
 import { AppListCardInstallButton } from "./AppListCardInstallButton";
-import InstallErrorAction from "./ErrorInstallAction";
+import { InstallErrorAction } from "./ErrorInstallAction";
 import { messages } from "./messages";
 
 interface AppListCardActionsProps {
@@ -77,4 +77,4 @@ const AppListCardActions = ({
 };
 
 AppListCardActions.displayName = "AppListCardActions";
-export default AppListCardActions;
+export { AppListCardActions };

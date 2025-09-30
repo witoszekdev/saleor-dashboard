@@ -1,10 +1,10 @@
 // @ts-strict-ignore
 import { createCountryHandler } from "@dashboard/components/AddressEdit/createCountryHandler";
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
-import CardSpacer from "@dashboard/components/CardSpacer";
-import CompanyAddressInput from "@dashboard/components/CompanyAddressInput";
+import { CardSpacer } from "@dashboard/components/CardSpacer";
+import { CompanyAddressInput } from "@dashboard/components/CompanyAddressInput";
 import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import Form from "@dashboard/components/Form";
+import { Form } from "@dashboard/components/Form";
 import { DetailPageLayout } from "@dashboard/components/Layouts";
 import { Savebar } from "@dashboard/components/Savebar";
 import { AddressTypeInput } from "@dashboard/customers/types";
@@ -14,18 +14,18 @@ import {
   WarehouseDetailsFragment,
   WarehouseErrorFragment,
 } from "@dashboard/graphql";
-import useAddressValidation from "@dashboard/hooks/useAddressValidation";
+import { useAddressValidation } from "@dashboard/hooks/useAddressValidation";
 import { useBackLinkWithState } from "@dashboard/hooks/useBackLinkWithState";
 import { SubmitPromise } from "@dashboard/hooks/useForm";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useStateFromProps from "@dashboard/hooks/useStateFromProps";
-import createSingleAutocompleteSelectHandler from "@dashboard/utils/handlers/singleAutocompleteSelectChangeHandler";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
+import { useStateFromProps } from "@dashboard/hooks/useStateFromProps";
+import { createSingleAutocompleteSelectHandler } from "@dashboard/utils/handlers/singleAutocompleteSelectChangeHandler";
 import { mapCountriesToChoices, mapEdgesToItems } from "@dashboard/utils/maps";
 import { warehouseListPath } from "@dashboard/warehouses/urls";
 import { useIntl } from "react-intl";
 
-import WarehouseInfo from "../WarehouseInfo";
-import WarehouseSettings from "../WarehouseSettings";
+import { WarehouseInfo } from "../WarehouseInfo";
+import { WarehouseSettings } from "../WarehouseSettings";
 
 export interface WarehouseDetailsPageFormData extends AddressTypeInput {
   name: string;
@@ -135,4 +135,4 @@ const WarehouseDetailsPage = ({
 };
 
 WarehouseDetailsPage.displayName = "WarehouseDetailsPage";
-export default WarehouseDetailsPage;
+export { WarehouseDetailsPage };

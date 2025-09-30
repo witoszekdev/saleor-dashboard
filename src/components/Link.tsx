@@ -3,7 +3,7 @@ import { isExternalURL } from "@dashboard/utils/urls";
 import { TypographyProps } from "@material-ui/core/Typography";
 import { makeStyles } from "@saleor/macaw-ui";
 import { Text } from "@saleor/macaw-ui-next";
-import clsx from "clsx";
+import { clsx } from "clsx";
 import * as React from "react";
 import { Link as RouterLink } from "react-router-dom";
 
@@ -122,4 +122,4 @@ const Link = (props: LinkProps) => {
 };
 
 Link.displayName = "Link";
-export default Link;
+export { Link };

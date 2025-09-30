@@ -10,4 +10,4 @@ function getPublishedAt({ publishedAt, isPublished }: PublicationData): Publicat
   };
 }
 
-export default getPublishedAt;
+export { getPublishedAt };

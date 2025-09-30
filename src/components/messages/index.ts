@@ -40,4 +40,4 @@ export type IMessageContext = (message: IMessage) => void;
 export const MessageContext = createContext<INotificationContext | null>(null);
 
 export * from "./MessageManagerProvider";
-export { default } from "./MessageManagerProvider";
+export { MessageManagerProvider } from "./MessageManagerProvider";

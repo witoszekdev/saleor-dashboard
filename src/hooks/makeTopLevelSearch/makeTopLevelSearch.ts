@@ -2,7 +2,7 @@
 import { PageInfoFragment } from "@dashboard/graphql";
 import { DocumentNode } from "graphql";
 
-import makeSearch, { SearchVariables, UseSearchHook } from "../makeSearch";
+import { makeSearch, SearchVariables, UseSearchHook } from "../makeSearch";
 
 export interface SearchData {
   search: {
@@ -46,4 +46,4 @@ function makeTopLevelSearch<TData extends SearchData, TVariables extends SearchV
   });
 }
 
-export default makeTopLevelSearch;
+export { makeTopLevelSearch };

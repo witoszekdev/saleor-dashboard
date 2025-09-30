@@ -3,8 +3,8 @@ import { TableCell } from "@material-ui/core";
 import { Skeleton } from "@saleor/macaw-ui-next";
 import { useRef, useState } from "react";
 
-import PluginAvailabilityStatus from "./PluginAvailabilityStatus";
-import PluginAvailabilityStatusPopup from "./PluginAvailabilityStatusPopup";
+import { PluginAvailabilityStatus } from "./PluginAvailabilityStatus";
+import { PluginAvailabilityStatusPopup } from "./PluginAvailabilityStatusPopup";
 
 interface PluginChannelAvailabilityCellProps {
   plugin: PluginBaseFragment;
@@ -39,4 +39,4 @@ const PluginChannelAvailabilityCell = ({ plugin }: PluginChannelAvailabilityCell
   );
 };
 
-export default PluginChannelAvailabilityCell;
+export { PluginChannelAvailabilityCell };

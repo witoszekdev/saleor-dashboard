@@ -2,7 +2,7 @@
 import { DashboardModal } from "@dashboard/components/Modal";
 import { CountryFragment } from "@dashboard/graphql";
 import { useLocalSearch } from "@dashboard/hooks/useLocalSearch";
-import useModalDialogOpen from "@dashboard/hooks/useModalDialogOpen";
+import { useModalDialogOpen } from "@dashboard/hooks/useModalDialogOpen";
 import { buttonMessages } from "@dashboard/intl";
 import { taxesMessages } from "@dashboard/taxes/messages";
 import { Divider, FormControlLabel, InputAdornment, Radio, TextField } from "@material-ui/core";
@@ -101,4 +101,4 @@ const TaxCountryDialog = ({ open, countries, onConfirm, onClose }: TaxCountryDia
   );
 };
 
-export default TaxCountryDialog;
+export { TaxCountryDialog };

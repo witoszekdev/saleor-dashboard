@@ -50,4 +50,4 @@ const ControlledSwitch = (props: ControlledSwitchProps) => {
 };
 
 ControlledSwitch.displayName = "ControlledSwitch";
-export default ControlledSwitch;
+export { ControlledSwitch };

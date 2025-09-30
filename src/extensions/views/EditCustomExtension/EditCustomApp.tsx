@@ -1,10 +1,10 @@
 // @ts-strict-ignore
 import { useApolloClient } from "@apollo/client";
-import NotFoundPage from "@dashboard/components/NotFoundPage";
+import { NotFoundPage } from "@dashboard/components/NotFoundPage";
 import { WindowTitle } from "@dashboard/components/WindowTitle";
-import AppActivateDialog from "@dashboard/extensions/components/AppActivateDialog";
-import AppDeactivateDialog from "@dashboard/extensions/components/AppDeactivateDialog";
-import AppDeleteDialog from "@dashboard/extensions/components/AppDeleteDialog";
+import { AppActivateDialog } from "@dashboard/extensions/components/AppActivateDialog";
+import { AppDeactivateDialog } from "@dashboard/extensions/components/AppDeactivateDialog";
+import { AppDeleteDialog } from "@dashboard/extensions/components/AppDeleteDialog";
 import { appMessages, notifyMessages } from "@dashboard/extensions/messages";
 import { EXTENSION_LIST_QUERY } from "@dashboard/extensions/queries";
 import { getAppInstallErrorMessage, getCustomAppErrorMessage } from "@dashboard/extensions/utils";
@@ -23,12 +23,12 @@ import {
   WebhookDeleteMutation,
 } from "@dashboard/graphql";
 import { useHasManagedAppsPermission } from "@dashboard/hooks/useHasManagedAppsPermission";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useNotifier from "@dashboard/hooks/useNotifier";
-import useShop from "@dashboard/hooks/useShop";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
+import { useNotifier } from "@dashboard/hooks/useNotifier";
+import { useShop } from "@dashboard/hooks/useShop";
 import { commonMessages } from "@dashboard/intl";
 import { extractMutationErrors, getStringOrPlaceholder, parseLogMessage } from "@dashboard/misc";
-import createDialogActionHandlers from "@dashboard/utils/handlers/dialogActionHandlers";
+import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
 import { useEffect } from "react";
 import { useIntl } from "react-intl";
 
@@ -37,12 +37,13 @@ import {
   CustomExtensionDetailsUrlQueryParams,
   ExtensionsUrls,
 } from "../../urls";
-import CustomExtensionDetailsPage, {
+import {
+  CustomExtensionDetailsPage,
   CustomExtensionDetailsPageFormData,
 } from "./components/CustomExtensionDetailsPage";
-import TokenCreateDialog from "./components/TokenCreateDialog";
-import TokenDeleteDialog from "./components/TokenDeleteDialog";
-import WebhookDeleteDialog from "./components/WebhookDeleteDialog";
+import { TokenCreateDialog } from "./components/TokenCreateDialog";
+import { TokenDeleteDialog } from "./components/TokenDeleteDialog";
+import { WebhookDeleteDialog } from "./components/WebhookDeleteDialog";
 
 interface OrderListProps {
   id: string;

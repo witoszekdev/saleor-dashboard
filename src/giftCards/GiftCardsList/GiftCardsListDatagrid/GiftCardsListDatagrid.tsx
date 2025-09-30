@@ -1,16 +1,16 @@
 import { ColumnPicker } from "@dashboard/components/Datagrid/ColumnPicker/ColumnPicker";
 import { useColumns } from "@dashboard/components/Datagrid/ColumnPicker/useColumns";
-import Datagrid from "@dashboard/components/Datagrid/Datagrid";
+import { Datagrid } from "@dashboard/components/Datagrid/Datagrid";
 import {
   DatagridChangeStateContext,
   useDatagridChangeState,
 } from "@dashboard/components/Datagrid/hooks/useDatagridChange";
-import TablePagination from "@dashboard/components/TablePagination";
+import { TablePagination } from "@dashboard/components/TablePagination";
 import { commonTooltipMessages } from "@dashboard/components/TooltipTableCellHeader/messages";
 import { giftCardListUrl, giftCardUrl } from "@dashboard/giftCards/urls";
 import { getPrevLocationState } from "@dashboard/hooks/useBackLinkWithState";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import usePaginator from "@dashboard/hooks/usePaginator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
+import { usePaginator } from "@dashboard/hooks/usePaginator";
 import { Item } from "@glideapps/glide-data-grid";
 import { Box, useTheme } from "@saleor/macaw-ui-next";
 import isEqual from "lodash/isEqual";

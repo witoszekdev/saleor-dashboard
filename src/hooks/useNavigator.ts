@@ -1,6 +1,6 @@
 import { ExitFormDialogContext } from "@dashboard/components/Form/ExitFormDialogProvider";
 import { useContext } from "react";
-import useRouter from "use-react-router";
+import { useRouter } from "use-react-router";
 
 export type NavigatorOpts = {
   replace?: boolean;
@@ -39,4 +39,4 @@ function useNavigator(): UseNavigatorResult {
   };
 }
 
-export default useNavigator;
+export { useNavigator };

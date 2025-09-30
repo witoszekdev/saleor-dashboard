@@ -1,9 +1,10 @@
 import { VoucherCode } from "@dashboard/discounts/components/VoucherCodesDatagrid/types";
 import { useVoucherCodesQuery } from "@dashboard/graphql";
-import useLocalPaginator, {
+import {
   LocalPagination,
   PaginationState,
   useLocalPaginationState,
+  useLocalPaginator,
 } from "@dashboard/hooks/useLocalPaginator";
 import { ListSettings } from "@dashboard/types";
 import { mapEdgesToItems } from "@dashboard/utils/maps";

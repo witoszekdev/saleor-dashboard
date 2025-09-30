@@ -3,8 +3,8 @@ import { SearchPageProps, TabPageProps } from "@dashboard/types";
 import { makeStyles } from "@saleor/macaw-ui";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import FilterTabs, { FilterTab } from "../TableFilter";
-import SearchInput from "./SearchInput";
+import { FilterTab, FilterTabs } from "../TableFilter";
+import { SearchInput } from "./SearchInput";
 
 export interface SearchBarProps extends SearchPageProps, TabPageProps {
   allTabLabel: string;

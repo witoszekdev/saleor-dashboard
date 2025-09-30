@@ -47,4 +47,4 @@ export const useGiftCardDetails = () => {
   return context;
 };
 
-export default GiftCardDetailsProvider;
+export { GiftCardDetailsProvider };

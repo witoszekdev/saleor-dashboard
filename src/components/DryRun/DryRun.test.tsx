@@ -1,10 +1,10 @@
 import { MockedProvider, MockedResponse } from "@apollo/client/testing";
 import { WebhookEventTypeSyncEnum } from "@dashboard/graphql";
 import { ThemeProvider } from "@saleor/macaw-ui";
-import productsMocks from "@test/mocks/products";
+import { productsMocks } from "@test/mocks/products";
 import { render, screen } from "@testing-library/react";
 
-import DryRun from "./DryRun";
+import { DryRun } from "./DryRun";
 
 const mocks: MockedResponse[] = [...productsMocks];
 

@@ -15,4 +15,4 @@ function postalCodesReducer(prevState: PostalCodesState, newState: PostalCodesSt
   return { ...prevState, ...newState };
 }
 
-export default postalCodesReducer;
+export { postalCodesReducer };

@@ -4,14 +4,14 @@ import {
   useExitFormDialog,
   UseExitFormDialogResult,
 } from "@dashboard/components/Form";
-import useHandleFormSubmit from "@dashboard/hooks/useHandleFormSubmit";
+import { useHandleFormSubmit } from "@dashboard/hooks/useHandleFormSubmit";
 import { toggle } from "@dashboard/utils/lists";
 import isEqual from "lodash/isEqual";
 import omit from "lodash/omit";
 import { useEffect, useState } from "react";
 import * as React from "react";
 
-import useStateFromProps from "./../useStateFromProps";
+import { useStateFromProps } from "./../useStateFromProps";
 import { FormData } from "./types";
 import { useChangedData } from "./useChangedData";
 
@@ -257,4 +257,4 @@ function useForm<T extends FormData, TErrors>(
   };
 }
 
-export default useForm;
+export { useForm };

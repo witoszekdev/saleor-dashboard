@@ -2,7 +2,7 @@
 import { getStatusColor } from "@dashboard/misc";
 import { makeStyles, Pill as MacawuiPill, PillProps } from "@saleor/macaw-ui";
 import { useTheme } from "@saleor/macaw-ui-next";
-import clsx from "clsx";
+import { clsx } from "clsx";
 import { forwardRef } from "react";
 
 const useStyles = makeStyles(

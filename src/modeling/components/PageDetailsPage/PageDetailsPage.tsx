@@ -6,15 +6,15 @@ import {
 import { useUser } from "@dashboard/auth";
 import { hasPermission } from "@dashboard/auth/misc";
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
-import AssignAttributeValueDialog from "@dashboard/components/AssignAttributeValueDialog";
+import { AssignAttributeValueDialog } from "@dashboard/components/AssignAttributeValueDialog";
 import { AttributeInput, Attributes } from "@dashboard/components/Attributes";
-import CardSpacer from "@dashboard/components/CardSpacer";
+import { CardSpacer } from "@dashboard/components/CardSpacer";
 import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import { DetailPageLayout } from "@dashboard/components/Layouts";
 import { Metadata } from "@dashboard/components/Metadata";
 import { Savebar } from "@dashboard/components/Savebar";
 import { SeoForm } from "@dashboard/components/SeoForm";
-import VisibilityCard from "@dashboard/components/VisibilityCard";
+import { VisibilityCard } from "@dashboard/components/VisibilityCard";
 import { extensionMountPoints } from "@dashboard/extensions/extensionMountPoints";
 import { getExtensionsItemForPageDetails } from "@dashboard/extensions/getExtensionsItems";
 import { useExtensions } from "@dashboard/extensions/hooks/useExtensions";
@@ -30,9 +30,9 @@ import {
   SearchProductsQuery,
 } from "@dashboard/graphql";
 import { useBackLinkWithState } from "@dashboard/hooks/useBackLinkWithState";
-import useDateLocalize from "@dashboard/hooks/useDateLocalize";
+import { useDateLocalize } from "@dashboard/hooks/useDateLocalize";
 import { SubmitPromise } from "@dashboard/hooks/useForm";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { modelingSection } from "@dashboard/modeling/urls";
 import { TranslationsButton } from "@dashboard/translations/components/TranslationsButton/TranslationsButton";
 import { languageEntityUrl, TranslatableEntities } from "@dashboard/translations/urls";
@@ -42,9 +42,9 @@ import { mapNodeToChoice } from "@dashboard/utils/maps";
 import { Box } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
 
-import PageInfo from "../PageInfo";
-import PageOrganizeContent from "../PageOrganizeContent";
-import PageForm, { PageData, PageUpdateHandlers } from "./form";
+import { PageInfo } from "../PageInfo";
+import { PageOrganizeContent } from "../PageOrganizeContent";
+import { PageData, PageForm, PageUpdateHandlers } from "./form";
 import { messages } from "./messages";
 
 interface PageDetailsPageProps {
@@ -305,4 +305,4 @@ const PageDetailsPage = ({
 };
 
 PageDetailsPage.displayName = "PageDetailsPage";
-export default PageDetailsPage;
+export { PageDetailsPage };

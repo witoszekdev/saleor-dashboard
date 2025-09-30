@@ -10,4 +10,4 @@ const useStyles = makeStyles(
   { name: "GiftCardUpdatePageHeader" },
 );
 
-export default useStyles;
+export { useStyles };

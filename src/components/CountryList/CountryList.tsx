@@ -1,12 +1,12 @@
 // @ts-strict-ignore
-import ResponsiveTable from "@dashboard/components/ResponsiveTable";
-import TableRowLink from "@dashboard/components/TableRowLink";
+import { ResponsiveTable } from "@dashboard/components/ResponsiveTable";
+import { TableRowLink } from "@dashboard/components/TableRowLink";
 import { CountryFragment } from "@dashboard/graphql";
 import { TableBody, TableCell } from "@material-ui/core";
-import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
+import { SvgIcon as ArrowDropDownIcon } from "@material-ui/icons/ArrowDropDown";
 import { DeleteIcon, IconButton, makeStyles } from "@saleor/macaw-ui";
 import { Button, Text } from "@saleor/macaw-ui-next";
-import clsx from "clsx";
+import { clsx } from "clsx";
 import * as React from "react";
 import { FormattedMessage } from "react-intl";
 
@@ -167,4 +167,4 @@ const CountryList = (props: CountryListProps) => {
   );
 };
 
-export default CountryList;
+export { CountryList };

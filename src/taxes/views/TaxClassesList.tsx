@@ -10,19 +10,20 @@ import {
   useUpdateMetadataMutation,
   useUpdatePrivateMetadataMutation,
 } from "@dashboard/graphql";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useNotifier from "@dashboard/hooks/useNotifier";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
+import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { commonMessages } from "@dashboard/intl";
-import createMetadataCreateHandler, {
+import {
+  createMetadataCreateHandler,
   CreateMetadataHandlerFunctionResult,
 } from "@dashboard/utils/handlers/metadataCreateHandler";
-import createMetadataUpdateHandler from "@dashboard/utils/handlers/metadataUpdateHandler";
+import { createMetadataUpdateHandler } from "@dashboard/utils/handlers/metadataUpdateHandler";
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { useMemo } from "react";
 import { useIntl } from "react-intl";
 
 import { taxesMessages } from "../messages";
-import TaxClassesPage from "../pages/TaxClassesPage";
+import { TaxClassesPage } from "../pages/TaxClassesPage";
 import { TaxClassesPageFormData } from "../types";
 import { taxClassesListUrl, TaxTab, taxTabPath } from "../urls";
 import { createTaxClassCreateInput, createTaxClassUpdateInput } from "../utils/data";
@@ -200,4 +201,4 @@ const TaxClassesList = ({ id }: TaxClassesListProps) => {
   );
 };
 
-export default TaxClassesList;
+export { TaxClassesList };

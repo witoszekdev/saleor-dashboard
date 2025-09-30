@@ -1,17 +1,17 @@
 // @ts-strict-ignore
 import { attributeUrl } from "@dashboard/attributes/urls";
 import { DashboardCard } from "@dashboard/components/Card";
-import Checkbox from "@dashboard/components/Checkbox";
-import ResponsiveTable from "@dashboard/components/ResponsiveTable";
+import { Checkbox } from "@dashboard/components/Checkbox";
+import { ResponsiveTable } from "@dashboard/components/ResponsiveTable";
 import { SortableTableBody, SortableTableRow } from "@dashboard/components/SortableTable";
 import { TableButtonWrapper } from "@dashboard/components/TableButtonWrapper/TableButtonWrapper";
-import TableHead from "@dashboard/components/TableHead";
-import TableRowLink from "@dashboard/components/TableRowLink";
+import { TableHead } from "@dashboard/components/TableHead";
+import { TableRowLink } from "@dashboard/components/TableRowLink";
 import { ProductAttributeType, ProductTypeDetailsQuery } from "@dashboard/graphql";
 import { maybe, renderCollection } from "@dashboard/misc";
 import { ListActions, ReorderAction } from "@dashboard/types";
 import { TableCell } from "@material-ui/core";
-import HelpOutline from "@material-ui/icons/HelpOutline";
+import { SvgIcon as HelpOutline } from "@material-ui/icons/HelpOutline";
 import { DeleteIcon, IconButton, makeStyles } from "@saleor/macaw-ui";
 import { Button, Skeleton, Tooltip } from "@saleor/macaw-ui-next";
 import capitalize from "lodash/capitalize";
@@ -291,4 +291,4 @@ const ProductTypeVariantAttributes = (props: ProductTypeVariantAttributesProps) 
 };
 
 ProductTypeVariantAttributes.displayName = "ProductTypeVariantAttributes";
-export default ProductTypeVariantAttributes;
+export { ProductTypeVariantAttributes };

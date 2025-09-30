@@ -1,4 +1,4 @@
-import ActionDialog from "@dashboard/components/ActionDialog";
+import { ActionDialog } from "@dashboard/components/ActionDialog";
 import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import { FormattedMessage, useIntl } from "react-intl";
 
@@ -48,4 +48,4 @@ const AttributeBulkDeleteDialog = ({
 };
 
 AttributeBulkDeleteDialog.displayName = "AttributeBulkDeleteDialog";
-export default AttributeBulkDeleteDialog;
+export { AttributeBulkDeleteDialog };

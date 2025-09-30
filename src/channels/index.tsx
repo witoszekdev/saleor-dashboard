@@ -13,9 +13,9 @@ import {
   ChannelsListUrlQueryParams,
   ChannelsListUrlSortField,
 } from "./urls";
-import ChannelCreateComponent from "./views/ChannelCreate";
-import ChannelDetailsComponent from "./views/ChannelDetails";
-import ChannelsListComponent from "./views/ChannelsList";
+import { ChannelCreateView as ChannelCreateComponent } from "./views/ChannelCreate";
+import { ChannelDetails as ChannelDetailsComponent } from "./views/ChannelDetails";
+import { ChannelsList as ChannelsListComponent } from "./views/ChannelsList";
 
 const ChannelDetails = ({ match }: RouteComponentProps<any>) => {
   const params = parseQs(location.search.substr(1));
@@ -44,4 +44,4 @@ const ChannelsSection = () => {
   );
 };
 
-export default ChannelsSection;
+export { ChannelsSection };

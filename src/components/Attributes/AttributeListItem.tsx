@@ -4,7 +4,7 @@ import {
   ProductErrorWithAttributesFragment,
 } from "@dashboard/graphql";
 
-import AttributeRow from "./AttributeRow";
+import { AttributeRow } from "./AttributeRow";
 import { AttributeRowProps } from "./types";
 
 type AttributeListItemProps = Omit<AttributeRowProps, "error"> & {

@@ -8,8 +8,8 @@ import {
   getAssignedProductIdsToCollection,
   getProductsFromSearchResults,
 } from "@dashboard/collections/utils";
-import ActionDialog from "@dashboard/components/ActionDialog/ActionDialog";
-import AssignProductDialog from "@dashboard/components/AssignProductDialog/AssignProductDialog";
+import { ActionDialog } from "@dashboard/components/ActionDialog/ActionDialog";
+import { AssignProductDialog } from "@dashboard/components/AssignProductDialog/AssignProductDialog";
 import { DashboardCard } from "@dashboard/components/Card";
 import { DEFAULT_INITIAL_SEARCH_DATA, PAGINATE_BY } from "@dashboard/config";
 import {
@@ -18,15 +18,15 @@ import {
   useCollectionProductsQuery,
   useUnassignCollectionProductMutation,
 } from "@dashboard/graphql";
-import useBulkActions from "@dashboard/hooks/useBulkActions";
-import useListSettings from "@dashboard/hooks/useListSettings";
-import useLocalPaginator, { useLocalPaginationState } from "@dashboard/hooks/useLocalPaginator";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useNotifier from "@dashboard/hooks/useNotifier";
+import { useBulkActions } from "@dashboard/hooks/useBulkActions";
+import { useListSettings } from "@dashboard/hooks/useListSettings";
+import { useLocalPaginationState, useLocalPaginator } from "@dashboard/hooks/useLocalPaginator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
+import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { PaginatorContext } from "@dashboard/hooks/usePaginator";
-import useProductSearch from "@dashboard/searches/useProductSearch";
+import { UseProductSearch as useProductSearch } from "@dashboard/searches/useProductSearch";
 import { Container } from "@dashboard/types";
-import createDialogActionHandlers from "@dashboard/utils/handlers/dialogActionHandlers";
+import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { Button, Skeleton } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
@@ -258,4 +258,4 @@ const CollectionProducts = ({
 };
 
 CollectionProducts.displayName = "CollectionProducts";
-export default CollectionProducts;
+export { CollectionProducts };

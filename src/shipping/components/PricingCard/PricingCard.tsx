@@ -1,13 +1,13 @@
 // @ts-strict-ignore
 import { ChannelShippingData } from "@dashboard/channels/utils";
 import { DashboardCard } from "@dashboard/components/Card";
-import PriceField from "@dashboard/components/PriceField";
-import ResponsiveTable from "@dashboard/components/ResponsiveTable";
-import TableHead from "@dashboard/components/TableHead";
-import TableRowLink from "@dashboard/components/TableRowLink";
+import { PriceField } from "@dashboard/components/PriceField";
+import { ResponsiveTable } from "@dashboard/components/ResponsiveTable";
+import { TableHead } from "@dashboard/components/TableHead";
+import { TableRowLink } from "@dashboard/components/TableRowLink";
 import { ShippingChannelsErrorFragment } from "@dashboard/graphql";
 import { getFormChannelError, getFormChannelErrors } from "@dashboard/utils/errors";
-import getShippingErrorMessage from "@dashboard/utils/errors/shipping";
+import { getShippingErrorMessage } from "@dashboard/utils/errors/shipping";
 import { TableBody, TableCell } from "@material-ui/core";
 import { Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
@@ -105,4 +105,4 @@ const PricingCard = ({ channels, disabled, errors, onChange }: PricingCardProps)
   );
 };
 
-export default PricingCard;
+export { PricingCard };

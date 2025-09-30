@@ -16,9 +16,9 @@ import {
   pagePath,
   PageUrlQueryParams,
 } from "./urls";
-import PageCreateComponent from "./views/PageCreate";
-import PageDetailsComponent from "./views/PageDetails";
-import PageListComponent from "./views/PageList";
+import { PageCreate as PageCreateComponent } from "./views/PageCreate";
+import { PageDetails as PageDetailsComponent } from "./views/PageDetails";
+import { PageList as PageListComponent } from "./views/PageList";
 
 const PageList = () => {
   const qs = parseQs(location.search.substr(1)) as any;
@@ -61,4 +61,4 @@ const Component = () => {
   );
 };
 
-export default Component;
+export { Component };

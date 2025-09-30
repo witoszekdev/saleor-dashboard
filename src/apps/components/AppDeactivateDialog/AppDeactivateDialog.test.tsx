@@ -1,8 +1,8 @@
-import Wrapper from "@test/wrapper";
+import { Wrapper } from "@test/wrapper";
 import { render, screen } from "@testing-library/react";
 
-import AppDeactivateDialog from "./AppDeactivateDialog";
-import msgs from "./messages";
+import { AppDeactivateDialog } from "./AppDeactivateDialog";
+import { Messages as msgs } from "./messages";
 
 describe("Apps AppDeactivateDialog", () => {
   it("displays action text with app name when third-party app name passed", () => {

@@ -1,9 +1,9 @@
 // @ts-strict-ignore
-import CardSpacer from "@dashboard/components/CardSpacer";
+import { CardSpacer } from "@dashboard/components/CardSpacer";
 import { OrderDetailsFragment, OrderDetailsQuery, TransactionActionEnum } from "@dashboard/graphql";
 import { orderShouldUseTransactions } from "@dashboard/orders/types";
 
-import OrderPayment from "../OrderPayment/OrderPayment";
+import { OrderPayment } from "../OrderPayment/OrderPayment";
 import { OrderTransactionsWrapper } from "./OrderTransactionsWrapper";
 
 export interface OrderPaymentOrTransactionProps {

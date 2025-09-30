@@ -1,7 +1,7 @@
 import { TopNav } from "@dashboard/components/AppLayout";
 import { DetailPageLayout } from "@dashboard/components/Layouts";
-import Link from "@dashboard/components/Link";
-import PageSectionHeader from "@dashboard/components/PageSectionHeader";
+import { Link } from "@dashboard/components/Link";
+import { PageSectionHeader } from "@dashboard/components/PageSectionHeader";
 import { Savebar } from "@dashboard/components/Savebar";
 import { configurationMenuUrl } from "@dashboard/configuration";
 import {
@@ -11,8 +11,8 @@ import {
   useRefundSettingsQuery,
   useRefundSettingsUpdateMutation,
 } from "@dashboard/graphql";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useNotifier from "@dashboard/hooks/useNotifier";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
+import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { pageCreateUrl } from "@dashboard/modeling/urls";
 import { pageTypeAddUrl, pageTypeUrl } from "@dashboard/modelTypes/urls";
 import { refundsSettingsPageMessages } from "@dashboard/refundsSettings/components/RefundsSettingsPage/messages";

@@ -1,2 +1,2 @@
-export { default } from "./PluginList";
+export { PluginsList } from "./PluginList";
 export * from "./PluginList";

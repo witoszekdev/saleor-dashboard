@@ -171,4 +171,4 @@ function useDatagridChange(
   };
 }
 
-export default useDatagridChange;
+export { useDatagridChange };

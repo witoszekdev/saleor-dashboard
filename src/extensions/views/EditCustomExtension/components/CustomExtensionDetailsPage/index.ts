@@ -1,2 +1,2 @@
-export { default } from "./CustomExtensionDetailsPage";
+export { CustomExtensionDetailsPage } from "./CustomExtensionDetailsPage";
 export * from "./CustomExtensionDetailsPage";

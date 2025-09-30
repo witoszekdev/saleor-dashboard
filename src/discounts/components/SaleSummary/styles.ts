@@ -11,4 +11,4 @@ const useStyles = makeStyles(
   { name: "SaleSummary" },
 );
 
-export default useStyles;
+export { useStyles };

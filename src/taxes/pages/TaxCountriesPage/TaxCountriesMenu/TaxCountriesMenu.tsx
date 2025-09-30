@@ -1,5 +1,5 @@
-import CardTitle from "@dashboard/components/CardTitle";
-import ListItemLink from "@dashboard/components/ListItemLink";
+import { CardTitle } from "@dashboard/components/CardTitle";
+import { ListItemLink } from "@dashboard/components/ListItemLink";
 import { TaxCountryConfigurationFragment } from "@dashboard/graphql";
 import { taxesMessages } from "@dashboard/taxes/messages";
 import { taxCountriesListUrl } from "@dashboard/taxes/urls";
@@ -7,7 +7,7 @@ import { isLastElement } from "@dashboard/taxes/utils/utils";
 import { Card, CardContent, Divider } from "@material-ui/core";
 import { List, ListHeader, ListItem, ListItemCell } from "@saleor/macaw-ui";
 import { Button, Skeleton, TrashBinIcon } from "@saleor/macaw-ui-next";
-import clsx from "clsx";
+import { clsx } from "clsx";
 import { Fragment } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
@@ -86,4 +86,4 @@ const TaxCountriesMenu = ({
   );
 };
 
-export default TaxCountriesMenu;
+export { TaxCountriesMenu };

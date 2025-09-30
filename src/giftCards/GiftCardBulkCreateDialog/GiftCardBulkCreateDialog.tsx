@@ -1,21 +1,21 @@
 import { IMessage } from "@dashboard/components/messages";
 import { DashboardModal } from "@dashboard/components/Modal";
 import { GiftCardBulkCreateInput, useGiftCardBulkCreateMutation } from "@dashboard/graphql";
-import useCurrentDate from "@dashboard/hooks/useCurrentDate";
-import useNotifier from "@dashboard/hooks/useNotifier";
+import { useCurrentDate } from "@dashboard/hooks/useCurrentDate";
+import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { DialogProps } from "@dashboard/types";
 import { getFormErrors } from "@dashboard/utils/errors";
 import { useEffect, useState } from "react";
 import { useIntl } from "react-intl";
 
-import ContentWithProgress from "../GiftCardCreateDialog/ContentWithProgress";
-import GiftCardBulkCreateSuccessDialog from "../GiftCardCreateDialog/GiftCardBulkCreateSuccessDialog";
+import { ContentWithProgress } from "../GiftCardCreateDialog/ContentWithProgress";
+import { GiftCardBulkCreateSuccessDialog } from "../GiftCardCreateDialog/GiftCardBulkCreateSuccessDialog";
 import {
   getGiftCardCreateOnCompletedMessage,
   getGiftCardExpiryInputData,
 } from "../GiftCardCreateDialog/utils";
 import { GIFT_CARD_LIST_QUERY } from "../GiftCardsList/queries";
-import GiftCardBulkCreateDialogForm from "./GiftCardBulkCreateDialogForm";
+import { GiftCardBulkCreateDialogForm } from "./GiftCardBulkCreateDialogForm";
 import { giftCardBulkCreateDialogMessages as messages } from "./messages";
 import {
   giftCardBulkCreateErrorKeys,

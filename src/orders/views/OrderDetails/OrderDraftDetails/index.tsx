@@ -18,19 +18,19 @@ import {
   useChannelUsabilityDataQuery,
   useCustomerAddressesQuery,
 } from "@dashboard/graphql";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { CustomerEditData } from "@dashboard/orders/components/OrderCustomer";
 import { OrderCustomerAddressesEditDialogOutput } from "@dashboard/orders/components/OrderCustomerAddressesEditDialog/types";
 import {
   CustomerChangeActionEnum,
   OrderCustomerChangeData,
 } from "@dashboard/orders/components/OrderCustomerChangeDialog/form";
-import OrderCustomerChangeDialog from "@dashboard/orders/components/OrderCustomerChangeDialog/OrderCustomerChangeDialog";
+import { OrderCustomerChangeDialog } from "@dashboard/orders/components/OrderCustomerChangeDialog/OrderCustomerChangeDialog";
 import { OrderMetadataDialog } from "@dashboard/orders/components/OrderMetadataDialog";
 import { getVariantSearchAddress, isAnyAddressEditModalOpen } from "@dashboard/orders/utils/data";
 import { OrderDiscountProvider } from "@dashboard/products/components/OrderDiscountProviders/OrderDiscountProvider";
 import { OrderLineDiscountProvider } from "@dashboard/products/components/OrderDiscountProviders/OrderLineDiscountProvider";
-import useCustomerSearch from "@dashboard/searches/useCustomerSearch";
+import { UseCustomerSearch as useCustomerSearch } from "@dashboard/searches/useCustomerSearch";
 import { useOrderVariantSearch } from "@dashboard/searches/useOrderVariantSearch";
 import { PartialMutationProviderOutput } from "@dashboard/types";
 import { mapEdgesToItems } from "@dashboard/utils/maps";
@@ -39,11 +39,11 @@ import { useIntl } from "react-intl";
 import { customerUrl } from "../../../../customers/urls";
 import { extractMutationErrors, getStringOrPlaceholder } from "../../../../misc";
 import { productUrl } from "../../../../products/urls";
-import OrderAddressFields from "../../../components/OrderAddressFields/OrderAddressFields";
-import OrderDraftCancelDialog from "../../../components/OrderDraftCancelDialog/OrderDraftCancelDialog";
-import OrderDraftPage from "../../../components/OrderDraftPage";
-import OrderProductAddDialog from "../../../components/OrderProductAddDialog";
-import OrderShippingMethodEditDialog from "../../../components/OrderShippingMethodEditDialog";
+import { OrderAddressFields } from "../../../components/OrderAddressFields/OrderAddressFields";
+import { OrderDraftCancelDialog } from "../../../components/OrderDraftCancelDialog/OrderDraftCancelDialog";
+import { OrderDraftPage } from "../../../components/OrderDraftPage";
+import { OrderProductAddDialog } from "../../../components/OrderProductAddDialog";
+import { OrderShippingMethodEditDialog } from "../../../components/OrderShippingMethodEditDialog";
 import { orderDraftListUrl, OrderUrlDialog, OrderUrlQueryParams } from "../../../urls";
 
 interface OrderDraftDetailsProps {

@@ -57,4 +57,4 @@ function useWizard<T>(initial: T, steps: T[], opts?: UseWizardOpts<T>): UseWizar
   ];
 }
 
-export default useWizard;
+export { useWizard };

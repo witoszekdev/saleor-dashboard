@@ -17,6 +17,6 @@ const TaxesIcon = createSvgIcon(
   "Taxes",
 );
 
-export default function Taxes(props: SvgIconProps) {
+export function Taxes(props: SvgIconProps) {
   return <TaxesIcon {...props} viewBox="0 0 32 32" />;
 }

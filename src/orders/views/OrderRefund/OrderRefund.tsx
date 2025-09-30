@@ -4,10 +4,10 @@ import {
   useOrderRefundDataQuery,
   useOrderRefundMutation,
 } from "@dashboard/graphql";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useNotifier from "@dashboard/hooks/useNotifier";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
+import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { extractMutationErrors } from "@dashboard/misc";
-import OrderRefundPage from "@dashboard/orders/components/OrderRefundPage";
+import { OrderRefundPage } from "@dashboard/orders/components/OrderRefundPage";
 import {
   OrderRefundAmountCalculationMode,
   OrderRefundSubmitData,
@@ -137,4 +137,4 @@ const OrderRefund = ({ orderId }: OrderRefundProps) => {
 };
 
 OrderRefund.displayName = "OrderRefund";
-export default OrderRefund;
+export { OrderRefund };

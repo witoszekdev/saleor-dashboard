@@ -1,15 +1,15 @@
 // @ts-strict-ignore
 import { DashboardCard } from "@dashboard/components/Card";
-import Form from "@dashboard/components/Form";
-import Timeline, { TimelineAddNote, TimelineNote } from "@dashboard/components/Timeline";
+import { Form } from "@dashboard/components/Form";
+import { Timeline, TimelineAddNote, TimelineNote } from "@dashboard/components/Timeline";
 import { useGiftCardDetails } from "@dashboard/giftCards/GiftCardUpdate/providers/GiftCardDetailsProvider";
 import { GiftCardEventsEnum, useGiftCardAddNoteMutation } from "@dashboard/graphql";
-import useNotifier from "@dashboard/hooks/useNotifier";
+import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { HistoryComponentLoader } from "@dashboard/orders/components/OrderHistory/HistoryComponentLoader";
 import { FormattedMessage, useIntl } from "react-intl";
 
 import { GIFT_CARD_DETAILS_QUERY } from "../queries";
-import GiftCardTimelineEvent from "./GiftCardTimelineEvent";
+import { GiftCardTimelineEvent } from "./GiftCardTimelineEvent";
 import { giftCardHistoryMessages as messages } from "./messages";
 
 interface FormData {
@@ -97,4 +97,4 @@ const GiftCardHistory = () => {
   );
 };
 
-export default GiftCardHistory;
+export { GiftCardHistory };

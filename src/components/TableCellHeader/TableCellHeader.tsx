@@ -2,10 +2,10 @@ import { TableCell } from "@material-ui/core";
 import { TableCellProps } from "@material-ui/core/TableCell";
 import { makeStyles } from "@saleor/macaw-ui";
 import { vars } from "@saleor/macaw-ui-next";
-import clsx from "clsx";
+import { clsx } from "clsx";
 import { forwardRef } from "react";
 
-import ArrowSort from "../../icons/ArrowSort";
+import { ArrowSort } from "../../icons/ArrowSort";
 
 const useStyles = makeStyles(
   theme => ({
@@ -125,4 +125,4 @@ TableCellHeader.defaultProps = {
   arrowPosition: "left",
   textAlign: "left",
 };
-export default TableCellHeader;
+export { TableCellHeader };

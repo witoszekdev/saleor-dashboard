@@ -10,4 +10,4 @@ function getExportErrorMessage(
   return getCommonFormFieldErrorMessage(err, intl);
 }
 
-export default getExportErrorMessage;
+export { getExportErrorMessage };

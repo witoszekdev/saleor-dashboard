@@ -1,12 +1,12 @@
 import { Button } from "@dashboard/components/Button";
 import { ConfirmButton, ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import ControlledCheckbox from "@dashboard/components/ControlledCheckbox";
-import Form from "@dashboard/components/Form";
-import FormSpacer from "@dashboard/components/FormSpacer";
+import { ControlledCheckbox } from "@dashboard/components/ControlledCheckbox";
+import { Form } from "@dashboard/components/Form";
+import { FormSpacer } from "@dashboard/components/FormSpacer";
 import { DashboardModal } from "@dashboard/components/Modal";
 import { OrderErrorFragment } from "@dashboard/graphql";
 import { buttonMessages } from "@dashboard/intl";
-import getOrderErrorMessage from "@dashboard/utils/errors/order";
+import { getOrderErrorMessage } from "@dashboard/utils/errors/order";
 import { Box, Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 
@@ -84,4 +84,4 @@ const OrderFulfillmentApproveDialog = (props: OrderFulfillmentAcceptDialogProps)
 };
 
 OrderFulfillmentApproveDialog.displayName = "OrderFulfillmentApproveDialog";
-export default OrderFulfillmentApproveDialog;
+export { OrderFulfillmentApproveDialog };

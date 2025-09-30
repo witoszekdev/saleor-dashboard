@@ -1,11 +1,11 @@
-import BackButton from "@dashboard/components/BackButton";
-import Checkbox from "@dashboard/components/Checkbox";
+import { BackButton } from "@dashboard/components/BackButton";
+import { Checkbox } from "@dashboard/components/Checkbox";
 import { ConfirmButton, ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import Form from "@dashboard/components/Form";
-import Hr from "@dashboard/components/Hr";
+import { Form } from "@dashboard/components/Form";
+import { Hr } from "@dashboard/components/Hr";
 import { DashboardModal } from "@dashboard/components/Modal";
-import ResponsiveTable from "@dashboard/components/ResponsiveTable";
-import TableRowLink from "@dashboard/components/TableRowLink";
+import { ResponsiveTable } from "@dashboard/components/ResponsiveTable";
+import { TableRowLink } from "@dashboard/components/TableRowLink";
 import { CountryWithCodeFragment } from "@dashboard/graphql";
 import { fuzzySearch } from "@dashboard/misc";
 import { getCountrySelectionMap, isRestWorldCountriesSelected } from "@dashboard/shipping/handlers";
@@ -159,4 +159,4 @@ const ShippingZoneCountriesAssignDialog = (props: ShippingZoneCountriesAssignDia
 };
 
 ShippingZoneCountriesAssignDialog.displayName = "ShippingZoneCountriesAssignDialog";
-export default ShippingZoneCountriesAssignDialog;
+export { ShippingZoneCountriesAssignDialog };

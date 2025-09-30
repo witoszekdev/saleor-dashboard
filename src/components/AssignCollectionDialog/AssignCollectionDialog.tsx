@@ -1,7 +1,7 @@
 // @ts-strict-ignore
 import { useIntl } from "react-intl";
 
-import AssignContainerDialog, { AssignContainerDialogProps } from "../AssignContainerDialog";
+import { AssignContainerDialog, AssignContainerDialogProps } from "../AssignContainerDialog";
 import { messages } from "./messages";
 
 type Collections = {
@@ -35,4 +35,4 @@ const AssignCollectionDialog = ({ collections, labels, ...rest }: AssignCollecti
 };
 
 AssignCollectionDialog.displayName = "AssignCollectionDialog";
-export default AssignCollectionDialog;
+export { AssignCollectionDialog };

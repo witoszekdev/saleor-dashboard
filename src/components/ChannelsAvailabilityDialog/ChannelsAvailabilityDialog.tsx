@@ -1,10 +1,10 @@
 // @ts-strict-ignore
 import { Channel } from "@dashboard/channels/utils";
-import ActionDialog from "@dashboard/components/ActionDialog";
+import { ActionDialog } from "@dashboard/components/ActionDialog";
 import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 
-import ChannelsAvailabilityDialogChannelsList from "../ChannelsAvailabilityDialogChannelsList";
-import ChannelsAvailabilityDialogWrapper from "../ChannelsAvailabilityDialogWrapper";
+import { ChannelsAvailabilityContent as ChannelsAvailabilityDialogChannelsList } from "../ChannelsAvailabilityDialogChannelsList";
+import { ChannelsAvailabilityContentWrapper as ChannelsAvailabilityDialogWrapper } from "../ChannelsAvailabilityDialogWrapper";
 import { NoChannels } from "./NoChannels";
 import { useChannelsSearch } from "./utils";
 
@@ -73,4 +73,4 @@ const ChannelsAvailabilityDialog = ({
   );
 };
 
-export default ChannelsAvailabilityDialog;
+export { ChannelsAvailabilityDialog };

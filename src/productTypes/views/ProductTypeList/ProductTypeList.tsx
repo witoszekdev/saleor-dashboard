@@ -1,34 +1,35 @@
 import { useConditionalFilterContext } from "@dashboard/components/ConditionalFilter";
 import { createProductTypesQueryVariables } from "@dashboard/components/ConditionalFilter/queryVariables";
-import DeleteFilterTabDialog from "@dashboard/components/DeleteFilterTabDialog";
-import SaveFilterTabDialog from "@dashboard/components/SaveFilterTabDialog";
+import { DeleteFilterTabDialog } from "@dashboard/components/DeleteFilterTabDialog";
+import { SaveFilterTabDialog } from "@dashboard/components/SaveFilterTabDialog";
 import { useFlag } from "@dashboard/featureFlags";
 import { useProductTypeBulkDeleteMutation, useProductTypeListQuery } from "@dashboard/graphql";
-import useBulkActions from "@dashboard/hooks/useBulkActions";
+import { useBulkActions } from "@dashboard/hooks/useBulkActions";
 import { useFilterPresets } from "@dashboard/hooks/useFilterPresets";
-import useListSettings from "@dashboard/hooks/useListSettings";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useNotifier from "@dashboard/hooks/useNotifier";
+import { useListSettings } from "@dashboard/hooks/useListSettings";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
+import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { usePaginationReset } from "@dashboard/hooks/usePaginationReset";
-import usePaginator, {
+import {
   createPaginationState,
   PaginatorContext,
+  usePaginator,
 } from "@dashboard/hooks/usePaginator";
 import { commonMessages } from "@dashboard/intl";
-import useProductTypeDelete from "@dashboard/productTypes/hooks/useProductTypeDelete";
+import { useProductTypeDelete } from "@dashboard/productTypes/hooks/useProductTypeDelete";
 import { ListViews } from "@dashboard/types";
-import createDialogActionHandlers from "@dashboard/utils/handlers/dialogActionHandlers";
-import createFilterHandlers from "@dashboard/utils/handlers/filterHandlers";
-import createSortHandler from "@dashboard/utils/handlers/sortHandler";
+import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
+import { createFilterHandlers } from "@dashboard/utils/handlers/filterHandlers";
+import { createSortHandler } from "@dashboard/utils/handlers/sortHandler";
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { getSortParams } from "@dashboard/utils/sort";
 import { Button, TrashBinIcon } from "@saleor/macaw-ui-next";
 import { useMemo } from "react";
 import { useIntl } from "react-intl";
 
-import TypeDeleteWarningDialog from "../../../components/TypeDeleteWarningDialog/TypeDeleteWarningDialog";
+import { TypeDeleteWarningDialog } from "../../../components/TypeDeleteWarningDialog/TypeDeleteWarningDialog";
 import { maybe } from "../../../misc";
-import ProductTypeListPage from "../../components/ProductTypeListPage";
+import { ProductTypeListPage } from "../../components/ProductTypeListPage";
 import {
   productTypeListUrl,
   ProductTypeListUrlDialog,
@@ -218,4 +219,4 @@ const ProductTypeList = ({ params }: ProductTypeListProps) => {
 };
 
 ProductTypeList.displayName = "ProductTypeList";
-export default ProductTypeList;
+export { ProductTypeList };

@@ -2,7 +2,7 @@ import { CONST_TYPEFORM_URL } from "@dashboard/extensions/components/RequestExte
 import { ExtensionsUrls } from "@dashboard/extensions/urls";
 import { useFlag } from "@dashboard/featureFlags";
 import { useHasManagedAppsPermission } from "@dashboard/hooks/useHasManagedAppsPermission";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 

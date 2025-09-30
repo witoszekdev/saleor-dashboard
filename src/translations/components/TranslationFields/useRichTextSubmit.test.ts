@@ -1,4 +1,4 @@
-import useRichText from "@dashboard/utils/richText/useRichText";
+import { useRichText } from "@dashboard/utils/richText/useRichText";
 import { renderHook } from "@testing-library/react-hooks";
 
 import { useRichTextSubmit } from "./useRichTextSubmit";

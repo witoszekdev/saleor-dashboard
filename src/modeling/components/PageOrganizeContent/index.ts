@@ -1,2 +1,2 @@
-export { default } from "./PageOrganizeContent";
+export { PageOrganizeContent } from "./PageOrganizeContent";
 export * from "./PageOrganizeContent";

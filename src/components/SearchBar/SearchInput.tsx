@@ -3,7 +3,7 @@ import { makeStyles } from "@saleor/macaw-ui";
 import * as React from "react";
 
 import { SearchPageProps } from "../../types";
-import Debounce from "../Debounce";
+import { Debounce } from "../Debounce";
 
 interface SearchInputProps extends SearchPageProps {
   placeholder: string;
@@ -56,4 +56,4 @@ const SearchInput = ({ initialSearch, onSearchChange, placeholder }: SearchInput
 };
 
 SearchInput.displayName = "SearchInput";
-export default SearchInput;
+export { SearchInput };

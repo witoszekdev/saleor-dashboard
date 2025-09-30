@@ -3,7 +3,7 @@ import { Combobox } from "@dashboard/components/Combobox";
 import { DEFAULT_INITIAL_SEARCH_DATA } from "@dashboard/config";
 import { commonMessages } from "@dashboard/intl";
 import { getFullName } from "@dashboard/misc";
-import useCustomerSearch from "@dashboard/searches/useCustomerSearch";
+import { UseCustomerSearch as useCustomerSearch } from "@dashboard/searches/useCustomerSearch";
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 import * as React from "react";
 import { useIntl } from "react-intl";
@@ -63,4 +63,4 @@ const GiftCardCustomerSelectField = ({
   );
 };
 
-export default GiftCardCustomerSelectField;
+export { GiftCardCustomerSelectField };

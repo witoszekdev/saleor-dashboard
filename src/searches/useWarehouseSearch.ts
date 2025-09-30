@@ -5,7 +5,7 @@ import {
   SearchWarehousesQuery,
   SearchWarehousesQueryVariables,
 } from "@dashboard/graphql";
-import makeTopLevelSearch from "@dashboard/hooks/makeTopLevelSearch";
+import { makeTopLevelSearch } from "@dashboard/hooks/makeTopLevelSearch";
 
 export const searchWarehouses = gql`
   query SearchWarehouses($after: String, $first: Int!, $query: String!, $channnelsId: [ID!]) {
@@ -29,6 +29,7 @@ export const searchWarehouses = gql`
   }
 `;
 
-export default makeTopLevelSearch<SearchWarehousesQuery, SearchWarehousesQueryVariables>(
-  SearchWarehousesDocument,
-);
+export const UseWarehouseSearch = makeTopLevelSearch<
+  SearchWarehousesQuery,
+  SearchWarehousesQueryVariables
+>(SearchWarehousesDocument);

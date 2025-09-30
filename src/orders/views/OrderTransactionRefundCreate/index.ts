@@ -1,2 +1,2 @@
 export * from "./OrderTransactionRefundCreate";
-export { default } from "./OrderTransactionRefundCreate";
+export { OrderTransactionRefund } from "./OrderTransactionRefundCreate";

@@ -87,4 +87,4 @@ function getAccountErrorMessage(
   return getCommonFormFieldErrorMessage<AccountErrorCode | SdkAccountErrorCode>(err, intl);
 }
 
-export default getAccountErrorMessage;
+export { getAccountErrorMessage };

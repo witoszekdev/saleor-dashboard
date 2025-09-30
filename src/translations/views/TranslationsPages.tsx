@@ -5,16 +5,16 @@ import {
   useUpdateAttributeValueTranslationsMutation,
   useUpdatePageTranslationsMutation,
 } from "@dashboard/graphql";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useNotifier from "@dashboard/hooks/useNotifier";
-import useShop from "@dashboard/hooks/useShop";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
+import { useNotifier } from "@dashboard/hooks/useNotifier";
+import { useShop } from "@dashboard/hooks/useShop";
 import { commonMessages } from "@dashboard/intl";
 import { extractMutationErrors } from "@dashboard/misc";
 import { stringifyQs } from "@dashboard/utils/urls";
 import { OutputData } from "@editorjs/editorjs";
 import { useIntl } from "react-intl";
 
-import TranslationsPagesPage from "../components/TranslationsPagesPage";
+import { TranslationsPagesPage } from "../components/TranslationsPagesPage";
 import { PageTranslationInputFieldName, TranslationField } from "../types";
 import { getAttributeValueTranslationsInputData, getParsedTranslationInputData } from "../utils";
 
@@ -114,4 +114,4 @@ const TranslationsPages = ({ id, languageCode, params }: TranslationsPagesProps)
 };
 
 TranslationsPages.displayName = "TranslationsPages";
-export default TranslationsPages;
+export { TranslationsPages };

@@ -1,8 +1,8 @@
-import Wrapper from "@test/wrapper";
+import { Wrapper } from "@test/wrapper";
 import { render, screen } from "@testing-library/react";
 
-import AppDeleteDialog from "./AppDeleteDialog";
-import msgs from "./messages";
+import { AppDeleteDialog } from "./AppDeleteDialog";
+import { Messages as msgs } from "./messages";
 
 describe("Apps AppDeleteDialog", () => {
   it("displays external app action text with app name when external app with app name passed", () => {

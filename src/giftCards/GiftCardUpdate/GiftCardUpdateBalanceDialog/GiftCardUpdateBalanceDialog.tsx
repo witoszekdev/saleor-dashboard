@@ -1,20 +1,20 @@
 // @ts-strict-ignore
-import ActionDialog from "@dashboard/components/ActionDialog";
-import CardSpacer from "@dashboard/components/CardSpacer";
+import { ActionDialog } from "@dashboard/components/ActionDialog";
+import { CardSpacer } from "@dashboard/components/CardSpacer";
 import { IMessage } from "@dashboard/components/messages";
 import { useGiftCardPermissions } from "@dashboard/giftCards/hooks/useGiftCardPermissions";
 import { useGiftCardUpdateMutation } from "@dashboard/graphql";
-import useForm from "@dashboard/hooks/useForm";
-import useNotifier from "@dashboard/hooks/useNotifier";
+import { useForm } from "@dashboard/hooks/useForm";
+import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { DialogProps } from "@dashboard/types";
-import commonErrorMessages from "@dashboard/utils/errors/common";
+import { commonErrorMessages } from "@dashboard/utils/errors/common";
 import { Input, Text } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
 
 import { giftCardsListTableMessages as tableMessages } from "../../GiftCardsList/messages";
 import { useDialogFormReset } from "../GiftCardResendCodeDialog/utils";
 import { getGiftCardErrorMessage } from "../messages";
-import useGiftCardDetails from "../providers/GiftCardDetailsProvider/hooks/useGiftCardDetails";
+import { useGiftCardDetails } from "../providers/GiftCardDetailsProvider/hooks/useGiftCardDetails";
 import { giftCardUpdateBalanceDialogMessages as messages } from "./messages";
 
 interface GiftCardBalanceUpdateFormData {
@@ -107,4 +107,4 @@ const GiftCardUpdateBalanceDialog = ({ open, onClose }: DialogProps) => {
   );
 };
 
-export default GiftCardUpdateBalanceDialog;
+export { GiftCardUpdateBalanceDialog };

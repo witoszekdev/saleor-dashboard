@@ -1,2 +1,2 @@
-export { default } from "./TableHead";
+export { TableHead } from "./TableHead";
 export * from "./TableHead";

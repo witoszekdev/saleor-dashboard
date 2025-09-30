@@ -1,6 +1,6 @@
 import { useLastLoginMethod } from "@dashboard/auth/hooks/useLastLoginMethod";
-import Form from "@dashboard/components/Form";
-import FormSpacer from "@dashboard/components/FormSpacer";
+import { Form } from "@dashboard/components/Form";
+import { FormSpacer } from "@dashboard/components/FormSpacer";
 import { getAppMountUri } from "@dashboard/config";
 import { AccountErrorCode } from "@dashboard/graphql";
 import { SubmitPromise } from "@dashboard/hooks/useForm";
@@ -101,4 +101,4 @@ const ResetPasswordPage = (props: ResetPasswordPageProps) => {
 };
 
 ResetPasswordPage.displayName = "ResetPasswordPage";
-export default ResetPasswordPage;
+export { ResetPasswordPage };

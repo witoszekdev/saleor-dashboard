@@ -1,5 +1,5 @@
 // @ts-strict-ignore
-import IAppState, { AppError } from "./state";
+import { AppError, IAppState } from "./state";
 
 type AppStateReducerActionType = "displayError" | "displayLoader";
 
@@ -45,4 +45,4 @@ function reduceAppState(prevState: IAppState, action: AppStateReducerAction): IA
   }
 }
 
-export default reduceAppState;
+export { reduceAppState };

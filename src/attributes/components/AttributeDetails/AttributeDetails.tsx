@@ -1,6 +1,6 @@
 import { NumericUnits } from "@dashboard/attributes/components/AttributeDetails/NumericUnits";
 import { DashboardCard } from "@dashboard/components/Card";
-import FormSpacer from "@dashboard/components/FormSpacer";
+import { FormSpacer } from "@dashboard/components/FormSpacer";
 import { Select } from "@dashboard/components/Select";
 import {
   AttributeEntityTypeEnum,
@@ -10,11 +10,11 @@ import {
 import { FormChange, UseFormResult } from "@dashboard/hooks/useForm";
 import { commonMessages } from "@dashboard/intl";
 import { getFormErrors } from "@dashboard/utils/errors";
-import getAttributeErrorMessage from "@dashboard/utils/errors/attribute";
+import { getAttributeErrorMessage } from "@dashboard/utils/errors/attribute";
 import { TextField } from "@material-ui/core";
 import { Box, Checkbox, Text } from "@saleor/macaw-ui-next";
 import { defineMessages, useIntl } from "react-intl";
-import slugify from "slugify";
+import { slugify } from "slugify";
 
 import { getAttributeSlugErrorMessage } from "../../errors";
 import { AttributePageFormData } from "../AttributePage";
@@ -238,4 +238,4 @@ const AttributeDetails = (props: AttributeDetailsProps) => {
 };
 
 AttributeDetails.displayName = "AttributeDetails";
-export default AttributeDetails;
+export { AttributeDetails };

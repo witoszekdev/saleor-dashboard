@@ -3,7 +3,7 @@ import { AppLogo } from "@dashboard/apps/types";
 import { TopNavLink, TopNavWrapper } from "@dashboard/components/AppLayout";
 import { ExtensionsUrls } from "@dashboard/extensions/urls";
 import { useHasManagedAppsPermission } from "@dashboard/hooks/useHasManagedAppsPermission";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { Box, Button, Text } from "@saleor/macaw-ui-next";
 import { useMemo } from "react";
 import { FormattedMessage } from "react-intl";

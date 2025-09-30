@@ -273,4 +273,4 @@ const AddressEdit = (props: AddressEditProps) => {
 };
 
 AddressEdit.displayName = "AddressEdit";
-export default AddressEdit;
+export { AddressEdit };

@@ -1,6 +1,6 @@
 import { OrderSettingsFragment, ShopOrderSettingsFragment } from "@dashboard/graphql";
-import useForm, { CommonUseFormResult, SubmitPromise } from "@dashboard/hooks/useForm";
-import useHandleFormSubmit from "@dashboard/hooks/useHandleFormSubmit";
+import { CommonUseFormResult, SubmitPromise, useForm } from "@dashboard/hooks/useForm";
+import { useHandleFormSubmit } from "@dashboard/hooks/useHandleFormSubmit";
 import * as React from "react";
 
 export interface OrderSettingsFormData {
@@ -74,4 +74,4 @@ const OrderSettingsForm = ({
 };
 
 OrderSettingsForm.displayName = "OrderSettingsForm";
-export default OrderSettingsForm;
+export { OrderSettingsForm };

@@ -1,6 +1,6 @@
 import { DashboardCard } from "@dashboard/components/Card";
 import { ConfirmButton, ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import PriceField from "@dashboard/components/PriceField";
+import { PriceField } from "@dashboard/components/PriceField";
 import {
   OrderDetailsFragment,
   OrderGrantRefundCreateErrorFragment,
@@ -15,7 +15,7 @@ import { FormattedMessage, useIntl } from "react-intl";
 import { canSendRefundDuringReturn, getReturnRefundValue } from "../../utils";
 import { GrantRefundCheckbox } from "./GrantRefundCheckbox";
 import { submitCardMessages } from "./messages";
-import RefundShipmentCheckbox from "./RefundShipmentCheckbox";
+import { RefundShipmentCheckbox } from "./RefundShipmentCheckbox";
 import { SendRefundCheckbox } from "./SendRefundCheckbox";
 import { TransactionSelector } from "./TransactionSelector";
 

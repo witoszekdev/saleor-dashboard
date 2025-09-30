@@ -129,4 +129,4 @@ const BulkSelect = ({
   );
 };
 
-export default BulkSelect;
+export { BulkSelect };

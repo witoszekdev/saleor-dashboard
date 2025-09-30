@@ -1,5 +1,5 @@
 // @ts-strict-ignore
-import TableCellHeader from "@dashboard/components/TableCellHeader";
+import { TableCellHeader } from "@dashboard/components/TableCellHeader";
 import { PluginListUrlSortField } from "@dashboard/plugins/urls";
 import { SortPage } from "@dashboard/types";
 import { getArrowDirection } from "@dashboard/utils/sort";
@@ -40,4 +40,4 @@ const PluginListTableHead = ({ sort, onSort }: PluginListTableHeadProps) => {
   );
 };
 
-export default PluginListTableHead;
+export { PluginListTableHead };

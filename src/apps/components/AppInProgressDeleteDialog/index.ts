@@ -1,2 +1,2 @@
 export * from "./AppInProgressDeleteDialog";
-export { default } from "./AppInProgressDeleteDialog";
+export { AppInProgressDeleteDialog } from "./AppInProgressDeleteDialog";

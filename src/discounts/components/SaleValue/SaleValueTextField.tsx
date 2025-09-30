@@ -54,4 +54,4 @@ const SaleValueTextField = ({
   );
 };
 
-export default SaleValueTextField;
+export { SaleValueTextField };

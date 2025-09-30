@@ -6,10 +6,10 @@ import { mergeRepeatedOrderLines } from "@dashboard/orders/utils/data";
 import { Box, Button, Divider, TrashBinIcon } from "@saleor/macaw-ui-next";
 import { PropsWithChildren } from "react";
 
-import OrderCardTitle from "../OrderCardTitle";
+import { OrderCardTitle } from "../OrderCardTitle";
 import { OrderDetailsDatagrid } from "../OrderDetailsDatagrid";
-import ActionButtons from "./ActionButtons";
-import ExtraInfoLines from "./ExtraInfoLines";
+import { ActionButtons } from "./ActionButtons";
+import { ExtraInfoLines } from "./ExtraInfoLines";
 
 interface OrderFulfilledProductsCardProps {
   fulfillment: OrderDetailsFragment["fulfillments"][0];
@@ -103,4 +103,4 @@ const OrderFulfilledProductsCard = (props: PropsWithChildren<OrderFulfilledProdu
   );
 };
 
-export default OrderFulfilledProductsCard;
+export { OrderFulfilledProductsCard };

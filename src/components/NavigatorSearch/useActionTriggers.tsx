@@ -2,7 +2,7 @@ import { attributeAddUrl, attributeListUrl } from "@dashboard/attributes/urls";
 import { categoryAddUrl, categoryListUrl } from "@dashboard/categories/urls";
 import { channelAddUrl, channelsListUrl } from "@dashboard/channels/urls";
 import { collectionAddUrl, collectionListUrl } from "@dashboard/collections/urls";
-import Link from "@dashboard/components/Link";
+import { Link } from "@dashboard/components/Link";
 import { customerAddPath, customerListUrl } from "@dashboard/customers/urls";
 import { saleAddUrl, saleListUrl, voucherAddUrl, voucherListUrl } from "@dashboard/discounts/urls";
 import { ExtensionsUrls } from "@dashboard/extensions/urls";

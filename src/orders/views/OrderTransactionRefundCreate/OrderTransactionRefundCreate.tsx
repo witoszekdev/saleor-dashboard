@@ -3,10 +3,11 @@ import {
   useOrderGrantRefundAddMutation,
   useRefundSettingsQuery,
 } from "@dashboard/graphql";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useNotifier from "@dashboard/hooks/useNotifier";
-import OrderTransactionRefundPage, {
+import { useNavigator } from "@dashboard/hooks/useNavigator";
+import { useNotifier } from "@dashboard/hooks/useNotifier";
+import {
   OrderTransactionRefundError,
+  OrderTransactionRefundPage,
   OrderTransactionRefundPageFormData,
 } from "@dashboard/orders/components/OrderTransactionRefundPage/OrderTransactionRefundPage";
 import { useState } from "react";
@@ -99,4 +100,4 @@ const OrderTransactionRefund = ({ orderId }: OrderTransactionRefundCreateProps) 
   );
 };
 
-export default OrderTransactionRefund;
+export { OrderTransactionRefund };

@@ -1,4 +1,4 @@
-import Drag from "@dashboard/icons/Drag";
+import { Drag } from "@dashboard/icons/Drag";
 import { productVariantEditUrl } from "@dashboard/products/urls";
 import { useSortable } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";

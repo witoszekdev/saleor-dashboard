@@ -13,4 +13,4 @@ export const initialAppState: IAppState = {
   loading: false,
 };
 
-export default IAppState;
+export { IAppState };

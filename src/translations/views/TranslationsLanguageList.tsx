@@ -1,8 +1,8 @@
 // @ts-strict-ignore
-import useShop from "@dashboard/hooks/useShop";
+import { useShop } from "@dashboard/hooks/useShop";
 
 import { maybe } from "../../misc";
-import TranslationsLanguageListPage from "../components/TranslationsLanguageListPage";
+import { TranslationsLanguageListPage } from "../components/TranslationsLanguageListPage";
 
 const TranslationsLanguageList = () => {
   const shop = useShop();
@@ -11,4 +11,4 @@ const TranslationsLanguageList = () => {
 };
 
 TranslationsLanguageList.displayName = "TranslationsLanguageList";
-export default TranslationsLanguageList;
+export { TranslationsLanguageList };

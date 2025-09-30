@@ -1,5 +1,5 @@
 // @ts-strict-ignore
-import Money from "@dashboard/components/Money";
+import { Money } from "@dashboard/components/Money";
 import { TimelineEvent } from "@dashboard/components/Timeline";
 import { OrderEventFragment, OrderEventsEnum } from "@dashboard/graphql";
 import { makeStyles } from "@saleor/macaw-ui";
@@ -7,8 +7,8 @@ import { Text } from "@saleor/macaw-ui-next";
 import camelCase from "lodash/camelCase";
 import { defineMessages, useIntl } from "react-intl";
 
-import ExtendedDiscountTimelineEvent from "./ExtendedDiscountTimelineEvent";
-import Label from "./Label";
+import { ExtendedDiscountTimelineEvent } from "./ExtendedDiscountTimelineEvent";
+import { Label } from "./Label";
 import {
   getEmployeeNameLink,
   getOrderNumberLink,
@@ -246,4 +246,4 @@ const ExtendedTimelineEvent = ({
   );
 };
 
-export default ExtendedTimelineEvent;
+export { ExtendedTimelineEvent };

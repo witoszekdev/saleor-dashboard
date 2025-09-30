@@ -1,7 +1,7 @@
 // @ts-strict-ignore
 import { ChannelVoucherData, createSortedVoucherData } from "@dashboard/channels/utils";
-import useAppChannel from "@dashboard/components/AppLayout/AppChannelContext";
-import ChannelsAvailabilityDialog from "@dashboard/components/ChannelsAvailabilityDialog";
+import { useAppChannel } from "@dashboard/components/AppLayout/AppChannelContext";
+import { ChannelsAvailabilityDialog } from "@dashboard/components/ChannelsAvailabilityDialog";
 import { WindowTitle } from "@dashboard/components/WindowTitle";
 import { DEFAULT_INITIAL_SEARCH_DATA } from "@dashboard/config";
 import { VoucherDetailsPageFormData } from "@dashboard/discounts/components/VoucherDetailsPage";
@@ -11,20 +11,20 @@ import {
   useVoucherChannelListingUpdateMutation,
   useVoucherCreateMutation,
 } from "@dashboard/graphql";
-import useBulkActions from "@dashboard/hooks/useBulkActions";
-import useChannels from "@dashboard/hooks/useChannels";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useNotifier from "@dashboard/hooks/useNotifier";
-import useShop from "@dashboard/hooks/useShop";
+import { useBulkActions } from "@dashboard/hooks/useBulkActions";
+import { useChannels } from "@dashboard/hooks/useChannels";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
+import { useNotifier } from "@dashboard/hooks/useNotifier";
+import { useShop } from "@dashboard/hooks/useShop";
 import { sectionNames } from "@dashboard/intl";
 import { useCategoryWithTotalProductsSearch } from "@dashboard/searches/useCategorySearch";
 import { useCollectionWithTotalProductsSearch } from "@dashboard/searches/useCollectionSearch";
-import useProductSearch from "@dashboard/searches/useProductSearch";
-import createDialogActionHandlers from "@dashboard/utils/handlers/dialogActionHandlers";
-import createMetadataCreateHandler from "@dashboard/utils/handlers/metadataCreateHandler";
+import { UseProductSearch as useProductSearch } from "@dashboard/searches/useProductSearch";
+import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
+import { createMetadataCreateHandler } from "@dashboard/utils/handlers/metadataCreateHandler";
 import { useIntl } from "react-intl";
 
-import VoucherCreatePage from "../../components/VoucherCreatePage";
+import { VoucherCreatePage } from "../../components/VoucherCreatePage";
 import {
   voucherAddUrl,
   VoucherCreateUrlQueryParams,
@@ -174,4 +174,4 @@ const VoucherCreateView = ({ params }: VoucherCreateProps) => {
   );
 };
 
-export default VoucherCreateView;
+export { VoucherCreateView };

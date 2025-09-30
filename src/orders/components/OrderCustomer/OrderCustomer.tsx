@@ -1,12 +1,12 @@
 // @ts-strict-ignore
-import AddressFormatter from "@dashboard/components/AddressFormatter";
+import { AddressFormatter } from "@dashboard/components/AddressFormatter";
 import { DashboardCard } from "@dashboard/components/Card";
 import { Combobox } from "@dashboard/components/Combobox";
-import ExternalLink from "@dashboard/components/ExternalLink";
-import Form from "@dashboard/components/Form";
-import Hr from "@dashboard/components/Hr";
-import Link from "@dashboard/components/Link";
-import RequirePermissions from "@dashboard/components/RequirePermissions";
+import { ExternalLink } from "@dashboard/components/ExternalLink";
+import { Form } from "@dashboard/components/Form";
+import { Hr } from "@dashboard/components/Hr";
+import { Link } from "@dashboard/components/Link";
+import { RequirePermissions } from "@dashboard/components/RequirePermissions";
 import {
   OrderDetailsFragment,
   OrderErrorCode,
@@ -14,11 +14,11 @@ import {
   PermissionEnum,
   SearchCustomersQuery,
 } from "@dashboard/graphql";
-import useStateFromProps from "@dashboard/hooks/useStateFromProps";
+import { useStateFromProps } from "@dashboard/hooks/useStateFromProps";
 import { buttonMessages } from "@dashboard/intl";
 import { orderListUrlWithCustomer } from "@dashboard/orders/urls";
 import { FetchMoreProps, RelayToFlat } from "@dashboard/types";
-import createSingleAutocompleteSelectHandler from "@dashboard/utils/handlers/singleAutocompleteSelectChangeHandler";
+import { createSingleAutocompleteSelectHandler } from "@dashboard/utils/handlers/singleAutocompleteSelectChangeHandler";
 import { Button, Skeleton, Text } from "@saleor/macaw-ui-next";
 import * as React from "react";
 import { FormattedMessage, useIntl } from "react-intl";
@@ -328,4 +328,4 @@ const OrderCustomer = (props: OrderCustomerProps) => {
 };
 
 OrderCustomer.displayName = "OrderCustomer";
-export default OrderCustomer;
+export { OrderCustomer };

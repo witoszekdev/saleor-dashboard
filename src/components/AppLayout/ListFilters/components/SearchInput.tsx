@@ -1,4 +1,4 @@
-import Debounce from "@dashboard/components/Debounce";
+import { Debounce } from "@dashboard/components/Debounce";
 import { SearchPageProps } from "@dashboard/types";
 import {
   Box,
@@ -45,4 +45,4 @@ const SearchInput = (props: SearchInputProps) => {
 };
 
 SearchInput.displayName = "SearchInput";
-export default SearchInput;
+export { SearchInput };

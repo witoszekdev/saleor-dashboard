@@ -1,2 +1,2 @@
 export * from "./NotInstalledAppListRow";
-export { default } from "./NotInstalledAppListRow";
+export { NotInstalledAppListRow } from "./NotInstalledAppListRow";

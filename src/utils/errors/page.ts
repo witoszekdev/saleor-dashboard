@@ -46,4 +46,4 @@ function getPageErrorMessage(
   return getCommonFormFieldErrorMessage(err, intl);
 }
 
-export default getPageErrorMessage;
+export { getPageErrorMessage };

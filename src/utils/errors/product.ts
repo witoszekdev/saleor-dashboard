@@ -6,7 +6,7 @@ import {
 } from "@dashboard/graphql";
 import { defineMessages, IntlShape } from "react-intl";
 
-import commonErrorMessages, { getCommonFormFieldErrorMessage } from "./common";
+import { commonErrorMessages, getCommonFormFieldErrorMessage } from "./common";
 
 const messages = defineMessages({
   alreadyExists: {
@@ -114,4 +114,4 @@ function getProductErrorMessage(
   return getCommonFormFieldErrorMessage(err, intl);
 }
 
-export default getProductErrorMessage;
+export { getProductErrorMessage };

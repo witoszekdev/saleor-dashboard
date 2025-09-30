@@ -2,7 +2,7 @@
 import "graphiql/graphiql.min.css";
 
 import { DashboardCard } from "@dashboard/components/Card";
-import GraphiQL from "@dashboard/components/GraphiQL";
+import { GraphiQL } from "@dashboard/components/GraphiQL";
 import { WebhookErrorFragment } from "@dashboard/graphql";
 import { getFormErrors } from "@dashboard/utils/errors";
 import { useExplorerPlugin } from "@graphiql/plugin-explorer";
@@ -73,4 +73,4 @@ const WebhookSubscriptionQuery = ({
 };
 
 WebhookSubscriptionQuery.displayName = "WebhookSubscriptionQuery";
-export default WebhookSubscriptionQuery;
+export { WebhookSubscriptionQuery };

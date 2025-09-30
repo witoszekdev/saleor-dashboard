@@ -63,4 +63,4 @@ const TaxInput = ({ placeholder, value, change }: TaxInputProps) => {
   );
 };
 
-export default TaxInput;
+export { TaxInput };

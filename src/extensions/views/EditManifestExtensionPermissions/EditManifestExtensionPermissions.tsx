@@ -1,6 +1,6 @@
 import { getPermissionsDiff } from "@dashboard/apps/getPermissionsDiff";
 import { useGetAvailableAppPermissions } from "@dashboard/apps/hooks/useGetAvailableAppPermissions";
-import Link from "@dashboard/components/Link";
+import { Link } from "@dashboard/components/Link";
 import { PermissionEnum, useAppQuery, useAppUpdatePermissionsMutation } from "@dashboard/graphql";
 import { APP_PERMISSIONS_DOCS_URL } from "@dashboard/links";
 import { Box, BoxProps, Button, Text, TextProps } from "@saleor/macaw-ui-next";

@@ -1,4 +1,4 @@
-import Wrapper from "@test/wrapper";
+import { Wrapper } from "@test/wrapper";
 import { fireEvent, render, screen } from "@testing-library/react";
 
 import { ProductErrorCell } from "./ProductErrorCell";

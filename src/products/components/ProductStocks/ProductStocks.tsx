@@ -1,13 +1,13 @@
 // @ts-strict-ignore
 import { ChannelData } from "@dashboard/channels/utils";
 import { DashboardCard } from "@dashboard/components/Card";
-import TableRowLink from "@dashboard/components/TableRowLink";
+import { TableRowLink } from "@dashboard/components/TableRowLink";
 import { ProductErrorFragment, WarehouseFragment } from "@dashboard/graphql";
 import { FormChange } from "@dashboard/hooks/useForm";
 import { FormsetAtomicData, FormsetChange } from "@dashboard/hooks/useFormset";
 import { renderCollection } from "@dashboard/misc";
 import { getFormErrors, getProductErrorMessage } from "@dashboard/utils/errors";
-import createNonNegativeValueChangeHandler from "@dashboard/utils/handlers/nonNegativeValueChangeHandler";
+import { createNonNegativeValueChangeHandler } from "@dashboard/utils/handlers/nonNegativeValueChangeHandler";
 import { Table, TableBody, TableCell, TableHead } from "@material-ui/core";
 import { Box, Button, Checkbox, Input, Text, TrashBinIcon, vars } from "@saleor/macaw-ui-next";
 import { useMemo } from "react";

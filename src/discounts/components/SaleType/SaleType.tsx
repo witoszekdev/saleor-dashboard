@@ -1,5 +1,5 @@
 import { DashboardCard } from "@dashboard/components/Card";
-import RadioGroupField, { RadioGroupFieldChoice } from "@dashboard/components/RadioGroupField";
+import { RadioGroupField, RadioGroupFieldChoice } from "@dashboard/components/RadioGroupField";
 import { SaleType as SaleTypeEnum } from "@dashboard/graphql";
 import { FormChange } from "@dashboard/hooks/useForm";
 import { makeStyles } from "@saleor/macaw-ui";
@@ -78,4 +78,4 @@ const SaleType = (props: SaleTypeProps) => {
 };
 
 SaleType.displayName = "SaleType";
-export default SaleType;
+export { SaleType };

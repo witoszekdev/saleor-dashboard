@@ -167,4 +167,4 @@ const useStyles = makeStyles(
   { name: "RichTextEditor" },
 );
 
-export default useStyles;
+export { useStyles };

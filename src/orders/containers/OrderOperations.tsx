@@ -288,4 +288,4 @@ const OrderOperations = ({
   );
 };
 
-export default OrderOperations;
+export { OrderOperations };

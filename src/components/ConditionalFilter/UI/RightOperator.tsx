@@ -6,7 +6,7 @@ import {
   Select,
 } from "@saleor/macaw-ui-next";
 
-import BulkSelect from "./BulkSelect";
+import { BulkSelect } from "./BulkSelect";
 import { FilterEventEmitter } from "./EventEmitter";
 import { MetadataInput } from "./MetadataInput";
 import {

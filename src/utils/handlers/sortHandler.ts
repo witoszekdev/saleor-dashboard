@@ -22,4 +22,4 @@ function createSortHandler<T extends string>(
     );
 }
 
-export default createSortHandler;
+export { createSortHandler };

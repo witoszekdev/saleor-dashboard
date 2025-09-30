@@ -9,7 +9,7 @@ import { createGraphiQLFetcher } from "@graphiql/toolkit";
 import * as React from "react";
 import { defineMessages, useIntl } from "react-intl";
 
-import GraphiQL from "../../../components/GraphiQL";
+import { GraphiQL } from "../../../components/GraphiQL";
 import { WebhookFormData } from "../WebhookDetailsPage";
 import { useStyles } from "./styles";
 
@@ -73,4 +73,4 @@ const WebhookSubscriptionQuery = ({
 };
 
 WebhookSubscriptionQuery.displayName = "WebhookSubscriptionQuery";
-export default WebhookSubscriptionQuery;
+export { WebhookSubscriptionQuery };

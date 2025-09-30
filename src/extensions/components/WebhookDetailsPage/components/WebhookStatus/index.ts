@@ -1,2 +1,2 @@
-export { default } from "./WebhookStatus";
+export { WebhookStatus } from "./WebhookStatus";
 export * from "./WebhookStatus";

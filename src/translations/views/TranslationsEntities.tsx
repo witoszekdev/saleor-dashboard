@@ -1,23 +1,23 @@
 // @ts-strict-ignore
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { createPaginationState } from "@dashboard/hooks/usePaginator";
-import useShop from "@dashboard/hooks/useShop";
+import { useShop } from "@dashboard/hooks/useShop";
 import { stringifyQs } from "@dashboard/utils/urls";
 import { useMemo } from "react";
 
 import { PAGINATE_BY } from "../../config";
 import { maybe } from "../../misc";
-import TranslationsEntitiesListPage from "../components/TranslationsEntitiesListPage";
+import { TranslationsEntitiesListPage } from "../components/TranslationsEntitiesListPage";
 import { LanguageEntitiesUrlQueryParams, TranslatableEntities } from "../urls";
-import TranslationsAttributeList from "./EntityLists/TranslationsAttributeList";
-import TranslationsCategoryList from "./EntityLists/TranslationsCategoryList";
-import TranslationsCollectionList from "./EntityLists/TranslationsCollectionList";
-import TranslationsMenuItemList from "./EntityLists/TranslationsMenuItemList";
-import TranslationsPageList from "./EntityLists/TranslationsPageList";
-import TranslationsProductList from "./EntityLists/TranslationsProductList";
-import TranslationsSaleList from "./EntityLists/TranslationsSaleList";
-import TranslationsShippingMethodList from "./EntityLists/TranslationsShippingMethodList";
-import TranslationsVoucherList from "./EntityLists/TranslationsVoucherList";
+import { TranslationsAttributeList } from "./EntityLists/TranslationsAttributeList";
+import { TranslationsCategoryList } from "./EntityLists/TranslationsCategoryList";
+import { TranslationsCollectionList } from "./EntityLists/TranslationsCollectionList";
+import { TranslationsMenuItemList } from "./EntityLists/TranslationsMenuItemList";
+import { TranslationsPageList } from "./EntityLists/TranslationsPageList";
+import { TranslationsProductList } from "./EntityLists/TranslationsProductList";
+import { TranslationsSaleList } from "./EntityLists/TranslationsSaleList";
+import { TranslationsShippingMethodList } from "./EntityLists/TranslationsShippingMethodList";
+import { TranslationsVoucherList } from "./EntityLists/TranslationsVoucherList";
 
 interface TranslationsEntitiesProps {
   language: string;
@@ -147,4 +147,4 @@ const TranslationsEntities = ({ language, params }: TranslationsEntitiesProps) =
 };
 
 TranslationsEntities.displayName = "TranslationsEntities";
-export default TranslationsEntities;
+export { TranslationsEntities };

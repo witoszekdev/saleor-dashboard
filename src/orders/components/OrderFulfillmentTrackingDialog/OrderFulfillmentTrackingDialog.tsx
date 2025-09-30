@@ -1,13 +1,13 @@
-import BackButton from "@dashboard/components/BackButton";
+import { BackButton } from "@dashboard/components/BackButton";
 import { ConfirmButton, ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import Form from "@dashboard/components/Form";
-import FormSpacer from "@dashboard/components/FormSpacer";
+import { Form } from "@dashboard/components/Form";
+import { FormSpacer } from "@dashboard/components/FormSpacer";
 import { DashboardModal } from "@dashboard/components/Modal";
 import { OrderErrorFragment } from "@dashboard/graphql";
-import useModalDialogErrors from "@dashboard/hooks/useModalDialogErrors";
+import { useModalDialogErrors } from "@dashboard/hooks/useModalDialogErrors";
 import { buttonMessages } from "@dashboard/intl";
 import { getFormErrors } from "@dashboard/utils/errors";
-import getOrderErrorMessage from "@dashboard/utils/errors/order";
+import { getOrderErrorMessage } from "@dashboard/utils/errors/order";
 import { TextField } from "@material-ui/core";
 import { Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
@@ -101,4 +101,4 @@ const OrderFulfillmentTrackingDialog = ({
 };
 
 OrderFulfillmentTrackingDialog.displayName = "OrderFulfillmentTrackingDialog";
-export default OrderFulfillmentTrackingDialog;
+export { OrderFulfillmentTrackingDialog };

@@ -20,4 +20,4 @@ const RichTextEditor = ({ disabled, error, label, name, helperText }: RichTextEd
   </FormControl>
 );
 
-export default RichTextEditor;
+export { RichTextEditor };

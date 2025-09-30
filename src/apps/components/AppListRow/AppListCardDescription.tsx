@@ -37,4 +37,4 @@ const AppListCardDescription = ({ app }: PropsWithChildren<AppListCardDescriptio
 );
 
 AppListCardDescription.displayName = "AppListCardDescription";
-export default AppListCardDescription;
+export { AppListCardDescription };

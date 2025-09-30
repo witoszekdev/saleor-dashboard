@@ -1,5 +1,5 @@
-import useListSettings, { UseListSettings } from "@dashboard/hooks/useListSettings";
-import useLocalPageInfo from "@dashboard/hooks/useLocalPageInfo";
+import { UseListSettings, useListSettings } from "@dashboard/hooks/useListSettings";
+import { useLocalPageInfo } from "@dashboard/hooks/useLocalPageInfo";
 import { LocalPagination } from "@dashboard/hooks/useLocalPaginator";
 import { ListViews } from "@dashboard/types";
 

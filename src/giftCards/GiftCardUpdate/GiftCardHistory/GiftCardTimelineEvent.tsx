@@ -1,6 +1,6 @@
 // @ts-strict-ignore
 import { AppPaths, AppUrls } from "@dashboard/apps/urls";
-import Link from "@dashboard/components/Link";
+import { Link } from "@dashboard/components/Link";
 import { TimelineEvent } from "@dashboard/components/Timeline";
 import { customerPath } from "@dashboard/customers/urls";
 import { ExtensionsUrls } from "@dashboard/extensions/urls";
@@ -134,4 +134,4 @@ const GiftCardTimelineEvent = ({ date, event }: GiftCardTimelineEventProps) => {
   );
 };
 
-export default GiftCardTimelineEvent;
+export { GiftCardTimelineEvent };

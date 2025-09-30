@@ -1,5 +1,5 @@
-import useLocalStorage from "@dashboard/hooks/useLocalStorage";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useLocalStorage } from "@dashboard/hooks/useLocalStorage";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { parse as parseQs } from "qs";
 import { useEffect, useState } from "react";
 

@@ -1,2 +1,2 @@
-export { default } from "./OrderCannotCancelOrderDialog";
+export { OrderCannotCancelOrderDialog } from "./OrderCannotCancelOrderDialog";
 export * from "./OrderCannotCancelOrderDialog";

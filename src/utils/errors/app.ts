@@ -63,4 +63,4 @@ function getAppErrorMessage(err: AppErrorFragment, intl: IntlShape): string | un
   return getCommonFormFieldErrorMessage(err, intl);
 }
 
-export default getAppErrorMessage;
+export { getAppErrorMessage };

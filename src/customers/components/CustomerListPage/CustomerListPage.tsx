@@ -14,7 +14,7 @@ import {
 } from "@dashboard/extensions/getExtensionsItems";
 import { useExtensions } from "@dashboard/extensions/hooks/useExtensions";
 import { useFlag } from "@dashboard/featureFlags";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { sectionNames } from "@dashboard/intl";
 import { FilterPagePropsWithPresets, PageListProps, SortPage } from "@dashboard/types";
 import { Box, Button, ChevronRightIcon } from "@saleor/macaw-ui-next";
@@ -176,4 +176,4 @@ const CustomerListPage = ({
 };
 
 CustomerListPage.displayName = "CustomerListPage";
-export default CustomerListPage;
+export { CustomerListPage };

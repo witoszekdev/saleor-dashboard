@@ -1,2 +1,2 @@
-export { default } from "./WarehouseInfo";
+export { WarehouseInfo } from "./WarehouseInfo";
 export * from "./WarehouseInfo";

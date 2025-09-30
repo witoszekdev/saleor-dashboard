@@ -10,4 +10,4 @@ function getWarehouseErrorMessage(
   return getCommonFormFieldErrorMessage(err, intl);
 }
 
-export default getWarehouseErrorMessage;
+export { getWarehouseErrorMessage };

@@ -1,6 +1,6 @@
 // @ts-strict-ignore
 import { Locale } from "@dashboard/components/Locale";
-import OrderDiscountCommonModal from "@dashboard/orders/components/OrderDiscountCommonModal/OrderDiscountCommonModal";
+import { OrderDiscountCommonModal } from "@dashboard/orders/components/OrderDiscountCommonModal/OrderDiscountCommonModal";
 import {
   ORDER_LINE_DISCOUNT,
   OrderDiscountCommonInput,

@@ -1,2 +1,2 @@
-export { default } from "./AttributeValueEditDialog";
+export { AttributeValueEditDialog } from "./AttributeValueEditDialog";
 export * from "./AttributeValueEditDialog";

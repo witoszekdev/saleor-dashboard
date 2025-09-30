@@ -1,2 +1,2 @@
-export { default } from "./MenuProperties";
+export { MenuProperties } from "./MenuProperties";
 export * from "./MenuProperties";

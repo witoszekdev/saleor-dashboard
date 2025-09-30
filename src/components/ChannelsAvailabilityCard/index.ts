@@ -1,2 +1,2 @@
 export * from "./ChannelsAvailabilityCard";
-export { default } from "./ChannelsAvailabilityCard";
+export { ChannelsAvailability } from "./ChannelsAvailabilityCard";

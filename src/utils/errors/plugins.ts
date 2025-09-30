@@ -27,4 +27,4 @@ function getPluginErrorMessage(err: PluginErrorFragment, intl: IntlShape): strin
   return getCommonFormFieldErrorMessage(err, intl);
 }
 
-export default getPluginErrorMessage;
+export { getPluginErrorMessage };

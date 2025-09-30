@@ -2,7 +2,7 @@ import { OutputData } from "@editorjs/editorjs";
 import { EditorCore } from "@react-editor-js/core";
 import { useCallback, useRef } from "react";
 
-import useMap from "../objects/useMap";
+import { useMap } from "../objects/useMap";
 
 type RefsMap<TKey extends string> = Record<TKey, EditorCore | null>;
 

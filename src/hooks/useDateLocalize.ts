@@ -13,4 +13,4 @@ function useDateLocalize(): LocalizeDate {
       .format(format || "ll");
 }
 
-export default useDateLocalize;
+export { useDateLocalize };

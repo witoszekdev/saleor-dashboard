@@ -1,8 +1,8 @@
 import { ApolloClient, ApolloError } from "@apollo/client";
 import { IMessageContext } from "@dashboard/components/messages";
 import { AccountErrorCode, useUserDetailsQuery } from "@dashboard/graphql";
-import useLocalStorage from "@dashboard/hooks/useLocalStorage";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useLocalStorage } from "@dashboard/hooks/useLocalStorage";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { commonMessages } from "@dashboard/intl";
 import {
   checkIfCredentialsExist,

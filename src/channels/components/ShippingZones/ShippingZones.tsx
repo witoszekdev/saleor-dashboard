@@ -6,7 +6,7 @@ import { FetchMoreProps, RelayToFlat } from "@dashboard/types";
 import { Text } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
 
-import AssignmentList from "../AssignmentList";
+import { AssignmentList } from "../AssignmentList";
 import { messages } from "./messages";
 
 interface ShippingZonesProps {
@@ -58,4 +58,4 @@ const ShippingZones = (props: ShippingZonesProps) => {
   );
 };
 
-export default ShippingZones;
+export { ShippingZones };

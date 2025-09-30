@@ -1,5 +1,5 @@
 import { IS_CLOUD_INSTANCE } from "@dashboard/config";
-import useLocalStorage from "@dashboard/hooks/useLocalStorage";
+import { useLocalStorage } from "@dashboard/hooks/useLocalStorage";
 
 import { CLOUD_PLUGIN_ID } from "../utils";
 

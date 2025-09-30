@@ -3,7 +3,7 @@ import { CommonError } from "@dashboard/utils/errors/common";
 import { ChangeEvent } from "react";
 import { useController, useFormContext } from "react-hook-form";
 
-import DiscountDates from "./DiscountDates";
+import { DiscountDates } from "./DiscountDates";
 
 interface DiscountDatesWithControllerProps<ErrorCode> {
   disabled?: boolean;

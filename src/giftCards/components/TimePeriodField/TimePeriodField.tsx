@@ -1,4 +1,4 @@
-import TextWithSelectField from "@dashboard/components/TextWithSelectField";
+import { TextWithSelectField } from "@dashboard/components/TextWithSelectField";
 import { TimePeriodTypeEnum } from "@dashboard/graphql";
 import { FormChange } from "@dashboard/hooks/useForm";
 import { useIntl } from "react-intl";
@@ -64,4 +64,4 @@ const TimePeriodField = ({
   );
 };
 
-export default TimePeriodField;
+export { TimePeriodField };

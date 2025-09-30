@@ -6,7 +6,7 @@ import { useClientPagination } from "@dashboard/hooks/useClientPagination";
 import { useState } from "react";
 import { IntlShape } from "react-intl";
 
-import messages from "./messages";
+import { messages } from "./messages";
 
 export const variantsStaticColumnsAdapter = (intl: IntlShape) => [
   {

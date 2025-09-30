@@ -1,2 +1,2 @@
-export { default } from "./OrderChannelSectionCard";
+export { OrderChannelSectionCard } from "./OrderChannelSectionCard";
 export * from "./OrderChannelSectionCard";

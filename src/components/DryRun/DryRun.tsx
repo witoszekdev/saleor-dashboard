@@ -1,5 +1,5 @@
 // @ts-strict-ignore
-import Grid from "@dashboard/components/Grid";
+import { Grid } from "@dashboard/components/Grid";
 import { DashboardModal } from "@dashboard/components/Modal";
 import { useStyles } from "@dashboard/custom-apps/components/WebhookEvents/styles";
 import { useTriggerWebhookDryRunMutation, WebhookEventTypeSyncEnum } from "@dashboard/graphql";
@@ -17,7 +17,7 @@ import { Text } from "@saleor/macaw-ui-next";
 import { Dispatch, SetStateAction, useState } from "react";
 import { useIntl } from "react-intl";
 
-import DryRunItemsList from "../DryRunItemsList/DryRunItemsList";
+import { DryRunItemsList } from "../DryRunItemsList/DryRunItemsList";
 import { DocumentMap } from "../DryRunItemsList/utils";
 import { messages } from "./messages";
 import { getUnavailableObjects } from "./utils";
@@ -149,4 +149,4 @@ const DryRun = ({ setResult, showDialog, setShowDialog, query, syncEvents }: Dry
 };
 
 DryRun.displayName = "DryRun";
-export default DryRun;
+export { DryRun };

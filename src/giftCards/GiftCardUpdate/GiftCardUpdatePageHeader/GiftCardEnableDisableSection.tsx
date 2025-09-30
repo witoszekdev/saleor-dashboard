@@ -4,8 +4,8 @@ import { commonMessages } from "@dashboard/intl";
 import { useIntl } from "react-intl";
 
 import { bulkEnableDisableSectionMessages as buttonMessages } from "../../GiftCardsList/messages";
-import useGiftCardDetails from "../providers/GiftCardDetailsProvider/hooks/useGiftCardDetails";
-import useGiftCardActivateToggle from "./hooks/useGiftCardActivateToggle";
+import { useGiftCardDetails } from "../providers/GiftCardDetailsProvider/hooks/useGiftCardDetails";
+import { useGiftCardActivateToggle } from "./hooks/useGiftCardActivateToggle";
 
 const GiftCardEnableDisableSection = () => {
   const intl = useIntl();
@@ -34,4 +34,4 @@ const GiftCardEnableDisableSection = () => {
   );
 };
 
-export default GiftCardEnableDisableSection;
+export { GiftCardEnableDisableSection };

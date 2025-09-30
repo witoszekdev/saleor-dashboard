@@ -4,4 +4,4 @@ import { useContext } from "react";
 function useShop() {
   return useContext(ShopContext);
 }
-export default useShop;
+export { useShop };

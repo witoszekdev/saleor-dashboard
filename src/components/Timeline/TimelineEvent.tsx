@@ -1,7 +1,7 @@
 import { Accordion, Box, sprinkles, Text } from "@saleor/macaw-ui-next";
 import * as React from "react";
 
-import TimelineEventHeader, { TitleElement } from "./TimelineEventHeader";
+import { TimelineEventHeader, TitleElement } from "./TimelineEventHeader";
 
 export interface TimelineEventProps {
   children?: React.ReactNode;
@@ -63,4 +63,4 @@ export const TimelineEvent = (props: TimelineEventProps) => {
   );
 };
 TimelineEvent.displayName = "TimelineEvent";
-export default TimelineEvent;
+export { TimelineEvent };

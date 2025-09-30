@@ -10,7 +10,7 @@ import {
 import { splitDateTime } from "@dashboard/misc";
 import { CommonError } from "@dashboard/utils/errors/common";
 import { RichTextContext } from "@dashboard/utils/richText/context";
-import useRichText from "@dashboard/utils/richText/useRichText";
+import { useRichText } from "@dashboard/utils/richText/useRichText";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { ReactNode } from "react";
 import { FormProvider, useForm } from "react-hook-form";

@@ -1,5 +1,5 @@
 import { formatMoneyAmount } from "@dashboard/components/Money";
-import useLocale from "@dashboard/hooks/useLocale";
+import { useLocale } from "@dashboard/hooks/useLocale";
 import { IMoney } from "@dashboard/utils/intl";
 import { Box, Text } from "@saleor/macaw-ui-next";
 

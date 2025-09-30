@@ -1,6 +1,6 @@
 import { defineMessages } from "react-intl";
 
-export default defineMessages({
+export const Messages = defineMessages({
   activateAppTitle: {
     id: "cEO6Yx",
     defaultMessage: "Activate Extension",

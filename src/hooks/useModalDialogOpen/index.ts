@@ -1,2 +1,2 @@
-export { default } from "./useModalDialogOpen";
+export { useModalDialogOpen } from "./useModalDialogOpen";
 export * from "./useModalDialogOpen";

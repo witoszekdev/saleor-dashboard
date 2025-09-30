@@ -1,8 +1,8 @@
-import DeletableItem from "@dashboard/components/DeletableItem";
+import { DeletableItem } from "@dashboard/components/DeletableItem";
 import { Divider, Text } from "@saleor/macaw-ui-next";
 import { SortableElement, SortableElementProps } from "react-sortable-hoc";
 
-import SortableHandle from "./SortableHandle";
+import { SortableHandle } from "./SortableHandle";
 import { useStyles } from "./styles";
 import { AssignItem } from "./types";
 
@@ -34,4 +34,4 @@ const Item = SortableElement(({ item, sortable = false, onDelete }: ItemProps) =
   );
 });
 
-export default Item;
+export { Item };

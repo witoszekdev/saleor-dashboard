@@ -46,4 +46,4 @@ const OrderTransaction = ({
   );
 };
 
-export default OrderTransaction;
+export { OrderTransaction };

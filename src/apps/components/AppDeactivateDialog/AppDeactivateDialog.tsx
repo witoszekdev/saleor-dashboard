@@ -1,4 +1,4 @@
-import ActionDialog from "@dashboard/components/ActionDialog";
+import { ActionDialog } from "@dashboard/components/ActionDialog";
 import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import { buttonMessages } from "@dashboard/intl";
 import { getStringOrPlaceholder } from "@dashboard/misc";
@@ -6,7 +6,7 @@ import { Box } from "@saleor/macaw-ui-next";
 import { PropsWithChildren } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import msgs from "./messages";
+import { Messages as msgs } from "./messages";
 
 /** @deprecated use component from extensions/ */
 interface AppDeactivateDialogProps {
@@ -63,4 +63,4 @@ const AppDeactivateDialog = ({
 };
 
 AppDeactivateDialog.displayName = "AppDeactivateDialog";
-export default AppDeactivateDialog;
+export { AppDeactivateDialog };

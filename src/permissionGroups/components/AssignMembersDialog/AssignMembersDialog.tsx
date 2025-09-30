@@ -1,13 +1,13 @@
 // @ts-strict-ignore
-import BackButton from "@dashboard/components/BackButton";
+import { BackButton } from "@dashboard/components/BackButton";
 import { ConfirmButton, ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import { InfiniteScroll } from "@dashboard/components/InfiniteScroll";
 import { DashboardModal } from "@dashboard/components/Modal";
-import ResponsiveTable from "@dashboard/components/ResponsiveTable";
-import TableRowLink from "@dashboard/components/TableRowLink";
+import { ResponsiveTable } from "@dashboard/components/ResponsiveTable";
+import { TableRowLink } from "@dashboard/components/TableRowLink";
 import { UserAvatar } from "@dashboard/components/UserAvatar";
 import { SearchStaffMembersQuery } from "@dashboard/graphql";
-import useSearchQuery from "@dashboard/hooks/useSearchQuery";
+import { useSearchQuery } from "@dashboard/hooks/useSearchQuery";
 import { buttonMessages } from "@dashboard/intl";
 import { getUserInitials, getUserName, renderCollection } from "@dashboard/misc";
 import { DialogProps, FetchMoreProps, RelayToFlat, SearchPageProps } from "@dashboard/types";
@@ -231,4 +231,4 @@ const AssignMembersDialog = ({
 };
 
 AssignMembersDialog.displayName = "AssignMembersDialog";
-export default AssignMembersDialog;
+export { AssignMembersDialog };

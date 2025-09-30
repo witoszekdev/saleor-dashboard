@@ -66,4 +66,4 @@ const InstallErrorAction = ({
 };
 
 InstallErrorAction.displayName = "InstallErrorAction";
-export default InstallErrorAction;
+export { InstallErrorAction };

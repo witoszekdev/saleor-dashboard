@@ -3,13 +3,13 @@ import { ControlledCheckbox } from "@dashboard/components/ControlledCheckbox";
 import { Grid } from "@dashboard/components/Grid";
 import { DiscountErrorFragment } from "@dashboard/graphql";
 import { getFormErrors } from "@dashboard/utils/errors";
-import getDiscountErrorMessage from "@dashboard/utils/errors/discounts";
+import { getDiscountErrorMessage } from "@dashboard/utils/errors/discounts";
 import { TextField } from "@material-ui/core";
 import { Text } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
 
 import { VoucherDetailsPageFormData } from "../VoucherDetailsPage";
-import messages from "./messages";
+import { Messages as messages } from "./messages";
 import { useStyles } from "./styles";
 
 interface VoucherLimitsProps {
@@ -120,4 +120,4 @@ const VoucherLimits = ({
   );
 };
 
-export default VoucherLimits;
+export { VoucherLimits };

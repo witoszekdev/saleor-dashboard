@@ -1,7 +1,7 @@
 // @ts-strict-ignore
 import { DashboardCard } from "@dashboard/components/Card";
-import ResponsiveTable from "@dashboard/components/ResponsiveTable";
-import TableRowLink from "@dashboard/components/TableRowLink";
+import { ResponsiveTable } from "@dashboard/components/ResponsiveTable";
+import { TableRowLink } from "@dashboard/components/TableRowLink";
 import { LanguageFragment } from "@dashboard/graphql";
 import { languageEntitiesUrl } from "@dashboard/translations/urls";
 import { TableBody, TableCell } from "@material-ui/core";
@@ -81,4 +81,4 @@ const TranslationsLanguageList = (props: TranslationsLanguageListProps) => {
 };
 
 TranslationsLanguageList.displayName = "TranslationsLanguageList";
-export default TranslationsLanguageList;
+export { TranslationsLanguageList };

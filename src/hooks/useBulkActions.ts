@@ -1,5 +1,5 @@
 import { Node } from "../types";
-import useListActions from "./useListActions";
+import { useListActions } from "./useListActions";
 
 function useBulkActions(initial: string[] = []) {
   const { add, isSelected, listElements, remove, reset, set, toggle } =
@@ -25,4 +25,4 @@ function useBulkActions(initial: string[] = []) {
     toggleAll,
   };
 }
-export default useBulkActions;
+export { useBulkActions };

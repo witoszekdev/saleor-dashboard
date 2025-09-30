@@ -1,12 +1,12 @@
 // @ts-strict-ignore
 import { collectionUrl } from "@dashboard/collections/urls";
 import { DashboardCard } from "@dashboard/components/Card";
-import Checkbox from "@dashboard/components/Checkbox";
-import ResponsiveTable from "@dashboard/components/ResponsiveTable";
+import { Checkbox } from "@dashboard/components/Checkbox";
+import { ResponsiveTable } from "@dashboard/components/ResponsiveTable";
 import { TableButtonWrapper } from "@dashboard/components/TableButtonWrapper/TableButtonWrapper";
-import TableHead from "@dashboard/components/TableHead";
+import { TableHead } from "@dashboard/components/TableHead";
 import { TablePaginationWithContext } from "@dashboard/components/TablePagination";
-import TableRowLink from "@dashboard/components/TableRowLink";
+import { TableRowLink } from "@dashboard/components/TableRowLink";
 import { CollectionWithTotalProductsFragment } from "@dashboard/graphql";
 import { TableBody, TableCell, TableFooter } from "@material-ui/core";
 import { DeleteIcon, IconButton } from "@saleor/macaw-ui";
@@ -148,4 +148,4 @@ const DiscountCollections = (props: DiscountCollectionsProps) => {
 };
 
 DiscountCollections.displayName = "DiscountCollections";
-export default DiscountCollections;
+export { DiscountCollections };

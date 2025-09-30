@@ -1,7 +1,7 @@
 import completedIcon from "@assets/images/completed.svg";
 import uncompletedIcon from "@assets/images/uncompleted.svg";
 import { Accordion, Box, ChervonDownIcon, Skeleton, Text } from "@saleor/macaw-ui-next";
-import SVG from "react-inlinesvg";
+import { InlineSVG as SVG } from "react-inlinesvg";
 
 import { useOnboardingData } from "../hooks/useOnboardingData";
 import { useOnboarding } from "../onboardingContext/OnboardingContext";

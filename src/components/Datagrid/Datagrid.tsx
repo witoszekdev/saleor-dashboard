@@ -3,7 +3,7 @@ import "@glideapps/glide-data-grid/dist/index.css";
 import { useRowAnchorHandler } from "@dashboard/components/Datagrid/hooks/useRowAnchorHandler";
 import { NavigatorOpts } from "@dashboard/hooks/useNavigator";
 import { getCellAction } from "@dashboard/products/components/ProductListDatagrid/datagrid";
-import DataEditor, {
+import {
   CellClickedEventArgs,
   DataEditorProps,
   DataEditorRef,
@@ -13,12 +13,13 @@ import DataEditor, {
   GridSelection,
   HeaderClickedEventArgs,
   Item,
+  MarkdownDiv as DataEditor,
   Theme,
 } from "@glideapps/glide-data-grid";
 import { GetRowThemeCallback } from "@glideapps/glide-data-grid/dist/ts/data-grid/data-grid-render";
 import { CircularProgress } from "@material-ui/core";
 import { Box, Text, useTheme } from "@saleor/macaw-ui-next";
-import clsx from "clsx";
+import { clsx } from "clsx";
 import range from "lodash/range";
 import {
   MutableRefObject,
@@ -39,14 +40,14 @@ import { RowActions } from "./components/RowActions";
 import { TooltipContainer } from "./components/TooltipContainer";
 import { useCustomCellRenderers } from "./customCells/useCustomCellRenderers";
 import { headerIcons } from "./headerIcons";
-import useDatagridChange, { DatagridChange, OnDatagridChange } from "./hooks/useDatagridChange";
+import { DatagridChange, OnDatagridChange, useDatagridChange } from "./hooks/useDatagridChange";
 import { useFullScreenMode } from "./hooks/useFullScreenMode";
 import { usePortalClasses } from "./hooks/usePortalClasses";
 import { useRowAnchor } from "./hooks/useRowAnchor";
 import { useRowHover } from "./hooks/useRowHover";
 import { useScrollRight } from "./hooks/useScrollRight";
 import { useTooltipContainer } from "./hooks/useTooltipContainer";
-import useStyles, { cellHeight, useDatagridTheme, useFullScreenStyles } from "./styles";
+import { cellHeight, useDatagridTheme, useFullScreenStyles, useStyles } from "./styles";
 import { AvailableColumn } from "./types";
 import { preventRowClickOnSelectionCheckbox } from "./utils";
 
@@ -538,4 +539,4 @@ const Datagrid = ({
   );
 };
 
-export default Datagrid;
+export { Datagrid };

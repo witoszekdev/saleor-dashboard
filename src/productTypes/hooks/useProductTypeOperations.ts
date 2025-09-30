@@ -87,4 +87,4 @@ function useProductTypeOperations({
   };
 }
 
-export default useProductTypeOperations;
+export { useProductTypeOperations };

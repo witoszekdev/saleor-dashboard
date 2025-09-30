@@ -5,7 +5,7 @@ import {
   prepareAttributesInput,
 } from "@dashboard/attributes/utils/handlers";
 import { AttributeInput } from "@dashboard/components/Attributes";
-import NotFoundPage from "@dashboard/components/NotFoundPage";
+import { NotFoundPage } from "@dashboard/components/NotFoundPage";
 import { WindowTitle } from "@dashboard/components/WindowTitle";
 import { DEFAULT_INITIAL_SEARCH_DATA } from "@dashboard/config";
 import {
@@ -17,18 +17,18 @@ import {
   useUpdatePrivateMetadataMutation,
   useVariantCreateMutation,
 } from "@dashboard/graphql";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useNotifier from "@dashboard/hooks/useNotifier";
-import useShop from "@dashboard/hooks/useShop";
-import useCategorySearch from "@dashboard/searches/useCategorySearch";
-import useCollectionSearch from "@dashboard/searches/useCollectionSearch";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
+import { useNotifier } from "@dashboard/hooks/useNotifier";
+import { useShop } from "@dashboard/hooks/useShop";
+import { UseCategorySearch as useCategorySearch } from "@dashboard/searches/useCategorySearch";
+import { UseCollectionSearch as useCollectionSearch } from "@dashboard/searches/useCollectionSearch";
 import {
   useReferencePageSearch,
   useReferenceProductSearch,
 } from "@dashboard/searches/useReferenceSearch";
-import useWarehouseSearch from "@dashboard/searches/useWarehouseSearch";
-import useAttributeValueSearchHandler from "@dashboard/utils/handlers/attributeValueSearchHandler";
-import createMetadataCreateHandler from "@dashboard/utils/handlers/metadataCreateHandler";
+import { UseWarehouseSearch as useWarehouseSearch } from "@dashboard/searches/useWarehouseSearch";
+import { useAttributeValueSearchHandler } from "@dashboard/utils/handlers/attributeValueSearchHandler";
+import { createMetadataCreateHandler } from "@dashboard/utils/handlers/metadataCreateHandler";
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { warehouseAddPath } from "@dashboard/warehouses/urls";
 import { useIntl } from "react-intl";
@@ -311,4 +311,4 @@ const ProductVariant = ({ productId, params }: ProductVariantCreateProps) => {
   );
 };
 
-export default ProductVariant;
+export { ProductVariant };

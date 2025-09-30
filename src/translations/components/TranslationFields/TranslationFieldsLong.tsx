@@ -1,11 +1,11 @@
 import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import Form from "@dashboard/components/Form";
+import { Form } from "@dashboard/components/Form";
 import { SubmitPromise } from "@dashboard/hooks/useForm";
 import { TextField } from "@material-ui/core";
 import { Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import TranslationFieldsSave from "./TranslationFieldsSave";
+import { TranslationFieldsSave } from "./TranslationFieldsSave";
 
 interface TranslationFieldsLongProps {
   disabled: boolean;
@@ -65,4 +65,4 @@ const TranslationFieldsLong = ({
 };
 
 TranslationFieldsLong.displayName = "TranslationFieldsLong";
-export default TranslationFieldsLong;
+export { TranslationFieldsLong };

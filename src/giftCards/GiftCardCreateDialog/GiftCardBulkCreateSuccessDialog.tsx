@@ -4,7 +4,7 @@ import { Button, Text } from "@saleor/macaw-ui-next";
 import { useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import GiftCardExportDialogContent from "../GiftCardExportDialogContent";
+import { GiftCardExportDialog as GiftCardExportDialogContent } from "../GiftCardExportDialogContent";
 import { giftCardCreateMessages as messages } from "./messages";
 
 interface GiftCardBulkCreateSuccessDialogProps extends DialogProps {
@@ -51,4 +51,4 @@ const GiftCardBulkCreateSuccessDialog = ({
   );
 };
 
-export default GiftCardBulkCreateSuccessDialog;
+export { GiftCardBulkCreateSuccessDialog };

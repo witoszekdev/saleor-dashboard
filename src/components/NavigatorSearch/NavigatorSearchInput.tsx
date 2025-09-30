@@ -1,4 +1,4 @@
-import useDebounce from "@dashboard/hooks/useDebounce";
+import { useDebounce } from "@dashboard/hooks/useDebounce";
 import { Box, SearchIcon, sprinkles } from "@saleor/macaw-ui-next";
 import { useState } from "react";
 import * as React from "react";
@@ -56,4 +56,4 @@ const NavigatorSearchInput = ({ onSearch, value }: NavigatorSearchInputProps) =>
   );
 };
 
-export default NavigatorSearchInput;
+export { NavigatorSearchInput };

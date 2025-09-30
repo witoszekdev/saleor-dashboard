@@ -1,6 +1,9 @@
 // @ts-strict-ignore
-import MuiCheckbox, { CheckboxProps as MuiCheckboxProps } from "@material-ui/core/Checkbox";
-import FormHelperText from "@material-ui/core/FormHelperText";
+import {
+  Checkbox as MuiCheckbox,
+  CheckboxProps as MuiCheckboxProps,
+} from "@material-ui/core/Checkbox";
+import { FormHelperText } from "@material-ui/core/FormHelperText";
 import { makeStyles } from "@saleor/macaw-ui";
 
 const useStyles = makeStyles(
@@ -55,4 +58,4 @@ const Checkbox = ({ helperText, error, ...props }: CheckboxProps) => {
 };
 
 Checkbox.displayName = "Checkbox";
-export default Checkbox;
+export { Checkbox };

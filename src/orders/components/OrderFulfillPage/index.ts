@@ -1,2 +1,2 @@
 export * from "./OrderFulfillPage";
-export { default } from "./OrderFulfillPage";
+export { OrderFulfillPage } from "./OrderFulfillPage";

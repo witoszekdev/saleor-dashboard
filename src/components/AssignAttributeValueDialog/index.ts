@@ -1,2 +1,2 @@
-export { default } from "./AssignAttributeValueDialog";
+export { AssignAttributeValueDialog } from "./AssignAttributeValueDialog";
 export * from "./AssignAttributeValueDialog";

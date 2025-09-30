@@ -1,9 +1,9 @@
 // @ts-strict-ignore
-import OverflowTooltip from "@dashboard/components/OverflowTooltip";
+import { OverflowTooltip } from "@dashboard/components/OverflowTooltip";
 import { useClipboard } from "@dashboard/hooks/useClipboard";
 import { commonMessages } from "@dashboard/intl";
 import { CheckIcon, CopyIcon, IconButton, makeStyles } from "@saleor/macaw-ui";
-import clsx from "clsx";
+import { clsx } from "clsx";
 import { useIntl } from "react-intl";
 
 import { PspReferenceLink } from "./PspReferenceLink";

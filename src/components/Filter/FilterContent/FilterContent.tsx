@@ -1,6 +1,6 @@
 // @ts-strict-ignore
-import CollectionWithDividers from "@dashboard/components/CollectionWithDividers";
-import useStateFromProps from "@dashboard/hooks/useStateFromProps";
+import { CollectionWithDividers } from "@dashboard/components/CollectionWithDividers";
+import { useStateFromProps } from "@dashboard/hooks/useStateFromProps";
 import { makeStyles, Paper } from "@material-ui/core";
 import { Accordion, AccordionSummary } from "@saleor/macaw-ui";
 import { Text } from "@saleor/macaw-ui-next";
@@ -9,10 +9,10 @@ import { useState } from "react";
 import { FilterAutocompleteDisplayValues } from "../FilterAutocompleteField";
 import { FilterReducerAction } from "../reducer";
 import { FieldType, FilterElement, FilterErrorMessages, IFilter, InvalidFilters } from "../types";
-import FilterContentBody, { FilterContentBodyProps } from "./FilterContentBody";
-import FilterContentBodyNameField from "./FilterContentBodyNameField";
-import FilterContentHeader from "./FilterContentHeader";
-import FilterErrorsList from "./FilterErrorsList";
+import { FilterContentBody, FilterContentBodyProps } from "./FilterContentBody";
+import { FilterContentBodyNameField } from "./FilterContentBodyNameField";
+import { FilterContentHeader } from "./FilterContentHeader";
+import { FilterErrorsList } from "./FilterErrorsList";
 
 const useExpanderStyles = makeStyles(
   theme => ({
@@ -240,4 +240,4 @@ const FilterContent = ({
 };
 
 FilterContent.displayName = "FilterContent";
-export default FilterContent;
+export { FilterContent };

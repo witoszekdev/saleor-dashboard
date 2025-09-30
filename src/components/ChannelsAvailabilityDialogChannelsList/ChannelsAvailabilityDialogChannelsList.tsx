@@ -1,6 +1,6 @@
 import { Channel } from "@dashboard/channels/utils";
 import { ControlledCheckbox } from "@dashboard/components/ControlledCheckbox";
-import Hr from "@dashboard/components/Hr";
+import { Hr } from "@dashboard/components/Hr";
 import { makeStyles } from "@saleor/macaw-ui";
 import { Text } from "@saleor/macaw-ui-next";
 
@@ -51,4 +51,4 @@ const ChannelsAvailabilityContent = ({
   );
 };
 
-export default ChannelsAvailabilityContent;
+export { ChannelsAvailabilityContent };

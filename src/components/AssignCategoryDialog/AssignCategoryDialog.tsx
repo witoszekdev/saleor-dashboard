@@ -1,7 +1,7 @@
 // @ts-strict-ignore
 import { useIntl } from "react-intl";
 
-import AssignContainerDialog, { AssignContainerDialogProps } from "../AssignContainerDialog";
+import { AssignContainerDialog, AssignContainerDialogProps } from "../AssignContainerDialog";
 import { messages } from "./messages";
 
 type Categories = {
@@ -35,4 +35,4 @@ const AssignCategoryDialog = ({ categories, labels, ...rest }: AssignCategoryDia
 };
 
 AssignCategoryDialog.displayName = "AssignCategoryDialog";
-export default AssignCategoryDialog;
+export { AssignCategoryDialog };

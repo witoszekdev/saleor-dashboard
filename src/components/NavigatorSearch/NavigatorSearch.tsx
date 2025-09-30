@@ -45,4 +45,4 @@ const NavigatorSearch = () => {
   );
 };
 
-export default NavigatorSearch;
+export { NavigatorSearch };

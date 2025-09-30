@@ -3,10 +3,10 @@ import {
   useFulfillmentReturnProductsMutation,
   useOrderDetailsQuery,
 } from "@dashboard/graphql";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useNotifier from "@dashboard/hooks/useNotifier";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
+import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { extractMutationErrors } from "@dashboard/misc";
-import OrderReturnPage from "@dashboard/orders/components/OrderReturnPage";
+import { OrderRefundPage as OrderReturnPage } from "@dashboard/orders/components/OrderReturnPage";
 import { OrderReturnFormData } from "@dashboard/orders/components/OrderReturnPage/form";
 import { orderHasTransactions } from "@dashboard/orders/types";
 import { orderUrl } from "@dashboard/orders/urls";
@@ -15,7 +15,7 @@ import { useIntl } from "react-intl";
 
 import { messages } from "./messages";
 import { useRefundWithinReturn } from "./useRefundWithinReturn";
-import ReturnFormDataParser, { getSuccessMessage } from "./utils";
+import { getSuccessMessage, ReturnFormDataParser } from "./utils";
 
 interface OrderReturnProps {
   orderId: string;
@@ -111,4 +111,4 @@ const OrderReturn = ({ orderId }: OrderReturnProps) => {
 };
 
 OrderReturn.displayName = "OrderReturn";
-export default OrderReturn;
+export { OrderReturn };

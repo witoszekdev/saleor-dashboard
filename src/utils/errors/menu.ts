@@ -10,4 +10,4 @@ function getMenuErrorMessage(
   return getCommonFormFieldErrorMessage(err, intl);
 }
 
-export default getMenuErrorMessage;
+export { getMenuErrorMessage };

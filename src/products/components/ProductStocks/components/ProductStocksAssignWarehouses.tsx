@@ -1,11 +1,11 @@
-import BackButton from "@dashboard/components/BackButton";
-import Checkbox from "@dashboard/components/Checkbox";
+import { BackButton } from "@dashboard/components/BackButton";
+import { Checkbox } from "@dashboard/components/Checkbox";
 import { InfiniteScroll } from "@dashboard/components/InfiniteScroll";
 import { DashboardModal } from "@dashboard/components/Modal";
-import ResponsiveTable from "@dashboard/components/ResponsiveTable";
-import TableRowLink from "@dashboard/components/TableRowLink";
+import { ResponsiveTable } from "@dashboard/components/ResponsiveTable";
+import { TableRowLink } from "@dashboard/components/TableRowLink";
 import { WarehouseFragment } from "@dashboard/graphql";
-import useSearchQuery from "@dashboard/hooks/useSearchQuery";
+import { useSearchQuery } from "@dashboard/hooks/useSearchQuery";
 import { CircularProgress, TableBody, TableCell, TableRow, TextField } from "@material-ui/core";
 import { ConfirmButton } from "@saleor/macaw-ui";
 import { Button, Option, sprinkles, Text } from "@saleor/macaw-ui-next";

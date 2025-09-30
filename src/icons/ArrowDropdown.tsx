@@ -14,4 +14,4 @@ const ArrowDropdown = createSvgIcon(
   "ArrowDropdown",
 );
 
-export default ArrowDropdown;
+export { ArrowDropdown };

@@ -1,5 +1,5 @@
 import { DashboardCard } from "@dashboard/components/Card";
-import Link from "@dashboard/components/Link";
+import { Link } from "@dashboard/components/Link";
 import { NewRadioGroupField as RadioGroupField } from "@dashboard/components/RadioGroupField";
 import {
   WarehouseClickAndCollectOptionEnum,
@@ -17,7 +17,7 @@ import { ReactNode, useEffect } from "react";
 import { FormattedMessage } from "react-intl";
 
 import { WarehouseDetailsPageFormData } from "../WarehouseDetailsPage";
-import messages from "./messages";
+import { messages } from "./messages";
 
 const WarehouseRadioSubtitle = ({ children }: { children: ReactNode }) => (
   <Text size={2} fontWeight="light" color="default2" display="block">
@@ -195,4 +195,4 @@ const WarehouseSettings = ({
 };
 
 WarehouseSettings.displayName = "WarehouseInfo";
-export default WarehouseSettings;
+export { WarehouseSettings };

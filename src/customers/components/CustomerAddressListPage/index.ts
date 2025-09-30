@@ -1,2 +1,2 @@
-export { default } from "./CustomerAddressListPage";
+export { CustomerAddressListPage } from "./CustomerAddressListPage";
 export * from "./CustomerAddressListPage";

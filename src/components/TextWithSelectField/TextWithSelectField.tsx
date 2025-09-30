@@ -86,4 +86,4 @@ const TextWithSelectField = ({
   );
 };
 
-export default TextWithSelectField;
+export { TextWithSelectField };

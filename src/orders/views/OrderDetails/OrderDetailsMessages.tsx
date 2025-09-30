@@ -1,7 +1,7 @@
 // @ts-strict-ignore
 import { handleNestedMutationErrors } from "@dashboard/auth";
 import { formatMoney } from "@dashboard/components/Money";
-import messages from "@dashboard/containers/BackgroundTasks/messages";
+import { Messages as messages } from "@dashboard/containers/BackgroundTasks/messages";
 import {
   CreateManualTransactionCaptureMutation,
   InvoiceEmailSendMutation,
@@ -26,17 +26,17 @@ import {
   OrderUpdateMutation,
   OrderVoidMutation,
 } from "@dashboard/graphql";
-import useLocale from "@dashboard/hooks/useLocale";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useNotifier from "@dashboard/hooks/useNotifier";
-import getOrderErrorMessage from "@dashboard/utils/errors/order";
+import { useLocale } from "@dashboard/hooks/useLocale";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
+import { useNotifier } from "@dashboard/hooks/useNotifier";
+import { getOrderErrorMessage } from "@dashboard/utils/errors/order";
 import {
   getOrderTransactionErrorMessage,
   getTransactionCreateErrorMessage,
   transactionCreateMessages,
   transactionRequestMessages as transactionMessages,
 } from "@dashboard/utils/errors/transaction";
-import createDialogActionHandlers from "@dashboard/utils/handlers/dialogActionHandlers";
+import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
 import * as React from "react";
 import { useIntl } from "react-intl";
 

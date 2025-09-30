@@ -3,7 +3,7 @@ import { DashboardCard } from "@dashboard/components/Card";
 import { AppErrorFragment } from "@dashboard/graphql";
 import { FormChange } from "@dashboard/hooks/useForm";
 import { getFormErrors } from "@dashboard/utils/errors";
-import getAppErrorMessage from "@dashboard/utils/errors/app";
+import { getAppErrorMessage } from "@dashboard/utils/errors/app";
 import { TextField } from "@material-ui/core";
 import { makeStyles } from "@saleor/macaw-ui";
 import { useIntl } from "react-intl";
@@ -63,4 +63,4 @@ const CustomAppInformation = ({ data, disabled, errors, onChange }: CustomAppInf
 };
 
 CustomAppInformation.displayName = "CustomAppInformation";
-export default CustomAppInformation;
+export { CustomAppInformation };

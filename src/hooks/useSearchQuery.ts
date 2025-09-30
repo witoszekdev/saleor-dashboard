@@ -21,4 +21,4 @@ function useSearchQuery(onFetch: (query: string) => void, initial?: string): Use
   return [query, change, reset];
 }
 
-export default useSearchQuery;
+export { useSearchQuery };

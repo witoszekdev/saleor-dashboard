@@ -30,4 +30,4 @@ const OrderAddTransaction = ({ order, onAddTransaction }: OrderAddTransactionPro
   );
 };
 
-export default OrderAddTransaction;
+export { OrderAddTransaction };

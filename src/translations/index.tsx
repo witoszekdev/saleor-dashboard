@@ -13,32 +13,43 @@ import {
   languageListPath,
   TranslatableEntities,
 } from "./urls";
-import TranslationsAttributesComponent, {
+import {
+  TranslationsAttributes as TranslationsAttributesComponent,
   TranslationsAttributesQueryParams,
 } from "./views/TranslationsAttributes";
-import TranslationsCategoriesComponent, {
+import {
+  TranslationsCategories as TranslationsCategoriesComponent,
   TranslationsCategoriesQueryParams,
 } from "./views/TranslationsCategories";
-import TranslationsCollectionsComponent, {
+import {
+  TranslationsCollections as TranslationsCollectionsComponent,
   TranslationsCollectionsQueryParams,
 } from "./views/TranslationsCollections";
-import TranslationsEntitiesComponent from "./views/TranslationsEntities";
-import TranslationsLanguageList from "./views/TranslationsLanguageList";
-import TranslationsMenuItemComponent from "./views/TranslationsMenuItem";
-import TranslationsPagesComponent, {
+import { TranslationsEntities as TranslationsEntitiesComponent } from "./views/TranslationsEntities";
+import { TranslationsLanguageList } from "./views/TranslationsLanguageList";
+import { TranslationsMenuItem as TranslationsMenuItemComponent } from "./views/TranslationsMenuItem";
+import {
+  TranslationsPages as TranslationsPagesComponent,
   TranslationsPagesQueryParams,
 } from "./views/TranslationsPages";
-import TranslationsProductsComponent, {
+import {
+  TranslationsProducts as TranslationsProductsComponent,
   TranslationsProductsQueryParams,
 } from "./views/TranslationsProducts";
-import TranslationsProductVariantsComponent, {
+import {
+  TranslationsProductVariants as TranslationsProductVariantsComponent,
   TranslationsProductVariantsQueryParams,
 } from "./views/TranslationsProductVariants";
-import TranslationsSaleComponent, { TranslationsSalesQueryParams } from "./views/TranslationsSales";
-import TranslationsShippingMethodComponent, {
+import {
+  TranslationsSales as TranslationsSaleComponent,
+  TranslationsSalesQueryParams,
+} from "./views/TranslationsSales";
+import {
+  TranslationsShippingMethod as TranslationsShippingMethodComponent,
   TranslationsShippingMethodQueryParams,
 } from "./views/TranslationsShippingMethod";
-import TranslationsVouchersComponent, {
+import {
+  TranslationsVouchers as TranslationsVouchersComponent,
   TranslationsVouchersQueryParams,
 } from "./views/TranslationsVouchers";
 
@@ -280,4 +291,4 @@ const TranslationsRouter = () => {
 };
 
 TranslationsRouter.displayName = "TranslationsRouter";
-export default TranslationsRouter;
+export { TranslationsRouter };

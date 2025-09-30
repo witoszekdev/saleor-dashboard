@@ -1,2 +1,2 @@
-export { default } from "./AttributeValues";
+export { AttributeValues } from "./AttributeValues";
 export * from "./AttributeValues";

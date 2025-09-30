@@ -86,4 +86,4 @@ function checkIfParamsEmpty(params: RequiredParams): boolean {
     .every(([_, value]) => value === undefined);
 }
 
-export default createFilterHandlers;
+export { createFilterHandlers };

@@ -64,4 +64,4 @@ function CollectionWithDividers<T>({
   );
 }
 
-export default CollectionWithDividers;
+export { CollectionWithDividers };

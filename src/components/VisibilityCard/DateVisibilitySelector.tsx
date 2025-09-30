@@ -4,7 +4,7 @@ import { Text } from "@saleor/macaw-ui-next";
 import { useState } from "react";
 import * as React from "react";
 
-import FormSpacer from "../FormSpacer";
+import { FormSpacer } from "../FormSpacer";
 
 const CLOSE_ICON_SIZE = 14;
 const useStyles = makeStyles(
@@ -66,4 +66,4 @@ const DateVisibilitySelector = ({ buttonText, children, onInputClose }: Props) =
   );
 };
 
-export default DateVisibilitySelector;
+export { DateVisibilitySelector };

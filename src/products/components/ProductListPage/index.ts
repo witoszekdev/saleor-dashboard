@@ -1,3 +1,3 @@
 export * from "./filters";
-export { default } from "./ProductListPage";
+export { ProductListPage } from "./ProductListPage";
 export * from "./ProductListPage";

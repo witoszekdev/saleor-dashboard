@@ -15,4 +15,4 @@ function useDebounce<T>(debounceFn: UseDebounceFn<T>, time = 200): UseDebounceFn
   };
 }
 
-export default useDebounce;
+export { useDebounce };

@@ -1,12 +1,12 @@
 // @ts-strict-ignore
-import HorizontalSpacer from "@dashboard/components/HorizontalSpacer";
+import { HorizontalSpacer } from "@dashboard/components/HorizontalSpacer";
 import { UseFormResult } from "@dashboard/hooks/useForm";
 import { RequireOnlyOne } from "@dashboard/misc";
-import commonErrorMessages from "@dashboard/utils/errors/common";
+import { commonErrorMessages } from "@dashboard/utils/errors/common";
 import { TextField } from "@material-ui/core";
 import { makeStyles } from "@saleor/macaw-ui";
-import Hue from "@uiw/react-color-hue";
-import Saturation from "@uiw/react-color-saturation";
+import { Hue } from "@uiw/react-color-hue";
+import { Saturation } from "@uiw/react-color-saturation";
 import convert from "color-convert";
 import { RGB } from "color-convert/conversions";
 import { useEffect, useState } from "react";

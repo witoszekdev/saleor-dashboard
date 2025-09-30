@@ -78,4 +78,4 @@ const ProductTypeShipping = ({
 };
 
 ProductTypeShipping.displayName = "ProductTypeShipping";
-export default ProductTypeShipping;
+export { ProductTypeShipping };

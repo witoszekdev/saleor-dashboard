@@ -1,3 +1,3 @@
 export * from "./filters";
-export { default } from "./VoucherListPage";
+export { VoucherListPage } from "./VoucherListPage";
 export * from "./VoucherListPage";

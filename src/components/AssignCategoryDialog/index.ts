@@ -1,2 +1,2 @@
-export { default } from "./AssignCategoryDialog";
+export { AssignCategoryDialog } from "./AssignCategoryDialog";
 export * from "./AssignCategoryDialog";

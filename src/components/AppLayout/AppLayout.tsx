@@ -1,10 +1,10 @@
-import useAppState from "@dashboard/hooks/useAppState";
+import { useAppState } from "@dashboard/hooks/useAppState";
 import { LinearProgress } from "@material-ui/core";
 import { Box } from "@saleor/macaw-ui-next";
 import * as React from "react";
 
 import { DevModePanel } from "../DevModePanel/DevModePanel";
-import NavigatorSearch from "../NavigatorSearch";
+import { NavigatorSearch } from "../NavigatorSearch";
 import { useSavebarRef } from "../Savebar/SavebarRefContext";
 import { Sidebar } from "../Sidebar";
 import { useStyles } from "./styles";
@@ -62,4 +62,4 @@ const AppLayout = ({ children }: AppLayoutProps) => {
   );
 };
 
-export default AppLayout;
+export { AppLayout };

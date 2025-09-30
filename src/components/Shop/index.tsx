@@ -6,7 +6,7 @@ import safariPinnedTab from "@assets/favicons/safari-pinned-tab.svg";
 import { useUser } from "@dashboard/auth";
 import { ShopInfoQuery, useShopInfoQuery } from "@dashboard/graphql";
 import { createContext, ReactNode, useEffect } from "react";
-import Helmet from "react-helmet";
+import { Helmet } from "react-helmet";
 
 import { useAnalytics } from "../ProductAnalytics/useAnalytics";
 import { extractEmailDomain } from "../ProductAnalytics/utils";

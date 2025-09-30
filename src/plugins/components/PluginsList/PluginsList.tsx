@@ -1,8 +1,8 @@
-import ResponsiveTable from "@dashboard/components/ResponsiveTable";
+import { ResponsiveTable } from "@dashboard/components/ResponsiveTable";
 import { TablePaginationWithContext } from "@dashboard/components/TablePagination";
-import TableRowLink from "@dashboard/components/TableRowLink";
+import { TableRowLink } from "@dashboard/components/TableRowLink";
 import { PluginBaseFragment } from "@dashboard/graphql";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { renderCollection } from "@dashboard/misc";
 import { getPluginsWithAppReplacementsIds } from "@dashboard/plugins/plugins-with-app-replacements";
 import { PluginListUrlSortField, pluginUrl } from "@dashboard/plugins/urls";
@@ -13,9 +13,9 @@ import { Skeleton, Text } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
 
 import { pluginsMiscMessages } from "./messages";
-import PluginChannelAvailabilityCell from "./PluginChannelAvailabilityCell";
-import PluginChannelConfigurationCell from "./PluginChannelConfigurationCell";
-import PluginListTableHead from "./PluginListTableHead";
+import { PluginChannelAvailabilityCell } from "./PluginChannelAvailabilityCell";
+import { PluginChannelConfigurationCell } from "./PluginChannelConfigurationCell";
+import { PluginListTableHead } from "./PluginListTableHead";
 
 const useStyles = makeStyles(
   () => ({
@@ -114,4 +114,4 @@ const PluginList = (props: PluginListProps) => {
 };
 
 PluginList.displayName = "PluginList";
-export default PluginList;
+export { PluginList };

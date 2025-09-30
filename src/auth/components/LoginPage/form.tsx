@@ -1,5 +1,5 @@
-import useForm, { FormChange, SubmitPromise } from "@dashboard/hooks/useForm";
-import useHandleFormSubmit from "@dashboard/hooks/useHandleFormSubmit";
+import { FormChange, SubmitPromise, useForm } from "@dashboard/hooks/useForm";
+import { useHandleFormSubmit } from "@dashboard/hooks/useHandleFormSubmit";
 import * as React from "react";
 
 export interface LoginFormData {
@@ -50,4 +50,4 @@ const LoginForm = ({ children, onSubmit }: LoginFormProps) => {
 };
 
 LoginForm.displayName = "LoginForm";
-export default LoginForm;
+export { LoginForm };

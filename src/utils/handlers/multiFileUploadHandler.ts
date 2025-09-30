@@ -55,4 +55,4 @@ function createMultiFileUploadHandler<T>(
   };
 }
 
-export default createMultiFileUploadHandler;
+export { createMultiFileUploadHandler };

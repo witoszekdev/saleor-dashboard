@@ -7,7 +7,7 @@ import { FormattedMessage, useIntl } from "react-intl";
 
 import { OrderUsedGiftCards } from "../OrderUsedGiftCards";
 import { orderSummaryMessages } from "./messages";
-import SummaryLine from "./SummaryLine";
+import { SummaryLine } from "./SummaryLine";
 import { SummaryList } from "./SummaryList";
 import { extractOrderGiftCardUsedAmount, getDeliveryMethodName, getTaxTypeText } from "./utils";
 
@@ -90,4 +90,4 @@ const OrderSummaryCard = ({ order }: OrderPaymentProps) => {
 };
 
 OrderSummaryCard.displayName = "OrderPayment";
-export default OrderSummaryCard;
+export { OrderSummaryCard };

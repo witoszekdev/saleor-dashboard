@@ -1,1 +1,1 @@
-export { default } from "./MarketplaceAlert";
+export { MarketplaceAlert } from "./MarketplaceAlert";

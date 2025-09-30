@@ -1,6 +1,6 @@
 import { defineMessages } from "react-intl";
 
-export default defineMessages({
+export const Messages = defineMessages({
   title: {
     id: "Id7C0X",
     defaultMessage: "You are about to install {name}",

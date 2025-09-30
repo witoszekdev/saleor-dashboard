@@ -2,7 +2,7 @@ import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButto
 import { buttonMessages } from "@dashboard/intl";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import ActionDialog from "../ActionDialog";
+import { ActionDialog } from "../ActionDialog";
 
 interface DeleteFilterTabDialogProps {
   confirmButtonState: ConfirmButtonTransitionState;
@@ -47,4 +47,4 @@ const DeleteFilterTabDialog = ({
 };
 
 DeleteFilterTabDialog.displayName = "DeleteFilterTabDialog";
-export default DeleteFilterTabDialog;
+export { DeleteFilterTabDialog };

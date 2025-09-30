@@ -1,9 +1,9 @@
 // @ts-strict-ignore
 import { useExitFormDialog } from "@dashboard/components/Form/useExitFormDialog";
 import { TaxClassRateInput, TaxCountryConfigurationFragment } from "@dashboard/graphql";
-import useForm, { SubmitPromise } from "@dashboard/hooks/useForm";
-import useFormset, { FormsetData } from "@dashboard/hooks/useFormset";
-import useHandleFormSubmit from "@dashboard/hooks/useHandleFormSubmit";
+import { SubmitPromise, useForm } from "@dashboard/hooks/useForm";
+import { FormsetData, useFormset } from "@dashboard/hooks/useFormset";
+import { useHandleFormSubmit } from "@dashboard/hooks/useHandleFormSubmit";
 import { taxesMessages } from "@dashboard/taxes/messages";
 import * as React from "react";
 import { useIntl } from "react-intl";
@@ -83,4 +83,4 @@ const TaxCountriesForm = ({ children, country, onSubmit, disabled }: TaxCountrie
 };
 
 TaxCountriesForm.displayName = "TaxCountriesForm";
-export default TaxCountriesForm;
+export { TaxCountriesForm };

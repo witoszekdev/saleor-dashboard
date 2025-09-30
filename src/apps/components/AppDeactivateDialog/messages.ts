@@ -1,7 +1,6 @@
 import { defineMessages } from "react-intl";
 
-/** @deprecated use messages from extensions/ */
-export default defineMessages({
+export const Messages = defineMessages({
   deactivateAppTitle: {
     id: "0d6W6p",
     defaultMessage: "Deactivate App",

@@ -85,4 +85,4 @@ const LinkedTimelineEvent = ({ event, hasPlainDate }: LinkedTimelineEventProps) 
   );
 };
 
-export default LinkedTimelineEvent;
+export { LinkedTimelineEvent };

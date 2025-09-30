@@ -26,4 +26,4 @@ const ScrollableContent = ({ children }: ScrollableContentProps) => {
   );
 };
 
-export default ScrollableContent;
+export { ScrollableContent };

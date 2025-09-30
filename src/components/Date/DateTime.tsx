@@ -1,7 +1,7 @@
 // @ts-strict-ignore
 import { Tooltip } from "@saleor/macaw-ui-next";
 import moment from "moment-timezone";
-import ReactMoment from "react-moment";
+import { Moment as ReactMoment } from "react-moment";
 
 import { LocaleConsumer } from "../Locale";
 import { TimezoneConsumer } from "../Timezone";
@@ -56,4 +56,4 @@ export const DateTime = ({ date, plain }: DateTimeProps) => {
   );
 };
 DateTime.displayName = "DateTime";
-export default DateTime;
+export { DateTime };

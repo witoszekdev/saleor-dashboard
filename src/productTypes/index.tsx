@@ -16,9 +16,9 @@ import {
   productTypePath,
   ProductTypeUrlQueryParams,
 } from "./urls";
-import ProductTypeCreateComponent from "./views/ProductTypeCreate";
-import ProductTypeListComponent from "./views/ProductTypeList";
-import ProductTypeUpdateComponent from "./views/ProductTypeUpdate";
+import { ProductTypeCreate as ProductTypeCreateComponent } from "./views/ProductTypeCreate";
+import { ProductTypeList as ProductTypeListComponent } from "./views/ProductTypeList";
+import { ProductTypeUpdate as ProductTypeUpdateComponent } from "./views/ProductTypeUpdate";
 
 const ProductTypeList = () => {
   const qs = parseQs(location.search, {
@@ -75,4 +75,4 @@ const ProductTypeRouter = () => {
 };
 
 ProductTypeRouter.displayName = "ProductTypeRouter";
-export default ProductTypeRouter;
+export { ProductTypeRouter };

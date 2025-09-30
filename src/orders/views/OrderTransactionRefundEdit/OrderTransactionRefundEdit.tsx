@@ -7,11 +7,12 @@ import {
   useOrderSendRefundForGrantedRefundMutation,
   useRefundSettingsQuery,
 } from "@dashboard/graphql";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useNotifier from "@dashboard/hooks/useNotifier";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
+import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { extractMutationErrors } from "@dashboard/misc";
-import OrderTransactionRefundPage, {
+import {
   OrderTransactionRefundError,
+  OrderTransactionRefundPage,
   OrderTransactionRefundPageFormData,
 } from "@dashboard/orders/components/OrderTransactionRefundPage/OrderTransactionRefundPage";
 import { orderUrl } from "@dashboard/orders/urls";
@@ -166,4 +167,4 @@ const OrderTransactionRefund = ({ orderId, refundId }: OrderTransactionRefundPro
   );
 };
 
-export default OrderTransactionRefund;
+export { OrderTransactionRefund };

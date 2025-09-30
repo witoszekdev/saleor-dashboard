@@ -5,7 +5,7 @@ import {
   SearchAvailablePageAttributesQuery,
   SearchAvailablePageAttributesQueryVariables,
 } from "@dashboard/graphql";
-import makeSearch from "@dashboard/hooks/makeSearch";
+import { makeSearch } from "@dashboard/hooks/makeSearch";
 
 export const searchPageAttributes = gql`
   query SearchAvailablePageAttributes($id: ID!, $after: String, $first: Int!, $query: String!) {
@@ -25,7 +25,7 @@ export const searchPageAttributes = gql`
   }
 `;
 
-export default makeSearch<
+export const UseAvailablePageAttributesSearch = makeSearch<
   SearchAvailablePageAttributesQuery,
   SearchAvailablePageAttributesQueryVariables
 >(SearchAvailablePageAttributesDocument, result =>

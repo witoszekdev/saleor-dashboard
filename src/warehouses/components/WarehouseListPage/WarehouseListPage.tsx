@@ -1,12 +1,12 @@
-import SearchInput from "@dashboard/components/AppLayout/ListFilters/components/SearchInput";
+import { SearchInput } from "@dashboard/components/AppLayout/ListFilters/components/SearchInput";
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
 import { DashboardCard } from "@dashboard/components/Card";
 import { FilterPresetsSelect } from "@dashboard/components/FilterPresetsSelect";
 import { ListPageLayout } from "@dashboard/components/Layouts";
-import LimitReachedAlert from "@dashboard/components/LimitReachedAlert";
+import { LimitReachedAlert } from "@dashboard/components/LimitReachedAlert";
 import { configurationMenuUrl } from "@dashboard/configuration";
 import { RefreshLimitsQuery, WarehouseWithShippingFragment } from "@dashboard/graphql";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { sectionNames } from "@dashboard/intl";
 import { messages } from "@dashboard/shipping/components/ShippingZonesListPage/messages";
 import { PageListProps, SearchPageProps, SortPage, TabPageProps } from "@dashboard/types";
@@ -16,7 +16,7 @@ import { Box, Button, ChevronRightIcon } from "@saleor/macaw-ui-next";
 import { useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import WarehouseList from "../WarehouseList";
+import { WarehouseList } from "../WarehouseList";
 
 interface WarehouseListPageProps
   extends PageListProps,
@@ -160,4 +160,4 @@ const WarehouseListPage = ({
 };
 
 WarehouseListPage.displayName = "WarehouseListPage";
-export default WarehouseListPage;
+export { WarehouseListPage };

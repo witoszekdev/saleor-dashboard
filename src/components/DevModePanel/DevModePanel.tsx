@@ -7,7 +7,7 @@ import { useIntl } from "react-intl";
 
 import { ContextualLine } from "../AppLayout/ContextualLinks/ContextualLine";
 import { useContextualLink } from "../AppLayout/ContextualLinks/useContextualLink";
-import PlainGraphiQL from "../GraphiQLPlain";
+import { GraphiQL as PlainGraphiQL } from "../GraphiQLPlain";
 import { useDevModeContext } from "./hooks";
 import { messages } from "./messages";
 import { getFetcher } from "./utils";

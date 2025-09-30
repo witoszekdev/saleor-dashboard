@@ -1,6 +1,6 @@
 import { IMoney } from "@dashboard/utils/intl";
 
-export { default } from "./Money";
+export { Money } from "./Money";
 export * from "./Money";
 export function subtractMoney(init: IMoney, ...args: IMoney[]): IMoney {
   return {

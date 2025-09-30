@@ -1,2 +1,2 @@
 export * from "./GiftCardUpdateBalanceDialog";
-export { default } from "./GiftCardUpdateBalanceDialog";
+export { GiftCardUpdateBalanceDialog } from "./GiftCardUpdateBalanceDialog";

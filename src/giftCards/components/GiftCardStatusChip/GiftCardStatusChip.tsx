@@ -40,4 +40,4 @@ function GiftCardStatusChip<T extends ExtendedGiftCard<GiftCardBase & { isActive
   return null;
 }
 
-export default GiftCardStatusChip;
+export { GiftCardStatusChip };

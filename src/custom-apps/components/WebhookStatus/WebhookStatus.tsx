@@ -1,4 +1,4 @@
-import ControlledSwitch from "@dashboard/components/ControlledSwitch";
+import { ControlledSwitch } from "@dashboard/components/ControlledSwitch";
 import { ChangeEvent } from "@dashboard/hooks/useForm";
 import { useIntl } from "react-intl";
 
@@ -30,4 +30,4 @@ const WebhookStatus = ({ data, disabled, onChange }: WebhookStatusProps) => {
 };
 
 WebhookStatus.displayName = "WebhookStatus";
-export default WebhookStatus;
+export { WebhookStatus };

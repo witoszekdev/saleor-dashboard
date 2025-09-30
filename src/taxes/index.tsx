@@ -11,9 +11,9 @@ import {
   taxCountriesListPath,
   TaxesUrlQueryParams,
 } from "./urls";
-import TaxChannelsListComponent from "./views/TaxChannelsList";
-import TaxClassesListComponent from "./views/TaxClassesList";
-import TaxCountriesListComponent from "./views/TaxCountriesList";
+import { TaxChannelsList as TaxChannelsListComponent } from "./views/TaxChannelsList";
+import { TaxClassesList as TaxClassesListComponent } from "./views/TaxClassesList";
+import { TaxCountriesList as TaxCountriesListComponent } from "./views/TaxCountriesList";
 
 const TaxChannelsList = ({ match, location }: RouteComponentProps<{ id: string }>) => {
   const qs: TaxesUrlQueryParams = parseQs(location.search.substring(1));
@@ -46,4 +46,4 @@ const Component = () => {
   );
 };
 
-export default Component;
+export { Component };

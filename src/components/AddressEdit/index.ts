@@ -1,2 +1,2 @@
-export { default } from "./AddressEdit";
+export { AddressEdit } from "./AddressEdit";
 export * from "./AddressEdit";

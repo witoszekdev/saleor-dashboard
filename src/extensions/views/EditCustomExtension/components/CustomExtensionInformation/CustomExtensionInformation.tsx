@@ -3,7 +3,7 @@ import { DashboardCard } from "@dashboard/components/Card";
 import { AppErrorFragment } from "@dashboard/graphql";
 import { FormChange } from "@dashboard/hooks/useForm";
 import { getFormErrors } from "@dashboard/utils/errors";
-import getAppErrorMessage from "@dashboard/utils/errors/app";
+import { getAppErrorMessage } from "@dashboard/utils/errors/app";
 import { Input } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
 
@@ -57,4 +57,4 @@ const CustomExtensionInformation = ({
 };
 
 CustomExtensionInformation.displayName = "CustomAppInformation";
-export default CustomExtensionInformation;
+export { CustomExtensionInformation };

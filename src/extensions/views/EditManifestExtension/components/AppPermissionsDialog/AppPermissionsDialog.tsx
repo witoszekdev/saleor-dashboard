@@ -2,7 +2,7 @@ import { useGetAvailableAppPermissions } from "@dashboard/apps/hooks/useGetAvail
 import { DashboardModal } from "@dashboard/components/Modal";
 import { getCustomAppErrorMessage } from "@dashboard/extensions/utils";
 import { PermissionEnum, useAppQuery, useAppUpdatePermissionsMutation } from "@dashboard/graphql";
-import useNotifier from "@dashboard/hooks/useNotifier";
+import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { Box, Skeleton, Text } from "@saleor/macaw-ui-next";
 import { useEffect } from "react";
 import { useIntl } from "react-intl";

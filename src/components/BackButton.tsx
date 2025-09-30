@@ -14,4 +14,4 @@ const BackButton = ({ children, ...props }: BackButtonProps) => (
 );
 
 BackButton.displayName = "BackButton";
-export default BackButton;
+export { BackButton };

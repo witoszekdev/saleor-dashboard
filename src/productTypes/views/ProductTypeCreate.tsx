@@ -7,14 +7,14 @@ import {
   useUpdateMetadataMutation,
   useUpdatePrivateMetadataMutation,
 } from "@dashboard/graphql";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useNotifier from "@dashboard/hooks/useNotifier";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
+import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { useTaxClassFetchMore } from "@dashboard/taxes/utils/useTaxClassFetchMore";
-import createMetadataCreateHandler from "@dashboard/utils/handlers/metadataCreateHandler";
+import { createMetadataCreateHandler } from "@dashboard/utils/handlers/metadataCreateHandler";
 import { useIntl } from "react-intl";
 
 import { getMutationErrors } from "../../misc";
-import ProductTypeCreatePage, { ProductTypeForm } from "../components/ProductTypeCreatePage";
+import { ProductTypeCreatePage, ProductTypeForm } from "../components/ProductTypeCreatePage";
 import { productTypeAddUrl, ProductTypeAddUrlQueryParams, productTypeUrl } from "../urls";
 
 interface ProductTypeCreateProps {
@@ -106,4 +106,4 @@ const ProductTypeCreate = ({ params }: ProductTypeCreateProps) => {
   );
 };
 
-export default ProductTypeCreate;
+export { ProductTypeCreate };

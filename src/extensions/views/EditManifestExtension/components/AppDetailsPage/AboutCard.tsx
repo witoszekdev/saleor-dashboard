@@ -1,7 +1,7 @@
 import { Box, BoxProps, Skeleton, Text } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
 
-import messages from "./messages";
+import { Messages as messages } from "./messages";
 
 type AboutCardProps = {
   aboutApp: string | null;

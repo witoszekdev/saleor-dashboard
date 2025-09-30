@@ -1,6 +1,6 @@
 import { useGiftCardActivateMutation, useGiftCardDeactivateMutation } from "@dashboard/graphql";
-import useNotifier from "@dashboard/hooks/useNotifier";
-import commonErrorMessages from "@dashboard/utils/errors/common";
+import { useNotifier } from "@dashboard/hooks/useNotifier";
+import { commonErrorMessages } from "@dashboard/utils/errors/common";
 import { useIntl } from "react-intl";
 
 import { GIFT_CARD_DETAILS_QUERY } from "../../queries";
@@ -78,4 +78,4 @@ const useGiftCardActivateToggle = ({
   };
 };
 
-export default useGiftCardActivateToggle;
+export { useGiftCardActivateToggle };

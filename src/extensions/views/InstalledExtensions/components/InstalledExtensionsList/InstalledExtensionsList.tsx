@@ -1,5 +1,5 @@
 import { GridTable } from "@dashboard/components/GridTable";
-import Link from "@dashboard/components/Link";
+import { Link } from "@dashboard/components/Link";
 import { EmptyListState } from "@dashboard/extensions/components/EmptyListState/EmptyListState";
 import { ExtensionAvatar } from "@dashboard/extensions/components/ExtensionAvatar";
 import { messages } from "@dashboard/extensions/messages";

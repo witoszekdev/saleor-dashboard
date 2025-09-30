@@ -1,2 +1,2 @@
 export * from "./TextWithSelectField";
-export { default } from "./TextWithSelectField";
+export { TextWithSelectField } from "./TextWithSelectField";

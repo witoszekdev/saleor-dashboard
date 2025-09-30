@@ -1,4 +1,4 @@
-import useLocalStorage from "@dashboard/hooks/useLocalStorage";
+import { useLocalStorage } from "@dashboard/hooks/useLocalStorage";
 import { DefaultTheme, useTheme as useMacawTheme } from "@saleor/macaw-ui-next";
 
 import { defaultTheme, localStorageKey } from "./consts";

@@ -1,6 +1,6 @@
 import { DashboardCard } from "@dashboard/components/Card";
-import FormSpacer from "@dashboard/components/FormSpacer";
-import RichTextEditor from "@dashboard/components/RichTextEditor";
+import { FormSpacer } from "@dashboard/components/FormSpacer";
+import { RichTextEditor } from "@dashboard/components/RichTextEditor";
 import { RichTextEditorLoading } from "@dashboard/components/RichTextEditor/RichTextEditorLoading";
 import { CollectionErrorFragment } from "@dashboard/graphql";
 import { commonMessages } from "@dashboard/intl";
@@ -71,4 +71,4 @@ const CollectionDetails = ({ disabled, data, onChange, errors }: CollectionDetai
   );
 };
 
-export default CollectionDetails;
+export { CollectionDetails };

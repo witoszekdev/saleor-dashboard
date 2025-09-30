@@ -1,9 +1,9 @@
 // @ts-strict-ignore
 import { createCollectionChannels, createCollectionChannelsData } from "@dashboard/channels/utils";
-import ActionDialog from "@dashboard/components/ActionDialog";
-import useAppChannel from "@dashboard/components/AppLayout/AppChannelContext";
-import ChannelsAvailabilityDialog from "@dashboard/components/ChannelsAvailabilityDialog";
-import NotFoundPage from "@dashboard/components/NotFoundPage";
+import { ActionDialog } from "@dashboard/components/ActionDialog";
+import { useAppChannel } from "@dashboard/components/AppLayout/AppChannelContext";
+import { ChannelsAvailabilityDialog } from "@dashboard/components/ChannelsAvailabilityDialog";
+import { NotFoundPage } from "@dashboard/components/NotFoundPage";
 import { WindowTitle } from "@dashboard/components/WindowTitle";
 import {
   CollectionInput,
@@ -15,19 +15,19 @@ import {
   useUpdateMetadataMutation,
   useUpdatePrivateMetadataMutation,
 } from "@dashboard/graphql";
-import useChannels from "@dashboard/hooks/useChannels";
-import useLocalStorage from "@dashboard/hooks/useLocalStorage";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useNotifier from "@dashboard/hooks/useNotifier";
+import { useChannels } from "@dashboard/hooks/useChannels";
+import { useLocalStorage } from "@dashboard/hooks/useLocalStorage";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
+import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { commonMessages, errorMessages } from "@dashboard/intl";
 import { arrayDiff } from "@dashboard/utils/arrays";
-import createDialogActionHandlers from "@dashboard/utils/handlers/dialogActionHandlers";
-import createMetadataUpdateHandler from "@dashboard/utils/handlers/metadataUpdateHandler";
+import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
+import { createMetadataUpdateHandler } from "@dashboard/utils/handlers/metadataUpdateHandler";
 import { getParsedDataForJsonStringField } from "@dashboard/utils/richText/misc";
 import { FormattedMessage, useIntl } from "react-intl";
 
 import { getMutationErrors, getMutationState, maybe } from "../../misc";
-import CollectionDetailsPage from "../components/CollectionDetailsPage/CollectionDetailsPage";
+import { CollectionDetailsPage } from "../components/CollectionDetailsPage/CollectionDetailsPage";
 import { CollectionUpdateData } from "../components/CollectionDetailsPage/form";
 import {
   collectionListUrl,
@@ -282,4 +282,4 @@ const CollectionDetails = ({ id, params }: CollectionDetailsProps) => {
   );
 };
 
-export default CollectionDetails;
+export { CollectionDetails };

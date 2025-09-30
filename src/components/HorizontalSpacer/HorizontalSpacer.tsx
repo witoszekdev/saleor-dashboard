@@ -18,4 +18,4 @@ const HorizontalSpacer = ({ spacing = 1 }: HorizontalSpacerProps) => {
   return <div className={classes.container} />;
 };
 
-export default HorizontalSpacer;
+export { HorizontalSpacer };

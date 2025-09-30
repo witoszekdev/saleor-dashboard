@@ -1,4 +1,4 @@
-import useLocale from "@dashboard/hooks/useLocale";
+import { useLocale } from "@dashboard/hooks/useLocale";
 import { IMoney } from "@dashboard/utils/intl";
 import { makeStyles } from "@saleor/macaw-ui";
 
@@ -39,4 +39,4 @@ const Money = (props: MoneyProps) => {
 };
 
 Money.displayName = "Money";
-export default Money;
+export { Money };

@@ -5,8 +5,8 @@ import { TextField } from "@material-ui/core";
 import { useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import BackButton from "../BackButton";
-import Form from "../Form";
+import { BackButton } from "../BackButton";
+import { Form } from "../Form";
 
 export interface SaveFilterTabDialogFormData {
   name: string;
@@ -91,4 +91,4 @@ const SaveFilterTabDialog = ({
 };
 
 SaveFilterTabDialog.displayName = "SaveFilterTabDialog";
-export default SaveFilterTabDialog;
+export { SaveFilterTabDialog };

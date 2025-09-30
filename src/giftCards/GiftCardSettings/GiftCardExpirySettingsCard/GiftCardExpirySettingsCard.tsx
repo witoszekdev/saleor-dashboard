@@ -1,6 +1,7 @@
 // @ts-strict-ignore
 import { DashboardCard } from "@dashboard/components/Card";
-import GiftCardSettingsExpirySelect, {
+import {
+  GiftCardSettingsExpirySelect,
   GiftCardSettingsExpirySelectProps,
 } from "@dashboard/giftCards/components/GiftCardSettingsExpirySelect";
 import { makeStyles } from "@saleor/macaw-ui";
@@ -56,4 +57,4 @@ const GiftCardExpirySettingsCard = ({
 };
 
 GiftCardExpirySettingsCard.displayName = "GiftCardExpirySettingsCard";
-export default GiftCardExpirySettingsCard;
+export { GiftCardExpirySettingsCard };

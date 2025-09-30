@@ -1,9 +1,9 @@
-import Money from "@dashboard/components/Money";
+import { Money } from "@dashboard/components/Money";
 import { TransactionEventFragment, TransactionEventTypeEnum } from "@dashboard/graphql";
 import { TransactionFakeEvent } from "@dashboard/orders/types";
 import { TableCell, TableRow } from "@material-ui/core";
 import { makeStyles } from "@saleor/macaw-ui";
-import clsx from "clsx";
+import { clsx } from "clsx";
 
 import { mapTransactionEvent } from "../../../utils";
 import { EventCreatedBy } from "./EventCreatedBy";

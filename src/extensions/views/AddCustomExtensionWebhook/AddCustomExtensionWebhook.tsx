@@ -5,13 +5,13 @@ import {
   useWebhookCreateMutation,
   WebhookEventTypeAsyncEnum,
 } from "@dashboard/graphql";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useNotifier from "@dashboard/hooks/useNotifier";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
+import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { commonMessages } from "@dashboard/intl";
 import { extractMutationErrors } from "@dashboard/misc";
 import { useIntl } from "react-intl";
 
-import WebhookDetailsPage, { WebhookFormData } from "../../components/WebhookDetailsPage";
+import { WebhookDetailsPage, WebhookFormData } from "../../components/WebhookDetailsPage";
 import { useAvailableEvents } from "../../hooks/useAvailableEvents";
 
 interface CustomAppWebhookCreateProps {

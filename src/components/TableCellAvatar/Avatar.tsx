@@ -1,7 +1,7 @@
-import clsx from "clsx";
+import { clsx } from "clsx";
 import * as React from "react";
 
-import AvatarImage from "./AvatarImage";
+import { AvatarImage } from "./AvatarImage";
 import { useAvatarStyles } from "./styles";
 
 export const AVATAR_MARGIN = 40;
@@ -40,4 +40,4 @@ const Avatar = ({
   );
 };
 
-export default Avatar;
+export { Avatar };

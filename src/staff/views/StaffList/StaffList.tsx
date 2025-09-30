@@ -1,27 +1,28 @@
 import { newPasswordUrl } from "@dashboard/auth/urls";
 import { useConditionalFilterContext } from "@dashboard/components/ConditionalFilter";
 import { createStaffMembersQueryVariables } from "@dashboard/components/ConditionalFilter/queryVariables";
-import DeleteFilterTabDialog from "@dashboard/components/DeleteFilterTabDialog";
-import SaveFilterTabDialog from "@dashboard/components/SaveFilterTabDialog";
+import { DeleteFilterTabDialog } from "@dashboard/components/DeleteFilterTabDialog";
+import { SaveFilterTabDialog } from "@dashboard/components/SaveFilterTabDialog";
 import { useShopLimitsQuery } from "@dashboard/components/Shop/queries";
 import { DEFAULT_INITIAL_SEARCH_DATA } from "@dashboard/config";
 import { useFlag } from "@dashboard/featureFlags";
 import { useStaffListQuery, useStaffMemberAddMutation } from "@dashboard/graphql";
 import { useFilterPresets } from "@dashboard/hooks/useFilterPresets";
-import useListSettings from "@dashboard/hooks/useListSettings";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useNotifier from "@dashboard/hooks/useNotifier";
+import { useListSettings } from "@dashboard/hooks/useListSettings";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
+import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { usePaginationReset } from "@dashboard/hooks/usePaginationReset";
-import usePaginator, {
+import {
   createPaginationState,
   PaginatorContext,
+  usePaginator,
 } from "@dashboard/hooks/usePaginator";
 import { commonMessages } from "@dashboard/intl";
-import usePermissionGroupSearch from "@dashboard/searches/usePermissionGroupSearch";
+import { UsePermissionGroupSearch as usePermissionGroupSearch } from "@dashboard/searches/usePermissionGroupSearch";
 import { ListViews } from "@dashboard/types";
-import createDialogActionHandlers from "@dashboard/utils/handlers/dialogActionHandlers";
-import createFilterHandlers from "@dashboard/utils/handlers/filterHandlers";
-import createSortHandler from "@dashboard/utils/handlers/sortHandler";
+import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
+import { createFilterHandlers } from "@dashboard/utils/handlers/filterHandlers";
+import { createSortHandler } from "@dashboard/utils/handlers/sortHandler";
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { getSortParams } from "@dashboard/utils/sort";
 import { getAppMountUriForRedirect } from "@dashboard/utils/urls";
@@ -30,8 +31,8 @@ import { useMemo } from "react";
 import { useIntl } from "react-intl";
 import urlJoin from "url-join";
 
-import StaffAddMemberDialog, { AddMemberFormData } from "../../components/StaffAddMemberDialog";
-import StaffListPage from "../../components/StaffListPage";
+import { AddMemberFormData, StaffAddMemberDialog } from "../../components/StaffAddMemberDialog";
+import { StaffListPage } from "../../components/StaffListPage";
 import {
   staffListUrl,
   StaffListUrlDialog,
@@ -217,4 +218,4 @@ const StaffList = ({ params }: StaffListProps) => {
   );
 };
 
-export default StaffList;
+export { StaffList };

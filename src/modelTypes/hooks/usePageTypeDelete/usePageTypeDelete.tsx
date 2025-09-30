@@ -46,4 +46,4 @@ function usePageTypeDelete({
   };
 }
 
-export default usePageTypeDelete;
+export { usePageTypeDelete };

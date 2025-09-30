@@ -51,4 +51,4 @@ const AssignProductDialog = (props: AssignProductDialogProps) => {
 };
 
 AssignProductDialog.displayName = "AssignProductDialog";
-export default AssignProductDialog;
+export { AssignProductDialog };

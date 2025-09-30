@@ -2,14 +2,14 @@ import { AppDetailsUrlQueryParams } from "@dashboard/extensions/urls";
 import { useAllFlags } from "@dashboard/featureFlags";
 import { CircularProgress } from "@material-ui/core";
 import { DashboardEventFactory } from "@saleor/app-sdk/app-bridge";
-import clsx from "clsx";
+import { clsx } from "clsx";
 import { useCallback, useRef } from "react";
 
 import { AppIFrame } from "./AppIFrame";
 import { useStyles } from "./styles";
 import { useAppActions } from "./useAppActions";
 import { useAppDashboardUpdates } from "./useAppDashboardUpdates";
-import useTokenRefresh from "./useTokenRefresh";
+import { useTokenRefresh } from "./useTokenRefresh";
 import { useUpdateAppToken } from "./useUpdateAppToken";
 
 interface Props {

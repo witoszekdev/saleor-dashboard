@@ -4,7 +4,7 @@ import { ThemeProvider } from "@saleor/macaw-ui";
 import { productsMocks } from "@test/mocks/products";
 import { render, screen } from "@testing-library/react";
 
-import DryRunItemsList from "./DryRunItemsList";
+import { DryRunItemsList } from "./DryRunItemsList";
 
 const mocks: MockedResponse[] = [...productsMocks];
 

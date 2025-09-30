@@ -22,22 +22,22 @@ import {
 } from "@dashboard/components/Datagrid/hooks/useDatagridChange";
 import { useExitFormDialog } from "@dashboard/components/Form/useExitFormDialog";
 import { ProductFragment } from "@dashboard/graphql";
-import useForm from "@dashboard/hooks/useForm";
-import useFormset from "@dashboard/hooks/useFormset";
-import useHandleFormSubmit from "@dashboard/hooks/useHandleFormSubmit";
-import useLocale from "@dashboard/hooks/useLocale";
+import { useForm } from "@dashboard/hooks/useForm";
+import { useFormset } from "@dashboard/hooks/useFormset";
+import { useHandleFormSubmit } from "@dashboard/hooks/useHandleFormSubmit";
+import { useLocale } from "@dashboard/hooks/useLocale";
 import {
   getAttributeInputFromProduct,
   getProductUpdatePageFormData,
 } from "@dashboard/products/utils/data";
 import { PRODUCT_UPDATE_FORM_ID } from "@dashboard/products/views/ProductUpdate/consts";
-import createMultiselectChangeHandler from "@dashboard/utils/handlers/multiselectChangeHandler";
-import createSingleAutocompleteSelectHandler from "@dashboard/utils/handlers/singleAutocompleteSelectChangeHandler";
-import getMetadata from "@dashboard/utils/metadata/getMetadata";
-import useMetadataChangeTrigger from "@dashboard/utils/metadata/useMetadataChangeTrigger";
+import { createMultiselectChangeHandler } from "@dashboard/utils/handlers/multiselectChangeHandler";
+import { createSingleAutocompleteSelectHandler } from "@dashboard/utils/handlers/singleAutocompleteSelectChangeHandler";
+import { getMetadata } from "@dashboard/utils/metadata/getMetadata";
+import { useMetadataChangeTrigger } from "@dashboard/utils/metadata/useMetadataChangeTrigger";
 import { RichTextContext } from "@dashboard/utils/richText/context";
 import { useMultipleRichText } from "@dashboard/utils/richText/useMultipleRichText";
-import useRichText from "@dashboard/utils/richText/useRichText";
+import { useRichText } from "@dashboard/utils/richText/useRichText";
 import { useCallback, useEffect, useMemo, useRef } from "react";
 import * as React from "react";
 
@@ -329,4 +329,4 @@ const ProductUpdateForm = ({
 };
 
 ProductUpdateForm.displayName = "ProductUpdateForm";
-export default ProductUpdateForm;
+export { ProductUpdateForm };

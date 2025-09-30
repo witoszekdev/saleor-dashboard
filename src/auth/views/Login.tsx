@@ -1,12 +1,12 @@
 import { useAvailableExternalAuthenticationsLazyQuery } from "@dashboard/graphql";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { getAppMountUriForRedirect } from "@dashboard/utils/urls";
 import { useEffect } from "react";
 import urlJoin from "url-join";
-import useRouter from "use-react-router";
+import { useRouter } from "use-react-router";
 
 import { useUser } from "..";
-import LoginPage from "../components/LoginPage";
+import { LoginPage } from "../components/LoginPage";
 import { LoginFormData } from "../components/LoginPage/types";
 import { useAuthParameters } from "../hooks/useAuthParameters";
 import { useLastLoginMethod } from "../hooks/useLastLoginMethod";
@@ -108,4 +108,4 @@ const LoginView = ({ params }: LoginViewProps) => {
 };
 
 LoginView.displayName = "LoginView";
-export default LoginView;
+export { LoginView };

@@ -1,4 +1,4 @@
-import createMultiFileUploadHandler from "./multiFileUploadHandler";
+import { createMultiFileUploadHandler } from "./multiFileUploadHandler";
 
 const testFiles = Array(5)
   .fill(0)

@@ -1,10 +1,10 @@
 import { DashboardCard } from "@dashboard/components/Card";
-import CardSpacer from "@dashboard/components/CardSpacer";
-import Date from "@dashboard/components/Date";
-import FormSpacer from "@dashboard/components/FormSpacer";
-import Hr from "@dashboard/components/Hr";
-import Money from "@dashboard/components/Money";
-import Percent from "@dashboard/components/Percent";
+import { CardSpacer } from "@dashboard/components/CardSpacer";
+import { Date } from "@dashboard/components/Date";
+import { FormSpacer } from "@dashboard/components/FormSpacer";
+import { Hr } from "@dashboard/components/Hr";
+import { Money } from "@dashboard/components/Money";
+import { Percent } from "@dashboard/components/Percent";
 import { DiscountValueTypeEnum, VoucherDetailsFragment } from "@dashboard/graphql";
 import { commonMessages } from "@dashboard/intl";
 import { ChannelProps } from "@dashboard/types";
@@ -122,4 +122,4 @@ const VoucherSummary = ({ selectedChannelId, voucher }: VoucherSummaryProps) => 
 };
 
 VoucherSummary.displayName = "VoucherSummary";
-export default VoucherSummary;
+export { VoucherSummary };

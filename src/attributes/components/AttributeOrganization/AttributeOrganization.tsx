@@ -109,4 +109,4 @@ const AttributeOrganization = (props: AttributeOrganizationProps) => {
 };
 
 AttributeOrganization.displayName = "AttributeOrganization";
-export default AttributeOrganization;
+export { AttributeOrganization };

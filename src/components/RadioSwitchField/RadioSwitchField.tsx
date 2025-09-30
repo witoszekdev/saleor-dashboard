@@ -1,7 +1,7 @@
 // @ts-strict-ignore
 import { FormControl, FormControlLabel, Radio, RadioGroup } from "@material-ui/core";
 import { makeStyles } from "@saleor/macaw-ui";
-import clsx from "clsx";
+import { clsx } from "clsx";
 import * as React from "react";
 
 const useStyles = makeStyles(
@@ -91,4 +91,4 @@ const RadioSwitchField = (props: RadioSwitchFieldProps) => {
 };
 
 RadioSwitchField.displayName = "RadioSwitchField";
-export default RadioSwitchField;
+export { RadioSwitchField };

@@ -1,2 +1,2 @@
-export { default } from "./CategoryBackground";
+export { CategoryBackground } from "./CategoryBackground";
 export * from "./CategoryBackground";

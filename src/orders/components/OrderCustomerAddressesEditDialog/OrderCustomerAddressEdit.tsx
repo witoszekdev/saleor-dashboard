@@ -1,8 +1,8 @@
 // @ts-strict-ignore
-import AddressEdit from "@dashboard/components/AddressEdit";
-import CardSpacer from "@dashboard/components/CardSpacer";
-import FormSpacer from "@dashboard/components/FormSpacer";
-import CustomerAddressChoiceCard from "@dashboard/customers/components/CustomerAddressChoiceCard";
+import { AddressEdit } from "@dashboard/components/AddressEdit";
+import { CardSpacer } from "@dashboard/components/CardSpacer";
+import { FormSpacer } from "@dashboard/components/FormSpacer";
+import { CustomerAddressChoiceCard } from "@dashboard/customers/components/CustomerAddressChoiceCard";
 import { AddressTypeInput } from "@dashboard/customers/types";
 import { AccountErrorFragment, AddressFragment, OrderErrorFragment } from "@dashboard/graphql";
 import { FormChange } from "@dashboard/hooks/useForm";
@@ -117,4 +117,4 @@ const OrderCustomerAddressEdit = (props: OrderCustomerAddressEditProps) => {
 };
 
 OrderCustomerAddressEdit.displayName = "OrderCustomerAddressEdit";
-export default OrderCustomerAddressEdit;
+export { OrderCustomerAddressEdit };

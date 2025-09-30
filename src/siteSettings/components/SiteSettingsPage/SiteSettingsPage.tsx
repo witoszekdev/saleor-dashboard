@@ -2,25 +2,25 @@
 import { createCountryHandler } from "@dashboard/components/AddressEdit/createCountryHandler";
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
 import { DashboardCard } from "@dashboard/components/Card";
-import CompanyAddressInput from "@dashboard/components/CompanyAddressInput";
+import { CompanyAddressInput } from "@dashboard/components/CompanyAddressInput";
 import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import Form from "@dashboard/components/Form";
+import { Form } from "@dashboard/components/Form";
 import { DetailPageLayout } from "@dashboard/components/Layouts";
-import PageSectionHeader from "@dashboard/components/PageSectionHeader";
+import { PageSectionHeader } from "@dashboard/components/PageSectionHeader";
 import { Savebar } from "@dashboard/components/Savebar";
 import { configurationMenuUrl } from "@dashboard/configuration";
 import { ShopErrorFragment, SiteSettingsQuery } from "@dashboard/graphql";
-import useAddressValidation from "@dashboard/hooks/useAddressValidation";
+import { useAddressValidation } from "@dashboard/hooks/useAddressValidation";
 import { SubmitPromise } from "@dashboard/hooks/useForm";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useStateFromProps from "@dashboard/hooks/useStateFromProps";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
+import { useStateFromProps } from "@dashboard/hooks/useStateFromProps";
 import { commonMessages } from "@dashboard/intl";
-import createSingleAutocompleteSelectHandler from "@dashboard/utils/handlers/singleAutocompleteSelectChangeHandler";
+import { createSingleAutocompleteSelectHandler } from "@dashboard/utils/handlers/singleAutocompleteSelectChangeHandler";
 import { mapCountriesToChoices } from "@dashboard/utils/maps";
 import { Box, Checkbox, Divider, Text } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
 
-import SiteCheckoutSettingsCard from "../SiteCheckoutSettingsCard";
+import { SiteCheckoutSettingsCard } from "../SiteCheckoutSettingsCard";
 import { messages } from "./messages";
 
 interface SiteSettingsPageAddressFormData {
@@ -215,4 +215,4 @@ const SiteSettingsPage = (props: SiteSettingsPageProps) => {
 };
 
 SiteSettingsPage.displayName = "SiteSettingsPage";
-export default SiteSettingsPage;
+export { SiteSettingsPage };

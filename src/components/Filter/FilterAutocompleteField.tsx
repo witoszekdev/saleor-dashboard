@@ -5,9 +5,9 @@ import { makeStyles } from "@saleor/macaw-ui";
 import { Option, Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage } from "react-intl";
 
-import Checkbox from "../Checkbox";
-import Hr from "../Hr";
-import Link from "../Link";
+import { Checkbox } from "../Checkbox";
+import { Hr } from "../Hr";
+import { Link } from "../Link";
 import { FieldType, FilterFieldBaseProps } from "./types";
 
 interface FilterAutocompleteFieldProps
@@ -165,4 +165,4 @@ const FilterAutocompleteField = ({
 };
 
 FilterAutocompleteField.displayName = "FilterAutocompleteField";
-export default FilterAutocompleteField;
+export { FilterAutocompleteField };

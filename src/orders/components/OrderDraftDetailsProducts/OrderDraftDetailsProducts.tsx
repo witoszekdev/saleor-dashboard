@@ -55,4 +55,4 @@ const OrderDraftDetailsProducts = ({
 };
 
 OrderDraftDetailsProducts.displayName = "OrderDraftDetailsProducts";
-export default OrderDraftDetailsProducts;
+export { OrderDraftDetailsProducts };

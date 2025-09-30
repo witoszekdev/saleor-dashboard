@@ -1,4 +1,4 @@
-import ActionDialog from "@dashboard/components/ActionDialog";
+import { ActionDialog } from "@dashboard/components/ActionDialog";
 import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import { getStringOrPlaceholder } from "@dashboard/misc";
 import { FormattedMessage, useIntl } from "react-intl";
@@ -45,4 +45,4 @@ const DeleteShippingRateDialog = ({
   );
 };
 
-export default DeleteShippingRateDialog;
+export { DeleteShippingRateDialog };

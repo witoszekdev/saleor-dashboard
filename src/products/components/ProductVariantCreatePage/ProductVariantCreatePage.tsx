@@ -5,15 +5,15 @@ import {
   mergeAttributeValues,
 } from "@dashboard/attributes/utils/data";
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
-import AssignAttributeValueDialog from "@dashboard/components/AssignAttributeValueDialog";
+import { AssignAttributeValueDialog } from "@dashboard/components/AssignAttributeValueDialog";
 import {
   AttributeInput,
   Attributes,
   VariantAttributeScope,
 } from "@dashboard/components/Attributes";
-import CardSpacer from "@dashboard/components/CardSpacer";
+import { CardSpacer } from "@dashboard/components/CardSpacer";
 import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import Grid from "@dashboard/components/Grid";
+import { Grid } from "@dashboard/components/Grid";
 import { DetailPageLayout } from "@dashboard/components/Layouts";
 import { Metadata } from "@dashboard/components/Metadata";
 import { Savebar } from "@dashboard/components/Savebar";
@@ -28,7 +28,7 @@ import {
   SearchWarehousesQuery,
 } from "@dashboard/graphql";
 import { SubmitPromise } from "@dashboard/hooks/useForm";
-import useNavigator from "@dashboard/hooks/useNavigator";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { ProductDetailsChannelsAvailabilityCard } from "@dashboard/products/components/ProductVariantChannels/ChannelsAvailabilityCard";
 import { productUrl } from "@dashboard/products/urls";
 import { Container, FetchMoreProps, RelayToFlat, ReorderAction } from "@dashboard/types";
@@ -39,9 +39,9 @@ import { ProductShipping } from "../ProductShipping";
 import { ProductStocks } from "../ProductStocks";
 import { useManageChannels } from "../ProductVariantChannels/useManageChannels";
 import { VariantChannelsDialog } from "../ProductVariantChannels/VariantChannelsDialog";
-import ProductVariantCheckoutSettings from "../ProductVariantCheckoutSettings/ProductVariantCheckoutSettings";
-import ProductVariantName from "../ProductVariantName";
-import ProductVariantNavigation from "../ProductVariantNavigation";
+import { ProductVariantCheckoutSettings } from "../ProductVariantCheckoutSettings/ProductVariantCheckoutSettings";
+import { ProductVariantName } from "../ProductVariantName";
+import { ProductVariantNavigation } from "../ProductVariantNavigation";
 import { ProductVariantPrice } from "../ProductVariantPrice";
 import {
   ProductVariantCreateData,

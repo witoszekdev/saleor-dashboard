@@ -12,4 +12,4 @@ const AlertCard = ({ children }: AlertCardProps) => (
   </DashboardCard>
 );
 
-export default AlertCard;
+export { AlertCard };

@@ -1,7 +1,7 @@
-import ActionDialog from "@dashboard/components/ActionDialog";
+import { ActionDialog } from "@dashboard/components/ActionDialog";
 import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import { Select } from "@dashboard/components/Select";
-import useStateFromProps from "@dashboard/hooks/useStateFromProps";
+import { useStateFromProps } from "@dashboard/hooks/useStateFromProps";
 import { buttonMessages } from "@dashboard/intl";
 import { Option, Text } from "@saleor/macaw-ui-next";
 import { defineMessages, useIntl } from "react-intl";
@@ -127,4 +127,4 @@ const ChannelDeleteDialog = ({
 };
 
 ChannelDeleteDialog.displayName = "ChannelDeleteDialog";
-export default ChannelDeleteDialog;
+export { ChannelDeleteDialog };

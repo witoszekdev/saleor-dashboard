@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { stringify } from "qs";
 import { useEffect, useMemo, useState } from "react";
-import useRouter from "use-react-router";
+import { useRouter } from "use-react-router";
 
 import { InitialAttributesAPIState } from "../API/initialState/attributes/useInitialAttributesState";
 import { InitialCollectionAPIState } from "../API/initialState/collections/useInitialCollectionsState";

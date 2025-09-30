@@ -1,12 +1,12 @@
 // @ts-strict-ignore
-import AppActivateDialog from "@dashboard/apps/components/AppActivateDialog";
-import AppDeactivateDialog from "@dashboard/apps/components/AppDeactivateDialog";
+import { AppActivateDialog } from "@dashboard/apps/components/AppActivateDialog";
+import { AppDeactivateDialog } from "@dashboard/apps/components/AppDeactivateDialog";
 import { appMessages } from "@dashboard/apps/messages";
-import NotFoundPage from "@dashboard/components/NotFoundPage";
+import { NotFoundPage } from "@dashboard/components/NotFoundPage";
 import { WindowTitle } from "@dashboard/components/WindowTitle";
-import TokenCreateDialog from "@dashboard/custom-apps/components/TokenCreateDialog";
-import TokenDeleteDialog from "@dashboard/custom-apps/components/TokenDeleteDialog";
-import WebhookDeleteDialog from "@dashboard/custom-apps/components/WebhookDeleteDialog";
+import { TokenCreateDialog } from "@dashboard/custom-apps/components/TokenCreateDialog";
+import { TokenDeleteDialog } from "@dashboard/custom-apps/components/TokenDeleteDialog";
+import { WebhookDeleteDialog } from "@dashboard/custom-apps/components/WebhookDeleteDialog";
 import {
   CustomAppDetailsUrlDialog,
   CustomAppDetailsUrlQueryParams,
@@ -25,17 +25,18 @@ import {
   useWebhookDeleteMutation,
   WebhookDeleteMutation,
 } from "@dashboard/graphql";
-import useNavigator from "@dashboard/hooks/useNavigator";
-import useNotifier from "@dashboard/hooks/useNotifier";
-import useShop from "@dashboard/hooks/useShop";
+import { useNavigator } from "@dashboard/hooks/useNavigator";
+import { useNotifier } from "@dashboard/hooks/useNotifier";
+import { useShop } from "@dashboard/hooks/useShop";
 import { commonMessages } from "@dashboard/intl";
 import { extractMutationErrors, getStringOrPlaceholder } from "@dashboard/misc";
-import getAppErrorMessage from "@dashboard/utils/errors/app";
-import createDialogActionHandlers from "@dashboard/utils/handlers/dialogActionHandlers";
+import { getAppErrorMessage } from "@dashboard/utils/errors/app";
+import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
 import { useEffect } from "react";
 import { useIntl } from "react-intl";
 
-import CustomAppDetailsPage, {
+import {
+  CustomAppDetailsPage,
   CustomAppDetailsPageFormData,
 } from "../../components/CustomAppDetailsPage";
 
@@ -268,4 +269,4 @@ const CustomAppDetails = ({ id, params, token, onTokenClose }: OrderListProps) =
   );
 };
 
-export default CustomAppDetails;
+export { CustomAppDetails };

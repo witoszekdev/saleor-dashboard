@@ -1,2 +1,2 @@
-export { default } from "./TranslationsCollectionsPage";
+export { TranslationsCollectionsPage } from "./TranslationsCollectionsPage";
 export * from "./TranslationsCollectionsPage";

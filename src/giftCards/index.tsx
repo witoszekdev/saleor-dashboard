@@ -7,10 +7,10 @@ import { parse as parseQs } from "qs";
 import { useIntl } from "react-intl";
 import { RouteComponentProps, Switch } from "react-router-dom";
 
-import GiftCardSettings from "./GiftCardSettings";
-import GiftCardListComponent from "./GiftCardsList";
+import { GiftCardSettingsPage as GiftCardSettings } from "./GiftCardSettings";
+import { GiftCardsList as GiftCardListComponent } from "./GiftCardsList";
 import { GiftCardListUrlQueryParams, GiftCardUrlSortField } from "./GiftCardsList/types";
-import GiftCardUpdateComponent from "./GiftCardUpdate";
+import { GiftCardUpdate as GiftCardUpdateComponent } from "./GiftCardUpdate";
 import { GiftCardUpdatePageUrlQueryParams } from "./GiftCardUpdate/types";
 import { giftCardPath, giftCardSettingsUrl, giftCardsListPath } from "./urls";
 
@@ -51,4 +51,4 @@ const Component = () => {
   );
 };
 
-export default Component;
+export { Component };

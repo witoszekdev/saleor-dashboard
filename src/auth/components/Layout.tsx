@@ -3,10 +3,10 @@ import saleorDarkLogo from "@assets/images/logo-dark.svg";
 import saleorLightLogo from "@assets/images/logo-light.svg";
 import { makeStyles, useTheme } from "@saleor/macaw-ui";
 import { ReactNode } from "react";
-import SVG from "react-inlinesvg";
+import { InlineSVG as SVG } from "react-inlinesvg";
 
 import { useUser } from "..";
-import LoginLoading from "./LoginLoading";
+import { LoginLoading } from "./LoginLoading";
 
 const useStyles = makeStyles(
   theme => ({
@@ -101,4 +101,4 @@ const Layout = (props: { children: ReactNode }) => {
 };
 
 Layout.displayName = "Layout";
-export default Layout;
+export { Layout };

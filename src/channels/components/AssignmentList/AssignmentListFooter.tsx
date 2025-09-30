@@ -1,6 +1,6 @@
 import { Combobox } from "@dashboard/components/Combobox";
 import { ChangeEvent } from "@dashboard/hooks/useForm";
-import CardAddItemsFooter from "@dashboard/products/components/ProductStocks/components/CardAddItemsFooter";
+import { CardAddItemsFooter } from "@dashboard/products/components/ProductStocks/components/CardAddItemsFooter";
 import { mapNodeToChoice } from "@dashboard/utils/maps";
 import { ClickAwayListener } from "@material-ui/core";
 import { Box } from "@saleor/macaw-ui-next";
@@ -87,4 +87,4 @@ const AssignmentListFooter = ({
   );
 };
 
-export default AssignmentListFooter;
+export { AssignmentListFooter };
