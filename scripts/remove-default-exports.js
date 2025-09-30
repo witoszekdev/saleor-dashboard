@@ -15,6 +15,8 @@ const SOURCE_GLOBS = [
 
 const sourceFiles = project.getSourceFiles(SOURCE_GLOBS);
 
+console.log(`Found ${sourceFiles.length} source files to process`);
+
 const defaultExportNameByPath = new Map();
 
 function toPascalCase(value) {
@@ -178,10 +180,18 @@ function ensureDefaultExportName(sourceFile, stack = new Set()) {
   return null;
 }
 
+console.log("Converting default exports to named exports...");
+let convertedCount = 0;
 for (const sourceFile of sourceFiles) {
-  ensureDefaultExportName(sourceFile);
+  const name = ensureDefaultExportName(sourceFile);
+  if (name) {
+    convertedCount++;
+  }
 }
+console.log(`Converted ${convertedCount} default exports`);
 
+console.log("Updating default imports to named imports...");
+let updatedImportsCount = 0;
 for (const sourceFile of sourceFiles) {
   for (const importDeclaration of sourceFile.getImportDeclarations()) {
     const defaultImport = importDeclaration.getDefaultImport();
@@ -200,6 +210,7 @@ for (const sourceFile of sourceFiles) {
 
     const localName = defaultImport.getText();
     importDeclaration.removeDefaultImport();
+    updatedImportsCount++;
 
     const aliasNeeded = localName !== exportedName;
     const existingNamed = importDeclaration
@@ -220,6 +231,7 @@ for (const sourceFile of sourceFiles) {
     }
   }
 }
+console.log(`Updated ${updatedImportsCount} default imports`);
 
 function isBarrelFile(sourceFile) {
   const statements = sourceFile.getStatements();
@@ -269,6 +281,8 @@ function buildBarrelMapping(barrelFile) {
 }
 
 const barrelFiles = sourceFiles.filter((file) => isBarrelFile(file));
+
+console.log(`Found ${barrelFiles.length} barrel files to remove`);
 
 for (const barrel of barrelFiles) {
   const barrelPath = barrel.getFilePath();
@@ -347,4 +361,6 @@ for (const barrel of barrelFiles) {
   }
 }
 
+console.log("Saving changes...");
 project.saveSync();
+console.log("Done!");
