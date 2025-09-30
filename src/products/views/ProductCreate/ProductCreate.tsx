@@ -231,6 +231,7 @@ const ProductCreateView = ({ params }: ProductCreateProps) => {
     loadMore: loadMoreProducts,
     search: searchProducts,
     result: searchProductsOpts,
+    setFilterVariables: setProductReferenceFilters,
   } = useReferenceProductSearch(refAttr);
 
   const {
@@ -341,6 +342,7 @@ const ProductCreateView = ({ params }: ProductCreateProps) => {
         fetchMoreReferencePages={fetchMoreReferencePages}
         fetchReferenceProducts={searchProducts}
         fetchMoreReferenceProducts={fetchMoreReferenceProducts}
+        setReferenceProductFilters={setProductReferenceFilters}
         fetchReferenceCategories={searchCategories}
         fetchMoreReferenceCategories={fetchMoreCollections}
         fetchReferenceCollections={searchCollections}

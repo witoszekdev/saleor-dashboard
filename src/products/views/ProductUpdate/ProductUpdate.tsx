@@ -199,6 +199,7 @@ const ProductUpdate = ({ id, params }: ProductUpdateProps) => {
     loadMore: loadMoreProducts,
     search: searchProducts,
     result: searchProductsOpts,
+    setFilterVariables: setProductReferenceFilters,
   } = useReferenceProductSearch(refAttr);
 
   const {
@@ -278,6 +279,7 @@ const ProductUpdate = ({ id, params }: ProductUpdateProps) => {
         fetchReferenceCollections={searchCollections}
         fetchMoreReferenceCollections={fetchMoreCollections}
         fetchMoreAttributeValues={fetchMoreAttributeValues}
+        setReferenceProductFilters={setProductReferenceFilters}
         onCloseDialog={() => navigate(productUrl(id), { resetScroll: false })}
         onAttributeSelectBlur={searchAttributeReset}
         onAttributeValuesSearch={getAttributeValuesSuggestions}

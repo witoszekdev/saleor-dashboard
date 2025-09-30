@@ -36,6 +36,7 @@ import useNavigator from "@dashboard/hooks/useNavigator";
 import { VariantDetailsChannelsAvailabilityCard } from "@dashboard/products/components/ProductVariantChannels/ChannelsAvailabilityCard";
 import { productUrl } from "@dashboard/products/urls";
 import { getSelectedMedia } from "@dashboard/products/utils/data";
+import { ReferenceProductFilterVariables } from "@dashboard/searches/types";
 import { TranslationsButton } from "@dashboard/translations/components/TranslationsButton/TranslationsButton";
 import { productVariantUrl } from "@dashboard/translations/urls";
 import { useCachedLocales } from "@dashboard/translations/useCachedLocales";
@@ -122,6 +123,7 @@ interface ProductVariantPageProps {
   fetchMoreWarehouses: () => void;
   searchWarehousesResult: QueryResult<SearchWarehousesQuery>;
   searchWarehouses: (query: string) => void;
+  setReferenceProductFilters?: (filters: ReferenceProductFilterVariables) => void;
 }
 
 export const ProductVariantPage = ({
@@ -154,6 +156,7 @@ export const ProductVariantPage = ({
   fetchReferenceProducts,
   fetchReferenceCategories,
   fetchReferenceCollections,
+  setReferenceProductFilters,
   fetchAttributeValues,
   fetchMoreReferencePages,
   fetchMoreReferenceProducts,
@@ -226,6 +229,7 @@ export const ProductVariantPage = ({
           fetchMoreReferencePages={fetchMoreReferencePages}
           fetchReferenceProducts={fetchReferenceProducts}
           fetchMoreReferenceProducts={fetchMoreReferenceProducts}
+          setReferenceProductFilters={setReferenceProductFilters}
           fetchReferenceCategories={fetchReferenceCategories}
           fetchMoreReferenceCategories={fetchMoreReferenceCategories}
           fetchReferenceCollections={fetchReferenceCollections}
@@ -414,6 +418,8 @@ export const ProductVariantPage = ({
                     onFetchMore={handlers.fetchMoreReferences?.onFetchMore}
                     loading={handlers.fetchMoreReferences?.loading}
                     onClose={onCloseDialog}
+                    enableFilters
+                    onFilterChange={handlers.changeReferenceFilters}
                     onSubmit={attributeValues =>
                       handleAssignReferenceAttribute(attributeValues, data, handlers)
                     }

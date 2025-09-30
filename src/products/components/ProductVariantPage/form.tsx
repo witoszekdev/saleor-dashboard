@@ -54,13 +54,14 @@ import {
   getChannelsInput,
 } from "@dashboard/products/utils/handlers";
 import { validateProductVariant } from "@dashboard/products/utils/validation";
+import { ReferenceProductFilterVariables } from "@dashboard/searches/types";
 import { FetchMoreProps, RelayToFlat, ReorderEvent } from "@dashboard/types";
 import { arrayDiff } from "@dashboard/utils/arrays";
 import { mapMetadataItemToInput } from "@dashboard/utils/maps";
 import getMetadata from "@dashboard/utils/metadata/getMetadata";
 import useMetadataChangeTrigger from "@dashboard/utils/metadata/useMetadataChangeTrigger";
 import { useMultipleRichText } from "@dashboard/utils/richText/useMultipleRichText";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import * as React from "react";
 import { useIntl } from "react-intl";
 
@@ -112,6 +113,7 @@ interface UseProductVariantUpdateFormOpts {
   fetchReferenceCollections?: (data: string) => void;
   fetchMoreReferenceCollections?: FetchMoreProps;
   assignReferencesAttributeId?: string;
+  setReferenceProductFilters?: (filters: ReferenceProductFilterVariables) => void;
 }
 
 export interface ProductVariantUpdateHandlers
@@ -131,6 +133,7 @@ export interface ProductVariantUpdateHandlers
   fetchReferences: (value: string) => void;
   fetchMoreReferences: FetchMoreProps;
   selectAttributeReferenceAdditionalData: FormsetAdditionalDataChange<AttributeValuesMetadata[]>;
+  changeReferenceFilters: (filters: ReferenceProductFilterVariables) => void;
 }
 
 interface UseProductVariantUpdateFormResult
@@ -242,6 +245,12 @@ function useProductVariantUpdateForm(
     opts.fetchMoreReferenceProducts,
     opts.fetchMoreReferenceCategories,
     opts.fetchMoreReferenceCollections,
+  );
+  const handleReferenceFiltersChange = useCallback(
+    (filters: ReferenceProductFilterVariables) => {
+      opts.setReferenceProductFilters?.(filters);
+    },
+    [opts.setReferenceProductFilters],
   );
   const handleAttributeFileChange = createAttributeFileChangeHandler(
     attributes.change,
@@ -403,6 +412,7 @@ function useProductVariantUpdateForm(
       selectAttributeMultiple: handleAttributeMultiChange,
       selectAttributeReference: handleAttributeReferenceChange,
       selectAttributeReferenceAdditionalData: handleAttributeMetadataChange,
+      changeReferenceFilters: handleReferenceFiltersChange,
     },
     submit,
     isSaveDisabled,

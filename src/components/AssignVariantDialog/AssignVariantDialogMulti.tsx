@@ -1,4 +1,5 @@
 // @ts-strict-ignore
+import { ExpressionFilters } from "@dashboard/components/AppLayout/ListFilters/components/ExpressionFilters";
 import { ConfirmButton, ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import { InfiniteScroll } from "@dashboard/components/InfiniteScroll";
 import { DashboardModal } from "@dashboard/components/Modal";
@@ -12,7 +13,7 @@ import useSearchQuery from "@dashboard/hooks/useSearchQuery";
 import { maybe, renderCollection } from "@dashboard/misc";
 import { Container, FetchMoreProps, RelayToFlat } from "@dashboard/types";
 import { CircularProgress, TableBody, TableCell, TextField } from "@material-ui/core";
-import { Text } from "@saleor/macaw-ui-next";
+import { Box, Text } from "@saleor/macaw-ui-next";
 import { Fragment, useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
@@ -39,6 +40,7 @@ interface AssignVariantDialogMultiProps extends FetchMoreProps {
   onClose: () => void;
   labels?: Partial<AssignContainerDialogProps["labels"]>;
   open: boolean;
+  enableFilters?: boolean;
 }
 
 const scrollableTargetId = "assignVariantScrollableDialog";
@@ -55,6 +57,7 @@ export const AssignVariantDialogMulti = (props: AssignVariantDialogMultiProps) =
     onFetchMore,
     onSubmit,
     open,
+    enableFilters = false,
   } = props;
   const classes = useStyles(props);
   const intl = useIntl();
@@ -92,18 +95,23 @@ export const AssignVariantDialogMulti = (props: AssignVariantDialogMultiProps) =
 
   return (
     <>
-      <TextField
-        name="query"
-        value={query}
-        onChange={onQueryChange}
-        label={intl.formatMessage(messages.assignVariantDialogSearch)}
-        placeholder={intl.formatMessage(messages.assignVariantDialogContent)}
-        fullWidth
-        InputProps={{
-          autoComplete: "off",
-          endAdornment: loading && <CircularProgress size={16} />,
-        }}
-      />
+      <Box display="flex" alignItems="center" gap={2} marginBottom={2}>
+        {enableFilters && <ExpressionFilters />}
+        <Box __flex={1}>
+          <TextField
+            name="query"
+            value={query}
+            onChange={onQueryChange}
+            label={intl.formatMessage(messages.assignVariantDialogSearch)}
+            placeholder={intl.formatMessage(messages.assignVariantDialogContent)}
+            fullWidth
+            InputProps={{
+              autoComplete: "off",
+              endAdornment: loading && <CircularProgress size={16} />,
+            }}
+          />
+        </Box>
+      </Box>
 
       <InfiniteScroll
         id={scrollableTargetId}

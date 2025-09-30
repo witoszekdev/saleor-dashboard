@@ -1,4 +1,5 @@
 // @ts-strict-ignore
+import { ExpressionFilters } from "@dashboard/components/AppLayout/ListFilters/components/ExpressionFilters";
 import { ConfirmButton, ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import { InfiniteScroll } from "@dashboard/components/InfiniteScroll";
 import { DashboardModal } from "@dashboard/components/Modal";
@@ -10,7 +11,7 @@ import useSearchQuery from "@dashboard/hooks/useSearchQuery";
 import { maybe } from "@dashboard/misc";
 import { Container, FetchMoreProps } from "@dashboard/types";
 import { CircularProgress, TableBody, TableCell, TextField } from "@material-ui/core";
-import { Text } from "@saleor/macaw-ui-next";
+import { Box, Text } from "@saleor/macaw-ui-next";
 import { useEffect, useRef, useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
@@ -35,6 +36,7 @@ interface AssignProductDialogMultiProps extends FetchMoreProps {
     confirmBtn?: string;
   };
   open: boolean;
+  enableFilters?: boolean;
 }
 
 const scrollableTargetId = "assignProductScrollableDialog";
@@ -54,6 +56,7 @@ export const AssignProductDialogMulti = (props: AssignProductDialogMultiProps) =
     selectedIds,
     labels,
     open,
+    enableFilters = false,
   } = props;
   const classes = useStyles(props);
   const intl = useIntl();
@@ -123,18 +126,23 @@ export const AssignProductDialogMulti = (props: AssignProductDialogMultiProps) =
 
   return (
     <>
-      <TextField
-        name="query"
-        value={query}
-        onChange={onQueryChange}
-        label={intl.formatMessage(messages.assignProductDialogSearch)}
-        placeholder={intl.formatMessage(messages.assignProductDialogContent)}
-        fullWidth
-        InputProps={{
-          autoComplete: "off",
-          endAdornment: loading && <CircularProgress size={16} />,
-        }}
-      />
+      <Box display="flex" alignItems="center" gap={2} marginBottom={2}>
+        {enableFilters && <ExpressionFilters />}
+        <Box __flex={1}>
+          <TextField
+            name="query"
+            value={query}
+            onChange={onQueryChange}
+            label={intl.formatMessage(messages.assignProductDialogSearch)}
+            placeholder={intl.formatMessage(messages.assignProductDialogContent)}
+            fullWidth
+            InputProps={{
+              autoComplete: "off",
+              endAdornment: loading && <CircularProgress size={16} />,
+            }}
+          />
+        </Box>
+      </Box>
 
       <InfiniteScroll
         id={scrollableTargetId}

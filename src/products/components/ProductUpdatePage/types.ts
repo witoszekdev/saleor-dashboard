@@ -29,6 +29,7 @@ import {
 } from "@dashboard/hooks/useFormset";
 import { AttributeValuesMetadata } from "@dashboard/products/utils/data";
 import { UseProductUpdateHandlerError } from "@dashboard/products/views/ProductUpdate/handlers/useProductUpdateHandler";
+import { ReferenceProductFilterVariables } from "@dashboard/searches/types";
 import { FetchMoreProps, RelayToFlat, ReorderEvent } from "@dashboard/types";
 import { OutputData } from "@editorjs/editorjs";
 import { Option } from "@saleor/macaw-ui-next";
@@ -83,6 +84,7 @@ export interface ProductUpdateHandlers
   fetchReferences: (value: string) => void;
   fetchMoreReferences: FetchMoreProps;
   updateChannelList: ProductChannelsListingDialogSubmit;
+  changeReferenceFilters: (filters: ReferenceProductFilterVariables) => void;
 }
 
 export interface UseProductUpdateFormOutput
@@ -115,6 +117,7 @@ export interface UseProductUpdateFormOpts
   fetchMoreReferenceCategories?: FetchMoreProps;
   assignReferencesAttributeId?: string;
   isSimpleProduct: boolean;
+  setReferenceProductFilters?: (filters: ReferenceProductFilterVariables) => void;
 }
 
 export type SubmitResult = SubmitPromise<

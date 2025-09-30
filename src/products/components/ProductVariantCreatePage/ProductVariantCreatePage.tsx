@@ -31,6 +31,7 @@ import { SubmitPromise } from "@dashboard/hooks/useForm";
 import useNavigator from "@dashboard/hooks/useNavigator";
 import { ProductDetailsChannelsAvailabilityCard } from "@dashboard/products/components/ProductVariantChannels/ChannelsAvailabilityCard";
 import { productUrl } from "@dashboard/products/urls";
+import { ReferenceProductFilterVariables } from "@dashboard/searches/types";
 import { Container, FetchMoreProps, RelayToFlat, ReorderAction } from "@dashboard/types";
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { defineMessages, useIntl } from "react-intl";
@@ -113,6 +114,7 @@ interface ProductVariantCreatePageProps {
   fetchMoreWarehouses: () => void;
   searchWarehousesResult: QueryResult<SearchWarehousesQuery>;
   searchWarehouses: (query: string) => void;
+  setReferenceProductFilters?: (filters: ReferenceProductFilterVariables) => void;
 }
 
 export const ProductVariantCreatePage = ({
@@ -139,6 +141,7 @@ export const ProductVariantCreatePage = ({
   fetchReferenceCategories,
   fetchReferenceCollections,
   fetchAttributeValues,
+  setReferenceProductFilters,
   fetchMoreReferencePages,
   fetchMoreReferenceProducts,
   fetchMoreReferenceCategories,
@@ -186,6 +189,7 @@ export const ProductVariantCreatePage = ({
       fetchMoreReferencePages={fetchMoreReferencePages}
       fetchReferenceProducts={fetchReferenceProducts}
       fetchMoreReferenceProducts={fetchMoreReferenceProducts}
+      setReferenceProductFilters={setReferenceProductFilters}
       fetchReferenceCategories={fetchReferenceCategories}
       fetchMoreReferenceCategories={fetchMoreReferenceCategories}
       fetchReferenceCollections={fetchReferenceCollections}
@@ -350,6 +354,8 @@ export const ProductVariantCreatePage = ({
                   onFetchMore={handlers.fetchMoreReferences?.onFetchMore}
                   loading={handlers.fetchMoreReferences?.loading}
                   onClose={onCloseDialog}
+                  enableFilters
+                  onFilterChange={handlers.changeReferenceFilters}
                   onSubmit={attributeValues =>
                     handleAssignReferenceAttribute(attributeValues, data, handlers)
                   }

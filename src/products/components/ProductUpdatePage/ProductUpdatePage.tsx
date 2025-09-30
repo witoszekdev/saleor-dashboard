@@ -51,6 +51,7 @@ import { productImageUrl, productListPath, productListUrl } from "@dashboard/pro
 import { ChoiceWithAncestors, getChoicesWithAncestors } from "@dashboard/products/utils/utils";
 import { ProductVariantListError } from "@dashboard/products/views/ProductUpdate/handlers/errors";
 import { UseProductUpdateHandlerError } from "@dashboard/products/views/ProductUpdate/handlers/useProductUpdateHandler";
+import { ReferenceProductFilterVariables } from "@dashboard/searches/types";
 import { TranslationsButton } from "@dashboard/translations/components/TranslationsButton/TranslationsButton";
 import { productUrl as createTranslateProductUrl } from "@dashboard/translations/urls";
 import { useCachedLocales } from "@dashboard/translations/useCachedLocales";
@@ -107,6 +108,7 @@ interface ProductUpdatePageProps {
   fetchReferenceProducts?: (data: string) => void;
   fetchReferenceCategories?: (data: string) => void;
   fetchReferenceCollections?: (data: string) => void;
+  setReferenceProductFilters?: (filters: ReferenceProductFilterVariables) => void;
   fetchAttributeValues: (query: string, attributeId: string) => void;
   refetch: () => Promise<any>;
   onAttributeValuesSearch: (id: string, query: string) => Promise<Option[]>;
@@ -169,6 +171,7 @@ const ProductUpdatePage = ({
   fetchReferenceCategories,
   fetchMoreReferenceCategories,
   fetchReferenceCollections,
+  setReferenceProductFilters,
   fetchMoreReferenceCollections,
   fetchAttributeValues,
   fetchMoreAttributeValues,
@@ -267,6 +270,7 @@ const ProductUpdatePage = ({
       fetchMoreReferencePages={fetchMoreReferencePages}
       fetchReferenceProducts={fetchReferenceProducts}
       fetchMoreReferenceProducts={fetchMoreReferenceProducts}
+      setReferenceProductFilters={setReferenceProductFilters}
       fetchReferenceCategories={fetchReferenceCategories}
       fetchMoreReferenceCategories={fetchMoreReferenceCategories}
       fetchReferenceCollections={fetchReferenceCollections}
@@ -466,6 +470,8 @@ const ProductUpdatePage = ({
                 onFetchMore={handlers.fetchMoreReferences?.onFetchMore}
                 loading={handlers.fetchMoreReferences?.loading}
                 onClose={onCloseDialog}
+                enableFilters
+                onFilterChange={handlers.changeReferenceFilters}
                 onSubmit={attributeValues =>
                   handleAssignReferenceAttribute(
                     attributeValues.map(container => ({

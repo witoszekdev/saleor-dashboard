@@ -196,6 +196,7 @@ const ProductVariant = ({ productId, params }: ProductVariantCreateProps) => {
     loadMore: loadMoreProducts,
     search: searchProducts,
     result: searchProductsOpts,
+    setFilterVariables: setProductReferenceFilters,
   } = useReferenceProductSearch(refAttr);
   const {
     loadMore: loadMorePages,
@@ -298,6 +299,7 @@ const ProductVariant = ({ productId, params }: ProductVariantCreateProps) => {
         fetchMoreReferencePages={fetchMoreReferencePages}
         fetchReferenceProducts={searchProducts}
         fetchMoreReferenceProducts={fetchMoreReferenceProducts}
+        setReferenceProductFilters={setProductReferenceFilters}
         fetchReferenceCategories={searchCategories}
         fetchMoreReferenceCategories={fetchMoreReferenceCategories}
         fetchReferenceCollections={searchCollections}
