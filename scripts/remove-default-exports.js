@@ -270,13 +270,61 @@ if (requestedStage === 'all' || requestedStage === STAGES.UPDATE_IMPORTS) {
 }
 
 function isBarrelFile(sourceFile) {
+  // Only treat index.* files as barrel files
+  const fileName = path.basename(sourceFile.getFilePath());
+  const filePath = sourceFile.getFilePath();
+
+  if (!fileName.match(/^index\.(ts|tsx|js|jsx)$/)) {
+    return false;
+  }
+
   const statements = sourceFile.getStatements();
   if (!statements.length) {
     return false;
   }
-  return statements.every((statement) =>
+
+  // Check if file has re-exports from project files
+  const exportDeclarations = sourceFile.getExportDeclarations();
+  const hasReExportsFromProject = exportDeclarations.some(
+    exportDecl => exportDecl.getModuleSpecifierSourceFile() !== undefined
+  );
+
+  // Must only contain imports and exports
+  const onlyImportsAndExports = statements.every((statement) =>
     Node.isExportDeclaration(statement) || Node.isImportDeclaration(statement)
   );
+
+  if (!onlyImportsAndExports) {
+    if (hasReExportsFromProject) {
+      console.warn(`⚠️  Warning: ${filePath}`);
+      console.warn(`   File contains both actual code AND re-exports from project files.`);
+      console.warn(`   Move the component/code to a separate file and keep only re-exports in index.*`);
+      console.warn(`   or remove all re-exports and keep only the component.\n`);
+    } else {
+      console.warn(`⚠️  Warning: ${filePath}`);
+      console.warn(`   File is named 'index.*' but contains code beyond imports/exports.`);
+      console.warn(`   This file should be manually reviewed and refactored.\n`);
+    }
+    return false;
+  }
+
+  // Check if all exports are from external packages (not source files in project)
+  if (exportDeclarations.length === 0) {
+    return false;
+  }
+
+  const allExportsAreExternal = exportDeclarations.every(
+    exportDecl => !exportDecl.getModuleSpecifierSourceFile()
+  );
+
+  // Don't treat external re-exports as barrel files
+  if (allExportsAreExternal) {
+    console.warn(`⚠️  Warning: ${filePath}`);
+    console.warn(`   File only re-exports from external packages.`);
+    console.warn(`   Consider importing directly from the package instead.\n`);
+  }
+
+  return !allExportsAreExternal;
 }
 
 function buildBarrelMapping(barrelFile) {
@@ -320,11 +368,12 @@ function buildBarrelMapping(barrelFile) {
 if (requestedStage === 'all' || requestedStage === STAGES.REMOVE_BARRELS) {
   console.log("[Stage 3/3] Removing barrel files...");
 
+  // Process only index.* files automatically
   const barrelFiles = sourceFiles.filter((file) => isBarrelFile(file));
   const barrelPaths = new Set(barrelFiles.map((f) => f.getFilePath()));
   const nonBarrelFiles = sourceFiles.filter((f) => !barrelPaths.has(f.getFilePath()));
 
-  console.log(`Found ${barrelFiles.length} barrel files to remove`);
+  console.log(`Found ${barrelFiles.length} index.* barrel files to remove automatically\n`);
 
   for (const barrel of barrelFiles) {
     const barrelPath = barrel.getFilePath();
@@ -405,7 +454,40 @@ if (requestedStage === 'all' || requestedStage === STAGES.REMOVE_BARRELS) {
 
   console.log("Saving changes...");
   project.saveSync();
-  console.log("✓ Stage 3 complete\n");
+  console.log("✓ Barrel files removed\n");
+
+  // Now scan remaining non-index files for warnings
+  console.log("Scanning non-index files for mixed code and re-exports...\n");
+  let warningCount = 0;
+  for (const sourceFile of nonBarrelFiles) {
+    const filePath = sourceFile.getFilePath();
+    const statements = sourceFile.getStatements();
+    if (!statements.length) continue;
+
+    const hasCode = statements.some((statement) =>
+      !Node.isExportDeclaration(statement) && !Node.isImportDeclaration(statement)
+    );
+
+    const exportDeclarations = sourceFile.getExportDeclarations();
+    const hasReExportsFromProject = exportDeclarations.some(
+      exportDecl => exportDecl.getModuleSpecifierSourceFile() !== undefined
+    );
+
+    if (hasCode && hasReExportsFromProject) {
+      warningCount++;
+      console.warn(`⚠️  Warning: ${filePath}`);
+      console.warn(`   File contains both code AND re-exports from project files.`);
+      console.warn(`   Consider removing re-exports and importing directly from source files.\n`);
+    }
+  }
+
+  if (warningCount > 0) {
+    console.log(`\nFound ${warningCount} non-index files with mixed code and re-exports that need manual review.`);
+  } else {
+    console.log(`\nNo non-index files with mixed code and re-exports found.`);
+  }
+
+  console.log("\n✓ Stage 3 complete\n");
 }
 
 console.log("\n" + "=".repeat(60));
