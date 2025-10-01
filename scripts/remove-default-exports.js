@@ -375,82 +375,164 @@ if (requestedStage === 'all' || requestedStage === STAGES.REMOVE_BARRELS) {
 
   console.log(`Found ${barrelFiles.length} index.* barrel files to remove automatically\n`);
 
+  // Build mappings for all barrels upfront
+  console.log("Building barrel mappings...");
+  const barrelMappings = new Map();
+  const skippedBarrels = [];
+
   for (const barrel of barrelFiles) {
     const barrelPath = barrel.getFilePath();
-    const mapping = buildBarrelMapping(barrel);
-
-    for (const sourceFile of nonBarrelFiles) {
-      for (const importDeclaration of sourceFile.getImportDeclarations()) {
-        const moduleSource = importDeclaration.getModuleSpecifierSourceFile();
-        if (!moduleSource) {
-          continue;
-        }
-        if (moduleSource.getFilePath() !== barrelPath) {
-          continue;
-        }
-
-        const namedImports = importDeclaration.getNamedImports();
-        const namespaceImport = importDeclaration.getNamespaceImport();
-        if (namespaceImport) {
-          throw new Error(
-            `Namespace import found for barrel ${barrelPath} in ${sourceFile.getFilePath()}`
-          );
-        }
-
-        const newImportsByModule = new Map();
-
-        for (const namedImport of namedImports) {
-          const exportedName = namedImport.getNameNode().getText();
-          const aliasNode = namedImport.getAliasNode();
-          const alias = aliasNode ? aliasNode.getText() : null;
-
-          const target = mapping.get(exportedName);
-          if (!target) {
-            throw new Error(
-              `Unable to resolve export ${exportedName} from barrel ${barrelPath}`
-            );
-          }
-
-          if (!newImportsByModule.has(target.modulePath)) {
-            newImportsByModule.set(target.modulePath, []);
-          }
-
-          newImportsByModule.get(target.modulePath).push({
-            importName: target.importName,
-            alias,
-          });
-        }
-
-        importDeclaration.remove();
-
-        for (const [modulePath, specifiers] of newImportsByModule) {
-          const relativePath = path.relative(
-            path.dirname(sourceFile.getFilePath()),
-            modulePath
-          );
-          const normalizedPath =
-            relativePath.startsWith(".") ? relativePath : `./${relativePath}`;
-          const cleanedPath = normalizedPath.split("\\").join("/");
-
-          const moduleSpecifier = cleanedPath.replace(/\.(tsx?|jsx?)$/, "");
-          sourceFile.addImportDeclaration({
-            moduleSpecifier,
-            namedImports: specifiers.map((specifier) =>
-              specifier.alias && specifier.alias !== specifier.importName
-                ? { name: specifier.importName, alias: specifier.alias }
-                : specifier.importName
-            ),
-          });
-        }
+    try {
+      const mapping = buildBarrelMapping(barrel);
+      barrelMappings.set(barrelPath, mapping);
+    } catch (error) {
+      if (error instanceof RangeError && error.message.includes('Maximum call stack size exceeded')) {
+        console.warn(`⚠️  Skipping ${barrelPath} - circular dependency detected`);
+        skippedBarrels.push(barrelPath);
+      } else {
+        throw error;
       }
     }
+  }
 
+  console.log(`✓ Mappings built (${barrelMappings.size} successful, ${skippedBarrels.length} skipped due to circular deps)\n`);
+
+  if (skippedBarrels.length > 0) {
+    console.log("Files with circular dependencies (must be fixed manually):");
+    skippedBarrels.forEach(p => console.log(`  - ${p}`));
+    console.log();
+  }
+
+  // Process ALL files (including other barrels), checking if they import from any barrel
+  console.log("Updating imports in all files (including other barrels)...");
+  let processedFiles = 0;
+  const filesWithNamespaceImports = [];
+
+  for (const sourceFile of sourceFiles) {
+    const filePath = sourceFile.getFilePath();
+
+    // Skip the barrel file itself
+    if (barrelPaths.has(filePath)) {
+      continue;
+    }
+
+    // Skip generated files
+    if (filePath.includes('.generated.') || filePath.includes('/__generated__/')) {
+      continue;
+    }
+
+    processedFiles++;
+    if (processedFiles % 500 === 0) {
+      console.log(`  Processed ${processedFiles}/${nonBarrelFiles.length} files...`);
+    }
+
+    for (const importDeclaration of sourceFile.getImportDeclarations()) {
+      const moduleSource = importDeclaration.getModuleSpecifierSourceFile();
+      if (!moduleSource) {
+        continue;
+      }
+
+      const barrelPath = moduleSource.getFilePath();
+      const mapping = barrelMappings.get(barrelPath);
+
+      if (!mapping) {
+        continue; // Not importing from a barrel
+      }
+
+      const namedImports = importDeclaration.getNamedImports();
+      const namespaceImport = importDeclaration.getNamespaceImport();
+      if (namespaceImport) {
+        // Can't automatically transform namespace imports, skip this import
+        filesWithNamespaceImports.push({
+          file: filePath,
+          barrel: barrelPath,
+        });
+        continue;
+      }
+
+      const newImportsByModule = new Map();
+
+      for (const namedImport of namedImports) {
+        const exportedName = namedImport.getNameNode().getText();
+        const aliasNode = namedImport.getAliasNode();
+        const alias = aliasNode ? aliasNode.getText() : null;
+
+        const target = mapping.get(exportedName);
+        if (!target) {
+          throw new Error(
+            `Unable to resolve export ${exportedName} from barrel ${barrelPath}`
+          );
+        }
+
+        if (!newImportsByModule.has(target.modulePath)) {
+          newImportsByModule.set(target.modulePath, []);
+        }
+
+        newImportsByModule.get(target.modulePath).push({
+          importName: target.importName,
+          alias,
+        });
+      }
+
+      importDeclaration.remove();
+
+      for (const [modulePath, specifiers] of newImportsByModule) {
+        const relativePath = path.relative(
+          path.dirname(sourceFile.getFilePath()),
+          modulePath
+        );
+        const normalizedPath =
+          relativePath.startsWith(".") ? relativePath : `./${relativePath}`;
+        const cleanedPath = normalizedPath.split("\\").join("/");
+
+        const moduleSpecifier = cleanedPath.replace(/\.(tsx?|jsx?)$/, "");
+        sourceFile.addImportDeclaration({
+          moduleSpecifier,
+          namedImports: specifiers.map((specifier) =>
+            specifier.alias && specifier.alias !== specifier.importName
+              ? { name: specifier.importName, alias: specifier.alias }
+              : specifier.importName
+          ),
+        });
+      }
+    }
+  }
+  console.log(`✓ Updated imports in ${processedFiles} files\n`);
+
+  if (filesWithNamespaceImports.length > 0) {
+    console.log("Files with namespace imports from barrels (must be fixed manually):");
+    filesWithNamespaceImports.forEach(({ file, barrel }) =>
+      console.log(`  - ${file} imports from ${barrel}`)
+    );
+    console.log();
+  }
+
+  // Don't delete barrels that still have namespace imports
+  const barrelsWithNamespaceImports = new Set(
+    filesWithNamespaceImports.map(({ barrel }) => barrel)
+  );
+  barrelsWithNamespaceImports.forEach(barrel => {
+    if (!skippedBarrels.includes(barrel)) {
+      skippedBarrels.push(barrel);
+    }
+  });
+
+  // Delete barrel files (except skipped ones)
+  console.log("Deleting barrel files...");
+  const skippedBarrelsSet = new Set(skippedBarrels);
+  let deletedCount = 0;
+  for (const barrel of barrelFiles) {
     const filePath = barrel.getFilePath();
+    if (skippedBarrelsSet.has(filePath)) {
+      continue; // Don't delete barrels with circular deps
+    }
     barrel.delete();
     if (fs.existsSync(filePath)) {
       fs.unlinkSync(filePath);
     }
+    deletedCount++;
   }
+  console.log(`✓ Deleted ${deletedCount} barrel files (${skippedBarrels.length} kept due to circular deps)\n`);
 
   console.log("Saving changes...");
   project.saveSync();
