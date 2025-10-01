@@ -6,6 +6,7 @@ import { getDiscountErrorMessage } from "@dashboard/utils/errors/discounts";
 import { TextField } from "@material-ui/core";
 import * as React from "react";
 import { useIntl } from "react-intl";
+
 import { SaleDetailsPageFormData } from "../SaleDetailsPage/SaleDetailsPage";
 
 interface SaleInfoProps {

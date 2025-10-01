@@ -11,10 +11,10 @@ import { Box, Option, Skeleton } from "@saleor/macaw-ui-next";
 import * as React from "react";
 import { useIntl } from "react-intl";
 
+import { CustomerAddressChoiceCard } from "../../../customers/components/CustomerAddressChoiceCard/CustomerAddressChoiceCard";
 import { AddressInputOptionEnum } from "./form";
 import { addressEditMessages } from "./messages";
 import { useStyles } from "./styles";
-import { CustomerAddressChoiceCard } from "../../../customers/components/CustomerAddressChoiceCard/CustomerAddressChoiceCard";
 
 export interface OrderCustomerAddressEditProps {
   loading: boolean;

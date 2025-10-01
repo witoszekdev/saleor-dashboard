@@ -1,4 +1,5 @@
 import { MenuTreeItem, RecursiveMenuItem } from "@dashboard/structures/types";
+
 import { MenuItemType } from "../MenuItemDialog/types";
 
 export function getNodeData(item: RecursiveMenuItem): MenuTreeItem {

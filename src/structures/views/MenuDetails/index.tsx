@@ -18,8 +18,15 @@ import { FormattedMessage, useIntl } from "react-intl";
 
 import { categoryUrl } from "../../../categories/urls";
 import { collectionUrl } from "../../../collections/urls";
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
 import { extractMutationErrors, maybe } from "../../../misc";
+import {
+  MenuDetailsPage,
+  MenuDetailsSubmitData,
+} from "../../components/MenuDetailsPage/MenuDetailsPage";
 import { findNode, getNode } from "../../components/MenuDetailsPage/tree";
+import { MenuItemDialog } from "../../components/MenuItemDialog/MenuItemDialog";
+import { MenuItemDialogFormData, MenuItemType } from "../../components/MenuItemDialog/types";
 import {
   getItemId,
   getItemType,
@@ -35,10 +42,6 @@ import {
   getMoves,
   getRemoveIds,
 } from "./utils";
-import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
-import { MenuDetailsPage, MenuDetailsSubmitData } from "../../components/MenuDetailsPage/MenuDetailsPage";
-import { MenuItemDialog } from "../../components/MenuItemDialog/MenuItemDialog";
-import { MenuItemDialogFormData, MenuItemType } from "../../components/MenuItemDialog/types";
 
 interface MenuDetailsProps {
   id: string;

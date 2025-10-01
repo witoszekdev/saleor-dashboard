@@ -3,6 +3,7 @@ import { DashboardCard } from "@dashboard/components/Card";
 import { ProductMediaFragment } from "@dashboard/graphql";
 import { Box, Button, Skeleton, Text } from "@saleor/macaw-ui-next";
 import { defineMessages, useIntl } from "react-intl";
+
 import { MediaTile } from "../../../components/MediaTile/MediaTile";
 
 const messages = defineMessages({

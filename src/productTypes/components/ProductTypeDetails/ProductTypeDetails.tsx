@@ -8,8 +8,8 @@ import { Divider, Input, Text } from "@saleor/macaw-ui-next";
 import * as React from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import { messages } from "./messages";
 import { NewRadioGroupField as RadioGroupField } from "../../../components/RadioGroupField/RadioGroupField";
+import { messages } from "./messages";
 
 interface ProductTypeDetailsProps {
   data?: {

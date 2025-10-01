@@ -9,11 +9,14 @@ import { TableBody, TableCell, TextField } from "@material-ui/core";
 import { Box, Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import { useStyles } from "./styles";
-import { ConfirmButton, ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import {
+  ConfirmButton,
+  ConfirmButtonTransitionState,
+} from "../../../components/ConfirmButton/ConfirmButton";
 import { Form } from "../../../components/Form/Form";
 import { ResponsiveTable } from "../../../components/ResponsiveTable/ResponsiveTable";
 import { TableRowLink } from "../../../components/TableRowLink/TableRowLink";
+import { useStyles } from "./styles";
 
 interface FormData {
   allCountries: boolean;

@@ -9,9 +9,9 @@ import {
 import { TableCell } from "@material-ui/core";
 import { Text } from "@saleor/macaw-ui-next";
 
-import { useStyles } from "../OrderFulfillStockExceededDialog/styles";
 import { TableCellAvatar } from "../../../components/TableCellAvatar/TableCellAvatar";
 import { TableRowLink } from "../../../components/TableRowLink/TableRowLink";
+import { useStyles } from "../OrderFulfillStockExceededDialog/styles";
 
 interface OrderFulfillStockExceededDialogLineProps {
   line: OrderFulfillLineFragment | FulfillmentFragment["lines"][0];

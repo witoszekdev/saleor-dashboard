@@ -20,13 +20,14 @@ import { getMemberPermissionGroups, isMemberActive } from "@dashboard/staff/util
 import { FetchMoreProps, RelayToFlat, SearchPageProps } from "@dashboard/types";
 import { Button, Option, Text } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
-import { StaffProperties } from "../StaffProperties/StaffProperties";
-import { staffDetailsPageMessages as messages } from "./messages";
+
 import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
 import { Form } from "../../../components/Form/Form";
 import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
-import { AppStatus as UserStatus } from "../UserStatus/UserStatus";
 import { StaffPreferences } from "../StaffPreferences/StaffPreferences";
+import { StaffProperties } from "../StaffProperties/StaffProperties";
+import { AppStatus as UserStatus } from "../UserStatus/UserStatus";
+import { staffDetailsPageMessages as messages } from "./messages";
 
 export interface StaffDetailsFormData {
   email: string;

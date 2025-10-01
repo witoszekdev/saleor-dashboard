@@ -33,16 +33,16 @@ import { clsx } from "clsx";
 import { useEffect, useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import { OrderFulfillLine } from "../OrderFulfillLine/OrderFulfillLine";
-import { messages } from "./messages";
-import { useStyles } from "./styles";
 import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
 import { Form } from "../../../components/Form/Form";
 import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
 import { ResponsiveTable } from "../../../components/ResponsiveTable/ResponsiveTable";
 import { TableRowLink } from "../../../components/TableRowLink/TableRowLink";
 import { OrderChangeWarehouseDialog } from "../OrderChangeWarehouseDialog/OrderChangeWarehouseDialog";
+import { OrderFulfillLine } from "../OrderFulfillLine/OrderFulfillLine";
 import { OrderFulfillStockExceededDialog } from "../OrderFulfillStockExceededDialog/OrderFulfillStockExceededDialog";
+import { messages } from "./messages";
+import { useStyles } from "./styles";
 
 interface OrderFulfillFormData {
   sendInfo: boolean;

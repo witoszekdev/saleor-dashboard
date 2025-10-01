@@ -1,6 +1,7 @@
 import { sectionNames } from "@dashboard/intl";
 import { makeStyles } from "@saleor/macaw-ui";
 import { FormattedMessage } from "react-intl";
+
 import { HorizontalSpacer } from "../../../components/HorizontalSpacer/HorizontalSpacer";
 
 const useStyles = makeStyles(

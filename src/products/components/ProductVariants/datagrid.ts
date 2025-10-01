@@ -5,8 +5,8 @@ import { AttributeInputTypeEnum, ProductFragment, WarehouseFragment } from "@das
 import { useState } from "react";
 import { IntlShape } from "react-intl";
 
-import { messages } from "./messages";
 import { useClientPagination } from "../../../hooks/useClientPagination/useClientPagination";
+import { messages } from "./messages";
 
 export const variantsStaticColumnsAdapter = (intl: IntlShape) => [
   {

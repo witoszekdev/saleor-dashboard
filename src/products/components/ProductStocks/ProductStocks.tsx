@@ -13,10 +13,10 @@ import { useMemo } from "react";
 import * as React from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
+import { TableRowLink } from "../../../components/TableRowLink/TableRowLink";
 import { ProductStocksAssignWarehouses } from "./components/ProductStocksAssignWarehouses";
 import { messages } from "./messages";
 import { WarehouseInformationMessage } from "./WarehouseInformationMessage";
-import { TableRowLink } from "../../../components/TableRowLink/TableRowLink";
 
 export interface ProductStockFormsetData {
   quantityAllocated: number;

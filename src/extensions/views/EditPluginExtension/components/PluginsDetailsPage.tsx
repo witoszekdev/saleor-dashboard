@@ -15,13 +15,13 @@ import { getStringOrPlaceholder } from "@dashboard/misc";
 import { Box } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
 
-import { isSecretField } from "../utils";
-import { PluginAuthorization } from "./PluginAuthorization";
-import { PluginInfo } from "./PluginInfo";
 import { ConfirmButtonTransitionState } from "../../../../components/ConfirmButton/ConfirmButton";
 import { Form } from "../../../../components/Form/Form";
 import { DetailPageLayout } from "../../../../components/Layouts/Detail/index";
+import { isSecretField } from "../utils";
+import { PluginAuthorization } from "./PluginAuthorization";
 import { PluginDetailsChannelsCard } from "./PluginDetailsChannelsCard/PluginDetailsChannelsCard";
+import { PluginInfo } from "./PluginInfo";
 import { PluginSettings } from "./PluginSettings/PluginSettings";
 
 export interface PluginDetailsPageFormData {

@@ -4,6 +4,7 @@ import { DiscoutFormData } from "@dashboard/discounts/types";
 import { useRichTextContext } from "@dashboard/utils/richText/context";
 import { useController } from "react-hook-form";
 import { FormattedMessage } from "react-intl";
+
 import { RichTextEditor } from "../../../components/RichTextEditor/RichTextEditor";
 
 interface DiscountDescriptionProps {

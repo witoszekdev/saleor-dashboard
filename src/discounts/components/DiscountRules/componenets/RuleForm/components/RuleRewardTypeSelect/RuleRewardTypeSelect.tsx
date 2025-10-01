@@ -2,9 +2,9 @@ import { Option, Select } from "@saleor/macaw-ui-next";
 import { useController, useFormContext } from "react-hook-form";
 import { useIntl } from "react-intl";
 
-import { getRewardTypeOptions } from "./rewardTypeOptions";
-import { useDiscountRulesContext } from "../../../../context/consumer";
 import { Rule } from "../../../../../../models/Rule";
+import { useDiscountRulesContext } from "../../../../context/consumer";
+import { getRewardTypeOptions } from "./rewardTypeOptions";
 
 export const RuleRewardTypeSelect = () => {
   const intl = useIntl();

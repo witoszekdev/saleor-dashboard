@@ -1,9 +1,9 @@
 import { DashboardModal } from "@dashboard/components/Modal";
 import { Container, DialogProps, FetchMoreProps } from "@dashboard/types";
 
+import { ConfirmButtonTransitionState } from "../ConfirmButton/ConfirmButton";
 import { AssignContainerDialogMulti } from "./AssignContainerDialogMulti";
 import { AssignContainerDialogSingle } from "./AssignContainerDialogSingle";
-import { ConfirmButtonTransitionState } from "../ConfirmButton/ConfirmButton";
 
 type Labels = Record<"confirmBtn" | "title" | "label" | "placeholder", string>;
 

@@ -2,8 +2,8 @@ import { TimePeriodTypeEnum } from "@dashboard/graphql";
 import { FormChange } from "@dashboard/hooks/useForm";
 import { useIntl } from "react-intl";
 
-import { timePeriodTextWithSelectFieldMessages as messages } from "./messages";
 import { TextWithSelectField } from "../../../components/TextWithSelectField/TextWithSelectField";
+import { timePeriodTextWithSelectFieldMessages as messages } from "./messages";
 
 interface TimePeriodFieldProps {
   change: FormChange;

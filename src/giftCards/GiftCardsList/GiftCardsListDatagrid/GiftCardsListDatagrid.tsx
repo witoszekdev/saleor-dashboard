@@ -19,11 +19,11 @@ import { useIntl } from "react-intl";
 import { useLocation } from "react-router";
 
 import { messages as filterLabels } from "../filters";
+import { useGiftCardList } from "../providers/GiftCardListProvider/GiftCardListProvider";
 import { canBeSorted } from "../sort";
 import { GiftCardListColummns, GiftCardUrlSortField } from "../types";
 import { createGetCellContent, getColumns } from "./datagrid";
 import { messages } from "./messages";
-import { useGiftCardList } from "../providers/GiftCardListProvider/GiftCardListProvider";
 
 export const GiftCardsListDatagrid = () => {
   const datagridState = useDatagridChangeState();

@@ -12,6 +12,7 @@ import { TableBody, TableCell, TableFooter } from "@material-ui/core";
 import { DeleteIcon, makeStyles } from "@saleor/macaw-ui";
 import { Skeleton } from "@saleor/macaw-ui-next";
 import { FormattedMessage } from "react-intl";
+
 import { IconButtonTableCell } from "../../../components/IconButtonTableCell/IconButtonTableCell";
 import { ResponsiveTable } from "../../../components/ResponsiveTable/ResponsiveTable";
 import { TableCellHeader } from "../../../components/TableCellHeader/TableCellHeader";

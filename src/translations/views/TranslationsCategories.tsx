@@ -11,10 +11,11 @@ import { extractMutationErrors } from "@dashboard/misc";
 import { stringifyQs } from "@dashboard/utils/urls";
 import { OutputData } from "@editorjs/editorjs";
 import { useIntl } from "react-intl";
-import { TranslationField, TranslationInputFieldName } from "../types";
-import { getParsedTranslationInputData } from "../utils";
+
 import { useNotifier } from "../../hooks/useNotifier/useNotifier";
 import { TranslationsCategoriesPage } from "../components/TranslationsCategoriesPage/TranslationsCategoriesPage";
+import { TranslationField, TranslationInputFieldName } from "../types";
+import { getParsedTranslationInputData } from "../utils";
 
 type HandleSubmitData = string | OutputData;
 

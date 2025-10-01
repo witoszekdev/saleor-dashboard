@@ -16,8 +16,12 @@ import {
 } from "@dashboard/orders/urls";
 import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
 import { useIntl } from "react-intl";
+
 import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
-import { OrderFulfillPage, OrderFulfillSubmitData } from "../../components/OrderFulfillPage/OrderFulfillPage";
+import {
+  OrderFulfillPage,
+  OrderFulfillSubmitData,
+} from "../../components/OrderFulfillPage/OrderFulfillPage";
 
 interface OrderFulfillProps {
   orderId: string;

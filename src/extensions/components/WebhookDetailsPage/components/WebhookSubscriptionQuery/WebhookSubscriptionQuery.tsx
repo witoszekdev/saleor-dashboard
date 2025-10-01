@@ -9,9 +9,9 @@ import { createGraphiQLFetcher } from "@graphiql/toolkit";
 import * as React from "react";
 import { defineMessages, useIntl } from "react-intl";
 
+import { GraphiQL } from "../../../../../components/GraphiQL/GraphiQL";
 import { WebhookFormData } from "../../WebhookDetailsPage";
 import { useStyles } from "./styles";
-import { GraphiQL } from "../../../../../components/GraphiQL/GraphiQL";
 
 const messages = defineMessages({
   title: {

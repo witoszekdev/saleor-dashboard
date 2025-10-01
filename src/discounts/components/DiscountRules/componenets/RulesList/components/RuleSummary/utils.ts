@@ -5,9 +5,9 @@ import {
 } from "@dashboard/components/Datagrid/customCells/PillCell";
 import { DefaultTheme, Option } from "@saleor/macaw-ui-next";
 
-import { EnrichCondition } from "./components/RuleConditionsChips/useEnrichConditions";
 import { isArrayOfOptions } from "../../../../../../models/Condition";
 import { Rule } from "../../../../../../models/Rule";
+import { EnrichCondition } from "./components/RuleConditionsChips/useEnrichConditions";
 
 const MAX_ITEMS_TO_SHOW = 3;
 

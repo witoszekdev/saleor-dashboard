@@ -24,17 +24,17 @@ import { useMetadataChangeTrigger } from "@dashboard/utils/metadata/useMetadataC
 import { Option } from "@saleor/macaw-ui-next";
 import { defineMessages, useIntl } from "react-intl";
 
-import { getStringOrPlaceholder } from "../../../misc";
-import { ChannelProps, FetchMoreProps, SearchProps } from "../../../types";
-import { ShippingZoneUpdateFormData } from "../../components/ShippingZoneDetailsPage/types";
-import { getInitialFormData } from "./utils";
 import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
 import { CountryList } from "../../../components/CountryList/CountryList";
 import { Form } from "../../../components/Form/Form";
 import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
+import { getStringOrPlaceholder } from "../../../misc";
+import { ChannelProps, FetchMoreProps, SearchProps } from "../../../types";
+import { ShippingZoneUpdateFormData } from "../../components/ShippingZoneDetailsPage/types";
 import { ShippingZoneInfo } from "../ShippingZoneInfo/ShippingZoneInfo";
 import { ShippingZoneRates } from "../ShippingZoneRates/ShippingZoneRates";
 import { ShippingZoneSettingsCard } from "../ShippingZoneSettingsCard/ShippingZoneSettingsCard";
+import { getInitialFormData } from "./utils";
 
 const messages = defineMessages({
   countries: {

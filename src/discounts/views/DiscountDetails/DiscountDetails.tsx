@@ -8,6 +8,8 @@ import { getMutationErrors } from "@dashboard/misc";
 import { useState } from "react";
 import { useIntl } from "react-intl";
 
+import { DiscountDeleteModal } from "../../components/DiscountDeleteModal/DiscountDeleteModal";
+import { DiscountDetailsPage } from "../../components/DiscountDetailsPage/DiscountDetailsPage";
 import { LabelsMapsProvider } from "./context/provider";
 import { createRuleCreateHandler, createRuleUpdateHandler, createUpdateHandler } from "./handlers";
 import { usePromotionData } from "./hooks/usePromotionData";
@@ -16,8 +18,6 @@ import { usePromotionRuleCreate } from "./hooks/usePromotionRuleCreate";
 import { usePromotionRuleDelete } from "./hooks/usePromotionRuleDelete";
 import { usePromotionRuleUpdate } from "./hooks/usePromotionRuleUpdate";
 import { usePromotionUpdate } from "./hooks/usePromotionUpdate";
-import { DiscountDeleteModal } from "../../components/DiscountDeleteModal/DiscountDeleteModal";
-import { DiscountDetailsPage } from "../../components/DiscountDetailsPage/DiscountDetailsPage";
 
 interface DiscountDetailsProps {
   id: string;

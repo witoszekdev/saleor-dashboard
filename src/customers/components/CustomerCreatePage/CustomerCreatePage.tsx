@@ -14,13 +14,13 @@ import { mapCountriesToChoices } from "@dashboard/utils/maps";
 import { useState } from "react";
 import { useIntl } from "react-intl";
 
-import { AddressTypeInput } from "../../types";
-import { CustomerCreateAddress } from "../CustomerCreateAddress/CustomerCreateAddress";
-import { CustomerCreateNote } from "../CustomerCreateNote/CustomerCreateNote";
 import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
 import { Form } from "../../../components/Form/Form";
 import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
+import { AddressTypeInput } from "../../types";
+import { CustomerCreateAddress } from "../CustomerCreateAddress/CustomerCreateAddress";
 import { CustomerCreateDetails } from "../CustomerCreateDetails/CustomerCreateDetails";
+import { CustomerCreateNote } from "../CustomerCreateNote/CustomerCreateNote";
 
 export interface CustomerCreatePageFormData {
   customerFirstName: string;

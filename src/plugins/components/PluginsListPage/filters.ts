@@ -9,11 +9,11 @@ import {
 } from "@dashboard/utils/filters/fields";
 import { defineMessages, IntlShape } from "react-intl";
 
+import { IFilter } from "../../../components/Filter/types";
 import {
   pluginChannelConfigurationCellMessages,
   pluginStatusMessages,
 } from "../PluginsList/messages";
-import { IFilter } from "../../../components/Filter/types";
 
 export enum PluginFilterKeys {
   active = "active",

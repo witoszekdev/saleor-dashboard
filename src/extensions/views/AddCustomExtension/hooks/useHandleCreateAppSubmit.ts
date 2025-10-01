@@ -5,8 +5,8 @@ import { commonMessages } from "@dashboard/intl";
 import { SubmitHandler, UseFormSetError } from "react-hook-form";
 import { useIntl } from "react-intl";
 
-import { CustomExtensionFormData } from "../AddCustomExtension";
 import { useNotifier } from "../../../../hooks/useNotifier/useNotifier";
+import { CustomExtensionFormData } from "../AddCustomExtension";
 
 export const useHandleCreateAppSubmit = ({
   setToken,

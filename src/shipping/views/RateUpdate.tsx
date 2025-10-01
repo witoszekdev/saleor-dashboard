@@ -56,6 +56,7 @@ import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { ShippingMethodPostalCodeRule } from "@saleor/sdk/dist/apollo/types";
 import { useReducer } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
+
 import { useNotifier } from "../../hooks/useNotifier/useNotifier";
 import { DeleteShippingRateDialog } from "../components/DeleteShippingRateDialog/DeleteShippingRateDialog";
 import { ShippingMethodProductsAddDialog } from "../components/ShippingMethodProductsAddDialog/ShippingMethodProductsAddDialog";

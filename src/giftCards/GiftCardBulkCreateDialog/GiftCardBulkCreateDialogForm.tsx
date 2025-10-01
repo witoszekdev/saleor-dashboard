@@ -10,6 +10,13 @@ import { useForm } from "@dashboard/hooks/useForm";
 import { Divider, TextField } from "@material-ui/core";
 import { Text } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
+
+import {
+  ConfirmButton,
+  ConfirmButtonTransitionState,
+} from "../../components/ConfirmButton/ConfirmButton";
+import { GiftCardTagInput } from "../components/GiftCardTagInput/GiftCardTagInput";
+import { GiftCardCreateExpirySelect } from "../GiftCardCreateDialog/GiftCardCreateExpirySelect/GiftCardCreateExpirySelect";
 import { GiftCardCreateMoneyInput } from "../GiftCardCreateDialog/GiftCardCreateMoneyInput";
 import { GiftCardCreateRequiresActivationSection } from "../GiftCardCreateDialog/GiftCardCreateRequiresActivationSection";
 import { giftCardCreateMessages as messages } from "../GiftCardCreateDialog/messages";
@@ -19,9 +26,6 @@ import {
   GiftCardBulkCreateFormData,
   GiftCardBulkCreateFormErrors,
 } from "./types";
-import { ConfirmButton, ConfirmButtonTransitionState } from "../../components/ConfirmButton/ConfirmButton";
-import { GiftCardTagInput } from "../components/GiftCardTagInput/GiftCardTagInput";
-import { GiftCardCreateExpirySelect } from "../GiftCardCreateDialog/GiftCardCreateExpirySelect/GiftCardCreateExpirySelect";
 
 const initialData: GiftCardBulkCreateFormData = {
   tags: [],

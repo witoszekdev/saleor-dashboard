@@ -4,8 +4,8 @@ import { useAuth, useAuthState } from "@saleor/sdk";
 import { act, renderHook } from "@testing-library/react-hooks";
 import { useIntl } from "react-intl";
 
-import { useAuthProvider } from "./hooks/useAuthProvider";
 import { useNotifier } from "../hooks/useNotifier/useNotifier";
+import { useAuthProvider } from "./hooks/useAuthProvider";
 
 const originalWindowNavigator = window.navigator;
 const adminCredentials = {

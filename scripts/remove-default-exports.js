@@ -6,27 +6,24 @@ const { Project, SyntaxKind, Node } = require("ts-morph");
 
 // Parse CLI arguments
 const args = process.argv.slice(2);
-const stageArg = args.find(arg => arg.startsWith('--stage='));
-const requestedStage = stageArg ? stageArg.split('=')[1] : 'all';
+const stageArg = args.find(arg => arg.startsWith("--stage="));
+const requestedStage = stageArg ? stageArg.split("=")[1] : "all";
 
 const STAGES = {
-  CONVERT_EXPORTS: 'convert-exports',
-  UPDATE_IMPORTS: 'update-imports',
-  REMOVE_BARRELS: 'remove-barrels',
+  CONVERT_EXPORTS: "convert-exports",
+  UPDATE_IMPORTS: "update-imports",
+  REMOVE_BARRELS: "remove-barrels",
 };
 
 const project = new Project({
   tsConfigFilePath: path.resolve(__dirname, "../tsconfig.json"),
 });
 
-const SOURCE_GLOBS = [
-  "src/**/*.{ts,tsx,js,jsx}",
-  "playwright/**/*.{ts,tsx,js,jsx}",
-];
+const SOURCE_GLOBS = ["src/**/*.{ts,tsx,js,jsx}", "playwright/**/*.{ts,tsx,js,jsx}"];
 
-console.log(`\n${'='.repeat(60)}`);
+console.log(`\n${"=".repeat(60)}`);
 console.log(`Running stage: ${requestedStage}`);
-console.log(`${'='.repeat(60)}\n`);
+console.log(`${"=".repeat(60)}\n`);
 
 const sourceFiles = project.getSourceFiles(SOURCE_GLOBS);
 
@@ -39,7 +36,7 @@ function toPascalCase(value) {
     .replace(/[^A-Za-z0-9]/g, " ")
     .split(/\s+/)
     .filter(Boolean)
-    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .map(part => part.charAt(0).toUpperCase() + part.slice(1))
     .join("");
 }
 
@@ -62,7 +59,7 @@ function getFallbackName(sourceFile) {
 function isNameInUse(sourceFile, name) {
   return sourceFile
     .getDescendantsOfKind(SyntaxKind.Identifier)
-    .some((identifier) => identifier.getText() === name);
+    .some(identifier => identifier.getText() === name);
 }
 
 function getUniqueName(sourceFile, baseName) {
@@ -134,9 +131,7 @@ function convertDefaultDeclaration(sourceFile, declaration) {
 
     const fallback = getUniqueName(sourceFile, getFallbackName(sourceFile));
     const initializerText = expression.getText();
-    declaration.replaceWithText(
-      `export const ${fallback} = ${initializerText};`
-    );
+    declaration.replaceWithText(`export const ${fallback} = ${initializerText};`);
     return fallback;
   }
 
@@ -196,7 +191,7 @@ function ensureDefaultExportName(sourceFile, stack = new Set()) {
 }
 
 // Stage 1: Convert default exports to named exports
-if (requestedStage === 'all' || requestedStage === STAGES.CONVERT_EXPORTS) {
+if (requestedStage === "all" || requestedStage === STAGES.CONVERT_EXPORTS) {
   console.log("\n[Stage 1/3] Converting default exports to named exports...");
   let convertedCount = 0;
   for (const sourceFile of sourceFiles) {
@@ -218,7 +213,7 @@ if (requestedStage === 'all' || requestedStage === STAGES.CONVERT_EXPORTS) {
 }
 
 // Stage 2: Update default imports to named imports
-if (requestedStage === 'all' || requestedStage === STAGES.UPDATE_IMPORTS) {
+if (requestedStage === "all" || requestedStage === STAGES.UPDATE_IMPORTS) {
   console.log("[Stage 2/3] Updating default imports to named imports...");
   let updatedImportsCount = 0;
   for (const sourceFile of sourceFiles) {
@@ -244,18 +239,15 @@ if (requestedStage === 'all' || requestedStage === STAGES.UPDATE_IMPORTS) {
       const aliasNeeded = localName !== exportedName;
       const existingNamed = importDeclaration
         .getNamedImports()
-        .map((named) => named.getNameNode().getText());
+        .map(named => named.getNameNode().getText());
 
       if (!existingNamed.includes(exportedName) || aliasNeeded) {
         importDeclaration.addNamedImport(
-          aliasNeeded ? { name: exportedName, alias: localName } : exportedName
+          aliasNeeded ? { name: exportedName, alias: localName } : exportedName,
         );
       }
 
-      if (
-        !importDeclaration.getNamedImports().length &&
-        !importDeclaration.getNamespaceImport()
-      ) {
+      if (!importDeclaration.getNamedImports().length && !importDeclaration.getNamespaceImport()) {
         importDeclaration.remove();
       }
     }
@@ -286,19 +278,21 @@ function isBarrelFile(sourceFile) {
   // Check if file has re-exports from project files
   const exportDeclarations = sourceFile.getExportDeclarations();
   const hasReExportsFromProject = exportDeclarations.some(
-    exportDecl => exportDecl.getModuleSpecifierSourceFile() !== undefined
+    exportDecl => exportDecl.getModuleSpecifierSourceFile() !== undefined,
   );
 
   // Must only contain imports and exports
-  const onlyImportsAndExports = statements.every((statement) =>
-    Node.isExportDeclaration(statement) || Node.isImportDeclaration(statement)
+  const onlyImportsAndExports = statements.every(
+    statement => Node.isExportDeclaration(statement) || Node.isImportDeclaration(statement),
   );
 
   if (!onlyImportsAndExports) {
     if (hasReExportsFromProject) {
       console.warn(`⚠️  Warning: ${filePath}`);
       console.warn(`   File contains both actual code AND re-exports from project files.`);
-      console.warn(`   Move the component/code to a separate file and keep only re-exports in index.*`);
+      console.warn(
+        `   Move the component/code to a separate file and keep only re-exports in index.*`,
+      );
       console.warn(`   or remove all re-exports and keep only the component.\n`);
     } else {
       console.warn(`⚠️  Warning: ${filePath}`);
@@ -314,7 +308,7 @@ function isBarrelFile(sourceFile) {
   }
 
   const allExportsAreExternal = exportDeclarations.every(
-    exportDecl => !exportDecl.getModuleSpecifierSourceFile()
+    exportDecl => !exportDecl.getModuleSpecifierSourceFile(),
   );
 
   // Don't treat external re-exports as barrel files
@@ -365,13 +359,13 @@ function buildBarrelMapping(barrelFile) {
 }
 
 // Stage 3: Remove barrel files
-if (requestedStage === 'all' || requestedStage === STAGES.REMOVE_BARRELS) {
+if (requestedStage === "all" || requestedStage === STAGES.REMOVE_BARRELS) {
   console.log("[Stage 3/3] Removing barrel files...");
 
   // Process only index.* files automatically
-  const barrelFiles = sourceFiles.filter((file) => isBarrelFile(file));
-  const barrelPaths = new Set(barrelFiles.map((f) => f.getFilePath()));
-  const nonBarrelFiles = sourceFiles.filter((f) => !barrelPaths.has(f.getFilePath()));
+  const barrelFiles = sourceFiles.filter(file => isBarrelFile(file));
+  const barrelPaths = new Set(barrelFiles.map(f => f.getFilePath()));
+  const nonBarrelFiles = sourceFiles.filter(f => !barrelPaths.has(f.getFilePath()));
 
   console.log(`Found ${barrelFiles.length} index.* barrel files to remove automatically\n`);
 
@@ -386,7 +380,10 @@ if (requestedStage === 'all' || requestedStage === STAGES.REMOVE_BARRELS) {
       const mapping = buildBarrelMapping(barrel);
       barrelMappings.set(barrelPath, mapping);
     } catch (error) {
-      if (error instanceof RangeError && error.message.includes('Maximum call stack size exceeded')) {
+      if (
+        error instanceof RangeError &&
+        error.message.includes("Maximum call stack size exceeded")
+      ) {
         console.warn(`⚠️  Skipping ${barrelPath} - circular dependency detected`);
         skippedBarrels.push(barrelPath);
       } else {
@@ -395,7 +392,9 @@ if (requestedStage === 'all' || requestedStage === STAGES.REMOVE_BARRELS) {
     }
   }
 
-  console.log(`✓ Mappings built (${barrelMappings.size} successful, ${skippedBarrels.length} skipped due to circular deps)\n`);
+  console.log(
+    `✓ Mappings built (${barrelMappings.size} successful, ${skippedBarrels.length} skipped due to circular deps)\n`,
+  );
 
   if (skippedBarrels.length > 0) {
     console.log("Files with circular dependencies (must be fixed manually):");
@@ -417,7 +416,7 @@ if (requestedStage === 'all' || requestedStage === STAGES.REMOVE_BARRELS) {
     }
 
     // Skip generated files
-    if (filePath.includes('.generated.') || filePath.includes('/__generated__/')) {
+    if (filePath.includes(".generated.") || filePath.includes("/__generated__/")) {
       continue;
     }
 
@@ -459,9 +458,7 @@ if (requestedStage === 'all' || requestedStage === STAGES.REMOVE_BARRELS) {
 
         const target = mapping.get(exportedName);
         if (!target) {
-          throw new Error(
-            `Unable to resolve export ${exportedName} from barrel ${barrelPath}`
-          );
+          throw new Error(`Unable to resolve export ${exportedName} from barrel ${barrelPath}`);
         }
 
         if (!newImportsByModule.has(target.modulePath)) {
@@ -477,21 +474,17 @@ if (requestedStage === 'all' || requestedStage === STAGES.REMOVE_BARRELS) {
       importDeclaration.remove();
 
       for (const [modulePath, specifiers] of newImportsByModule) {
-        const relativePath = path.relative(
-          path.dirname(sourceFile.getFilePath()),
-          modulePath
-        );
-        const normalizedPath =
-          relativePath.startsWith(".") ? relativePath : `./${relativePath}`;
+        const relativePath = path.relative(path.dirname(sourceFile.getFilePath()), modulePath);
+        const normalizedPath = relativePath.startsWith(".") ? relativePath : `./${relativePath}`;
         const cleanedPath = normalizedPath.split("\\").join("/");
 
         const moduleSpecifier = cleanedPath.replace(/\.(tsx?|jsx?)$/, "");
         sourceFile.addImportDeclaration({
           moduleSpecifier,
-          namedImports: specifiers.map((specifier) =>
+          namedImports: specifiers.map(specifier =>
             specifier.alias && specifier.alias !== specifier.importName
               ? { name: specifier.importName, alias: specifier.alias }
-              : specifier.importName
+              : specifier.importName,
           ),
         });
       }
@@ -502,14 +495,14 @@ if (requestedStage === 'all' || requestedStage === STAGES.REMOVE_BARRELS) {
   if (filesWithNamespaceImports.length > 0) {
     console.log("Files with namespace imports from barrels (must be fixed manually):");
     filesWithNamespaceImports.forEach(({ file, barrel }) =>
-      console.log(`  - ${file} imports from ${barrel}`)
+      console.log(`  - ${file} imports from ${barrel}`),
     );
     console.log();
   }
 
   // Don't delete barrels that still have namespace imports
   const barrelsWithNamespaceImports = new Set(
-    filesWithNamespaceImports.map(({ barrel }) => barrel)
+    filesWithNamespaceImports.map(({ barrel }) => barrel),
   );
   barrelsWithNamespaceImports.forEach(barrel => {
     if (!skippedBarrels.includes(barrel)) {
@@ -532,7 +525,9 @@ if (requestedStage === 'all' || requestedStage === STAGES.REMOVE_BARRELS) {
     }
     deletedCount++;
   }
-  console.log(`✓ Deleted ${deletedCount} barrel files (${skippedBarrels.length} kept due to circular deps)\n`);
+  console.log(
+    `✓ Deleted ${deletedCount} barrel files (${skippedBarrels.length} kept due to circular deps)\n`,
+  );
 
   console.log("Saving changes...");
   project.saveSync();
@@ -546,13 +541,13 @@ if (requestedStage === 'all' || requestedStage === STAGES.REMOVE_BARRELS) {
     const statements = sourceFile.getStatements();
     if (!statements.length) continue;
 
-    const hasCode = statements.some((statement) =>
-      !Node.isExportDeclaration(statement) && !Node.isImportDeclaration(statement)
+    const hasCode = statements.some(
+      statement => !Node.isExportDeclaration(statement) && !Node.isImportDeclaration(statement),
     );
 
     const exportDeclarations = sourceFile.getExportDeclarations();
     const hasReExportsFromProject = exportDeclarations.some(
-      exportDecl => exportDecl.getModuleSpecifierSourceFile() !== undefined
+      exportDecl => exportDecl.getModuleSpecifierSourceFile() !== undefined,
     );
 
     if (hasCode && hasReExportsFromProject) {
@@ -564,7 +559,9 @@ if (requestedStage === 'all' || requestedStage === STAGES.REMOVE_BARRELS) {
   }
 
   if (warningCount > 0) {
-    console.log(`\nFound ${warningCount} non-index files with mixed code and re-exports that need manual review.`);
+    console.log(
+      `\nFound ${warningCount} non-index files with mixed code and re-exports that need manual review.`,
+    );
   } else {
     console.log(`\nNo non-index files with mixed code and re-exports found.`);
   }

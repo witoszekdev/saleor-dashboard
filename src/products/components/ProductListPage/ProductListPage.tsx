@@ -38,13 +38,13 @@ import { useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 import { useLocation } from "react-router";
 
-import { ProductListUrlSortField, productUrl } from "../../urls";
-import { ProductListTiles } from "../ProductListTiles/ProductListTiles";
 import { ListFilters } from "../../../components/AppLayout/ListFilters/ListFilters";
 import { FilterElement } from "../../../components/Filter/types";
 import { FilterPresetsSelect } from "../../../components/FilterPresetsSelect/FilterPresetsSelect";
 import { ListPageLayout } from "../../../components/Layouts/List/index";
+import { ProductListUrlSortField, productUrl } from "../../urls";
 import { ProductListDatagrid } from "../ProductListDatagrid/ProductListDatagrid";
+import { ProductListTiles } from "../ProductListTiles/ProductListTiles";
 import { ProductListViewSwitch } from "../ProductListViewSwitch/ProductListViewSwitch";
 
 interface ProductListPageProps

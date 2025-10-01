@@ -11,12 +11,13 @@ import {
 import { TableBody, TableCell, TableHead } from "@material-ui/core";
 import { Text } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
-import { stockExceededDialogMessages as messages } from "./messages";
-import { useStyles } from "./styles";
+
 import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
 import { ResponsiveTable } from "../../../components/ResponsiveTable/ResponsiveTable";
 import { TableRowLink } from "../../../components/TableRowLink/TableRowLink";
 import { OrderFulfillStockExceededDialogLine } from "../OrderFulfillStockExceededDialogLine/OrderFulfillStockExceededDialogLine";
+import { stockExceededDialogMessages as messages } from "./messages";
+import { useStyles } from "./styles";
 
 interface OrderFulfillStockExceededDialogProps {
   lines: Array<FulfillmentFragment["lines"][0] | OrderFulfillLineFragment>;

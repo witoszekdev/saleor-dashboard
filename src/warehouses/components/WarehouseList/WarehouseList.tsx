@@ -12,6 +12,7 @@ import { makeStyles } from "@saleor/macaw-ui";
 import { Button, Skeleton, TrashBinIcon } from "@saleor/macaw-ui-next";
 import { FormattedMessage } from "react-intl";
 import { useLocation } from "react-router";
+
 import { ResponsiveTable } from "../../../components/ResponsiveTable/ResponsiveTable";
 import { TableCellHeader } from "../../../components/TableCellHeader/TableCellHeader";
 import { TableRowLink } from "../../../components/TableRowLink/TableRowLink";

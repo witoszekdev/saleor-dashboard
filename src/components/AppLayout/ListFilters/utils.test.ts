@@ -1,5 +1,5 @@
-import { getSelectedFilterAmount } from "./utils";
 import { FilterElement, IFilter } from "../../Filter/types";
+import { getSelectedFilterAmount } from "./utils";
 
 describe("getSelectedFilterAmount", () => {
   it("should return 0 when no selected filters", () => {

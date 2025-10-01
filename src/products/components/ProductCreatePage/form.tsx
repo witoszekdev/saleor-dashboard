@@ -71,6 +71,7 @@ import { OutputData } from "@editorjs/editorjs";
 import { Option } from "@saleor/macaw-ui-next";
 import { Dispatch, ReactNode, SetStateAction, useEffect, useState } from "react";
 import { useIntl } from "react-intl";
+
 import { MetadataFormData } from "../../../components/Metadata/types";
 import { ProductStockFormsetData, ProductStockInput } from "../ProductStocks/ProductStocks";
 

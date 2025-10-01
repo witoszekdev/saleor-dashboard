@@ -27,17 +27,20 @@ import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActi
 import { useEffect } from "react";
 import { useIntl } from "react-intl";
 
+import { NotFoundPage } from "../../../components/NotFoundPage/NotFoundPage";
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
+import { AppActivateDialog } from "../../components/AppActivateDialog/AppActivateDialog";
+import { AppDeactivateDialog } from "../../components/AppDeactivateDialog/AppDeactivateDialog";
+import { AppDeleteDialog } from "../../components/AppDeleteDialog/AppDeleteDialog";
 import {
   CustomExtensionDetailsUrlDialog,
   CustomExtensionDetailsUrlQueryParams,
   ExtensionsUrls,
 } from "../../urls";
-import { NotFoundPage } from "../../../components/NotFoundPage/NotFoundPage";
-import { AppActivateDialog } from "../../components/AppActivateDialog/AppActivateDialog";
-import { AppDeactivateDialog } from "../../components/AppDeactivateDialog/AppDeactivateDialog";
-import { AppDeleteDialog } from "../../components/AppDeleteDialog/AppDeleteDialog";
-import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
-import { CustomExtensionDetailsPage, CustomExtensionDetailsPageFormData } from "./components/CustomExtensionDetailsPage/CustomExtensionDetailsPage";
+import {
+  CustomExtensionDetailsPage,
+  CustomExtensionDetailsPageFormData,
+} from "./components/CustomExtensionDetailsPage/CustomExtensionDetailsPage";
 import { TokenCreateDialog } from "./components/TokenCreateDialog/TokenCreateDialog";
 import { TokenDeleteDialog } from "./components/TokenDeleteDialog/TokenDeleteDialog";
 import { WebhookDeleteDialog } from "./components/WebhookDeleteDialog/WebhookDeleteDialog";

@@ -10,14 +10,17 @@ import { IMoney } from "@dashboard/utils/intl";
 import { Box, InfoIcon, Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 
+import {
+  ConfirmButton,
+  ConfirmButtonTransitionState,
+} from "../../../../../components/ConfirmButton/ConfirmButton";
+import { PriceField } from "../../../../../components/PriceField/PriceField";
 import { canSendRefundDuringReturn, getReturnRefundValue } from "../../utils";
 import { GrantRefundCheckbox } from "./GrantRefundCheckbox";
 import { submitCardMessages } from "./messages";
 import { RefundShipmentCheckbox } from "./RefundShipmentCheckbox";
 import { SendRefundCheckbox } from "./SendRefundCheckbox";
 import { TransactionSelector } from "./TransactionSelector";
-import { ConfirmButton, ConfirmButtonTransitionState } from "../../../../../components/ConfirmButton/ConfirmButton";
-import { PriceField } from "../../../../../components/PriceField/PriceField";
 
 interface TransactionSubmitCardProps {
   disabled: boolean;

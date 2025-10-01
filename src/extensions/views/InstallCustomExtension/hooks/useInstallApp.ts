@@ -6,9 +6,9 @@ import { extractMutationErrors } from "@dashboard/misc";
 import { UseFormGetValues } from "react-hook-form";
 import { useIntl } from "react-intl";
 
+import { useNotifier } from "../../../../hooks/useNotifier/useNotifier";
 import { previousPagePath } from "../consts";
 import { ExtensionInstallFormData, Manifest } from "../types";
-import { useNotifier } from "../../../../hooks/useNotifier/useNotifier";
 
 export const useInstallApp = ({
   getValues,

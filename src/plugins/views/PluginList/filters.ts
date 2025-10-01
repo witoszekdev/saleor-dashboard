@@ -3,15 +3,22 @@ import { PluginConfigurationType, PluginFilterInput } from "@dashboard/graphql";
 import { ChannelsWithLoadMoreProps } from "@dashboard/hooks/useChannelsSearch";
 import { maybe, parseBoolean } from "@dashboard/misc";
 import { mapNodeToChoice } from "@dashboard/utils/maps";
+
+import { FilterElement, FilterElementRegular } from "../../../components/Filter/types";
+import {
+  createFilterUtils,
+  dedupeFilter,
+  getMultipleValueQueryParam,
+  getSingleEnumValueQueryParam,
+  getSingleValueQueryParam,
+} from "../../../utils/filters/filters";
+import { createFilterTabUtils } from "../../../utils/filters/storage";
+import { PluginFilterKeys, PluginListFilterOpts } from "../../components/PluginsListPage/filters";
 import {
   PluginListUrlFilters,
   PluginListUrlFiltersEnum,
   PluginListUrlQueryParams,
 } from "../../urls";
-import { FilterElement, FilterElementRegular } from "../../../components/Filter/types";
-import { PluginFilterKeys, PluginListFilterOpts } from "../../components/PluginsListPage/filters";
-import { createFilterTabUtils } from "../../../utils/filters/storage";
-import { createFilterUtils, dedupeFilter, getMultipleValueQueryParam, getSingleEnumValueQueryParam, getSingleValueQueryParam } from "../../../utils/filters/filters";
 
 const PLUGIN_FILTERS_KEY = "pluginFilters";
 

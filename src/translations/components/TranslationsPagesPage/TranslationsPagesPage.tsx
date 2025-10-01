@@ -17,6 +17,7 @@ import {
 } from "@dashboard/translations/urls";
 import { mapAttributeValuesToTranslationFields } from "@dashboard/translations/utils";
 import { useIntl } from "react-intl";
+
 import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
 import { TranslationFields } from "../TranslationFields/TranslationFields";
 

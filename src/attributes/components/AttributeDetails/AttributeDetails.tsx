@@ -15,10 +15,10 @@ import { Box, Checkbox, Text } from "@saleor/macaw-ui-next";
 import { defineMessages, useIntl } from "react-intl";
 import { slugify } from "slugify";
 
-import { getAttributeSlugErrorMessage } from "../../errors";
-import { inputTypeMessages, messages } from "./messages";
 import { Select } from "../../../components/Select/Select";
+import { getAttributeSlugErrorMessage } from "../../errors";
 import { AttributePageFormData } from "../AttributePage/AttributePage";
+import { inputTypeMessages, messages } from "./messages";
 
 const entityTypeMessages = defineMessages({
   page: {

@@ -43,8 +43,26 @@ import { useMetadataChangeTrigger } from "@dashboard/utils/metadata/useMetadataC
 import { Button, Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 
+import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import { CountryList } from "../../../components/CountryList/CountryList";
+import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
+import { Metadata } from "../../../components/Metadata/Metadata";
+import { Tab } from "../../../components/Tab/Tab";
+import { TabContainer } from "../../../components/Tab/TabContainer";
 import { RequirementsPicker } from "../../types";
+import { DiscountCategories } from "../DiscountCategories/DiscountCategories";
+import { DiscountCollections } from "../DiscountCollections/DiscountCollections";
+import { DiscountCountrySelectDialog } from "../DiscountCountrySelectDialog/DiscountCountrySelectDialog";
+import { DiscountProducts } from "../DiscountProducts/DiscountProducts";
 import { DiscountVariants } from "../DiscountVariants/DiscountVariants";
+import { VoucherCodes } from "../VoucherCodes/VoucherCodes";
+import { GenerateMultipleVoucherCodeFormData } from "../VoucherCodesGenerateDialog/VoucherCodesGenerateDialog";
+import { VoucherDates } from "../VoucherDates/VoucherDates";
+import { VoucherInfo } from "../VoucherInfo/VoucherInfo";
+import { VoucherLimits } from "../VoucherLimits/VoucherLimits";
+import { VoucherRequirements } from "../VoucherRequirements/VoucherRequirements";
+import { VoucherTypes } from "../VoucherTypes/VoucherTypes";
+import { VoucherValue } from "../VoucherValue/VoucherValue";
 import { initialForm } from "./const";
 import { useActiveTab } from "./hooks/useActiveTab";
 import { useVoucherCodesPagination } from "./hooks/useVoucherCodesPagination";
@@ -60,24 +78,6 @@ import {
   mapLocalVariantsToSavedVariants,
   voucherCodeExists,
 } from "./utils";
-import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
-import { CountryList } from "../../../components/CountryList/CountryList";
-import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
-import { Metadata } from "../../../components/Metadata/Metadata";
-import { Tab } from "../../../components/Tab/Tab";
-import { TabContainer } from "../../../components/Tab/TabContainer";
-import { DiscountCategories } from "../DiscountCategories/DiscountCategories";
-import { DiscountCollections } from "../DiscountCollections/DiscountCollections";
-import { DiscountCountrySelectDialog } from "../DiscountCountrySelectDialog/DiscountCountrySelectDialog";
-import { DiscountProducts } from "../DiscountProducts/DiscountProducts";
-import { VoucherCodes } from "../VoucherCodes/VoucherCodes";
-import { GenerateMultipleVoucherCodeFormData } from "../VoucherCodesGenerateDialog/VoucherCodesGenerateDialog";
-import { VoucherDates } from "../VoucherDates/VoucherDates";
-import { VoucherInfo } from "../VoucherInfo/VoucherInfo";
-import { VoucherLimits } from "../VoucherLimits/VoucherLimits";
-import { VoucherRequirements } from "../VoucherRequirements/VoucherRequirements";
-import { VoucherTypes } from "../VoucherTypes/VoucherTypes";
-import { VoucherValue } from "../VoucherValue/VoucherValue";
 
 interface VoucherCreatePageProps extends Omit<ListActionsWithoutToolbar, "selected"> {
   countries: CountryWithCodeFragment[];

@@ -9,9 +9,9 @@ import { Skeleton, vars } from "@saleor/macaw-ui-next";
 import * as React from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import { CategoryUpdateData } from "../CategoryUpdatePage/form";
 import { ImageUpload } from "../../../components/ImageUpload/ImageUpload";
 import { MediaTile } from "../../../components/MediaTile/MediaTile";
+import { CategoryUpdateData } from "../CategoryUpdatePage/form";
 
 const useStyles = makeStyles(
   theme => ({

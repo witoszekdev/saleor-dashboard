@@ -6,8 +6,8 @@ import { UniqueIdentifier } from "@dnd-kit/core";
 import { Box, Button, EditIcon, GripIcon, Text, TrashBinIcon } from "@saleor/macaw-ui-next";
 import { FormattedMessage } from "react-intl";
 
-import { getItemId, getItemType } from "./utils";
 import { MenuItemType } from "../MenuItemDialog/types";
+import { getItemId, getItemType } from "./utils";
 
 interface TreeItemProps extends TreeItemComponentProps<RecursiveMenuItem> {
   onClick: (id: UniqueIdentifier, menuItemType: MenuItemType) => void;

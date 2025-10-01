@@ -7,12 +7,12 @@ import { Button, Divider, Skeleton, sprinkles } from "@saleor/macaw-ui-next";
 import { clsx } from "clsx";
 import { FormattedMessage, useIntl } from "react-intl";
 
+import { HorizontalSpacer } from "../../../components/HorizontalSpacer/HorizontalSpacer";
 import { OrderPaymentStatusPill } from "../OrderPaymentSummaryCard/components/OrderPaymentStatusPill";
+import { OrderUsedGiftCards } from "../OrderUsedGiftCards/OrderUsedGiftCards";
 import { orderPaymentMessages, paymentButtonMessages } from "./messages";
 import { useStyles } from "./styles";
 import { extractRefundedAmount, getDiscountAmount } from "./utils";
-import { HorizontalSpacer } from "../../../components/HorizontalSpacer/HorizontalSpacer";
-import { OrderUsedGiftCards } from "../OrderUsedGiftCards/OrderUsedGiftCards";
 
 interface OrderPaymentProps {
   order: OrderDetailsFragment;

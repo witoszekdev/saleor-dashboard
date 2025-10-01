@@ -2,9 +2,9 @@ import { DashboardCard } from "@dashboard/components/Card";
 import { Box, Button, CloseIcon, Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage } from "react-intl";
 
+import { ConfirmButton } from "../../../../../components/ConfirmButton/ConfirmButton";
 import { Mono } from "../TokenCreateDialog/Mono";
 import { useClipboardCopy } from "../TokenCreateDialog/useClipboardCopy";
-import { ConfirmButton } from "../../../../../components/ConfirmButton/ConfirmButton";
 
 interface CustomExtensionDefaultTokenProps {
   token: string;

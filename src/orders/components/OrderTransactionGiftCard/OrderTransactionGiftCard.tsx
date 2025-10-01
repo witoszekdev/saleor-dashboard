@@ -9,9 +9,10 @@ import { FakeTransaction, TransactionFakeEvent } from "@dashboard/orders/types";
 import { prepareMoney } from "@dashboard/orders/utils/data";
 import { Skeleton } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
+
+import { OrderTransaction } from "../OrderTransaction/OrderTransaction";
 import { transactionGiftCardMessages } from "./messages";
 import { getGiftCardAmount, getUsedInGiftCardEvents } from "./utils";
-import { OrderTransaction } from "../OrderTransaction/OrderTransaction";
 
 interface OrderTransactionGiftCardProps {
   order: OrderDetailsFragment;

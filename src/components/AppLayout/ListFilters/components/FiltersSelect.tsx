@@ -6,9 +6,9 @@ import { DropdownButton, sprinkles } from "@saleor/macaw-ui-next";
 import { useMemo, useRef, useState } from "react";
 import { FormattedMessage } from "react-intl";
 
-import { getSelectedFilterAmount } from "../utils";
 import { FilterContent } from "../../../Filter/FilterContent/index";
 import { FilterElement, FilterErrorMessages, IFilter, InvalidFilters } from "../../../Filter/types";
+import { getSelectedFilterAmount } from "../utils";
 
 interface FilterProps<TFilterKeys extends string = string> {
   currencySymbol?: string;

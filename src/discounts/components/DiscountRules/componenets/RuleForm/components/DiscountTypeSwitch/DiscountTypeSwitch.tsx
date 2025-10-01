@@ -1,5 +1,6 @@
 import { RewardValueTypeEnum } from "@dashboard/graphql";
 import { Box, Switch, Text } from "@saleor/macaw-ui-next";
+
 import { useDiscountRulesContext } from "../../../../context/consumer";
 
 interface DiscountTypeSwitchProps {

@@ -8,9 +8,9 @@ import * as React from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 import { SortableContainer, SortableElement } from "react-sortable-hoc";
 
-import { messages } from "./messages";
 import { ImageUpload } from "../../../components/ImageUpload/ImageUpload";
 import { MediaTile } from "../../../components/MediaTile/MediaTile";
+import { messages } from "./messages";
 
 interface SortableMediaProps {
   media: {

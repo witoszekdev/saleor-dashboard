@@ -7,8 +7,9 @@ import { useVariantWithProductDataSearch } from "@dashboard/searches/useVariantS
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { useController, useFormContext } from "react-hook-form";
 import { FormattedMessage, useIntl } from "react-intl";
-import { useDiscountRulesContext } from "../../../../context/consumer";
+
 import { Rule } from "../../../../../../models/Rule";
+import { useDiscountRulesContext } from "../../../../context/consumer";
 
 export const RuleRewardGifts = () => {
   const intl = useIntl();

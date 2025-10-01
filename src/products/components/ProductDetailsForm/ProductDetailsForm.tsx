@@ -8,6 +8,7 @@ import { useRichTextContext } from "@dashboard/utils/richText/context";
 import { OutputData } from "@editorjs/editorjs";
 import { Box, Input } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
+
 import { RichTextEditor } from "../../../components/RichTextEditor/RichTextEditor";
 
 interface ProductDetailsFormProps {

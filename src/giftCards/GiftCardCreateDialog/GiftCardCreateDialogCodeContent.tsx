@@ -4,8 +4,8 @@ import { buttonMessages } from "@dashboard/intl";
 import { Button, Text } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
 
-import { giftCardCreateMessages as messages } from "./messages";
 import { useNotifier } from "../../hooks/useNotifier/useNotifier";
+import { giftCardCreateMessages as messages } from "./messages";
 
 interface GiftCardCreateDialogCodeContentProps {
   cardCode: string;

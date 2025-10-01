@@ -5,10 +5,10 @@ import { Box, Text } from "@saleor/macaw-ui-next";
 import { useController } from "react-hook-form";
 import { useIntl } from "react-intl";
 
-import { RuleInputWrapper } from "../RuleInputWrapper/RuleInputWrapper";
 import { RichTextEditor } from "../../../../../../../components/RichTextEditor/RichTextEditor";
-import { useDiscountRulesContext } from "../../../../context/consumer";
 import { Rule } from "../../../../../../models/Rule";
+import { useDiscountRulesContext } from "../../../../context/consumer";
+import { RuleInputWrapper } from "../RuleInputWrapper/RuleInputWrapper";
 
 interface RuleDescriptionProps {
   error?: boolean;

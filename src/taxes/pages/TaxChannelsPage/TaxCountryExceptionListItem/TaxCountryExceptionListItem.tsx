@@ -6,10 +6,10 @@ import { Divider } from "@material-ui/core";
 import { ListItem, ListItemCell } from "@saleor/macaw-ui";
 import { Box, Button, Option, TrashBinIcon } from "@saleor/macaw-ui-next";
 
-import { useStyles } from "../styles";
-import { TaxCountryConfiguration } from "../TaxChannelsPage";
 import { Select } from "../../../../components/Select/Select";
 import { LegacyFlowWarning } from "../../../components/LegacyFlowWarning";
+import { useStyles } from "../styles";
+import { TaxCountryConfiguration } from "../TaxChannelsPage";
 
 interface TaxCountryExceptionListItemProps {
   country: TaxCountryConfiguration | undefined;

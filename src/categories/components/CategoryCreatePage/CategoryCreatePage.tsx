@@ -5,12 +5,13 @@ import { ProductErrorFragment } from "@dashboard/graphql";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { Box } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
-import { CategoryCreateData, CategoryCreateForm } from "./form";
+
 import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
 import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
 import { Metadata } from "../../../components/Metadata/Metadata";
 import { SeoForm } from "../../../components/SeoForm/SeoForm";
 import { CategoryDetailsForm } from "../CategoryDetailsForm/CategoryDetailsForm";
+import { CategoryCreateData, CategoryCreateForm } from "./form";
 
 interface CategoryCreatePageProps {
   errors: ProductErrorFragment[];

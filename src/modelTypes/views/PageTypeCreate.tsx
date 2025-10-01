@@ -9,9 +9,13 @@ import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { getMutationErrors } from "@dashboard/misc";
 import { createMetadataCreateHandler } from "@dashboard/utils/handlers/metadataCreateHandler";
 import { useIntl } from "react-intl";
-import { pageTypeUrl } from "../urls";
+
 import { useNotifier } from "../../hooks/useNotifier/useNotifier";
-import { PageTypeCreatePage, PageTypeForm } from "../components/PageTypeCreatePage/PageTypeCreatePage";
+import {
+  PageTypeCreatePage,
+  PageTypeForm,
+} from "../components/PageTypeCreatePage/PageTypeCreatePage";
+import { pageTypeUrl } from "../urls";
 
 const PageTypeCreate = () => {
   const navigate = useNavigator();

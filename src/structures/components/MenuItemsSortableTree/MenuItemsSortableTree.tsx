@@ -2,10 +2,11 @@ import { MenuTreeItem, RecursiveMenuItem } from "@dashboard/structures/types";
 import { UniqueIdentifier } from "@dnd-kit/core";
 import { Box, Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage } from "react-intl";
-import { MenuItemsSortableTreeItem } from "./MenuItemsSortableTreeItem";
-import { getNodeData } from "./utils";
+
 import { SortableTree } from "../../../components/SortableTree/SortableTree";
 import { MenuItemType } from "../MenuItemDialog/types";
+import { MenuItemsSortableTreeItem } from "./MenuItemsSortableTreeItem";
+import { getNodeData } from "./utils";
 
 interface MenuItemsSortableTreeProps {
   items: RecursiveMenuItem[];

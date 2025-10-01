@@ -4,8 +4,11 @@ import { Box, Button, Input } from "@saleor/macaw-ui-next";
 import { useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
+import {
+  ConfirmButton,
+  ConfirmButtonTransitionState,
+} from "../../../components/ConfirmButton/ConfirmButton";
 import { messages } from "./messages";
-import { ConfirmButton, ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
 
 interface VoucherCodesManualDialogProps {
   open: boolean;

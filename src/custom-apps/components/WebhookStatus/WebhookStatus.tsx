@@ -1,8 +1,9 @@
 import { ControlledSwitch } from "@dashboard/components/ControlledSwitch";
 import { ChangeEvent } from "@dashboard/hooks/useForm";
 import { useIntl } from "react-intl";
-import { messages } from "./messages";
+
 import { WebhookFormData } from "../WebhookDetailsPage/WebhookDetailsPage";
+import { messages } from "./messages";
 
 interface WebhookStatusProps {
   data: boolean;

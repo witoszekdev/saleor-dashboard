@@ -24,6 +24,7 @@ import { Box, Button, ChevronRightIcon } from "@saleor/macaw-ui-next";
 import { useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 import { useLocation } from "react-router";
+
 import { FilterPresetsSelect } from "../../../components/FilterPresetsSelect/FilterPresetsSelect";
 import { ListPageLayout } from "../../../components/Layouts/List/index";
 import { DiscountListDatagrid } from "../DiscountListDatagrid/DiscountListDatagrid";

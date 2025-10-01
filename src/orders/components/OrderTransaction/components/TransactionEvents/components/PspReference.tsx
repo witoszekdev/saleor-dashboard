@@ -5,8 +5,8 @@ import { CheckIcon, CopyIcon, IconButton, makeStyles } from "@saleor/macaw-ui";
 import { clsx } from "clsx";
 import { useIntl } from "react-intl";
 
-import { PspReferenceLink } from "./PspReferenceLink";
 import { OverflowTooltip } from "../../../../../../components/OverflowTooltip/OverflowTooltip";
+import { PspReferenceLink } from "./PspReferenceLink";
 
 const useStyles = makeStyles(
   theme => ({

@@ -3,9 +3,10 @@ import { useCondtionValues } from "@dashboard/discounts/components/DiscountRules
 import { Option } from "@saleor/macaw-ui-next";
 import { useController, useFormContext } from "react-hook-form";
 import { FormattedMessage } from "react-intl";
-import { useDiscountRulesContext } from "../../../../context/consumer";
+
 import { Condition } from "../../../../../../models/Condition";
 import { Rule } from "../../../../../../models/Rule";
+import { useDiscountRulesContext } from "../../../../context/consumer";
 
 interface RuleConditionDynamicSelectProps {
   condition: Condition;

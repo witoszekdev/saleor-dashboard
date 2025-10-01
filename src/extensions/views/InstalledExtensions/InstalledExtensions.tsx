@@ -15,13 +15,14 @@ import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActi
 import { Box, ChevronRightIcon, Text } from "@saleor/macaw-ui-next";
 import { useEffect } from "react";
 import { useIntl } from "react-intl";
-import { DeleteFailedInstallationDialog } from "./components/DeleteFailedInstallationDialog";
-import { useInstalledExtensions } from "./hooks/useInstalledExtensions";
-import { usePendingInstallation } from "./hooks/usePendingInstallation";
+
 import { ListPageLayout } from "../../../components/Layouts/List/index";
 import { useOnboarding } from "../../../welcomePage/WelcomePageOnboarding/onboardingContext/OnboardingContext";
 import { AddExtensionDropdown } from "./components/AddExtensionDropdown/AddExtensionDropdown";
+import { DeleteFailedInstallationDialog } from "./components/DeleteFailedInstallationDialog";
 import { InstalledExtensionsList } from "./components/InstalledExtensionsList/InstalledExtensionsList";
+import { useInstalledExtensions } from "./hooks/useInstalledExtensions";
+import { usePendingInstallation } from "./hooks/usePendingInstallation";
 
 export interface InstalledExtensionsProps {
   params: ExtensionsListUrlQueryParams;

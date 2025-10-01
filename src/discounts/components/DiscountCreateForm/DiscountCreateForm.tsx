@@ -7,10 +7,10 @@ import { ReactNode } from "react";
 import { FormProvider, SubmitHandler, useForm } from "react-hook-form";
 import { useIntl } from "react-intl";
 
+import { Rule } from "../../models/Rule";
 import { useRulesHandlers } from "./hooks/useRulesHandlers";
 import { initialFormValues } from "./initialFormValues";
 import { getValidationSchema } from "./validationSchema";
-import { Rule } from "../../models/Rule";
 
 interface CreateFormRenderProps {
   rules: Rule[];

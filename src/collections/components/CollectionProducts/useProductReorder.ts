@@ -2,10 +2,10 @@ import { useReorderProductsInCollectionMutation } from "@dashboard/graphql";
 import { PaginationState } from "@dashboard/hooks/useLocalPaginator";
 import { useIntl } from "react-intl";
 
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
 import { Product } from "./types";
 import { useCollectionId } from "./useCollectionId";
 import { useProductReorderOptimistic } from "./useProductReorderOptimistic";
-import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
 
 interface ProductReorderProps {
   paginationState: PaginationState;

@@ -2,6 +2,7 @@ import { DecimalFilterInput, PromotionTypeEnum } from "@dashboard/graphql";
 import { useCategoryWithTotalProductsSearch } from "@dashboard/searches/useCategorySearch";
 import { useCollectionWithTotalProductsSearch } from "@dashboard/searches/useCollectionSearch";
 import { UseProductSearch as useProductSearch } from "@dashboard/searches/useProductSearch";
+
 import { Rule } from "./models/Rule";
 
 export enum RequirementsPicker {

@@ -24,14 +24,14 @@ import { useMetadataChangeTrigger } from "@dashboard/utils/metadata/useMetadataC
 import { Box, Text, Toggle } from "@saleor/macaw-ui-next";
 import { FormattedMessage } from "react-intl";
 
+import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import { Form } from "../../../components/Form/Form";
+import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
 import { ProductTypeAttributes } from "../ProductTypeAttributes/ProductTypeAttributes";
 import { ProductTypeDetails } from "../ProductTypeDetails/ProductTypeDetails";
 import { ProductTypeShipping } from "../ProductTypeShipping/ProductTypeShipping";
 import { ProductTypeTaxes } from "../ProductTypeTaxes/ProductTypeTaxes";
 import { ProductTypeVariantAttributes } from "../ProductTypeVariantAttributes/ProductTypeVariantAttributes";
-import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
-import { Form } from "../../../components/Form/Form";
-import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
 
 interface ChoiceType {
   label: string;

@@ -23,8 +23,9 @@ import { Container, RelayToFlat } from "@dashboard/types";
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { RichTextContextValues } from "@dashboard/utils/richText/context";
 import { GetRichTextValues, RichTextGetters } from "@dashboard/utils/richText/useMultipleRichText";
-import { productVariantCacheManager } from "./productVariantCache";
+
 import { AttributePageFormData } from "../components/AttributePage/AttributePage";
+import { productVariantCacheManager } from "./productVariantCache";
 
 type AtributesOfFiles = Pick<AttributeValueInput, "file" | "id" | "values" | "contentType">;
 

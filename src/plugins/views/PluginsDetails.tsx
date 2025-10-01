@@ -13,12 +13,16 @@ import { commonMessages } from "@dashboard/intl";
 import { extractMutationErrors } from "@dashboard/misc";
 import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
 import { FormattedMessage, useIntl } from "react-intl";
+
+import { useNotifier } from "../../hooks/useNotifier/useNotifier";
+import {
+  PluginDetailsPageFormData,
+  PluginsDetailsPage,
+} from "../components/PluginsDetailsPage/PluginsDetailsPage";
+import { PluginSecretFieldDialog } from "../components/PluginSecretFieldDialog/PluginSecretFieldDialog";
 import { pluginUrl, PluginUrlDialog, PluginUrlQueryParams } from "../urls";
 import { isSecretField } from "../utils";
 import { getConfigByChannelId, isPluginGlobal } from "./utils";
-import { useNotifier } from "../../hooks/useNotifier/useNotifier";
-import { PluginDetailsPageFormData, PluginsDetailsPage } from "../components/PluginsDetailsPage/PluginsDetailsPage";
-import { PluginSecretFieldDialog } from "../components/PluginSecretFieldDialog/PluginSecretFieldDialog";
 
 interface PluginsDetailsProps {
   id: string;

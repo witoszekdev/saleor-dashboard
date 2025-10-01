@@ -56,13 +56,17 @@ import { Button } from "@saleor/macaw-ui-next";
 import { useMemo, useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
 import { maybe } from "../../../misc";
+import { DiscountCountrySelectDialog } from "../../components/DiscountCountrySelectDialog/DiscountCountrySelectDialog";
+import {
+  VoucherDetailsPage,
+  VoucherDetailsPageTab,
+  VoucherTabItemsCount,
+} from "../../components/VoucherDetailsPage/VoucherDetailsPage";
 import { createUpdateHandler } from "./handlers";
 import { useVoucherCodes } from "./hooks/useVoucherCodes";
 import { VOUCHER_UPDATE_FORM_ID } from "./types";
-import { DiscountCountrySelectDialog } from "../../components/DiscountCountrySelectDialog/DiscountCountrySelectDialog";
-import { VoucherDetailsPage, VoucherDetailsPageTab, VoucherTabItemsCount } from "../../components/VoucherDetailsPage/VoucherDetailsPage";
-import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
 
 interface VoucherDetailsProps {
   id: string;

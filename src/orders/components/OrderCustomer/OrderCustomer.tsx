@@ -21,13 +21,13 @@ import { Button, Skeleton, Text } from "@saleor/macaw-ui-next";
 import * as React from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
+import { ExternalLink } from "../../../components/ExternalLink/ExternalLink";
+import { Form } from "../../../components/Form/Form";
 import { customerUrl } from "../../../customers/urls";
 import { maybe } from "../../../misc";
 import { AddressTextError } from "./AddrssTextError";
 import { PickupAnnotation } from "./PickupAnnotation";
 import { useStyles } from "./styles";
-import { ExternalLink } from "../../../components/ExternalLink/ExternalLink";
-import { Form } from "../../../components/Form/Form";
 
 export interface CustomerEditData {
   user?: string;

@@ -42,12 +42,12 @@ import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { getParsedDataForJsonStringField } from "@dashboard/utils/richText/misc";
 import { FormattedMessage, useIntl } from "react-intl";
 
+import { useNotifier } from "../../hooks/useNotifier/useNotifier";
 import { getStringOrPlaceholder, maybe } from "../../misc";
 import { PageData, PageSubmitData } from "../components/PageDetailsPage/form";
+import { PageDetailsPage } from "../components/PageDetailsPage/PageDetailsPage";
 import { pageListUrl, pageUrl, PageUrlQueryParams } from "../urls";
 import { getAttributeInputFromPage } from "../utils/data";
-import { useNotifier } from "../../hooks/useNotifier/useNotifier";
-import { PageDetailsPage } from "../components/PageDetailsPage/PageDetailsPage";
 
 interface PageDetailsProps {
   id: string;

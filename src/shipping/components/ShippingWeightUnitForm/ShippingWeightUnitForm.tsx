@@ -4,6 +4,7 @@ import { buttonMessages } from "@dashboard/intl";
 import { Box, Button, Option, Select } from "@saleor/macaw-ui-next";
 import { useMemo } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
+
 import { Form } from "../../../components/Form/Form";
 
 interface FormData {

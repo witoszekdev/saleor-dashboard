@@ -2,11 +2,18 @@
 import { CollectionFilterInput, CollectionPublished } from "@dashboard/graphql";
 import { findValueInEnum, maybe } from "@dashboard/misc";
 import { Option } from "@saleor/macaw-ui-next";
-import { CollectionListUrlFilters, CollectionListUrlFiltersEnum } from "../../urls";
-import { CollectionFilterKeys, CollectionListFilterOpts } from "../../components/CollectionListPage/filters";
+
 import { FilterElement, FilterElementRegular } from "../../../components/Filter/types";
+import {
+  getSingleEnumValueQueryParam,
+  getSingleValueQueryParam,
+} from "../../../utils/filters/filters";
 import { createFilterTabUtils } from "../../../utils/filters/storage";
-import { getSingleEnumValueQueryParam, getSingleValueQueryParam } from "../../../utils/filters/filters";
+import {
+  CollectionFilterKeys,
+  CollectionListFilterOpts,
+} from "../../components/CollectionListPage/filters";
+import { CollectionListUrlFilters, CollectionListUrlFiltersEnum } from "../../urls";
 
 const COLLECTION_FILTERS_KEY = "collectionFilters";
 

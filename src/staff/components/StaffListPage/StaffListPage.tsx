@@ -13,11 +13,12 @@ import { hasLimits, isLimitReached } from "@dashboard/utils/limits";
 import { Box, Button, ChevronRightIcon } from "@saleor/macaw-ui-next";
 import { useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
-import { createFilterStructure, StaffFilterKeys, StaffListFilterOpts } from "./filters";
+
 import { ListFilters } from "../../../components/AppLayout/ListFilters/ListFilters";
 import { FilterPresetsSelect } from "../../../components/FilterPresetsSelect/FilterPresetsSelect";
 import { ListPageLayout } from "../../../components/Layouts/List/index";
 import { StaffListDatagrid } from "../StaffListDatagrid/StaffListDatagrid";
+import { createFilterStructure, StaffFilterKeys, StaffListFilterOpts } from "./filters";
 
 interface StaffListPageProps
   extends ListProps,

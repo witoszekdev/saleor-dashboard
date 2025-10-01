@@ -4,11 +4,11 @@ import { makeStyles } from "@saleor/macaw-ui";
 import { Option, Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage } from "react-intl";
 
+import { toggle } from "../../utils/lists/lists";
 import { Checkbox } from "../Checkbox";
 import { Hr } from "../Hr";
 import { Link } from "../Link";
 import { FieldType, FilterFieldBaseProps } from "./types";
-import { toggle } from "../../utils/lists/lists";
 
 interface FilterAutocompleteFieldProps
   extends FilterFieldBaseProps<string, FieldType.autocomplete> {

@@ -5,8 +5,8 @@ import { PluginBaseFragment } from "@dashboard/graphql";
 import { Text } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
 
-import { globalConfigPluginMessages as messages, pluginStatusMessages } from "../messages";
 import { Pill } from "../../../../components/Pill/Pill";
+import { globalConfigPluginMessages as messages, pluginStatusMessages } from "../messages";
 
 interface GlobalConfigPluginPopupBodyProps {
   plugin: PluginBaseFragment;

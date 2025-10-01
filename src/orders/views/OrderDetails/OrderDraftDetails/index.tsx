@@ -38,13 +38,13 @@ import { customerUrl } from "../../../../customers/urls";
 import { extractMutationErrors, getStringOrPlaceholder } from "../../../../misc";
 import { productUrl } from "../../../../products/urls";
 import { OrderAddressFields } from "../../../components/OrderAddressFields/OrderAddressFields";
-import { OrderDraftCancelDialog } from "../../../components/OrderDraftCancelDialog/OrderDraftCancelDialog";
-import { orderDraftListUrl, OrderUrlDialog, OrderUrlQueryParams } from "../../../urls";
 import { CustomerEditData } from "../../../components/OrderCustomer/OrderCustomer";
-import { OrderMetadataDialog } from "../../../components/OrderMetadataDialog/OrderMetadataDialog";
+import { OrderDraftCancelDialog } from "../../../components/OrderDraftCancelDialog/OrderDraftCancelDialog";
 import { OrderDraftPage } from "../../../components/OrderDraftPage/OrderDraftPage";
+import { OrderMetadataDialog } from "../../../components/OrderMetadataDialog/OrderMetadataDialog";
 import { OrderProductAddDialog } from "../../../components/OrderProductAddDialog/OrderProductAddDialog";
 import { OrderShippingMethodEditDialog } from "../../../components/OrderShippingMethodEditDialog/OrderShippingMethodEditDialog";
+import { orderDraftListUrl, OrderUrlDialog, OrderUrlQueryParams } from "../../../urls";
 
 interface OrderDraftDetailsProps {
   id: string;

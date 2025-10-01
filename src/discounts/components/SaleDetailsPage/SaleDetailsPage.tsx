@@ -27,8 +27,6 @@ import { sprinkles } from "@saleor/macaw-ui-next";
 import { useState } from "react";
 import { useIntl } from "react-intl";
 
-import { splitDateTime } from "../../../misc";
-import { ChannelProps, ListProps, TabListActions } from "../../../types";
 import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
 import { Form } from "../../../components/Form/Form";
 import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
@@ -36,6 +34,8 @@ import { Metadata } from "../../../components/Metadata/Metadata";
 import { MetadataFormData } from "../../../components/Metadata/types";
 import { Tab } from "../../../components/Tab/Tab";
 import { TabContainer } from "../../../components/Tab/TabContainer";
+import { splitDateTime } from "../../../misc";
+import { ChannelProps, ListProps, TabListActions } from "../../../types";
 import { DiscountCategories } from "../DiscountCategories/DiscountCategories";
 import { DiscountCollections } from "../DiscountCollections/DiscountCollections";
 import { DiscountDates } from "../DiscountDates/DiscountDates";

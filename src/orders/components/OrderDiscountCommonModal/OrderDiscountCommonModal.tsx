@@ -9,10 +9,13 @@ import { ChangeEvent, useEffect, useRef, useState } from "react";
 import * as React from "react";
 import { defineMessages, useIntl } from "react-intl";
 
-import { ORDER_LINE_DISCOUNT, OrderDiscountCommonInput, OrderDiscountType } from "./types";
-import { ConfirmButton, ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import {
+  ConfirmButton,
+  ConfirmButtonTransitionState,
+} from "../../../components/ConfirmButton/ConfirmButton";
 import { PriceField } from "../../../components/PriceField/PriceField";
 import { NewRadioGroupField as RadioGroupField } from "../../../components/RadioGroupField/RadioGroupField";
+import { ORDER_LINE_DISCOUNT, OrderDiscountCommonInput, OrderDiscountType } from "./types";
 
 type GetErrorMessageReturn = string | null;
 

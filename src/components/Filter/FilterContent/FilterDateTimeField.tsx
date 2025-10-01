@@ -4,13 +4,13 @@ import { splitDateTime } from "@dashboard/misc";
 import { TextField } from "@material-ui/core";
 import { FormattedMessage } from "react-intl";
 
+import { FieldType, FilterFieldBaseProps } from "../types";
 import {
   filterTestingContext,
   getDateFilterValue,
   getDateTimeFilterValue,
   useCommonStyles,
 } from "./utils";
-import { FieldType, FilterFieldBaseProps } from "../types";
 
 type FilterDateTimeFieldProps = FilterFieldBaseProps<string, FieldType.dateTime | FieldType.date>;
 

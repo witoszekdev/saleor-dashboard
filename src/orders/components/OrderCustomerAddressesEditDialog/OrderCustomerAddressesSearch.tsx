@@ -9,11 +9,14 @@ import { Button, SearchIcon } from "@saleor/macaw-ui";
 import * as React from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
+import {
+  ConfirmButton,
+  ConfirmButtonTransitionState,
+} from "../../../components/ConfirmButton/ConfirmButton";
+import { CustomerAddressChoiceCard } from "../../../customers/components/CustomerAddressChoiceCard/CustomerAddressChoiceCard";
 import { dialogMessages as messages } from "./messages";
 import { useStyles } from "./styles";
 import { parseQuery, stringifyAddress } from "./utils";
-import { ConfirmButton, ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
-import { CustomerAddressChoiceCard } from "../../../customers/components/CustomerAddressChoiceCard/CustomerAddressChoiceCard";
 
 interface OrderCustomerAddressesSearchProps {
   type: AddressTypeEnum;

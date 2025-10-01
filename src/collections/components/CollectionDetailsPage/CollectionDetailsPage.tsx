@@ -27,14 +27,14 @@ import { useCachedLocales } from "@dashboard/translations/useCachedLocales";
 import { Box, Divider } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
 
+import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
+import { SeoForm } from "../../../components/SeoForm/SeoForm";
 import { ChannelProps, PageListProps } from "../../../types";
 import { CollectionDetails } from "../CollectionDetails/CollectionDetails";
 import { CollectionImage } from "../CollectionImage/CollectionImage";
 import { CollectionProducts } from "../CollectionProducts/CollectionProducts";
 import { CollectionUpdateData, CollectionUpdateForm } from "./form";
-import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
-import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
-import { SeoForm } from "../../../components/SeoForm/SeoForm";
 
 interface CollectionDetailsPageProps extends PageListProps, ChannelProps {
   channelsCount: number;

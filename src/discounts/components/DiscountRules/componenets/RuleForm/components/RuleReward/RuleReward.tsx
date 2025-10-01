@@ -4,11 +4,11 @@ import * as React from "react";
 import { useFormContext } from "react-hook-form";
 import { useIntl } from "react-intl";
 
-import { messages } from "../../../../messages";
-import { RuleRewardTypeSelect } from "../RuleRewardTypeSelect/RuleRewardTypeSelect";
-import { useDiscountRulesContext } from "../../../../context/consumer";
 import { Rule } from "../../../../../../models/Rule";
+import { useDiscountRulesContext } from "../../../../context/consumer";
+import { messages } from "../../../../messages";
 import { RuleRewardGifts } from "../RuleRewardGifts/RuleRewardGifts";
+import { RuleRewardTypeSelect } from "../RuleRewardTypeSelect/RuleRewardTypeSelect";
 import { RuleRewardValue } from "../RuleRewardValue/RuleRewardValue";
 
 interface RuleRewardProps {

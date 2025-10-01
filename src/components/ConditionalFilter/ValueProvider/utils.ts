@@ -1,5 +1,5 @@
-import { UrlEntry } from "./UrlToken";
 import { FilterContainer } from "../FilterElement/FilterElement";
+import { UrlEntry } from "./UrlToken";
 
 type Structure = Array<string | UrlEntry | Structure>;
 

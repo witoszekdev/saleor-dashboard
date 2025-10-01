@@ -10,13 +10,14 @@ import { Box, Input, Option } from "@saleor/macaw-ui-next";
 import { useEffect, useMemo } from "react";
 import { useController, useFormContext } from "react-hook-form";
 import { useIntl } from "react-intl";
-import { getCurencySymbol } from "../../utils";
-import { RuleInputWrapper } from "./components/RuleInputWrapper/RuleInputWrapper";
+
 import { createEmptyCodition } from "../../../../models/Condition";
 import { Rule } from "../../../../models/Rule";
 import { useDiscountRulesContext } from "../../context/consumer";
+import { getCurencySymbol } from "../../utils";
 import { RuleConditions } from "./components/RuleConditions/RuleConditions";
 import { RuleDescription } from "./components/RuleDescription/RuleDescription";
+import { RuleInputWrapper } from "./components/RuleInputWrapper/RuleInputWrapper";
 import { RuleReward } from "./components/RuleReward/RuleReward";
 
 interface RuleFormProps<ErrorCode> {

@@ -16,10 +16,10 @@ import { useIntl } from "react-intl";
 import { DashboardCard } from "../Card";
 import { DateTimeTimezoneField } from "../DateTimeTimezoneField";
 import { FormSpacer } from "../FormSpacer";
+import { RadioSwitchField } from "../RadioSwitchField/RadioSwitchField";
 import { DateVisibilitySelector } from "./DateVisibilitySelector";
 import { visibilityCardMessages } from "./messages";
 import { isAvailableOrPublished } from "./utils";
-import { RadioSwitchField } from "../RadioSwitchField/RadioSwitchField";
 
 const useStyles = makeStyles(
   theme => ({

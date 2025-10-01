@@ -10,12 +10,12 @@ import { ICONBUTTON_SIZE, makeStyles } from "@saleor/macaw-ui";
 import { Button, EditIcon, Skeleton, TrashBinIcon } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import { maybe, renderCollection } from "../../../misc";
 import { IconButtonTableCell } from "../../../components/IconButtonTableCell/IconButtonTableCell";
 import { MoneyRange } from "../../../components/MoneyRange/MoneyRange";
 import { ResponsiveTable } from "../../../components/ResponsiveTable/ResponsiveTable";
 import { TableRowLink } from "../../../components/TableRowLink/TableRowLink";
 import { WeightRange } from "../../../components/WeightRange/WeightRange";
+import { maybe, renderCollection } from "../../../misc";
 
 interface ShippingZoneRatesProps extends ChannelProps {
   disabled: boolean;

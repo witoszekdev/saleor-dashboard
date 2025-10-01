@@ -11,11 +11,11 @@ import { Box, Button, ChevronRightIcon } from "@saleor/macaw-ui-next";
 import { useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import { FilterPageProps, ListActions, PageListProps, SortPage } from "../../../types";
-import { createFilterStructure, ProductTypeFilterKeys, ProductTypeListFilterOpts } from "./filters";
 import { ListFilters } from "../../../components/AppLayout/ListFilters/ListFilters";
 import { FilterPresetsSelect } from "../../../components/FilterPresetsSelect/FilterPresetsSelect";
 import { ListPageLayout } from "../../../components/Layouts/List/index";
+import { FilterPageProps, ListActions, PageListProps, SortPage } from "../../../types";
+import { createFilterStructure, ProductTypeFilterKeys, ProductTypeListFilterOpts } from "./filters";
 
 interface ProductTypeListPageProps
   extends PageListProps,

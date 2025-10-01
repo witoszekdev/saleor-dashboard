@@ -14,13 +14,13 @@ import { SubmitPromise } from "@dashboard/hooks/useForm";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { useIntl } from "react-intl";
 
-import { CollectionDetails } from "../CollectionDetails/CollectionDetails";
-import { CollectionImage } from "../CollectionImage/CollectionImage";
-import { CollectionCreateData, CollectionCreateForm } from "./form";
 import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
 import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
 import { Metadata } from "../../../components/Metadata/Metadata";
 import { SeoForm } from "../../../components/SeoForm/SeoForm";
+import { CollectionDetails } from "../CollectionDetails/CollectionDetails";
+import { CollectionImage } from "../CollectionImage/CollectionImage";
+import { CollectionCreateData, CollectionCreateForm } from "./form";
 
 interface CollectionCreatePageProps {
   channelsCount: number;

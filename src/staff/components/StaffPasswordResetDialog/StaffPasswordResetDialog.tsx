@@ -8,6 +8,7 @@ import { DialogProps } from "@dashboard/types";
 import { Box, Input, Paragraph } from "@saleor/macaw-ui-next";
 import React from "react";
 import { FormattedMessage, useIntl } from "react-intl";
+
 import { ConfirmButton } from "../../../components/ConfirmButton/ConfirmButton";
 import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
 

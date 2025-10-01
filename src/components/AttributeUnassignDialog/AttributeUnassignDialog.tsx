@@ -1,8 +1,8 @@
 import { ActionDialog } from "@dashboard/components/ActionDialog";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import { messages } from "./messages";
 import { ConfirmButtonTransitionState } from "../ConfirmButton/ConfirmButton";
+import { messages } from "./messages";
 
 interface AttributeUnassignDialogProps {
   title: string;

@@ -5,13 +5,13 @@ import { CircularProgress, Radio, TableBody, TableCell, TextField } from "@mater
 import { Text } from "@saleor/macaw-ui-next";
 import { useState } from "react";
 
+import { useModalDialogOpen } from "../../hooks/useModalDialogOpen/useModalDialogOpen";
 import { BackButton } from "../BackButton";
-import { useStyles } from "./styles";
 import { ConfirmButton, ConfirmButtonTransitionState } from "../ConfirmButton/ConfirmButton";
 import { InfiniteScroll } from "../InfiniteScroll/InfiniteScroll";
 import { ResponsiveTable } from "../ResponsiveTable/ResponsiveTable";
 import { TableRowLink } from "../TableRowLink/TableRowLink";
-import { useModalDialogOpen } from "../../hooks/useModalDialogOpen/useModalDialogOpen";
+import { useStyles } from "./styles";
 
 type Labels = Record<"confirmBtn" | "title" | "label" | "placeholder", string>;
 

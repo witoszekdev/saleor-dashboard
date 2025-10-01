@@ -4,10 +4,11 @@ import { RequirePermissions } from "@dashboard/components/RequirePermissions";
 import { ChannelFragment, PermissionEnum } from "@dashboard/graphql";
 import { Box, Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage } from "react-intl";
-import { WelcomePageSidebarContextProvider } from "./context/WelcomePageSidebarContextProvider";
+
 import { WelcomePageActivities } from "./components/WelcomePageActivities/WelcomePageActivities";
 import { WelcomePageSalesAnalytics } from "./components/WelcomePageSalesAnalytics/WelcomePageSalesAnalytics";
 import { WelcomePageStocksAnalytics } from "./components/WelcomePageStocksAnalytics/WelcomePageStocksAnalytics";
+import { WelcomePageSidebarContextProvider } from "./context/WelcomePageSidebarContextProvider";
 
 interface HomeSidebarProps {
   channel: ChannelFragment | undefined;

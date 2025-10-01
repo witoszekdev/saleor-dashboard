@@ -30,12 +30,16 @@ import { createMetadataUpdateHandler } from "@dashboard/utils/handlers/metadataU
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
-import { productTypeListUrl, productTypeUrl, ProductTypeUrlQueryParams } from "../../urls";
+
 import { NotFoundPage } from "../../../components/NotFoundPage/NotFoundPage";
 import { TypeDeleteWarningDialog } from "../../../components/TypeDeleteWarningDialog/TypeDeleteWarningDialog";
 import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
+import {
+  ProductTypeDetailsPage,
+  ProductTypeForm,
+} from "../../components/ProductTypeDetailsPage/ProductTypeDetailsPage";
 import { useProductTypeDelete } from "../../hooks/useProductTypeDelete/useProductTypeDelete";
-import { ProductTypeDetailsPage, ProductTypeForm } from "../../components/ProductTypeDetailsPage/ProductTypeDetailsPage";
+import { productTypeListUrl, productTypeUrl, ProductTypeUrlQueryParams } from "../../urls";
 
 interface ProductTypeUpdateProps {
   id: string;

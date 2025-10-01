@@ -3,8 +3,8 @@ import { makeStyles } from "@saleor/macaw-ui";
 import { Text } from "@saleor/macaw-ui-next";
 import { defineMessages, useIntl } from "react-intl";
 
-import { Label } from "../Label";
 import { HorizontalSpacer } from "../../../../components/HorizontalSpacer/HorizontalSpacer";
+import { Label } from "../Label";
 
 const useStyles = makeStyles(
   () => ({

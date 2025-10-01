@@ -24,8 +24,8 @@ import { FetchMoreProps, ReorderEvent } from "@dashboard/types";
 import isEqual from "lodash/isEqual";
 import uniqBy from "lodash/uniqBy";
 
-import { getFileValuesToUploadFromAttributes, isFileValueUnused } from "./data";
 import { move, toggle } from "../../utils/lists/lists";
+import { getFileValuesToUploadFromAttributes, isFileValueUnused } from "./data";
 
 export function createAttributeChangeHandler(
   attributesFormData: UseFormsetOutput<AttributeInputData>,

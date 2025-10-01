@@ -18,6 +18,7 @@ import { orderUrl } from "@dashboard/orders/urls";
 import { useState } from "react";
 import { useIntl } from "react-intl";
 
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
 import {
   checkAmountExceedsChargedAmount,
   handleAmountExceedsChargedAmount,
@@ -25,7 +26,6 @@ import {
 } from "../OrderTransactionRefundCreate/handlers";
 import { handleRefundEditComplete } from "./handlers";
 import { transactionRefundEditMessages } from "./messages";
-import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
 
 interface OrderTransactionRefundProps {
   orderId: string;

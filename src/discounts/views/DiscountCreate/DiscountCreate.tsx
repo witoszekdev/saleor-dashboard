@@ -7,10 +7,10 @@ import { commonMessages } from "@dashboard/intl";
 import { getMutationErrors } from "@dashboard/misc";
 import { useIntl } from "react-intl";
 
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
+import { DiscountCreatePage } from "../../components/DiscountCreatePage/DiscountCreatePage";
 import { EmpptyLabelsMapsProvider } from "../DiscountDetails/context/provider";
 import { useDiscountCreate } from "./handlers";
-import { DiscountCreatePage } from "../../components/DiscountCreatePage/DiscountCreatePage";
-import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
 
 export const DiscountCreate = () => {
   const { availableChannels } = useAppChannel(false);

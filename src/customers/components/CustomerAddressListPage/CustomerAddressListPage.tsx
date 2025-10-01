@@ -7,8 +7,8 @@ import { makeStyles } from "@saleor/macaw-ui";
 import { Box, Button, Text } from "@saleor/macaw-ui-next";
 import { defineMessages, useIntl } from "react-intl";
 
-import { CustomerAddress } from "../CustomerAddress/CustomerAddress";
 import { ListPageLayout } from "../../../components/Layouts/List/index";
+import { CustomerAddress } from "../CustomerAddress/CustomerAddress";
 
 interface CustomerAddressListPageProps {
   customer: CustomerAddressesFragment;

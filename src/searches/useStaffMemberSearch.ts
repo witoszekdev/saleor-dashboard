@@ -5,6 +5,7 @@ import {
   SearchStaffMembersQuery,
   SearchStaffMembersQueryVariables,
 } from "@dashboard/graphql";
+
 import { makeTopLevelSearch } from "../hooks/makeTopLevelSearch/makeTopLevelSearch";
 
 export const searchStaffMembers = gql`

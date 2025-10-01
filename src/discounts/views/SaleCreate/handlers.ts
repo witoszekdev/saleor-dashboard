@@ -10,6 +10,7 @@ import {
   SaleType,
 } from "@dashboard/graphql";
 import { decimal, extractMutationErrors, getMutationErrors, joinDateTime } from "@dashboard/misc";
+
 import { FormData } from "../../components/SaleCreatePage/SaleCreatePage";
 
 function discountValueTypeEnum(type: SaleType): DiscountValueTypeEnum {

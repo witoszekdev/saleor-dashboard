@@ -16,10 +16,10 @@ import {
 import { Option } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import { TaxConfigurationFormData } from "../TaxChannelsPage";
-import { useStyles } from "./styles";
 import { Select } from "../../../../components/Select/Select";
 import { LegacyFlowWarning } from "../../../components/LegacyFlowWarning";
+import { TaxConfigurationFormData } from "../TaxChannelsPage";
+import { useStyles } from "./styles";
 
 interface TaxSettingsCardProps {
   values: TaxConfigurationFormData;

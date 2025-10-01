@@ -32,7 +32,9 @@ import isEqual from "lodash/isEqual";
 import { useCallback, useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
+import { NotFoundPage } from "../../components/NotFoundPage/NotFoundPage";
 import { PAGINATE_BY } from "../../config";
+import { useNotifier } from "../../hooks/useNotifier/useNotifier";
 import { extractMutationErrors, maybe } from "../../misc";
 import { productAddUrl } from "../../products/urls";
 import {
@@ -41,8 +43,6 @@ import {
 } from "../components/CategoryUpdatePage/CategoryUpdatePage";
 import { CategoryUpdateData } from "../components/CategoryUpdatePage/form";
 import { categoryListUrl, categoryUrl, CategoryUrlDialog, CategoryUrlQueryParams } from "../urls";
-import { NotFoundPage } from "../../components/NotFoundPage/NotFoundPage";
-import { useNotifier } from "../../hooks/useNotifier/useNotifier";
 
 interface CategoryDetailsProps {
   params: CategoryUrlQueryParams;

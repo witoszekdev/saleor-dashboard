@@ -5,9 +5,9 @@ import { Option } from "@saleor/macaw-ui-next";
 import { useState } from "react";
 import { useIntl } from "react-intl";
 
-import { messages } from "./messages";
 import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
 import { useModalDialogOpen } from "../../../hooks/useModalDialogOpen/useModalDialogOpen";
+import { messages } from "./messages";
 
 interface ChannelPickerDialogProps {
   channelsChoices: Option[];

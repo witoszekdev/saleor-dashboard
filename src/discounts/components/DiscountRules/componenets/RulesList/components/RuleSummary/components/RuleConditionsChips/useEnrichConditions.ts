@@ -3,11 +3,11 @@ import { useCondtionTypes } from "@dashboard/discounts/components/DiscountRules/
 import { useLocale } from "@dashboard/hooks/useLocale";
 import { IntlShape, useIntl } from "react-intl";
 
+import { Locale } from "../../../../../../../../../components/Locale/Locale";
+import { Condition } from "../../../../../../../../models/Condition";
+import { useDiscountRulesContext } from "../../../../../../context/consumer";
 import { messages } from "../../messages";
 import { formatMoney, formatMoneyRange } from "./formatLable";
-import { Locale } from "../../../../../../../../../components/Locale/Locale";
-import { useDiscountRulesContext } from "../../../../../../context/consumer";
-import { Condition } from "../../../../../../../../models/Condition";
 
 export type EnrichCondition = Condition & {
   inputType: string | null;

@@ -5,9 +5,12 @@ import { getOrderErrorMessage } from "@dashboard/utils/errors/order";
 import { Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import { cancelOrderDialogMessages } from "./messages";
-import { ConfirmButton, ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import {
+  ConfirmButton,
+  ConfirmButtonTransitionState,
+} from "../../../components/ConfirmButton/ConfirmButton";
 import { useModalDialogErrors } from "../../../hooks/useModalDialogErrors/useModalDialogErrors";
+import { cancelOrderDialogMessages } from "./messages";
 
 interface OrderCancelDialogProps {
   confirmButtonState: ConfirmButtonTransitionState;

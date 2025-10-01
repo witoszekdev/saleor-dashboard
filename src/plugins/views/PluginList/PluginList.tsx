@@ -18,6 +18,11 @@ import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { getSortParams } from "@dashboard/utils/sort";
 import { useMemo } from "react";
 
+import { DeleteFilterTabDialog } from "../../../components/DeleteFilterTabDialog/DeleteFilterTabDialog";
+import {
+  SaveFilterTabDialog,
+  SaveFilterTabDialogFormData,
+} from "../../../components/SaveFilterTabDialog/SaveFilterTabDialog";
 import { PluginsListPage } from "../../components/PluginsListPage/PluginsListPage";
 import { pluginListUrl, PluginListUrlDialog, PluginListUrlQueryParams } from "../../urls";
 import {
@@ -31,8 +36,6 @@ import {
   saveFilterTab,
 } from "./filters";
 import { getSortQueryVariables } from "./sort";
-import { DeleteFilterTabDialog } from "../../../components/DeleteFilterTabDialog/DeleteFilterTabDialog";
-import { SaveFilterTabDialog, SaveFilterTabDialogFormData } from "../../../components/SaveFilterTabDialog/SaveFilterTabDialog";
 
 interface PluginsListProps {
   params: PluginListUrlQueryParams;

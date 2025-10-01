@@ -11,13 +11,14 @@ import { Checkbox, Skeleton } from "@saleor/macaw-ui-next";
 import { CSSProperties } from "react";
 import * as React from "react";
 import { FormattedMessage } from "react-intl";
+
+import { TableCellAvatar } from "../../../../components/TableCellAvatar/TableCellAvatar";
+import { TableRowLink } from "../../../../components/TableRowLink/TableRowLink";
+import { OrderCardTitle } from "../../OrderCardTitle/OrderCardTitle";
 import { MaximalButton } from "../components/MaximalButton";
 import { FormsetQuantityData, FormsetReplacementData } from "../form";
 import { getQuantityDataFromItems, getReplacementDataFromItems } from "../utils";
 import { ProductErrorCell } from "./ProductErrorCell";
-import { TableCellAvatar } from "../../../../components/TableCellAvatar/TableCellAvatar";
-import { TableRowLink } from "../../../../components/TableRowLink/TableRowLink";
-import { OrderCardTitle } from "../../OrderCardTitle/OrderCardTitle";
 
 const useStyles = makeStyles(
   theme => {

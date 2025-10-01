@@ -10,12 +10,12 @@ import { EditIcon, makeStyles } from "@saleor/macaw-ui";
 import { Skeleton, Text } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
 
+import { ResponsiveTable } from "../../../components/ResponsiveTable/ResponsiveTable";
+import { TableRowLink } from "../../../components/TableRowLink/TableRowLink";
 import { pluginsMiscMessages } from "./messages";
 import { PluginChannelAvailabilityCell } from "./PluginChannelAvailabilityCell";
 import { PluginChannelConfigurationCell } from "./PluginChannelConfigurationCell";
 import { PluginListTableHead } from "./PluginListTableHead";
-import { ResponsiveTable } from "../../../components/ResponsiveTable/ResponsiveTable";
-import { TableRowLink } from "../../../components/TableRowLink/TableRowLink";
 
 const useStyles = makeStyles(
   () => ({

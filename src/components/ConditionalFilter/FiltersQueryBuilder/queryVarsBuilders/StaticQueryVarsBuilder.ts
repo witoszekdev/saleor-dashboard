@@ -12,9 +12,9 @@ import {
 } from "../../API/Handler";
 import { STATIC_CONDITIONS } from "../../constants";
 import { isItemOption, isItemOptionArray } from "../../FilterElement/ConditionValue";
+import { FilterElement } from "../../FilterElement/FilterElement";
 import { QueryVarsBuilderUtils } from "../utils";
 import { BothApiQueryVarsBuilder, FilterQuery } from "./types";
-import { FilterElement } from "../../FilterElement/FilterElement";
 
 const SUPPORTED_STATIC_FIELDS = new Set([
   "collection",

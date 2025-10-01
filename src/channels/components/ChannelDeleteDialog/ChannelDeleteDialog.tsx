@@ -4,9 +4,9 @@ import { buttonMessages } from "@dashboard/intl";
 import { Option, Text } from "@saleor/macaw-ui-next";
 import { defineMessages, useIntl } from "react-intl";
 
-import { useStyles } from "../styles";
 import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
 import { Select } from "../../../components/Select/Select";
+import { useStyles } from "../styles";
 
 const messages = defineMessages({
   deleteChannel: {

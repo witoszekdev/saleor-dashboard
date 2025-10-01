@@ -1,11 +1,11 @@
 import { act, renderHook } from "@testing-library/react-hooks";
+
+import { Condition } from "./FilterElement/Condition";
 import { ConditionOptions } from "./FilterElement/ConditionOptions";
 import { ConditionSelected } from "./FilterElement/ConditionSelected";
-import { ExpressionValue } from "./FilterElement/FilterElement";
+import { ExpressionValue , FilterElement } from "./FilterElement/FilterElement";
 import { FilterValueProvider } from "./FilterValueProvider";
 import { useContainerState } from "./useContainerState";
-import { Condition } from "./FilterElement/Condition";
-import { FilterElement } from "./FilterElement/FilterElement";
 
 describe("ConditionalFilter / useContainerState", () => {
   const valueProvider: FilterValueProvider = {

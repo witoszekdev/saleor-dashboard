@@ -1,8 +1,8 @@
 import * as React from "react";
 
+import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
 import { ManualTransactionContext } from "./context";
 import { useManualRefund } from "./hooks";
-import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
 
 interface OrderManualTransactionSubmitVariables {
   amount: number;

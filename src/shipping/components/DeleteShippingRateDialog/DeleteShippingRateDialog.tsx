@@ -1,6 +1,7 @@
 import { ActionDialog } from "@dashboard/components/ActionDialog";
 import { getStringOrPlaceholder } from "@dashboard/misc";
 import { FormattedMessage, useIntl } from "react-intl";
+
 import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
 
 interface DeleteShippingRateDialogProps {

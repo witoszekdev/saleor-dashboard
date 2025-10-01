@@ -7,6 +7,7 @@ import {
 } from "@dashboard/graphql";
 import { Option } from "@saleor/macaw-ui-next";
 import difference from "lodash/difference";
+
 import { PermissionGroupDetailsPageFormData } from "./components/PermissionGroupDetailsPage/PermissionGroupDetailsPage";
 
 /**

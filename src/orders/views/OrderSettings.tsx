@@ -4,9 +4,9 @@ import { commonMessages } from "@dashboard/intl";
 import { extractMutationErrors, getMutationState } from "@dashboard/misc";
 import { useIntl } from "react-intl";
 
-import { OrderSettingsFormData } from "../components/OrderSettingsPage/types";
 import { useNotifier } from "../../hooks/useNotifier/useNotifier";
 import { OrderSettingsPage } from "../components/OrderSettingsPage/OrderSettingsPage";
+import { OrderSettingsFormData } from "../components/OrderSettingsPage/types";
 
 const OrderSettings = () => {
   const intl = useIntl();

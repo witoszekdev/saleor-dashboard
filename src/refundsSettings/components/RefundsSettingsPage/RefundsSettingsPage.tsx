@@ -19,6 +19,7 @@ import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { useIntl } from "react-intl";
 import { z } from "zod";
+
 import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
 import { PageSectionHeader } from "../../../components/PageSectionHeader/PageSectionHeader";
 import { useNotifier } from "../../../hooks/useNotifier/useNotifier";

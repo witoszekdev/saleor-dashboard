@@ -4,14 +4,14 @@ import { Divider } from "@material-ui/core";
 import { Button, Skeleton, Text } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
 
+import { VerticalSpacer } from "../../../components/VerticalSpacer/VerticalSpacer";
+import { GiftCardTagInput } from "../../components/GiftCardTagInput/GiftCardTagInput";
+import { GiftCardUpdateExpirySelect } from "../GiftCardUpdateExpirySelect/GiftCardUpdateExpirySelect";
 import { useGiftCardDetails } from "../providers/GiftCardDetailsProvider/hooks/useGiftCardDetails";
 import { useGiftCardUpdateDialogs } from "../providers/GiftCardUpdateDialogsProvider/hooks/useGiftCardUpdateDialogs";
 import { useGiftCardUpdate as useGiftCardUpdateForm } from "../providers/GiftCardUpdateFormProvider/hooks/useGiftCardUpdateForm";
 import { GiftCardUpdateDetailsBalanceSection } from "./GiftCardUpdateDetailsBalanceSection";
 import { giftCardUpdateDetailsCardMessages as messages } from "./messages";
-import { VerticalSpacer } from "../../../components/VerticalSpacer/VerticalSpacer";
-import { GiftCardTagInput } from "../../components/GiftCardTagInput/GiftCardTagInput";
-import { GiftCardUpdateExpirySelect } from "../GiftCardUpdateExpirySelect/GiftCardUpdateExpirySelect";
 
 const GiftCardUpdateDetailsCard = () => {
   const intl = useIntl();

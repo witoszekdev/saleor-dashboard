@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { useIntl } from "react-intl";
+
 import { ConfirmButtonTransitionState } from "../../../../../components/ConfirmButton/ConfirmButton";
 import { useNotifier } from "../../../../../hooks/useNotifier/useNotifier";
 

@@ -2,9 +2,10 @@
 import { Tooltip } from "@saleor/macaw-ui-next";
 import moment from "moment-timezone";
 import { Moment as ReactMoment } from "react-moment";
-import { Consumer } from "./DateContext";
+
 import { LocaleConsumer } from "../Locale/Locale";
 import { TimezoneConsumer } from "../Timezone/Timezone";
+import { Consumer } from "./DateContext";
 
 interface DateTimeProps {
   date: string;

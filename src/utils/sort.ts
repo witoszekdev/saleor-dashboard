@@ -1,7 +1,8 @@
 import { OrderDirection } from "@dashboard/graphql";
 import { findValueInEnum, parseBoolean } from "@dashboard/misc";
-import { Sort } from "../types";
+
 import { TableCellHeaderArrowDirection } from "../components/TableCellHeader/TableCellHeader";
+import { Sort } from "../types";
 
 export function getSortUrlVariables<TSortKey extends string>(
   field: TSortKey,

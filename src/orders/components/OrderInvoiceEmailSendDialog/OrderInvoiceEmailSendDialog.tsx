@@ -7,7 +7,11 @@ import { DialogProps } from "@dashboard/types";
 import { getInvoiceErrorMessage } from "@dashboard/utils/errors/invoice";
 import { Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
-import { ConfirmButton, ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+
+import {
+  ConfirmButton,
+  ConfirmButtonTransitionState,
+} from "../../../components/ConfirmButton/ConfirmButton";
 
 interface OrderInvoiceEmailSendDialogProps extends DialogProps {
   confirmButtonState: ConfirmButtonTransitionState;

@@ -9,6 +9,9 @@ import { commonMessages } from "@dashboard/intl";
 import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { useIntl } from "react-intl";
+
+import { useNotifier } from "../../hooks/useNotifier/useNotifier";
+import { TaxChannelsPage } from "../pages/TaxChannelsPage/TaxChannelsPage";
 import {
   taxConfigurationListUrl,
   TaxesUrlDialog,
@@ -17,8 +20,6 @@ import {
   taxTabPath,
 } from "../urls";
 import { useTaxUrlRedirect } from "../utils/useTaxUrlRedirect";
-import { useNotifier } from "../../hooks/useNotifier/useNotifier";
-import { TaxChannelsPage } from "../pages/TaxChannelsPage/TaxChannelsPage";
 
 interface TaxChannelsListProps {
   id: string | undefined;

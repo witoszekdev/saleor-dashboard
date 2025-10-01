@@ -9,6 +9,7 @@ import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { getFormErrors } from "@dashboard/utils/errors";
 import { getAppErrorMessage } from "@dashboard/utils/errors/app";
 import { useIntl } from "react-intl";
+
 import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
 import { Form } from "../../../components/Form/Form";
 import { DetailPageLayout } from "../../../components/Layouts/Detail/index";

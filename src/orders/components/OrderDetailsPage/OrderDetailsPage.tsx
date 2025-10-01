@@ -24,9 +24,22 @@ import { orderListUrl } from "@dashboard/orders/urls";
 import { Divider } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
 
+import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import { Form } from "../../../components/Form/Form";
+import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
+import { Metadata } from "../../../components/Metadata/Metadata";
+import { MetadataIdSchema } from "../../../components/Metadata/types";
 import { getMutationErrors, maybe } from "../../../misc";
+import { OrderChannelSectionCard } from "../OrderChannelSectionCard/OrderChannelSectionCard";
+import { OrderCustomer } from "../OrderCustomer/OrderCustomer";
+import { OrderCustomerNote } from "../OrderCustomerNote/OrderCustomerNote";
 import { OrderDraftDetails } from "../OrderDraftDetails/OrderDraftDetails";
+import { FormData as OrderDraftDetailsProductsFormData } from "../OrderDraftDetailsProducts/OrderDraftDetailsProducts";
+import { OrderFulfilledProductsCard } from "../OrderFulfilledProductsCard/OrderFulfilledProductsCard";
+import { FormData as HistoryFormData, OrderHistory } from "../OrderHistory/OrderHistory";
+import { OrderInvoiceList } from "../OrderInvoiceList/OrderInvoiceList";
 import { OrderPaymentOrTransaction } from "../OrderPaymentOrTransaction/OrderPaymentOrTransaction";
+import { OrderUnfulfilledProductsCard } from "../OrderUnfulfilledProductsCard/OrderUnfulfilledProductsCard";
 import { messages } from "./messages";
 import { Title } from "./Title";
 import {
@@ -35,19 +48,6 @@ import {
   filteredConditionalItems,
   hasAnyItemsReplaceable,
 } from "./utils";
-import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
-import { Form } from "../../../components/Form/Form";
-import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
-import { Metadata } from "../../../components/Metadata/Metadata";
-import { MetadataIdSchema } from "../../../components/Metadata/types";
-import { OrderChannelSectionCard } from "../OrderChannelSectionCard/OrderChannelSectionCard";
-import { OrderCustomer } from "../OrderCustomer/OrderCustomer";
-import { OrderCustomerNote } from "../OrderCustomerNote/OrderCustomerNote";
-import { FormData as OrderDraftDetailsProductsFormData } from "../OrderDraftDetailsProducts/OrderDraftDetailsProducts";
-import { OrderFulfilledProductsCard } from "../OrderFulfilledProductsCard/OrderFulfilledProductsCard";
-import { FormData as HistoryFormData, OrderHistory } from "../OrderHistory/OrderHistory";
-import { OrderInvoiceList } from "../OrderInvoiceList/OrderInvoiceList";
-import { OrderUnfulfilledProductsCard } from "../OrderUnfulfilledProductsCard/OrderUnfulfilledProductsCard";
 
 interface OrderDetailsPageProps {
   order: OrderDetailsFragment | OrderDetailsFragment;

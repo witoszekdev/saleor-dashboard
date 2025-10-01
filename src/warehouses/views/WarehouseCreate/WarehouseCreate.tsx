@@ -6,8 +6,12 @@ import { commonMessages } from "@dashboard/intl";
 import { extractMutationErrors, findValueInEnum, getMutationStatus } from "@dashboard/misc";
 import { warehouseUrl } from "@dashboard/warehouses/urls";
 import { useIntl } from "react-intl";
+
 import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
-import { WarehouseCreatePage, WarehouseCreatePageFormData } from "../../components/WarehouseCreatePage/WarehouseCreatePage";
+import {
+  WarehouseCreatePage,
+  WarehouseCreatePageFormData,
+} from "../../components/WarehouseCreatePage/WarehouseCreatePage";
 
 const WarehouseCreate = () => {
   const intl = useIntl();

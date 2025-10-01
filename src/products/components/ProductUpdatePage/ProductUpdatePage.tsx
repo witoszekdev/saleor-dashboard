@@ -55,19 +55,19 @@ import { Box, Divider, Option } from "@saleor/macaw-ui-next";
 import { useMemo, useState } from "react";
 import { useIntl } from "react-intl";
 
+import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
+import { SeoForm } from "../../../components/SeoForm/SeoForm";
 import { AttributeValuesMetadata, getChoices } from "../../utils/data";
+import { ProductDetailsForm } from "../ProductDetailsForm/ProductDetailsForm";
+import { ProductExternalMediaDialog } from "../ProductExternalMediaDialog/ProductExternalMediaDialog";
+import { ProductMedia } from "../ProductMedia/ProductMedia";
+import { ProductTaxes } from "../ProductTaxes/ProductTaxes";
+import { ProductVariants } from "../ProductVariants/ProductVariants";
 import { ProductUpdateForm } from "./form";
 import { messages } from "./messages";
 import { ProductChannelsListingsDialog } from "./ProductChannelsListingsDialog";
 import { ProductUpdateData, ProductUpdateHandlers, ProductUpdateSubmitData } from "./types";
-import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
-import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
-import { SeoForm } from "../../../components/SeoForm/SeoForm";
-import { ProductExternalMediaDialog } from "../ProductExternalMediaDialog/ProductExternalMediaDialog";
-import { ProductDetailsForm } from "../ProductDetailsForm/ProductDetailsForm";
-import { ProductMedia } from "../ProductMedia/ProductMedia";
-import { ProductTaxes } from "../ProductTaxes/ProductTaxes";
-import { ProductVariants } from "../ProductVariants/ProductVariants";
 
 interface ProductUpdatePageProps {
   channels: ChannelFragment[];

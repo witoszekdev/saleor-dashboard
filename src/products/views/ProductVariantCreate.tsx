@@ -31,6 +31,8 @@ import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { warehouseAddPath } from "@dashboard/warehouses/urls";
 import { useIntl } from "react-intl";
 
+import { NotFoundPage } from "../../components/NotFoundPage/NotFoundPage";
+import { useNotifier } from "../../hooks/useNotifier/useNotifier";
 import { getMutationErrors, weight } from "../../misc";
 import { ProductVariantCreateData } from "../components/ProductVariantCreatePage/form";
 import { ProductVariantCreatePage } from "../components/ProductVariantCreatePage/ProductVariantCreatePage";
@@ -42,8 +44,6 @@ import {
 } from "../urls";
 import { variantCreateMessages as messages } from "./messages";
 import { createVariantReorderHandler } from "./ProductUpdate/handlers";
-import { NotFoundPage } from "../../components/NotFoundPage/NotFoundPage";
-import { useNotifier } from "../../hooks/useNotifier/useNotifier";
 
 interface ProductVariantCreateProps {
   productId: string;

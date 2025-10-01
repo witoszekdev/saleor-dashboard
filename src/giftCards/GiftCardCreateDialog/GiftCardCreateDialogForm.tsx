@@ -15,15 +15,18 @@ import { Box, Textarea } from "@saleor/macaw-ui-next";
 import { useState } from "react";
 import { useIntl } from "react-intl";
 
+import {
+  ConfirmButton,
+  ConfirmButtonTransitionState,
+} from "../../components/ConfirmButton/ConfirmButton";
 import { GiftCardSendToCustomer } from "../components/GiftCardSendToCustomer/GiftCardSendToCustomer";
+import { GiftCardTagInput } from "../components/GiftCardTagInput/GiftCardTagInput";
 import { GiftCardCreateCommonFormData } from "../GiftCardBulkCreateDialog/types";
+import { GiftCardCreateExpirySelect } from "./GiftCardCreateExpirySelect/GiftCardCreateExpirySelect";
 import { GiftCardCreateMoneyInput } from "./GiftCardCreateMoneyInput";
 import { GiftCardCreateRequiresActivationSection } from "./GiftCardCreateRequiresActivationSection";
 import { giftCardCreateMessages as messages } from "./messages";
 import { GiftCardCreateFormCommonProps, GiftCardCreateFormCustomer } from "./types";
-import { ConfirmButton, ConfirmButtonTransitionState } from "../../components/ConfirmButton/ConfirmButton";
-import { GiftCardTagInput } from "../components/GiftCardTagInput/GiftCardTagInput";
-import { GiftCardCreateExpirySelect } from "./GiftCardCreateExpirySelect/GiftCardCreateExpirySelect";
 
 export interface GiftCardCreateFormData extends GiftCardCreateCommonFormData {
   note: string;

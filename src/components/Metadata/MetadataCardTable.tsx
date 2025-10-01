@@ -4,9 +4,9 @@ import { Table, TableBody, TableCell, TableHead } from "@material-ui/core";
 import { Box, Button, Input, Text, Textarea, TrashBinIcon, vars } from "@saleor/macaw-ui-next";
 import { FormattedMessage } from "react-intl";
 
+import { TableRowLink } from "../TableRowLink/TableRowLink";
 import { EventDataAction } from "./types";
 import { nameInputPrefix, nameSeparator, valueInputPrefix } from "./utils";
-import { TableRowLink } from "../TableRowLink/TableRowLink";
 
 interface MetadataCardTableProps {
   data: MetadataInput[];

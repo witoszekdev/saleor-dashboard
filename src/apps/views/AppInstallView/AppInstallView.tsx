@@ -10,10 +10,10 @@ import { PropsWithChildren, useEffect } from "react";
 import { useIntl } from "react-intl";
 import { RouteComponentProps } from "react-router-dom";
 
-import { messages } from "./messages";
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
 import { AppInstallErrorPage } from "../../components/AppInstallErrorPage/AppInstallErrorPage";
 import { AppInstallPage } from "../../components/AppInstallPage/AppInstallPage";
-import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
+import { messages } from "./messages";
 
 interface Props extends RouteComponentProps {
   params: AppInstallUrlQueryParams;

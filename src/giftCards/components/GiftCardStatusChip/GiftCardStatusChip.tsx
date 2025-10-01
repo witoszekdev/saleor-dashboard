@@ -4,8 +4,8 @@ import {
 } from "@dashboard/giftCards/GiftCardUpdate/providers/GiftCardDetailsProvider/types";
 import { useIntl } from "react-intl";
 
-import { giftCardUpdatePageHeaderMessages as giftCardStatusChipMessages } from "../../GiftCardUpdate/GiftCardUpdatePageHeader/messages";
 import { Pill } from "../../../components/Pill/Pill";
+import { giftCardUpdatePageHeaderMessages as giftCardStatusChipMessages } from "../../GiftCardUpdate/GiftCardUpdatePageHeader/messages";
 
 interface GiftCardStatusChipProps<
   T extends ExtendedGiftCard<GiftCardBase & { isActive: boolean }>,

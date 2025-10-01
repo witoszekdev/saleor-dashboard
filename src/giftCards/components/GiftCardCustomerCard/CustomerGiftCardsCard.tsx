@@ -14,10 +14,10 @@ import { useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 import { Link } from "react-router-dom";
 
+import { VerticalSpacer } from "../../../components/VerticalSpacer/VerticalSpacer";
 import { CustomerGiftCardsCardListItem } from "./CustomerGiftCardsCardListItem";
 import { giftCardCustomerCardMessages as messages } from "./messages";
 import { CUSTOMER_GIFT_CARD_LIST_QUERY } from "./queries";
-import { VerticalSpacer } from "../../../components/VerticalSpacer/VerticalSpacer";
 
 const CustomerGiftCardsCard = () => {
   const intl = useIntl();

@@ -1,7 +1,7 @@
 import { ChannelFragment, ProductChannelListingAddInput } from "@dashboard/graphql";
 
-import { mapByChannel, parseCurrency } from "./utils";
 import { Locale } from "../../../components/Locale/Locale";
+import { mapByChannel, parseCurrency } from "./utils";
 
 describe("parseCurrency", () => {
   it("rounds down to 3 decimals in 3 digit currency - EN locale (dot)", () => {

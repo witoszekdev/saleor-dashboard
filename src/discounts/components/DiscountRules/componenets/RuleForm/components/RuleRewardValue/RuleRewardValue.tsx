@@ -2,9 +2,9 @@ import { Box, Input } from "@saleor/macaw-ui-next";
 import { useController, useFormContext } from "react-hook-form";
 import { useIntl } from "react-intl";
 
-import { messages } from "../../../../messages";
-import { useDiscountRulesContext } from "../../../../context/consumer";
 import { Rule } from "../../../../../../models/Rule";
+import { useDiscountRulesContext } from "../../../../context/consumer";
+import { messages } from "../../../../messages";
 import { DiscountTypeSwitch } from "../DiscountTypeSwitch/DiscountTypeSwitch";
 import { RuleInputWrapper } from "../RuleInputWrapper/RuleInputWrapper";
 

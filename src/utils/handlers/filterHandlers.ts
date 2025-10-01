@@ -1,5 +1,6 @@
 import { UseNavigatorResult } from "@dashboard/hooks/useNavigator";
 import { ActiveTab, Pagination, Search, Sort } from "@dashboard/types";
+
 import { IFilter } from "../../components/Filter/types";
 import { GetFilterQueryParam, getFilterQueryParams } from "../filters/filters";
 

@@ -1,4 +1,5 @@
 import { ChannelErrorCode, ChannelErrorFragment } from "@dashboard/graphql";
+
 import { FormData } from "./components/ChannelForm/ChannelForm";
 
 const createEmptyRequiredError = (field: string): ChannelErrorFragment => ({

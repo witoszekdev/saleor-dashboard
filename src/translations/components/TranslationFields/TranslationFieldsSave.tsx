@@ -1,7 +1,11 @@
 import { buttonMessages } from "@dashboard/intl";
 import { Button, makeStyles } from "@saleor/macaw-ui";
 import { FormattedMessage } from "react-intl";
-import { ConfirmButton, ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+
+import {
+  ConfirmButton,
+  ConfirmButtonTransitionState,
+} from "../../../components/ConfirmButton/ConfirmButton";
 
 interface TranslationFieldsSaveProps {
   saveButtonState: ConfirmButtonTransitionState;

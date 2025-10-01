@@ -8,11 +8,11 @@ import { TableBody, TableCell } from "@material-ui/core";
 import { Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import { useStyles } from "./styles";
 import { PriceField } from "../../../components/PriceField/PriceField";
 import { ResponsiveTable } from "../../../components/ResponsiveTable/ResponsiveTable";
 import { TableHead } from "../../../components/TableHead/TableHead";
 import { TableRowLink } from "../../../components/TableRowLink/TableRowLink";
+import { useStyles } from "./styles";
 
 interface Value {
   maxValue: string;

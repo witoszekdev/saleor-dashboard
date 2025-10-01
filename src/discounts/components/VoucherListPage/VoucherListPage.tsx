@@ -24,11 +24,12 @@ import {
 import { Box, Button, ChevronRightIcon } from "@saleor/macaw-ui-next";
 import { useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
-import { createFilterStructure, VoucherFilterKeys, VoucherListFilterOpts } from "./filters";
+
 import { ListFilters } from "../../../components/AppLayout/ListFilters/ListFilters";
 import { FilterPresetsSelect } from "../../../components/FilterPresetsSelect/FilterPresetsSelect";
 import { ListPageLayout } from "../../../components/Layouts/List/index";
 import { VoucherListDatagrid } from "../VoucherListDatagrid/VoucherListDatagrid";
+import { createFilterStructure, VoucherFilterKeys, VoucherListFilterOpts } from "./filters";
 
 interface VoucherListPageProps
   extends PageListProps,

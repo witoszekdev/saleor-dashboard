@@ -10,13 +10,13 @@ import { getStringOrPlaceholder } from "@dashboard/misc";
 import { Button } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
 
+import { HorizontalSpacer } from "../../../components/HorizontalSpacer/HorizontalSpacer";
 import { giftCardsListTableMessages as tableMessages } from "../../GiftCardsList/messages";
 import { useGiftCardDetails } from "../providers/GiftCardDetailsProvider/hooks/useGiftCardDetails";
 import { useGiftCardUpdateDialogs } from "../providers/GiftCardUpdateDialogsProvider/hooks/useGiftCardUpdateDialogs";
 import { GiftCardEnableDisableSection } from "./GiftCardEnableDisableSection";
 import { giftCardUpdatePageHeaderMessages as messages } from "./messages";
 import { useStyles } from "./styles";
-import { HorizontalSpacer } from "../../../components/HorizontalSpacer/HorizontalSpacer";
 
 const GiftCardUpdatePageHeader = () => {
   const classes = useStyles();

@@ -13,10 +13,11 @@ import { getOrderErrorMessage } from "@dashboard/utils/errors/order";
 import { makeStyles } from "@saleor/macaw-ui";
 import { Box, Popover, sprinkles, Text } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
-import { ORDER_DISCOUNT } from "../OrderDiscountCommonModal/types";
-import { messages } from "./messages";
+
 import { HorizontalSpacer } from "../../../components/HorizontalSpacer/HorizontalSpacer";
 import { OrderDiscountCommonModal } from "../OrderDiscountCommonModal/OrderDiscountCommonModal";
+import { ORDER_DISCOUNT } from "../OrderDiscountCommonModal/types";
+import { messages } from "./messages";
 
 const useStyles = makeStyles(
   theme => ({

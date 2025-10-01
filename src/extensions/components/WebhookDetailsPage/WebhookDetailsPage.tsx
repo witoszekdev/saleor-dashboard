@@ -21,8 +21,7 @@ import { parse, print } from "graphql";
 import { useEffect, useState } from "react";
 import * as React from "react";
 import { useIntl } from "react-intl";
-import { getHeaderTitle, messages } from "./messages";
-import { getWebhookFormInitialFormValues } from "./webhookForm";
+
 import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
 import { Form } from "../../../components/Form/Form";
 import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
@@ -31,6 +30,8 @@ import { WebhookEvents } from "./components/WebhookEvents/WebhookEvents";
 import { WebhookHeaders } from "./components/WebhookHeaders/WebhookHeaders";
 import { WebhookInfo } from "./components/WebhookInfo/WebhookInfo";
 import { WebhookSubscriptionQuery } from "./components/WebhookSubscriptionQuery/WebhookSubscriptionQuery";
+import { getHeaderTitle, messages } from "./messages";
+import { getWebhookFormInitialFormValues } from "./webhookForm";
 
 export interface WebhookFormData {
   syncEvents: WebhookEventTypeSyncEnum[];

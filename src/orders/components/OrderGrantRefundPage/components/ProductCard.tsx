@@ -6,11 +6,11 @@ import { Box, Button, Input, Text } from "@saleor/macaw-ui-next";
 import * as React from "react";
 import { FormattedMessage } from "react-intl";
 
+import { TableCellAvatar } from "../../../../components/TableCellAvatar/TableCellAvatar";
+import { TableRowLink } from "../../../../components/TableRowLink/TableRowLink";
 import { useGrantRefundContext } from "../context";
 import { grantRefundPageMessages, productCardMessages } from "../messages";
 import { useProductsCardStyles } from "../styles";
-import { TableCellAvatar } from "../../../../components/TableCellAvatar/TableCellAvatar";
-import { TableRowLink } from "../../../../components/TableRowLink/TableRowLink";
 
 interface ProductsCardProps {
   title: React.ReactNode;

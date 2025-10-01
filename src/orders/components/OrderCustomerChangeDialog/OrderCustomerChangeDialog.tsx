@@ -4,10 +4,10 @@ import { FormControlLabel, Radio, RadioGroup } from "@material-ui/core";
 import { Box, Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 
+import { ConfirmButton } from "../../../components/ConfirmButton/ConfirmButton";
 import { CustomerChangeActionEnum, OrderCustomerChangeData, OrderCustomerChangeForm } from "./form";
 import { messages } from "./messages";
 import { useStyles } from "./styles";
-import { ConfirmButton } from "../../../components/ConfirmButton/ConfirmButton";
 
 interface OrderCustomerChangeDialogProps {
   open: boolean;

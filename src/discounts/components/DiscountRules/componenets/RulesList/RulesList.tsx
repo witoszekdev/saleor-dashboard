@@ -1,10 +1,11 @@
 import { CommonError } from "@dashboard/utils/errors/common";
 import { Box, Text } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
-import { messages } from "../../messages";
-import { getCurencySymbol } from "../../utils";
+
 import { Rule } from "../../../../models/Rule";
 import { useDiscountRulesContext } from "../../context/consumer";
+import { messages } from "../../messages";
+import { getCurencySymbol } from "../../utils";
 import { Placeholder } from "../Placeholder/Placeholder";
 import { RuleActions } from "./components/RuleActions/RuleActions";
 import { RuleLabel } from "./components/RuleLabel/RuleLabel";

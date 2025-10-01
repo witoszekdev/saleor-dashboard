@@ -6,11 +6,11 @@ import { Box, Skeleton, Text } from "@saleor/macaw-ui-next";
 import { useEffect } from "react";
 import { useIntl } from "react-intl";
 
+import { useNotifier } from "../../../../../hooks/useNotifier/useNotifier";
 import { AppPermissionsDialogConfirmation } from "./AppPermissionsDialogConfirmation";
 import { AppPermissionsDialogPermissionPicker } from "./AppPermissionsDialogPermissionPicker";
 import { useAppPermissionsDialogState } from "./AppPermissionsDialogState";
 import { AppPermissionsDialogMessages } from "./messages";
-import { useNotifier } from "../../../../../hooks/useNotifier/useNotifier";
 
 const messages = AppPermissionsDialogMessages.dialogRoot;
 

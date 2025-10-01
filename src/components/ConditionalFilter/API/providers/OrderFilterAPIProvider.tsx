@@ -10,6 +10,7 @@ import {
 import { IntlShape, useIntl } from "react-intl";
 
 import { RowType } from "../../constants";
+import { FilterContainer, FilterElement } from "../../FilterElement/FilterElement";
 import { FilterAPIProvider } from "../FilterAPIProvider";
 import {
   BooleanValuesHandler,
@@ -21,7 +22,6 @@ import {
   WarehouseHandler,
 } from "../Handler";
 import { getFilterElement } from "../utils";
-import { FilterContainer, FilterElement } from "../../FilterElement/FilterElement";
 
 const isStaticBoolean = (rowType: RowType) => {
   return [

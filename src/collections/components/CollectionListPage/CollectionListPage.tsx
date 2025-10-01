@@ -25,11 +25,12 @@ import { Box, Button, ChevronRightIcon } from "@saleor/macaw-ui-next";
 import { useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 import { useLocation } from "react-router";
-import { CollectionFilterKeys, CollectionListFilterOpts, createFilterStructure } from "./filters";
+
 import { ListFilters } from "../../../components/AppLayout/ListFilters/ListFilters";
 import { FilterPresetsSelect } from "../../../components/FilterPresetsSelect/FilterPresetsSelect";
 import { ListPageLayout } from "../../../components/Layouts/List/index";
 import { CollectionListDatagrid } from "../CollectionListDatagrid/CollectionListDatagrid";
+import { CollectionFilterKeys, CollectionListFilterOpts, createFilterStructure } from "./filters";
 
 interface CollectionListPageProps
   extends PageListProps,

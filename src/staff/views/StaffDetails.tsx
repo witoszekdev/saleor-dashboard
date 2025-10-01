@@ -11,16 +11,16 @@ import { UsePermissionGroupSearch as usePermissionGroupSearch } from "@dashboard
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { FormattedMessage, useIntl } from "react-intl";
 
+import { NotFoundPage } from "../../components/NotFoundPage/NotFoundPage";
 import {
   StaffDetailsFormData,
   StaffDetailsPage,
 } from "../components/StaffDetailsPage/StaffDetailsPage";
 import { StaffPasswordResetDialog } from "../components/StaffPasswordResetDialog/StaffPasswordResetDialog";
-import { staffListUrl, staffMemberDetailsUrl, StaffMemberDetailsUrlQueryParams } from "../urls";
-import { groupsDiff } from "../utils";
-import { NotFoundPage } from "../../components/NotFoundPage/NotFoundPage";
 import { useProfileOperations } from "../hooks/useProfileOperations";
 import { useStaffUserOperations } from "../hooks/useStaffUserOperations";
+import { staffListUrl, staffMemberDetailsUrl, StaffMemberDetailsUrlQueryParams } from "../urls";
+import { groupsDiff } from "../utils";
 
 interface OrderListProps {
   id: string;

@@ -1,7 +1,7 @@
 import { Handler, NoopValuesHandler } from "../../API/Handler";
 import { isTuple } from "../../FilterElement/ConditionValue";
-import { BothApiQueryVarsBuilder } from "./types";
 import { FilterElement } from "../../FilterElement/FilterElement";
+import { BothApiQueryVarsBuilder } from "./types";
 
 /** Builds query for MetadataFilter fields
  * for MetadataFilterInput use MetadataFilterQueryVarsBuilder

@@ -5,8 +5,9 @@ import {
 } from "@dashboard/graphql";
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { sortAlphabetically } from "@dashboard/utils/sort";
-import { SearchCategoriesOpts, SearchCollectionOpts, SearchProductsOpts } from "./types";
+
 import { Rule } from "./models/Rule";
+import { SearchCategoriesOpts, SearchCollectionOpts, SearchProductsOpts } from "./types";
 
 type SaleOrVoucherData = SaleDetailsQuery | VoucherDetailsQuery;
 

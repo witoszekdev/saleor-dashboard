@@ -1,4 +1,5 @@
 import { Box, Button, RemoveIcon } from "@saleor/macaw-ui-next";
+
 import { Condition } from "../../../../../../models/Condition";
 import { RuleConditionName } from "../RuleConditionName/RuleConditionName";
 import { RuleConditionType } from "../RuleConditionType/RuleConditionType";

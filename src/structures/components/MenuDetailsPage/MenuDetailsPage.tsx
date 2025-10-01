@@ -9,7 +9,7 @@ import { SubmitPromise } from "@dashboard/hooks/useForm";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { menuListUrl } from "@dashboard/structures/urls";
 import { useState } from "react";
-import { computeRelativeTree } from "./tree";
+
 import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
 import { Form } from "../../../components/Form/Form";
 import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
@@ -17,6 +17,7 @@ import { MenuItemType } from "../MenuItemDialog/types";
 import { MenuItems } from "../MenuItems/MenuItems";
 import { TreeOperation } from "../MenuItems/tree";
 import { MenuProperties } from "../MenuProperties/MenuProperties";
+import { computeRelativeTree } from "./tree";
 
 export interface MenuDetailsFormData {
   name: string;

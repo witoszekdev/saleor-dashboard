@@ -14,17 +14,20 @@ import { Box, Text } from "@saleor/macaw-ui-next";
 import { Fragment, useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import { OrderPriceLabel } from "../OrderPriceLabel/OrderPriceLabel";
-import { messages } from "./messages";
-import { useStyles } from "./styles";
-import { hasAllVariantsSelected, isVariantSelected, onProductAdd, onVariantAdd } from "./utils";
-import { ConfirmButton, ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import {
+  ConfirmButton,
+  ConfirmButtonTransitionState,
+} from "../../../components/ConfirmButton/ConfirmButton";
 import { InfiniteScroll } from "../../../components/InfiniteScroll/InfiniteScroll";
 import { ResponsiveTable } from "../../../components/ResponsiveTable/ResponsiveTable";
 import { TableCellAvatar } from "../../../components/TableCellAvatar/TableCellAvatar";
 import { TableRowLink } from "../../../components/TableRowLink/TableRowLink";
 import { useModalDialogErrors } from "../../../hooks/useModalDialogErrors/useModalDialogErrors";
 import { useModalDialogOpen } from "../../../hooks/useModalDialogOpen/useModalDialogOpen";
+import { OrderPriceLabel } from "../OrderPriceLabel/OrderPriceLabel";
+import { messages } from "./messages";
+import { useStyles } from "./styles";
+import { hasAllVariantsSelected, isVariantSelected, onProductAdd, onVariantAdd } from "./utils";
 
 interface OrderProductAddDialogProps extends FetchMoreProps {
   confirmButtonState: ConfirmButtonTransitionState;

@@ -20,6 +20,9 @@ import { useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 import { useLocation } from "react-router";
 
+import { ListFilters } from "../../../components/AppLayout/ListFilters/ListFilters";
+import { FilterPresetsSelect } from "../../../components/FilterPresetsSelect/FilterPresetsSelect";
+import { ListPageLayout } from "../../../components/Layouts/List/index";
 import {
   createFilterStructure,
   PageListFilterKeys,
@@ -27,9 +30,6 @@ import {
 } from "../../views/PageList/filters";
 import { PageListDatagrid } from "../PageListDatagrid/PageListDatagrid";
 import { pagesListSearchAndFiltersMessages as messages } from "./messages";
-import { ListFilters } from "../../../components/AppLayout/ListFilters/ListFilters";
-import { FilterPresetsSelect } from "../../../components/FilterPresetsSelect/FilterPresetsSelect";
-import { ListPageLayout } from "../../../components/Layouts/List/index";
 
 interface PageListPageProps
   extends PageListProps,

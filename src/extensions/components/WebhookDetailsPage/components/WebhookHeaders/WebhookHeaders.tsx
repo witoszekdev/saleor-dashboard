@@ -6,12 +6,12 @@ import { clsx } from "clsx";
 import { useEffect, useMemo, useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
+import { TableRowLink } from "../../../../../components/TableRowLink/TableRowLink";
 import { WebhookFormData } from "../../WebhookDetailsPage";
 import { messages } from "./messages";
 import { useStyles } from "./styles";
 import { hasEmptyHeader, mapHeaders, stringifyHeaders } from "./utils";
 import { WebhookHeadersTableBody } from "./WebhookHeadersTableBody";
-import { TableRowLink } from "../../../../../components/TableRowLink/TableRowLink";
 
 export interface WebhookHeadersProps {
   data: WebhookFormData;

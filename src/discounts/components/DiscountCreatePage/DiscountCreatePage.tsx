@@ -10,6 +10,7 @@ import {
 import { getFormErrors } from "@dashboard/utils/errors";
 import { getCommonFormFieldErrorMessage } from "@dashboard/utils/errors/common";
 import { useIntl } from "react-intl";
+
 import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
 import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
 import { DiscountCreateForm } from "../DiscountCreateForm/DiscountCreateForm";

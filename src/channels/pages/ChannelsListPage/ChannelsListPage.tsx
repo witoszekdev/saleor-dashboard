@@ -16,11 +16,11 @@ import { DeleteIcon } from "@saleor/macaw-ui";
 import { Button, Skeleton } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import { useStyles } from "./styles";
 import { ListPageLayout } from "../../../components/Layouts/List/index";
 import { ResponsiveTable } from "../../../components/ResponsiveTable/ResponsiveTable";
 import { TableCellHeader } from "../../../components/TableCellHeader/TableCellHeader";
 import { TableRowLink } from "../../../components/TableRowLink/TableRowLink";
+import { useStyles } from "./styles";
 
 interface ChannelsListPageProps {
   channelsList: ChannelDetailsFragment[] | undefined;

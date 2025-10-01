@@ -51,19 +51,20 @@ import { getSortUrlVariables } from "@dashboard/utils/sort";
 import isEqual from "lodash/isEqual";
 import { useCallback, useEffect, useMemo } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
-import { ProductsExportParameters } from "./export";
-import { getFilterQueryParam, getFilterVariables, storageUtils } from "./filters";
-import { DEFAULT_SORT_KEY, getSortQueryVariables } from "./sort";
-import { obtainChannelFromFilter } from "./utils";
+
 import { useConditionalFilterContext } from "../../../components/ConditionalFilter/context/consumer";
 import { DeleteFilterTabDialog } from "../../../components/DeleteFilterTabDialog/DeleteFilterTabDialog";
 import { SaveFilterTabDialog } from "../../../components/SaveFilterTabDialog/SaveFilterTabDialog";
 import { useFilterPresets } from "../../../hooks/useFilterPresets/useFilterPresets";
 import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
 import { ProductExportDialog } from "../../components/ProductExportDialog/ProductExportDialog";
-import { ProductTypePickerDialog } from "../../components/ProductTypePickerDialog/ProductTypePickerDialog";
 import { ProductFilterKeys } from "../../components/ProductListPage/filters";
 import { ProductListPage } from "../../components/ProductListPage/ProductListPage";
+import { ProductTypePickerDialog } from "../../components/ProductTypePickerDialog/ProductTypePickerDialog";
+import { ProductsExportParameters } from "./export";
+import { getFilterQueryParam, getFilterVariables, storageUtils } from "./filters";
+import { DEFAULT_SORT_KEY, getSortQueryVariables } from "./sort";
+import { obtainChannelFromFilter } from "./utils";
 
 interface ProductListProps {
   params: ProductListUrlQueryParams;

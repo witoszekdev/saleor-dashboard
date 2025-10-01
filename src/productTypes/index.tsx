@@ -17,8 +17,8 @@ import {
   ProductTypeUrlQueryParams,
 } from "./urls";
 import { ProductTypeCreate as ProductTypeCreateComponent } from "./views/ProductTypeCreate";
-import { ProductTypeUpdate as ProductTypeUpdateComponent } from "./views/ProductTypeUpdate";
 import { ProductTypeList as ProductTypeListComponent } from "./views/ProductTypeList/ProductTypeList";
+import { ProductTypeUpdate as ProductTypeUpdateComponent } from "./views/ProductTypeUpdate";
 
 const ProductTypeList = () => {
   const qs = parseQs(location.search, {

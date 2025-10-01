@@ -3,6 +3,7 @@ import { PermissionGroupErrorCode, PermissionGroupErrorFragment } from "@dashboa
 import { getPermissionGroupErrorMessage } from "@dashboard/utils/errors/permissionGroups";
 import { Box, Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
+
 import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
 
 interface PermissionDeleteDialogProps {

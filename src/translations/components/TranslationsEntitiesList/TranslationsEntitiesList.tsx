@@ -5,10 +5,10 @@ import { Skeleton } from "@saleor/macaw-ui-next";
 import { clsx } from "clsx";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import { maybe, renderCollection } from "../../../misc";
-import { ListProps } from "../../../types";
 import { ResponsiveTable } from "../../../components/ResponsiveTable/ResponsiveTable";
 import { TableRowLink } from "../../../components/TableRowLink/TableRowLink";
+import { maybe, renderCollection } from "../../../misc";
+import { ListProps } from "../../../types";
 
 export interface TranslatableEntity {
   id: string;

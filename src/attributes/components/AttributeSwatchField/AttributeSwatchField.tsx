@@ -7,10 +7,10 @@ import { Box, Skeleton } from "@saleor/macaw-ui-next";
 import { useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
+import { FileUploadField } from "../../../components/FileUploadField/FileUploadField";
 import { swatchFieldMessages } from "./messages";
 import { useColorProcessing } from "./useColorProcessing";
 import { useFileProcessing } from "./useFileProcessing";
-import { FileUploadField } from "../../../components/FileUploadField/FileUploadField";
 
 type AttributeSwatchFieldProps<T> = Pick<
   UseFormResult<T>,

@@ -5,11 +5,15 @@ import {
   ProductTypeFilterInput,
 } from "@dashboard/graphql";
 import { findValueInEnum, maybe } from "@dashboard/misc";
-import { ProductTypeListUrlFilters, ProductTypeListUrlFiltersEnum } from "../../urls";
+
 import { FilterElement } from "../../../components/Filter/types";
-import { ProductTypeFilterKeys, ProductTypeListFilterOpts } from "../../components/ProductTypeListPage/filters";
-import { createFilterTabUtils } from "../../../utils/filters/storage";
 import { getSingleValueQueryParam } from "../../../utils/filters/filters";
+import { createFilterTabUtils } from "../../../utils/filters/storage";
+import {
+  ProductTypeFilterKeys,
+  ProductTypeListFilterOpts,
+} from "../../components/ProductTypeListPage/filters";
+import { ProductTypeListUrlFilters, ProductTypeListUrlFiltersEnum } from "../../urls";
 
 const PRODUCT_TYPE_FILTERS_KEY = "productTypeFilters";
 

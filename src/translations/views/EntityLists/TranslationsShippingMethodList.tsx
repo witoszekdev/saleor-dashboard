@@ -2,9 +2,9 @@ import { useShippingMethodTranslationsQuery } from "@dashboard/graphql";
 import { PaginatorContext, usePaginator } from "@dashboard/hooks/usePaginator";
 import { languageEntityUrl, TranslatableEntities } from "@dashboard/translations/urls";
 
+import { TranslationsEntitiesList } from "../../components/TranslationsEntitiesList/TranslationsEntitiesList";
 import { TranslationsEntityListProps } from "./types";
 import { mapTranslationsToEntities } from "./utils";
-import { TranslationsEntitiesList } from "../../components/TranslationsEntitiesList/TranslationsEntitiesList";
 
 const TranslationsShippingMethodList = ({ params, variables }: TranslationsEntityListProps) => {
   const { data, loading } = useShippingMethodTranslationsQuery({

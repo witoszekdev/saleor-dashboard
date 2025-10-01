@@ -5,8 +5,8 @@ import { getArrowDirection } from "@dashboard/utils/sort";
 import { TableHead } from "@material-ui/core";
 import { useIntl } from "react-intl";
 
-import { pluginsListTableHeadMessages as messages } from "./messages";
 import { TableCellHeader } from "../../../components/TableCellHeader/TableCellHeader";
+import { pluginsListTableHeadMessages as messages } from "./messages";
 
 type PluginListTableHeadProps = SortPage<PluginListUrlSortField>;
 

@@ -31,22 +31,23 @@ import { productUrl } from "@dashboard/products/urls";
 import { Container, FetchMoreProps, RelayToFlat, ReorderAction } from "@dashboard/types";
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { defineMessages, useIntl } from "react-intl";
-import { useManageChannels } from "../ProductVariantChannels/useManageChannels";
-import { VariantChannelsDialog } from "../ProductVariantChannels/VariantChannelsDialog";
-import { ProductVariantCheckoutSettings } from "../ProductVariantCheckoutSettings/ProductVariantCheckoutSettings";
-import {
-  ProductVariantCreateData,
-  ProductVariantCreateForm,
-  ProductVariantCreateHandlers,
-} from "./form";
+
 import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
 import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
 import { Metadata } from "../../../components/Metadata/Metadata";
 import { ProductShipping } from "../ProductShipping/ProductShipping";
 import { ProductStocks } from "../ProductStocks/ProductStocks";
+import { useManageChannels } from "../ProductVariantChannels/useManageChannels";
+import { VariantChannelsDialog } from "../ProductVariantChannels/VariantChannelsDialog";
+import { ProductVariantCheckoutSettings } from "../ProductVariantCheckoutSettings/ProductVariantCheckoutSettings";
 import { ProductVariantName } from "../ProductVariantName/ProductVariantName";
 import { ProductVariantNavigation } from "../ProductVariantNavigation/ProductVariantNavigation";
 import { ProductVariantPrice } from "../ProductVariantPrice/ProductVariantPrice";
+import {
+  ProductVariantCreateData,
+  ProductVariantCreateForm,
+  ProductVariantCreateHandlers,
+} from "./form";
 
 const messages = defineMessages({
   attributesHeader: {

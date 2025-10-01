@@ -17,8 +17,8 @@ import { Option, Text } from "@saleor/macaw-ui-next";
 import { PropsWithChildren } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import { useProductExportFieldMessages } from "./messages";
 import { toggle } from "../../../utils/lists/lists";
+import { useProductExportFieldMessages } from "./messages";
 
 export const attributeNamePrefix = "attribute-";
 export const warehouseNamePrefix = "warehouse-";

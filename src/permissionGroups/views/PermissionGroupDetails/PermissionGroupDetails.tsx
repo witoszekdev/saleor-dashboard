@@ -22,6 +22,16 @@ import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { getSortParams } from "@dashboard/utils/sort";
 import { useState } from "react";
 import { useIntl } from "react-intl";
+
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
+import { AssignMembersDialog } from "../../components/AssignMembersDialog/AssignMembersDialog";
+import { MembersErrorDialog } from "../../components/MembersErrorDialog/MembersErrorDialog";
+import { PermissionGroupDeleteDialog } from "../../components/PermissionGroupDeleteDialog/PermissionGroupDeleteDialog";
+import {
+  PermissionGroupDetailsPage,
+  PermissionGroupDetailsPageFormData,
+} from "../../components/PermissionGroupDetailsPage/PermissionGroupDetailsPage";
+import { UnassignMembersDialog } from "../../components/UnassignMembersDialog/UnassignMembersDialog";
 import {
   permissionGroupDetailsUrl,
   PermissionGroupDetailsUrlDialog,
@@ -35,12 +45,6 @@ import {
   permissionsDiff,
   usersDiff,
 } from "../../utils";
-import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
-import { MembersErrorDialog } from "../../components/MembersErrorDialog/MembersErrorDialog";
-import { PermissionGroupDeleteDialog } from "../../components/PermissionGroupDeleteDialog/PermissionGroupDeleteDialog";
-import { AssignMembersDialog } from "../../components/AssignMembersDialog/AssignMembersDialog";
-import { PermissionGroupDetailsPage, PermissionGroupDetailsPageFormData } from "../../components/PermissionGroupDetailsPage/PermissionGroupDetailsPage";
-import { UnassignMembersDialog } from "../../components/UnassignMembersDialog/UnassignMembersDialog";
 
 interface PermissionGroupDetailsProps {
   id: string;

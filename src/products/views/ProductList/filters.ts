@@ -1,6 +1,24 @@
 // @ts-strict-ignore
 import { createProductQueryVariables } from "@dashboard/components/ConditionalFilter/queryVariables";
 import { AttributeFragment, AttributeInputTypeEnum, StockAvailability } from "@dashboard/graphql";
+
+import { FilterContainer } from "../../../components/ConditionalFilter/FilterElement/FilterElement";
+import {
+  FilterElement,
+  FilterElementKeyValue,
+  FilterElementRegular,
+} from "../../../components/Filter/types";
+import {
+  getGteLteVariables,
+  getKeyValueQueryParam,
+  getMinMaxQueryParam,
+  getMultipleValueQueryParam,
+  getSingleEnumValueQueryParam,
+  getSingleValueQueryParam,
+  GteLte,
+} from "../../../utils/filters/filters";
+import { createFilterTabUtils } from "../../../utils/filters/storage";
+import { ProductFilterKeys } from "../../components/ProductListPage/filters";
 import {
   ProductListUrlFilters,
   ProductListUrlFiltersAsDictWithMultipleValues,
@@ -8,11 +26,6 @@ import {
   ProductListUrlFiltersWithKeyValueValues,
   ProductListUrlFiltersWithMultipleValues,
 } from "../../urls";
-import { FilterContainer } from "../../../components/ConditionalFilter/FilterElement/FilterElement";
-import { ProductFilterKeys } from "../../components/ProductListPage/filters";
-import { FilterElement, FilterElementKeyValue, FilterElementRegular } from "../../../components/Filter/types";
-import { createFilterTabUtils } from "../../../utils/filters/storage";
-import { getGteLteVariables, getKeyValueQueryParam, getMinMaxQueryParam, getMultipleValueQueryParam, getSingleEnumValueQueryParam, getSingleValueQueryParam, GteLte } from "../../../utils/filters/filters";
 
 const PRODUCT_FILTERS_KEY = "productPresets";
 

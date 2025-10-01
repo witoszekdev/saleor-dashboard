@@ -6,6 +6,7 @@ import { parse as parseQs } from "qs";
 import { useIntl } from "react-intl";
 import { Redirect, RouteComponentProps, Switch } from "react-router-dom";
 
+import { ConditionalProductFilterProvider } from "../components/ConditionalFilter/context/provider";
 import { WindowTitle } from "../components/WindowTitle";
 import {
   productAddPath,
@@ -23,13 +24,12 @@ import {
   ProductVariantEditUrlQueryParams,
   productVariantLegacyEditPath,
 } from "./urls";
-import { ProductImage as ProductImageComponent } from "./views/ProductImage";
-import { ProductVariant as ProductVariantCreateComponent } from "./views/ProductVariantCreate";
-import { ConditionalProductFilterProvider } from "../components/ConditionalFilter/context/provider";
 import { ProductCreateView as ProductCreateComponent } from "./views/ProductCreate/ProductCreate";
+import { ProductImage as ProductImageComponent } from "./views/ProductImage";
 import { ProductList as ProductListComponent } from "./views/ProductList/ProductList";
 import { ProductUpdate as ProductUpdateComponent } from "./views/ProductUpdate/ProductUpdate";
 import { ProductVariant as ProductVariantComponent } from "./views/ProductVariant/ProductVariant";
+import { ProductVariant as ProductVariantCreateComponent } from "./views/ProductVariantCreate";
 
 interface MatchParams {
   id?: string;

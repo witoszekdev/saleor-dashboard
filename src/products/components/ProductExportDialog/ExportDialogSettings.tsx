@@ -6,8 +6,11 @@ import { getExportErrorMessage } from "@dashboard/utils/errors/export";
 import { Text } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
 
+import {
+  NewRadioGroupField as RadioGroupField,
+  RadioGroupFieldChoice,
+} from "../../../components/RadioGroupField/RadioGroupField";
 import { ExportSettingsInput } from "./types";
-import { NewRadioGroupField as RadioGroupField, RadioGroupFieldChoice } from "../../../components/RadioGroupField/RadioGroupField";
 
 export type ExportItemsQuantity = Record<"all" | "filter", number>;
 

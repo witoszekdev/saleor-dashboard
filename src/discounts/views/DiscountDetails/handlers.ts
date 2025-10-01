@@ -14,9 +14,9 @@ import { getMutationErrors, joinDateTime } from "@dashboard/misc";
 import { CommonError } from "@dashboard/utils/errors/common";
 import difference from "lodash/difference";
 
-import { DiscoutFormData } from "../../types";
 import { Rule } from "../../models/Rule";
 import { toAPI } from "../../models/transformRule";
+import { DiscoutFormData } from "../../types";
 
 export const createUpdateHandler = (
   promotion: PromotionDetailsFragment | undefined | null,

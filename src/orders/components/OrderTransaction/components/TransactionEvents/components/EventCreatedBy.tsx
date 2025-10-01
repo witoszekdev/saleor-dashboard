@@ -6,6 +6,7 @@ import { getUserInitials, getUserName } from "@dashboard/misc";
 import { staffMemberDetailsUrl } from "@dashboard/staff/urls";
 import { Box } from "@saleor/macaw-ui-next";
 import { Link } from "react-router-dom";
+
 import { UserAvatar } from "../../../../../../components/UserAvatar/UserAvatar";
 
 interface EventCreatedByProps {

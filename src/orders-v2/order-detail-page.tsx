@@ -2,6 +2,7 @@ import { TopNavWrapper } from "@dashboard/components/AppLayout";
 import { OrderDetailsFragment } from "@dashboard/graphql";
 import { Divider } from "@saleor/macaw-ui-next";
 
+import { DetailPageLayout } from "../components/Layouts/Detail/index";
 import { OrderApps } from "./order-apps";
 import { OrderCustomer } from "./order-customer/order-customer";
 import { OrderDetailsViewModel } from "./order-details-view-model";
@@ -13,7 +14,6 @@ import { OrderCustomerNote } from "./order-notes";
 import { OrderRefunds } from "./order-refunds/order-refunds";
 import { OrderRefundsViewModel } from "./order-refunds/order-refunds-view-model";
 import { OrderSummary } from "./order-summary/order-summary";
-import { DetailPageLayout } from "../components/Layouts/Detail/index";
 
 export const OrderDetailsPage = ({ order }: { order: OrderDetailsFragment }) => {
   return (

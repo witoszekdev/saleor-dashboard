@@ -47,12 +47,12 @@ import { warehouseAddPath } from "@dashboard/warehouses/urls";
 import { useEffect, useState } from "react";
 import { useIntl } from "react-intl";
 
-import { PRODUCT_CREATE_FORM_ID } from "./consts";
-import { createHandler } from "./handlers";
 import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
+import { useOnboarding } from "../../../welcomePage/WelcomePageOnboarding/onboardingContext/OnboardingContext";
 import { ProductCreateData } from "../../components/ProductCreatePage/form";
 import { ProductCreatePage } from "../../components/ProductCreatePage/ProductCreatePage";
-import { useOnboarding } from "../../../welcomePage/WelcomePageOnboarding/onboardingContext/OnboardingContext";
+import { PRODUCT_CREATE_FORM_ID } from "./consts";
+import { createHandler } from "./handlers";
 
 interface ProductCreateProps {
   params: ProductCreateUrlQueryParams;

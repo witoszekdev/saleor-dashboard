@@ -2,8 +2,8 @@ import { ApolloClient } from "@apollo/client";
 
 import { ChannelHandler, Handler } from "../../API/Handler";
 import { isItemOption, isItemOptionArray } from "../../FilterElement/ConditionValue";
-import { BaseMappableQueryVarsBuilder } from "./BaseMappableQueryVarsBuilder";
 import { FilterElement } from "../../FilterElement/FilterElement";
+import { BaseMappableQueryVarsBuilder } from "./BaseMappableQueryVarsBuilder";
 
 /** This query vars builder for `channel` is using slug instead of value (which is base64 ID)
  * for inputs that require this format */

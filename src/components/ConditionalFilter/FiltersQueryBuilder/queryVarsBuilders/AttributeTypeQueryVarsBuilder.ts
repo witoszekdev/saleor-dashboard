@@ -1,6 +1,6 @@
 import { Handler, NoopValuesHandler } from "../../API/Handler";
-import { BaseMappableQueryVarsBuilder } from "./BaseMappableQueryVarsBuilder";
 import { FilterElement } from "../../FilterElement/FilterElement";
+import { BaseMappableQueryVarsBuilder } from "./BaseMappableQueryVarsBuilder";
 
 /**
  * `attributeType` needs to be renamed to `type` in query

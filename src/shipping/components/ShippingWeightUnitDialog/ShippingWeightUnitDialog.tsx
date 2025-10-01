@@ -2,6 +2,7 @@ import { DashboardModal } from "@dashboard/components/Modal";
 import { WeightUnitsEnum } from "@dashboard/graphql";
 import { SubmitPromise } from "@dashboard/hooks/useForm";
 import { FormattedMessage } from "react-intl";
+
 import { ShippingWeightUnitForm } from "../ShippingWeightUnitForm/ShippingWeightUnitForm";
 
 interface ShippingWeightUnitDialogProps {

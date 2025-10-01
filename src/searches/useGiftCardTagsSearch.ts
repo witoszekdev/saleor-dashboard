@@ -5,6 +5,7 @@ import {
   SearchGiftCardTagsQuery,
   SearchGiftCardTagsQueryVariables,
 } from "@dashboard/graphql";
+
 import { makeTopLevelSearch } from "../hooks/makeTopLevelSearch/makeTopLevelSearch";
 
 export const searchGiftCardTags = gql`

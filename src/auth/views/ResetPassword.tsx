@@ -4,9 +4,13 @@ import { commonMessages } from "@dashboard/intl";
 import { extractMutationErrors } from "@dashboard/misc";
 import { useState } from "react";
 import { useIntl } from "react-intl";
+
+import {
+  ResetPasswordPage,
+  ResetPasswordPageFormData,
+} from "../components/ResetPasswordPage/ResetPasswordPage";
 import { passwordResetSuccessUrl } from "../urls";
 import { getNewPasswordResetRedirectUrl } from "../utils";
-import { ResetPasswordPage, ResetPasswordPageFormData } from "../components/ResetPasswordPage/ResetPasswordPage";
 
 const ResetPasswordView = () => {
   const [error, setError] = useState<string>();

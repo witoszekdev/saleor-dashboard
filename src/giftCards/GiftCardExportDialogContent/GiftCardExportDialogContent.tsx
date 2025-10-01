@@ -13,12 +13,12 @@ import { DialogProps } from "@dashboard/types";
 import { Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import { ContentWithProgress } from "../GiftCardCreateDialog/ContentWithProgress";
-import { giftCardExportDialogMessages as messages } from "./messages";
-import { getExportGiftCardsInput } from "./utils";
 import { ConfirmButton } from "../../components/ConfirmButton/ConfirmButton";
 import { useNotifier } from "../../hooks/useNotifier/useNotifier";
+import { ContentWithProgress } from "../GiftCardCreateDialog/ContentWithProgress";
 import { useGiftCardList } from "../GiftCardsList/providers/GiftCardListProvider/GiftCardListProvider";
+import { giftCardExportDialogMessages as messages } from "./messages";
+import { getExportGiftCardsInput } from "./utils";
 
 type IdsToExport = string[] | null;
 

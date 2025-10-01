@@ -16,6 +16,12 @@ import { createMetadataCreateHandler } from "@dashboard/utils/handlers/metadataC
 import { useEffect, useState } from "react";
 import { useIntl } from "react-intl";
 import { slugify } from "slugify";
+
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
+import { add, isSelected, move, remove, updateAtIndex } from "../../../utils/lists/lists";
+import { AttributePage, AttributePageFormData } from "../../components/AttributePage/AttributePage";
+import { AttributeValueDeleteDialog } from "../../components/AttributeValueDeleteDialog/AttributeValueDeleteDialog";
+import { AttributeValueEditDialog } from "../../components/AttributeValueEditDialog/AttributeValueEditDialog";
 import {
   attributeAddUrl,
   AttributeAddUrlDialog,
@@ -23,11 +29,6 @@ import {
   attributeUrl,
 } from "../../urls";
 import { AttributeValueEditDialogFormData, getAttributeData } from "../../utils/data";
-import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
-import { add, isSelected, move, remove, updateAtIndex } from "../../../utils/lists/lists";
-import { AttributePage, AttributePageFormData } from "../../components/AttributePage/AttributePage";
-import { AttributeValueDeleteDialog } from "../../components/AttributeValueDeleteDialog/AttributeValueDeleteDialog";
-import { AttributeValueEditDialog } from "../../components/AttributeValueEditDialog/AttributeValueEditDialog";
 
 type ParamId = number | undefined;
 

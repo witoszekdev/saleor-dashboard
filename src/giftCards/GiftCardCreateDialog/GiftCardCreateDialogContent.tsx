@@ -6,12 +6,12 @@ import { DialogProps } from "@dashboard/types";
 import { useState } from "react";
 import { useIntl } from "react-intl";
 
+import { useNotifier } from "../../hooks/useNotifier/useNotifier";
 import { GiftCardCreateDialogCodeContent } from "./GiftCardCreateDialogCodeContent";
 import { GiftCardCreateDialogForm, GiftCardCreateFormData } from "./GiftCardCreateDialogForm";
 import { giftCardCreateMessages as messages } from "./messages";
 import { GiftCardCreateFormCustomer } from "./types";
 import { getGiftCardCreateOnCompletedMessage, getGiftCardExpiryInputData } from "./utils";
-import { useNotifier } from "../../hooks/useNotifier/useNotifier";
 
 interface GiftCardCreateDialogContentProps extends Pick<DialogProps, "onClose"> {
   refetchQueries: string[];

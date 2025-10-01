@@ -7,16 +7,16 @@ import { useGiftCardDetails } from "@dashboard/giftCards/GiftCardUpdate/provider
 import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { Divider } from "@saleor/macaw-ui-next";
 
-import { giftCardsListPath } from "../urls";
-import { GiftCardHistory } from "./GiftCardHistory/GiftCardHistory";
-import { useGiftCardUpdateDialogs } from "./providers/GiftCardUpdateDialogsProvider/hooks/useGiftCardUpdateDialogs";
-import { useGiftCardUpdate } from "./providers/GiftCardUpdateFormProvider/hooks/useGiftCardUpdate";
-import { useGiftCardUpdate as useGiftCardUpdateForm } from "./providers/GiftCardUpdateFormProvider/hooks/useGiftCardUpdateForm";
 import { DetailPageLayout } from "../../components/Layouts/Detail/index";
 import { Metadata } from "../../components/Metadata/Metadata";
+import { giftCardsListPath } from "../urls";
+import { GiftCardHistory } from "./GiftCardHistory/GiftCardHistory";
 import { GiftCardUpdateDetailsCard } from "./GiftCardUpdateDetailsCard/GiftCardUpdateDetailsCard";
 import { GiftCardUpdateInfoCard } from "./GiftCardUpdateInfoCard/GiftCardUpdateInfoCard";
 import { GiftCardUpdatePageHeader } from "./GiftCardUpdatePageHeader/GiftCardUpdatePageHeader";
+import { useGiftCardUpdateDialogs } from "./providers/GiftCardUpdateDialogsProvider/hooks/useGiftCardUpdateDialogs";
+import { useGiftCardUpdate } from "./providers/GiftCardUpdateFormProvider/hooks/useGiftCardUpdate";
+import { useGiftCardUpdate as useGiftCardUpdateForm } from "./providers/GiftCardUpdateFormProvider/hooks/useGiftCardUpdateForm";
 
 const GiftCardUpdatePage = () => {
   const { openDeleteDialog } = useGiftCardUpdateDialogs();

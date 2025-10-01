@@ -5,6 +5,7 @@ import {
   SearchProductsQuery,
   SearchProductsQueryVariables,
 } from "@dashboard/graphql";
+
 import { makeTopLevelSearch } from "../hooks/makeTopLevelSearch/makeTopLevelSearch";
 
 export const searchProducts = gql`

@@ -13,9 +13,9 @@ import { Box, Button, Skeleton, Text } from "@saleor/macaw-ui-next";
 import { PropsWithChildren } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
+import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
 import { Messages as messages } from "./messages";
 import { useStyles } from "./styles";
-import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
 
 interface AppInstallPageProps {
   data: NonNullable<AppFetchMutation["appFetchManifest"]>["manifest"];

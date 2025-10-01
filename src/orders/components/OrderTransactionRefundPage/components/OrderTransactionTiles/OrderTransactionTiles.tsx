@@ -7,12 +7,12 @@ import { Box, RadioGroup, Skeleton, Tooltip } from "@saleor/macaw-ui-next";
 import { Control, useController } from "react-hook-form";
 import { FormattedMessage } from "react-intl";
 
-import { OrderTransactionRefundPageFormData } from "../../OrderTransactionRefundPage";
-import { transactionRefundTilesMessages } from "./messages";
-import { TileHeader } from "./TileHeader";
 import { EventTime } from "../../../../../components/EventTime/EventTime";
 import { EventStatus } from "../../../OrderTransaction/components/TransactionEvents/components/EventStatus";
 import { PspReference } from "../../../OrderTransaction/components/TransactionEvents/components/PspReference";
+import { OrderTransactionRefundPageFormData } from "../../OrderTransactionRefundPage";
+import { transactionRefundTilesMessages } from "./messages";
+import { TileHeader } from "./TileHeader";
 
 interface OrderTransactionTilesProps {
   transactions: OrderDetailsGrantRefundFragment["transactions"] | undefined;

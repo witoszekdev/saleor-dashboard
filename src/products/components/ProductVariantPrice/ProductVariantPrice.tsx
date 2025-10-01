@@ -12,6 +12,7 @@ import { getProductErrorMessage } from "@dashboard/utils/errors/product";
 import { TableBody, TableCell, TableHead } from "@material-ui/core";
 import { Skeleton, sprinkles, Text, vars } from "@saleor/macaw-ui-next";
 import { FormattedMessage, MessageDescriptor, useIntl } from "react-intl";
+
 import { PriceField } from "../../../components/PriceField/PriceField";
 import { ResponsiveTable } from "../../../components/ResponsiveTable/ResponsiveTable";
 import { TableRowLink } from "../../../components/TableRowLink/TableRowLink";

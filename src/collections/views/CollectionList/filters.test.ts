@@ -7,9 +7,9 @@ import { getExistingKeys, setFilterOptsStatus } from "@test/filters";
 import { config } from "@test/intl";
 import { createIntl } from "react-intl";
 
-import { getFilterQueryParam, getFilterVariables } from "./filters";
-import { createFilterStructure } from "../../components/CollectionListPage/filters";
 import { getFilterQueryParams } from "../../../utils/filters/filters";
+import { createFilterStructure } from "../../components/CollectionListPage/filters";
+import { getFilterQueryParam, getFilterVariables } from "./filters";
 
 describe("Filtering query params", () => {
   it("should be empty object if no params given", () => {

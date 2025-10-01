@@ -7,9 +7,9 @@ import {
 import { CommonError } from "@dashboard/utils/errors/common";
 import { useEffect, useState } from "react";
 
-import { getCurrentConditionsValuesLabels } from "../utils";
-import { mapAPIRuleToForm } from "../../../models/transformRule";
 import { Rule } from "../../../models/Rule";
+import { mapAPIRuleToForm } from "../../../models/transformRule";
+import { getCurrentConditionsValuesLabels } from "../utils";
 
 interface UseRulesHandlersProps {
   data: PromotionDetailsFragment | undefined | null;

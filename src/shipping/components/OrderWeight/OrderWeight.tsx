@@ -10,8 +10,8 @@ import { InputAdornment, TextField } from "@material-ui/core";
 import { Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import { useStyles } from "./styles";
 import { VerticalSpacer } from "../../../components/VerticalSpacer/VerticalSpacer";
+import { useStyles } from "./styles";
 
 interface OrderWeightProps {
   disabled: boolean;

@@ -10,10 +10,11 @@ import {
 import { Box, Button, EditIcon, Text, Tooltip } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 import { Link } from "react-router-dom";
-import { OrderTransactionRefundStatusPill } from "../OrderTransactionRefundPage/components/OrderTransactionRefundStatusPill/OrderTransactionRefundStatusPill";
-import { getGrantedRefundStatusMessage, getNotEditableRefundMessage } from "./utils";
+
 import { UserAvatar } from "../../../components/UserAvatar/UserAvatar";
 import { EventTime } from "../OrderTransaction/components/TransactionEvents/components/EventTime";
+import { OrderTransactionRefundStatusPill } from "../OrderTransactionRefundPage/components/OrderTransactionRefundStatusPill/OrderTransactionRefundStatusPill";
+import { getGrantedRefundStatusMessage, getNotEditableRefundMessage } from "./utils";
 
 interface OrderDetailsRefundLineProps {
   refund: OrderRefundDisplay;

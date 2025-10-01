@@ -5,9 +5,9 @@ import { FormChange } from "@dashboard/hooks/useForm";
 import { Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 
+import { VerticalSpacer } from "../../../components/VerticalSpacer/VerticalSpacer";
 import { TimePeriodField } from "../TimePeriodField/TimePeriodField";
 import { giftCardSettingsExpirySelectMessages as messages } from "./messages";
-import { VerticalSpacer } from "../../../components/VerticalSpacer/VerticalSpacer";
 
 export interface GiftCardSettingsExpirySelectProps {
   change: FormChange;

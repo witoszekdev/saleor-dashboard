@@ -12,10 +12,11 @@ import { extractMutationErrors } from "@dashboard/misc";
 import { stringifyQs } from "@dashboard/utils/urls";
 import { OutputData } from "@editorjs/editorjs";
 import { useIntl } from "react-intl";
-import { PageTranslationInputFieldName, TranslationField } from "../types";
-import { getAttributeValueTranslationsInputData, getParsedTranslationInputData } from "../utils";
+
 import { useNotifier } from "../../hooks/useNotifier/useNotifier";
 import { TranslationsPagesPage } from "../components/TranslationsPagesPage/TranslationsPagesPage";
+import { PageTranslationInputFieldName, TranslationField } from "../types";
+import { getAttributeValueTranslationsInputData, getParsedTranslationInputData } from "../utils";
 
 export interface TranslationsPagesQueryParams {
   activeField: string;

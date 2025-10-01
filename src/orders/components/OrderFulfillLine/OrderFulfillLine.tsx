@@ -13,10 +13,10 @@ import { Box, Skeleton, Text, Tooltip } from "@saleor/macaw-ui-next";
 import { clsx } from "clsx";
 import { useIntl } from "react-intl";
 
-import { messages } from "./messages";
-import { useStyles } from "./styles";
 import { TableCellAvatar } from "../../../components/TableCellAvatar/TableCellAvatar";
 import { TableRowLink } from "../../../components/TableRowLink/TableRowLink";
+import { messages } from "./messages";
+import { useStyles } from "./styles";
 
 interface OrderFulfillLineProps {
   line: OrderFulfillLineFragment;

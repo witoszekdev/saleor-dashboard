@@ -1,6 +1,5 @@
-import { FilterElement } from "../FilterElement/FilterElement";
+import { FilterContainer,FilterElement  } from "../FilterElement/FilterElement";
 import { numeric } from "./numeric";
-import { FilterContainer } from "../FilterElement/FilterElement";
 
 const VALIDATORS = {
   NUMERIC: numeric,

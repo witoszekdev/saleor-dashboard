@@ -4,16 +4,17 @@ import { ChannelFragment, PromotionTypeEnum } from "@dashboard/graphql";
 import { CommonError } from "@dashboard/utils/errors/common";
 import { useEffect, useMemo, useState } from "react";
 import { useIntl } from "react-intl";
-import { RuleDeleteModal } from "./componenets/RuleDeleteModal/RuleDeleteModal";
-import { useGraphQLPlayground } from "./hooks/useGraphQLPlayground";
-import { messages } from "./messages";
+
 import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
 import { Rule } from "../../models/Rule";
 import { AddButton } from "./componenets/AddButton/AddButton";
+import { RuleDeleteModal } from "./componenets/RuleDeleteModal/RuleDeleteModal";
 import { RuleForm } from "./componenets/RuleForm/RuleForm";
 import { RuleFormModal } from "./componenets/RuleFormModal/RuleFormModal";
 import { RulesList } from "./componenets/RulesList/RulesList";
 import { DiscountRulesContextProvider } from "./context/provider";
+import { useGraphQLPlayground } from "./hooks/useGraphQLPlayground";
+import { messages } from "./messages";
 
 export type DiscountRulesErrors<ErrorCode> = Array<CommonError<ErrorCode> & { index?: number }>;
 

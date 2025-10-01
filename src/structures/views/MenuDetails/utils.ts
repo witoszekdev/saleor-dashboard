@@ -4,9 +4,10 @@ import {
   MenuItemInput,
   MenuItemMoveInput,
 } from "@dashboard/graphql";
-import { unknownTypeError } from "../../components/MenuItemsSortableTree/utils";
+
 import { MenuDetailsSubmitData } from "../../components/MenuDetailsPage/MenuDetailsPage";
 import { MenuItemDialogFormData } from "../../components/MenuItemDialog/types";
+import { unknownTypeError } from "../../components/MenuItemsSortableTree/utils";
 
 export function getMenuItemInputData(data: MenuItemDialogFormData): MenuItemInput {
   const variables: MenuItemInput = {

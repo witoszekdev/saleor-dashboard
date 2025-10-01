@@ -5,8 +5,8 @@ import { Box } from "@saleor/macaw-ui-next";
 import { PropsWithChildren } from "react";
 import { useIntl } from "react-intl";
 
-import { Messages as msgs } from "./messages";
 import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import { Messages as msgs } from "./messages";
 
 /** @deprecated use component from extensions/ */
 interface AppActivateDialogProps {

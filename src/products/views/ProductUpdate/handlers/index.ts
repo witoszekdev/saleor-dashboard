@@ -8,6 +8,7 @@ import {
 } from "@dashboard/graphql";
 import { ReorderEvent } from "@dashboard/types";
 import { arrayMove } from "react-sortable-hoc";
+
 import { move } from "../../../../utils/lists/lists";
 
 export function createImageUploadHandler(

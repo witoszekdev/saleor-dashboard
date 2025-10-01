@@ -1,4 +1,5 @@
 import { Option } from "@saleor/macaw-ui-next";
+
 import { isArrayOfOptions } from "../../models/Condition";
 import { Rule } from "../../models/Rule";
 

@@ -5,6 +5,7 @@ import {
   SearchPageTypesQuery,
   SearchPageTypesQueryVariables,
 } from "@dashboard/graphql";
+
 import { makeTopLevelSearch } from "../hooks/makeTopLevelSearch/makeTopLevelSearch";
 
 export const searchPageTypes = gql`

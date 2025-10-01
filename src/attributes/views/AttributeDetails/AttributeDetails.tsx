@@ -21,18 +21,19 @@ import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActi
 import { createMetadataUpdateHandler } from "@dashboard/utils/handlers/metadataUpdateHandler";
 import omit from "lodash/omit";
 import { useIntl } from "react-intl";
-import {
-  attributeListUrl,
-  attributeUrl,
-  AttributeUrlDialog,
-  AttributeUrlQueryParams,
-} from "../../urls";
+
 import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
 import { move } from "../../../utils/lists/lists";
 import { AttributeDeleteDialog } from "../../components/AttributeDeleteDialog/AttributeDeleteDialog";
 import { AttributePage, AttributePageFormData } from "../../components/AttributePage/AttributePage";
 import { AttributeValueDeleteDialog } from "../../components/AttributeValueDeleteDialog/AttributeValueDeleteDialog";
 import { AttributeValueEditDialog } from "../../components/AttributeValueEditDialog/AttributeValueEditDialog";
+import {
+  attributeListUrl,
+  attributeUrl,
+  AttributeUrlDialog,
+  AttributeUrlQueryParams,
+} from "../../urls";
 
 interface AttributeDetailsProps {
   id: string;

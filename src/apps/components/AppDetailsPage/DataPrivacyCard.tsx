@@ -2,8 +2,8 @@ import { Box, BoxProps, Skeleton, Text } from "@saleor/macaw-ui-next";
 import { PropsWithChildren } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import { Messages as messages } from "./messages";
 import { ExternalLinkNext } from "../../../components/ExternalLink/ExternalLink";
+import { Messages as messages } from "./messages";
 
 type DataPrivacyCardProps = {
   dataPrivacyUrl?: string | null;

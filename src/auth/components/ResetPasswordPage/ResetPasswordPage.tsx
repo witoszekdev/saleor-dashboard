@@ -8,8 +8,8 @@ import { TextField } from "@material-ui/core";
 import { ArrowLeftIcon, Box, Button, Paragraph, Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import { ChangingPasswordWarning } from "../ChangingPasswordWarning";
 import { Form } from "../../../components/Form/Form";
+import { ChangingPasswordWarning } from "../ChangingPasswordWarning";
 
 export interface ResetPasswordPageFormData {
   email: string;

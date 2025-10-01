@@ -1,5 +1,6 @@
 import { TextProps } from "@saleor/macaw-ui-next";
 import { HTMLAttributes } from "react";
+
 import { ExternalLinkNext } from "../../../components/ExternalLink/ExternalLink";
 
 export const ExternalLinkUnstyled = (

@@ -3,8 +3,8 @@ import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { commonMessages } from "@dashboard/intl";
 import { useIntl } from "react-intl";
 
-import { staffListUrl } from "../urls";
 import { useNotifier } from "../../hooks/useNotifier/useNotifier";
+import { staffListUrl } from "../urls";
 
 export const useStaffUserOperations = () => {
   const notify = useNotifier();

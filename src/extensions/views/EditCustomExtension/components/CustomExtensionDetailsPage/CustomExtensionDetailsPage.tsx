@@ -18,6 +18,7 @@ import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { getFormErrors } from "@dashboard/utils/errors";
 import { Tooltip } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
+
 import { ConfirmButtonTransitionState } from "../../../../../components/ConfirmButton/ConfirmButton";
 import { Form } from "../../../../../components/Form/Form";
 import { DetailPageLayout } from "../../../../../components/Layouts/Detail/index";

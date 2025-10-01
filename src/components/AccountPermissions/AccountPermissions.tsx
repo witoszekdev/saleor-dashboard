@@ -3,11 +3,12 @@ import { Box, Text } from "@saleor/macaw-ui-next";
 import { ChangeEvent } from "react";
 import * as React from "react";
 import { useIntl } from "react-intl";
-import { messages } from "./messages";
+
 import { PermissionData } from "../../permissionGroups/components/PermissionGroupDetailsPage/PermissionGroupDetailsPage";
 import { Header } from "./components/Header/Header";
 import { PermissionsExceeded } from "./components/PermissionExeeded/PermissionExeeded";
 import { PermissionList } from "./components/PermissionList/PermissionList";
+import { messages } from "./messages";
 
 interface AccountPermissionsProps {
   permissions: PermissionData[];

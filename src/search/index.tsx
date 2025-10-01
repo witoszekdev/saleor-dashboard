@@ -4,6 +4,7 @@ import { sectionNames } from "@dashboard/intl";
 import { useEffect } from "react";
 import { useIntl } from "react-intl";
 
+import { ListPageLayout } from "../components/Layouts/List/index";
 import { WindowTitle } from "../components/WindowTitle";
 import { SearchForm } from "./form";
 import { ListSkeleton } from "./resultsTable/ListSkeleton";
@@ -12,7 +13,6 @@ import { SearchHistory } from "./SearchHistory";
 import { useHistoryCriteria } from "./useHistoryCriteria";
 import { useInclusionVariables } from "./useInclusionVariables";
 import { useSearchCriteria } from "./useSearchCriteria";
-import { ListPageLayout } from "../components/Layouts/List/index";
 
 const Component = () => {
   const intl = useIntl();

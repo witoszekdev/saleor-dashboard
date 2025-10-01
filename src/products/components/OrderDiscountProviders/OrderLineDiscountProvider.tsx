@@ -12,14 +12,14 @@ import { createContext, useContext, useState } from "react";
 import * as React from "react";
 import { useIntl } from "react-intl";
 
+import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
 import {
   GetOrderLineDiscountContextConsumerProps,
   OrderDiscountConsumerCommonProps,
   OrderLineDiscountData,
 } from "./types";
 import { getOrderLineDiscount, getParsedDiscountData, useDiscountDialog } from "./utils";
-import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
-import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
 
 export interface OrderLineDiscountContextConsumerProps extends OrderDiscountConsumerCommonProps {
   addOrderLineDiscount: (data: OrderDiscountCommonInput) => void;

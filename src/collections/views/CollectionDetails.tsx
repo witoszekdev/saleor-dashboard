@@ -23,7 +23,10 @@ import { createMetadataUpdateHandler } from "@dashboard/utils/handlers/metadataU
 import { getParsedDataForJsonStringField } from "@dashboard/utils/richText/misc";
 import { FormattedMessage, useIntl } from "react-intl";
 
+import { NotFoundPage } from "../../components/NotFoundPage/NotFoundPage";
+import { useNotifier } from "../../hooks/useNotifier/useNotifier";
 import { getMutationErrors, getMutationState, maybe } from "../../misc";
+import { arrayDiff } from "../../utils/arrays/arrays";
 import { CollectionDetailsPage } from "../components/CollectionDetailsPage/CollectionDetailsPage";
 import { CollectionUpdateData } from "../components/CollectionDetailsPage/form";
 import {
@@ -33,9 +36,6 @@ import {
   CollectionUrlQueryParams,
 } from "../urls";
 import { COLLECTION_DETAILS_FORM_ID } from "./consts";
-import { NotFoundPage } from "../../components/NotFoundPage/NotFoundPage";
-import { useNotifier } from "../../hooks/useNotifier/useNotifier";
-import { arrayDiff } from "../../utils/arrays/arrays";
 
 interface CollectionDetailsProps {
   id: string;

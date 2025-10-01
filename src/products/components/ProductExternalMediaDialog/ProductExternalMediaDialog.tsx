@@ -4,6 +4,7 @@ import { SubmitPromise } from "@dashboard/hooks/useForm";
 import { buttonMessages } from "@dashboard/intl";
 import { Button, Input, Text } from "@saleor/macaw-ui-next";
 import { defineMessages, FormattedMessage, useIntl } from "react-intl";
+
 import { Form } from "../../../components/Form/Form";
 
 interface ProductExternalMediaDialogProps {

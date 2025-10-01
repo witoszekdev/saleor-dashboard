@@ -10,9 +10,9 @@ import { Button, Skeleton, sprinkles } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 import { Link } from "react-router-dom";
 
-import { renderCollection } from "../../../misc";
 import { ResponsiveTable } from "../../../components/ResponsiveTable/ResponsiveTable";
 import { TableRowLink } from "../../../components/TableRowLink/TableRowLink";
+import { renderCollection } from "../../../misc";
 
 const textRightStyle = sprinkles({
   textAlign: "right",

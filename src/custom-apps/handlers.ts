@@ -16,9 +16,10 @@ import {
 import isEmpty from "lodash/isEmpty";
 import { Dispatch, SetStateAction } from "react";
 import * as React from "react";
-import { filterSelectedAsyncEvents, IntrospectionNode } from "./utils";
+
 import { toggle } from "../utils/lists/lists";
 import { WebhookFormData } from "./components/WebhookDetailsPage/WebhookDetailsPage";
+import { filterSelectedAsyncEvents, IntrospectionNode } from "./utils";
 
 interface CreateSyncEventsSelectHandler {
   change: (event: ChangeEvent, cb?: () => void) => void;

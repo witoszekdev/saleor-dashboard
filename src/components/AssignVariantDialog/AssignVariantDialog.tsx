@@ -4,10 +4,10 @@ import { Container, DialogProps, FetchMoreProps, RelayToFlat } from "@dashboard/
 import { FormattedMessage } from "react-intl";
 
 import { AssignContainerDialogProps } from "../AssignContainerDialog";
+import { ConfirmButtonTransitionState } from "../ConfirmButton/ConfirmButton";
 import { AssignVariantDialogMulti } from "./AssignVariantDialogMulti";
 import { AssignVariantDialogSingle } from "./AssignVariantDialogSingle";
 import { messages } from "./messages";
-import { ConfirmButtonTransitionState } from "../ConfirmButton/ConfirmButton";
 
 interface AssignVariantDialogProps extends FetchMoreProps, DialogProps {
   confirmButtonState: ConfirmButtonTransitionState;

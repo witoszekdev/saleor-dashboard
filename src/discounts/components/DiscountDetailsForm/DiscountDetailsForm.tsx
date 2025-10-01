@@ -15,9 +15,9 @@ import { ReactNode } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { useIntl } from "react-intl";
 
+import { Rule } from "../../models/Rule";
 import { getValidationSchema } from "../DiscountCreateForm/validationSchema";
 import { useRulesHandlers } from "./hooks/useRulesHandlers";
-import { Rule } from "../../models/Rule";
 
 interface DiscountDetailsFormRenderProps {
   rulesErrors: Array<CommonError<any>>;

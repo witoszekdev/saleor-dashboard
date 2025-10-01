@@ -10,9 +10,9 @@ import { ChannelProps } from "@dashboard/types";
 import { Skeleton, Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 
+import { Percent } from "../../../components/Percent/Percent";
 import { maybe } from "../../../misc";
 import { useStyles } from "./styles";
-import { Percent } from "../../../components/Percent/Percent";
 
 interface SaleSummaryProps extends ChannelProps {
   sale: SaleDetailsFragment;

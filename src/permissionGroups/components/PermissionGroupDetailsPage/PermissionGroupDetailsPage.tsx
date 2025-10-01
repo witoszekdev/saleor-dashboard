@@ -22,6 +22,8 @@ import { getPermissionGroupErrorMessage } from "@dashboard/utils/errors/permissi
 import { Box } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
 
+import { Form } from "../../../components/Form/Form";
+import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
 import {
   checkIfUserHasRestictedAccessToChannels,
   extractPermissionCodes,
@@ -29,8 +31,6 @@ import {
   getUserAccessibleChannelsOptions,
   isGroupFullAccess,
 } from "../../utils";
-import { Form } from "../../../components/Form/Form";
-import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
 import { PermissionGroupInfo } from "../PermissionGroupInfo/PermissionGroupInfo";
 import { PermissionGroupMemberList } from "../PermissionGroupMemberList/PermissionGroupMemberList";
 

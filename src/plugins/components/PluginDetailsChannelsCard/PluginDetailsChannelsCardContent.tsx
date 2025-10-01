@@ -11,8 +11,8 @@ import { makeStyles } from "@saleor/macaw-ui";
 import { Skeleton, Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import { pluginDetailsChannelsCardMessages as messages } from "./messages";
 import { Pill } from "../../../components/Pill/Pill";
+import { pluginDetailsChannelsCardMessages as messages } from "./messages";
 
 const useStyles = makeStyles(
   theme => ({

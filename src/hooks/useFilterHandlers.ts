@@ -2,9 +2,9 @@
 import { ActiveTab, Pagination, Search, Sort } from "@dashboard/types";
 import { useEffect, useRef } from "react";
 
-import { useNavigator } from "./useNavigator";
 import { IFilter } from "../components/Filter/types";
 import { GetFilterQueryParam, getFilterQueryParams } from "../utils/filters/filters";
+import { useNavigator } from "./useNavigator";
 
 type RequiredParams = ActiveTab & Search & Sort<any> & Pagination & { presestesChanged?: string };
 type CreateUrl = (params: RequiredParams) => string;

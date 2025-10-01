@@ -14,14 +14,15 @@ import { commonMessages } from "@dashboard/intl";
 import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
 import { Box } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
+
+import { useNotifier } from "../../hooks/useNotifier/useNotifier";
+import { CustomerAddressDialog } from "../components/CustomerAddressDialog/CustomerAddressDialog";
+import { CustomerAddressListPage } from "../components/CustomerAddressListPage/CustomerAddressListPage";
 import {
   customerAddressesUrl,
   CustomerAddressesUrlDialog,
   CustomerAddressesUrlQueryParams,
 } from "../urls";
-import { useNotifier } from "../../hooks/useNotifier/useNotifier";
-import { CustomerAddressDialog } from "../components/CustomerAddressDialog/CustomerAddressDialog";
-import { CustomerAddressListPage } from "../components/CustomerAddressListPage/CustomerAddressListPage";
 
 interface CustomerAddressesProps {
   id: string;

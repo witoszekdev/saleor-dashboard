@@ -13,14 +13,14 @@ import { getFormErrors } from "@dashboard/utils/errors";
 import { Box, Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 
+import { Form } from "../../components/Form/Form";
+import { DetailPageLayout } from "../../components/Layouts/Detail/index";
 import { giftCardsListPath } from "../urls";
+import { GiftCardExpirySettingsCard } from "./GiftCardExpirySettingsCard/GiftCardExpirySettingsCard";
 import { giftCardExpirySettingsCard as expirySettingsMessages } from "./GiftCardExpirySettingsCard/messages";
 import { giftCardSettingsPageMessages as messages } from "./messages";
 import { GiftCardSettingsFormData } from "./types";
 import { getGiftCardSettingsInputData } from "./utils";
-import { Form } from "../../components/Form/Form";
-import { DetailPageLayout } from "../../components/Layouts/Detail/index";
-import { GiftCardExpirySettingsCard } from "./GiftCardExpirySettingsCard/GiftCardExpirySettingsCard";
 
 const GiftCardSettingsPage = () => {
   const intl = useIntl();

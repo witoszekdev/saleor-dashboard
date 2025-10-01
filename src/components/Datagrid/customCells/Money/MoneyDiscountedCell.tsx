@@ -8,9 +8,9 @@ import { useOrderLineDiscountContext } from "@dashboard/products/components/Orde
 import { CustomCell, CustomRenderer, GridCellKind } from "@glideapps/glide-data-grid";
 import { useCallback } from "react";
 
+import { Locale } from "../../../Locale/Locale";
 import { cellHeight } from "../../styles";
 import { drawCurrency, drawLineCrossedPrice, drawPrice, getFormattedMoney } from "./utils";
-import { Locale } from "../../../Locale/Locale";
 
 interface MoneyDiscountedCellProps {
   readonly kind: "money-discounted-cell";

@@ -6,9 +6,9 @@ import { Checkbox, Text } from "@saleor/macaw-ui-next";
 import { useEffect } from "react";
 import { useIntl } from "react-intl";
 
+import { VerticalSpacer } from "../../../components/VerticalSpacer/VerticalSpacer";
 import { giftCardExpirySelectMessages as messages } from "./messages";
 import { useGiftCardExpirySelectStyles as useStyles } from "./styles";
-import { VerticalSpacer } from "../../../components/VerticalSpacer/VerticalSpacer";
 
 const GiftCardUpdateExpirySelect = () => {
   const intl = useIntl();

@@ -1,6 +1,6 @@
 // @ts-strict-ignore
-import { useManualTransactionContext } from "../context";
 import { PriceField, PriceFieldProps } from "../../../../components/PriceField/PriceField";
+import { useManualTransactionContext } from "../context";
 
 export const PriceInputField = ({
   disabled,

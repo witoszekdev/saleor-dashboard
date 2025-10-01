@@ -11,6 +11,7 @@ import { TableCell, TableFooter, TableHead } from "@material-ui/core";
 import { makeStyles } from "@saleor/macaw-ui";
 import { Box, Button, Skeleton, TrashBinIcon } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
+
 import { ResponsiveTable } from "../../../components/ResponsiveTable/ResponsiveTable";
 import { SortableTableBody } from "../../../components/SortableTable/SortableTableBody";
 import { SortableTableRow } from "../../../components/SortableTable/SortableTableRow";

@@ -4,9 +4,9 @@ import { useStateFromProps } from "@dashboard/hooks/useStateFromProps";
 import { DialogProps } from "@dashboard/types";
 import { useIntl } from "react-intl";
 
-import { ProductUpdateData } from "./types";
 import { arrayDiff } from "../../../utils/arrays/arrays";
 import { toggle } from "../../../utils/lists/lists";
+import { ProductUpdateData } from "./types";
 
 export type ProductChannelsListingDialogSubmit = (
   update: Record<"added" | "removed", string[]>,

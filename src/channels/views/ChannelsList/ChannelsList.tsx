@@ -10,10 +10,11 @@ import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { getChannelsErrorMessage } from "@dashboard/utils/errors/channels";
 import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
 import { useIntl } from "react-intl";
-import { channelsListUrl, ChannelsListUrlDialog, ChannelsListUrlQueryParams } from "../../urls";
+
 import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
 import { ChannelDeleteDialog } from "../../components/ChannelDeleteDialog/ChannelDeleteDialog";
 import { ChannelsListPage } from "../../pages/ChannelsListPage/ChannelsListPage";
+import { channelsListUrl, ChannelsListUrlDialog, ChannelsListUrlQueryParams } from "../../urls";
 
 interface ChannelsListProps {
   params: ChannelsListUrlQueryParams;

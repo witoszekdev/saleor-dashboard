@@ -11,10 +11,11 @@ import { Popper, TextField } from "@material-ui/core";
 import { Text } from "@saleor/macaw-ui-next";
 import * as React from "react";
 import { FormattedMessage, useIntl } from "react-intl";
-import { messages } from "./messages";
-import { useStyles } from "./styles";
+
 import { Pill } from "../../../components/Pill/Pill";
 import { WebhookFormData } from "../WebhookDetailsPage/WebhookDetailsPage";
+import { messages } from "./messages";
+import { useStyles } from "./styles";
 
 interface WebhookInfoProps {
   data: WebhookFormData;

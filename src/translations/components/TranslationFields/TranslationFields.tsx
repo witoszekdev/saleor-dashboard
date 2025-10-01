@@ -15,10 +15,10 @@ import { clsx } from "clsx";
 import { Fragment, useState } from "react";
 import { FormattedMessage } from "react-intl";
 
+import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
 import { TranslationFieldsLong } from "./TranslationFieldsLong";
 import { TranslationFieldsRich } from "./TranslationFieldsRich";
 import { TranslationFieldsShort } from "./TranslationFieldsShort";
-import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
 
 type Pagination = Pick<ListProps, Exclude<keyof ListProps, "getRowHref" | "disabled">>;
 

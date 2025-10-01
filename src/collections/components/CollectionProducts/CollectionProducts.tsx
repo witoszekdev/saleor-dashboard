@@ -30,12 +30,12 @@ import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { Button, Skeleton } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
 import { ListViews } from "../../../types";
 import { Pagination } from "./Pagination";
 import { ProductsTable } from "./ProductsTable";
 import { ProductTableSkeleton } from "./ProductTableSkeleton";
 import { useCollectionId } from "./useCollectionId";
-import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
 
 interface CollectionProductsProps {
   collection: CollectionDetailsQuery["collection"];

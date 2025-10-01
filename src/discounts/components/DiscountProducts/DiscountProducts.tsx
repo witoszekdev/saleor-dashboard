@@ -11,14 +11,14 @@ import { DeleteIcon, IconButton } from "@saleor/macaw-ui";
 import { Button, Skeleton } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import { maybe, renderCollection } from "../../../misc";
-import { ListActions, ListProps } from "../../../types";
-import { messages } from "./messages";
-import { useStyles } from "./styles";
 import { ResponsiveTable } from "../../../components/ResponsiveTable/ResponsiveTable";
 import { TableCellAvatar } from "../../../components/TableCellAvatar/TableCellAvatar";
 import { TableHead } from "../../../components/TableHead/TableHead";
 import { TableRowLink } from "../../../components/TableRowLink/TableRowLink";
+import { maybe, renderCollection } from "../../../misc";
+import { ListActions, ListProps } from "../../../types";
+import { messages } from "./messages";
+import { useStyles } from "./styles";
 
 interface SaleProductsProps extends ListProps, ListActions {
   products: SearchProductFragment[];

@@ -1,7 +1,8 @@
 import { ChannelVoucherData } from "@dashboard/channels/utils";
 import { VoucherChannelListingAddInput } from "@dashboard/graphql";
-import { RequirementsPicker } from "./types";
+
 import { VoucherDetailsPageFormData } from "./components/VoucherDetailsPage/VoucherDetailsPage";
+import { RequirementsPicker } from "./types";
 
 const getChannelDiscountValue = (
   channel: ChannelVoucherData,

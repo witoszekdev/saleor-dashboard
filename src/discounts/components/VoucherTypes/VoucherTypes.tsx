@@ -6,6 +6,7 @@ import { getFormErrors } from "@dashboard/utils/errors";
 import { getDiscountErrorMessage } from "@dashboard/utils/errors/discounts";
 import * as React from "react";
 import { useIntl } from "react-intl";
+
 import { RadioGroupField } from "../../../components/RadioGroupField/RadioGroupField";
 import { VoucherDetailsPageFormData } from "../VoucherDetailsPage/VoucherDetailsPage";
 

@@ -1,4 +1,3 @@
-import { FilterQuery, QueryVarsBuilder } from "./queryVarsBuilders/types";
 import { FilterElement } from "../FilterElement/FilterElement";
 import { AttributeQueryVarsBuilder } from "./queryVarsBuilders/AttributeQueryVarsBuilder";
 import { AttributeTypeQueryVarsBuilder } from "./queryVarsBuilders/AttributeTypeQueryVarsBuilder";
@@ -10,6 +9,7 @@ import { ProductTypeQueryVarsBuilder } from "./queryVarsBuilders/ProductTypeQuer
 import { StaffMemberStatusQueryVarsBuilder } from "./queryVarsBuilders/StaffMemberStatusQueryVarsBuilder";
 import { StaticBooleanQueryVarsBuilder } from "./queryVarsBuilders/StaticBooleanQueryVarsBuilder";
 import { StaticQueryVarsBuilder } from "./queryVarsBuilders/StaticQueryVarsBuilder";
+import { FilterQuery, QueryVarsBuilder } from "./queryVarsBuilders/types";
 import { VoucherStatusQueryVarsBuilder } from "./queryVarsBuilders/VoucherStatusQueryVarsBuilder";
 import { VoucherTimesUsedQueryVarsBuilder } from "./queryVarsBuilders/VoucherTimesUsedQueryVarsBuilder";
 

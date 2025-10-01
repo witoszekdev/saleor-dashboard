@@ -1,9 +1,9 @@
 import { DecimalFilterInput, PriceFilterInput } from "@dashboard/graphql";
 
 import { Handler, NoopValuesHandler } from "../../API/Handler";
+import { FilterElement } from "../../FilterElement/FilterElement";
 import { QueryVarsBuilderUtils } from "../utils";
 import { BaseMappableQueryVarsBuilder } from "./BaseMappableQueryVarsBuilder";
-import { FilterElement } from "../../FilterElement/FilterElement";
 
 const SUPPORTED_PRICE_FILTERS = new Set(["totalGross", "totalNet"] as const);
 

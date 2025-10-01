@@ -8,10 +8,13 @@ import { Box, Button, Text } from "@saleor/macaw-ui-next";
 import { useEffect, useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import { Mono } from "./Mono";
-import { ConfirmButton, ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import {
+  ConfirmButton,
+  ConfirmButtonTransitionState,
+} from "../../../components/ConfirmButton/ConfirmButton";
 import { Form } from "../../../components/Form/Form";
 import { useModalDialogOpen } from "../../../hooks/useModalDialogOpen/useModalDialogOpen";
+import { Mono } from "./Mono";
 
 interface TokenCreateDialogProps {
   confirmButtonState: ConfirmButtonTransitionState;

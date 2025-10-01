@@ -10,12 +10,12 @@ import { commonErrorMessages } from "@dashboard/utils/errors/common";
 import { Input, Text } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
 
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
 import { giftCardsListTableMessages as tableMessages } from "../../GiftCardsList/messages";
 import { useDialogFormReset } from "../GiftCardResendCodeDialog/utils";
 import { getGiftCardErrorMessage } from "../messages";
 import { useGiftCardDetails } from "../providers/GiftCardDetailsProvider/hooks/useGiftCardDetails";
 import { giftCardUpdateBalanceDialogMessages as messages } from "./messages";
-import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
 
 interface GiftCardBalanceUpdateFormData {
   balanceAmount: number;

@@ -16,12 +16,13 @@ import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActi
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { useEffect } from "react";
 import { useIntl } from "react-intl";
-import { messages } from "../messages";
-import { CustomAppListUrlDialog, CustomAppListUrlQueryParams, CustomAppUrls } from "../urls";
+
 import { AppDeleteDialog } from "../../apps/components/AppDeleteDialog/AppDeleteDialog";
 import { useNotifier } from "../../hooks/useNotifier/useNotifier";
 import { useOnboarding } from "../../welcomePage/WelcomePageOnboarding/onboardingContext/OnboardingContext";
 import { CustomAppListPage } from "../components/CustomAppListPage/CustomAppListPage";
+import { messages } from "../messages";
+import { CustomAppListUrlDialog, CustomAppListUrlQueryParams, CustomAppUrls } from "../urls";
 
 interface CustomAppListProps {
   params: CustomAppListUrlQueryParams;

@@ -4,13 +4,13 @@ import { DashboardModal } from "@dashboard/components/Modal";
 import { FetcherOpts, FetcherParams } from "@graphiql/toolkit";
 import { useIntl } from "react-intl";
 
+import { useOnboarding } from "../../welcomePage/WelcomePageOnboarding/onboardingContext/OnboardingContext";
 import { ContextualLine } from "../AppLayout/ContextualLinks/ContextualLine";
 import { useContextualLink } from "../AppLayout/ContextualLinks/useContextualLink";
+import { GraphiQL as PlainGraphiQL } from "../GraphiQLPlain/GraphiQL";
 import { useDevModeContext } from "./hooks";
 import { messages } from "./messages";
 import { getFetcher } from "./utils";
-import { useOnboarding } from "../../welcomePage/WelcomePageOnboarding/onboardingContext/OnboardingContext";
-import { GraphiQL as PlainGraphiQL } from "../GraphiQLPlain/GraphiQL";
 
 export const DevModePanel = () => {
   const intl = useIntl();

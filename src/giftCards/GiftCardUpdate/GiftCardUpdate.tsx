@@ -1,8 +1,8 @@
 import { GiftCardUpdatePage } from "./GiftCardUpdatePage";
-import { GiftCardUpdateFormProvider } from "./providers/GiftCardUpdateFormProvider/GiftCardUpdateFormProvider";
-import { GiftCardUpdatePageUrlQueryParams } from "./types";
 import { GiftCardDetailsProvider } from "./providers/GiftCardDetailsProvider/GiftCardDetailsProvider";
 import { GiftCardUpdateDialogsProvider } from "./providers/GiftCardUpdateDialogsProvider/GiftCardUpdateDialogsProvider";
+import { GiftCardUpdateFormProvider } from "./providers/GiftCardUpdateFormProvider/GiftCardUpdateFormProvider";
+import { GiftCardUpdatePageUrlQueryParams } from "./types";
 
 interface GiftCardUpdateProps {
   params: GiftCardUpdatePageUrlQueryParams;

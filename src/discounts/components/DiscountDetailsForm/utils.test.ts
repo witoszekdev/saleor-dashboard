@@ -1,5 +1,5 @@
-import { getCurrentConditionsValuesLabels } from "./utils";
 import { Rule } from "../../models/Rule";
+import { getCurrentConditionsValuesLabels } from "./utils";
 
 describe("getCurrentConditionsValuesLabels", () => {
   it("should return empty object if no rules", () => {

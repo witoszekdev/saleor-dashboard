@@ -16,10 +16,13 @@ import { stringifyQs } from "@dashboard/utils/urls";
 import { OutputData } from "@editorjs/editorjs";
 import { useIntl } from "react-intl";
 
-import { extractMutationErrors, getMutationState, maybe } from "../../misc";
-import { TranslationField } from "../types";
 import { useNotifier } from "../../hooks/useNotifier/useNotifier";
-import { fieldNames, TranslationsAttributesPage } from "../components/TranslationsAttributesPage/TranslationsAttributesPage";
+import { extractMutationErrors, getMutationState, maybe } from "../../misc";
+import {
+  fieldNames,
+  TranslationsAttributesPage,
+} from "../components/TranslationsAttributesPage/TranslationsAttributesPage";
+import { TranslationField } from "../types";
 
 type HandleSubmitData = string | OutputData;
 

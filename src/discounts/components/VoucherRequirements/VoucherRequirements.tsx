@@ -11,13 +11,14 @@ import { TableBody, TableCell, TextField } from "@material-ui/core";
 import { Skeleton, Text } from "@saleor/macaw-ui-next";
 import * as React from "react";
 import { FormattedMessage, useIntl } from "react-intl";
-import { useStyles } from "./styles";
+
 import { PriceField } from "../../../components/PriceField/PriceField";
 import { RadioGroupField } from "../../../components/RadioGroupField/RadioGroupField";
 import { ResponsiveTable } from "../../../components/ResponsiveTable/ResponsiveTable";
 import { TableHead } from "../../../components/TableHead/TableHead";
 import { TableRowLink } from "../../../components/TableRowLink/TableRowLink";
 import { VoucherDetailsPageFormData } from "../VoucherDetailsPage/VoucherDetailsPage";
+import { useStyles } from "./styles";
 
 interface VoucherRequirementsProps {
   data: VoucherDetailsPageFormData;

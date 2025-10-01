@@ -11,11 +11,11 @@ import { orderUrl } from "@dashboard/orders/urls";
 import { useState } from "react";
 import { useIntl } from "react-intl";
 
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
+import { OrderRefundPage as OrderReturnPage } from "../../components/OrderReturnPage/OrderReturnPage";
 import { messages } from "./messages";
 import { useRefundWithinReturn } from "./useRefundWithinReturn";
 import { getSuccessMessage, ReturnFormDataParser } from "./utils";
-import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
-import { OrderRefundPage as OrderReturnPage } from "../../components/OrderReturnPage/OrderReturnPage";
 
 interface OrderReturnProps {
   orderId: string;

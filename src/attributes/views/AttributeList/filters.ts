@@ -1,10 +1,14 @@
 import { AttributeFilterInput } from "@dashboard/graphql";
 import { parseBoolean } from "@dashboard/misc";
-import { AttributeListUrlFilters, AttributeListUrlFiltersEnum } from "../../urls";
-import { AttributeFilterKeys, AttributeListFilterOpts } from "../../components/AttributeListPage/filters";
+
 import { FilterElement } from "../../../components/Filter/types";
-import { createFilterTabUtils } from "../../../utils/filters/storage";
 import { getSingleValueQueryParam } from "../../../utils/filters/filters";
+import { createFilterTabUtils } from "../../../utils/filters/storage";
+import {
+  AttributeFilterKeys,
+  AttributeListFilterOpts,
+} from "../../components/AttributeListPage/filters";
+import { AttributeListUrlFilters, AttributeListUrlFiltersEnum } from "../../urls";
 
 const ATTRIBUTE_FILTERS_KEY = "attributeFilters";
 

@@ -18,6 +18,9 @@ import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActi
 import { createMetadataUpdateHandler } from "@dashboard/utils/handlers/metadataUpdateHandler";
 import { useIntl } from "react-intl";
 
+import { MetadataIdSchema } from "../../../components/Metadata/types";
+import { NotFoundPage } from "../../../components/NotFoundPage/NotFoundPage";
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
 import { OrderOperations } from "../../containers/OrderOperations";
 import { orderListUrl, orderUrl, OrderUrlDialog, OrderUrlQueryParams } from "../../urls";
 import { OrderDetailsMessages } from "./OrderDetailsMessages";
@@ -25,9 +28,6 @@ import { OrderDraftDetails } from "./OrderDraftDetails";
 import { OrderNormalDetails } from "./OrderNormalDetails";
 import { OrderUnconfirmedDetails } from "./OrderUnconfirmedDetails";
 import { useOrderDetails } from "./useOrderDetails";
-import { MetadataIdSchema } from "../../../components/Metadata/types";
-import { NotFoundPage } from "../../../components/NotFoundPage/NotFoundPage";
-import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
 
 interface OrderDetailsProps {
   id: string;

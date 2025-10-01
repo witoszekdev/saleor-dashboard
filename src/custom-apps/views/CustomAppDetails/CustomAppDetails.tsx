@@ -27,14 +27,18 @@ import { getAppErrorMessage } from "@dashboard/utils/errors/app";
 import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
 import { useEffect } from "react";
 import { useIntl } from "react-intl";
+
 import { AppActivateDialog } from "../../../apps/components/AppActivateDialog/AppActivateDialog";
 import { AppDeactivateDialog } from "../../../apps/components/AppDeactivateDialog/AppDeactivateDialog";
 import { NotFoundPage } from "../../../components/NotFoundPage/NotFoundPage";
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
+import {
+  CustomAppDetailsPage,
+  CustomAppDetailsPageFormData,
+} from "../../components/CustomAppDetailsPage/CustomAppDetailsPage";
 import { TokenCreateDialog } from "../../components/TokenCreateDialog/TokenCreateDialog";
 import { TokenDeleteDialog } from "../../components/TokenDeleteDialog/TokenDeleteDialog";
 import { WebhookDeleteDialog } from "../../components/WebhookDeleteDialog/WebhookDeleteDialog";
-import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
-import { CustomAppDetailsPage, CustomAppDetailsPageFormData } from "../../components/CustomAppDetailsPage/CustomAppDetailsPage";
 
 interface OrderListProps {
   id: string;

@@ -1,7 +1,7 @@
 import { Handler, NoopValuesHandler } from "../../API/Handler";
 import { isTuple } from "../../FilterElement/ConditionValue";
-import { WhereOnlyQueryVarsBuilder } from "./types";
 import { FilterElement } from "../../FilterElement/FilterElement";
+import { WhereOnlyQueryVarsBuilder } from "./types";
 
 type MetadataInput = { metadata?: { key: string; value?: { eq?: string; oneOf?: string[] } } };
 

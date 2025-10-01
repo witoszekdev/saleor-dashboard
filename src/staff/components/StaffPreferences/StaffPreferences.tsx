@@ -4,6 +4,7 @@ import { FormSpacer } from "@dashboard/components/FormSpacer";
 import { capitalize } from "@dashboard/misc";
 import { Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
+
 import { Locale, localeNames } from "../../../components/Locale/Locale";
 
 interface StaffPreferencesProps {

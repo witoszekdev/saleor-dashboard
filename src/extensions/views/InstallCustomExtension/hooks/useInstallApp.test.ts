@@ -5,8 +5,8 @@ import { extractMutationErrors } from "@dashboard/misc";
 import { act, renderHook } from "@testing-library/react-hooks";
 import { useIntl } from "react-intl";
 
-import { useInstallApp } from "./useInstallApp";
 import { useNotifier } from "../../../../hooks/useNotifier/useNotifier";
+import { useInstallApp } from "./useInstallApp";
 
 jest.mock("@dashboard/graphql", () => {
   const actual = jest.requireActual("@dashboard/graphql");

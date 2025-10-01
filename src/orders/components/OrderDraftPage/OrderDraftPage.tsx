@@ -23,13 +23,14 @@ import { orderDraftListUrl } from "@dashboard/orders/urls";
 import { FetchMoreProps, RelayToFlat } from "@dashboard/types";
 import { Box, Divider, Skeleton, Text } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
-import { OrderDraftDetails } from "../OrderDraftDetails/OrderDraftDetails";
-import { OrderDraftAlert } from "./OrderDraftAlert";
+
 import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
 import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
 import { OrderChannelSectionCard } from "../OrderChannelSectionCard/OrderChannelSectionCard";
 import { CustomerEditData, OrderCustomer } from "../OrderCustomer/OrderCustomer";
+import { OrderDraftDetails } from "../OrderDraftDetails/OrderDraftDetails";
 import { FormData as HistoryFormData, OrderHistory } from "../OrderHistory/OrderHistory";
+import { OrderDraftAlert } from "./OrderDraftAlert";
 
 interface OrderDraftPageProps extends FetchMoreProps {
   disabled: boolean;

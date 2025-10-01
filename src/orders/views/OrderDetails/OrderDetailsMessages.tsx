@@ -39,8 +39,8 @@ import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActi
 import * as React from "react";
 import { useIntl } from "react-intl";
 
-import { orderUrl, OrderUrlQueryParams } from "../../urls";
 import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
+import { orderUrl, OrderUrlQueryParams } from "../../urls";
 
 interface OrderDetailsMessages {
   children: (props: {

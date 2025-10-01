@@ -1,8 +1,9 @@
 import { useApolloClient } from "@apollo/client";
+
+import { FilterContainer } from "../../FilterElement/FilterElement";
 import { FilterAPIProvider } from "../FilterAPIProvider";
 import { PageTypesHandler } from "../Handler";
 import { getFilterElement } from "../utils";
-import { FilterContainer } from "../../FilterElement/FilterElement";
 
 export const usePageAPIProvider = (): FilterAPIProvider => {
   const client = useApolloClient();

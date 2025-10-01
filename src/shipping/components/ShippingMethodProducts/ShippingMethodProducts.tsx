@@ -10,6 +10,7 @@ import { TableBody, TableCell, TableFooter } from "@material-ui/core";
 import { DeleteIcon, IconButton, makeStyles } from "@saleor/macaw-ui";
 import { Skeleton, Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
+
 import { ResponsiveTable } from "../../../components/ResponsiveTable/ResponsiveTable";
 import { TableCellAvatar } from "../../../components/TableCellAvatar/TableCellAvatar";
 import { TableHead } from "../../../components/TableHead/TableHead";

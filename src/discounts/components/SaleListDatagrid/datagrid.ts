@@ -11,8 +11,8 @@ import { GridCell, Item } from "@glideapps/glide-data-grid";
 import moment from "moment";
 import { IntlShape } from "react-intl";
 
-import { columnsMessages } from "./messages";
 import { Locale } from "../../../components/Locale/Locale";
+import { columnsMessages } from "./messages";
 
 export const salesListStaticColumnsAdapter = (intl: IntlShape, sort: Sort<SaleListUrlSortField>) =>
   [

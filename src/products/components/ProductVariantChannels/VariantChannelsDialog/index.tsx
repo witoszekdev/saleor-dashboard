@@ -7,9 +7,9 @@ import { ChannelsAvailabilityDialog } from "@dashboard/components/ChannelsAvaila
 import { FormsetData } from "@dashboard/hooks/useFormset";
 import { useState } from "react";
 
-import { ProductChannelListing } from "../types";
 import { useModalDialogOpen } from "../../../../hooks/useModalDialogOpen/useModalDialogOpen";
 import { toggle } from "../../../../utils/lists/lists";
+import { ProductChannelListing } from "../types";
 
 interface VariantChannelsDialogProps {
   channelListings: ProductChannelListing;

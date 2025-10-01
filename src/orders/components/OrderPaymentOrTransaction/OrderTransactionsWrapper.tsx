@@ -8,14 +8,15 @@ import {
 import { Box, Text } from "@saleor/macaw-ui-next";
 import { useMemo } from "react";
 import { FormattedMessage } from "react-intl";
-import { OrderDetailsRefundTable } from "../OrderDetailsRefundTable/OrderDetailsRefundTable";
-import { getFilteredPayments } from "./utils";
+
 import { OrderAddTransaction } from "../OrderAddTransaction/OrderAddTransaction";
+import { OrderDetailsRefundTable } from "../OrderDetailsRefundTable/OrderDetailsRefundTable";
 import { OrderPaymentSummaryCard } from "../OrderPaymentSummaryCard/OrderPaymentSummaryCard";
 import { OrderSummaryCard } from "../OrderSummaryCard/OrderSummaryCard";
 import { OrderTransaction } from "../OrderTransaction/OrderTransaction";
 import { OrderTransactionGiftCard } from "../OrderTransactionGiftCard/OrderTransactionGiftCard";
 import { OrderTransactionPayment } from "../OrderTransactionPayment/OrderTransactionPayment";
+import { getFilteredPayments } from "./utils";
 
 interface OrderTransactionsWrapper {
   order: OrderDetailsFragment;

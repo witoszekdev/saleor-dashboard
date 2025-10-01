@@ -6,8 +6,8 @@ import { FormattedMessage } from "react-intl";
 
 import { DashboardCard } from "../Card";
 import { DateTime } from "../Date";
-import { TimelineNoteEdit } from "./TimelineNoteEdit";
 import { UserAvatar } from "../UserAvatar/UserAvatar";
+import { TimelineNoteEdit } from "./TimelineNoteEdit";
 
 type TimelineAppType =
   | NonNullable<GiftCardDetailsQuery["giftCard"]>["events"][0]["app"]

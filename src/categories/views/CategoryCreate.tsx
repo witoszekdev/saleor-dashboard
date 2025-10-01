@@ -10,10 +10,11 @@ import { getMutationErrors } from "@dashboard/misc";
 import { createMetadataCreateHandler } from "@dashboard/utils/handlers/metadataCreateHandler";
 import { getParsedDataForJsonStringField } from "@dashboard/utils/richText/misc";
 import { useIntl } from "react-intl";
-import { CategoryCreateData } from "../components/CategoryCreatePage/form";
-import { categoryListUrl, categoryUrl } from "../urls";
+
 import { useNotifier } from "../../hooks/useNotifier/useNotifier";
 import { CategoryCreatePage } from "../components/CategoryCreatePage/CategoryCreatePage";
+import { CategoryCreateData } from "../components/CategoryCreatePage/form";
+import { categoryListUrl, categoryUrl } from "../urls";
 
 interface CategoryCreateViewProps {
   parentId?: string;

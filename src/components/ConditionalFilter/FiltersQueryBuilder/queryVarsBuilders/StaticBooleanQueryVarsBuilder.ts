@@ -1,9 +1,9 @@
 import { AttributeInputTypeEnum } from "@dashboard/graphql";
 
 import { BooleanValuesHandler, Handler } from "../../API/Handler";
+import { FilterElement } from "../../FilterElement/FilterElement";
 import { QueryVarsBuilderUtils } from "../utils";
 import { BothApiQueryVarsBuilder, FilterQuery } from "./types";
-import { FilterElement } from "../../FilterElement/FilterElement";
 
 const SUPPORTED_STATIC_BOOLEAN_FILTERS = new Set([
   "isPublished",

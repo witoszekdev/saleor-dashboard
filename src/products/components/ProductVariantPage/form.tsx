@@ -63,13 +63,14 @@ import { useMultipleRichText } from "@dashboard/utils/richText/useMultipleRichTe
 import { useEffect, useState } from "react";
 import * as React from "react";
 import { useIntl } from "react-intl";
+
+import { MetadataFormData } from "../../../components/Metadata/types";
+import { arrayDiff } from "../../../utils/arrays/arrays";
+import { ProductStockInput } from "../ProductStocks/ProductStocks";
 import {
   concatChannelsBySelection,
   extractChannelPricesFromVariantChannel,
 } from "../ProductVariantChannels/formOpretations";
-import { MetadataFormData } from "../../../components/Metadata/types";
-import { arrayDiff } from "../../../utils/arrays/arrays";
-import { ProductStockInput } from "../ProductStocks/ProductStocks";
 
 interface ProductVariantUpdateFormData extends MetadataFormData {
   sku: string;

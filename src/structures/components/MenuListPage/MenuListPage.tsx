@@ -13,6 +13,7 @@ import { menuListUrl, MenuListUrlSortField } from "@dashboard/structures/urls";
 import { ListActions, PageListProps, SortPage } from "@dashboard/types";
 import { Box, Button, ChevronRightIcon, Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
+
 import { ListPageLayout } from "../../../components/Layouts/List/index";
 import { MenuList } from "../MenuList/MenuList";
 

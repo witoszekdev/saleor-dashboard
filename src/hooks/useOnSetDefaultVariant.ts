@@ -1,6 +1,7 @@
 import { Node, useProductVariantSetDefaultMutation } from "@dashboard/graphql";
 import { getProductErrorMessage } from "@dashboard/utils/errors";
 import { useIntl } from "react-intl";
+
 import { useNotifier } from "./useNotifier/useNotifier";
 
 function useOnSetDefaultVariant(productId: string, variant: Node) {

@@ -27,7 +27,7 @@ import { useMetadataChangeTrigger } from "@dashboard/utils/metadata/useMetadataC
 import { RichTextContext } from "@dashboard/utils/richText/context";
 import { useRichText } from "@dashboard/utils/richText/useRichText";
 import { FormEventHandler, useMemo } from "react";
-import { ShippingZoneRateUpdateFormData } from "./types";
+
 import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
 import { WithFormId } from "../../../components/Form/types";
 import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
@@ -35,9 +35,10 @@ import { OrderValue } from "../OrderValue/OrderValue";
 import { OrderWeight } from "../OrderWeight/OrderWeight";
 import { PricingCard } from "../PricingCard/PricingCard";
 import { ShippingMethodProducts } from "../ShippingMethodProducts/ShippingMethodProducts";
-import { ShippingRateInfo } from "../ShippingRateInfo/ShippingRateInfo";
 import { ShippingMethodTaxes } from "../ShippingMethodTaxes/ShippingMethodTaxes";
+import { ShippingRateInfo } from "../ShippingRateInfo/ShippingRateInfo";
 import { ShippingZonePostalCodes } from "../ShippingZonePostalCodes/ShippingZonePostalCodes";
+import { ShippingZoneRateUpdateFormData } from "./types";
 
 interface ShippingZoneRatesPageProps
   extends Pick<ListProps, Exclude<keyof ListProps, "getRowHref">>,

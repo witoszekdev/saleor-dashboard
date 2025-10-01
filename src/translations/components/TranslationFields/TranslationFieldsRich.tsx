@@ -6,10 +6,10 @@ import { OutputData } from "@editorjs/editorjs";
 import { Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import { TranslationFieldsSave } from "./TranslationFieldsSave";
-import { useRichTextSubmit } from "./useRichTextSubmit";
 import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
 import { RichTextEditor } from "../../../components/RichTextEditor/RichTextEditor";
+import { TranslationFieldsSave } from "./TranslationFieldsSave";
+import { useRichTextSubmit } from "./useRichTextSubmit";
 
 interface TranslationFieldsRichProps {
   disabled: boolean;

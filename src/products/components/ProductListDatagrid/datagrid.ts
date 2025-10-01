@@ -40,9 +40,9 @@ import { GridCell, Item } from "@glideapps/glide-data-grid";
 import { DefaultTheme } from "@saleor/macaw-ui-next";
 import { IntlShape } from "react-intl";
 
+import { Locale } from "../../../components/Locale/Locale";
 import { getAttributeIdFromColumnValue } from "../ProductListPage/utils";
 import { categoryMetaGroups, columnsMessages } from "./messages";
-import { Locale } from "../../../components/Locale/Locale";
 
 export const productListStaticColumnAdapter = ({
   intl,

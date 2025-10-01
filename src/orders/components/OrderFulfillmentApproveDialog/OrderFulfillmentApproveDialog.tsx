@@ -8,9 +8,12 @@ import { getOrderErrorMessage } from "@dashboard/utils/errors/order";
 import { Box, Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import { messages } from "./messages";
-import { ConfirmButton, ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import {
+  ConfirmButton,
+  ConfirmButtonTransitionState,
+} from "../../../components/ConfirmButton/ConfirmButton";
 import { Form } from "../../../components/Form/Form";
+import { messages } from "./messages";
 
 interface OrderFulfillmentAcceptDialogFormData {
   notifyCustomer: boolean;

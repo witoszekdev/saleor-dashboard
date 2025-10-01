@@ -10,8 +10,8 @@ import { Box, Button } from "@saleor/macaw-ui-next";
 import { Fragment, useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import { useStyles } from "./styles";
 import { useModalDialogOpen } from "../../../hooks/useModalDialogOpen/useModalDialogOpen";
+import { useStyles } from "./styles";
 
 interface TaxCountryDialogProps {
   open: boolean;

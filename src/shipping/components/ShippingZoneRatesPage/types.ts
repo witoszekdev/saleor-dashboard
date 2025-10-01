@@ -1,6 +1,7 @@
 import { ChannelShippingData } from "@dashboard/channels/utils";
 import { ShippingMethodTypeEnum } from "@dashboard/graphql";
 import { OutputData } from "@editorjs/editorjs";
+
 import { MetadataFormData } from "../../../components/Metadata/types";
 
 export interface ShippingZoneRateCommonFormData {

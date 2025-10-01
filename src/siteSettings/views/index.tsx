@@ -7,9 +7,13 @@ import {
 import { commonMessages, sectionNames } from "@dashboard/intl";
 import { useIntl } from "react-intl";
 
-import { extractMutationErrors, findInEnum } from "../../misc";
 import { useNotifier } from "../../hooks/useNotifier/useNotifier";
-import { areAddressInputFieldsModified, SiteSettingsPage, SiteSettingsPageFormData } from "../components/SiteSettingsPage/SiteSettingsPage";
+import { extractMutationErrors, findInEnum } from "../../misc";
+import {
+  areAddressInputFieldsModified,
+  SiteSettingsPage,
+  SiteSettingsPageFormData,
+} from "../components/SiteSettingsPage/SiteSettingsPage";
 
 const SiteSettings = () => {
   const notify = useNotifier();

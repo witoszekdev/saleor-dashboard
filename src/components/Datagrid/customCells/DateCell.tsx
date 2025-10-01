@@ -6,6 +6,7 @@ import {
   Rectangle,
   Theme,
 } from "@glideapps/glide-data-grid";
+
 import { Locale } from "../../Locale/Locale";
 
 const numberCellEmptyValue = Symbol("date-cell-empty-value");

@@ -50,11 +50,15 @@ import { createMetadataUpdateHandler } from "@dashboard/utils/handlers/metadataU
 import { useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
+import {
+  SaleDetailsPage,
+  SaleDetailsPageTab,
+  SaleTabItemsCount,
+} from "../../components/SaleDetailsPage/SaleDetailsPage";
 import { createUpdateHandler } from "./handlers";
 import { messages } from "./messages";
 import { SALE_UPDATE_FORM_ID } from "./types";
-import { SaleDetailsPage, SaleDetailsPageTab, SaleTabItemsCount } from "../../components/SaleDetailsPage/SaleDetailsPage";
-import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
 
 interface SaleDetailsProps {
   id: string;

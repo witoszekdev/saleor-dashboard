@@ -1,14 +1,15 @@
 import { ReactElement } from "react";
-import {
-  OrderManualTransactionForm as MainComponent,
-  OrderManualTransactionFormProps as MainComponentProps,
-} from "./OrderManualTransactionForm";
+
 import { DescriptionField } from "./components/DescriptionField";
 import { ErrorText } from "./components/ErrorText";
 import { Form } from "./components/Form";
 import { PriceInputField } from "./components/PriceInputField";
 import { PspReferenceField } from "./components/PspReferenceField";
 import { SubmitButton } from "./components/SubmitButton";
+import {
+  OrderManualTransactionForm as MainComponent,
+  OrderManualTransactionFormProps as MainComponentProps,
+} from "./OrderManualTransactionForm";
 
 interface OrderManualTransactionCombinedComponent {
   (props: OrderManualTransactionFormProps): ReactElement | null;

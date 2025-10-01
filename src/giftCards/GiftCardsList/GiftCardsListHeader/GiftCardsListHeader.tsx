@@ -12,9 +12,9 @@ import { sectionNames } from "@dashboard/intl";
 import { Box, Button, ChevronRightIcon } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
 
+import { FilterPresetsSelect } from "../../../components/FilterPresetsSelect/FilterPresetsSelect";
 import { giftCardSettingsUrl } from "../../urls";
 import { giftCardsListHeaderMenuItemsMessages as messages } from "../messages";
-import { FilterPresetsSelect } from "../../../components/FilterPresetsSelect/FilterPresetsSelect";
 import { useGiftCardListDialogs } from "../providers/GiftCardListDialogsProvider/GiftCardListDialogsProvider";
 import { useGiftCardList } from "../providers/GiftCardListProvider/GiftCardListProvider";
 

@@ -7,12 +7,13 @@ import { getDiscountErrorMessage } from "@dashboard/utils/errors/discounts";
 import { TableBody, TableCell, TableHead } from "@material-ui/core";
 import { Skeleton, Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
-import { SaleValueTextField } from "./SaleValueTextField";
-import { useStyles } from "./styles";
-import { SaleValueInputOnChangeType } from "./types";
+
 import { ResponsiveTable } from "../../../components/ResponsiveTable/ResponsiveTable";
 import { TableRowLink } from "../../../components/TableRowLink/TableRowLink";
 import { SaleDetailsPageFormData } from "../SaleDetailsPage/SaleDetailsPage";
+import { SaleValueTextField } from "./SaleValueTextField";
+import { useStyles } from "./styles";
+import { SaleValueInputOnChangeType } from "./types";
 
 interface SaleValueProps {
   data: SaleDetailsPageFormData;

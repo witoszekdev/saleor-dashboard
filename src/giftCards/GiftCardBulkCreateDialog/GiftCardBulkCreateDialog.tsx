@@ -7,6 +7,7 @@ import { getFormErrors } from "@dashboard/utils/errors";
 import { useEffect, useState } from "react";
 import { useIntl } from "react-intl";
 
+import { useNotifier } from "../../hooks/useNotifier/useNotifier";
 import { ContentWithProgress } from "../GiftCardCreateDialog/ContentWithProgress";
 import { GiftCardBulkCreateSuccessDialog } from "../GiftCardCreateDialog/GiftCardBulkCreateSuccessDialog";
 import {
@@ -22,7 +23,6 @@ import {
   GiftCardBulkCreateFormErrors,
 } from "./types";
 import { validateForm } from "./utils";
-import { useNotifier } from "../../hooks/useNotifier/useNotifier";
 
 export const GiftCardBulkCreateDialog = ({ onClose, open }: DialogProps) => {
   const intl = useIntl();

@@ -26,13 +26,16 @@ import { createMetadataUpdateHandler } from "@dashboard/utils/handlers/metadataU
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import { UseAvailablePageAttributesSearch as useAvailablePageAttributeSearch } from "../../searches/useAvailablePageAttributesSearch";
-import { pageTypeListUrl, pageTypeUrl, PageTypeUrlQueryParams } from "../urls";
 import { NotFoundPage } from "../../components/NotFoundPage/NotFoundPage";
 import { TypeDeleteWarningDialog } from "../../components/TypeDeleteWarningDialog/TypeDeleteWarningDialog";
 import { useNotifier } from "../../hooks/useNotifier/useNotifier";
-import { PageTypeDetailsPage, PageTypeForm } from "../components/PageTypeDetailsPage/PageTypeDetailsPage";
+import { UseAvailablePageAttributesSearch as useAvailablePageAttributeSearch } from "../../searches/useAvailablePageAttributesSearch";
+import {
+  PageTypeDetailsPage,
+  PageTypeForm,
+} from "../components/PageTypeDetailsPage/PageTypeDetailsPage";
 import { usePageTypeDelete } from "../hooks/usePageTypeDelete/usePageTypeDelete";
+import { pageTypeListUrl, pageTypeUrl, PageTypeUrlQueryParams } from "../urls";
 
 interface PageTypeDetailsProps {
   id: string;

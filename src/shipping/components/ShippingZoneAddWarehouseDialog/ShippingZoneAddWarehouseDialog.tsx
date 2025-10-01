@@ -13,7 +13,11 @@ import { createSingleAutocompleteSelectHandler } from "@dashboard/utils/handlers
 import { mapCountriesToChoices } from "@dashboard/utils/maps";
 import { TextField } from "@material-ui/core";
 import { FormattedMessage, useIntl } from "react-intl";
-import { ConfirmButton, ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+
+import {
+  ConfirmButton,
+  ConfirmButtonTransitionState,
+} from "../../../components/ConfirmButton/ConfirmButton";
 import { Form } from "../../../components/Form/Form";
 import { useModalDialogErrors } from "../../../hooks/useModalDialogErrors/useModalDialogErrors";
 import { useModalDialogOpen } from "../../../hooks/useModalDialogOpen/useModalDialogOpen";

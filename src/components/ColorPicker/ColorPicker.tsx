@@ -10,6 +10,7 @@ import convert from "color-convert";
 import { RGB } from "color-convert/conversions";
 import { useEffect, useState } from "react";
 import { useIntl } from "react-intl";
+
 import { HorizontalSpacer } from "../HorizontalSpacer/HorizontalSpacer";
 
 const useStyles = makeStyles(

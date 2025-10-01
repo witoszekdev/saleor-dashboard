@@ -19,12 +19,12 @@ import { Box, Input, Select, Text } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
 
 import { Combobox, Multiselect } from "../Combobox";
-import { SingleReferenceField } from "./SingleReferenceField";
-import { AttributeRowProps } from "./types";
+import { DateTimeField } from "../DateTimeField/DateTimeField";
 import { FileUploadField } from "../FileUploadField/FileUploadField";
 import { RichTextEditor } from "../RichTextEditor/RichTextEditor";
 import { SortableChipsField } from "../SortableChipsField/SortableChipsField";
-import { DateTimeField } from "../DateTimeField/DateTimeField";
+import { SingleReferenceField } from "./SingleReferenceField";
+import { AttributeRowProps } from "./types";
 
 const AttributeRow = ({
   attribute,

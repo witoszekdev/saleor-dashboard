@@ -2,9 +2,10 @@ import { useCloud } from "@dashboard/auth/hooks/useCloud";
 import { AllRipplesModal } from "@dashboard/ripples/components/AllRipplesModal";
 import { useAllRipplesModalState } from "@dashboard/ripples/state";
 import { Box } from "@saleor/macaw-ui-next";
+
 import { EnvironmentLink } from "./menu/EnvironmentLink";
-import { MountingPoint } from "./MountingPoint";
 import { Menu } from "./menu/Menu";
+import { MountingPoint } from "./MountingPoint";
 import { UserInfo } from "./user/Info";
 
 export const SidebarContent = () => {

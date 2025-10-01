@@ -12,11 +12,11 @@ import { stringifyQs } from "@dashboard/utils/urls";
 import { OutputData } from "@editorjs/editorjs";
 import { useIntl } from "react-intl";
 
+import { useNotifier } from "../../hooks/useNotifier/useNotifier";
 import { extractMutationErrors, maybe } from "../../misc";
+import { TranslationsProductsPage } from "../components/TranslationsProductsPage/TranslationsProductsPage";
 import { TranslationField, TranslationInputFieldName } from "../types";
 import { getAttributeValueTranslationsInputData, getParsedTranslationInputData } from "../utils";
-import { useNotifier } from "../../hooks/useNotifier/useNotifier";
-import { TranslationsProductsPage } from "../components/TranslationsProductsPage/TranslationsProductsPage";
 
 type HandleSubmitAttributeValue = OutputData | string;
 

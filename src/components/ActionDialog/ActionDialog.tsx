@@ -5,9 +5,9 @@ import * as React from "react";
 import { useIntl } from "react-intl";
 
 import { BackButton } from "../BackButton";
+import { ConfirmButton, ConfirmButtonTransitionState } from "../ConfirmButton/ConfirmButton";
 import { DashboardModal, DashboardModalContentSize } from "../Modal";
 import { ActionDialogVariant } from "./types";
-import { ConfirmButton, ConfirmButtonTransitionState } from "../ConfirmButton/ConfirmButton";
 
 export interface ActionDialogProps extends DialogProps {
   children?: React.ReactNode;

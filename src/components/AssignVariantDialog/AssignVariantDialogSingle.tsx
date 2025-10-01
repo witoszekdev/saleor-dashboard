@@ -9,17 +9,17 @@ import { Text } from "@saleor/macaw-ui-next";
 import { Fragment, useMemo, useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
+import { useModalDialogOpen } from "../../hooks/useModalDialogOpen/useModalDialogOpen";
 import { AssignContainerDialogProps } from "../AssignContainerDialog";
 import { BackButton } from "../BackButton";
-import { messages } from "./messages";
-import { useStyles } from "./styles";
-import { getCompositeLabel, VariantWithProductLabel } from "./utils";
 import { ConfirmButton, ConfirmButtonTransitionState } from "../ConfirmButton/ConfirmButton";
 import { InfiniteScroll } from "../InfiniteScroll/InfiniteScroll";
 import { ResponsiveTable } from "../ResponsiveTable/ResponsiveTable";
 import { TableCellAvatar } from "../TableCellAvatar/TableCellAvatar";
 import { TableRowLink } from "../TableRowLink/TableRowLink";
-import { useModalDialogOpen } from "../../hooks/useModalDialogOpen/useModalDialogOpen";
+import { messages } from "./messages";
+import { useStyles } from "./styles";
+import { getCompositeLabel, VariantWithProductLabel } from "./utils";
 
 interface AssignVariantDialogSingleProps extends FetchMoreProps {
   confirmButtonState: ConfirmButtonTransitionState;

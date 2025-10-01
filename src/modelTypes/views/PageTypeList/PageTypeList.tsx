@@ -19,16 +19,17 @@ import { getSortParams } from "@dashboard/utils/sort";
 import { DeleteIcon, IconButton } from "@saleor/macaw-ui";
 import { useMemo } from "react";
 import { useIntl } from "react-intl";
-import { pageTypeListUrl, PageTypeListUrlDialog, PageTypeListUrlQueryParams } from "../../urls";
-import { getFilterVariables, storageUtils } from "./filters";
-import { getSortQueryVariables } from "./sort";
+
 import { DeleteFilterTabDialog } from "../../../components/DeleteFilterTabDialog/DeleteFilterTabDialog";
 import { SaveFilterTabDialog } from "../../../components/SaveFilterTabDialog/SaveFilterTabDialog";
 import { TypeDeleteWarningDialog } from "../../../components/TypeDeleteWarningDialog/TypeDeleteWarningDialog";
 import { useFilterPresets } from "../../../hooks/useFilterPresets/useFilterPresets";
 import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
-import { usePageTypeDelete } from "../../hooks/usePageTypeDelete/usePageTypeDelete";
 import { PageTypeListPage } from "../../components/PageTypeListPage/PageTypeListPage";
+import { usePageTypeDelete } from "../../hooks/usePageTypeDelete/usePageTypeDelete";
+import { pageTypeListUrl, PageTypeListUrlDialog, PageTypeListUrlQueryParams } from "../../urls";
+import { getFilterVariables, storageUtils } from "./filters";
+import { getSortQueryVariables } from "./sort";
 
 interface PageTypeListProps {
   params: PageTypeListUrlQueryParams;

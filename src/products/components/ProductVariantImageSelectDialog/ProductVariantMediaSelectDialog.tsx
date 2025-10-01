@@ -5,6 +5,7 @@ import { buttonMessages } from "@dashboard/intl";
 import { Box } from "@saleor/macaw-ui-next";
 import { useState } from "react";
 import { FormattedMessage } from "react-intl";
+
 import { ConfirmButton } from "../../../components/ConfirmButton/ConfirmButton";
 import { useModalDialogOpen } from "../../../hooks/useModalDialogOpen/useModalDialogOpen";
 

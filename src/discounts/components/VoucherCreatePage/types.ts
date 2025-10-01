@@ -4,6 +4,7 @@ import {
   CountryWithCodeFragment,
   SearchProductFragment,
 } from "@dashboard/graphql";
+
 import { VoucherDetailsPageFormData } from "../VoucherDetailsPage/VoucherDetailsPage";
 
 export type VoucherCreateProductVariant = NonNullable<SearchProductFragment["variants"]>[number];

@@ -1,11 +1,12 @@
 import { CategoryFilterInput } from "@dashboard/graphql";
+
+import { createFilterUtils } from "../../../utils/filters/filters";
+import { createFilterTabUtils } from "../../../utils/filters/storage";
 import {
   CategoryListUrlFilters,
   CategoryListUrlFiltersEnum,
   CategoryListUrlQueryParams,
 } from "../../urls";
-import { createFilterTabUtils } from "../../../utils/filters/storage";
-import { createFilterUtils } from "../../../utils/filters/filters";
 
 const CATEGORY_FILTERS_KEY = "categoryFilters";
 

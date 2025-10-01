@@ -1,9 +1,10 @@
 import { ExtensionsGroups } from "@dashboard/extensions/types";
 import { Box } from "@saleor/macaw-ui-next";
-import { ExtensionsGroup } from "../ExtensionsGroup";
-import { LoadingSkeleton } from "./LoadingSkeleton";
+
 import { EmptySearchList } from "../../../../components/EmptyListState/EmptySearchList";
 import { ExtensionItem } from "../ExtenionItem/ExtenionItem";
+import { ExtensionsGroup } from "../ExtensionsGroup";
+import { LoadingSkeleton } from "./LoadingSkeleton";
 
 interface ExtensionsListProps {
   extensions: ExtensionsGroups;

@@ -2,6 +2,7 @@ import {
   formatMoney as formatMoneyUtils,
   formatMoneyRange as formatMoneyRangeUtils,
 } from "@dashboard/components/Money";
+
 import { Locale } from "../../../../../../../../../components/Locale/Locale";
 import { Condition, isTuple } from "../../../../../../../../models/Condition";
 

@@ -42,19 +42,14 @@ import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { Box } from "@saleor/macaw-ui-next";
 import { useState } from "react";
 import { defineMessages, useIntl } from "react-intl";
-import { useManageChannels } from "../ProductVariantChannels/useManageChannels";
-import { VariantChannelsDialog } from "../ProductVariantChannels/VariantChannelsDialog";
-import { ProductVariantCheckoutSettings } from "../ProductVariantCheckoutSettings/ProductVariantCheckoutSettings";
-import {
-  ProductVariantUpdateData,
-  ProductVariantUpdateForm,
-  ProductVariantUpdateHandlers,
-  ProductVariantUpdateSubmitData,
-} from "./form";
+
 import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
 import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
 import { ProductShipping } from "../ProductShipping/ProductShipping";
 import { ProductStocks } from "../ProductStocks/ProductStocks";
+import { useManageChannels } from "../ProductVariantChannels/useManageChannels";
+import { VariantChannelsDialog } from "../ProductVariantChannels/VariantChannelsDialog";
+import { ProductVariantCheckoutSettings } from "../ProductVariantCheckoutSettings/ProductVariantCheckoutSettings";
 import { ProductVariantEndPreorderDialog } from "../ProductVariantEndPreorderDialog/ProductVariantEndPreorderDialog";
 import { ProductVariantMediaSelectDialog } from "../ProductVariantImageSelectDialog/ProductVariantMediaSelectDialog";
 import { ProductVariantMedia } from "../ProductVariantMedia/ProductVariantMedia";
@@ -62,6 +57,12 @@ import { ProductVariantName } from "../ProductVariantName/ProductVariantName";
 import { ProductVariantNavigation } from "../ProductVariantNavigation/ProductVariantNavigation";
 import { ProductVariantPrice } from "../ProductVariantPrice/ProductVariantPrice";
 import { ProductVariantSetDefault } from "../ProductVariantSetDefault/ProductVariantSetDefault";
+import {
+  ProductVariantUpdateData,
+  ProductVariantUpdateForm,
+  ProductVariantUpdateHandlers,
+  ProductVariantUpdateSubmitData,
+} from "./form";
 
 const messages = defineMessages({
   nonSelectionAttributes: {

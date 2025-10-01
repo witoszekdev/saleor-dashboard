@@ -30,15 +30,15 @@ import isEqual from "lodash/isEqual";
 import { useCallback, useMemo } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import { PageListPage } from "../../components/PageListPage/PageListPage";
-import { pageCreateUrl, pageListUrl, PageListUrlDialog, PageListUrlQueryParams } from "../../urls";
-import { getFilterOpts, getFilterQueryParam, storageUtils } from "./filters";
-import { getFilterVariables, getSortQueryVariables } from "./sort";
 import { DeleteFilterTabDialog } from "../../../components/DeleteFilterTabDialog/DeleteFilterTabDialog";
 import { SaveFilterTabDialog } from "../../../components/SaveFilterTabDialog/SaveFilterTabDialog";
 import { useFilterPresets } from "../../../hooks/useFilterPresets/useFilterPresets";
 import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
+import { PageListPage } from "../../components/PageListPage/PageListPage";
 import { PageTypePickerDialog } from "../../components/PageTypePickerDialog/PageTypePickerDialog";
+import { pageCreateUrl, pageListUrl, PageListUrlDialog, PageListUrlQueryParams } from "../../urls";
+import { getFilterOpts, getFilterQueryParam, storageUtils } from "./filters";
+import { getFilterVariables, getSortQueryVariables } from "./sort";
 
 interface PageListProps {
   params: PageListUrlQueryParams;

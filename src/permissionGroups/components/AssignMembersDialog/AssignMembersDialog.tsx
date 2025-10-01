@@ -12,12 +12,15 @@ import { Box, Skeleton, Text } from "@saleor/macaw-ui-next";
 import { useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import { messages } from "./messages";
-import { ConfirmButton, ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import {
+  ConfirmButton,
+  ConfirmButtonTransitionState,
+} from "../../../components/ConfirmButton/ConfirmButton";
 import { InfiniteScroll } from "../../../components/InfiniteScroll/InfiniteScroll";
 import { ResponsiveTable } from "../../../components/ResponsiveTable/ResponsiveTable";
 import { TableRowLink } from "../../../components/TableRowLink/TableRowLink";
 import { UserAvatar } from "../../../components/UserAvatar/UserAvatar";
+import { messages } from "./messages";
 
 const useStyles = makeStyles(
   theme => ({

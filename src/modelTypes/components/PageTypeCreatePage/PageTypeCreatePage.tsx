@@ -7,12 +7,12 @@ import { pageTypeListUrl } from "@dashboard/modelTypes/urls";
 import { useMetadataChangeTrigger } from "@dashboard/utils/metadata/useMetadataChangeTrigger";
 import { useIntl } from "react-intl";
 
-import { PageTypeDetails } from "../PageTypeDetails/PageTypeDetails";
 import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
 import { Form } from "../../../components/Form/Form";
 import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
 import { Metadata } from "../../../components/Metadata/Metadata";
 import { MetadataFormData } from "../../../components/Metadata/types";
+import { PageTypeDetails } from "../PageTypeDetails/PageTypeDetails";
 
 export interface PageTypeForm extends MetadataFormData {
   name: string;

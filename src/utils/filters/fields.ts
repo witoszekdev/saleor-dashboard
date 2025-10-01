@@ -1,5 +1,6 @@
 import { FetchMoreProps, MinMax, SearchPageProps } from "@dashboard/types";
 import { Option } from "@saleor/macaw-ui-next";
+
 import { FieldType, FilterElementGeneric } from "../../components/Filter/types";
 
 export function createDateField<K extends string>(

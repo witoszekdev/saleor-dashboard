@@ -6,9 +6,9 @@ import {
   ProvideEditorCallback,
 } from "@glideapps/glide-data-grid";
 
+import { Locale } from "../../../Locale/Locale";
 import { usePriceField } from "../../../PriceField/usePriceField";
 import { hasDiscountValue } from "./utils";
-import { Locale } from "../../../Locale/Locale";
 
 interface MoneyCellProps {
   readonly kind: "money-cell";

@@ -28,8 +28,8 @@ import { FetchMoreProps, RelayToFlat, ReorderEvent } from "@dashboard/types";
 import { OutputData } from "@editorjs/editorjs";
 import { Option } from "@saleor/macaw-ui-next";
 
-import { ProductChannelsListingDialogSubmit } from "./ProductChannelsListingsDialog";
 import { MetadataFormData } from "../../../components/Metadata/types";
+import { ProductChannelsListingDialogSubmit } from "./ProductChannelsListingsDialog";
 
 export interface ProductUpdateFormData extends MetadataFormData {
   category: string | null;

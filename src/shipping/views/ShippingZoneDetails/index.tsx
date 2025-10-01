@@ -31,6 +31,14 @@ import { createMetadataUpdateHandler } from "@dashboard/utils/handlers/metadataU
 import { mapCountriesToCountriesCodes, mapEdgesToItems } from "@dashboard/utils/maps";
 import { diff } from "fast-array-diff";
 import { FormattedMessage, useIntl } from "react-intl";
+
+import { NotFoundPage } from "../../../components/NotFoundPage/NotFoundPage";
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
+import { arrayDiff } from "../../../utils/arrays/arrays";
+import { DeleteShippingRateDialog } from "../../components/DeleteShippingRateDialog/DeleteShippingRateDialog";
+import { ShippingZoneAddWarehouseDialog } from "../../components/ShippingZoneAddWarehouseDialog/ShippingZoneAddWarehouseDialog";
+import { ShippingZoneCountriesAssignDialog } from "../../components/ShippingZoneCountriesAssignDialog/ShippingZoneCountriesAssignDialog";
+import { ShippingZoneDetailsPage } from "../../components/ShippingZoneDetailsPage/ShippingZoneDetailsPage";
 import { ShippingZoneUpdateFormData } from "../../components/ShippingZoneDetailsPage/types";
 import {
   shippingRateCreateUrl,
@@ -40,13 +48,6 @@ import {
   ShippingZoneUrlDialog,
   ShippingZoneUrlQueryParams,
 } from "../../urls";
-import { NotFoundPage } from "../../../components/NotFoundPage/NotFoundPage";
-import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
-import { DeleteShippingRateDialog } from "../../components/DeleteShippingRateDialog/DeleteShippingRateDialog";
-import { ShippingZoneAddWarehouseDialog } from "../../components/ShippingZoneAddWarehouseDialog/ShippingZoneAddWarehouseDialog";
-import { ShippingZoneCountriesAssignDialog } from "../../components/ShippingZoneCountriesAssignDialog/ShippingZoneCountriesAssignDialog";
-import { arrayDiff } from "../../../utils/arrays/arrays";
-import { ShippingZoneDetailsPage } from "../../components/ShippingZoneDetailsPage/ShippingZoneDetailsPage";
 
 interface ShippingZoneDetailsProps {
   id: string;

@@ -3,6 +3,7 @@ import { ChangeEvent, FormChange } from "@dashboard/hooks/useForm";
 import { useLocale } from "@dashboard/hooks/useLocale";
 import { Box, Text } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
+
 import { Select } from "../../../../../components/Select/Select";
 
 interface TransactionSelectorProps {

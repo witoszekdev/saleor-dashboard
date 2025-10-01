@@ -1,9 +1,8 @@
+import { Condition } from "../FilterElement/Condition";
 import { ConditionOptions } from "../FilterElement/ConditionOptions";
 import { ConditionSelected } from "../FilterElement/ConditionSelected";
-import { ExpressionValue } from "../FilterElement/FilterElement";
+import { ExpressionValue , FilterElement } from "../FilterElement/FilterElement";
 import { numeric } from "./numeric";
-import { Condition } from "../FilterElement/Condition";
-import { FilterElement } from "../FilterElement/FilterElement";
 
 describe("ConditionalFilter / validation / numeric", () => {
   it.each([

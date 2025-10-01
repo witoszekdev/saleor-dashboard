@@ -17,6 +17,7 @@ import { getStringOrPlaceholder } from "@dashboard/misc";
 import { pluginListUrl } from "@dashboard/plugins/urls";
 import { isSecretField } from "@dashboard/plugins/utils";
 import { useIntl } from "react-intl";
+
 import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
 import { Form } from "../../../components/Form/Form";
 import { DetailPageLayout } from "../../../components/Layouts/Detail/index";

@@ -10,6 +10,7 @@ import { Skeleton, Text } from "@saleor/macaw-ui-next";
 import { clsx } from "clsx";
 import * as React from "react";
 import { FormattedMessage, useIntl } from "react-intl";
+
 import { RadioGroupField } from "../../../components/RadioGroupField/RadioGroupField";
 import { ResponsiveTable } from "../../../components/ResponsiveTable/ResponsiveTable";
 import { TableRowLink } from "../../../components/TableRowLink/TableRowLink";

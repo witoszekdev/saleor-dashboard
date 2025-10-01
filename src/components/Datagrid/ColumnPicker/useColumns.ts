@@ -2,6 +2,7 @@ import { useStateFromProps } from "@dashboard/hooks/useStateFromProps";
 import { GridColumn } from "@glideapps/glide-data-grid";
 import { useCallback, useEffect, useMemo, useState } from "react";
 
+import { addAtIndex, removeAtIndex } from "../../../utils/lists/lists";
 import { PersistedColumn } from "../persistance/persistedColumn";
 import { usePersistance } from "../persistance/usePersistance";
 import { AvailableColumn } from "../types";
@@ -18,7 +19,6 @@ import {
   selectedWithPersistance,
   visibleWithPersistance,
 } from "./withPersistance";
-import { addAtIndex, removeAtIndex } from "../../../utils/lists/lists";
 
 export interface ColumnCategory {
   name: string;

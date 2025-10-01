@@ -1,7 +1,8 @@
 import { Box, List } from "@saleor/macaw-ui-next";
+
+import { Shortcusts } from "../shortcuts/Shortcuts";
 import { useMenuStructure } from "./hooks/useMenuStructure";
 import { MenuItem } from "./Item";
-import { Shortcusts } from "../shortcuts/Shortcuts";
 
 export const Menu = () => {
   const menuStructure = useMenuStructure();

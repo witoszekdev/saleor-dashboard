@@ -13,6 +13,14 @@ import {
 } from "@dashboard/utils/maps";
 import { defineMessages, IntlShape } from "react-intl";
 
+import { FilterElement, IFilter } from "../../components/Filter/types";
+import {
+  dedupeFilter,
+  getMinMaxQueryParam,
+  getMultipleValueQueryParam,
+  getSingleValueQueryParam,
+} from "../../utils/filters/filters";
+import { createFilterTabUtils } from "../../utils/filters/storage";
 import {
   GiftCardListFilterKeys,
   GiftCardListFilterOpts,
@@ -22,9 +30,6 @@ import {
   GiftCardStatusFilterEnum,
   SearchWithFetchMoreProps,
 } from "./types";
-import { FilterElement, IFilter } from "../../components/Filter/types";
-import { createFilterTabUtils } from "../../utils/filters/storage";
-import { dedupeFilter, getMinMaxQueryParam, getMultipleValueQueryParam, getSingleValueQueryParam } from "../../utils/filters/filters";
 
 const GIFT_CARD_FILTERS_KEY = "giftCardFilters";
 

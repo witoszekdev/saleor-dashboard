@@ -1,11 +1,12 @@
 import { Money } from "@dashboard/components/Money";
 import { TransactionBaseEventFragment } from "@dashboard/graphql";
 import { Box } from "@saleor/macaw-ui-next";
-import { EventType } from "../OrderTransaction/components/TransactionEvents/components/EventType";
-import { mapTransactionEvent } from "../OrderTransaction/utils";
+
 import { EventStatus } from "../OrderTransaction/components/TransactionEvents/components/EventStatus";
 import { EventTime } from "../OrderTransaction/components/TransactionEvents/components/EventTime";
+import { EventType } from "../OrderTransaction/components/TransactionEvents/components/EventType";
 import { PspReference } from "../OrderTransaction/components/TransactionEvents/components/PspReference";
+import { mapTransactionEvent } from "../OrderTransaction/utils";
 
 interface OrderTransactionTileEventProps {
   event: TransactionBaseEventFragment;

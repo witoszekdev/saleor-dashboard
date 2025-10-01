@@ -18,14 +18,15 @@ import { getFormErrors } from "@dashboard/utils/errors";
 import { getAppErrorMessage } from "@dashboard/utils/errors/app";
 import { Button } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
-import { useStyles } from "./styles";
+
 import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
 import { Form } from "../../../components/Form/Form";
 import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
-import { WebhooksList } from "../WebhooksList/WebhooksList";
 import { CustomAppDefaultToken } from "../CustomAppDefaultToken/CustomAppDefaultToken";
 import { CustomAppInformation } from "../CustomAppInformation/CustomAppInformation";
 import { CustomAppTokens } from "../CustomAppTokens/CustomAppTokens";
+import { WebhooksList } from "../WebhooksList/WebhooksList";
+import { useStyles } from "./styles";
 
 export interface CustomAppDetailsPageFormData {
   hasFullAccess: boolean;

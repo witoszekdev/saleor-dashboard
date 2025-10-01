@@ -2,8 +2,9 @@
 import { getIsFilterMultipleChoices } from "@dashboard/components/Filter/FilterContent/utils";
 import { FormSpacer } from "@dashboard/components/FormSpacer";
 import { useIntl } from "react-intl";
-import { FilterFieldBaseProps, FilterType } from "../types";
+
 import { Select } from "../../Select/Select";
+import { FilterFieldBaseProps, FilterType } from "../types";
 
 type FilterSingleSelectFieldProps = FilterFieldBaseProps<string>;
 

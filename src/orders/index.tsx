@@ -31,7 +31,6 @@ import {
   orderTransactionRefundPath,
   OrderUrlQueryParams,
 } from "./urls";
-import { OrderSettings } from "./views/OrderSettings";
 import { OrderDetails as OrderDetailsComponent } from "./views/OrderDetails/OrderDetails";
 import { OrderDraftList as OrderDraftListComponent } from "./views/OrderDraftList/OrderDraftList";
 import { OrderEditGrantRefund as OrderGrantRefundEditComponent } from "./views/OrderEditGrantRefund/OrderEditGrantRefund";
@@ -42,6 +41,7 @@ import { OrderManualTransactionRefund as OrderManualTransactionRefundComponent }
 import { OrderRefund as OrderRefundComponent } from "./views/OrderRefund/OrderRefund";
 import { OrderReturn as OrderReturnComponent } from "./views/OrderReturn/OrderReturn";
 import { OrderSendRefund as OrderSendRefundComponent } from "./views/OrderSendRefund/OrderSendRefund";
+import { OrderSettings } from "./views/OrderSettings";
 import { OrderTransactionRefund as OrderTransactionRefundCreateComponent } from "./views/OrderTransactionRefundCreate/OrderTransactionRefundCreate";
 import { OrderTransactionRefund as OrderTransactionRefundEditComponent } from "./views/OrderTransactionRefundEdit/OrderTransactionRefundEdit";
 

@@ -6,6 +6,7 @@ import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { useCallback } from "react";
 import { useIntl } from "react-intl";
 import { useLocation } from "react-router";
+
 import { NotFoundPage } from "../../../components/NotFoundPage/NotFoundPage";
 import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
 import { AppPage } from "./components/AppPage/AppPage";

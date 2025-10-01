@@ -4,12 +4,12 @@ import { Box, Button, PropsWithBox, Text } from "@saleor/macaw-ui-next";
 import { CodeXml } from "lucide-react";
 import { IntlShape, useIntl } from "react-intl";
 
+import { OrderDetailsDatagrid } from "../../orders/components/OrderDetailsDatagrid/OrderDetailsDatagrid";
 import { OrderDetailsViewModel } from "../order-details-view-model";
 import { UnderlineLink } from "../underline-link";
 import { OrderFulfillmentTrackingNumberButton } from "./order-fulfillment-change-tracking-number";
 import { OrderFulfillmentStatusIcon } from "./order-fulfillment-status-icon";
 import { OrderFulfillmentTrackingNumber } from "./order-fulfillment-tracking-number";
-import { OrderDetailsDatagrid } from "../../orders/components/OrderDetailsDatagrid/OrderDetailsDatagrid";
 
 type Props = PropsWithBox<{
   fulfillments: FulfillmentFragment[];

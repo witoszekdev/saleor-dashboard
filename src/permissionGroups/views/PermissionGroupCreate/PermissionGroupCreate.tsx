@@ -7,14 +7,18 @@ import { useShop } from "@dashboard/hooks/useShop";
 import { extractMutationErrors } from "@dashboard/misc";
 import { useMemo } from "react";
 import { useIntl } from "react-intl";
+
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
+import {
+  PermissionGroupCreateFormData,
+  PermissionGroupCreatePage,
+} from "../../components/PermissionGroupCreatePage/PermissionGroupCreatePage";
+import { PermissionData } from "../../components/PermissionGroupDetailsPage/PermissionGroupDetailsPage";
 import { permissionGroupDetailsUrl } from "../../urls";
 import {
   checkIfUserHasRestictedAccessToChannels,
   getUserAccessibleChannelsOptions,
 } from "../../utils";
-import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
-import { PermissionData } from "../../components/PermissionGroupDetailsPage/PermissionGroupDetailsPage";
-import { PermissionGroupCreateFormData, PermissionGroupCreatePage } from "../../components/PermissionGroupCreatePage/PermissionGroupCreatePage";
 
 export const PermissionGroupCreate = () => {
   const navigate = useNavigator();

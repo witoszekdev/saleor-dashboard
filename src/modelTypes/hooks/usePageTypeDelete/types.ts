@@ -1,4 +1,5 @@
 import { Ids } from "@dashboard/types";
+
 import { TypeDeleteMessages } from "../../../components/TypeDeleteWarningDialog/TypeDeleteWarningDialog";
 
 export interface UseTypeDeleteData extends TypeDeleteMessages {

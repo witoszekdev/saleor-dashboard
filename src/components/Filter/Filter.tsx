@@ -6,10 +6,11 @@ import { Text, vars } from "@saleor/macaw-ui-next";
 import { clsx } from "clsx";
 import { useMemo, useRef, useState } from "react";
 import { FormattedMessage } from "react-intl";
+
+import { FilterContent } from "./FilterContent/index";
 import { FilterElement, FilterErrorMessages, IFilter, InvalidFilters } from "./types";
 import { useFilter } from "./useFilter";
 import { extractInvalidFilters, getSelectedFiltersAmount } from "./utils";
-import { FilterContent } from "./FilterContent/index";
 
 interface FilterProps<TFilterKeys extends string = string> {
   currencySymbol?: string;

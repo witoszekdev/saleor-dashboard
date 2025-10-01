@@ -19,9 +19,6 @@ import { useIntl } from "react-intl";
 import { RouteComponentProps, Switch } from "react-router-dom";
 
 import { useCustomAppToken } from "./hooks/useCustomAppToken";
-import { ExploreExtensions } from "./views/ExploreExtensions/ExploreExtensions";
-import { InstallCustomExtension } from "./views/InstallCustomExtension/InstallCustomExtension";
-import { InstalledExtensions } from "./views/InstalledExtensions/InstalledExtensions";
 import { AddCustomExtension } from "./views/AddCustomExtension/AddCustomExtension";
 import { AddCustomExtensionWebhook } from "./views/AddCustomExtensionWebhook/AddCustomExtensionWebhook";
 import { EditCustomExtension } from "./views/EditCustomExtension/EditCustomApp";
@@ -29,6 +26,9 @@ import { EditCustomExtensionWebhook } from "./views/EditCustomExtensionWebhook/E
 import { EditManifestExtension } from "./views/EditManifestExtension/AppManageView";
 import { EditManifestExtensionPermissions } from "./views/EditManifestExtensionPermissions/EditManifestExtensionPermissions";
 import { EditPluginExtension } from "./views/EditPluginExtension/EditPluginExtension";
+import { ExploreExtensions } from "./views/ExploreExtensions/ExploreExtensions";
+import { InstallCustomExtension } from "./views/InstallCustomExtension/InstallCustomExtension";
+import { InstalledExtensions } from "./views/InstalledExtensions/InstalledExtensions";
 import { ViewManifestExtensionIframe } from "./views/ViewManifestExtension/ViewManifestExtensionIframe";
 
 const ExploreExtensionsView = () => {

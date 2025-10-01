@@ -59,12 +59,13 @@ import { useMultipleRichText } from "@dashboard/utils/richText/useMultipleRichTe
 import { useEffect, useState } from "react";
 import * as React from "react";
 import { useIntl } from "react-intl";
+
+import { MetadataFormData } from "../../../components/Metadata/types";
+import { ProductStockFormsetData, ProductStockInput } from "../ProductStocks/ProductStocks";
 import {
   concatChannelsBySelection,
   createChannelsWithPreorderInfo,
 } from "../ProductVariantChannels/formOpretations";
-import { MetadataFormData } from "../../../components/Metadata/types";
-import { ProductStockFormsetData, ProductStockInput } from "../ProductStocks/ProductStocks";
 
 interface ProductVariantCreateFormData extends MetadataFormData {
   sku: string;

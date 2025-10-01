@@ -7,10 +7,10 @@ import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActi
 import { createContext, useContext } from "react";
 import * as React from "react";
 
-import { GIFT_CARD_LIST_QUERY } from "../../queries";
-import { GiftCardListActionParamsEnum, GiftCardListUrlQueryParams } from "../../types";
 import { GiftCardCreateDialogContent } from "../../../GiftCardCreateDialog/GiftCardCreateDialogContent";
 import { GiftCardExportDialog as GiftCardExportDialogContent } from "../../../GiftCardExportDialogContent/GiftCardExportDialogContent";
+import { GIFT_CARD_LIST_QUERY } from "../../queries";
+import { GiftCardListActionParamsEnum, GiftCardListUrlQueryParams } from "../../types";
 
 interface GiftCardListDialogsProviderProps {
   children: React.ReactNode;

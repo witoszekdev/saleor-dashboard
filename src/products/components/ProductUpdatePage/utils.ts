@@ -9,6 +9,7 @@ import {
   ProductChannelListingAddInput,
   ProductFragment,
 } from "@dashboard/graphql";
+
 import { Locale } from "../../../components/Locale/Locale";
 
 const getFractionDigits = (locale: Locale, currency: string) => {

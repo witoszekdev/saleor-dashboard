@@ -1,6 +1,6 @@
 // @ts-strict-ignore
-import { useStateFromProps } from "./useStateFromProps";
 import { removeAtIndex } from "../utils/lists/lists";
+import { useStateFromProps } from "./useStateFromProps";
 
 /** @deprecated Use react-hook-form instead */
 export type FormsetChange<TValue = any> = (id: string, value: TValue) => void;

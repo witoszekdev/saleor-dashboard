@@ -18,13 +18,14 @@ import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { getAppErrorMessage } from "@dashboard/utils/errors/app";
 import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
 import { useIntl } from "react-intl";
-import { messages } from "./messages";
+
 import { NotFoundPage } from "../../../components/NotFoundPage/NotFoundPage";
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
 import { AppActivateDialog } from "../../components/AppActivateDialog/AppActivateDialog";
 import { AppDeactivateDialog } from "../../components/AppDeactivateDialog/AppDeactivateDialog";
 import { AppDeleteDialog } from "../../components/AppDeleteDialog/AppDeleteDialog";
-import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
 import { AppDetailsPage } from "./components/AppDetailsPage/AppDetailsPage";
+import { messages } from "./messages";
 
 interface Props {
   id: string;

@@ -21,10 +21,14 @@ import {
   WarehouseUrlQueryParams,
 } from "@dashboard/warehouses/urls";
 import { useIntl } from "react-intl";
+
 import { NotFoundPage } from "../../../components/NotFoundPage/NotFoundPage";
 import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
 import { WarehouseDeleteDialog } from "../../components/WarehouseDeleteDialog/WarehouseDeleteDialog";
-import { WarehouseDetailsPage, WarehouseDetailsPageFormData } from "../../components/WarehouseDetailsPage/WarehouseDetailsPage";
+import {
+  WarehouseDetailsPage,
+  WarehouseDetailsPageFormData,
+} from "../../components/WarehouseDetailsPage/WarehouseDetailsPage";
 
 interface WarehouseDetailsProps {
   id: string;

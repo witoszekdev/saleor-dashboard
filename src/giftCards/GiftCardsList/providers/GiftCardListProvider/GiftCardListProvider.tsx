@@ -23,6 +23,12 @@ import { getSortParams } from "@dashboard/utils/sort";
 import { createContext, Dispatch, SetStateAction, useContext, useState } from "react";
 import * as React from "react";
 
+import { IFilter } from "../../../../components/Filter/types";
+import {
+  UseFilterPresets,
+  useFilterPresets,
+} from "../../../../hooks/useFilterPresets/useFilterPresets";
+import { useNotifier } from "../../../../hooks/useNotifier/useNotifier";
 import { getFilterQueryParam, getFilterVariables, storageUtils } from "../../filters";
 import {
   GiftCardListColummns,
@@ -30,9 +36,6 @@ import {
   GiftCardUrlSortField,
 } from "../../types";
 import { getSortQueryVariables } from "./sort";
-import { IFilter } from "../../../../components/Filter/types";
-import { UseFilterPresets, useFilterPresets } from "../../../../hooks/useFilterPresets/useFilterPresets";
-import { useNotifier } from "../../../../hooks/useNotifier/useNotifier";
 
 const numberOfColumns = 7;
 

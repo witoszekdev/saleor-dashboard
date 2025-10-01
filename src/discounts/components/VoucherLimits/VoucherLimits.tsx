@@ -7,9 +7,10 @@ import { getDiscountErrorMessage } from "@dashboard/utils/errors/discounts";
 import { TextField } from "@material-ui/core";
 import { Text } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
+
+import { VoucherDetailsPageFormData } from "../VoucherDetailsPage/VoucherDetailsPage";
 import { Messages as messages } from "./messages";
 import { useStyles } from "./styles";
-import { VoucherDetailsPageFormData } from "../VoucherDetailsPage/VoucherDetailsPage";
 
 interface VoucherLimitsProps {
   data: VoucherDetailsPageFormData;

@@ -16,10 +16,10 @@ import {
 import { ListSettings } from "@dashboard/types";
 import { useIntl } from "react-intl";
 
-import { getTranslationFields } from "../../utils";
-import { transtionsAttributesPageFieldsMessages as messages } from "./messages";
 import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
+import { getTranslationFields } from "../../utils";
 import { TranslationFields } from "../TranslationFields/TranslationFields";
+import { transtionsAttributesPageFieldsMessages as messages } from "./messages";
 
 interface TranslationsAttributesPageProps extends TranslationsEntitiesPageProps {
   data: AttributeTranslationDetailsFragment;

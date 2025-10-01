@@ -21,6 +21,10 @@ import { UseProductSearch as useProductSearch } from "@dashboard/searches/usePro
 import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
 import { createMetadataCreateHandler } from "@dashboard/utils/handlers/metadataCreateHandler";
 import { useIntl } from "react-intl";
+
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
+import { VoucherCreatePage } from "../../components/VoucherCreatePage/VoucherCreatePage";
+import { VoucherDetailsPageFormData } from "../../components/VoucherDetailsPage/VoucherDetailsPage";
 import {
   voucherAddUrl,
   VoucherCreateUrlQueryParams,
@@ -29,9 +33,6 @@ import {
 } from "../../urls";
 import { createHandler } from "./handlers";
 import { VOUCHER_CREATE_FORM_ID } from "./types";
-import { VoucherDetailsPageFormData } from "../../components/VoucherDetailsPage/VoucherDetailsPage";
-import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
-import { VoucherCreatePage } from "../../components/VoucherCreatePage/VoucherCreatePage";
 
 interface VoucherCreateProps {
   params: VoucherCreateUrlQueryParams;

@@ -6,14 +6,15 @@ import { RequireOnlyOne } from "@dashboard/misc";
 import { Box, Divider, Text } from "@saleor/macaw-ui-next";
 import { Fragment } from "react";
 import { useIntl } from "react-intl";
+
+import { ChannelAvailabilityItemContent } from "./Channel/ChannelAvailabilityItemContent";
+import { ChannelAvailabilityItemWrapper } from "./Channel/ChannelAvailabilityItemWrapper";
 import {
   ChannelsAvailabilityCardWrapper,
   ChannelsAvailabilityWrapperProps,
 } from "./ChannelsAvailabilityCardWrapper";
 import { ChannelOpts, ChannelsAvailabilityError, Messages } from "./types";
 import { getChannelsAvailabilityMessages } from "./utils";
-import { ChannelAvailabilityItemContent } from "./Channel/ChannelAvailabilityItemContent";
-import { ChannelAvailabilityItemWrapper } from "./Channel/ChannelAvailabilityItemWrapper";
 
 interface ChannelsAvailability
   extends Omit<ChannelsAvailabilityWrapperProps, "children" | "selectedChannelsCount"> {

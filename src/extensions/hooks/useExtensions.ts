@@ -7,10 +7,11 @@ import {
 } from "@dashboard/graphql";
 import { RelayToFlat } from "@dashboard/types";
 import { mapEdgesToItems } from "@dashboard/utils/maps";
+
 import { AppData } from "../components/ExternalAppContext/context";
+import { useExternalApp } from "../components/ExternalAppContext/ExternalAppContext";
 import { Extension, ExtensionWithParams } from "../types";
 import { AppDetailsUrlMountQueryParams } from "../urls";
-import { useExternalApp } from "../components/ExternalAppContext/ExternalAppContext";
 
 const prepareExtensionsWithActions = ({
   extensions,

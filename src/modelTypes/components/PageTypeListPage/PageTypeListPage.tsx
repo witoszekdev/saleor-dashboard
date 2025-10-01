@@ -16,6 +16,8 @@ import { Box, Button, ChevronRightIcon } from "@saleor/macaw-ui-next";
 import { useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
+import { FilterPresetsSelect } from "../../../components/FilterPresetsSelect/FilterPresetsSelect";
+import { ListPageLayout } from "../../../components/Layouts/List/index";
 import {
   ListActions,
   PageListProps,
@@ -23,8 +25,6 @@ import {
   SortPage,
   TabPageProps,
 } from "../../../types";
-import { FilterPresetsSelect } from "../../../components/FilterPresetsSelect/FilterPresetsSelect";
-import { ListPageLayout } from "../../../components/Layouts/List/index";
 import { PageTypeList } from "../PageTypeList/PageTypeList";
 
 interface PageTypeListPageProps

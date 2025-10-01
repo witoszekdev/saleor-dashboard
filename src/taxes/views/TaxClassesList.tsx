@@ -21,14 +21,14 @@ import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { useMemo } from "react";
 import { useIntl } from "react-intl";
 
+import { useNotifier } from "../../hooks/useNotifier/useNotifier";
 import { taxesMessages } from "../messages";
+import { TaxClassesPage } from "../pages/TaxClassesPage/TaxClassesPage";
 import { TaxClassesPageFormData } from "../types";
 import { taxClassesListUrl, TaxTab, taxTabPath } from "../urls";
 import { createTaxClassCreateInput, createTaxClassUpdateInput } from "../utils/data";
 import { useTaxUrlRedirect } from "../utils/useTaxUrlRedirect";
 import { mapUndefinedCountriesToTaxClasses } from "../utils/utils";
-import { useNotifier } from "../../hooks/useNotifier/useNotifier";
-import { TaxClassesPage } from "../pages/TaxClassesPage/TaxClassesPage";
 
 interface TaxClassesListProps {
   id: string | undefined;

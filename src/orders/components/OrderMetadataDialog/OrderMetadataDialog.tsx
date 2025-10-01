@@ -9,13 +9,13 @@ import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { FormattedMessage } from "react-intl";
 
+import { MetadataNoMemo } from "../../../components/Metadata/Metadata";
+import { MetadataFormData } from "../../../components/Metadata/types";
+import { MetadataHookForm } from "../../../components/MetadataHookForm/MetadataHookForm";
 import { OrderLineDetails } from "./OrderLineDetails/OrderLineDetails";
 import { TEST_ID_ORDER_LINE_METADATA, TEST_ID_PRODUCT_VARIANT_METADATA } from "./test-ids";
 import { useHandleOrderLineMetadataSubmit } from "./useHandleSubmit";
 import { useMetadataValues } from "./useMetadataValues";
-import { MetadataFormData } from "../../../components/Metadata/types";
-import { MetadataNoMemo } from "../../../components/Metadata/Metadata";
-import { MetadataHookForm } from "../../../components/MetadataHookForm/MetadataHookForm";
 
 export type OrderMetadataDialogData = NonNullable<OrderLinesMetadataQuery["order"]>["lines"][0];
 

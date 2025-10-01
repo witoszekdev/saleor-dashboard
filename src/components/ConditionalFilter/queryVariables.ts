@@ -12,7 +12,10 @@ import {
   StaffUserInput,
   VoucherFilterInput,
 } from "@dashboard/graphql";
+
+import { FilterContainer } from "./FilterElement/FilterElement";
 import { FilterQueryVarsBuilderResolver } from "./FiltersQueryBuilder/FilterQueryVarsBuilderResolver";
+import { FiltersQueryBuilder } from "./FiltersQueryBuilder/FiltersQueryBuilder";
 import { AddressFieldQueryVarsBuilder } from "./FiltersQueryBuilder/queryVarsBuilders/AddressFieldQueryVarsBuilder";
 import { ArrayMetadataQueryVarsBuilder } from "./FiltersQueryBuilder/queryVarsBuilders/ArrayMetadataQueryVarsBuilder";
 import { ArrayNestedFieldQueryVarsBuilder } from "./FiltersQueryBuilder/queryVarsBuilders/ArrayNestedFieldQueryVarsBuilder";
@@ -27,8 +30,6 @@ import { OrderIdQueryVarsBuilder } from "./FiltersQueryBuilder/queryVarsBuilders
 import { OrderInvoiceDateQueryVarsBuilder } from "./FiltersQueryBuilder/queryVarsBuilders/OrderInvoiceDateQueryVarsBuilder";
 import { PriceFilterQueryVarsBuilder } from "./FiltersQueryBuilder/queryVarsBuilders/PriceFilterQueryVarsBuilder";
 import { SlugChannelQueryVarsBuilder } from "./FiltersQueryBuilder/queryVarsBuilders/SlugChannelQueryVarsBuilder";
-import { FilterContainer } from "./FilterElement/FilterElement";
-import { FiltersQueryBuilder } from "./FiltersQueryBuilder/FiltersQueryBuilder";
 import { QueryApiType } from "./FiltersQueryBuilder/types";
 
 type ProductQueryVars = ProductWhereInput & { channel?: { eq: string } };

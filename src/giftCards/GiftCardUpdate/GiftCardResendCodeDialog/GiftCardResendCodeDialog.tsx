@@ -14,11 +14,11 @@ import { Box, Checkbox, Input, Spinner, Text } from "@saleor/macaw-ui-next";
 import { useEffect, useState } from "react";
 import { useIntl } from "react-intl";
 
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
 import { getGiftCardErrorMessage } from "../messages";
 import { useGiftCardDetails } from "../providers/GiftCardDetailsProvider/hooks/useGiftCardDetails";
 import { giftCardResendCodeDialogMessages as messages } from "./messages";
 import { useDialogFormReset } from "./utils";
-import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
 
 interface GiftCardResendCodeFormData {
   email: string;

@@ -23,10 +23,10 @@ import { useMetadataChangeTrigger } from "@dashboard/utils/metadata/useMetadataC
 import { Divider } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
 
-import { getUserName } from "../../../misc";
 import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
 import { Form } from "../../../components/Form/Form";
 import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
+import { getUserName } from "../../../misc";
 import { CustomerAddresses } from "../CustomerAddresses/CustomerAddresses";
 import { CustomerDetails } from "../CustomerDetails/CustomerDetails";
 import { CustomerInfo } from "../CustomerInfo/CustomerInfo";

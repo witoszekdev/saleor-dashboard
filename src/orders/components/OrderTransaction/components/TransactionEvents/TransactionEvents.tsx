@@ -7,8 +7,9 @@ import { makeStyles, ResponsiveTable } from "@saleor/macaw-ui";
 import { vars } from "@saleor/macaw-ui-next";
 import { useMemo, useState } from "react";
 import { FormattedMessage } from "react-intl";
-import { messages } from "./messages";
+
 import { EventItem } from "./components/EventItem";
+import { messages } from "./messages";
 
 interface OrderTransactionEventsProps {
   events: TransactionEventFragment[] | TransactionFakeEvent[];

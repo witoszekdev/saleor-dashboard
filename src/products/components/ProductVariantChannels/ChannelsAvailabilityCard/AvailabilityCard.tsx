@@ -5,11 +5,11 @@ import {
 import { FormsetData } from "@dashboard/hooks/useFormset";
 import { PropsWithChildren } from "react";
 
+import { Divider } from "../../../../components/Divider/Divider";
 import { ProductChannelListing } from "./../types";
 import { ChannelsListItem } from "./ChannelsListItem";
 import { useFilteredChannelListing } from "./useFilteredChannelListing";
 import { VariantDetailsChannelsAvailabilityCardContainer as CardContainer } from "./VariantDetailsChannelsAvailabilityCardContainer";
-import { Divider } from "../../../../components/Divider/Divider";
 
 interface AvailabilityCardProps {
   allAvailableListings: FormsetData<ChannelPriceAndPreorderData, IChannelPriceAndPreorderArgs>;

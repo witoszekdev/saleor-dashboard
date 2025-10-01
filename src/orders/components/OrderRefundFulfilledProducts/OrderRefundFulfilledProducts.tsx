@@ -10,10 +10,10 @@ import { makeStyles } from "@saleor/macaw-ui";
 import { Button, Skeleton, Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import { OrderRefundFormData } from "../OrderRefundPage/form";
-import { getTitle } from "./messages";
 import { TableCellAvatar } from "../../../components/TableCellAvatar/TableCellAvatar";
 import { TableRowLink } from "../../../components/TableRowLink/TableRowLink";
+import { OrderRefundFormData } from "../OrderRefundPage/form";
+import { getTitle } from "./messages";
 
 const useStyles = makeStyles(
   theme => {

@@ -1,6 +1,6 @@
 // @ts-strict-ignore
-import { ErrorTrackerFactory } from "./trackerFactory";
 import { SentryAdapter } from "./adapters/Sentry";
+import { ErrorTrackerFactory } from "./trackerFactory";
 
 const errorTracker = ErrorTrackerFactory(
   SentryAdapter({

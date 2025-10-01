@@ -6,9 +6,9 @@ import { TableBody, TableCell, TableHead } from "@material-ui/core";
 import { Button, Skeleton, TrashBinIcon } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import { useStyles } from "./styles";
 import { ResponsiveTable } from "../../../components/ResponsiveTable/ResponsiveTable";
 import { TableRowLink } from "../../../components/TableRowLink/TableRowLink";
+import { useStyles } from "./styles";
 
 interface CustomAppTokensProps {
   tokens: AppUpdateMutation["appUpdate"]["app"]["tokens"] | null;

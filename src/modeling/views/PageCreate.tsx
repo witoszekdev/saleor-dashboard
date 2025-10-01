@@ -30,10 +30,11 @@ import { createMetadataCreateHandler } from "@dashboard/utils/handlers/metadataC
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { getParsedDataForJsonStringField } from "@dashboard/utils/richText/misc";
 import { useIntl } from "react-intl";
-import { PageSubmitData } from "../components/PageDetailsPage/form";
-import { pageCreateUrl, PageCreateUrlQueryParams, pageUrl } from "../urls";
+
 import { useNotifier } from "../../hooks/useNotifier/useNotifier";
+import { PageSubmitData } from "../components/PageDetailsPage/form";
 import { PageDetailsPage } from "../components/PageDetailsPage/PageDetailsPage";
+import { pageCreateUrl, PageCreateUrlQueryParams, pageUrl } from "../urls";
 
 interface PageCreateProps {
   id: string;

@@ -3,8 +3,11 @@ import { buttonMessages } from "@dashboard/intl";
 import { Button, Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 
+import {
+  ConfirmButton,
+  ConfirmButtonTransitionState,
+} from "../../../../../components/ConfirmButton/ConfirmButton";
 import { messages } from "../../messages";
-import { ConfirmButton, ConfirmButtonTransitionState } from "../../../../../components/ConfirmButton/ConfirmButton";
 
 interface RuleDeleteModalProps {
   open: boolean;

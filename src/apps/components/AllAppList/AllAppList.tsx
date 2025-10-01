@@ -2,6 +2,7 @@ import { AppstoreApi } from "@dashboard/apps/appstore.types";
 import { AppInstallationFragment } from "@dashboard/graphql";
 import { Box, useTheme } from "@saleor/macaw-ui-next";
 import { PropsWithChildren } from "react";
+
 import { AppListRow } from "../AppListRow/AppListRow";
 
 interface AllAppListProps {

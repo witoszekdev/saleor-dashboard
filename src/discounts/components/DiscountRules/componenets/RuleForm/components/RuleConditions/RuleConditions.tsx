@@ -4,9 +4,9 @@ import { Box, Button, Text } from "@saleor/macaw-ui-next";
 import { useFieldArray, useFormContext } from "react-hook-form";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import { messages } from "../../../../messages";
 import { createEmptyCodition } from "../../../../../../models/Condition";
 import { Rule } from "../../../../../../models/Rule";
+import { messages } from "../../../../messages";
 import { RuleConditionRow } from "../RuleConditionRow/RuleConditionRow";
 import { AddConditionsSection } from "./components/AddConditionsSection/AddConditionsSection";
 import { NestedConditionsWarning } from "./components/NestedConditionsWarning/NestedConditionsWarning";

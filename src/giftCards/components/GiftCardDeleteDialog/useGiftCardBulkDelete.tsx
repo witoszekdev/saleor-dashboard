@@ -3,9 +3,9 @@ import { MutationResultWithOpts } from "@dashboard/hooks/makeMutation";
 import { commonErrorMessages } from "@dashboard/utils/errors/common";
 import { useIntl } from "react-intl";
 
-import { giftCardDeleteDialogMessages as messages } from "./messages";
-import { useGiftCardList } from "../../GiftCardsList/providers/GiftCardListProvider/GiftCardListProvider";
 import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
+import { useGiftCardList } from "../../GiftCardsList/providers/GiftCardListProvider/GiftCardListProvider";
+import { giftCardDeleteDialogMessages as messages } from "./messages";
 
 interface UseGiftCardBulkDeleteProps {
   onBulkDeleteGiftCards: () => void;

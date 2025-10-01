@@ -12,6 +12,7 @@ import { TextField } from "@material-ui/core";
 import { makeStyles } from "@saleor/macaw-ui";
 import * as React from "react";
 import { defineMessages, useIntl } from "react-intl";
+
 import { RichTextEditor } from "../../../components/RichTextEditor/RichTextEditor";
 
 const messages = defineMessages({

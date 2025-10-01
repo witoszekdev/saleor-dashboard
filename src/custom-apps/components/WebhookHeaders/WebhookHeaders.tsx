@@ -5,12 +5,13 @@ import { Button, ChervonDownIcon, Skeleton, Text } from "@saleor/macaw-ui-next";
 import { clsx } from "clsx";
 import { useEffect, useMemo, useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
+
+import { TableRowLink } from "../../../components/TableRowLink/TableRowLink";
+import { WebhookFormData } from "../WebhookDetailsPage/WebhookDetailsPage";
 import { messages } from "./messages";
 import { useStyles } from "./styles";
 import { hasEmptyHeader, mapHeaders, stringifyHeaders } from "./utils";
 import { WebhookHeadersTableBody } from "./WebhookHeadersTableBody";
-import { TableRowLink } from "../../../components/TableRowLink/TableRowLink";
-import { WebhookFormData } from "../WebhookDetailsPage/WebhookDetailsPage";
 
 export interface WebhookHeadersProps {
   data: WebhookFormData;

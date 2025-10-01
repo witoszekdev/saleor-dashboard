@@ -16,10 +16,10 @@ import camelCase from "lodash/camelCase";
 import * as React from "react";
 import { useIntl } from "react-intl";
 
+import { useQuery } from "../../hooks/makeQuery";
 import { Avatar } from "../TableCellAvatar/Avatar";
 import { messages } from "./messages";
 import { DocumentMap, TData, TVariables } from "./utils";
-import { useQuery } from "../../hooks/makeQuery";
 
 interface DryRunItemsListProps {
   objectId: string;

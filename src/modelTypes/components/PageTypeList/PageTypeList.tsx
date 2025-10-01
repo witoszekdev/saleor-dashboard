@@ -11,12 +11,12 @@ import { Skeleton } from "@saleor/macaw-ui-next";
 import { FormattedMessage } from "react-intl";
 import { useLocation } from "react-router";
 
-import { renderCollection } from "../../../misc";
-import { ListActions, ListProps, SortPage } from "../../../types";
 import { ResponsiveTable } from "../../../components/ResponsiveTable/ResponsiveTable";
 import { TableCellHeader } from "../../../components/TableCellHeader/TableCellHeader";
 import { TableHead } from "../../../components/TableHead/TableHead";
 import { TableRowLink } from "../../../components/TableRowLink/TableRowLink";
+import { renderCollection } from "../../../misc";
+import { ListActions, ListProps, SortPage } from "../../../types";
 
 const useStyles = makeStyles(
   {

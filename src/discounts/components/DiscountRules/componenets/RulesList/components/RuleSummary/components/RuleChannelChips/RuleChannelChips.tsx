@@ -1,4 +1,5 @@
 import { Chip } from "@saleor/macaw-ui-next";
+
 import { Rule } from "../../../../../../../../models/Rule";
 
 interface RuleChannelChipsProps {

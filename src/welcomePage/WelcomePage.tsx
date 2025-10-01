@@ -3,10 +3,11 @@ import { useAppChannel } from "@dashboard/components/AppLayout/AppChannelContext
 import { hasPermissions } from "@dashboard/components/RequirePermissions";
 import { PermissionEnum } from "@dashboard/graphql";
 import { Box } from "@saleor/macaw-ui-next";
-import { WelcomePageTitle } from "./WelcomePageTitle";
+
 import { WelcomePageOnboarding } from "./WelcomePageOnboarding/WelcomePageOnboarding";
 import { WelcomePageSidebar } from "./WelcomePageSidebar/WelcomePageSidebar";
 import { WelcomePageTilesContainer } from "./WelcomePageTilesContainer/WelcomePageTilesContainer";
+import { WelcomePageTitle } from "./WelcomePageTitle";
 
 export const WelcomePage = () => {
   const { channel, setChannel } = useAppChannel(false);

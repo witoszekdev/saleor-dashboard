@@ -13,6 +13,7 @@ import { Button, Skeleton, Tooltip } from "@saleor/macaw-ui-next";
 import capitalize from "lodash/capitalize";
 import { useEffect } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
+
 import { ResponsiveTable } from "../../../components/ResponsiveTable/ResponsiveTable";
 import { SortableTableBody } from "../../../components/SortableTable/SortableTableBody";
 import { SortableTableRow } from "../../../components/SortableTable/SortableTableRow";

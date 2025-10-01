@@ -12,6 +12,7 @@ import {
   TranslatableEntities,
 } from "@dashboard/translations/urls";
 import { useIntl } from "react-intl";
+
 import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
 import { TranslationFields } from "../TranslationFields/TranslationFields";
 

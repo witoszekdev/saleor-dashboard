@@ -6,9 +6,9 @@ import { Box, Text, Tooltip } from "@saleor/macaw-ui-next";
 import { useMemo } from "react";
 import { FormattedMessage } from "react-intl";
 
+import { EventTime } from "../../../components/EventTime/EventTime";
 import { AlertExclamationIcon } from "../AppAlerts/AlertExclamationIcon";
 import { getLatestFailedAttemptFromWebhooks } from "./utils";
-import { EventTime } from "../../../components/EventTime/EventTime";
 
 interface AppRowWebhookIssueAlertProps {
   app: AppListItemFragment;

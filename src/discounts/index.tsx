@@ -26,10 +26,10 @@ import {
   voucherPath,
   VoucherUrlQueryParams,
 } from "./urls";
-import { SaleCreateView as SaleCreateViewComponent } from "./views/SaleCreate/SaleCreate";
 import { DiscountCreate } from "./views/DiscountCreate/DiscountCreate";
 import { DiscountDetails } from "./views/DiscountDetails/DiscountDetails";
 import { DiscountList } from "./views/DiscountList/DiscountList";
+import { SaleCreateView as SaleCreateViewComponent } from "./views/SaleCreate/SaleCreate";
 import { SaleDetails as SaleDetailsViewComponent } from "./views/SaleDetails/SaleDetails";
 import { SaleList as SaleListViewComponent } from "./views/SaleList/SaleList";
 import { VoucherCreateView as VoucherCreateViewComponent } from "./views/VoucherCreate/VoucherCreate";

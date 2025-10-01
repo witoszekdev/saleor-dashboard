@@ -4,6 +4,7 @@ import * as ExternalAppContext from "@dashboard/extensions/components/ExternalAp
 import { renderHook } from "@testing-library/react-hooks";
 import * as ReactIntl from "react-intl";
 import { IntlShape } from "react-intl";
+
 import { UseNotifierResult } from "../../../hooks/useNotifier/useNotifier";
 
 jest.mock("@dashboard/config", () => {

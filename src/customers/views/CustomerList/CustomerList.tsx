@@ -23,14 +23,15 @@ import { getSortParams } from "@dashboard/utils/sort";
 import isEqual from "lodash/isEqual";
 import { useCallback, useMemo } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
-import { customerListUrl, CustomerListUrlDialog, CustomerListUrlQueryParams } from "../../urls";
-import { getFilterOpts, getFilterQueryParam, getFilterVariables, storageUtils } from "./filters";
-import { getSortQueryVariables } from "./sort";
+
 import { DeleteFilterTabDialog } from "../../../components/DeleteFilterTabDialog/DeleteFilterTabDialog";
 import { SaveFilterTabDialog } from "../../../components/SaveFilterTabDialog/SaveFilterTabDialog";
 import { useFilterPresets } from "../../../hooks/useFilterPresets/useFilterPresets";
 import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
 import { CustomerListPage } from "../../components/CustomerListPage/CustomerListPage";
+import { customerListUrl, CustomerListUrlDialog, CustomerListUrlQueryParams } from "../../urls";
+import { getFilterOpts, getFilterQueryParam, getFilterVariables, storageUtils } from "./filters";
+import { getSortQueryVariables } from "./sort";
 
 interface CustomerListProps {
   params: CustomerListUrlQueryParams;

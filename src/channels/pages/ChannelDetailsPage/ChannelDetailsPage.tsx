@@ -30,7 +30,16 @@ import { mapCountriesToChoices } from "@dashboard/utils/maps";
 import { Option } from "@saleor/macaw-ui-next";
 import { useState } from "react";
 import { useIntl } from "react-intl";
+
+import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import { Form } from "../../../components/Form/Form";
+import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
+import { SearchData } from "../../../hooks/makeTopLevelSearch/makeTopLevelSearch";
+import { ChannelAllocationStrategy } from "../../components/ChannelAllocationStrategy/ChannelAllocationStrategy";
+import { ChannelForm, FormData } from "../../components/ChannelForm/ChannelForm";
 import { ChannelStatus } from "../../components/ChannelStatus/ChannelStatus";
+import { ShippingZones } from "../../components/ShippingZones/ShippingZones";
+import { Warehouses } from "../../components/Warehouses/Warehouses";
 import {
   createShippingZoneAddHandler,
   createShippingZoneRemoveHandler,
@@ -39,14 +48,6 @@ import {
   createWarehouseReorderHandler,
 } from "./handlers";
 import { ChannelShippingZones, ChannelWarehouses } from "./types";
-import { ChannelAllocationStrategy } from "../../components/ChannelAllocationStrategy/ChannelAllocationStrategy";
-import { ShippingZones } from "../../components/ShippingZones/ShippingZones";
-import { Warehouses } from "../../components/Warehouses/Warehouses";
-import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
-import { Form } from "../../../components/Form/Form";
-import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
-import { SearchData } from "../../../hooks/makeTopLevelSearch/makeTopLevelSearch";
-import { ChannelForm, FormData } from "../../components/ChannelForm/ChannelForm";
 
 interface ChannelDetailsPageProps<TErrors extends ChannelErrorFragment[]> {
   channel?: ChannelDetailsFragment;

@@ -15,12 +15,13 @@ import { Ripple } from "@dashboard/ripples/components/Ripple";
 import { Box, Select, Skeleton, Text } from "@saleor/macaw-ui-next";
 import { useController, useFormContext } from "react-hook-form";
 import { FormattedMessage, useIntl } from "react-intl";
-import { OrderManualTransactionRefundWarning } from "./components/OrderManualTransactionRefundWarning/OrderManualTransactionRefundWarning";
-import { messages } from "./messages";
+
 import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
 import { OrderManualTransactionRefundAmount } from "./components/OrderManualTransactionRefundAmount/OrderManualTransactionRefundAmount";
 import { OrderManualTransactionRefundForm } from "./components/OrderManualTransactionRefundForm/OrderManualTransactionRefundForm";
 import { OrderManualTransactionRefundTiles } from "./components/OrderManualTransactionRefundTiles/OrderManualTransactionRefundTiles";
+import { OrderManualTransactionRefundWarning } from "./components/OrderManualTransactionRefundWarning/OrderManualTransactionRefundWarning";
+import { messages } from "./messages";
 
 interface OrderManualTransactionRefundProps {
   orderId: string;

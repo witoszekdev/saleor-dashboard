@@ -2,15 +2,23 @@
 import { DiscountStatusEnum, DiscountValueTypeEnum, SaleFilterInput } from "@dashboard/graphql";
 import { findValueInEnum, joinDateTime, maybe } from "@dashboard/misc";
 import { Option } from "@saleor/macaw-ui-next";
+
+import { FilterElement, FilterElementRegular } from "../../../components/Filter/types";
+import {
+  dedupeFilter,
+  getGteLteVariables,
+  getMinMaxQueryParam,
+  getMultipleEnumValueQueryParam,
+  getSingleEnumValueQueryParam,
+  getSingleValueQueryParam,
+} from "../../../utils/filters/filters";
+import { createFilterTabUtils } from "../../../utils/filters/storage";
+import { SaleFilterKeys, SaleListFilterOpts } from "../../components/SaleListPage/filters";
 import {
   SaleListUrlFilters,
   SaleListUrlFiltersEnum,
   SaleListUrlFiltersWithMultipleValues,
 } from "../../urls";
-import { FilterElement, FilterElementRegular } from "../../../components/Filter/types";
-import { SaleFilterKeys, SaleListFilterOpts } from "../../components/SaleListPage/filters";
-import { createFilterTabUtils } from "../../../utils/filters/storage";
-import { dedupeFilter, getGteLteVariables, getMinMaxQueryParam, getMultipleEnumValueQueryParam, getSingleEnumValueQueryParam, getSingleValueQueryParam } from "../../../utils/filters/filters";
 
 const SALE_FILTERS_KEY = "saleFilters";
 

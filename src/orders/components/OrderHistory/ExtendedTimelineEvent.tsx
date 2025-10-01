@@ -6,6 +6,8 @@ import { makeStyles } from "@saleor/macaw-ui";
 import { Text } from "@saleor/macaw-ui-next";
 import camelCase from "lodash/camelCase";
 import { defineMessages, useIntl } from "react-intl";
+
+import { ExtendedDiscountTimelineEvent } from "./ExtendedDiscountTimelineEvent/ExtendedDiscountTimelineEvent";
 import { Label } from "./Label";
 import {
   getEmployeeNameLink,
@@ -13,7 +15,6 @@ import {
   hasOrderLineDiscountWithNoPreviousValue,
   isTimelineEventOfDiscountType,
 } from "./utils";
-import { ExtendedDiscountTimelineEvent } from "./ExtendedDiscountTimelineEvent/ExtendedDiscountTimelineEvent";
 
 const useStyles = makeStyles(
   theme => ({

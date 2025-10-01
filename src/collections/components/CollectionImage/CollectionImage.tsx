@@ -7,6 +7,7 @@ import { makeStyles } from "@saleor/macaw-ui";
 import { Button, Skeleton, vars } from "@saleor/macaw-ui-next";
 import * as React from "react";
 import { FormattedMessage, useIntl } from "react-intl";
+
 import { ImageUpload } from "../../../components/ImageUpload/ImageUpload";
 import { MediaTile } from "../../../components/MediaTile/MediaTile";
 

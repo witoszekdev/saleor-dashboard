@@ -25,14 +25,14 @@ import {
 import { useMemo } from "react";
 import { useIntl } from "react-intl";
 
-import { getFilterVariables, storageUtils } from "./filters";
-import { getSortQueryVariables } from "./sort";
 import { DeleteFilterTabDialog } from "../../../components/DeleteFilterTabDialog/DeleteFilterTabDialog";
 import { SaveFilterTabDialog } from "../../../components/SaveFilterTabDialog/SaveFilterTabDialog";
 import { useFilterPresets } from "../../../hooks/useFilterPresets/useFilterPresets";
 import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
 import { WarehouseDeleteDialog } from "../../components/WarehouseDeleteDialog/WarehouseDeleteDialog";
 import { WarehouseListPage } from "../../components/WarehouseListPage/WarehouseListPage";
+import { getFilterVariables, storageUtils } from "./filters";
+import { getSortQueryVariables } from "./sort";
 
 interface WarehouseListProps {
   params: WarehouseListUrlQueryParams;

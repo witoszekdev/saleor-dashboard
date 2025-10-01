@@ -13,6 +13,7 @@ import { getFormErrors } from "@dashboard/utils/errors";
 import { getPermissionGroupErrorMessage } from "@dashboard/utils/errors/permissionGroups";
 import { Box } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
+
 import { Form } from "../../../components/Form/Form";
 import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
 import { PermissionData } from "../PermissionGroupDetailsPage/PermissionGroupDetailsPage";

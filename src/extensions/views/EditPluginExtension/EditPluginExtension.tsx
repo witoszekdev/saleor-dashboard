@@ -15,10 +15,10 @@ import { extractMutationErrors } from "@dashboard/misc";
 import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
 import { FormattedMessage, useIntl } from "react-intl";
 
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
 import { PluginDetailsPageFormData, PluginsDetailsPage } from "./components/PluginsDetailsPage";
 import { PluginSecretFieldDialog } from "./components/PluginSecretFieldDialog";
 import { getConfigByChannelId, isPluginGlobal, isSecretField } from "./utils";
-import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
 
 interface PluginsDetailsProps {
   id: string;

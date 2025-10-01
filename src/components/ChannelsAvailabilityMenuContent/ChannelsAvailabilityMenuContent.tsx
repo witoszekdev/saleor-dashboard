@@ -6,9 +6,9 @@ import { Text } from "@saleor/macaw-ui-next";
 import { MessageDescriptor, useIntl } from "react-intl";
 
 import { messages } from "../ChannelsAvailabilityDropdown/messages";
-import { useStyles } from "./styles";
 import { HorizontalSpacer } from "../HorizontalSpacer/HorizontalSpacer";
 import { Pill } from "../Pill/Pill";
+import { useStyles } from "./styles";
 
 interface ChannelsAvailabilityMenuContentProps {
   pills: Pill[];

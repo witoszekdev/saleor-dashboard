@@ -4,8 +4,8 @@ import { Box, Text, Tooltip } from "@saleor/macaw-ui-next";
 import { Control } from "react-hook-form";
 import { FormattedMessage } from "react-intl";
 
-import { CustomExtensionFormData } from "../AddCustomExtension";
 import { HookFormCheckbox } from "../../../../components/HookFormCheckbox/HookFormCheckbox";
+import { CustomExtensionFormData } from "../AddCustomExtension";
 
 export const PermissionCheckbox = ({
   permissionCode,

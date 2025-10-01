@@ -23,10 +23,11 @@ import { clsx } from "clsx";
 import { ComponentType, PropsWithChildren, ReactNode, useState } from "react";
 import * as React from "react";
 import { useIntl } from "react-intl";
-import { messages } from "./messages";
-import { useDashboardTheme, useEditorStyles, useGraphiQLThemeSwitcher, useStyles } from "./styles";
+
 import { WebhookFormData } from "../../custom-apps/components/WebhookDetailsPage/WebhookDetailsPage";
 import { DryRun } from "../DryRun/DryRun";
+import { messages } from "./messages";
+import { useDashboardTheme, useEditorStyles, useGraphiQLThemeSwitcher, useStyles } from "./styles";
 
 interface GraphiQLToolbarConfig {
   /**

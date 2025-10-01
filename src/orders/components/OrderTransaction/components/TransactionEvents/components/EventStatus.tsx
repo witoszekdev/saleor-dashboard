@@ -2,8 +2,8 @@
 import { TransactionEventStatus } from "@dashboard/orders/types";
 import { useIntl } from "react-intl";
 
-import { statusMessages } from "../messages";
 import { Pill } from "../../../../../../components/Pill/Pill";
+import { statusMessages } from "../messages";
 
 interface EventStatusProps {
   status: TransactionEventStatus | null;

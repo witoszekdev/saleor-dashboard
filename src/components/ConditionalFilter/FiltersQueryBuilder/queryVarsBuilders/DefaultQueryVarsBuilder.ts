@@ -1,6 +1,6 @@
 import { Handler, NoopValuesHandler } from "../../API/Handler";
-import { BaseMappableQueryVarsBuilder } from "./BaseMappableQueryVarsBuilder";
 import { FilterElement } from "../../FilterElement/FilterElement";
+import { BaseMappableQueryVarsBuilder } from "./BaseMappableQueryVarsBuilder";
 
 /** Class used when other filter definition doesn't support an element
  * it re-uses mapping from BaseMappableDefinition */

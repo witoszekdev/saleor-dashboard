@@ -5,9 +5,9 @@ import { ShippingZoneFragment } from "@dashboard/graphql";
 import { GridCell, Item } from "@glideapps/glide-data-grid";
 import { IntlShape } from "react-intl";
 
-import { messages } from "./messages";
 import { Locale } from "../../../components/Locale/Locale";
 import { getMoneyRange } from "../../../components/MoneyRange/utils";
+import { messages } from "./messages";
 
 export const shippingZonesListStaticColumnsAdapter = (intl: IntlShape) => [
   {

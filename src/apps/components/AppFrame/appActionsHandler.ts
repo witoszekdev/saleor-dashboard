@@ -16,6 +16,7 @@ import {
 } from "@saleor/app-sdk/app-bridge";
 import { useIntl } from "react-intl";
 import urlJoin from "url-join";
+
 import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
 
 const debug = createAppsDebug("appActionsHandler");

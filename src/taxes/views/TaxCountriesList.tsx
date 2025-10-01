@@ -14,6 +14,10 @@ import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActi
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { useMemo, useState } from "react";
 import { useIntl } from "react-intl";
+
+import { useNotifier } from "../../hooks/useNotifier/useNotifier";
+import { TaxCountryDialog } from "../components/TaxCountryDialog/TaxCountryDialog";
+import { TaxCountriesPage } from "../pages/TaxCountriesPage/TaxCountriesPage";
 import {
   taxCountriesListUrl,
   TaxesUrlDialog,
@@ -23,9 +27,6 @@ import {
 } from "../urls";
 import { useTaxUrlRedirect } from "../utils/useTaxUrlRedirect";
 import { excludeExistingCountries, mapUndefinedTaxRatesToCountries } from "../utils/utils";
-import { useNotifier } from "../../hooks/useNotifier/useNotifier";
-import { TaxCountryDialog } from "../components/TaxCountryDialog/TaxCountryDialog";
-import { TaxCountriesPage } from "../pages/TaxCountriesPage/TaxCountriesPage";
 
 interface TaxCountriesListProps {
   id: string | undefined;

@@ -8,8 +8,8 @@ import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { commonMessages, errorMessages } from "@dashboard/intl";
 import { useIntl } from "react-intl";
 
-import { staffMemberDetailsUrl } from "../urls";
 import { useNotifier } from "../../hooks/useNotifier/useNotifier";
+import { staffMemberDetailsUrl } from "../urls";
 
 interface UseUserMutationProps {
   refetch: () => void;

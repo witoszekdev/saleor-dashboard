@@ -9,8 +9,8 @@ import { commonMessages } from "@dashboard/intl";
 import { IntlShape } from "react-intl";
 
 import { UseNavigatorResult } from "../../../hooks/useNavigator";
-import { menuListUrl, menuUrl } from "../../urls";
 import { UseNotifierResult } from "../../../hooks/useNotifier/useNotifier";
+import { menuListUrl, menuUrl } from "../../urls";
 
 export function handleItemCreate(
   data: MenuItemCreateMutation,

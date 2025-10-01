@@ -5,8 +5,9 @@ import { sectionNames } from "@dashboard/intl";
 import { FetchMoreProps, RelayToFlat } from "@dashboard/types";
 import { Text } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
-import { messages } from "./messages";
+
 import { AssignmentList } from "../AssignmentList/AssignmentList";
+import { messages } from "./messages";
 
 interface ShippingZonesProps {
   addShippingZone: (id: string) => void;

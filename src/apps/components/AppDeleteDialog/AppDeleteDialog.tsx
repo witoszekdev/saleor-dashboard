@@ -4,8 +4,8 @@ import { Box, Text } from "@saleor/macaw-ui-next";
 import { PropsWithChildren } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import { Messages as msgs } from "./messages";
 import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import { Messages as msgs } from "./messages";
 
 interface AppDeleteDialogProps {
   confirmButtonState: ConfirmButtonTransitionState;

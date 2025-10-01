@@ -10,10 +10,13 @@ import { TextField } from "@material-ui/core";
 import { Box } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import { ExtendedFormHelperTextProps } from "./types";
-import { ConfirmButton, ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import {
+  ConfirmButton,
+  ConfirmButtonTransitionState,
+} from "../../../components/ConfirmButton/ConfirmButton";
 import { Form } from "../../../components/Form/Form";
 import { useModalDialogErrors } from "../../../hooks/useModalDialogErrors/useModalDialogErrors";
+import { ExtendedFormHelperTextProps } from "./types";
 
 export interface AddMemberFormData {
   email: string;

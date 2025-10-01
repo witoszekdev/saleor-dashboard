@@ -19,10 +19,10 @@ import { Box, Button, ChevronRightIcon } from "@saleor/macaw-ui-next";
 import { useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import { CustomerListDatagrid } from "../CustomerListDatagrid/CustomerListDatagrid";
-import { createFilterStructure, CustomerFilterKeys, CustomerListFilterOpts } from "./filters";
 import { ListFilters } from "../../../components/AppLayout/ListFilters/ListFilters";
 import { FilterPresetsSelect } from "../../../components/FilterPresetsSelect/FilterPresetsSelect";
+import { CustomerListDatagrid } from "../CustomerListDatagrid/CustomerListDatagrid";
+import { createFilterStructure, CustomerFilterKeys, CustomerListFilterOpts } from "./filters";
 
 interface CustomerListPageProps
   extends PageListProps,

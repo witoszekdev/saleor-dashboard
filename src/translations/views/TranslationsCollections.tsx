@@ -10,11 +10,11 @@ import { commonMessages } from "@dashboard/intl";
 import { stringifyQs } from "@dashboard/utils/urls";
 import { useIntl } from "react-intl";
 
+import { useNotifier } from "../../hooks/useNotifier/useNotifier";
 import { extractMutationErrors, maybe } from "../../misc";
+import { TranslationsCollectionsPage } from "../components/TranslationsCollectionsPage/TranslationsCollectionsPage";
 import { TranslationField, TranslationInputFieldName } from "../types";
 import { getParsedTranslationInputData } from "../utils";
-import { useNotifier } from "../../hooks/useNotifier/useNotifier";
-import { TranslationsCollectionsPage } from "../components/TranslationsCollectionsPage/TranslationsCollectionsPage";
 
 export interface TranslationsCollectionsQueryParams {
   activeField: string;

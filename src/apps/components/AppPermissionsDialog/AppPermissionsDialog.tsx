@@ -8,6 +8,7 @@ import { PermissionEnum, useAppQuery, useAppUpdatePermissionsMutation } from "@d
 import { Box, Skeleton, Text } from "@saleor/macaw-ui-next";
 import { useEffect } from "react";
 import { useIntl } from "react-intl";
+
 import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
 
 const messages = AppPermissionsDialogMessages.dialogRoot;

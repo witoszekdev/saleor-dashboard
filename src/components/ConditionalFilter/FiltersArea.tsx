@@ -1,5 +1,8 @@
 import { Box } from "@saleor/macaw-ui-next";
 import { FC } from "react";
+
+import { useConditionalFilterContext } from "./context/consumer";
+import { FilterContainer } from "./FilterElement/FilterElement";
 import { LeftOperand } from "./LeftOperandsProvider";
 import { useFiltersAreaTranslations } from "./messages";
 import { FilterEvent, Filters, Row } from "./UI";
@@ -7,8 +10,6 @@ import { useFilterContainer } from "./useFilterContainer";
 import { useFilteredOperands } from "./useFilteredOperands";
 import { useTranslate } from "./useTranslate";
 import { ErrorEntry } from "./Validation";
-import { useConditionalFilterContext } from "./context/consumer";
-import { FilterContainer } from "./FilterElement/FilterElement";
 
 interface FiltersAreaProps {
   onConfirm: (value: FilterContainer) => void;

@@ -23,12 +23,13 @@ import { getChannelsErrorMessage } from "@dashboard/utils/errors/channels";
 import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { useIntl } from "react-intl";
+
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
+import { ChannelDeleteDialog } from "../../components/ChannelDeleteDialog/ChannelDeleteDialog";
+import { ChannelDetailsPage } from "../../pages/ChannelDetailsPage/ChannelDetailsPage";
 import { channelsListUrl, channelUrl, ChannelUrlDialog, ChannelUrlQueryParams } from "../../urls";
 import { useShippingZones } from "./useShippingZones";
 import { useWarehouses } from "./useWarehouses";
-import { ChannelDeleteDialog } from "../../components/ChannelDeleteDialog/ChannelDeleteDialog";
-import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
-import { ChannelDetailsPage } from "../../pages/ChannelDetailsPage/ChannelDetailsPage";
 
 interface ChannelDetailsProps {
   id: string;

@@ -10,8 +10,8 @@ import { ChannelProps } from "@dashboard/types";
 import { Skeleton, Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import { translateVoucherTypes } from "../../translations";
 import { Percent } from "../../../components/Percent/Percent";
+import { translateVoucherTypes } from "../../translations";
 
 interface VoucherSummaryProps extends ChannelProps {
   voucher: VoucherDetailsFragment;

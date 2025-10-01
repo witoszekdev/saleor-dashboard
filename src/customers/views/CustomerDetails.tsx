@@ -12,12 +12,16 @@ import { commonMessages } from "@dashboard/intl";
 import { extractMutationErrors, getStringOrPlaceholder } from "@dashboard/misc";
 import { createMetadataUpdateHandler } from "@dashboard/utils/handlers/metadataUpdateHandler";
 import { FormattedMessage, useIntl } from "react-intl";
+
+import { NotFoundPage } from "../../components/NotFoundPage/NotFoundPage";
+import { useNotifier } from "../../hooks/useNotifier/useNotifier";
+import {
+  CustomerDetailsPage,
+  CustomerDetailsPageFormData,
+} from "../components/CustomerDetailsPage/CustomerDetailsPage";
 import { useCustomerDetails } from "../hooks/useCustomerDetails";
 import { CustomerDetailsProvider } from "../providers/CustomerDetailsProvider";
 import { customerListUrl, customerUrl, CustomerUrlQueryParams } from "../urls";
-import { NotFoundPage } from "../../components/NotFoundPage/NotFoundPage";
-import { useNotifier } from "../../hooks/useNotifier/useNotifier";
-import { CustomerDetailsPage, CustomerDetailsPageFormData } from "../components/CustomerDetailsPage/CustomerDetailsPage";
 
 interface CustomerDetailsViewProps {
   id: string;

@@ -7,9 +7,9 @@ import { sectionNames } from "@dashboard/intl";
 import { Button } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 
+import { ListPageLayout } from "../../../components/Layouts/List/index";
 import { PageListProps, SortPage } from "../../../types";
 import { permissionGroupAddUrl, PermissionGroupListUrlSortField } from "../../urls";
-import { ListPageLayout } from "../../../components/Layouts/List/index";
 import { PermissionGroupListDatagrid } from "../PermissionGroupListDatagrid/PermissionGroupListDatagrid";
 
 interface PermissionGroupListPageProps

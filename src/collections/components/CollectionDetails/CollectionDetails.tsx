@@ -9,6 +9,7 @@ import { OutputData } from "@editorjs/editorjs";
 import { Input } from "@saleor/macaw-ui-next";
 import * as React from "react";
 import { useIntl } from "react-intl";
+
 import { RichTextEditor } from "../../../components/RichTextEditor/RichTextEditor";
 
 interface CollectionDetailsProps {

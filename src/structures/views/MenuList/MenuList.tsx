@@ -24,11 +24,12 @@ import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { getSortParams } from "@dashboard/utils/sort";
 import { useMemo } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
-import { menuListUrl, MenuListUrlQueryParams, menuUrl } from "../../urls";
-import { getSortQueryVariables } from "./sort";
+
 import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
 import { MenuCreateDialog } from "../../components/MenuCreateDialog/MenuCreateDialog";
 import { MenuListPage } from "../../components/MenuListPage/MenuListPage";
+import { menuListUrl, MenuListUrlQueryParams, menuUrl } from "../../urls";
+import { getSortQueryVariables } from "./sort";
 
 interface MenuListProps {
   params: MenuListUrlQueryParams;

@@ -4,9 +4,9 @@ import { PaginatorContext, usePaginator } from "@dashboard/hooks/usePaginator";
 import { languageEntityUrl, TranslatableEntities } from "@dashboard/translations/urls";
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 
+import { TranslationsEntitiesList } from "../../components/TranslationsEntitiesList/TranslationsEntitiesList";
 import { TranslationsEntityListProps } from "./types";
 import { sumCompleted } from "./utils";
-import { TranslationsEntitiesList } from "../../components/TranslationsEntitiesList/TranslationsEntitiesList";
 
 const TranslationsCategoryList = ({ params, variables }: TranslationsEntityListProps) => {
   const { data, loading } = useCategoryTranslationsQuery({

@@ -13,10 +13,14 @@ import {
 } from "@dashboard/graphql";
 import { ChangeEvent, FormChange, SubmitPromise } from "@dashboard/hooks/useForm";
 import { RequireOnlyOne } from "@dashboard/misc";
-import { getAddedChannelsInputFromFormData } from "./data";
-import { ChannelSaleFormData, SaleDetailsPageFormData } from "./components/SaleDetailsPage/SaleDetailsPage";
-import { VoucherDetailsPageFormData } from "./components/VoucherDetailsPage/VoucherDetailsPage";
+
 import { arrayDiff } from "../utils/arrays/arrays";
+import {
+  ChannelSaleFormData,
+  SaleDetailsPageFormData,
+} from "./components/SaleDetailsPage/SaleDetailsPage";
+import { VoucherDetailsPageFormData } from "./components/VoucherDetailsPage/VoucherDetailsPage";
+import { getAddedChannelsInputFromFormData } from "./data";
 
 interface ChannelArgs {
   discountValue: string;

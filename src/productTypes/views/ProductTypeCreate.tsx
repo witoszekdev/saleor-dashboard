@@ -12,10 +12,13 @@ import { useTaxClassFetchMore } from "@dashboard/taxes/utils/useTaxClassFetchMor
 import { createMetadataCreateHandler } from "@dashboard/utils/handlers/metadataCreateHandler";
 import { useIntl } from "react-intl";
 
-import { getMutationErrors } from "../../misc";
-import { productTypeAddUrl, ProductTypeAddUrlQueryParams, productTypeUrl } from "../urls";
 import { useNotifier } from "../../hooks/useNotifier/useNotifier";
-import { ProductTypeCreatePage, ProductTypeForm } from "../components/ProductTypeCreatePage/ProductTypeCreatePage";
+import { getMutationErrors } from "../../misc";
+import {
+  ProductTypeCreatePage,
+  ProductTypeForm,
+} from "../components/ProductTypeCreatePage/ProductTypeCreatePage";
+import { productTypeAddUrl, ProductTypeAddUrlQueryParams, productTypeUrl } from "../urls";
 
 interface ProductTypeCreateProps {
   params: ProductTypeAddUrlQueryParams;

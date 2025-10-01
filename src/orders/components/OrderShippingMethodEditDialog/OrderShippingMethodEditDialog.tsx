@@ -9,7 +9,11 @@ import { getFormErrors } from "@dashboard/utils/errors";
 import { getOrderErrorMessage } from "@dashboard/utils/errors/order";
 import { Box, Option, Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
-import { ConfirmButton, ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+
+import {
+  ConfirmButton,
+  ConfirmButtonTransitionState,
+} from "../../../components/ConfirmButton/ConfirmButton";
 import { Form } from "../../../components/Form/Form";
 import { Select } from "../../../components/Select/Select";
 import { useModalDialogErrors } from "../../../hooks/useModalDialogErrors/useModalDialogErrors";

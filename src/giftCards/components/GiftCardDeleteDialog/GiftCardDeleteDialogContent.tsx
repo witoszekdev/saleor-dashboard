@@ -7,8 +7,8 @@ import { Box, Text } from "@saleor/macaw-ui-next";
 import { useEffect, useMemo, useState } from "react";
 import { useIntl } from "react-intl";
 
-import { giftCardDeleteDialogMessages as messages } from "./messages";
 import { GiftCardsListConsumerProps } from "../../GiftCardsList/providers/GiftCardListProvider/GiftCardListProvider";
+import { giftCardDeleteDialogMessages as messages } from "./messages";
 
 export const SINGLE = 1;
 

@@ -2,10 +2,10 @@ import { useReorderProductsInCollectionMutation } from "@dashboard/graphql";
 import { useLocalPaginationState } from "@dashboard/hooks/useLocalPaginator";
 import { act, renderHook } from "@testing-library/react-hooks";
 
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
 import { Product } from "./types";
 import { useProductReorder } from "./useProductReorder";
 import { useProductReorderOptimistic } from "./useProductReorderOptimistic";
-import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
 
 jest.mock("react-intl", () => ({
   useIntl: jest.fn(() => ({

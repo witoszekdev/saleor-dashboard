@@ -30,7 +30,10 @@ import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActi
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { FormattedMessage, useIntl } from "react-intl";
 
+import { NotFoundPage } from "../../../components/NotFoundPage/NotFoundPage";
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
 import { getMutationState } from "../../../misc";
+import { ProductUpdatePage } from "../../components/ProductUpdatePage/ProductUpdatePage";
 import {
   productListUrl,
   productUrl,
@@ -41,9 +44,6 @@ import {
 import { createImageReorderHandler, createImageUploadHandler } from "./handlers";
 import { useProductUpdateHandler } from "./handlers/useProductUpdateHandler";
 import { productUpdatePageMessages as messages } from "./messages";
-import { NotFoundPage } from "../../../components/NotFoundPage/NotFoundPage";
-import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
-import { ProductUpdatePage } from "../../components/ProductUpdatePage/ProductUpdatePage";
 
 interface ProductUpdateProps {
   id: string;

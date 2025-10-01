@@ -5,12 +5,12 @@ import { DashboardCard } from "@dashboard/components/Card";
 import { Box, ChevronRightIcon, Text } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
 
+import { ListPageLayout } from "../../../components/Layouts/List/index";
 import { headerTitles, messages } from "../../messages";
 import { ExploreExtensionsActions } from "./components/ExploreExtensionsActions";
+import { ExtensionsList } from "./components/ExtensionsList/ExtensionsList";
 import { useExploreExtensions } from "./hooks/useExploreExtensions";
 import { useExtensionsFilter } from "./hooks/useExtenstionsFilter";
-import { ListPageLayout } from "../../../components/Layouts/List/index";
-import { ExtensionsList } from "./components/ExtensionsList/ExtensionsList";
 
 export const ExploreExtensions = () => {
   const intl = useIntl();

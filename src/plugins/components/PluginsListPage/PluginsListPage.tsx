@@ -11,12 +11,12 @@ import { FilterPageProps, PageListProps, SortPage, TabPageProps } from "@dashboa
 import { Box, Text, useTheme } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
 
-import { PluginList as PluginsList } from "../PluginsList/PluginsList";
-import { createFilterStructure, PluginFilterKeys, PluginListFilterOpts } from "./filters";
-import { pluginsFilterErrorMessages, pluginsListPageMessages } from "./messages";
 import { ExternalLinkNext } from "../../../components/ExternalLink/ExternalLink";
 import { FilterBar } from "../../../components/FilterBar/FilterBar";
 import { ListPageLayout } from "../../../components/Layouts/List/index";
+import { PluginList as PluginsList } from "../PluginsList/PluginsList";
+import { createFilterStructure, PluginFilterKeys, PluginListFilterOpts } from "./filters";
+import { pluginsFilterErrorMessages, pluginsListPageMessages } from "./messages";
 
 interface PluginsListPageProps
   extends PageListProps,

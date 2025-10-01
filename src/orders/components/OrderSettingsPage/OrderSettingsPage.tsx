@@ -6,12 +6,13 @@ import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { orderListUrl } from "@dashboard/orders/urls";
 import { Box } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
-import { OrderSettings } from "../OrderSettings/OrderSettings";
-import { OrderSettingsForm } from "./form";
-import { OrderSettingsFormData } from "./types";
+
 import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
 import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
 import { OrderFulfillmentSettings } from "../OrderFulfillmentSettings/OrderFulfillmentSettings";
+import { OrderSettings } from "../OrderSettings/OrderSettings";
+import { OrderSettingsForm } from "./form";
+import { OrderSettingsFormData } from "./types";
 
 interface OrderSettingsPageProps {
   orderSettings: OrderSettingsFragment;

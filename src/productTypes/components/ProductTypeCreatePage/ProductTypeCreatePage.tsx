@@ -14,14 +14,14 @@ import { productTypeListUrl } from "@dashboard/productTypes/urls";
 import { FetchMoreProps, UserError } from "@dashboard/types";
 import { useMetadataChangeTrigger } from "@dashboard/utils/metadata/useMetadataChangeTrigger";
 
-import { ProductTypeDetails } from "../ProductTypeDetails/ProductTypeDetails";
-import { ProductTypeShipping } from "../ProductTypeShipping/ProductTypeShipping";
-import { ProductTypeTaxes } from "../ProductTypeTaxes/ProductTypeTaxes";
 import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
 import { Form } from "../../../components/Form/Form";
 import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
 import { Metadata } from "../../../components/Metadata/Metadata";
 import { MetadataFormData } from "../../../components/Metadata/types";
+import { ProductTypeDetails } from "../ProductTypeDetails/ProductTypeDetails";
+import { ProductTypeShipping } from "../ProductTypeShipping/ProductTypeShipping";
+import { ProductTypeTaxes } from "../ProductTypeTaxes/ProductTypeTaxes";
 
 export interface ProductTypeForm extends MetadataFormData {
   name: string;

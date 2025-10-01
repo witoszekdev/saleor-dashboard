@@ -1,7 +1,7 @@
 import { Handler, NoopValuesHandler } from "../../API/Handler";
+import { FilterElement } from "../../FilterElement/FilterElement";
 import { QueryVarsDateUtils } from "../dateUtils";
 import { BaseMappableQueryVarsBuilder } from "./BaseMappableQueryVarsBuilder";
-import { FilterElement } from "../../FilterElement/FilterElement";
 
 type DateTimeRangeQueryVars = {
   createdAt?: { gte?: string; lte?: string };

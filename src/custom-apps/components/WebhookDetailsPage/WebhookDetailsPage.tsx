@@ -21,17 +21,18 @@ import { parse, print } from "graphql";
 import { useEffect, useState } from "react";
 import * as React from "react";
 import { useIntl } from "react-intl";
-import { getHeaderTitle, messages } from "./messages";
-import { getWebhookFormInitialFormValues } from "./webhookForm";
+
 import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
 import { Form } from "../../../components/Form/Form";
 import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
+import { PermissionAlert } from "../PermissionAlert/PermissionAlert";
 import { WebhookEvents } from "../WebhookEvents/WebhookEvents";
+import { WebhookHeaders } from "../WebhookHeaders/WebhookHeaders";
 import { WebhookInfo } from "../WebhookInfo/WebhookInfo";
 import { WebhookStatus } from "../WebhookStatus/WebhookStatus";
-import { PermissionAlert } from "../PermissionAlert/PermissionAlert";
-import { WebhookHeaders } from "../WebhookHeaders/WebhookHeaders";
 import { WebhookSubscriptionQuery } from "../WebhookSubscriptionQuery/WebhookSubscriptionQuery";
+import { getHeaderTitle, messages } from "./messages";
+import { getWebhookFormInitialFormValues } from "./webhookForm";
 
 export interface WebhookFormData {
   syncEvents: WebhookEventTypeSyncEnum[];

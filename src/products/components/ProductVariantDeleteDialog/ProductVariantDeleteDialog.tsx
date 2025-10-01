@@ -2,7 +2,11 @@ import { BackButton } from "@dashboard/components/BackButton";
 import { DashboardModal } from "@dashboard/components/Modal";
 import { Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage } from "react-intl";
-import { ConfirmButton, ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+
+import {
+  ConfirmButton,
+  ConfirmButtonTransitionState,
+} from "../../../components/ConfirmButton/ConfirmButton";
 
 interface ProductVariantDeleteDialogProps {
   confirmButtonState: ConfirmButtonTransitionState;

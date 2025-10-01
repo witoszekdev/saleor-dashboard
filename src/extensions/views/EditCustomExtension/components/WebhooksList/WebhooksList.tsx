@@ -11,11 +11,11 @@ import { Box, Button, Chip, Skeleton, Text, TrashBinIcon } from "@saleor/macaw-u
 import { clsx } from "clsx";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import { messages } from "./messages";
-import { useStyles } from "./styles";
 import { ResponsiveTable } from "../../../../../components/ResponsiveTable/ResponsiveTable";
 import { TableCellHeader } from "../../../../../components/TableCellHeader/TableCellHeader";
 import { TableRowLink } from "../../../../../components/TableRowLink/TableRowLink";
+import { messages } from "./messages";
+import { useStyles } from "./styles";
 
 interface WebhooksListProps {
   webhooks: WebhookFragment[];

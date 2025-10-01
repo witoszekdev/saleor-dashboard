@@ -9,10 +9,10 @@ import { OrderGrantRefundFormData } from "@dashboard/orders/components/OrderGran
 import { orderUrl } from "@dashboard/orders/urls";
 import { useIntl } from "react-intl";
 
-import { squashLines } from "../OrderReturn/useRefundWithinReturn";
-import { orderGrantRefundMessages } from "./messages";
 import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
 import { OrderGrantRefundPage } from "../../components/OrderGrantRefundPage/OrderGrantRefundPage";
+import { squashLines } from "../OrderReturn/useRefundWithinReturn";
+import { orderGrantRefundMessages } from "./messages";
 
 interface OrderGrantRefundProps {
   orderId: string;

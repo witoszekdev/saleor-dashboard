@@ -1,6 +1,6 @@
 // @ts-strict-ignore
-import { numberCellEmptyValue, NumberCellProps, numberCellRenderer } from "./NumberCell";
 import { Locale } from "../../Locale/Locale";
+import { numberCellEmptyValue, NumberCellProps, numberCellRenderer } from "./NumberCell";
 
 const locale = Locale.EN;
 

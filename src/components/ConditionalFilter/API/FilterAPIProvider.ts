@@ -1,6 +1,6 @@
 import { ItemOption } from "../FilterElement/ConditionValue";
-import { LeftOperand } from "../LeftOperandsProvider";
 import { FilterContainer } from "../FilterElement/FilterElement";
+import { LeftOperand } from "../LeftOperandsProvider";
 
 export interface FilterAPIProvider {
   fetchRightOptions: (

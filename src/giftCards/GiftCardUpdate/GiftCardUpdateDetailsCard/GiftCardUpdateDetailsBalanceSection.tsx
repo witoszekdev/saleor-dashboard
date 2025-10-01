@@ -5,10 +5,10 @@ import { Text } from "@saleor/macaw-ui-next";
 import { clsx } from "clsx";
 import { useIntl } from "react-intl";
 
+import { HorizontalSpacer } from "../../../components/HorizontalSpacer/HorizontalSpacer";
 import { useGiftCardDetails } from "../providers/GiftCardDetailsProvider/hooks/useGiftCardDetails";
 import { giftCardUpdateDetailsCardMessages as messages } from "./messages";
 import { useGiftCardDetailsBalanceStyles as useStyles } from "./styles";
-import { HorizontalSpacer } from "../../../components/HorizontalSpacer/HorizontalSpacer";
 
 const GiftCardUpdateDetailsBalanceSection = () => {
   const classes = useStyles({});

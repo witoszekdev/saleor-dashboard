@@ -3,9 +3,9 @@ import { FormControlLabel, Radio } from "@material-ui/core";
 import { makeStyles } from "@saleor/macaw-ui";
 import { clsx } from "clsx";
 
+import { toggle } from "../../utils/lists/lists";
 import { Checkbox } from "../Checkbox";
 import { FieldType, FilterFieldBaseProps } from "./types";
-import { toggle } from "../../utils/lists/lists";
 
 const useStyles = makeStyles(
   theme => ({

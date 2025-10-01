@@ -5,8 +5,9 @@ import { buttonMessages } from "@dashboard/intl";
 import { Box, BoxProps, Skeleton, Text } from "@saleor/macaw-ui-next";
 import { useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
-import { Messages as messages } from "./messages";
+
 import { AppPermissionsDialog } from "../AppPermissionsDialog/AppPermissionsDialog";
+import { Messages as messages } from "./messages";
 
 type PermissionsCardProps = {
   permissions: Array<{

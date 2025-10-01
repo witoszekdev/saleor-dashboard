@@ -1,7 +1,7 @@
 import { Handler, NoopValuesHandler } from "../../API/Handler";
 import { isItemOptionArray } from "../../FilterElement/ConditionValue";
-import { BaseMappableQueryVarsBuilder } from "./BaseMappableQueryVarsBuilder";
 import { FilterElement } from "../../FilterElement/FilterElement";
+import { BaseMappableQueryVarsBuilder } from "./BaseMappableQueryVarsBuilder";
 
 type OrderIdFilterQueryPart = {
   ids?: string[];

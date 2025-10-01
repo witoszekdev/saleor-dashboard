@@ -3,6 +3,7 @@ import { commonMessages } from "@dashboard/intl";
 import { FilterOpts } from "@dashboard/types";
 import { createOptionsField } from "@dashboard/utils/filters/fields";
 import { defineMessages, IntlShape } from "react-intl";
+
 import { IFilter } from "../../../components/Filter/types";
 
 export enum ProductTypeFilterKeys {

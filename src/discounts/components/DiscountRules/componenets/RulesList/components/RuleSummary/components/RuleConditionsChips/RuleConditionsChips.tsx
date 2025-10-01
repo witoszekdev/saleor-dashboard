@@ -1,8 +1,8 @@
-import { mapConditionToOption, splitConditions } from "../../utils";
-import { useEnrichConditions } from "./useEnrichConditions";
 import { Rule } from "../../../../../../../../models/Rule";
+import { mapConditionToOption, splitConditions } from "../../utils";
 import { RuleSummaryChips } from "../RuleSummaryChips/RuleSummaryChips";
 import { RuleSummaryTooltip } from "../RuleSummaryTooltip/RuleSummaryTooltip";
+import { useEnrichConditions } from "./useEnrichConditions";
 
 interface RuleChipsProps {
   rule: Rule;

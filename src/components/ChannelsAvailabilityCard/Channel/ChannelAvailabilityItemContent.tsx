@@ -8,9 +8,9 @@ import { Box, Checkbox, Divider, RadioGroup, Text } from "@saleor/macaw-ui-next"
 import { useState } from "react";
 import { useIntl } from "react-intl";
 
+import { StopPropagation } from "../../StopPropagation/StopPropagation";
 import { ChannelOpts, ChannelsAvailabilityError, Messages } from "../types";
 import { availabilityItemMessages } from "./messages";
-import { StopPropagation } from "../../StopPropagation/StopPropagation";
 
 interface ChannelContentProps {
   disabled?: boolean;

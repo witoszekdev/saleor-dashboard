@@ -36,8 +36,7 @@ import { Container, FetchMoreProps, RelayToFlat } from "@dashboard/types";
 import { mapNodeToChoice } from "@dashboard/utils/maps";
 import { Box } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
-import { PageData, PageForm, PageUpdateHandlers } from "./form";
-import { messages } from "./messages";
+
 import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
 import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
 import { Metadata } from "../../../components/Metadata/Metadata";
@@ -45,6 +44,8 @@ import { SeoForm } from "../../../components/SeoForm/SeoForm";
 import { VisibilityCard } from "../../../components/VisibilityCard/VisibilityCard";
 import { PageInfo } from "../PageInfo/PageInfo";
 import { PageOrganizeContent } from "../PageOrganizeContent/PageOrganizeContent";
+import { PageData, PageForm, PageUpdateHandlers } from "./form";
+import { messages } from "./messages";
 
 interface PageDetailsPageProps {
   loading: boolean;

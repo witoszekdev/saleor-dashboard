@@ -9,13 +9,13 @@ import { useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 import { useLocation } from "react-router";
 
+import { StopPropagation } from "../../../components/StopPropagation/StopPropagation";
 import { AppAdditionalInfo } from "../AppAdditionalInfo/AppAdditionalInfo";
 import { AppRowDisabledAlert } from "../AppAlerts/AppRowDisabledAlert";
 import { AppRowWebhookIssueAlert } from "../AppAlerts/AppRowWebhookIssueAlert";
 import { AppAvatar } from "../AppAvatar/AppAvatar";
 import { AppManifestUrl } from "./AppManifestUrl";
 import { messages } from "./messages";
-import { StopPropagation } from "../../../components/StopPropagation/StopPropagation";
 
 const InstalledAppListRow = (props: InstalledApp) => {
   const { enabled: appAlertsEnabled } = useFlag("app_alerts"); // Note: when removing clean up tests

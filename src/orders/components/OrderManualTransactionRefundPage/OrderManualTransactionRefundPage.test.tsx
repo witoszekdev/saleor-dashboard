@@ -13,8 +13,8 @@ import userEvent from "@testing-library/user-event";
 import { ReactNode } from "react";
 import { BrowserRouter } from "react-router-dom";
 
-import { OrderManualTransactionRefundPage } from "./OrderManualTransactionRefundPage";
 import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
+import { OrderManualTransactionRefundPage } from "./OrderManualTransactionRefundPage";
 
 jest.mock("@dashboard/hooks/useNavigator", () => () => jest.fn);
 jest.mock("@dashboard/components/Savebar");

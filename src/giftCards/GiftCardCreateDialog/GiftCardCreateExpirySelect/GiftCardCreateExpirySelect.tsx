@@ -10,9 +10,9 @@ import { FormChange } from "@dashboard/hooks/useForm";
 import { Box, Checkbox, Input, Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage, MessageDescriptor, useIntl } from "react-intl";
 
-import { giftCardCreateExpirySelectMessages as messages } from "./messages";
 import { NewRadioGroupField as RadioGroupField } from "../../../components/RadioGroupField/RadioGroupField";
 import { TimePeriodField } from "../../components/TimePeriodField/TimePeriodField";
+import { giftCardCreateExpirySelectMessages as messages } from "./messages";
 
 interface UntranslatedOption {
   label: MessageDescriptor;

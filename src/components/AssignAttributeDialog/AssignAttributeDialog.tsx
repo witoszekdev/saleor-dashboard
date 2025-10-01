@@ -10,14 +10,14 @@ import { makeStyles } from "@saleor/macaw-ui";
 import { Box, Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 
+import { useModalDialogErrors } from "../../hooks/useModalDialogErrors/useModalDialogErrors";
+import { useModalDialogOpen } from "../../hooks/useModalDialogOpen/useModalDialogOpen";
 import { BackButton } from "../BackButton";
-import { messages } from "./messages";
 import { ConfirmButton, ConfirmButtonTransitionState } from "../ConfirmButton/ConfirmButton";
 import { InfiniteScroll } from "../InfiniteScroll/InfiniteScroll";
 import { ResponsiveTable } from "../ResponsiveTable/ResponsiveTable";
 import { TableRowLink } from "../TableRowLink/TableRowLink";
-import { useModalDialogErrors } from "../../hooks/useModalDialogErrors/useModalDialogErrors";
-import { useModalDialogOpen } from "../../hooks/useModalDialogOpen/useModalDialogOpen";
+import { messages } from "./messages";
 
 const useStyles = makeStyles(
   theme => ({

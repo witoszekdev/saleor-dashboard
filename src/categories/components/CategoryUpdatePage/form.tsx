@@ -10,6 +10,7 @@ import { useRichText } from "@dashboard/utils/richText/useRichText";
 import { OutputData } from "@editorjs/editorjs";
 import { useEffect } from "react";
 import * as React from "react";
+
 import { MetadataFormData } from "../../../components/Metadata/types";
 
 interface CategoryUpdateFormData extends MetadataFormData {

@@ -22,6 +22,11 @@ import { useState } from "react";
 import { FormattedMessage, MessageDescriptor, useIntl } from "react-intl";
 
 import {
+  ConfirmButton,
+  ConfirmButtonTransitionState,
+} from "../../../components/ConfirmButton/ConfirmButton";
+import { useModalDialogErrors } from "../../../hooks/useModalDialogErrors/useModalDialogErrors";
+import {
   AddressInputOptionEnum,
   OrderCustomerAddressesEditForm,
   OrderCustomerAddressesEditFormData,
@@ -35,8 +40,6 @@ import {
   OrderCustomerSearchAddressState,
 } from "./types";
 import { getAddressEditProps, hasPreSubmitErrors, validateDefaultAddress } from "./utils";
-import { ConfirmButton, ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
-import { useModalDialogErrors } from "../../../hooks/useModalDialogErrors/useModalDialogErrors";
 
 export interface OrderCustomerAddressesEditDialogProps {
   open: boolean;

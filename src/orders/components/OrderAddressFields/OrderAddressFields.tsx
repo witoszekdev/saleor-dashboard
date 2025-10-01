@@ -7,12 +7,16 @@ import {
 } from "@dashboard/graphql";
 import { SubmitPromise } from "@dashboard/hooks/useForm";
 import { transformAddressToForm } from "@dashboard/misc";
+
+import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import {
+  OrderCustomerAddressesEditDialog,
+  OrderCustomerAddressesEditDialogProps,
+} from "../OrderCustomerAddressesEditDialog/OrderCustomerAddressesEditDialog";
 import {
   AddressEditDialogVariant,
   OrderCustomerAddressesEditDialogOutput,
 } from "../OrderCustomerAddressesEditDialog/types";
-import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
-import { OrderCustomerAddressesEditDialog, OrderCustomerAddressesEditDialogProps } from "../OrderCustomerAddressesEditDialog/OrderCustomerAddressesEditDialog";
 
 interface OrderAddressFieldsProps {
   action: string;

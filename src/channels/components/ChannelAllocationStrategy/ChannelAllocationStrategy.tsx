@@ -5,9 +5,9 @@ import { SvgIcon as HelpOutline } from "@material-ui/icons/HelpOutline";
 import { Text, Tooltip } from "@saleor/macaw-ui-next";
 import { FormattedMessage } from "react-intl";
 
+import { NewRadioGroupField as RadioGroupField } from "../../../components/RadioGroupField/RadioGroupField";
 import { messages } from "./messages";
 import { useStyles } from "./styles";
-import { NewRadioGroupField as RadioGroupField } from "../../../components/RadioGroupField/RadioGroupField";
 
 const strategyOptions = [
   {

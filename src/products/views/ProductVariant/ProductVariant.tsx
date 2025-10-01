@@ -52,6 +52,10 @@ import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { warehouseAddPath } from "@dashboard/warehouses/urls";
 import { useEffect, useState } from "react";
 import { useIntl } from "react-intl";
+
+import { NotFoundPage } from "../../../components/NotFoundPage/NotFoundPage";
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
+import { ProductVariantDeleteDialog } from "../../components/ProductVariantDeleteDialog/ProductVariantDeleteDialog";
 import { ProductVariantUpdateSubmitData } from "../../components/ProductVariantPage/form";
 import { ProductVariantPage } from "../../components/ProductVariantPage/ProductVariantPage";
 import {
@@ -62,9 +66,6 @@ import {
 } from "../../urls";
 import { createVariantReorderHandler } from "./../ProductUpdate/handlers";
 import { useSubmitChannels } from "./useSubmitChannels";
-import { NotFoundPage } from "../../../components/NotFoundPage/NotFoundPage";
-import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
-import { ProductVariantDeleteDialog } from "../../components/ProductVariantDeleteDialog/ProductVariantDeleteDialog";
 
 interface ProductUpdateProps {
   variantId: string;

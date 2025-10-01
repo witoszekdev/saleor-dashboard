@@ -12,6 +12,7 @@ import { InitialProductAPIState } from "../API/initialState/product/useProductIn
 import { InitialProductTypesAPIState } from "../API/initialState/productTypes/useInitialProdutTypesState";
 import { InitialStaffMembersAPIState } from "../API/initialState/staffMembers/useInitialStaffMemebersState";
 import { InitialVoucherAPIState } from "../API/initialState/vouchers/useInitialVouchersState";
+import { FilterContainer, FilterElement } from "../FilterElement/FilterElement";
 import { FilterValueProvider } from "../FilterValueProvider";
 import { FilterProviderType, InitialAPIState } from "../types";
 import { TokenArray } from "./TokenArray";
@@ -28,7 +29,6 @@ import {
   VoucherFetchingParams,
 } from "./TokenArray/fetchingParams";
 import { prepareStructure } from "./utils";
-import { FilterContainer, FilterElement } from "../FilterElement/FilterElement";
 
 export const useUrlValueProvider = (
   locationSearch: string,

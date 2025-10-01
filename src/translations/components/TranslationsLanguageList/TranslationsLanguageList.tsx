@@ -8,9 +8,9 @@ import { Skeleton, vars } from "@saleor/macaw-ui-next";
 import { clsx } from "clsx";
 import { FormattedMessage } from "react-intl";
 
-import { maybe, renderCollection } from "../../../misc";
 import { ResponsiveTable } from "../../../components/ResponsiveTable/ResponsiveTable";
 import { TableRowLink } from "../../../components/TableRowLink/TableRowLink";
+import { maybe, renderCollection } from "../../../misc";
 
 interface TranslationsLanguageListProps {
   languages: LanguageFragment[];

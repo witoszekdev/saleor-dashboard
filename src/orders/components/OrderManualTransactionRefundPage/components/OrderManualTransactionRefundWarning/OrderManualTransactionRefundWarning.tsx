@@ -2,8 +2,8 @@ import { MANUAL_REFUND_DOCS_URL } from "@dashboard/links";
 import { Box, Text, useTheme } from "@saleor/macaw-ui-next";
 import { FormattedMessage } from "react-intl";
 
-import { messages } from "../../messages";
 import { ExternalLinkNext } from "../../../../../components/ExternalLink/ExternalLink";
+import { messages } from "../../messages";
 
 export const OrderManualTransactionRefundWarning = () => {
   const theme = useTheme();

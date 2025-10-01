@@ -17,9 +17,9 @@ import {
   isItemOption,
   isItemOptionArray,
 } from "../../FilterElement/ConditionValue";
+import { FilterElement } from "../../FilterElement/FilterElement";
 import { QueryVarsBuilderUtils } from "../utils";
 import { WhereOnlyQueryVarsBuilder } from "./types";
-import { FilterElement } from "../../FilterElement/FilterElement";
 
 type AttributeFilterQueryPart = { attributes?: AttributeInput[] };
 

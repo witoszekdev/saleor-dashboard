@@ -1,6 +1,7 @@
 import { WarehouseFilterInput } from "@dashboard/graphql";
-import { WarehouseListUrlFilters } from "../../urls";
+
 import { createFilterTabUtils } from "../../../utils/filters/storage";
+import { WarehouseListUrlFilters } from "../../urls";
 
 const WAREHOUSE_FILTERS_KEY = "warehouseFilters";
 

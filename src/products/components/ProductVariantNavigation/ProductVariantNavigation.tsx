@@ -9,13 +9,13 @@ import { Box, Button, Text } from "@saleor/macaw-ui-next";
 import { Fragment } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
+import { Divider } from "../../../components/Divider/Divider";
 import { renderCollection } from "../../../misc";
 import { ProductVariantEmptyItem } from "./components/ProductVariantEmptyItem";
 import { VariantItem } from "./components/ProductVariantItem";
 import { useVariantDrag } from "./hooks/useVariantDrag";
 import { messages } from "./messages";
 import { ProductVariantItem } from "./types";
-import { Divider } from "../../../components/Divider/Divider";
 
 interface ProductVariantNavigationProps {
   current?: string;

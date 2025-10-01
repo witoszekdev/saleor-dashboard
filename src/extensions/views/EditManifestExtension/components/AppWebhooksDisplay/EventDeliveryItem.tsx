@@ -2,9 +2,9 @@ import { EventDeliveryAttemptFragment, EventDeliveryStatusEnum } from "@dashboar
 import { Box, Text } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
 
+import { EventTime } from "../../../../../components/EventTime/EventTime";
 import { AppWebhooksAttemptDetails } from "./AppWebhooksAttemptDetails";
 import { EventDeliveryStatusChip } from "./EventDeliveriesStatus";
-import { EventTime } from "../../../../../components/EventTime/EventTime";
 
 interface EventDeliveryItemProps {
   createdAt: string;

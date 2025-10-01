@@ -6,6 +6,7 @@ import {
   SearchProductTypesQueryVariables,
 } from "@dashboard/graphql";
 import { mapEdgesToItems } from "@dashboard/utils/maps";
+
 import { makeTopLevelSearch } from "../hooks/makeTopLevelSearch/makeTopLevelSearch";
 
 export const searchProductTypes = gql`

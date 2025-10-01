@@ -6,11 +6,11 @@ import { clsx } from "clsx";
 import { ChangeEvent } from "react";
 import { useIntl } from "react-intl";
 
+import { TableRowLink } from "../../../components/TableRowLink/TableRowLink";
+import { removeAtIndex, updateAtIndex } from "../../../utils/lists/lists";
 import { messages } from "./messages";
 import { useStyles } from "./styles";
 import { Header, stringifyHeaders } from "./utils";
-import { TableRowLink } from "../../../components/TableRowLink/TableRowLink";
-import { removeAtIndex, updateAtIndex } from "../../../utils/lists/lists";
 
 const nameSeparator = ":";
 const nameInputPrefix = "name";

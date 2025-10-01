@@ -22,13 +22,13 @@ import { createContext } from "react";
 import * as React from "react";
 import { useIntl } from "react-intl";
 
+import { MetadataFormData } from "../../../../components/Metadata/types";
+import { useNotifier } from "../../../../hooks/useNotifier/useNotifier";
 import {
   GiftCardCreateFormData,
   initialData as emptyFormData,
 } from "../../../GiftCardCreateDialog/GiftCardCreateDialogForm";
 import { useGiftCardDetails } from "../GiftCardDetailsProvider/hooks/useGiftCardDetails";
-import { MetadataFormData } from "../../../../components/Metadata/types";
-import { useNotifier } from "../../../../hooks/useNotifier/useNotifier";
 
 interface GiftCardUpdateFormProviderProps {
   children: React.ReactNode;

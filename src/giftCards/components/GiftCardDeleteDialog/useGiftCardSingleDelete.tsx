@@ -4,8 +4,8 @@ import { DeleteGiftCardMutation, useDeleteGiftCardMutation } from "@dashboard/gr
 import { MutationResultWithOpts } from "@dashboard/hooks/makeMutation";
 import { useIntl } from "react-intl";
 
-import { giftCardDeleteDialogMessages as messages } from "./messages";
 import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
+import { giftCardDeleteDialogMessages as messages } from "./messages";
 
 interface UseGiftCardSingleDeleteProps {
   onDeleteGiftCard: () => void;

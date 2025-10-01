@@ -1,12 +1,13 @@
 import { messages } from "@dashboard/discounts/components/DiscountRules/messages";
 import { Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage } from "react-intl";
-import { hasNoRuleConditions } from "./utils";
+
 import { Rule } from "../../../../../../models/Rule";
 import { RuleChannelChips } from "./components/RuleChannelChips/RuleChannelChips";
 import { RuleConditionsChips } from "./components/RuleConditionsChips/RuleConditionsChips";
 import { RuleUnknownChips } from "./components/RuleUnknownChips/RuleUnknownChips";
 import { RuleValueChips } from "./components/RuleValueChips/RuleValueChips";
+import { hasNoRuleConditions } from "./utils";
 
 interface RuleSummaryProps {
   rule: Rule;

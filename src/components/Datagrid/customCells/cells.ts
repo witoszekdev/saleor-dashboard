@@ -7,13 +7,13 @@ import { DotStatus } from "@dashboard/components/StatusDot/StatusDot";
 import { CustomCell, GridCell, GridCellKind, TextCell } from "@glideapps/glide-data-grid";
 import { Option } from "@saleor/macaw-ui-next";
 
+import { Locale } from "../../Locale/Locale";
 import { DropdownCell, DropdownCellProps } from "./DropdownCell";
+import { MoneyCell } from "./Money/MoneyCell";
+import { MoneyDiscuntedCell } from "./Money/MoneyDiscountedCell";
 import { hueToPillColorLight, PillCell, PillColor, stringToHue } from "./PillCell";
 import { StatusCell } from "./StatusCell";
 import { ThumbnailCell } from "./ThumbnailCell";
-import { Locale } from "../../Locale/Locale";
-import { MoneyCell } from "./Money/MoneyCell";
-import { MoneyDiscuntedCell } from "./Money/MoneyDiscountedCell";
 
 const common = {
   allowOverlay: true,

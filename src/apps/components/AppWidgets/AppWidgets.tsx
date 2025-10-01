@@ -13,6 +13,7 @@ import { ThemeType } from "@saleor/app-sdk/app-bridge";
 import { Box, Skeleton, Text } from "@saleor/macaw-ui-next";
 import { useEffect, useRef } from "react";
 import { useIntl } from "react-intl";
+
 import { AppFrame } from "../AppFrame/AppFrame";
 
 type AppWidgetsProps = {

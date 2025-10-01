@@ -12,8 +12,8 @@ import { makeStyles } from "@saleor/macaw-ui";
 import * as React from "react";
 import { useIntl } from "react-intl";
 
-import { PageData } from "../PageDetailsPage/form";
 import { RichTextEditor } from "../../../components/RichTextEditor/RichTextEditor";
+import { PageData } from "../PageDetailsPage/form";
 
 interface PageInfoProps {
   data: PageData;

@@ -19,18 +19,18 @@ import { List, ListHeader, ListItem, ListItemCell, PageTab, PageTabs } from "@sa
 import { Box, Button, Skeleton } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import { getSelectedTaxStrategy, getTaxAppId, getTaxCalculationStrategy } from "./helpers";
-import { useStyles } from "./styles";
-import { useTaxStrategyChoices } from "./useTaxStrategyChoices";
 import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
 import { Form } from "../../../components/Form/Form";
 import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
 import { VerticalSpacer } from "../../../components/VerticalSpacer/VerticalSpacer";
 import { TaxCountryDialog } from "../../components/TaxCountryDialog/TaxCountryDialog";
 import { TaxPageTitle } from "../../components/TaxPageTitle/TaxPageTitle";
+import { getSelectedTaxStrategy, getTaxAppId, getTaxCalculationStrategy } from "./helpers";
+import { useStyles } from "./styles";
 import { TaxChannelsMenu } from "./TaxChannelsMenu/TaxChannelsMenu";
 import { TaxCountryExceptionListItem } from "./TaxCountryExceptionListItem/TaxCountryExceptionListItem";
 import { TaxSettingsCard } from "./TaxSettingsCard/TaxSettingsCard";
+import { useTaxStrategyChoices } from "./useTaxStrategyChoices";
 
 interface TaxChannelsPageProps {
   taxConfigurations: TaxConfigurationFragment[] | undefined;

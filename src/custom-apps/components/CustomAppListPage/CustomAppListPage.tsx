@@ -11,11 +11,12 @@ import { TableBody, TableCell } from "@material-ui/core";
 import { ResponsiveTable } from "@saleor/macaw-ui";
 import { Box, Button, Text, TrashBinIcon } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
-import { useStyles } from "./styles";
+
 import { DeactivatedText } from "../../../apps/components/DeactivatedText/DeactivatedText";
 import { ListPageLayout } from "../../../components/Layouts/List/index";
 import { TableRowLink } from "../../../components/TableRowLink/TableRowLink";
 import { CustomAppsSkeleton } from "../CustomAppsSkeleton/CustomAppsSkeleton";
+import { useStyles } from "./styles";
 
 interface CustomAppListPageProps {
   appsList: AppListItemFragment[];

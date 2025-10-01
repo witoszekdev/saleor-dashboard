@@ -24,6 +24,7 @@ import { MinMax } from "@dashboard/types";
 import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
 import { useReducer } from "react";
 import { useIntl } from "react-intl";
+
 import { ShippingZonePostalCodeRangeDialog } from "../components/ShippingZonePostalCodeRangeDialog/ShippingZonePostalCodeRangeDialog";
 import { ShippingZoneRatesCreatePage } from "../components/ShippingZoneRatesCreatePage/ShippingZoneRatesCreatePage";
 

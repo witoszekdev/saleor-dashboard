@@ -7,17 +7,17 @@ import { Text } from "@saleor/macaw-ui-next";
 import { useEffect, useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
+import { useModalDialogOpen } from "../../hooks/useModalDialogOpen/useModalDialogOpen";
 import { BackButton } from "../BackButton";
-import { messages } from "./messages";
-import { useStyles } from "./styles";
-import { Products, SelectedChannel } from "./types";
-import { isProductAvailableInVoucherChannels } from "./utils";
 import { ConfirmButton, ConfirmButtonTransitionState } from "../ConfirmButton/ConfirmButton";
 import { InfiniteScroll } from "../InfiniteScroll/InfiniteScroll";
 import { ResponsiveTable } from "../ResponsiveTable/ResponsiveTable";
 import { TableCellAvatar } from "../TableCellAvatar/TableCellAvatar";
 import { TableRowLink } from "../TableRowLink/TableRowLink";
-import { useModalDialogOpen } from "../../hooks/useModalDialogOpen/useModalDialogOpen";
+import { messages } from "./messages";
+import { useStyles } from "./styles";
+import { Products, SelectedChannel } from "./types";
+import { isProductAvailableInVoucherChannels } from "./utils";
 
 interface AssignProductDialogSingleProps extends FetchMoreProps {
   confirmButtonState: ConfirmButtonTransitionState;

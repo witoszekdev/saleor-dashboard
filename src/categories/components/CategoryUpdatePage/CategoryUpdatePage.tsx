@@ -19,17 +19,17 @@ import { useCachedLocales } from "@dashboard/translations/useCachedLocales";
 import { Box, sprinkles } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import { ListProps, ListViews, RelayToFlat } from "../../../types";
-import { CategoryUpdateData, CategoryUpdateForm } from "./form";
 import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
 import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
 import { SeoForm } from "../../../components/SeoForm/SeoForm";
 import { Tab } from "../../../components/Tab/Tab";
 import { TabContainer } from "../../../components/Tab/TabContainer";
-import { CategoryDetailsForm } from "../CategoryDetailsForm/CategoryDetailsForm";
+import { ListProps, ListViews, RelayToFlat } from "../../../types";
 import { CategoryBackground } from "../CategoryBackground/CategoryBackground";
+import { CategoryDetailsForm } from "../CategoryDetailsForm/CategoryDetailsForm";
 import { CategoryProducts } from "../CategoryProducts/CategoryProducts";
 import { CategorySubcategories } from "../CategorySubcategories/CategorySubcategories";
+import { CategoryUpdateData, CategoryUpdateForm } from "./form";
 
 export enum CategoryPageTab {
   categories = "categories",

@@ -5,11 +5,12 @@ import { Box, Spinner } from "@saleor/macaw-ui-next";
 import { useState } from "react";
 import { useIntl } from "react-intl";
 import { Link } from "react-router-dom";
+
+import { ConfirmButton, ConfirmButtonTransitionState } from "../ConfirmButton/ConfirmButton";
+import { DeleteButton } from "../DeleteButton/DeleteButton";
 import { DashboardModal } from "../Modal";
 import { DeleteWarningDialogConsentContent } from "./DeleteWarningDialogConsentContent";
 import { CommonTypeDeleteWarningMessages, TypeBaseData, TypeDeleteWarningMessages } from "./types";
-import { ConfirmButton, ConfirmButtonTransitionState } from "../ConfirmButton/ConfirmButton";
-import { DeleteButton } from "../DeleteButton/DeleteButton";
 
 export interface TypeDeleteMessages {
   baseMessages: CommonTypeDeleteWarningMessages;

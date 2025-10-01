@@ -4,8 +4,8 @@ import { PaginatorContext, usePaginator } from "@dashboard/hooks/usePaginator";
 import { languageEntityUrl, TranslatableEntities } from "@dashboard/translations/urls";
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 
-import { TranslationsEntityListProps } from "./types";
 import { TranslationsEntitiesList } from "../../components/TranslationsEntitiesList/TranslationsEntitiesList";
+import { TranslationsEntityListProps } from "./types";
 
 const TranslationsAttributeList = ({ params, variables }: TranslationsEntityListProps) => {
   const { data, loading } = useAttributeTranslationsQuery({

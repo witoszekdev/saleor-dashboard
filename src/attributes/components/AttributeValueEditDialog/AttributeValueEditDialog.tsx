@@ -7,12 +7,15 @@ import { getFormErrors } from "@dashboard/utils/errors";
 import { TextField } from "@material-ui/core";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import { AttributeValueEditDialogFormData } from "../../utils/data";
-import { getAttributeValueFields } from "./utils";
-import { ConfirmButton, ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import {
+  ConfirmButton,
+  ConfirmButtonTransitionState,
+} from "../../../components/ConfirmButton/ConfirmButton";
 import { Form } from "../../../components/Form/Form";
 import { useModalDialogErrors } from "../../../hooks/useModalDialogErrors/useModalDialogErrors";
+import { AttributeValueEditDialogFormData } from "../../utils/data";
 import { AttributeSwatchField } from "../AttributeSwatchField/AttributeSwatchField";
+import { getAttributeValueFields } from "./utils";
 
 interface AttributeValueEditDialogProps {
   attributeValue: AttributeValueEditDialogFormData | null;

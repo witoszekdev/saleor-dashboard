@@ -6,9 +6,12 @@ import { FetchMoreProps } from "@dashboard/types";
 import { Button, Option } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import { messages } from "./messages";
-import { ConfirmButton, ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import {
+  ConfirmButton,
+  ConfirmButtonTransitionState,
+} from "../../../components/ConfirmButton/ConfirmButton";
 import { useModalDialogOpen } from "../../../hooks/useModalDialogOpen/useModalDialogOpen";
+import { messages } from "./messages";
 
 interface PageTypePickerDialogProps {
   confirmButtonState: ConfirmButtonTransitionState;

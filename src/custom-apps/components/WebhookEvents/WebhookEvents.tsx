@@ -21,10 +21,10 @@ import { Text } from "@saleor/macaw-ui-next";
 import { Dispatch, SetStateAction, useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
+import { Pill } from "../../../components/Pill/Pill";
 import { messages } from "./messages";
 import { useStyles } from "./styles";
 import { EventTypes, getEventName } from "./utils";
-import { Pill } from "../../../components/Pill/Pill";
 
 interface WebhookEventsProps {
   data: {

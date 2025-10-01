@@ -4,6 +4,7 @@ import { OrderErrorFragment } from "@dashboard/graphql";
 import { getOrderErrorMessage } from "@dashboard/utils/errors/order";
 import { Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
+
 import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
 import { useModalDialogErrors } from "../../../hooks/useModalDialogErrors/useModalDialogErrors";
 

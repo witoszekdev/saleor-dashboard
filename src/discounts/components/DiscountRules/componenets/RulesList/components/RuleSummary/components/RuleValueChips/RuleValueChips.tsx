@@ -4,6 +4,7 @@ import { RewardTypeEnum, RewardValueTypeEnum } from "@dashboard/graphql";
 import { useLocale } from "@dashboard/hooks/useLocale";
 import { Chip } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
+
 import { Locale } from "../../../../../../../../../components/Locale/Locale";
 import { Rule } from "../../../../../../../../models/Rule";
 

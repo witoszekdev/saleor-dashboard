@@ -17,8 +17,8 @@ import { ReactNode } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { useIntl } from "react-intl";
 
-import { getValidationSchema, ManualRefundForm } from "./manualRefundValidationSchema";
 import { useNotifier } from "../../../../../hooks/useNotifier/useNotifier";
+import { getValidationSchema, ManualRefundForm } from "./manualRefundValidationSchema";
 
 interface OrderManualTransactionRefundFormProps {
   children: ReactNode;

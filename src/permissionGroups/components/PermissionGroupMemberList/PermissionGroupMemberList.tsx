@@ -13,6 +13,7 @@ import { makeStyles } from "@saleor/macaw-ui";
 import { Box, Button, Skeleton, Text, TrashBinIcon, vars } from "@saleor/macaw-ui-next";
 import { clsx } from "clsx";
 import { FormattedMessage, useIntl } from "react-intl";
+
 import { ResponsiveTable } from "../../../components/ResponsiveTable/ResponsiveTable";
 import { TableCellHeader } from "../../../components/TableCellHeader/TableCellHeader";
 import { TableHead } from "../../../components/TableHead/TableHead";

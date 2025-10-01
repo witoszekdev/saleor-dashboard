@@ -9,9 +9,13 @@ import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { commonMessages } from "@dashboard/intl";
 import { extractMutationErrors } from "@dashboard/misc";
 import { useIntl } from "react-intl";
-import { useAvailableEvents } from "../../hooks/useAvailableEvents";
+
 import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
-import { WebhookDetailsPage, WebhookFormData } from "../../components/WebhookDetailsPage/WebhookDetailsPage";
+import {
+  WebhookDetailsPage,
+  WebhookFormData,
+} from "../../components/WebhookDetailsPage/WebhookDetailsPage";
+import { useAvailableEvents } from "../../hooks/useAvailableEvents";
 
 interface CustomAppWebhookCreateProps {
   appId: string;

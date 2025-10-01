@@ -48,13 +48,14 @@ import { Option } from "@saleor/macaw-ui-next";
 import * as React from "react";
 import { useIntl } from "react-intl";
 import { slugify } from "slugify";
-import { AttributeReferenceTypesSection } from "../AttributeReferenceTypesSection/AttributeReferenceTypesSection";
+
 import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
 import { Form } from "../../../components/Form/Form";
 import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
 import { AttributeDetails } from "../AttributeDetails/AttributeDetails";
 import { AttributeOrganization } from "../AttributeOrganization/AttributeOrganization";
 import { AttributeProperties } from "../AttributeProperties/AttributeProperties";
+import { AttributeReferenceTypesSection } from "../AttributeReferenceTypesSection/AttributeReferenceTypesSection";
 import { AttributeValues } from "../AttributeValues/AttributeValues";
 
 interface AttributePageProps {

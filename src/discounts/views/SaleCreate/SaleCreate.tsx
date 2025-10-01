@@ -23,11 +23,11 @@ import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActi
 import { createMetadataCreateHandler } from "@dashboard/utils/handlers/metadataCreateHandler";
 import { useIntl } from "react-intl";
 
-import { SALE_CREATE_FORM_ID } from "./consts";
-import { createHandler } from "./handlers";
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
 import { SaleCreatePage } from "../../components/SaleCreatePage/SaleCreatePage";
 import { ChannelSaleFormData } from "../../components/SaleDetailsPage/SaleDetailsPage";
-import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
+import { SALE_CREATE_FORM_ID } from "./consts";
+import { createHandler } from "./handlers";
 
 interface SaleCreateProps {
   params: SaleCreateUrlQueryParams;

@@ -3,6 +3,7 @@ import { calculateItemsOrderMoves } from "@dashboard/channels/views/ChannelDetai
 import { useChannelReorderWarehousesMutation, WarehouseFragment } from "@dashboard/graphql";
 import { getChannelsErrorMessage } from "@dashboard/utils/errors/channels";
 import { useIntl } from "react-intl";
+
 import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
 
 export const useChannelWarehousesReorder = () => {

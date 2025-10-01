@@ -36,22 +36,22 @@ import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { Box, Option } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
 
+import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
+import { Metadata } from "../../../components/Metadata/Metadata";
+import { SeoForm } from "../../../components/SeoForm/SeoForm";
 import { FetchMoreProps, RelayToFlat } from "../../../types";
+import { ProductDetailsForm } from "../ProductDetailsForm/ProductDetailsForm";
+import { ProductShipping } from "../ProductShipping/ProductShipping";
+import { ProductStocks } from "../ProductStocks/ProductStocks";
+import { ProductTaxes } from "../ProductTaxes/ProductTaxes";
+import { ProductVariantPrice } from "../ProductVariantPrice/ProductVariantPrice";
 import {
   ProductCreateData,
   ProductCreateForm,
   ProductCreateFormData,
   ProductCreateHandlers,
 } from "./form";
-import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
-import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
-import { Metadata } from "../../../components/Metadata/Metadata";
-import { SeoForm } from "../../../components/SeoForm/SeoForm";
-import { ProductVariantPrice } from "../ProductVariantPrice/ProductVariantPrice";
-import { ProductDetailsForm } from "../ProductDetailsForm/ProductDetailsForm";
-import { ProductShipping } from "../ProductShipping/ProductShipping";
-import { ProductStocks } from "../ProductStocks/ProductStocks";
-import { ProductTaxes } from "../ProductTaxes/ProductTaxes";
 
 interface ProductCreatePageProps {
   errors: ProductErrorWithAttributesFragment[];

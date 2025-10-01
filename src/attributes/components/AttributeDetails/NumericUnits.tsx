@@ -6,10 +6,10 @@ import { Box, Checkbox, Option, Text } from "@saleor/macaw-ui-next";
 import { useEffect, useMemo, useState } from "react";
 import { useIntl } from "react-intl";
 
+import { Select } from "../../../components/Select/Select";
+import { AttributePageFormData } from "../AttributePage/AttributePage";
 import * as M from "./messages";
 import { getUnitChoices, UnitSystem, unitSystemChoices, UnitType, unitTypeChoices } from "./utils";
-import { AttributePageFormData } from "../AttributePage/AttributePage";
-import { Select } from "../../../components/Select/Select";
 
 const useStyles = makeStyles(
   theme => ({

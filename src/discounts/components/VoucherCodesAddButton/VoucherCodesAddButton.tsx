@@ -2,8 +2,8 @@ import { ArrowDownIcon, Box, Button, PlusIcon, Popover } from "@saleor/macaw-ui-
 import { useCallback, useMemo, useState } from "react";
 import { useIntl } from "react-intl";
 
-import { messages } from "./messages";
 import { MenuItem, SubMenu } from "../../../components/SubMenu/SubMenu";
+import { messages } from "./messages";
 
 interface VoucherCodesAddButtonProps {
   onMultiCodesGenerate: () => void;

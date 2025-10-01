@@ -13,6 +13,7 @@ import {
 import { getFormErrors } from "@dashboard/utils/errors";
 import { CommonError, getCommonFormFieldErrorMessage } from "@dashboard/utils/errors/common";
 import { useIntl } from "react-intl";
+
 import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
 import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
 import { Rule } from "../../models/Rule";

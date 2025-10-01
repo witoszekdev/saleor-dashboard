@@ -7,9 +7,9 @@ import { FormattedMessage } from "react-intl";
 
 import { extractOrderGiftCardUsedAmount } from "../OrderSummaryCard/utils";
 import { OrderPaymentStatusPill } from "./components/OrderPaymentStatusPill";
+import { PaymentsSummary } from "./components/PaymentsSummary/PaymentsSummary";
 import { orderPaymentActionButtonMessages, orderPaymentMessages } from "./messages";
 import { useStyles } from "./styles";
-import { PaymentsSummary } from "./components/PaymentsSummary/PaymentsSummary";
 
 interface OrderPaymementProps {
   order: OrderDetailsFragment | undefined;

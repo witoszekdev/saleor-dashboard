@@ -6,6 +6,7 @@ import * as React from "react";
 import { useEffect } from "react";
 import { useIntl } from "react-intl";
 
+import { TextWithSelectField } from "../../components/TextWithSelectField/TextWithSelectField";
 import {
   GiftCardBulkCreateFormErrors,
   GiftCardCreateCommonFormData,
@@ -13,7 +14,6 @@ import {
 import { getGiftCardErrorMessage } from "../GiftCardUpdate/messages";
 import { useChannelCurrenciesWithCache } from "../hooks/useChannelCurrenciesWithCache";
 import { giftCardCreateMessages as messages } from "./messages";
-import { TextWithSelectField } from "../../components/TextWithSelectField/TextWithSelectField";
 
 interface GiftCardCreateMoneyInputProps {
   change: FormChange;

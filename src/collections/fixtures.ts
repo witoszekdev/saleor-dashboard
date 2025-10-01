@@ -1,8 +1,8 @@
 import { CollectionDetailsQuery, CollectionPublished } from "@dashboard/graphql";
 
 import * as richTextEditorFixtures from "../components/RichTextEditor/fixtures.json";
-import { Collections } from "./types";
 import { CollectionListFilterOpts } from "./components/CollectionListPage/filters";
+import { Collections } from "./types";
 
 const content = richTextEditorFixtures.richTextEditor;
 

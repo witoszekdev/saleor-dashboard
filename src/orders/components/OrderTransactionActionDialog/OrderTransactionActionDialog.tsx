@@ -5,9 +5,9 @@ import { buttonMessages } from "@dashboard/intl";
 import { Button, Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 
+import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
 import { mapActionToMessage } from "../OrderTransaction/utils";
 import { messages } from "./messages";
-import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
 
 interface OrderTransactionActionDialogProps {
   open: boolean;

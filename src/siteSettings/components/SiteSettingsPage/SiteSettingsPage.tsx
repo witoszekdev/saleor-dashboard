@@ -15,12 +15,13 @@ import { createSingleAutocompleteSelectHandler } from "@dashboard/utils/handlers
 import { mapCountriesToChoices } from "@dashboard/utils/maps";
 import { Box, Checkbox, Divider, Text } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
-import { messages } from "./messages";
+
 import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
 import { Form } from "../../../components/Form/Form";
 import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
 import { PageSectionHeader } from "../../../components/PageSectionHeader/PageSectionHeader";
 import { SiteCheckoutSettingsCard } from "../SiteCheckoutSettingsCard/SiteCheckoutSettingsCard";
+import { messages } from "./messages";
 
 interface SiteSettingsPageAddressFormData {
   city: string;

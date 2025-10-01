@@ -10,13 +10,13 @@ import { DeleteIcon, IconButton } from "@saleor/macaw-ui";
 import { Button, Skeleton } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 
+import { ResponsiveTable } from "../../../components/ResponsiveTable/ResponsiveTable";
+import { TableHead } from "../../../components/TableHead/TableHead";
+import { TableRowLink } from "../../../components/TableRowLink/TableRowLink";
 import { renderCollection } from "../../../misc";
 import { ListActions, ListProps } from "../../../types";
 import { messages } from "./messages";
 import { useStyles } from "./styles";
-import { ResponsiveTable } from "../../../components/ResponsiveTable/ResponsiveTable";
-import { TableHead } from "../../../components/TableHead/TableHead";
-import { TableRowLink } from "../../../components/TableRowLink/TableRowLink";
 
 interface DiscountCategoriesProps extends ListProps, ListActions {
   categories: CategoryWithTotalProductsFragment[];

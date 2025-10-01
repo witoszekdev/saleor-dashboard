@@ -15,6 +15,9 @@ import { useEffect, useMemo } from "react";
 import * as React from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
+import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
+import { PriceField } from "../../../components/PriceField/PriceField";
 import { getOrderTitleMessage } from "../OrderCardTitle/utils";
 import { ProductsCard } from "./components/ProductCard";
 import { ShippingIncluded } from "./components/ShippingInluded";
@@ -34,9 +37,6 @@ import {
   getRefundAmountValue,
   prepareLineData,
 } from "./utils";
-import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
-import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
-import { PriceField } from "../../../components/PriceField/PriceField";
 
 interface OrderGrantRefundPageProps {
   order?: OrderDetailsGrantRefundFragment;

@@ -1,10 +1,11 @@
 import { Box } from "@saleor/macaw-ui-next";
 import { FC, useState } from "react";
+
+import { useConditionalFilterContext } from "./context/consumer";
+import { FilterContainer } from "./FilterElement/FilterElement";
 import { FiltersArea } from "./FiltersArea";
 import { LoadingFiltersArea } from "./LoadingFiltersArea";
 import { ErrorEntry, Validator } from "./Validation";
-import { useConditionalFilterContext } from "./context/consumer";
-import { FilterContainer } from "./FilterElement/FilterElement";
 
 export const ConditionalFilters: FC<{ onClose: () => void }> = ({ onClose }) => {
   const { valueProvider, containerState } = useConditionalFilterContext();

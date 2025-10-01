@@ -8,10 +8,11 @@ import {
 import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { commonMessages } from "@dashboard/intl";
 import { FormattedMessage, useIntl } from "react-intl";
-import { productImageUrl, ProductImageUrlQueryParams, productListUrl, productUrl } from "../urls";
+
 import { NotFoundPage } from "../../components/NotFoundPage/NotFoundPage";
 import { useNotifier } from "../../hooks/useNotifier/useNotifier";
 import { ProductMediaPage } from "../components/ProductMediaPage/ProductMediaPage";
+import { productImageUrl, ProductImageUrlQueryParams, productListUrl, productUrl } from "../urls";
 
 interface ProductMediaProps {
   mediaId: string;

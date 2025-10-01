@@ -5,9 +5,9 @@ import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { useShop } from "@dashboard/hooks/useShop";
 import { PropsWithChildren, useContext, useState } from "react";
 
-import { AppData, ExternalAppContext } from "./context";
 import { AppFrame } from "../../../apps/components/AppFrame/AppFrame";
 import { AppDialog } from "../../views/ViewManifestExtension/components/AppDialog/AppDialog";
+import { AppData, ExternalAppContext } from "./context";
 
 export const ExternalAppProvider = ({ children }: PropsWithChildren) => {
   const [open, setOpen] = useState(false);

@@ -9,7 +9,11 @@ import {
   SaleUpdateMutationVariables,
 } from "@dashboard/graphql";
 import { joinDateTime } from "@dashboard/misc";
-import { ChannelSaleFormData, SaleDetailsPageFormData } from "../../components/SaleDetailsPage/SaleDetailsPage";
+
+import {
+  ChannelSaleFormData,
+  SaleDetailsPageFormData,
+} from "../../components/SaleDetailsPage/SaleDetailsPage";
 
 function discountValueTypeEnum(type: SaleType): DiscountValueTypeEnum {
   return type.toString() === DiscountValueTypeEnum.FIXED

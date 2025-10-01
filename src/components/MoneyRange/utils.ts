@@ -1,7 +1,8 @@
 import { IMoney } from "@dashboard/utils/intl";
 import { IntlShape } from "react-intl";
-import { formatMoney, formatMoneyRange } from "../Money";
+
 import { Locale } from "../Locale/Locale";
+import { formatMoney, formatMoneyRange } from "../Money";
 
 export const getMoneyRange = (
   locale: Locale,

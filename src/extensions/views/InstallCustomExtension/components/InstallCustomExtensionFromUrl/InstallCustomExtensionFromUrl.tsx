@@ -17,9 +17,9 @@ import { useFetchManifest } from "../../hooks/useFetchManifest";
 import { useInstallApp } from "../../hooks/useInstallApp";
 import { useLoadQueryParamsToForm } from "../../hooks/useLoadQueryParamsToForm";
 import { ExtensionInstallFormData } from "../../types";
+import { InstallSectionData } from "../InstallSectionData/InstallSectionData";
 import { InstallTopNav } from "../InstallTopNav";
 import { ManifestErrorMessage } from "../ManifestErrorMessage/ManifestErrorMessage";
-import { InstallSectionData } from "../InstallSectionData/InstallSectionData";
 
 export const InstallCustomExtensionFromUrl = ({
   trigger,

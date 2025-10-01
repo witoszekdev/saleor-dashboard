@@ -14,12 +14,12 @@ import { mapMetadataItemToInput } from "@dashboard/utils/maps";
 import { useMetadataChangeTrigger } from "@dashboard/utils/metadata/useMetadataChangeTrigger";
 import { Option } from "@saleor/macaw-ui-next";
 
-import { PageTypeAttributes } from "../PageTypeAttributes/PageTypeAttributes";
-import { PageTypeDetails } from "../PageTypeDetails/PageTypeDetails";
 import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
 import { Form } from "../../../components/Form/Form";
 import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
 import { Metadata } from "../../../components/Metadata/Metadata";
+import { PageTypeAttributes } from "../PageTypeAttributes/PageTypeAttributes";
+import { PageTypeDetails } from "../PageTypeDetails/PageTypeDetails";
 
 export interface PageTypeForm extends MetadataFormData {
   name: string;

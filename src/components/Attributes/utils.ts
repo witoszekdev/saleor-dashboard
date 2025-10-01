@@ -10,6 +10,7 @@ import { getPageErrorMessage } from "@dashboard/utils/errors/page";
 import { getEntityUrl } from "@dashboard/utils/maps";
 import { Option } from "@saleor/macaw-ui-next";
 import { IntlShape } from "react-intl";
+
 import { FileChoiceType } from "../FileUploadField/FileUploadField";
 import { SortableChipsFieldValueType } from "../SortableChipsField/SortableChipsField";
 

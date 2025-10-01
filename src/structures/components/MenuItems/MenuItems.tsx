@@ -5,10 +5,11 @@ import { RecursiveMenuItem } from "@dashboard/structures/types";
 import { Box, Button, Skeleton } from "@saleor/macaw-ui-next";
 import { useMemo } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
-import { getNodeData } from "../MenuItemsSortableTree/utils";
-import { getDiff, TreeOperation } from "./tree";
+
 import { MenuItemType } from "../MenuItemDialog/types";
 import { MenuItemsSortableTree } from "../MenuItemsSortableTree/MenuItemsSortableTree";
+import { getNodeData } from "../MenuItemsSortableTree/utils";
+import { getDiff, TreeOperation } from "./tree";
 
 interface MenuItemsProps {
   canUndo: boolean;

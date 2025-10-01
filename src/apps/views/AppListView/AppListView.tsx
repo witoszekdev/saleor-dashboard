@@ -25,9 +25,9 @@ import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { PropsWithChildren, useMemo } from "react";
 import { useIntl } from "react-intl";
 
-import { messages } from "./messages";
-import { AppInProgressDeleteDialog } from "../../components/AppInProgressDeleteDialog/AppInProgressDeleteDialog";
 import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
+import { AppInProgressDeleteDialog } from "../../components/AppInProgressDeleteDialog/AppInProgressDeleteDialog";
+import { messages } from "./messages";
 
 interface Props {
   params: AppListUrlQueryParams;

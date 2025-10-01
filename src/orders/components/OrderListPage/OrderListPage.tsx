@@ -31,10 +31,10 @@ import { Box, Button, ChevronRightIcon, Tooltip } from "@saleor/macaw-ui-next";
 import { useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import { OrderLimitReached } from "../OrderLimitReached";
 import { ListFilters } from "../../../components/AppLayout/ListFilters/ListFilters";
 import { FilterPresetsSelect } from "../../../components/FilterPresetsSelect/FilterPresetsSelect";
 import { ListPageLayout } from "../../../components/Layouts/List/index";
+import { OrderLimitReached } from "../OrderLimitReached";
 import { OrderListDatagrid } from "../OrderListDatagrid/OrderListDatagrid";
 
 interface OrderListPageProps

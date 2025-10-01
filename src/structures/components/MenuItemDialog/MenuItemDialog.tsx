@@ -11,13 +11,17 @@ import { Box, Input, Text } from "@saleor/macaw-ui-next";
 import { useEffect } from "react";
 import { Controller, useForm } from "react-hook-form";
 import { FormattedMessage, useIntl } from "react-intl";
-import { getLinkTypeOptions } from "./options";
-import { MenuItemDialogFormData } from "./types";
-import { getValidationSchema } from "./validationSchema";
-import { ConfirmButton, ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+
+import {
+  ConfirmButton,
+  ConfirmButtonTransitionState,
+} from "../../../components/ConfirmButton/ConfirmButton";
 import { useModalDialogErrors } from "../../../hooks/useModalDialogErrors/useModalDialogErrors";
 import { useModalDialogOpen } from "../../../hooks/useModalDialogOpen/useModalDialogOpen";
 import { MenuItemDialogLinkValue } from "./MenuItemDialogLinkValue/MenuItemDialogLinkValue";
+import { getLinkTypeOptions } from "./options";
+import { MenuItemDialogFormData } from "./types";
+import { getValidationSchema } from "./validationSchema";
 
 interface MenuItemDialogProps {
   confirmButtonState: ConfirmButtonTransitionState;

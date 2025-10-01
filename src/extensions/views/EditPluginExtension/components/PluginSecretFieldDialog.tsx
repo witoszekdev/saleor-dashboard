@@ -7,7 +7,11 @@ import { DialogProps } from "@dashboard/types";
 import { TextField } from "@material-ui/core";
 import { Skeleton } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
-import { ConfirmButton, ConfirmButtonTransitionState } from "../../../../components/ConfirmButton/ConfirmButton";
+
+import {
+  ConfirmButton,
+  ConfirmButtonTransitionState,
+} from "../../../../components/ConfirmButton/ConfirmButton";
 import { Form } from "../../../../components/Form/Form";
 
 interface PluginSecretFieldDialogFormData {

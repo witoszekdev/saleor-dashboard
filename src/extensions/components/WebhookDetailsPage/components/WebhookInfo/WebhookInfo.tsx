@@ -12,9 +12,9 @@ import * as React from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
 import { WebhookFormData } from "../../WebhookDetailsPage";
+import { WebhookStatus } from "../WebhookStatus/WebhookStatus";
 import { messages } from "./messages";
 import { useStyles } from "./styles";
-import { WebhookStatus } from "../WebhookStatus/WebhookStatus";
 
 interface WebhookInfoProps {
   data: WebhookFormData;

@@ -24,16 +24,17 @@ import { RichTextContext } from "@dashboard/utils/richText/context";
 import { useRichText } from "@dashboard/utils/richText/useRichText";
 import { FormEventHandler, useState } from "react";
 import { useIntl } from "react-intl";
-import { ShippingZoneRateCommonFormData } from "../ShippingZoneRatesPage/types";
+
 import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
 import { WithFormId } from "../../../components/Form/types";
 import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
 import { OrderValue } from "../OrderValue/OrderValue";
 import { OrderWeight } from "../OrderWeight/OrderWeight";
 import { PricingCard } from "../PricingCard/PricingCard";
-import { ShippingRateInfo } from "../ShippingRateInfo/ShippingRateInfo";
 import { ShippingMethodTaxes } from "../ShippingMethodTaxes/ShippingMethodTaxes";
+import { ShippingRateInfo } from "../ShippingRateInfo/ShippingRateInfo";
 import { ShippingZonePostalCodes } from "../ShippingZonePostalCodes/ShippingZonePostalCodes";
+import { ShippingZoneRateCommonFormData } from "../ShippingZoneRatesPage/types";
 
 interface ShippingZoneRatesCreatePageProps extends WithFormId {
   allChannelsCount?: number;

@@ -20,11 +20,11 @@ import { createMetadataCreateHandler } from "@dashboard/utils/handlers/metadataC
 import { getParsedDataForJsonStringField } from "@dashboard/utils/richText/misc";
 import { useIntl } from "react-intl";
 
+import { useNotifier } from "../../hooks/useNotifier/useNotifier";
 import { CollectionCreatePage } from "../components/CollectionCreatePage/CollectionCreatePage";
 import { CollectionCreateData } from "../components/CollectionCreatePage/form";
 import { collectionAddUrl, CollectionCreateUrlQueryParams, collectionUrl } from "../urls";
 import { COLLECTION_CREATE_FORM_ID } from "./consts";
-import { useNotifier } from "../../hooks/useNotifier/useNotifier";
 
 interface CollectionCreateProps {
   params: CollectionCreateUrlQueryParams;

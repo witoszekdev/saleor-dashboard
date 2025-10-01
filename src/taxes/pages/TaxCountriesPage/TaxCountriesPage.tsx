@@ -27,13 +27,14 @@ import {
 import { Box, Skeleton } from "@saleor/macaw-ui-next";
 import { Fragment, useMemo, useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
-import { TaxCountriesForm } from "./form";
-import { useStyles } from "./styles";
+
 import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
 import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
 import { VerticalSpacer } from "../../../components/VerticalSpacer/VerticalSpacer";
-import { TaxPageTitle } from "../../components/TaxPageTitle/TaxPageTitle";
 import { TaxInput } from "../../components/TaxInput/TaxInput";
+import { TaxPageTitle } from "../../components/TaxPageTitle/TaxPageTitle";
+import { TaxCountriesForm } from "./form";
+import { useStyles } from "./styles";
 import { TaxCountriesMenu } from "./TaxCountriesMenu/TaxCountriesMenu";
 
 interface TaxCountriesPageProps {

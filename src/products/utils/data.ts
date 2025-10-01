@@ -19,8 +19,9 @@ import { FormsetAtomicData } from "@dashboard/hooks/useFormset";
 import { maybe } from "@dashboard/misc";
 import { mapEdgesToItems, mapMetadataItemToInput } from "@dashboard/utils/maps";
 import { Option } from "@saleor/macaw-ui-next";
-import { ProductUpdateFormData } from "../components/ProductUpdatePage/types";
+
 import { ProductStockInput } from "../components/ProductStocks/ProductStocks";
+import { ProductUpdateFormData } from "../components/ProductUpdatePage/types";
 
 interface Node {
   id: string;

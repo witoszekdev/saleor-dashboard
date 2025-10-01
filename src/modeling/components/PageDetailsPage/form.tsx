@@ -58,6 +58,7 @@ import { useRichText } from "@dashboard/utils/richText/useRichText";
 import { OutputData } from "@editorjs/editorjs";
 import { useEffect, useState } from "react";
 import * as React from "react";
+
 import { MetadataFormData } from "../../../components/Metadata/types";
 
 export interface PageFormData extends MetadataFormData {

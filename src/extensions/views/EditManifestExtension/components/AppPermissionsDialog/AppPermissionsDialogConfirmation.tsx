@@ -4,9 +4,9 @@ import { PermissionEnum } from "@dashboard/graphql";
 import { Box, Text } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
 
+import { ConfirmButton } from "../../../../../components/ConfirmButton/ConfirmButton";
 import { useGetAvailableAppPermissions } from "../../hooks/useGetAvailableAppPermissions";
 import { AppPermissionsDialogMessages } from "./messages";
-import { ConfirmButton } from "../../../../../components/ConfirmButton/ConfirmButton";
 
 const messages = AppPermissionsDialogMessages.confirmation;
 

@@ -5,6 +5,7 @@ import { getFormErrors } from "@dashboard/utils/errors";
 import { getDiscountErrorMessage } from "@dashboard/utils/errors/discounts";
 import { Input } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
+
 import { VoucherDetailsPageFormData } from "../VoucherDetailsPage/VoucherDetailsPage";
 
 interface VoucherInfoProps {

@@ -2,6 +2,7 @@ import { FetchResult } from "@apollo/client";
 import { DiscoutFormData } from "@dashboard/discounts/types";
 import { PromotionCreateMutation, PromotionCreateMutationVariables } from "@dashboard/graphql";
 import { getMutationErrors, joinDateTime } from "@dashboard/misc";
+
 import { toAPI } from "../../models/transformRule";
 
 export const useDiscountCreate = (

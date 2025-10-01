@@ -4,10 +4,13 @@ import { useCreateCustomerMutation, useCustomerCreateDataQuery } from "@dashboar
 import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { useIntl } from "react-intl";
 
-import { extractMutationErrors, maybe } from "../../misc";
-import { customerUrl } from "../urls";
 import { useNotifier } from "../../hooks/useNotifier/useNotifier";
-import { CustomerCreatePage, CustomerCreatePageSubmitData } from "../components/CustomerCreatePage/CustomerCreatePage";
+import { extractMutationErrors, maybe } from "../../misc";
+import {
+  CustomerCreatePage,
+  CustomerCreatePageSubmitData,
+} from "../components/CustomerCreatePage/CustomerCreatePage";
+import { customerUrl } from "../urls";
 
 const CustomerCreate = () => {
   const navigate = useNavigator();

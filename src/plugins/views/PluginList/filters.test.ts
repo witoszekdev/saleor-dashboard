@@ -5,10 +5,10 @@ import { getExistingKeys } from "@test/filters";
 import { config } from "@test/intl";
 import { createIntl } from "react-intl";
 
-import { getFilterQueryParam, getFilterVariables } from "./filters";
 import { FieldType } from "../../../components/Filter/types";
-import { createFilterStructure, PluginFilterKeys } from "../../components/PluginsListPage/filters";
 import { getFilterQueryParams } from "../../../utils/filters/filters";
+import { createFilterStructure, PluginFilterKeys } from "../../components/PluginsListPage/filters";
+import { getFilterQueryParam, getFilterVariables } from "./filters";
 
 describe("Filtering query params", () => {
   it("should be empty object if no params given", () => {

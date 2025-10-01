@@ -6,9 +6,13 @@ import { commonMessages } from "@dashboard/intl";
 import { extractMutationErrors } from "@dashboard/misc";
 import { mapCountriesToCountriesCodes } from "@dashboard/utils/maps";
 import { useIntl } from "react-intl";
-import { shippingZoneUrl } from "../urls";
+
 import { useNotifier } from "../../hooks/useNotifier/useNotifier";
-import { ShippingZoneCreateFormData, ShippingZoneCreatePage } from "../components/ShippingZoneCreatePage/ShippingZoneCreatePage";
+import {
+  ShippingZoneCreateFormData,
+  ShippingZoneCreatePage,
+} from "../components/ShippingZoneCreatePage/ShippingZoneCreatePage";
+import { shippingZoneUrl } from "../urls";
 
 const ShippingZoneCreate = () => {
   const navigate = useNavigator();

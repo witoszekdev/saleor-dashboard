@@ -1,5 +1,5 @@
-import { createMetadataUpdateHandler, ObjectWithMetadata } from "./metadataUpdateHandler";
 import { MetadataFormData } from "../../components/Metadata/types";
+import { createMetadataUpdateHandler, ObjectWithMetadata } from "./metadataUpdateHandler";
 
 describe("createMetadataUpdateHandler", () => {
   it("should return array of errors when update function return errors", async () => {

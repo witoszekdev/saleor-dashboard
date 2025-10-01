@@ -14,12 +14,12 @@ import { ORDER_EVENTS_DOCS_URL } from "@dashboard/links";
 import { Box, vars } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 
+import { Form } from "../../../components/Form/Form";
 import { ExtendedTimelineEvent } from "./ExtendedTimelineEvent";
 import { HistoryComponentLoader } from "./HistoryComponentLoader";
 import { LinkedTimelineEvent } from "./LinkedTimelineEvent";
 import { getEventMessage } from "./messages";
 import { getEventSecondaryTitle, isTimelineEventOfType } from "./utils";
-import { Form } from "../../../components/Form/Form";
 
 export interface FormData {
   message: string;

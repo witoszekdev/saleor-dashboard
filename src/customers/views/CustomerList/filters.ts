@@ -1,9 +1,13 @@
 import { CustomerFilterInput } from "@dashboard/graphql";
-import { CustomerListUrlFilters, CustomerListUrlFiltersEnum } from "../../urls";
+
 import { FilterElement } from "../../../components/Filter/types";
-import { CustomerFilterKeys, CustomerListFilterOpts } from "../../components/CustomerListPage/filters";
-import { createFilterTabUtils } from "../../../utils/filters/storage";
 import { getGteLteVariables, getMinMaxQueryParam } from "../../../utils/filters/filters";
+import { createFilterTabUtils } from "../../../utils/filters/storage";
+import {
+  CustomerFilterKeys,
+  CustomerListFilterOpts,
+} from "../../components/CustomerListPage/filters";
+import { CustomerListUrlFilters, CustomerListUrlFiltersEnum } from "../../urls";
 
 const CUSTOMER_FILTERS_KEY = "customerFilters";
 

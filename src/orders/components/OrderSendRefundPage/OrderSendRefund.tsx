@@ -10,6 +10,8 @@ import { orderUrl } from "@dashboard/orders/urls";
 import { Skeleton } from "@saleor/macaw-ui-next";
 import { FormattedMessage } from "react-intl";
 
+import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
 import { DataLine } from "./components/DataLine";
 import { DataLineMoney } from "./components/DataLineMoney";
 import { DataLineSettled } from "./components/DataLineSettled";
@@ -17,8 +19,6 @@ import { ManualRefundCard } from "./components/ManualRefundCard";
 import { TransactionCard } from "./components/TransactionCard";
 import { refundPageMessages } from "./messages";
 import { useStyles } from "./styles";
-import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
-import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
 
 interface OrderSendRefundPageProps {
   order: OrderDetailsFragment;

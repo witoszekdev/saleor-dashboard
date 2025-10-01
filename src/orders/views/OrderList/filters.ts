@@ -1,14 +1,25 @@
 import { OrderAuthorizeStatusEnum, OrderChargeStatusEnum, OrderStatus } from "@dashboard/graphql";
 import { OrderFilterKeys } from "@dashboard/orders/components/OrderListPage/filters";
+
+import {
+  FilterElement,
+  FilterElementKeyValue,
+  FilterElementRegular,
+} from "../../../components/Filter/types";
+import {
+  getKeyValueQueryParam,
+  getMinMaxQueryParam,
+  getMultipleEnumValueQueryParam,
+  getMultipleValueQueryParam,
+  getSingleValueQueryParam,
+} from "../../../utils/filters/filters";
+import { createFilterTabUtils } from "../../../utils/filters/storage";
 import {
   OrderListFitersWithKeyValueValues,
   OrderListUrlFilters,
   OrderListUrlFiltersEnum,
   OrderListUrlFiltersWithMultipleValues,
 } from "../../urls";
-import { FilterElement, FilterElementKeyValue, FilterElementRegular } from "../../../components/Filter/types";
-import { createFilterTabUtils } from "../../../utils/filters/storage";
-import { getKeyValueQueryParam, getMinMaxQueryParam, getMultipleEnumValueQueryParam, getMultipleValueQueryParam, getSingleValueQueryParam } from "../../../utils/filters/filters";
 
 const ORDER_FILTERS_KEY = "orderFiltersPresets";
 

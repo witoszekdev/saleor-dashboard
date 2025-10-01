@@ -1,9 +1,10 @@
 import { ConditionOptions } from "@dashboard/components/ConditionalFilter/FilterElement/ConditionOptions";
 import { ConditionSelected } from "@dashboard/components/ConditionalFilter/FilterElement/ConditionSelected";
 import { ExpressionValue } from "@dashboard/components/ConditionalFilter/FilterElement/FilterElement";
-import { getFilterElement } from "./utils";
+
 import { Condition } from "../FilterElement/Condition";
 import { FilterContainer, FilterElement } from "../FilterElement/FilterElement";
+import { getFilterElement } from "./utils";
 
 describe("ConditionalFilter / API / utils / getFilterElement", () => {
   it("should return filter element at index", () => {

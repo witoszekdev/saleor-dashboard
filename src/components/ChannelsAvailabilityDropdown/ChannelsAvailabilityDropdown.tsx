@@ -5,9 +5,9 @@ import { useIntl } from "react-intl";
 
 import { DashboardCard } from "../Card";
 import { ChannelsAvailabilityMenuContent } from "../ChannelsAvailabilityMenuContent";
+import { Pill } from "../Pill/Pill";
 import { messages } from "./messages";
 import { CollectionChannels, getDropdownColor, mapChannelsToPills } from "./utils";
-import { Pill } from "../Pill/Pill";
 
 interface ChannelsAvailabilityDropdownProps {
   channels: CollectionChannels[] | null;

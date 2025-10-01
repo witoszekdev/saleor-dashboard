@@ -5,6 +5,7 @@ import {
   SearchCustomersQuery,
   SearchCustomersQueryVariables,
 } from "@dashboard/graphql";
+
 import { makeTopLevelSearch } from "../hooks/makeTopLevelSearch/makeTopLevelSearch";
 
 export const searchCustomers = gql`

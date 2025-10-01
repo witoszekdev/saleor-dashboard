@@ -10,8 +10,8 @@ import { clsx } from "clsx";
 import { Fragment } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
-import { useStyles } from "./styles";
 import { ListItemLink } from "../../../../components/ListItemLink/ListItemLink";
+import { useStyles } from "./styles";
 
 interface TaxCountriesMenuProps {
   configurations: TaxCountryConfigurationFragment[] | undefined;

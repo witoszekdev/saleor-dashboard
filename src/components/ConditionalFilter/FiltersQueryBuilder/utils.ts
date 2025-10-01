@@ -5,8 +5,8 @@ import {
   isItemOptionArray,
   ItemOption,
 } from "../FilterElement/ConditionValue";
-import { StaticQueryPart } from "./types";
 import { FilterElement } from "../FilterElement/FilterElement";
+import { StaticQueryPart } from "./types";
 
 type ProcessedConditionValue =
   | string

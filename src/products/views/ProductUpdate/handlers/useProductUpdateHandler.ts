@@ -34,6 +34,7 @@ import { createMetadataUpdateHandler } from "@dashboard/utils/handlers/metadataU
 import { useState } from "react";
 import { useIntl } from "react-intl";
 
+import { useNotifier } from "../../../../hooks/useNotifier/useNotifier";
 import {
   getCreateVariantMutationError,
   getVariantUpdateMutationErrors,
@@ -46,7 +47,6 @@ import {
   getProductUpdateVariables,
   hasProductChannelsUpdate,
 } from "./utils";
-import { useNotifier } from "../../../../hooks/useNotifier/useNotifier";
 
 export type UseProductUpdateHandlerError =
   | ProductErrorWithAttributesFragment

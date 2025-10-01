@@ -3,8 +3,8 @@ import { messages } from "@dashboard/extensions/messages";
 import { MANIFEST_FORMAT_DOCS_URL } from "@dashboard/links";
 import { FormattedMessage } from "react-intl";
 
-import { previousPagePath } from "../consts";
 import { ExternalLinkUnstyled } from "../../../components/ExternalLinkUnstyled/ExternalLinkUnstyled";
+import { previousPagePath } from "../consts";
 
 export const InstallTopNav = ({
   title,

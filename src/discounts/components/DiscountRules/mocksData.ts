@@ -1,4 +1,5 @@
 import { ChannelFragment, RewardTypeEnum, RewardValueTypeEnum } from "@dashboard/graphql";
+
 import { Rule } from "../../models/Rule";
 
 export const channels = [

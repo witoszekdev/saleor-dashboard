@@ -22,6 +22,12 @@ import { getSortParams } from "@dashboard/utils/sort";
 import { useEffect, useMemo } from "react";
 import { useIntl } from "react-intl";
 
+import { ChannelPickerDialog } from "../../../channels/components/ChannelPickerDialog/ChannelPickerDialog";
+import { DeleteFilterTabDialog } from "../../../components/DeleteFilterTabDialog/DeleteFilterTabDialog";
+import { SaveFilterTabDialog } from "../../../components/SaveFilterTabDialog/SaveFilterTabDialog";
+import { useFilterPresets } from "../../../hooks/useFilterPresets/useFilterPresets";
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
+import { useOnboarding } from "../../../welcomePage/WelcomePageOnboarding/onboardingContext/OnboardingContext";
 import { OrderListPage } from "../../components/OrderListPage/OrderListPage";
 import {
   orderListUrl,
@@ -32,12 +38,6 @@ import {
 } from "../../urls";
 import { getFilterQueryParam, storageUtils } from "./filters";
 import { DEFAULT_SORT_KEY, getSortQueryVariables } from "./sort";
-import { ChannelPickerDialog } from "../../../channels/components/ChannelPickerDialog/ChannelPickerDialog";
-import { DeleteFilterTabDialog } from "../../../components/DeleteFilterTabDialog/DeleteFilterTabDialog";
-import { SaveFilterTabDialog } from "../../../components/SaveFilterTabDialog/SaveFilterTabDialog";
-import { useFilterPresets } from "../../../hooks/useFilterPresets/useFilterPresets";
-import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
-import { useOnboarding } from "../../../welcomePage/WelcomePageOnboarding/onboardingContext/OnboardingContext";
 
 interface OrderListProps {
   params: OrderListUrlQueryParams;

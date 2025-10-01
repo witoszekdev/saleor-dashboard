@@ -6,11 +6,11 @@ import {
 import { getByIds } from "@dashboard/orders/components/OrderReturnPage/utils";
 import { useIntl } from "react-intl";
 
-import { bulkEnableDisableSectionMessages as messages } from "../messages";
-import { GIFT_CARD_LIST_QUERY } from "../queries";
 import { ConfirmButton } from "../../../components/ConfirmButton/ConfirmButton";
 import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
+import { bulkEnableDisableSectionMessages as messages } from "../messages";
 import { useGiftCardList } from "../providers/GiftCardListProvider/GiftCardListProvider";
+import { GIFT_CARD_LIST_QUERY } from "../queries";
 
 export const GiftCardListBulkActions = () => {
   const intl = useIntl();

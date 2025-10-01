@@ -6,11 +6,12 @@ import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { ListProps } from "@dashboard/types";
 import { Box, List, Skeleton, Text } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
-import { messages } from "./messages";
-import { appsAreLoading, hasEmptyAppList } from "./utils";
+
 import { EmptyInstalledList } from "../../../extensions/components/EmptyListState/EmptyInstalledList";
 import { InstalledAppListRow } from "../InstalledAppListRow/InstalledAppListRow";
 import { NotInstalledAppListRow } from "../NotInstalledAppListRow/NotInstalledAppListRow";
+import { messages } from "./messages";
+import { appsAreLoading, hasEmptyAppList } from "./utils";
 
 interface InstalledAppListProps extends ListProps {
   appList?: InstalledApp[];

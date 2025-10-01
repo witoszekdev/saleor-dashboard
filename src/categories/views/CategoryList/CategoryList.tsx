@@ -23,6 +23,9 @@ import isEqual from "lodash/isEqual";
 import { useCallback, useMemo } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
+import { DeleteFilterTabDialog } from "../../../components/DeleteFilterTabDialog/DeleteFilterTabDialog";
+import { SaveFilterTabDialog } from "../../../components/SaveFilterTabDialog/SaveFilterTabDialog";
+import { useFilterPresets } from "../../../hooks/useFilterPresets/useFilterPresets";
 import { CategoryListPage } from "../../components/CategoryListPage/CategoryListPage";
 import {
   categoryListUrl,
@@ -32,9 +35,6 @@ import {
 } from "../../urls";
 import { getActiveFilters, getFilterVariables, storageUtils } from "./filter";
 import { getSortQueryVariables } from "./sort";
-import { DeleteFilterTabDialog } from "../../../components/DeleteFilterTabDialog/DeleteFilterTabDialog";
-import { SaveFilterTabDialog } from "../../../components/SaveFilterTabDialog/SaveFilterTabDialog";
-import { useFilterPresets } from "../../../hooks/useFilterPresets/useFilterPresets";
 
 interface CategoryListProps {
   params: CategoryListUrlQueryParams;

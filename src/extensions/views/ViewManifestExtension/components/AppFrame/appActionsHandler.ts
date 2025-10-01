@@ -14,10 +14,10 @@ import {
 import { useIntl } from "react-intl";
 import urlJoin from "url-join";
 
-import { createAppsDebug } from "../../utils/apps-debug";
-import { usePostToExtension } from "./usePostToExtension";
 import { useNotifier } from "../../../../../hooks/useNotifier/useNotifier";
+import { createAppsDebug } from "../../utils/apps-debug";
 import { useExternalApp } from "../ExternalAppContext/ExternalAppContext";
+import { usePostToExtension } from "./usePostToExtension";
 
 const debug = createAppsDebug("appActionsHandler");
 const createResponseStatus = (actionId: string, ok: boolean): DispatchResponseEvent => ({

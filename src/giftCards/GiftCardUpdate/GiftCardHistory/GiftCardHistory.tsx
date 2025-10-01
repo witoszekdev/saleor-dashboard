@@ -5,12 +5,12 @@ import { GiftCardEventsEnum, useGiftCardAddNoteMutation } from "@dashboard/graph
 import { HistoryComponentLoader } from "@dashboard/orders/components/OrderHistory/HistoryComponentLoader";
 import { FormattedMessage, useIntl } from "react-intl";
 
+import { Form } from "../../../components/Form/Form";
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
+import { useGiftCardDetails } from "../providers/GiftCardDetailsProvider/GiftCardDetailsProvider";
 import { GIFT_CARD_DETAILS_QUERY } from "../queries";
 import { GiftCardTimelineEvent } from "./GiftCardTimelineEvent";
 import { giftCardHistoryMessages as messages } from "./messages";
-import { Form } from "../../../components/Form/Form";
-import { useGiftCardDetails } from "../providers/GiftCardDetailsProvider/GiftCardDetailsProvider";
-import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
 
 interface FormData {
   message: string;

@@ -15,10 +15,13 @@ import { createSingleAutocompleteSelectHandler } from "@dashboard/utils/handlers
 import { mapCountriesToChoices } from "@dashboard/utils/maps";
 import { FormattedMessage } from "react-intl";
 
-import { AddressTypeInput } from "../../types";
-import { ConfirmButton, ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import {
+  ConfirmButton,
+  ConfirmButtonTransitionState,
+} from "../../../components/ConfirmButton/ConfirmButton";
 import { Form } from "../../../components/Form/Form";
 import { useModalDialogErrors } from "../../../hooks/useModalDialogErrors/useModalDialogErrors";
+import { AddressTypeInput } from "../../types";
 
 interface CustomerAddressDialogProps {
   address: AddressFragment;

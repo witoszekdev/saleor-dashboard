@@ -1,8 +1,9 @@
 // @ts-strict-ignore
 import { TableRowProps } from "@material-ui/core";
 import { SortableElement, SortableElementProps } from "react-sortable-hoc";
-import { SortableHandle } from "./SortableHandle";
+
 import { TableRowLink, TableRowLinkProps } from "../TableRowLink/TableRowLink";
+import { SortableHandle } from "./SortableHandle";
 
 type SortableTableRowTypesUnion = "link" | "row";
 

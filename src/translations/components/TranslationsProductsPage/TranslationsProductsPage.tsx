@@ -20,8 +20,8 @@ import { mapAttributeValuesToTranslationFields } from "@dashboard/translations/u
 import { Box } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
 
-import { ProductContextSwitcher } from "../ProductContextSwitcher/ProductContextSwitcher";
 import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
+import { ProductContextSwitcher } from "../ProductContextSwitcher/ProductContextSwitcher";
 import { TranslationFields } from "../TranslationFields/TranslationFields";
 
 interface TranslationsProductsPageProps extends TranslationsEntitiesPageProps {

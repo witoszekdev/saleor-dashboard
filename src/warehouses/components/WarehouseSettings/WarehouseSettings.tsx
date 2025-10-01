@@ -14,9 +14,10 @@ import { makeStyles } from "@saleor/macaw-ui";
 import { Skeleton, Text } from "@saleor/macaw-ui-next";
 import { ReactNode, useEffect } from "react";
 import { FormattedMessage } from "react-intl";
-import { messages } from "./messages";
+
 import { NewRadioGroupField as RadioGroupField } from "../../../components/RadioGroupField/RadioGroupField";
 import { WarehouseDetailsPageFormData } from "../WarehouseDetailsPage/WarehouseDetailsPage";
+import { messages } from "./messages";
 
 const WarehouseRadioSubtitle = ({ children }: { children: ReactNode }) => (
   <Text size={2} fontWeight="light" color="default2" display="block">

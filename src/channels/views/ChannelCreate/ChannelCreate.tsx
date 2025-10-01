@@ -15,12 +15,13 @@ import { commonMessages } from "@dashboard/intl";
 import { getChannelsErrorMessage } from "@dashboard/utils/errors/channels";
 import currencyCodes from "currency-codes";
 import { useIntl } from "react-intl";
+
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
+import { ChannelDetailsPage } from "../../pages/ChannelDetailsPage/ChannelDetailsPage";
 import { channelPath } from "../../urls";
 import { useShippingZones } from "../ChannelDetails/useShippingZones";
 import { useWarehouses } from "../ChannelDetails/useWarehouses";
 import { useSaveChannel } from "./useSaveChannel";
-import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
-import { ChannelDetailsPage } from "../../pages/ChannelDetailsPage/ChannelDetailsPage";
 
 const ChannelCreateView = () => {
   const navigate = useNavigator();

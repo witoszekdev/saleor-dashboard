@@ -28,15 +28,16 @@ import {
 import { Box, Skeleton } from "@saleor/macaw-ui-next";
 import { Fragment, useEffect, useMemo, useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
-import { TaxClassesForm } from "./form";
-import { useStyles } from "./styles";
+
 import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
 import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
 import { Metadata } from "../../../components/Metadata/Metadata";
 import { VerticalSpacer } from "../../../components/VerticalSpacer/VerticalSpacer";
-import { TaxPageTitle } from "../../components/TaxPageTitle/TaxPageTitle";
 import { TaxInput } from "../../components/TaxInput/TaxInput";
+import { TaxPageTitle } from "../../components/TaxPageTitle/TaxPageTitle";
 import { TaxPagination } from "../../components/TaxPagination/TaxPagination";
+import { TaxClassesForm } from "./form";
+import { useStyles } from "./styles";
 import { TaxClassesMenu } from "./TaxClassesMenu/TaxClassesMenu";
 
 interface TaxClassesPageProps {

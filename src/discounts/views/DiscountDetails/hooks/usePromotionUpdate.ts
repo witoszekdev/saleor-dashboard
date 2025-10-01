@@ -5,6 +5,7 @@ import {
 } from "@dashboard/graphql";
 import { commonMessages } from "@dashboard/intl";
 import { useIntl } from "react-intl";
+
 import { useNotifier } from "../../../../hooks/useNotifier/useNotifier";
 
 export const usePromotionUpdate = (id: string) => {

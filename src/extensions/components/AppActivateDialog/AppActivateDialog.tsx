@@ -4,8 +4,8 @@ import { getStringOrPlaceholder } from "@dashboard/misc";
 import { Box } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
 
-import { Messages as msgs } from "./messages";
 import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import { Messages as msgs } from "./messages";
 
 interface AppActivateDialogProps {
   confirmButtonState: ConfirmButtonTransitionState;
