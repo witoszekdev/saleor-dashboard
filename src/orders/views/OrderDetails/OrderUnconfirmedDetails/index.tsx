@@ -18,12 +18,7 @@ import {
   useWarehouseListQuery,
 } from "@dashboard/graphql";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-import { OrderCannotCancelOrderDialog } from "@dashboard/orders/components/OrderCannotCancelOrderDialog";
 import { OrderCustomerAddressesEditDialogOutput } from "@dashboard/orders/components/OrderCustomerAddressesEditDialog/types";
-import { OrderFulfillmentApproveDialog } from "@dashboard/orders/components/OrderFulfillmentApproveDialog";
-import { OrderInvoiceEmailSendDialog } from "@dashboard/orders/components/OrderInvoiceEmailSendDialog";
-import { OrderManualTransactionDialog } from "@dashboard/orders/components/OrderManualTransactionDialog";
-import { OrderMetadataDialog } from "@dashboard/orders/components/OrderMetadataDialog";
 import { OrderRefundDialog } from "@dashboard/orders/components/OrderRefundDialog/OrderRefundDialog";
 import { OrderTransactionActionDialog } from "@dashboard/orders/components/OrderTransactionActionDialog/OrderTransactionActionDialog";
 import { isAnyAddressEditModalOpen } from "@dashboard/orders/utils/data";
@@ -45,14 +40,7 @@ import {
 import { productUrl } from "../../../../products/urls";
 import { OrderAddressFields } from "../../../components/OrderAddressFields/OrderAddressFields";
 import { OrderCancelDialog } from "../../../components/OrderCancelDialog";
-import { OrderDetailsPage } from "../../../components/OrderDetailsPage";
-import { OrderFulfillmentCancelDialog } from "../../../components/OrderFulfillmentCancelDialog";
-import { OrderFulfillmentTrackingDialog } from "../../../components/OrderFulfillmentTrackingDialog";
 import { OrderMarkAsPaidDialog } from "../../../components/OrderMarkAsPaidDialog/OrderMarkAsPaidDialog";
-import { OrderPaymentDialog } from "../../../components/OrderPaymentDialog";
-import { OrderPaymentVoidDialog } from "../../../components/OrderPaymentVoidDialog";
-import { OrderProductAddDialog } from "../../../components/OrderProductAddDialog";
-import { OrderShippingMethodEditDialog } from "../../../components/OrderShippingMethodEditDialog";
 import {
   orderFulfillUrl,
   orderManualTransactionRefundUrl,
@@ -62,6 +50,18 @@ import {
   orderUrl,
   OrderUrlQueryParams,
 } from "../../../urls";
+import { OrderCannotCancelOrderDialog } from "../../../components/OrderCannotCancelOrderDialog/OrderCannotCancelOrderDialog";
+import { OrderFulfillmentApproveDialog } from "../../../components/OrderFulfillmentApproveDialog/OrderFulfillmentApproveDialog";
+import { OrderInvoiceEmailSendDialog } from "../../../components/OrderInvoiceEmailSendDialog/OrderInvoiceEmailSendDialog";
+import { OrderManualTransactionDialog } from "../../../components/OrderManualTransactionDialog/OrderManualTransactionDialog";
+import { OrderMetadataDialog } from "../../../components/OrderMetadataDialog/OrderMetadataDialog";
+import { OrderDetailsPage } from "../../../components/OrderDetailsPage/OrderDetailsPage";
+import { OrderFulfillmentCancelDialog } from "../../../components/OrderFulfillmentCancelDialog/OrderFulfillmentCancelDialog";
+import { OrderFulfillmentTrackingDialog } from "../../../components/OrderFulfillmentTrackingDialog/OrderFulfillmentTrackingDialog";
+import { OrderPaymentDialog } from "../../../components/OrderPaymentDialog/OrderPaymentDialog";
+import { OrderPaymentVoidDialog } from "../../../components/OrderPaymentVoidDialog/OrderPaymentVoidDialog";
+import { OrderProductAddDialog } from "../../../components/OrderProductAddDialog/OrderProductAddDialog";
+import { OrderShippingMethodEditDialog } from "../../../components/OrderShippingMethodEditDialog/OrderShippingMethodEditDialog";
 
 interface OrderUnconfirmedDetailsProps {
   id: string;

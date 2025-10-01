@@ -1,19 +1,17 @@
-import { FilterElement } from "../FilterElement";
-import {
-  AttributeQueryVarsBuilder,
-  AttributeTypeQueryVarsBuilder,
-  CollectionPublishedQueryVarsBuilder,
-  CustomerNumberOfOrdersQueryVarsBuilder,
-  DefaultQueryVarsBuilder,
-  MetadataFilterQueryVarsBuilder,
-  ProductTypeQueryVarsBuilder,
-  StaffMemberStatusQueryVarsBuilder,
-  StaticBooleanQueryVarsBuilder,
-  StaticQueryVarsBuilder,
-  VoucherStatusQueryVarsBuilder,
-  VoucherTimesUsedQueryVarsBuilder,
-} from "./queryVarsBuilders";
 import { FilterQuery, QueryVarsBuilder } from "./queryVarsBuilders/types";
+import { FilterElement } from "../FilterElement/FilterElement";
+import { AttributeQueryVarsBuilder } from "./queryVarsBuilders/AttributeQueryVarsBuilder";
+import { AttributeTypeQueryVarsBuilder } from "./queryVarsBuilders/AttributeTypeQueryVarsBuilder";
+import { CollectionPublishedQueryVarsBuilder } from "./queryVarsBuilders/CollectionPublishedQueryVarsBuilder";
+import { CustomerNumberOfOrdersQueryVarsBuilder } from "./queryVarsBuilders/CustomerNumberOfOrdersQueryVarsBuilder";
+import { DefaultQueryVarsBuilder } from "./queryVarsBuilders/DefaultQueryVarsBuilder";
+import { MetadataFilterQueryVarsBuilder } from "./queryVarsBuilders/MetadataFilterQueryVarsBuilder";
+import { ProductTypeQueryVarsBuilder } from "./queryVarsBuilders/ProductTypeQueryVarsBuilder";
+import { StaffMemberStatusQueryVarsBuilder } from "./queryVarsBuilders/StaffMemberStatusQueryVarsBuilder";
+import { StaticBooleanQueryVarsBuilder } from "./queryVarsBuilders/StaticBooleanQueryVarsBuilder";
+import { StaticQueryVarsBuilder } from "./queryVarsBuilders/StaticQueryVarsBuilder";
+import { VoucherStatusQueryVarsBuilder } from "./queryVarsBuilders/VoucherStatusQueryVarsBuilder";
+import { VoucherTimesUsedQueryVarsBuilder } from "./queryVarsBuilders/VoucherTimesUsedQueryVarsBuilder";
 
 export class FilterQueryVarsBuilderResolver<TQuery extends FilterQuery> {
   private queryVarsBuilders: Array<QueryVarsBuilder<TQuery>>;

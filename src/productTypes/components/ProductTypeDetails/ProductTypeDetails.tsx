@@ -1,6 +1,5 @@
 // @ts-strict-ignore
 import { DashboardCard } from "@dashboard/components/Card";
-import { NewRadioGroupField as RadioGroupField } from "@dashboard/components/RadioGroupField";
 import { ProductTypeKindEnum } from "@dashboard/graphql";
 import { commonMessages } from "@dashboard/intl";
 import { UserError } from "@dashboard/types";
@@ -10,6 +9,7 @@ import * as React from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
 import { messages } from "./messages";
+import { NewRadioGroupField as RadioGroupField } from "../../../components/RadioGroupField/RadioGroupField";
 
 interface ProductTypeDetailsProps {
   data?: {

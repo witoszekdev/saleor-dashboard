@@ -19,7 +19,6 @@ import {
 import { ChannelData, ChannelPriceArgs } from "@dashboard/channels/utils";
 import { AttributeInput, AttributeInputData } from "@dashboard/components/Attributes";
 import { useExitFormDialog } from "@dashboard/components/Form/useExitFormDialog";
-import { MetadataFormData } from "@dashboard/components/Metadata";
 import {
   ProductErrorWithAttributesFragment,
   ProductTypeQuery,
@@ -72,8 +71,8 @@ import { OutputData } from "@editorjs/editorjs";
 import { Option } from "@saleor/macaw-ui-next";
 import { Dispatch, ReactNode, SetStateAction, useEffect, useState } from "react";
 import { useIntl } from "react-intl";
-
-import { ProductStockFormsetData, ProductStockInput } from "../ProductStocks";
+import { MetadataFormData } from "../../../components/Metadata/types";
+import { ProductStockFormsetData, ProductStockInput } from "../ProductStocks/ProductStocks";
 
 export interface ProductCreateFormData extends MetadataFormData {
   category: string;

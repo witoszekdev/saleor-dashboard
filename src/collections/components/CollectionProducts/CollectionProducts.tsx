@@ -22,7 +22,6 @@ import { useBulkActions } from "@dashboard/hooks/useBulkActions";
 import { useListSettings } from "@dashboard/hooks/useListSettings";
 import { useLocalPaginationState, useLocalPaginator } from "@dashboard/hooks/useLocalPaginator";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { PaginatorContext } from "@dashboard/hooks/usePaginator";
 import { UseProductSearch as useProductSearch } from "@dashboard/searches/useProductSearch";
 import { Container } from "@dashboard/types";
@@ -36,6 +35,7 @@ import { Pagination } from "./Pagination";
 import { ProductsTable } from "./ProductsTable";
 import { ProductTableSkeleton } from "./ProductTableSkeleton";
 import { useCollectionId } from "./useCollectionId";
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
 
 interface CollectionProductsProps {
   collection: CollectionDetailsQuery["collection"];

@@ -1,11 +1,10 @@
 import { useCondtionTypes } from "@dashboard/discounts/components/DiscountRules/componenets/RuleForm/components/RuleConditionType/useConditionTypes";
-import { useDiscountRulesContext } from "@dashboard/discounts/components/DiscountRules/context";
-import { Rule } from "@dashboard/discounts/models";
 import { Box, Input, RangeInput } from "@saleor/macaw-ui-next";
 import { useController, useFormContext } from "react-hook-form";
 import { FormattedMessage } from "react-intl";
-
-import { RuleConditionDynamicSelect } from "../RuleConditionDynamicSelect";
+import { useDiscountRulesContext } from "../../../../context/consumer";
+import { Rule } from "../../../../../../models/Rule";
+import { RuleConditionDynamicSelect } from "../RuleConditionDynamicSelect/RuleConditionDynamicSelect";
 
 interface RuleConditionValuesProps {
   conditionIndex: number;

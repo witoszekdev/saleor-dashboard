@@ -1,5 +1,4 @@
 import { DashboardCard } from "@dashboard/components/Card";
-import { ListPageLayout } from "@dashboard/components/Layouts";
 import { useGlobalSearchQuery } from "@dashboard/graphql";
 import { sectionNames } from "@dashboard/intl";
 import { useEffect } from "react";
@@ -13,6 +12,7 @@ import { SearchHistory } from "./SearchHistory";
 import { useHistoryCriteria } from "./useHistoryCriteria";
 import { useInclusionVariables } from "./useInclusionVariables";
 import { useSearchCriteria } from "./useSearchCriteria";
+import { ListPageLayout } from "../components/Layouts/List/index";
 
 const Component = () => {
   const intl = useIntl();

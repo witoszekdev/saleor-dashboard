@@ -1,12 +1,12 @@
 // @ts-strict-ignore
 import { useOrderSettingsQuery, useOrderSettingsUpdateMutation } from "@dashboard/graphql";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { commonMessages } from "@dashboard/intl";
 import { extractMutationErrors, getMutationState } from "@dashboard/misc";
-import { OrderSettingsPage } from "@dashboard/orders/components/OrderSettingsPage";
 import { useIntl } from "react-intl";
 
 import { OrderSettingsFormData } from "../components/OrderSettingsPage/types";
+import { useNotifier } from "../../hooks/useNotifier/useNotifier";
+import { OrderSettingsPage } from "../components/OrderSettingsPage/OrderSettingsPage";
 
 const OrderSettings = () => {
   const intl = useIntl();

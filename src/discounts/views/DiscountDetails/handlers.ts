@@ -1,5 +1,4 @@
 import { FetchResult } from "@apollo/client";
-import { Rule, toAPI } from "@dashboard/discounts/models";
 import {
   PromotionDetailsFragment,
   PromotionRuleCreateErrorFragment,
@@ -16,6 +15,8 @@ import { CommonError } from "@dashboard/utils/errors/common";
 import difference from "lodash/difference";
 
 import { DiscoutFormData } from "../../types";
+import { Rule } from "../../models/Rule";
+import { toAPI } from "../../models/transformRule";
 
 export const createUpdateHandler = (
   promotion: PromotionDetailsFragment | undefined | null,

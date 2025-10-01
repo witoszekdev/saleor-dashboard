@@ -7,11 +7,8 @@ import { collectionListPath, CollectionUrlQueryParams } from "@dashboard/collect
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
 import { CardSpacer } from "@dashboard/components/CardSpacer";
 import { ChannelsAvailability as ChannelsAvailabilityCard } from "@dashboard/components/ChannelsAvailabilityCard";
-import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import { DetailPageLayout } from "@dashboard/components/Layouts";
 import { Metadata } from "@dashboard/components/Metadata/Metadata";
 import { Savebar } from "@dashboard/components/Savebar";
-import { SeoForm } from "@dashboard/components/SeoForm";
 import { extensionMountPoints } from "@dashboard/extensions/extensionMountPoints";
 import { getExtensionsItemsForCollectionDetails } from "@dashboard/extensions/getExtensionsItems";
 import { useExtensions } from "@dashboard/extensions/hooks/useExtensions";
@@ -35,6 +32,9 @@ import { CollectionDetails } from "../CollectionDetails/CollectionDetails";
 import { CollectionImage } from "../CollectionImage/CollectionImage";
 import { CollectionProducts } from "../CollectionProducts/CollectionProducts";
 import { CollectionUpdateData, CollectionUpdateForm } from "./form";
+import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
+import { SeoForm } from "../../../components/SeoForm/SeoForm";
 
 interface CollectionDetailsPageProps extends PageListProps, ChannelProps {
   channelsCount: number;

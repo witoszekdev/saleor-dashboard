@@ -1,5 +1,4 @@
 // @ts-strict-ignore
-import { MetadataIdSchema } from "@dashboard/components/Metadata";
 import { OrderDetailsFragment } from "@dashboard/graphql";
 import { ChangeEvent } from "@dashboard/hooks/useForm";
 import { mapMetadataItemToInput } from "@dashboard/utils/maps";
@@ -9,6 +8,7 @@ import {
   getUnfulfilledLines,
   getWaitingFulfillments,
 } from "../OrderReturnPage/utils";
+import { MetadataIdSchema } from "../../../components/Metadata/types";
 
 export const hasAnyItemsReplaceable = (order?: OrderDetailsFragment) => {
   if (!order) {

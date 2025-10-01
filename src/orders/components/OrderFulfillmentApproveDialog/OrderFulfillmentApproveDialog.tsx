@@ -1,7 +1,5 @@
 import { Button } from "@dashboard/components/Button";
-import { ConfirmButton, ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import { ControlledCheckbox } from "@dashboard/components/ControlledCheckbox";
-import { Form } from "@dashboard/components/Form";
 import { FormSpacer } from "@dashboard/components/FormSpacer";
 import { DashboardModal } from "@dashboard/components/Modal";
 import { OrderErrorFragment } from "@dashboard/graphql";
@@ -11,6 +9,8 @@ import { Box, Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 
 import { messages } from "./messages";
+import { ConfirmButton, ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import { Form } from "../../../components/Form/Form";
 
 interface OrderFulfillmentAcceptDialogFormData {
   notifyCustomer: boolean;

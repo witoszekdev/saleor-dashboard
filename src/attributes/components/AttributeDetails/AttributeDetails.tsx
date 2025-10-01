@@ -1,7 +1,6 @@
 import { NumericUnits } from "@dashboard/attributes/components/AttributeDetails/NumericUnits";
 import { DashboardCard } from "@dashboard/components/Card";
 import { FormSpacer } from "@dashboard/components/FormSpacer";
-import { Select } from "@dashboard/components/Select";
 import {
   AttributeEntityTypeEnum,
   AttributeErrorFragment,
@@ -17,8 +16,9 @@ import { defineMessages, useIntl } from "react-intl";
 import { slugify } from "slugify";
 
 import { getAttributeSlugErrorMessage } from "../../errors";
-import { AttributePageFormData } from "../AttributePage";
 import { inputTypeMessages, messages } from "./messages";
+import { Select } from "../../../components/Select/Select";
+import { AttributePageFormData } from "../AttributePage/AttributePage";
 
 const entityTypeMessages = defineMessages({
   page: {

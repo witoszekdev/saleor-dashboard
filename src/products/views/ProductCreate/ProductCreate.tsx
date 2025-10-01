@@ -21,13 +21,8 @@ import {
 import { getSearchFetchMoreProps } from "@dashboard/hooks/makeTopLevelSearch/utils";
 import { useChannels } from "@dashboard/hooks/useChannels";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { useShop } from "@dashboard/hooks/useShop";
 import { getMutationErrors } from "@dashboard/misc";
-import {
-  ProductCreateData,
-  ProductCreatePage,
-} from "@dashboard/products/components/ProductCreatePage";
 import {
   productAddUrl,
   ProductCreateUrlDialog,
@@ -49,12 +44,15 @@ import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActi
 import { createMetadataCreateHandler } from "@dashboard/utils/handlers/metadataCreateHandler";
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { warehouseAddPath } from "@dashboard/warehouses/urls";
-import { useOnboarding } from "@dashboard/welcomePage/WelcomePageOnboarding/onboardingContext";
 import { useEffect, useState } from "react";
 import { useIntl } from "react-intl";
 
 import { PRODUCT_CREATE_FORM_ID } from "./consts";
 import { createHandler } from "./handlers";
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
+import { ProductCreateData } from "../../components/ProductCreatePage/form";
+import { ProductCreatePage } from "../../components/ProductCreatePage/ProductCreatePage";
+import { useOnboarding } from "../../../welcomePage/WelcomePageOnboarding/onboardingContext/OnboardingContext";
 
 interface ProductCreateProps {
   params: ProductCreateUrlQueryParams;

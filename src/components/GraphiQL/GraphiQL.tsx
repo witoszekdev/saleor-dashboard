@@ -1,5 +1,4 @@
 // @ts-strict-ignore
-import { WebhookFormData } from "@dashboard/custom-apps/components/WebhookDetailsPage";
 import {
   CopyIcon,
   GraphiQLProvider,
@@ -24,10 +23,10 @@ import { clsx } from "clsx";
 import { ComponentType, PropsWithChildren, ReactNode, useState } from "react";
 import * as React from "react";
 import { useIntl } from "react-intl";
-
-import { DryRun } from "../DryRun";
 import { messages } from "./messages";
 import { useDashboardTheme, useEditorStyles, useGraphiQLThemeSwitcher, useStyles } from "./styles";
+import { WebhookFormData } from "../../custom-apps/components/WebhookDetailsPage/WebhookDetailsPage";
+import { DryRun } from "../DryRun/DryRun";
 
 interface GraphiQLToolbarConfig {
   /**

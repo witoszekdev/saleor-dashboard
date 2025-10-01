@@ -1,4 +1,3 @@
-import { NotFoundPage } from "@dashboard/components/NotFoundPage";
 import { WindowTitle } from "@dashboard/components/WindowTitle";
 import {
   CountryCode,
@@ -7,7 +6,6 @@ import {
   useWarehouseUpdateMutation,
 } from "@dashboard/graphql";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { useShop } from "@dashboard/hooks/useShop";
 import { commonMessages } from "@dashboard/intl";
 import {
@@ -17,17 +15,16 @@ import {
   getStringOrPlaceholder,
 } from "@dashboard/misc";
 import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
-import { WarehouseDeleteDialog } from "@dashboard/warehouses/components/WarehouseDeleteDialog";
-import {
-  WarehouseDetailsPage,
-  WarehouseDetailsPageFormData,
-} from "@dashboard/warehouses/components/WarehouseDetailsPage";
 import {
   warehouseListUrl,
   warehouseUrl,
   WarehouseUrlQueryParams,
 } from "@dashboard/warehouses/urls";
 import { useIntl } from "react-intl";
+import { NotFoundPage } from "../../../components/NotFoundPage/NotFoundPage";
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
+import { WarehouseDeleteDialog } from "../../components/WarehouseDeleteDialog/WarehouseDeleteDialog";
+import { WarehouseDetailsPage, WarehouseDetailsPageFormData } from "../../components/WarehouseDetailsPage/WarehouseDetailsPage";
 
 interface WarehouseDetailsProps {
   id: string;

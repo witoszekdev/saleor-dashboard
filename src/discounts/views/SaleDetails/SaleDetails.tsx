@@ -14,11 +14,6 @@ import { Button } from "@dashboard/components/Button";
 import { ChannelsAvailabilityDialog } from "@dashboard/components/ChannelsAvailabilityDialog";
 import { WindowTitle } from "@dashboard/components/WindowTitle";
 import { DEFAULT_INITIAL_SEARCH_DATA, PAGINATE_BY } from "@dashboard/config";
-import {
-  SaleDetailsPage,
-  SaleDetailsPageTab,
-  SaleTabItemsCount,
-} from "@dashboard/discounts/components/SaleDetailsPage";
 import { saleListUrl, saleUrl, SaleUrlDialog, SaleUrlQueryParams } from "@dashboard/discounts/urls";
 import {
   getFilteredCategories,
@@ -44,7 +39,6 @@ import {
 } from "@dashboard/hooks/useLocalPaginator";
 import { useLocalStorage } from "@dashboard/hooks/useLocalStorage";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { PaginatorContext } from "@dashboard/hooks/usePaginator";
 import { commonMessages } from "@dashboard/intl";
 import { maybe } from "@dashboard/misc";
@@ -59,6 +53,8 @@ import { FormattedMessage, useIntl } from "react-intl";
 import { createUpdateHandler } from "./handlers";
 import { messages } from "./messages";
 import { SALE_UPDATE_FORM_ID } from "./types";
+import { SaleDetailsPage, SaleDetailsPageTab, SaleTabItemsCount } from "../../components/SaleDetailsPage/SaleDetailsPage";
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
 
 interface SaleDetailsProps {
   id: string;

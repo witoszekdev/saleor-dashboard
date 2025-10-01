@@ -3,8 +3,6 @@ import { AssignAttributeDialog } from "@dashboard/components/AssignAttributeDial
 import { AttributeUnassignDialog } from "@dashboard/components/AttributeUnassignDialog";
 import { BulkAttributeUnassignDialog } from "@dashboard/components/BulkAttributeUnassignDialog";
 import { Button } from "@dashboard/components/Button";
-import { NotFoundPage } from "@dashboard/components/NotFoundPage";
-import { TypeDeleteWarningDialog } from "@dashboard/components/TypeDeleteWarningDialog";
 import { WindowTitle } from "@dashboard/components/WindowTitle";
 import { DEFAULT_INITIAL_SEARCH_DATA } from "@dashboard/config";
 import {
@@ -22,10 +20,8 @@ import {
 import { useBulkActions } from "@dashboard/hooks/useBulkActions";
 import { useListSelectedItems } from "@dashboard/hooks/useListSelectedItems";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { commonMessages } from "@dashboard/intl";
 import { getStringOrPlaceholder, maybe } from "@dashboard/misc";
-import { useProductTypeDelete } from "@dashboard/productTypes/hooks/useProductTypeDelete";
 import { useProductTypeOperations } from "@dashboard/productTypes/hooks/useProductTypeOperations";
 import { UseAvailableProductAttributeSearch as useAvailableProductAttributeSearch } from "@dashboard/searches/useAvailableProductAttributeSearch";
 import { useTaxClassFetchMore } from "@dashboard/taxes/utils/useTaxClassFetchMore";
@@ -34,9 +30,12 @@ import { createMetadataUpdateHandler } from "@dashboard/utils/handlers/metadataU
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
-
-import { ProductTypeDetailsPage, ProductTypeForm } from "../../components/ProductTypeDetailsPage";
 import { productTypeListUrl, productTypeUrl, ProductTypeUrlQueryParams } from "../../urls";
+import { NotFoundPage } from "../../../components/NotFoundPage/NotFoundPage";
+import { TypeDeleteWarningDialog } from "../../../components/TypeDeleteWarningDialog/TypeDeleteWarningDialog";
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
+import { useProductTypeDelete } from "../../hooks/useProductTypeDelete/useProductTypeDelete";
+import { ProductTypeDetailsPage, ProductTypeForm } from "../../components/ProductTypeDetailsPage/ProductTypeDetailsPage";
 
 interface ProductTypeUpdateProps {
   id: string;

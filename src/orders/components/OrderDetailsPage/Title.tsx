@@ -1,10 +1,10 @@
 import { DateTime } from "@dashboard/components/Date";
-import { Pill } from "@dashboard/components/Pill";
 import { OrderDetailsFragment } from "@dashboard/graphql";
 import { transformOrderStatus } from "@dashboard/misc";
 import { makeStyles } from "@saleor/macaw-ui";
 import { Box, Skeleton, Text } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
+import { Pill } from "../../../components/Pill/Pill";
 
 interface TitleProps {
   order?: OrderDetailsFragment;

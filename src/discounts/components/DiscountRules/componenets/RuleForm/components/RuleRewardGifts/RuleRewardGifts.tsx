@@ -1,7 +1,5 @@
 import { Multiselect } from "@dashboard/components/Combobox";
 import { DEFAULT_INITIAL_SEARCH_DATA } from "@dashboard/config";
-import { useDiscountRulesContext } from "@dashboard/discounts/components/DiscountRules/context";
-import { Rule } from "@dashboard/discounts/models";
 import { formatGiftsLabels } from "@dashboard/discounts/views/DiscountDetails/hooks/useFetchGiftLables";
 import { CommonSearchOpts } from "@dashboard/hooks/makeTopLevelSearch/types";
 import { getSearchFetchMoreProps } from "@dashboard/hooks/makeTopLevelSearch/utils";
@@ -9,6 +7,8 @@ import { useVariantWithProductDataSearch } from "@dashboard/searches/useVariantS
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { useController, useFormContext } from "react-hook-form";
 import { FormattedMessage, useIntl } from "react-intl";
+import { useDiscountRulesContext } from "../../../../context/consumer";
+import { Rule } from "../../../../../../models/Rule";
 
 export const RuleRewardGifts = () => {
   const intl = useIntl();

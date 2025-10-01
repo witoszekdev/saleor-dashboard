@@ -1,5 +1,5 @@
-import { Rule } from "@dashboard/discounts/models";
 import { Chip } from "@saleor/macaw-ui-next";
+import { Rule } from "../../../../../../../../models/Rule";
 
 interface RuleChannelChipsProps {
   channel: NonNullable<Rule["channel"]>;

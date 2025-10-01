@@ -9,20 +9,19 @@ import {
   useUpdateCustomerAddressMutation,
 } from "@dashboard/graphql";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { useShop } from "@dashboard/hooks/useShop";
 import { commonMessages } from "@dashboard/intl";
 import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
 import { Box } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
-
-import { CustomerAddressDialog } from "../components/CustomerAddressDialog";
-import { CustomerAddressListPage } from "../components/CustomerAddressListPage";
 import {
   customerAddressesUrl,
   CustomerAddressesUrlDialog,
   CustomerAddressesUrlQueryParams,
 } from "../urls";
+import { useNotifier } from "../../hooks/useNotifier/useNotifier";
+import { CustomerAddressDialog } from "../components/CustomerAddressDialog/CustomerAddressDialog";
+import { CustomerAddressListPage } from "../components/CustomerAddressListPage/CustomerAddressListPage";
 
 interface CustomerAddressesProps {
   id: string;

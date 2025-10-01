@@ -4,7 +4,6 @@ import { useAppChannel } from "@dashboard/components/AppLayout/AppChannelContext
 import { ChannelsAvailabilityDialog } from "@dashboard/components/ChannelsAvailabilityDialog";
 import { WindowTitle } from "@dashboard/components/WindowTitle";
 import { DEFAULT_INITIAL_SEARCH_DATA } from "@dashboard/config";
-import { VoucherDetailsPageFormData } from "@dashboard/discounts/components/VoucherDetailsPage";
 import {
   useUpdateMetadataMutation,
   useUpdatePrivateMetadataMutation,
@@ -14,7 +13,6 @@ import {
 import { useBulkActions } from "@dashboard/hooks/useBulkActions";
 import { useChannels } from "@dashboard/hooks/useChannels";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { useShop } from "@dashboard/hooks/useShop";
 import { sectionNames } from "@dashboard/intl";
 import { useCategoryWithTotalProductsSearch } from "@dashboard/searches/useCategorySearch";
@@ -23,8 +21,6 @@ import { UseProductSearch as useProductSearch } from "@dashboard/searches/usePro
 import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
 import { createMetadataCreateHandler } from "@dashboard/utils/handlers/metadataCreateHandler";
 import { useIntl } from "react-intl";
-
-import { VoucherCreatePage } from "../../components/VoucherCreatePage";
 import {
   voucherAddUrl,
   VoucherCreateUrlQueryParams,
@@ -33,6 +29,9 @@ import {
 } from "../../urls";
 import { createHandler } from "./handlers";
 import { VOUCHER_CREATE_FORM_ID } from "./types";
+import { VoucherDetailsPageFormData } from "../../components/VoucherDetailsPage/VoucherDetailsPage";
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
+import { VoucherCreatePage } from "../../components/VoucherCreatePage/VoucherCreatePage";
 
 interface VoucherCreateProps {
   params: VoucherCreateUrlQueryParams;

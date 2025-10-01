@@ -1,8 +1,5 @@
-import { ListFilters } from "@dashboard/components/AppLayout/ListFilters";
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
 import { DashboardCard } from "@dashboard/components/Card";
-import { FilterPresetsSelect } from "@dashboard/components/FilterPresetsSelect";
-import { ListPageLayout } from "@dashboard/components/Layouts";
 import { configurationMenuUrl } from "@dashboard/configuration";
 import { useFlag } from "@dashboard/featureFlags";
 import { ProductTypeFragment } from "@dashboard/graphql";
@@ -16,6 +13,9 @@ import { FormattedMessage, useIntl } from "react-intl";
 
 import { FilterPageProps, ListActions, PageListProps, SortPage } from "../../../types";
 import { createFilterStructure, ProductTypeFilterKeys, ProductTypeListFilterOpts } from "./filters";
+import { ListFilters } from "../../../components/AppLayout/ListFilters/ListFilters";
+import { FilterPresetsSelect } from "../../../components/FilterPresetsSelect/FilterPresetsSelect";
+import { ListPageLayout } from "../../../components/Layouts/List/index";
 
 interface ProductTypeListPageProps
   extends PageListProps,

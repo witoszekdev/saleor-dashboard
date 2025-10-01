@@ -1,5 +1,5 @@
-import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import * as React from "react";
+import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
 
 interface ManualRefundHookProps {
   submitState: ConfirmButtonTransitionState;

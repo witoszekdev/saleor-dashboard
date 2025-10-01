@@ -1,8 +1,8 @@
-import { Rule } from "@dashboard/discounts/models";
 import { PromotionTypeEnum, RewardValueTypeEnum } from "@dashboard/graphql";
 import { act, renderHook } from "@testing-library/react-hooks";
 
 import { useRulesHandlers } from "./useRulesHandlers";
+import { Rule } from "../../../models/Rule";
 
 const rule = {
   name: "Rule 1",

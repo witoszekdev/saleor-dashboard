@@ -1,10 +1,6 @@
 // @ts-strict-ignore
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
 import { CardSpacer } from "@dashboard/components/CardSpacer";
-import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import { Form } from "@dashboard/components/Form";
-import { DetailPageLayout } from "@dashboard/components/Layouts";
-import { Metadata, MetadataFormData } from "@dashboard/components/Metadata";
 import { Savebar } from "@dashboard/components/Savebar";
 import { ProductTypeKindEnum, TaxClassBaseFragment, WeightUnitsEnum } from "@dashboard/graphql";
 import { SubmitPromise } from "@dashboard/hooks/useForm";
@@ -21,6 +17,11 @@ import { useMetadataChangeTrigger } from "@dashboard/utils/metadata/useMetadataC
 import { ProductTypeDetails } from "../ProductTypeDetails/ProductTypeDetails";
 import { ProductTypeShipping } from "../ProductTypeShipping/ProductTypeShipping";
 import { ProductTypeTaxes } from "../ProductTypeTaxes/ProductTypeTaxes";
+import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import { Form } from "../../../components/Form/Form";
+import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
+import { Metadata } from "../../../components/Metadata/Metadata";
+import { MetadataFormData } from "../../../components/Metadata/types";
 
 export interface ProductTypeForm extends MetadataFormData {
   name: string;

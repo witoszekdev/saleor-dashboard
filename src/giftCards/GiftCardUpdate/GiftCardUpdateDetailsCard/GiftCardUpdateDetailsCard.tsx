@@ -1,8 +1,5 @@
 import { DashboardCard } from "@dashboard/components/Card";
 import { CardSpacer } from "@dashboard/components/CardSpacer";
-import { VerticalSpacer } from "@dashboard/components/VerticalSpacer";
-import { GiftCardTagInput } from "@dashboard/giftCards/components/GiftCardTagInput";
-import { GiftCardUpdateExpirySelect } from "@dashboard/giftCards/GiftCardUpdate/GiftCardUpdateExpirySelect";
 import { Divider } from "@material-ui/core";
 import { Button, Skeleton, Text } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
@@ -12,6 +9,9 @@ import { useGiftCardUpdateDialogs } from "../providers/GiftCardUpdateDialogsProv
 import { useGiftCardUpdate as useGiftCardUpdateForm } from "../providers/GiftCardUpdateFormProvider/hooks/useGiftCardUpdateForm";
 import { GiftCardUpdateDetailsBalanceSection } from "./GiftCardUpdateDetailsBalanceSection";
 import { giftCardUpdateDetailsCardMessages as messages } from "./messages";
+import { VerticalSpacer } from "../../../components/VerticalSpacer/VerticalSpacer";
+import { GiftCardTagInput } from "../../components/GiftCardTagInput/GiftCardTagInput";
+import { GiftCardUpdateExpirySelect } from "../GiftCardUpdateExpirySelect/GiftCardUpdateExpirySelect";
 
 const GiftCardUpdateDetailsCard = () => {
   const intl = useIntl();

@@ -4,10 +4,9 @@ import {
   MenuItemInput,
   MenuItemMoveInput,
 } from "@dashboard/graphql";
-
-import { MenuDetailsSubmitData } from "../../components/MenuDetailsPage";
-import { MenuItemDialogFormData } from "../../components/MenuItemDialog";
 import { unknownTypeError } from "../../components/MenuItemsSortableTree/utils";
+import { MenuDetailsSubmitData } from "../../components/MenuDetailsPage/MenuDetailsPage";
+import { MenuItemDialogFormData } from "../../components/MenuItemDialog/types";
 
 export function getMenuItemInputData(data: MenuItemDialogFormData): MenuItemInput {
   const variables: MenuItemInput = {

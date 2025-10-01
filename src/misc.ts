@@ -19,8 +19,6 @@ import { DefaultTheme, ThemeTokensValues } from "@saleor/macaw-ui-next";
 import { Fuse } from "fuse.js";
 import moment from "moment-timezone";
 import { IntlShape } from "react-intl";
-
-import { ConfirmButtonTransitionState } from "./components/ConfirmButton";
 import {
   hueToPillColorDark,
   hueToPillColorLight,
@@ -33,6 +31,7 @@ import {
   orderStatusMessages,
   paymentStatusMessages,
 } from "./intl";
+import { ConfirmButtonTransitionState } from "./components/ConfirmButton/ConfirmButton";
 
 export type RequireAtLeastOne<T, Keys extends keyof T = keyof T> = Pick<T, Exclude<keyof T, Keys>> &
   { [K in Keys]-?: Required<Pick<T, K>> }[Keys];

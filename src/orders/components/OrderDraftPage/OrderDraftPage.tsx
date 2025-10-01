@@ -3,9 +3,7 @@ import { FetchResult } from "@apollo/client";
 import { AppWidgets } from "@dashboard/apps/components/AppWidgets/AppWidgets";
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
 import { CardSpacer } from "@dashboard/components/CardSpacer";
-import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import { DateTime } from "@dashboard/components/Date";
-import { DetailPageLayout } from "@dashboard/components/Layouts";
 import { Savebar } from "@dashboard/components/Savebar";
 import { extensionMountPoints } from "@dashboard/extensions/extensionMountPoints";
 import { getExtensionsItemsForDraftOrderDetails } from "@dashboard/extensions/getExtensionsItems";
@@ -21,16 +19,17 @@ import {
 import { useBackLinkWithState } from "@dashboard/hooks/useBackLinkWithState";
 import { SubmitPromise } from "@dashboard/hooks/useForm";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-import { OrderChannelSectionCard } from "@dashboard/orders/components/OrderChannelSectionCard";
 import { orderDraftListUrl } from "@dashboard/orders/urls";
 import { FetchMoreProps, RelayToFlat } from "@dashboard/types";
 import { Box, Divider, Skeleton, Text } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
-
-import { CustomerEditData, OrderCustomer } from "../OrderCustomer";
 import { OrderDraftDetails } from "../OrderDraftDetails/OrderDraftDetails";
-import { FormData as HistoryFormData, OrderHistory } from "../OrderHistory";
 import { OrderDraftAlert } from "./OrderDraftAlert";
+import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
+import { OrderChannelSectionCard } from "../OrderChannelSectionCard/OrderChannelSectionCard";
+import { CustomerEditData, OrderCustomer } from "../OrderCustomer/OrderCustomer";
+import { FormData as HistoryFormData, OrderHistory } from "../OrderHistory/OrderHistory";
 
 interface OrderDraftPageProps extends FetchMoreProps {
   disabled: boolean;

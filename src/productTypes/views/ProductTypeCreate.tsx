@@ -8,14 +8,14 @@ import {
   useUpdatePrivateMetadataMutation,
 } from "@dashboard/graphql";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { useTaxClassFetchMore } from "@dashboard/taxes/utils/useTaxClassFetchMore";
 import { createMetadataCreateHandler } from "@dashboard/utils/handlers/metadataCreateHandler";
 import { useIntl } from "react-intl";
 
 import { getMutationErrors } from "../../misc";
-import { ProductTypeCreatePage, ProductTypeForm } from "../components/ProductTypeCreatePage";
 import { productTypeAddUrl, ProductTypeAddUrlQueryParams, productTypeUrl } from "../urls";
+import { useNotifier } from "../../hooks/useNotifier/useNotifier";
+import { ProductTypeCreatePage, ProductTypeForm } from "../components/ProductTypeCreatePage/ProductTypeCreatePage";
 
 interface ProductTypeCreateProps {
   params: ProductTypeAddUrlQueryParams;

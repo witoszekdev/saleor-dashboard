@@ -13,12 +13,6 @@ import { AssignVariantDialog } from "@dashboard/components/AssignVariantDialog";
 import { ChannelsAvailabilityDialog } from "@dashboard/components/ChannelsAvailabilityDialog";
 import { WindowTitle } from "@dashboard/components/WindowTitle";
 import { DEFAULT_INITIAL_SEARCH_DATA, PAGINATE_BY } from "@dashboard/config";
-import { DiscountCountrySelectDialog } from "@dashboard/discounts/components/DiscountCountrySelectDialog";
-import {
-  VoucherDetailsPage,
-  VoucherDetailsPageTab,
-  VoucherTabItemsCount,
-} from "@dashboard/discounts/components/VoucherDetailsPage";
 import {
   voucherListUrl,
   voucherUrl,
@@ -49,7 +43,6 @@ import {
   useSectionLocalPaginationState,
 } from "@dashboard/hooks/useLocalPaginator";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { PaginatorContext } from "@dashboard/hooks/usePaginator";
 import { useShop } from "@dashboard/hooks/useShop";
 import { commonMessages, sectionNames } from "@dashboard/intl";
@@ -67,6 +60,9 @@ import { maybe } from "../../../misc";
 import { createUpdateHandler } from "./handlers";
 import { useVoucherCodes } from "./hooks/useVoucherCodes";
 import { VOUCHER_UPDATE_FORM_ID } from "./types";
+import { DiscountCountrySelectDialog } from "../../components/DiscountCountrySelectDialog/DiscountCountrySelectDialog";
+import { VoucherDetailsPage, VoucherDetailsPageTab, VoucherTabItemsCount } from "../../components/VoucherDetailsPage/VoucherDetailsPage";
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
 
 interface VoucherDetailsProps {
   id: string;

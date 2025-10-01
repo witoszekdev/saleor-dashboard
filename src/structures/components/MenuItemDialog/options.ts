@@ -1,6 +1,6 @@
 import { sectionNames } from "@dashboard/intl";
-import { MenuItemType } from "@dashboard/structures/components/MenuItemDialog";
 import { IntlShape } from "react-intl";
+import { MenuItemType } from "./types";
 
 export const getLinkTypeOptions = (intl: IntlShape) =>
   [

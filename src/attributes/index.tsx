@@ -16,9 +16,9 @@ import {
   attributePath,
   AttributeUrlQueryParams,
 } from "./urls";
-import { AttributeDetails as AttributeCreateComponent } from "./views/AttributeCreate";
-import { AttributeDetails as AttributeDetailsComponent } from "./views/AttributeDetails";
-import { AttributeList as AttributeListComponent } from "./views/AttributeList";
+import { AttributeDetails as AttributeCreateComponent } from "./views/AttributeCreate/AttributeCreate";
+import { AttributeDetails as AttributeDetailsComponent } from "./views/AttributeDetails/AttributeDetails";
+import { AttributeList as AttributeListComponent } from "./views/AttributeList/AttributeList";
 
 const AttributeList = ({ location }: RouteComponentProps<{}>) => {
   const qs = parseQs(location.search.substr(1)) as any;

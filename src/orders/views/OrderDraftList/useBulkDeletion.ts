@@ -1,6 +1,6 @@
 import { useOrderDraftBulkCancelMutation } from "@dashboard/graphql";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { useIntl } from "react-intl";
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
 
 export const useBulkDeletion = (onComplete: () => void) => {
   const notify = useNotifier();

@@ -1,8 +1,6 @@
 import { useDebounce } from "@dashboard/hooks/useDebounce";
 
 import { FilterAPIProvider } from "./API/FilterAPIProvider";
-import { useConditionalFilterContext } from "./context";
-import { FilterElement } from "./FilterElement";
 import { Condition } from "./FilterElement/Condition";
 import { ConditionOptions } from "./FilterElement/ConditionOptions";
 import { ConditionSelected } from "./FilterElement/ConditionSelected";
@@ -10,6 +8,8 @@ import { ConditionValue, ItemOption } from "./FilterElement/ConditionValue";
 import { Constraint } from "./FilterElement/Constraint";
 import { hasEmptyRows } from "./FilterElement/FilterElement";
 import { LeftOperand } from "./LeftOperandsProvider";
+import { useConditionalFilterContext } from "./context/consumer";
+import { FilterElement } from "./FilterElement/FilterElement";
 
 export const useFilterContainer = (apiProvider: FilterAPIProvider) => {
   const {

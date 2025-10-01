@@ -29,7 +29,6 @@ import {
   useUpdatePrivateMetadataMutation,
 } from "@dashboard/graphql";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { commonMessages } from "@dashboard/intl";
 import { UseCategorySearch as useCategorySearch } from "@dashboard/searches/useCategorySearch";
 import { UseCollectionSearch as useCollectionSearch } from "@dashboard/searches/useCollectionSearch";
@@ -44,10 +43,11 @@ import { getParsedDataForJsonStringField } from "@dashboard/utils/richText/misc"
 import { FormattedMessage, useIntl } from "react-intl";
 
 import { getStringOrPlaceholder, maybe } from "../../misc";
-import { PageDetailsPage } from "../components/PageDetailsPage";
 import { PageData, PageSubmitData } from "../components/PageDetailsPage/form";
 import { pageListUrl, pageUrl, PageUrlQueryParams } from "../urls";
 import { getAttributeInputFromPage } from "../utils/data";
+import { useNotifier } from "../../hooks/useNotifier/useNotifier";
+import { PageDetailsPage } from "../components/PageDetailsPage/PageDetailsPage";
 
 interface PageDetailsProps {
   id: string;

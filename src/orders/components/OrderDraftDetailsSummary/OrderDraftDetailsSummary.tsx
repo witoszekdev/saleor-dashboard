@@ -1,6 +1,5 @@
 // @ts-strict-ignore
 import { ButtonLink } from "@dashboard/components/ButtonLink";
-import { HorizontalSpacer } from "@dashboard/components/HorizontalSpacer";
 import { Money } from "@dashboard/components/Money";
 import {
   DiscountValueTypeEnum,
@@ -14,10 +13,10 @@ import { getOrderErrorMessage } from "@dashboard/utils/errors/order";
 import { makeStyles } from "@saleor/macaw-ui";
 import { Box, Popover, sprinkles, Text } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
-
-import { OrderDiscountCommonModal } from "../OrderDiscountCommonModal";
 import { ORDER_DISCOUNT } from "../OrderDiscountCommonModal/types";
 import { messages } from "./messages";
+import { HorizontalSpacer } from "../../../components/HorizontalSpacer/HorizontalSpacer";
+import { OrderDiscountCommonModal } from "../OrderDiscountCommonModal/OrderDiscountCommonModal";
 
 const useStyles = makeStyles(
   theme => ({

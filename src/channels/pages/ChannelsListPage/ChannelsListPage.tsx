@@ -3,12 +3,8 @@ import { channelAddUrl, channelUrl } from "@dashboard/channels/urls";
 import { LimitsInfo } from "@dashboard/components/AppLayout/LimitsInfo";
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
 import { DashboardCard } from "@dashboard/components/Card";
-import { ListPageLayout } from "@dashboard/components/Layouts";
 import { LimitReachedAlert } from "@dashboard/components/LimitReachedAlert";
-import { ResponsiveTable } from "@dashboard/components/ResponsiveTable";
 import { TableButtonWrapper } from "@dashboard/components/TableButtonWrapper/TableButtonWrapper";
-import { TableCellHeader } from "@dashboard/components/TableCellHeader";
-import { TableRowLink } from "@dashboard/components/TableRowLink";
 import { configurationMenuUrl } from "@dashboard/configuration";
 import { ChannelDetailsFragment, RefreshLimitsQuery } from "@dashboard/graphql";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
@@ -21,6 +17,10 @@ import { Button, Skeleton } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 
 import { useStyles } from "./styles";
+import { ListPageLayout } from "../../../components/Layouts/List/index";
+import { ResponsiveTable } from "../../../components/ResponsiveTable/ResponsiveTable";
+import { TableCellHeader } from "../../../components/TableCellHeader/TableCellHeader";
+import { TableRowLink } from "../../../components/TableRowLink/TableRowLink";
 
 interface ChannelsListPageProps {
   channelsList: ChannelDetailsFragment[] | undefined;

@@ -1,5 +1,4 @@
 // @ts-strict-ignore
-import { PriceField } from "@dashboard/components/PriceField";
 import { OrderErrorFragment } from "@dashboard/graphql";
 import { getFormErrors } from "@dashboard/utils/errors";
 import { getOrderErrorMessage } from "@dashboard/utils/errors/order";
@@ -9,6 +8,7 @@ import * as React from "react";
 import { defineMessages, useIntl } from "react-intl";
 
 import { OrderRefundFormData } from "../../../OrderRefundPage/form";
+import { PriceField } from "../../../../../components/PriceField/PriceField";
 
 const useStyles = makeStyles(
   theme => ({

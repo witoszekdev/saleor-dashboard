@@ -1,4 +1,3 @@
-import { FilterContainer, FilterElement } from "../FilterElement";
 import { FilterQueryVarsBuilderResolver } from "./FilterQueryVarsBuilderResolver";
 import {
   FilterQuery,
@@ -7,6 +6,7 @@ import {
   supportsWhereApi,
 } from "./queryVarsBuilders/types";
 import { QueryApiType } from "./types";
+import { FilterContainer, FilterElement } from "../FilterElement/FilterElement";
 
 interface QueryBuilderOptions<
   TQuery extends FilterQuery,

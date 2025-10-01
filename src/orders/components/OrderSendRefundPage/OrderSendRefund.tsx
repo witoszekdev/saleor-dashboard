@@ -1,9 +1,7 @@
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
 import { DashboardCard } from "@dashboard/components/Card";
 import { CardSpacer } from "@dashboard/components/CardSpacer";
-import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import { Hr } from "@dashboard/components/Hr";
-import { DetailPageLayout } from "@dashboard/components/Layouts";
 import {
   CreateManualTransactionRefundMutationVariables,
   OrderDetailsFragment,
@@ -19,6 +17,8 @@ import { ManualRefundCard } from "./components/ManualRefundCard";
 import { TransactionCard } from "./components/TransactionCard";
 import { refundPageMessages } from "./messages";
 import { useStyles } from "./styles";
+import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
 
 interface OrderSendRefundPageProps {
   order: OrderDetailsFragment;

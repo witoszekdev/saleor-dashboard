@@ -2,12 +2,7 @@
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
 import { DashboardCard } from "@dashboard/components/Card";
 import { CardSpacer } from "@dashboard/components/CardSpacer";
-import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import { Form } from "@dashboard/components/Form";
-import { DetailPageLayout } from "@dashboard/components/Layouts";
-import { ResponsiveTable } from "@dashboard/components/ResponsiveTable";
 import { Savebar } from "@dashboard/components/Savebar";
-import { TableRowLink } from "@dashboard/components/TableRowLink";
 import {
   FulfillOrderMutation,
   OrderErrorCode,
@@ -21,7 +16,6 @@ import { FormsetData, useFormset } from "@dashboard/hooks/useFormset";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { commonMessages } from "@dashboard/intl";
 import { renderCollection } from "@dashboard/misc";
-import { OrderChangeWarehouseDialog } from "@dashboard/orders/components/OrderChangeWarehouseDialog";
 import {
   OrderFulfillUrlDialog,
   OrderFulfillUrlQueryParams,
@@ -40,9 +34,15 @@ import { useEffect, useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
 import { OrderFulfillLine } from "../OrderFulfillLine/OrderFulfillLine";
-import { OrderFulfillStockExceededDialog } from "../OrderFulfillStockExceededDialog";
 import { messages } from "./messages";
 import { useStyles } from "./styles";
+import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import { Form } from "../../../components/Form/Form";
+import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
+import { ResponsiveTable } from "../../../components/ResponsiveTable/ResponsiveTable";
+import { TableRowLink } from "../../../components/TableRowLink/TableRowLink";
+import { OrderChangeWarehouseDialog } from "../OrderChangeWarehouseDialog/OrderChangeWarehouseDialog";
+import { OrderFulfillStockExceededDialog } from "../OrderFulfillStockExceededDialog/OrderFulfillStockExceededDialog";
 
 interface OrderFulfillFormData {
   sendInfo: boolean;

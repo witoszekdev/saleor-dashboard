@@ -1,4 +1,3 @@
-import { HookFormCheckbox } from "@dashboard/components/HookFormCheckbox";
 import { messages } from "@dashboard/extensions/messages";
 import { PermissionEnum } from "@dashboard/graphql";
 import { Box, Text, Tooltip } from "@saleor/macaw-ui-next";
@@ -6,6 +5,7 @@ import { Control } from "react-hook-form";
 import { FormattedMessage } from "react-intl";
 
 import { CustomExtensionFormData } from "../AddCustomExtension";
+import { HookFormCheckbox } from "../../../../components/HookFormCheckbox/HookFormCheckbox";
 
 export const PermissionCheckbox = ({
   permissionCode,

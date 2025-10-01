@@ -1,4 +1,3 @@
-import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import { DashboardModal } from "@dashboard/components/Modal";
 import { Container, DialogProps, FetchMoreProps } from "@dashboard/types";
 import { FormattedMessage } from "react-intl";
@@ -7,6 +6,7 @@ import { AssignProductDialogMulti } from "./AssignProductDialogMulti";
 import { AssignProductDialogSingle } from "./AssignProductDialogSingle";
 import { messages } from "./messages";
 import { Products, SelectedChannel } from "./types";
+import { ConfirmButtonTransitionState } from "../ConfirmButton/ConfirmButton";
 
 export interface AssignProductDialogProps extends FetchMoreProps, DialogProps {
   confirmButtonState: ConfirmButtonTransitionState;

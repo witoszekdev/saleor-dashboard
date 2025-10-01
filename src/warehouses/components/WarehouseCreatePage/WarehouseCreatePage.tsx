@@ -3,9 +3,6 @@ import { createCountryHandler } from "@dashboard/components/AddressEdit/createCo
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
 import { CardSpacer } from "@dashboard/components/CardSpacer";
 import { CompanyAddressInput } from "@dashboard/components/CompanyAddressInput";
-import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import { Form } from "@dashboard/components/Form";
-import { DetailPageLayout } from "@dashboard/components/Layouts";
 import { Savebar } from "@dashboard/components/Savebar";
 import { AddressTypeInput } from "@dashboard/customers/types";
 import { CountryWithCodeFragment, WarehouseErrorFragment } from "@dashboard/graphql";
@@ -17,8 +14,10 @@ import { createSingleAutocompleteSelectHandler } from "@dashboard/utils/handlers
 import { mapCountriesToChoices } from "@dashboard/utils/maps";
 import { warehouseListUrl } from "@dashboard/warehouses/urls";
 import { useIntl } from "react-intl";
-
-import { WarehouseInfo } from "../WarehouseInfo";
+import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import { Form } from "../../../components/Form/Form";
+import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
+import { WarehouseInfo } from "../WarehouseInfo/WarehouseInfo";
 
 export interface WarehouseCreatePageFormData extends AddressTypeInput {
   name: string;

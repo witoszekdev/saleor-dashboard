@@ -1,12 +1,7 @@
 // @ts-strict-ignore
 import { DashboardCard } from "@dashboard/components/Card";
-import { IconButtonTableCell } from "@dashboard/components/IconButtonTableCell";
 import { Money } from "@dashboard/components/Money";
-import { MoneyRange } from "@dashboard/components/MoneyRange";
-import { ResponsiveTable } from "@dashboard/components/ResponsiveTable";
 import { TableButtonWrapper } from "@dashboard/components/TableButtonWrapper/TableButtonWrapper";
-import { TableRowLink } from "@dashboard/components/TableRowLink";
-import { WeightRange } from "@dashboard/components/WeightRange";
 import { ShippingZoneDetailsFragment } from "@dashboard/graphql";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { ChannelProps } from "@dashboard/types";
@@ -16,6 +11,11 @@ import { Button, EditIcon, Skeleton, TrashBinIcon } from "@saleor/macaw-ui-next"
 import { FormattedMessage, useIntl } from "react-intl";
 
 import { maybe, renderCollection } from "../../../misc";
+import { IconButtonTableCell } from "../../../components/IconButtonTableCell/IconButtonTableCell";
+import { MoneyRange } from "../../../components/MoneyRange/MoneyRange";
+import { ResponsiveTable } from "../../../components/ResponsiveTable/ResponsiveTable";
+import { TableRowLink } from "../../../components/TableRowLink/TableRowLink";
+import { WeightRange } from "../../../components/WeightRange/WeightRange";
 
 interface ShippingZoneRatesProps extends ChannelProps {
   disabled: boolean;

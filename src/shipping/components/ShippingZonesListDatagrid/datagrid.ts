@@ -1,13 +1,13 @@
 import { PLACEHOLDER } from "@dashboard/components/Datagrid/const";
 import { moneyCell, readonlyTextCell } from "@dashboard/components/Datagrid/customCells/cells";
 import { AvailableColumn } from "@dashboard/components/Datagrid/types";
-import { Locale } from "@dashboard/components/Locale";
-import { getMoneyRange } from "@dashboard/components/MoneyRange";
 import { ShippingZoneFragment } from "@dashboard/graphql";
 import { GridCell, Item } from "@glideapps/glide-data-grid";
 import { IntlShape } from "react-intl";
 
 import { messages } from "./messages";
+import { Locale } from "../../../components/Locale/Locale";
+import { getMoneyRange } from "../../../components/MoneyRange/utils";
 
 export const shippingZonesListStaticColumnsAdapter = (intl: IntlShape) => [
   {

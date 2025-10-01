@@ -3,10 +3,6 @@ import { useUser } from "@dashboard/auth";
 import { hasPermission } from "@dashboard/auth/misc";
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
 import { CardSpacer } from "@dashboard/components/CardSpacer";
-import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import { CountryList } from "@dashboard/components/CountryList";
-import { Form } from "@dashboard/components/Form";
-import { DetailPageLayout } from "@dashboard/components/Layouts";
 import { Metadata } from "@dashboard/components/Metadata/Metadata";
 import { Savebar } from "@dashboard/components/Savebar";
 import {
@@ -31,10 +27,14 @@ import { defineMessages, useIntl } from "react-intl";
 import { getStringOrPlaceholder } from "../../../misc";
 import { ChannelProps, FetchMoreProps, SearchProps } from "../../../types";
 import { ShippingZoneUpdateFormData } from "../../components/ShippingZoneDetailsPage/types";
-import { ShippingZoneInfo } from "../ShippingZoneInfo";
-import { ShippingZoneRates } from "../ShippingZoneRates";
-import { ShippingZoneSettingsCard } from "../ShippingZoneSettingsCard";
 import { getInitialFormData } from "./utils";
+import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import { CountryList } from "../../../components/CountryList/CountryList";
+import { Form } from "../../../components/Form/Form";
+import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
+import { ShippingZoneInfo } from "../ShippingZoneInfo/ShippingZoneInfo";
+import { ShippingZoneRates } from "../ShippingZoneRates/ShippingZoneRates";
+import { ShippingZoneSettingsCard } from "../ShippingZoneSettingsCard/ShippingZoneSettingsCard";
 
 const messages = defineMessages({
   countries: {

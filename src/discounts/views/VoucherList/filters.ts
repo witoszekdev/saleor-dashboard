@@ -1,26 +1,16 @@
 // @ts-strict-ignore
-import { FilterElement, FilterElementRegular } from "@dashboard/components/Filter";
-import {
-  VoucherFilterKeys,
-  VoucherListFilterOpts,
-} from "@dashboard/discounts/components/VoucherListPage";
 import { DiscountStatusEnum, VoucherDiscountType, VoucherFilterInput } from "@dashboard/graphql";
 import { findValueInEnum, joinDateTime, maybe } from "@dashboard/misc";
 import { Option } from "@saleor/macaw-ui-next";
-
-import {
-  createFilterTabUtils,
-  dedupeFilter,
-  getGteLteVariables,
-  getMinMaxQueryParam,
-  getMultipleEnumValueQueryParam,
-  getSingleValueQueryParam,
-} from "../../../utils/filters";
 import {
   VoucherListUrlFilters,
   VoucherListUrlFiltersEnum,
   VoucherListUrlFiltersWithMultipleValues,
 } from "../../urls";
+import { FilterElement, FilterElementRegular } from "../../../components/Filter/types";
+import { VoucherFilterKeys, VoucherListFilterOpts } from "../../components/VoucherListPage/filters";
+import { createFilterTabUtils } from "../../../utils/filters/storage";
+import { dedupeFilter, getGteLteVariables, getMinMaxQueryParam, getMultipleEnumValueQueryParam, getSingleValueQueryParam } from "../../../utils/filters/filters";
 
 const VOUCHER_FILTERS_KEY = "voucherFilters";
 

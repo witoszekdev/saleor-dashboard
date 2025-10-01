@@ -1,5 +1,4 @@
 // @ts-strict-ignore
-import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import {
   AddressFragment,
   CustomerAddressesQuery,
@@ -8,15 +7,12 @@ import {
 } from "@dashboard/graphql";
 import { SubmitPromise } from "@dashboard/hooks/useForm";
 import { transformAddressToForm } from "@dashboard/misc";
-
-import {
-  OrderCustomerAddressesEditDialog,
-  OrderCustomerAddressesEditDialogProps,
-} from "../OrderCustomerAddressesEditDialog";
 import {
   AddressEditDialogVariant,
   OrderCustomerAddressesEditDialogOutput,
 } from "../OrderCustomerAddressesEditDialog/types";
+import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import { OrderCustomerAddressesEditDialog, OrderCustomerAddressesEditDialogProps } from "../OrderCustomerAddressesEditDialog/OrderCustomerAddressesEditDialog";
 
 interface OrderAddressFieldsProps {
   action: string;

@@ -1,7 +1,6 @@
 import { ApolloError } from "@apollo/client";
 import { useConditionalFilterContext } from "@dashboard/components/ConditionalFilter";
 import { createGiftCardQueryVariables } from "@dashboard/components/ConditionalFilter/queryVariables";
-import { IFilter } from "@dashboard/components/Filter";
 import { useFlag } from "@dashboard/featureFlags";
 import { ExtendedGiftCard } from "@dashboard/giftCards/GiftCardUpdate/providers/GiftCardDetailsProvider/types";
 import { getExtendedGiftCard } from "@dashboard/giftCards/GiftCardUpdate/providers/GiftCardDetailsProvider/utils";
@@ -11,10 +10,8 @@ import {
   GiftCardListQueryVariables,
   useGiftCardListQuery,
 } from "@dashboard/graphql";
-import { UseFilterPresets, useFilterPresets } from "@dashboard/hooks/useFilterPresets";
 import { UseListSettings, useListSettings } from "@dashboard/hooks/useListSettings";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { usePaginationReset } from "@dashboard/hooks/usePaginationReset";
 import { createPaginationState, PageInfo, PaginationState } from "@dashboard/hooks/usePaginator";
 import { UseRowSelection, useRowSelection } from "@dashboard/hooks/useRowSelection";
@@ -33,6 +30,9 @@ import {
   GiftCardUrlSortField,
 } from "../../types";
 import { getSortQueryVariables } from "./sort";
+import { IFilter } from "../../../../components/Filter/types";
+import { UseFilterPresets, useFilterPresets } from "../../../../hooks/useFilterPresets/useFilterPresets";
+import { useNotifier } from "../../../../hooks/useNotifier/useNotifier";
 
 const numberOfColumns = 7;
 

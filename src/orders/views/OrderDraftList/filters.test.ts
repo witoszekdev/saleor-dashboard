@@ -1,13 +1,13 @@
 import { date } from "@dashboard/fixtures";
-import { createFilterStructure } from "@dashboard/orders/components/OrderDraftListPage";
 import { OrderDraftListUrlFilters } from "@dashboard/orders/urls";
-import { getFilterQueryParams } from "@dashboard/utils/filters";
 import { stringifyQs } from "@dashboard/utils/urls";
 import { getExistingKeys, setFilterOptsStatus } from "@test/filters";
 import { config } from "@test/intl";
 import { createIntl } from "react-intl";
 
 import { getFilterQueryParam, getFilterVariables } from "./filters";
+import { createFilterStructure } from "../../components/OrderDraftListPage/filters";
+import { getFilterQueryParams } from "../../../utils/filters/filters";
 
 describe("Filtering query params", () => {
   it("should be empty object if no params given", () => {

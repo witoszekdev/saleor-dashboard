@@ -1,14 +1,10 @@
 // @ts-strict-ignore
 import { LazyQueryResult } from "@apollo/client/react";
 import { useContextualLink } from "@dashboard/components/AppLayout/ContextualLinks/useContextualLink";
-import { ListFilters } from "@dashboard/components/AppLayout/ListFilters";
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
 import { BulkDeleteButton } from "@dashboard/components/BulkDeleteButton";
 import { ButtonGroupWithDropdown } from "@dashboard/components/ButtonGroupWithDropdown";
 import { DashboardCard } from "@dashboard/components/Card";
-import { FilterElement } from "@dashboard/components/Filter";
-import { FilterPresetsSelect } from "@dashboard/components/FilterPresetsSelect";
-import { ListPageLayout } from "@dashboard/components/Layouts";
 import { LimitReachedAlert } from "@dashboard/components/LimitReachedAlert";
 import { ProductListColumns } from "@dashboard/config";
 import { extensionMountPoints } from "@dashboard/extensions/extensionMountPoints";
@@ -43,9 +39,13 @@ import { FormattedMessage, useIntl } from "react-intl";
 import { useLocation } from "react-router";
 
 import { ProductListUrlSortField, productUrl } from "../../urls";
-import { ProductListDatagrid } from "../ProductListDatagrid";
 import { ProductListTiles } from "../ProductListTiles/ProductListTiles";
-import { ProductListViewSwitch } from "../ProductListViewSwitch";
+import { ListFilters } from "../../../components/AppLayout/ListFilters/ListFilters";
+import { FilterElement } from "../../../components/Filter/types";
+import { FilterPresetsSelect } from "../../../components/FilterPresetsSelect/FilterPresetsSelect";
+import { ListPageLayout } from "../../../components/Layouts/List/index";
+import { ProductListDatagrid } from "../ProductListDatagrid/ProductListDatagrid";
+import { ProductListViewSwitch } from "../ProductListViewSwitch/ProductListViewSwitch";
 
 interface ProductListPageProps
   extends PageListProps<ProductListColumns>,

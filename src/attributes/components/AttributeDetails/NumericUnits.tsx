@@ -1,5 +1,3 @@
-import { AttributePageFormData } from "@dashboard/attributes/components/AttributePage";
-import { Select } from "@dashboard/components/Select";
 import { MeasurementUnitsEnum } from "@dashboard/graphql";
 import { UseFormResult } from "@dashboard/hooks/useForm";
 import { commonMessages } from "@dashboard/intl";
@@ -10,6 +8,8 @@ import { useIntl } from "react-intl";
 
 import * as M from "./messages";
 import { getUnitChoices, UnitSystem, unitSystemChoices, UnitType, unitTypeChoices } from "./utils";
+import { AttributePageFormData } from "../AttributePage/AttributePage";
+import { Select } from "../../../components/Select/Select";
 
 const useStyles = makeStyles(
   theme => ({

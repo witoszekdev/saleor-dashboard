@@ -1,6 +1,5 @@
 import { Switch, ViewListIcon, ViewTilesIcon } from "@saleor/macaw-ui-next";
-
-import { ProductListViewType } from "../ProductListPage";
+import { ProductListViewType } from "../ProductListPage/ProductListPage";
 
 interface ProductListViewSwitchProps {
   defaultValue: ProductListViewType;

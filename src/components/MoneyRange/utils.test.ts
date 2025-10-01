@@ -1,9 +1,8 @@
 // @ts-strict-ignore
 import { IMoney } from "@dashboard/utils/intl";
 import { IntlShape } from "react-intl";
-
-import { Locale } from "../Locale";
 import { getMoneyRange } from "./utils";
+import { Locale } from "../Locale/Locale";
 
 const intl = {
   formatMessage: ({ defaultMessage }, params) => {

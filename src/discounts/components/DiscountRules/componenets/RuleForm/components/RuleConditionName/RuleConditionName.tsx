@@ -1,10 +1,11 @@
 import { Combobox } from "@dashboard/components/Combobox";
-import { useDiscountRulesContext } from "@dashboard/discounts/components/DiscountRules/context";
-import { Condition, Rule } from "@dashboard/discounts/models";
 import { useController, useFormContext } from "react-hook-form";
 
 import { useConditionNames } from "./hooks/useConditionNames";
 import { getConditionNameValue } from "./utils";
+import { useDiscountRulesContext } from "../../../../context/consumer";
+import { Condition } from "../../../../../../models/Condition";
+import { Rule } from "../../../../../../models/Rule";
 
 interface RuleConditionNameProps {
   conditionIndex: number;

@@ -1,7 +1,6 @@
 import { PLACEHOLDER } from "@dashboard/components/Datagrid/const";
 import { readonlyTextCell } from "@dashboard/components/Datagrid/customCells/cells";
 import { AvailableColumn } from "@dashboard/components/Datagrid/types";
-import { Locale } from "@dashboard/components/Locale";
 import { formatMoney } from "@dashboard/components/Money";
 import { formatPercantage } from "@dashboard/components/Percent/utils";
 import { SaleListUrlSortField } from "@dashboard/discounts/urls";
@@ -13,6 +12,7 @@ import moment from "moment";
 import { IntlShape } from "react-intl";
 
 import { columnsMessages } from "./messages";
+import { Locale } from "../../../components/Locale/Locale";
 
 export const salesListStaticColumnsAdapter = (intl: IntlShape, sort: Sort<SaleListUrlSortField>) =>
   [

@@ -1,7 +1,6 @@
 // @ts-strict-ignore
 import { DashboardCard } from "@dashboard/components/Card";
 import { FormSpacer } from "@dashboard/components/FormSpacer";
-import { RichTextEditor } from "@dashboard/components/RichTextEditor";
 import { RichTextEditorLoading } from "@dashboard/components/RichTextEditor/RichTextEditorLoading";
 import { PageErrorFragment } from "@dashboard/graphql";
 import { commonMessages } from "@dashboard/intl";
@@ -14,6 +13,7 @@ import * as React from "react";
 import { useIntl } from "react-intl";
 
 import { PageData } from "../PageDetailsPage/form";
+import { RichTextEditor } from "../../../components/RichTextEditor/RichTextEditor";
 
 interface PageInfoProps {
   data: PageData;

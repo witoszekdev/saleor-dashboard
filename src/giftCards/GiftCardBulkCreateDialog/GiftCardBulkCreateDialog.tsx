@@ -2,7 +2,6 @@ import { IMessage } from "@dashboard/components/messages";
 import { DashboardModal } from "@dashboard/components/Modal";
 import { GiftCardBulkCreateInput, useGiftCardBulkCreateMutation } from "@dashboard/graphql";
 import { useCurrentDate } from "@dashboard/hooks/useCurrentDate";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { DialogProps } from "@dashboard/types";
 import { getFormErrors } from "@dashboard/utils/errors";
 import { useEffect, useState } from "react";
@@ -23,6 +22,7 @@ import {
   GiftCardBulkCreateFormErrors,
 } from "./types";
 import { validateForm } from "./utils";
+import { useNotifier } from "../../hooks/useNotifier/useNotifier";
 
 export const GiftCardBulkCreateDialog = ({ onClose, open }: DialogProps) => {
   const intl = useIntl();

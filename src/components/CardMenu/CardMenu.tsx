@@ -14,9 +14,8 @@ import { clsx } from "clsx";
 import { useEffect, useRef, useState } from "react";
 import * as React from "react";
 import { FormattedMessage } from "react-intl";
-
-import { IconButton } from "../IconButton";
 import { cardMenuMessages as messages } from "./messages";
+import { IconButton } from "../IconButton/IconButton";
 
 const ITEM_HEIGHT = 48;
 

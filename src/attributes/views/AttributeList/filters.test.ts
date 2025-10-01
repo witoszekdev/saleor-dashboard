@@ -1,12 +1,12 @@
-import { createFilterStructure } from "@dashboard/attributes/components/AttributeListPage";
 import { AttributeListUrlFilters } from "@dashboard/attributes/urls";
-import { getFilterQueryParams } from "@dashboard/utils/filters";
 import { stringifyQs } from "@dashboard/utils/urls";
 import { getExistingKeys, setFilterOptsStatus } from "@test/filters";
 import { config } from "@test/intl";
 import { createIntl } from "react-intl";
 
 import { getFilterQueryParam, getFilterVariables } from "./filters";
+import { createFilterStructure } from "../../components/AttributeListPage/filters";
+import { getFilterQueryParams } from "../../../utils/filters/filters";
 
 describe("Filtering query params", () => {
   it("should be empty object if no params given", () => {

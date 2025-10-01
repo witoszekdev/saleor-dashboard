@@ -1,10 +1,9 @@
 import { ProductErrorCode, ProductErrorWithAttributesFragment } from "@dashboard/graphql";
 import { IntlShape } from "react-intl";
 import { z } from "zod";
-
-import { ProductCreateData } from "../components/ProductCreatePage";
 import { ProductVariantCreateData } from "../components/ProductVariantCreatePage/form";
 import { ProductVariantUpdateSubmitData } from "../components/ProductVariantPage/form";
+import { ProductCreateData } from "../components/ProductCreatePage/form";
 
 export const validatePrice = (price: string) => price === "" || parseInt(price, 10) < 0;
 

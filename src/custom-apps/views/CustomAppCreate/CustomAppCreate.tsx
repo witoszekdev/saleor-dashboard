@@ -3,17 +3,13 @@ import { WindowTitle } from "@dashboard/components/WindowTitle";
 import { CustomAppUrls } from "@dashboard/custom-apps/urls";
 import { AppCreateMutation, useAppCreateMutation } from "@dashboard/graphql";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { useShop } from "@dashboard/hooks/useShop";
 import { commonMessages } from "@dashboard/intl";
 import { extractMutationErrors } from "@dashboard/misc";
 import { useIntl } from "react-intl";
-
-import {
-  CustomAppCreatePage,
-  CustomAppCreatePageFormData,
-} from "../../components/CustomAppCreatePage";
 import { messages } from "./messages";
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
+import { CustomAppCreatePage, CustomAppCreatePageFormData } from "../../components/CustomAppCreatePage/CustomAppCreatePage";
 
 interface CustomAppCreateProps {
   setToken: (token: string) => void;

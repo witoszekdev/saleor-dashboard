@@ -2,8 +2,8 @@ import { ApolloClient } from "@apollo/client";
 import { GlobalIdFilterInput } from "@dashboard/graphql";
 
 import { Handler, LegacyChannelHandler } from "../../API/Handler";
-import { FilterElement } from "../../FilterElement";
 import { BaseMappableQueryVarsBuilder } from "./BaseMappableQueryVarsBuilder";
+import { FilterElement } from "../../FilterElement/FilterElement";
 
 type OrderChannelFilterQueryPart = {
   channelId?: GlobalIdFilterInput;

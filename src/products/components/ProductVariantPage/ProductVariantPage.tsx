@@ -15,9 +15,7 @@ import {
   VariantAttributeScope,
 } from "@dashboard/components/Attributes";
 import { CardSpacer } from "@dashboard/components/CardSpacer";
-import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import { Grid } from "@dashboard/components/Grid";
-import { DetailPageLayout } from "@dashboard/components/Layouts";
 import { Metadata } from "@dashboard/components/Metadata/Metadata";
 import { Savebar } from "@dashboard/components/Savebar";
 import {
@@ -44,25 +42,26 @@ import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { Box } from "@saleor/macaw-ui-next";
 import { useState } from "react";
 import { defineMessages, useIntl } from "react-intl";
-
-import { ProductShipping } from "../ProductShipping";
-import { ProductStocks } from "../ProductStocks";
 import { useManageChannels } from "../ProductVariantChannels/useManageChannels";
 import { VariantChannelsDialog } from "../ProductVariantChannels/VariantChannelsDialog";
 import { ProductVariantCheckoutSettings } from "../ProductVariantCheckoutSettings/ProductVariantCheckoutSettings";
-import { ProductVariantEndPreorderDialog } from "../ProductVariantEndPreorderDialog";
-import { ProductVariantMediaSelectDialog } from "../ProductVariantImageSelectDialog";
-import { ProductVariantMedia } from "../ProductVariantMedia";
-import { ProductVariantName } from "../ProductVariantName";
-import { ProductVariantNavigation } from "../ProductVariantNavigation";
-import { ProductVariantPrice } from "../ProductVariantPrice";
-import { ProductVariantSetDefault } from "../ProductVariantSetDefault";
 import {
   ProductVariantUpdateData,
   ProductVariantUpdateForm,
   ProductVariantUpdateHandlers,
   ProductVariantUpdateSubmitData,
 } from "./form";
+import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
+import { ProductShipping } from "../ProductShipping/ProductShipping";
+import { ProductStocks } from "../ProductStocks/ProductStocks";
+import { ProductVariantEndPreorderDialog } from "../ProductVariantEndPreorderDialog/ProductVariantEndPreorderDialog";
+import { ProductVariantMediaSelectDialog } from "../ProductVariantImageSelectDialog/ProductVariantMediaSelectDialog";
+import { ProductVariantMedia } from "../ProductVariantMedia/ProductVariantMedia";
+import { ProductVariantName } from "../ProductVariantName/ProductVariantName";
+import { ProductVariantNavigation } from "../ProductVariantNavigation/ProductVariantNavigation";
+import { ProductVariantPrice } from "../ProductVariantPrice/ProductVariantPrice";
+import { ProductVariantSetDefault } from "../ProductVariantSetDefault/ProductVariantSetDefault";
 
 const messages = defineMessages({
   nonSelectionAttributes: {

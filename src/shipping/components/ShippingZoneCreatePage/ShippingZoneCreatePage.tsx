@@ -1,10 +1,6 @@
 // @ts-strict-ignore
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
 import { CardSpacer } from "@dashboard/components/CardSpacer";
-import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import { CountryList } from "@dashboard/components/CountryList";
-import { Form } from "@dashboard/components/Form";
-import { DetailPageLayout } from "@dashboard/components/Layouts";
 import { Savebar } from "@dashboard/components/Savebar";
 import { CountryFragment, ShippingErrorFragment } from "@dashboard/graphql";
 import { SubmitPromise } from "@dashboard/hooks/useForm";
@@ -12,9 +8,12 @@ import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { shippingZonesListUrl } from "@dashboard/shipping/urls";
 import { useState } from "react";
 import { defineMessages, useIntl } from "react-intl";
-
-import { ShippingZoneCountriesAssignDialog } from "../ShippingZoneCountriesAssignDialog";
-import { ShippingZoneInfo } from "../ShippingZoneInfo";
+import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import { CountryList } from "../../../components/CountryList/CountryList";
+import { Form } from "../../../components/Form/Form";
+import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
+import { ShippingZoneCountriesAssignDialog } from "../ShippingZoneCountriesAssignDialog/ShippingZoneCountriesAssignDialog";
+import { ShippingZoneInfo } from "../ShippingZoneInfo/ShippingZoneInfo";
 
 export interface ShippingZoneCreateFormData {
   countries: string[];

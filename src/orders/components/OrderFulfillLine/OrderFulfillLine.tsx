@@ -1,6 +1,4 @@
 // @ts-strict-ignore
-import { TableCellAvatar } from "@dashboard/components/TableCellAvatar";
-import { TableRowLink } from "@dashboard/components/TableRowLink";
 import { OrderFulfillLineFragment } from "@dashboard/graphql";
 import { FormsetChange, FormsetData } from "@dashboard/hooks/useFormset";
 import {
@@ -17,6 +15,8 @@ import { useIntl } from "react-intl";
 
 import { messages } from "./messages";
 import { useStyles } from "./styles";
+import { TableCellAvatar } from "../../../components/TableCellAvatar/TableCellAvatar";
+import { TableRowLink } from "../../../components/TableRowLink/TableRowLink";
 
 interface OrderFulfillLineProps {
   line: OrderFulfillLineFragment;

@@ -1,10 +1,7 @@
-import { ListFilters } from "@dashboard/components/AppLayout/ListFilters";
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
 import { BulkDeleteButton } from "@dashboard/components/BulkDeleteButton";
 import { ButtonGroupWithDropdown } from "@dashboard/components/ButtonGroupWithDropdown";
 import { DashboardCard } from "@dashboard/components/Card";
-import { FilterPresetsSelect } from "@dashboard/components/FilterPresetsSelect";
-import { ListPageLayout } from "@dashboard/components/Layouts";
 import { extensionMountPoints } from "@dashboard/extensions/extensionMountPoints";
 import {
   getExtensionItemsForOverviewCreate,
@@ -30,6 +27,9 @@ import {
 } from "../../views/PageList/filters";
 import { PageListDatagrid } from "../PageListDatagrid/PageListDatagrid";
 import { pagesListSearchAndFiltersMessages as messages } from "./messages";
+import { ListFilters } from "../../../components/AppLayout/ListFilters/ListFilters";
+import { FilterPresetsSelect } from "../../../components/FilterPresetsSelect/FilterPresetsSelect";
+import { ListPageLayout } from "../../../components/Layouts/List/index";
 
 interface PageListPageProps
   extends PageListProps,

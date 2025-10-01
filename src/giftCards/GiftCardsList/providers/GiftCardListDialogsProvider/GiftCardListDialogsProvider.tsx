@@ -1,8 +1,6 @@
 import { DashboardModal } from "@dashboard/components/Modal";
 import { GiftCardDeleteDialog as GiftCardListPageDeleteDialog } from "@dashboard/giftCards/components/GiftCardDeleteDialog/GiftCardListPageDeleteDialog";
 import { GiftCardBulkCreateDialog } from "@dashboard/giftCards/GiftCardBulkCreateDialog/GiftCardBulkCreateDialog";
-import { GiftCardCreateDialogContent } from "@dashboard/giftCards/GiftCardCreateDialog";
-import { GiftCardExportDialog as GiftCardExportDialogContent } from "@dashboard/giftCards/GiftCardExportDialogContent";
 import { giftCardListUrl } from "@dashboard/giftCards/urls";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
@@ -11,6 +9,8 @@ import * as React from "react";
 
 import { GIFT_CARD_LIST_QUERY } from "../../queries";
 import { GiftCardListActionParamsEnum, GiftCardListUrlQueryParams } from "../../types";
+import { GiftCardCreateDialogContent } from "../../../GiftCardCreateDialog/GiftCardCreateDialogContent";
+import { GiftCardExportDialog as GiftCardExportDialogContent } from "../../../GiftCardExportDialogContent/GiftCardExportDialogContent";
 
 interface GiftCardListDialogsProviderProps {
   children: React.ReactNode;

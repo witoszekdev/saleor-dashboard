@@ -1,9 +1,6 @@
 // @ts-strict-ignore
 import { Button } from "@dashboard/components/Button";
 import { DashboardCard } from "@dashboard/components/Card";
-import { RadioGroupField } from "@dashboard/components/RadioGroupField";
-import { ResponsiveTable } from "@dashboard/components/ResponsiveTable";
-import { TableRowLink } from "@dashboard/components/TableRowLink";
 import { PostalCodeRuleInclusionTypeEnum, ShippingMethodTypeFragment } from "@dashboard/graphql";
 import { ArrowDropdown } from "@dashboard/icons/ArrowDropdown";
 import { renderCollection } from "@dashboard/misc";
@@ -13,6 +10,9 @@ import { Skeleton, Text } from "@saleor/macaw-ui-next";
 import { clsx } from "clsx";
 import * as React from "react";
 import { FormattedMessage, useIntl } from "react-intl";
+import { RadioGroupField } from "../../../components/RadioGroupField/RadioGroupField";
+import { ResponsiveTable } from "../../../components/ResponsiveTable/ResponsiveTable";
+import { TableRowLink } from "../../../components/TableRowLink/TableRowLink";
 
 interface ShippingZonePostalCodesProps {
   disabled: boolean;

@@ -5,7 +5,6 @@ import { IMessage } from "@dashboard/components/messages";
 import { useGiftCardPermissions } from "@dashboard/giftCards/hooks/useGiftCardPermissions";
 import { useGiftCardUpdateMutation } from "@dashboard/graphql";
 import { useForm } from "@dashboard/hooks/useForm";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { DialogProps } from "@dashboard/types";
 import { commonErrorMessages } from "@dashboard/utils/errors/common";
 import { Input, Text } from "@saleor/macaw-ui-next";
@@ -16,6 +15,7 @@ import { useDialogFormReset } from "../GiftCardResendCodeDialog/utils";
 import { getGiftCardErrorMessage } from "../messages";
 import { useGiftCardDetails } from "../providers/GiftCardDetailsProvider/hooks/useGiftCardDetails";
 import { giftCardUpdateBalanceDialogMessages as messages } from "./messages";
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
 
 interface GiftCardBalanceUpdateFormData {
   balanceAmount: number;

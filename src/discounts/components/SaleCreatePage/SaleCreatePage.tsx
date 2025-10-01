@@ -1,10 +1,6 @@
 import { validateSalePrice } from "@dashboard/channels/utils";
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
 import { ChannelsAvailability as ChannelsAvailabilityCard } from "@dashboard/components/ChannelsAvailabilityCard";
-import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import { Form } from "@dashboard/components/Form";
-import { DetailPageLayout } from "@dashboard/components/Layouts";
-import { Metadata, MetadataFormData } from "@dashboard/components/Metadata";
 import { Savebar } from "@dashboard/components/Savebar";
 import { createSaleChannelsChangeHandler } from "@dashboard/discounts/handlers";
 import { saleListUrl } from "@dashboard/discounts/urls";
@@ -17,12 +13,16 @@ import {
 import { SubmitPromise } from "@dashboard/hooks/useForm";
 import { useMetadataChangeTrigger } from "@dashboard/utils/metadata/useMetadataChangeTrigger";
 import { useIntl } from "react-intl";
-
-import { DiscountDates } from "../DiscountDates";
-import { ChannelSaleFormData } from "../SaleDetailsPage";
-import { SaleInfo } from "../SaleInfo";
-import { SaleType } from "../SaleType";
-import { SaleValue } from "../SaleValue";
+import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import { Form } from "../../../components/Form/Form";
+import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
+import { Metadata } from "../../../components/Metadata/Metadata";
+import { MetadataFormData } from "../../../components/Metadata/types";
+import { DiscountDates } from "../DiscountDates/DiscountDates";
+import { ChannelSaleFormData } from "../SaleDetailsPage/SaleDetailsPage";
+import { SaleInfo } from "../SaleInfo/SaleInfo";
+import { SaleType } from "../SaleType/SaleType";
+import { SaleValue } from "../SaleValue/SaleValue";
 
 export interface FormData extends MetadataFormData {
   channelListings: ChannelSaleFormData[];

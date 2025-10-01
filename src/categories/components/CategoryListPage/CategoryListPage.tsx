@@ -4,8 +4,6 @@ import { TopNav } from "@dashboard/components/AppLayout/TopNav";
 import { BulkDeleteButton } from "@dashboard/components/BulkDeleteButton";
 import { ButtonGroupWithDropdown } from "@dashboard/components/ButtonGroupWithDropdown";
 import { DashboardCard } from "@dashboard/components/Card";
-import { FilterPresetsSelect } from "@dashboard/components/FilterPresetsSelect";
-import { ListPageLayout } from "@dashboard/components/Layouts";
 import { extensionMountPoints } from "@dashboard/extensions/extensionMountPoints";
 import {
   getExtensionItemsForOverviewCreate,
@@ -19,9 +17,10 @@ import { PageListProps, SearchPageProps, SortPage, TabPageProps } from "@dashboa
 import { Box, Button, ChevronRightIcon } from "@saleor/macaw-ui-next";
 import { useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
-
-import { CategoryListDatagrid } from "../CategoryListDatagrid";
 import { messages } from "./messages";
+import { FilterPresetsSelect } from "../../../components/FilterPresetsSelect/FilterPresetsSelect";
+import { ListPageLayout } from "../../../components/Layouts/List/index";
+import { CategoryListDatagrid } from "../CategoryListDatagrid/CategoryListDatagrid";
 
 interface CategoryTableProps
   extends PageListProps,

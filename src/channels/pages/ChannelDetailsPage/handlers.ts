@@ -1,11 +1,10 @@
-import { FormData } from "@dashboard/channels/components/ChannelForm";
-import { SearchData } from "@dashboard/hooks/makeTopLevelSearch";
 import { getParsedSearchData } from "@dashboard/hooks/makeTopLevelSearch/utils";
 import { getById, getByUnmatchingId } from "@dashboard/misc";
 import { ReorderAction, ReorderEvent } from "@dashboard/types";
-import { move } from "@dashboard/utils/lists";
-
 import { getUpdatedIdsWithNewId, getUpdatedIdsWithoutNewId } from "./utils";
+import { FormData } from "../../components/ChannelForm/ChannelForm";
+import { SearchData } from "../../../hooks/makeTopLevelSearch/makeTopLevelSearch";
+import { move } from "../../../utils/lists/lists";
 
 export function createShippingZoneAddHandler(
   data: FormData,

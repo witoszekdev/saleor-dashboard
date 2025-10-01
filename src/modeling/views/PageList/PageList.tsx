@@ -2,8 +2,6 @@
 import { ActionDialog } from "@dashboard/components/ActionDialog";
 import { useConditionalFilterContext } from "@dashboard/components/ConditionalFilter";
 import { createPageQueryVariables } from "@dashboard/components/ConditionalFilter/queryVariables";
-import { DeleteFilterTabDialog } from "@dashboard/components/DeleteFilterTabDialog";
-import { SaveFilterTabDialog } from "@dashboard/components/SaveFilterTabDialog";
 import { DEFAULT_INITIAL_SEARCH_DATA } from "@dashboard/config";
 import { useFlag } from "@dashboard/featureFlags";
 import {
@@ -12,10 +10,8 @@ import {
   usePageListQuery,
 } from "@dashboard/graphql";
 import { getSearchFetchMoreProps } from "@dashboard/hooks/makeTopLevelSearch/utils";
-import { useFilterPresets } from "@dashboard/hooks/useFilterPresets";
 import { useListSettings } from "@dashboard/hooks/useListSettings";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { usePaginationReset } from "@dashboard/hooks/usePaginationReset";
 import {
   createPaginationState,
@@ -23,7 +19,6 @@ import {
   usePaginator,
 } from "@dashboard/hooks/usePaginator";
 import { useRowSelection } from "@dashboard/hooks/useRowSelection";
-import { PageTypePickerDialog } from "@dashboard/modeling/components/PageTypePickerDialog";
 import { UsePageTypeSearch as usePageTypeSearch } from "@dashboard/searches/usePageTypeSearch";
 import { ListViews } from "@dashboard/types";
 import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
@@ -39,6 +34,11 @@ import { PageListPage } from "../../components/PageListPage/PageListPage";
 import { pageCreateUrl, pageListUrl, PageListUrlDialog, PageListUrlQueryParams } from "../../urls";
 import { getFilterOpts, getFilterQueryParam, storageUtils } from "./filters";
 import { getFilterVariables, getSortQueryVariables } from "./sort";
+import { DeleteFilterTabDialog } from "../../../components/DeleteFilterTabDialog/DeleteFilterTabDialog";
+import { SaveFilterTabDialog } from "../../../components/SaveFilterTabDialog/SaveFilterTabDialog";
+import { useFilterPresets } from "../../../hooks/useFilterPresets/useFilterPresets";
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
+import { PageTypePickerDialog } from "../../components/PageTypePickerDialog/PageTypePickerDialog";
 
 interface PageListProps {
   params: PageListUrlQueryParams;

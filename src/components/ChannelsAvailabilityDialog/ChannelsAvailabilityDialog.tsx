@@ -1,12 +1,11 @@
 // @ts-strict-ignore
 import { Channel } from "@dashboard/channels/utils";
 import { ActionDialog } from "@dashboard/components/ActionDialog";
-import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-
 import { ChannelsAvailabilityContent as ChannelsAvailabilityDialogChannelsList } from "../ChannelsAvailabilityDialogChannelsList";
 import { ChannelsAvailabilityContentWrapper as ChannelsAvailabilityDialogWrapper } from "../ChannelsAvailabilityDialogWrapper";
 import { NoChannels } from "./NoChannels";
 import { useChannelsSearch } from "./utils";
+import { ConfirmButtonTransitionState } from "../ConfirmButton/ConfirmButton";
 
 interface ChannelsAvailabilityDialogProps {
   isSelected: (option: Channel) => boolean;

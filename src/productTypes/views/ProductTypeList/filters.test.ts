@@ -1,13 +1,13 @@
 import { ProductTypeConfigurable, ProductTypeEnum } from "@dashboard/graphql";
-import { createFilterStructure } from "@dashboard/productTypes/components/ProductTypeListPage";
 import { ProductTypeListUrlFilters } from "@dashboard/productTypes/urls";
-import { getFilterQueryParams } from "@dashboard/utils/filters";
 import { stringifyQs } from "@dashboard/utils/urls";
 import { getExistingKeys, setFilterOptsStatus } from "@test/filters";
 import { config } from "@test/intl";
 import { createIntl } from "react-intl";
 
 import { getFilterQueryParam, getFilterVariables } from "./filters";
+import { createFilterStructure } from "../../components/ProductTypeListPage/filters";
+import { getFilterQueryParams } from "../../../utils/filters/filters";
 
 describe("Filtering query params", () => {
   it("should be empty object if no params given", () => {

@@ -14,9 +14,8 @@ import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { getParsedDataForJsonStringField } from "@dashboard/utils/richText/misc";
 import { OutputData } from "@editorjs/editorjs";
 import { IntlShape } from "react-intl";
-
-import { fieldNames } from "./components/TranslationsAttributesPage";
 import { transtionsAttributesPageFieldsMessages as messages } from "./components/TranslationsAttributesPage/messages";
+import { fieldNames } from "./components/TranslationsAttributesPage/TranslationsAttributesPage";
 
 export const getParsedTranslationInputData = ({
   fieldName,

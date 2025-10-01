@@ -1,8 +1,8 @@
-import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import { act, renderHook } from "@testing-library/react-hooks";
 import { ChangeEvent } from "react";
 
 import { useManualRefund } from "./hooks";
+import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
 
 const fakeChangeEvent = (value: string): ChangeEvent<HTMLInputElement> =>
   ({

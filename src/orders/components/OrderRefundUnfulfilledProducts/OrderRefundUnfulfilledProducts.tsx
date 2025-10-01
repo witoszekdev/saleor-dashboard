@@ -2,8 +2,6 @@
 import { DashboardCard } from "@dashboard/components/Card";
 import { Money } from "@dashboard/components/Money";
 import { QuantityInput } from "@dashboard/components/QuantityInput";
-import { TableCellAvatar } from "@dashboard/components/TableCellAvatar";
-import { TableRowLink } from "@dashboard/components/TableRowLink";
 import { OrderRefundDataQuery } from "@dashboard/graphql";
 import { FormsetChange } from "@dashboard/hooks/useFormset";
 import { renderCollection } from "@dashboard/misc";
@@ -13,6 +11,8 @@ import { Button, Skeleton, Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 
 import { OrderRefundFormData } from "../OrderRefundPage/form";
+import { TableCellAvatar } from "../../../components/TableCellAvatar/TableCellAvatar";
+import { TableRowLink } from "../../../components/TableRowLink/TableRowLink";
 
 const useStyles = makeStyles(
   () => ({

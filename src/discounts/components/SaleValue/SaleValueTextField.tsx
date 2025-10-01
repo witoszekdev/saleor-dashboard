@@ -1,9 +1,8 @@
 import { SaleType } from "@dashboard/graphql";
 import { TextField } from "@material-ui/core";
 import { useIntl } from "react-intl";
-
-import { ChannelSaleFormData } from "../SaleDetailsPage";
 import { SaleValueInputOnChangeType } from "./types";
+import { ChannelSaleFormData } from "../SaleDetailsPage/SaleDetailsPage";
 
 interface SaleValueTextFieldProps {
   dataType: SaleType;

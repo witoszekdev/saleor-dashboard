@@ -1,5 +1,5 @@
-import { Locale } from "../Locale";
 import { formatPercantage } from "./utils";
+import { Locale } from "../Locale/Locale";
 
 describe("formatPercantage", () => {
   it('should return "-" when amount is 0', () => {

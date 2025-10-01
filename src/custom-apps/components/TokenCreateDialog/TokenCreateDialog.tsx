@@ -1,10 +1,7 @@
 import { BackButton } from "@dashboard/components/BackButton";
-import { ConfirmButton, ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import { Form } from "@dashboard/components/Form";
 import { DashboardModal } from "@dashboard/components/Modal";
 import { getApiUrl } from "@dashboard/config";
 import { SubmitPromise } from "@dashboard/hooks/useForm";
-import { useModalDialogOpen } from "@dashboard/hooks/useModalDialogOpen";
 import { buttonMessages } from "@dashboard/intl";
 import { TextField } from "@material-ui/core";
 import { Box, Button, Text } from "@saleor/macaw-ui-next";
@@ -12,6 +9,9 @@ import { useEffect, useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
 import { Mono } from "./Mono";
+import { ConfirmButton, ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import { Form } from "../../../components/Form/Form";
+import { useModalDialogOpen } from "../../../hooks/useModalDialogOpen/useModalDialogOpen";
 
 interface TokenCreateDialogProps {
   confirmButtonState: ConfirmButtonTransitionState;

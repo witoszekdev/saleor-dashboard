@@ -1,10 +1,10 @@
 import { OrderLineFragment, OrderStatus } from "@dashboard/graphql";
-import { OrderDetailsDatagrid } from "@dashboard/orders/components/OrderDetailsDatagrid";
 import { Box, Button, PropsWithBox, Text } from "@saleor/macaw-ui-next";
 import { Package } from "lucide-react";
 import { useIntl } from "react-intl";
 
 import { OrderDetailsViewModel } from "./order-details-view-model";
+import { OrderDetailsDatagrid } from "../orders/components/OrderDetailsDatagrid/OrderDetailsDatagrid";
 
 type Props = PropsWithBox<{
   lines: OrderLineFragment[];

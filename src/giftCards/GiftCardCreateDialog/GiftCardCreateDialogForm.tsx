@@ -1,8 +1,6 @@
 // @ts-strict-ignore
 import { BackButton } from "@dashboard/components/BackButton";
-import { ConfirmButton, ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import { DashboardModal } from "@dashboard/components/Modal";
-import { GiftCardTagInput } from "@dashboard/giftCards/components/GiftCardTagInput";
 import {
   GiftCardErrorFragment,
   GiftCardSettingsExpiryTypeEnum,
@@ -19,11 +17,13 @@ import { useIntl } from "react-intl";
 
 import { GiftCardSendToCustomer } from "../components/GiftCardSendToCustomer/GiftCardSendToCustomer";
 import { GiftCardCreateCommonFormData } from "../GiftCardBulkCreateDialog/types";
-import { GiftCardCreateExpirySelect } from "./GiftCardCreateExpirySelect";
 import { GiftCardCreateMoneyInput } from "./GiftCardCreateMoneyInput";
 import { GiftCardCreateRequiresActivationSection } from "./GiftCardCreateRequiresActivationSection";
 import { giftCardCreateMessages as messages } from "./messages";
 import { GiftCardCreateFormCommonProps, GiftCardCreateFormCustomer } from "./types";
+import { ConfirmButton, ConfirmButtonTransitionState } from "../../components/ConfirmButton/ConfirmButton";
+import { GiftCardTagInput } from "../components/GiftCardTagInput/GiftCardTagInput";
+import { GiftCardCreateExpirySelect } from "./GiftCardCreateExpirySelect/GiftCardCreateExpirySelect";
 
 export interface GiftCardCreateFormData extends GiftCardCreateCommonFormData {
   note: string;

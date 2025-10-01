@@ -1,7 +1,5 @@
 // @ts-strict-ignore
-import { ConfirmButton, ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import { DashboardModal } from "@dashboard/components/Modal";
-import { CustomerAddressChoiceCard } from "@dashboard/customers/components/CustomerAddressChoiceCard";
 import { AddressFragment, AddressTypeEnum } from "@dashboard/graphql";
 import { FormChange } from "@dashboard/hooks/useForm";
 import { buttonMessages } from "@dashboard/intl";
@@ -14,6 +12,8 @@ import { FormattedMessage, useIntl } from "react-intl";
 import { dialogMessages as messages } from "./messages";
 import { useStyles } from "./styles";
 import { parseQuery, stringifyAddress } from "./utils";
+import { ConfirmButton, ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import { CustomerAddressChoiceCard } from "../../../customers/components/CustomerAddressChoiceCard/CustomerAddressChoiceCard";
 
 interface OrderCustomerAddressesSearchProps {
   type: AddressTypeEnum;

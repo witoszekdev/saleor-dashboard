@@ -1,10 +1,9 @@
-import { Condition } from "@dashboard/discounts/models";
 import { Box, Button, RemoveIcon } from "@saleor/macaw-ui-next";
-
-import { RuleConditionName } from "../RuleConditionName/";
-import { RuleConditionType } from "../RuleConditionType/";
-import { RuleConditionValues } from "../RuleConditionValues";
-import { RuleInputWrapper } from "../RuleInputWrapper";
+import { Condition } from "../../../../../../models/Condition";
+import { RuleConditionName } from "../RuleConditionName/RuleConditionName";
+import { RuleConditionType } from "../RuleConditionType/RuleConditionType";
+import { RuleConditionValues } from "../RuleConditionValues/RuleConditionValues";
+import { RuleInputWrapper } from "../RuleInputWrapper/RuleInputWrapper";
 
 interface DiscountConditionRowProps {
   conditionIndex: number;

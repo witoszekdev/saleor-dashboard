@@ -20,7 +20,7 @@ import {
 import { CustomerAddresses as CustomerAddressesViewComponent } from "./views/CustomerAddresses";
 import { CustomerCreate as CustomerCreateView } from "./views/CustomerCreate";
 import { CustomerDetailsView as CustomerDetailsViewComponent } from "./views/CustomerDetails";
-import { CustomerList as CustomerListViewComponent } from "./views/CustomerList";
+import { CustomerList as CustomerListViewComponent } from "./views/CustomerList/CustomerList";
 
 const CustomerListView = () => {
   const qs = parseQs(location.search.substr(1)) as any;

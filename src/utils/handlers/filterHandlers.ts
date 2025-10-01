@@ -1,8 +1,7 @@
-import { IFilter } from "@dashboard/components/Filter";
 import { UseNavigatorResult } from "@dashboard/hooks/useNavigator";
 import { ActiveTab, Pagination, Search, Sort } from "@dashboard/types";
-
-import { GetFilterQueryParam, getFilterQueryParams } from "../filters";
+import { IFilter } from "../../components/Filter/types";
+import { GetFilterQueryParam, getFilterQueryParams } from "../filters/filters";
 
 type RequiredParams = ActiveTab & Search & Sort<any> & Pagination & { presestesChanged?: string };
 type CreateUrl = (params: RequiredParams) => string;

@@ -1,9 +1,9 @@
 import { CollectionPublished } from "@dashboard/graphql";
 
 import { Handler, NoopValuesHandler } from "../../API/Handler";
-import { FilterElement } from "../../FilterElement";
 import { QueryVarsBuilderUtils } from "../utils";
 import { FilterOnlyQueryVarsBuilder } from "./types";
+import { FilterElement } from "../../FilterElement/FilterElement";
 
 /** Collections don't use boolean values like other filters, we need to use enum */
 export class CollectionPublishedQueryVarsBuilder

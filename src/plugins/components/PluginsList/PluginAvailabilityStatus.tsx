@@ -1,11 +1,11 @@
 // @ts-strict-ignore
-import { Pill } from "@dashboard/components/Pill";
 import { PluginBaseFragment } from "@dashboard/graphql";
 import { isPluginGlobal } from "@dashboard/plugins/views/utils";
 import { useIntl } from "react-intl";
 
 import { pluginAvailabilityStatusMessages as messages, pluginStatusMessages } from "./messages";
 import { getActiveChannelConfigsCount } from "./utils";
+import { Pill } from "../../../components/Pill/Pill";
 
 interface PluginAvailabilityStatusProps {
   plugin: PluginBaseFragment;

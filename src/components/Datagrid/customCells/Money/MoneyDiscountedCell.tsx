@@ -1,5 +1,4 @@
 // @ts-strict-ignore
-import { Locale } from "@dashboard/components/Locale";
 import { OrderDiscountCommonModal } from "@dashboard/orders/components/OrderDiscountCommonModal/OrderDiscountCommonModal";
 import {
   ORDER_LINE_DISCOUNT,
@@ -11,6 +10,7 @@ import { useCallback } from "react";
 
 import { cellHeight } from "../../styles";
 import { drawCurrency, drawLineCrossedPrice, drawPrice, getFormattedMoney } from "./utils";
+import { Locale } from "../../../Locale/Locale";
 
 interface MoneyDiscountedCellProps {
   readonly kind: "money-discounted-cell";

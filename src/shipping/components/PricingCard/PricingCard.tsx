@@ -1,10 +1,6 @@
 // @ts-strict-ignore
 import { ChannelShippingData } from "@dashboard/channels/utils";
 import { DashboardCard } from "@dashboard/components/Card";
-import { PriceField } from "@dashboard/components/PriceField";
-import { ResponsiveTable } from "@dashboard/components/ResponsiveTable";
-import { TableHead } from "@dashboard/components/TableHead";
-import { TableRowLink } from "@dashboard/components/TableRowLink";
 import { ShippingChannelsErrorFragment } from "@dashboard/graphql";
 import { getFormChannelError, getFormChannelErrors } from "@dashboard/utils/errors";
 import { getShippingErrorMessage } from "@dashboard/utils/errors/shipping";
@@ -13,6 +9,10 @@ import { Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 
 import { useStyles } from "./styles";
+import { PriceField } from "../../../components/PriceField/PriceField";
+import { ResponsiveTable } from "../../../components/ResponsiveTable/ResponsiveTable";
+import { TableHead } from "../../../components/TableHead/TableHead";
+import { TableRowLink } from "../../../components/TableRowLink/TableRowLink";
 
 interface Value {
   maxValue: string;

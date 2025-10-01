@@ -1,13 +1,12 @@
 import { BulkDeleteButton } from "@dashboard/components/BulkDeleteButton";
 import { DashboardCard } from "@dashboard/components/Card";
-import { InternalLink } from "@dashboard/components/InternalLink";
 import { CategoryDetailsQuery } from "@dashboard/graphql";
 import { productAddUrl, productListUrl } from "@dashboard/products/urls";
 import { RelayToFlat } from "@dashboard/types";
 import { Box, Button } from "@saleor/macaw-ui-next";
 import { FormattedMessage } from "react-intl";
-
-import { CategoryProductListDatagrid } from "../CategoryProductListDatagrid";
+import { InternalLink } from "../../../components/InternalLink/InternalLink";
+import { CategoryProductListDatagrid } from "../CategoryProductListDatagrid/CategoryProductListDatagrid";
 
 interface CategoryProductsProps {
   category: CategoryDetailsQuery["category"] | undefined | null;

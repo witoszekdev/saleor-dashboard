@@ -1,4 +1,4 @@
-import { MetadataFormData } from "@dashboard/components/Metadata";
+import { MetadataFormData } from "../../components/Metadata/types";
 
 function getMetadata(
   data: MetadataFormData,

@@ -10,9 +10,8 @@ import { shippingZoneAddUrl } from "@dashboard/shipping/urls";
 import { PageListProps, SearchPageProps, UserPermissionProps } from "@dashboard/types";
 import { Box, Button } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
-
-import { ShippingZoneListDatagrid } from "../ShippingZonesListDatagrid";
 import { messages } from "./messages";
+import { ShippingZoneListDatagrid } from "../ShippingZonesListDatagrid/ShippingZonesListDatagrid";
 
 interface ShippingZonesListPageProps extends PageListProps, SearchPageProps, UserPermissionProps {
   defaultWeightUnit: WeightUnitsEnum | undefined;

@@ -1,5 +1,4 @@
 // @ts-strict-ignore
-import { MetadataFormData } from "@dashboard/components/Metadata";
 import { giftCardUpdateFormMessages } from "@dashboard/giftCards/GiftCardsList/messages";
 import { useGiftCardPermissions } from "@dashboard/giftCards/hooks/useGiftCardPermissions";
 import {
@@ -12,7 +11,6 @@ import {
 import { MutationResultWithOpts } from "@dashboard/hooks/makeMutation";
 import { FormChange, useForm, UseFormResult } from "@dashboard/hooks/useForm";
 import { useHandleFormSubmit } from "@dashboard/hooks/useHandleFormSubmit";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { getDefaultNotifierSuccessErrorData } from "@dashboard/hooks/useNotifier/utils";
 import { getFormErrors } from "@dashboard/utils/errors";
 import { createMetadataUpdateHandler } from "@dashboard/utils/handlers/metadataUpdateHandler";
@@ -29,6 +27,8 @@ import {
   initialData as emptyFormData,
 } from "../../../GiftCardCreateDialog/GiftCardCreateDialogForm";
 import { useGiftCardDetails } from "../GiftCardDetailsProvider/hooks/useGiftCardDetails";
+import { MetadataFormData } from "../../../../components/Metadata/types";
+import { useNotifier } from "../../../../hooks/useNotifier/useNotifier";
 
 interface GiftCardUpdateFormProviderProps {
   children: React.ReactNode;

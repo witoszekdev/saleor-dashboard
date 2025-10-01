@@ -2,7 +2,6 @@
 import { DashboardModal } from "@dashboard/components/Modal";
 import { CountryFragment } from "@dashboard/graphql";
 import { useLocalSearch } from "@dashboard/hooks/useLocalSearch";
-import { useModalDialogOpen } from "@dashboard/hooks/useModalDialogOpen";
 import { buttonMessages } from "@dashboard/intl";
 import { taxesMessages } from "@dashboard/taxes/messages";
 import { Divider, FormControlLabel, InputAdornment, Radio, TextField } from "@material-ui/core";
@@ -12,6 +11,7 @@ import { Fragment, useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
 import { useStyles } from "./styles";
+import { useModalDialogOpen } from "../../../hooks/useModalDialogOpen/useModalDialogOpen";
 
 interface TaxCountryDialogProps {
   open: boolean;

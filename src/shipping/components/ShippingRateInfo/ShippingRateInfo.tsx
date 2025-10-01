@@ -1,7 +1,6 @@
 // @ts-strict-ignore
 import { DashboardCard } from "@dashboard/components/Card";
 import { CardSpacer } from "@dashboard/components/CardSpacer";
-import { RichTextEditor } from "@dashboard/components/RichTextEditor";
 import { RichTextEditorLoading } from "@dashboard/components/RichTextEditor/RichTextEditorLoading";
 import { ShippingErrorFragment } from "@dashboard/graphql";
 import { commonMessages } from "@dashboard/intl";
@@ -13,6 +12,7 @@ import { TextField } from "@material-ui/core";
 import { makeStyles } from "@saleor/macaw-ui";
 import * as React from "react";
 import { defineMessages, useIntl } from "react-intl";
+import { RichTextEditor } from "../../../components/RichTextEditor/RichTextEditor";
 
 const messages = defineMessages({
   maxDays: {

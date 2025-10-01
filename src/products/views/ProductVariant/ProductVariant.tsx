@@ -12,7 +12,6 @@ import {
 } from "@dashboard/attributes/utils/handlers";
 import { createVariantChannels } from "@dashboard/channels/utils";
 import { AttributeInput } from "@dashboard/components/Attributes";
-import { NotFoundPage } from "@dashboard/components/NotFoundPage";
 import { WindowTitle } from "@dashboard/components/WindowTitle";
 import { DEFAULT_INITIAL_SEARCH_DATA } from "@dashboard/config";
 import {
@@ -30,7 +29,6 @@ import {
   useVariantUpdateMutation,
 } from "@dashboard/graphql";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { useOnSetDefaultVariant } from "@dashboard/hooks/useOnSetDefaultVariant";
 import { useShop } from "@dashboard/hooks/useShop";
 import { commonMessages } from "@dashboard/intl";
@@ -54,8 +52,6 @@ import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { warehouseAddPath } from "@dashboard/warehouses/urls";
 import { useEffect, useState } from "react";
 import { useIntl } from "react-intl";
-
-import { ProductVariantDeleteDialog } from "../../components/ProductVariantDeleteDialog";
 import { ProductVariantUpdateSubmitData } from "../../components/ProductVariantPage/form";
 import { ProductVariantPage } from "../../components/ProductVariantPage/ProductVariantPage";
 import {
@@ -66,6 +62,9 @@ import {
 } from "../../urls";
 import { createVariantReorderHandler } from "./../ProductUpdate/handlers";
 import { useSubmitChannels } from "./useSubmitChannels";
+import { NotFoundPage } from "../../../components/NotFoundPage/NotFoundPage";
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
+import { ProductVariantDeleteDialog } from "../../components/ProductVariantDeleteDialog/ProductVariantDeleteDialog";
 
 interface ProductUpdateProps {
   variantId: string;

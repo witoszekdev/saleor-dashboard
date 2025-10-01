@@ -1,7 +1,6 @@
 // @ts-strict-ignore
 import { ApolloClient, useApolloClient } from "@apollo/client";
 import { IMessageContext } from "@dashboard/components/messages";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { ReactNode, useEffect, useRef } from "react";
 import { IntlShape, useIntl } from "react-intl";
 
@@ -9,6 +8,7 @@ import { BackgroundTasksContext } from "./context";
 import { checkExportFileStatus, checkOrderInvoicesStatus } from "./queries";
 import { handleTask, queueCustom, queueExport, queueInvoiceGenerate } from "./tasks";
 import { QueuedTask, Task, TaskData, TaskStatus } from "./types";
+import { useNotifier } from "../../hooks/useNotifier/useNotifier";
 
 export const backgroundTasksRefreshTime = 15 * 1000;
 

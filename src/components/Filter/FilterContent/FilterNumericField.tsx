@@ -1,9 +1,9 @@
-import { FieldType, FilterFieldBaseProps } from "@dashboard/components/Filter";
 import { Arrow } from "@dashboard/components/Filter/Arrow";
 import { TextField } from "@material-ui/core";
 import { FormattedMessage } from "react-intl";
 
 import { filterTestingContext, useCommonStyles } from "./utils";
+import { FieldType, FilterFieldBaseProps } from "../types";
 
 type FilterNumericFieldProps = FilterFieldBaseProps<string, FieldType.number | FieldType.price> & {
   currencySymbol: string | undefined;

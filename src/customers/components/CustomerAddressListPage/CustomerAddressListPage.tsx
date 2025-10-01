@@ -1,6 +1,5 @@
 // @ts-strict-ignore
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
-import { ListPageLayout } from "@dashboard/components/Layouts";
 import { customerUrl } from "@dashboard/customers/urls";
 import { AddressTypeEnum, CustomerAddressesFragment } from "@dashboard/graphql";
 import { getStringOrPlaceholder, renderCollection } from "@dashboard/misc";
@@ -9,6 +8,7 @@ import { Box, Button, Text } from "@saleor/macaw-ui-next";
 import { defineMessages, useIntl } from "react-intl";
 
 import { CustomerAddress } from "../CustomerAddress/CustomerAddress";
+import { ListPageLayout } from "../../../components/Layouts/List/index";
 
 interface CustomerAddressListPageProps {
   customer: CustomerAddressesFragment;

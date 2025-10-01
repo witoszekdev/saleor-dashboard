@@ -1,4 +1,3 @@
-import { FilterErrorMessages, IFilter } from "@dashboard/components/Filter";
 import { FilterProps, SearchPageProps } from "@dashboard/types";
 import { Box } from "@saleor/macaw-ui-next";
 import { ReactNode } from "react";
@@ -7,6 +6,7 @@ import { ExpressionFilters } from "./components/ExpressionFilters";
 import { FiltersSelect } from "./components/FiltersSelect";
 import { LegacyFiltersPresetsAlert } from "./components/LegacyFiltersPresetsAlert";
 import { SearchInput } from "./components/SearchInput";
+import { FilterErrorMessages, IFilter } from "../../Filter/types";
 
 interface NewFilterProps extends SearchPageProps {
   type: "expression-filter";

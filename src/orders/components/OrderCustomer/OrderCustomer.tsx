@@ -2,8 +2,6 @@
 import { AddressFormatter } from "@dashboard/components/AddressFormatter";
 import { DashboardCard } from "@dashboard/components/Card";
 import { Combobox } from "@dashboard/components/Combobox";
-import { ExternalLink } from "@dashboard/components/ExternalLink";
-import { Form } from "@dashboard/components/Form";
 import { Hr } from "@dashboard/components/Hr";
 import { Link } from "@dashboard/components/Link";
 import { RequirePermissions } from "@dashboard/components/RequirePermissions";
@@ -28,6 +26,8 @@ import { maybe } from "../../../misc";
 import { AddressTextError } from "./AddrssTextError";
 import { PickupAnnotation } from "./PickupAnnotation";
 import { useStyles } from "./styles";
+import { ExternalLink } from "../../../components/ExternalLink/ExternalLink";
+import { Form } from "../../../components/Form/Form";
 
 export interface CustomerEditData {
   user?: string;

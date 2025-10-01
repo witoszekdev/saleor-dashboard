@@ -1,5 +1,4 @@
 // @ts-strict-ignore
-import { ChannelDeleteDialog } from "@dashboard/channels/components/ChannelDeleteDialog";
 import { FormData } from "@dashboard/channels/components/ChannelForm/ChannelForm";
 import { getChannelsCurrencyChoices } from "@dashboard/channels/utils";
 import { useChannelWarehousesReorder } from "@dashboard/channels/views/ChannelDetails/useChannelWarehouseReorder";
@@ -17,7 +16,6 @@ import {
 } from "@dashboard/graphql";
 import { getSearchFetchMoreProps } from "@dashboard/hooks/makeTopLevelSearch/utils";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { getDefaultNotifierSuccessErrorData } from "@dashboard/hooks/useNotifier/utils";
 import { useShop } from "@dashboard/hooks/useShop";
 import { extractMutationErrors } from "@dashboard/misc";
@@ -25,11 +23,12 @@ import { getChannelsErrorMessage } from "@dashboard/utils/errors/channels";
 import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { useIntl } from "react-intl";
-
-import { ChannelDetailsPage } from "../../pages/ChannelDetailsPage";
 import { channelsListUrl, channelUrl, ChannelUrlDialog, ChannelUrlQueryParams } from "../../urls";
 import { useShippingZones } from "./useShippingZones";
 import { useWarehouses } from "./useWarehouses";
+import { ChannelDeleteDialog } from "../../components/ChannelDeleteDialog/ChannelDeleteDialog";
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
+import { ChannelDetailsPage } from "../../pages/ChannelDetailsPage/ChannelDetailsPage";
 
 interface ChannelDetailsProps {
   id: string;

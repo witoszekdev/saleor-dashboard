@@ -1,9 +1,6 @@
 import { useContextualLink } from "@dashboard/components/AppLayout/ContextualLinks/useContextualLink";
-import { ListFilters } from "@dashboard/components/AppLayout/ListFilters";
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
 import { DashboardCard } from "@dashboard/components/Card";
-import { FilterPresetsSelect } from "@dashboard/components/FilterPresetsSelect";
-import { ListPageLayout } from "@dashboard/components/Layouts";
 import { LimitReachedAlert } from "@dashboard/components/LimitReachedAlert";
 import { configurationMenuUrl } from "@dashboard/configuration";
 import { useFlag } from "@dashboard/featureFlags";
@@ -16,9 +13,11 @@ import { hasLimits, isLimitReached } from "@dashboard/utils/limits";
 import { Box, Button, ChevronRightIcon } from "@saleor/macaw-ui-next";
 import { useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
-
-import { StaffListDatagrid } from "../StaffListDatagrid";
 import { createFilterStructure, StaffFilterKeys, StaffListFilterOpts } from "./filters";
+import { ListFilters } from "../../../components/AppLayout/ListFilters/ListFilters";
+import { FilterPresetsSelect } from "../../../components/FilterPresetsSelect/FilterPresetsSelect";
+import { ListPageLayout } from "../../../components/Layouts/List/index";
+import { StaffListDatagrid } from "../StaffListDatagrid/StaffListDatagrid";
 
 interface StaffListPageProps
   extends ListProps,

@@ -1,9 +1,5 @@
 import { DashboardCard } from "@dashboard/components/Card";
-import { Pill } from "@dashboard/components/Pill";
-import { ResponsiveTable } from "@dashboard/components/ResponsiveTable";
 import { TableButtonWrapper } from "@dashboard/components/TableButtonWrapper/TableButtonWrapper";
-import { TableCellHeader } from "@dashboard/components/TableCellHeader";
-import { TableRowLink } from "@dashboard/components/TableRowLink";
 import { CustomAppUrls } from "@dashboard/custom-apps/urls";
 import { isUnnamed } from "@dashboard/custom-apps/utils";
 import { WebhookFragment } from "@dashboard/graphql";
@@ -18,6 +14,10 @@ import { FormattedMessage, useIntl } from "react-intl";
 
 import { messages } from "./messages";
 import { useStyles } from "./styles";
+import { Pill } from "../../../components/Pill/Pill";
+import { ResponsiveTable } from "../../../components/ResponsiveTable/ResponsiveTable";
+import { TableCellHeader } from "../../../components/TableCellHeader/TableCellHeader";
+import { TableRowLink } from "../../../components/TableRowLink/TableRowLink";
 
 interface WebhooksListProps {
   webhooks: WebhookFragment[];

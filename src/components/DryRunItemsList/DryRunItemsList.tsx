@@ -1,7 +1,6 @@
 // @ts-strict-ignore
 
 import { useStyles } from "@dashboard/custom-apps/components/WebhookEvents/styles";
-import { useQuery } from "@dashboard/hooks/graphql";
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { Radio } from "@material-ui/core";
 import {
@@ -20,6 +19,7 @@ import { useIntl } from "react-intl";
 import { Avatar } from "../TableCellAvatar/Avatar";
 import { messages } from "./messages";
 import { DocumentMap, TData, TVariables } from "./utils";
+import { useQuery } from "../../hooks/makeQuery";
 
 interface DryRunItemsListProps {
   objectId: string;

@@ -3,8 +3,6 @@ import { AssignAttributeDialog } from "@dashboard/components/AssignAttributeDial
 import { AttributeUnassignDialog } from "@dashboard/components/AttributeUnassignDialog";
 import { BulkAttributeUnassignDialog } from "@dashboard/components/BulkAttributeUnassignDialog";
 import { Button } from "@dashboard/components/Button";
-import { NotFoundPage } from "@dashboard/components/NotFoundPage";
-import { TypeDeleteWarningDialog } from "@dashboard/components/TypeDeleteWarningDialog";
 import { WindowTitle } from "@dashboard/components/WindowTitle";
 import { DEFAULT_INITIAL_SEARCH_DATA } from "@dashboard/config";
 import {
@@ -20,7 +18,6 @@ import {
 import { useBulkActions } from "@dashboard/hooks/useBulkActions";
 import { useListSelectedItems } from "@dashboard/hooks/useListSelectedItems";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { commonMessages } from "@dashboard/intl";
 import { getStringOrPlaceholder } from "@dashboard/misc";
 import { ReorderEvent } from "@dashboard/types";
@@ -30,9 +27,12 @@ import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { FormattedMessage, useIntl } from "react-intl";
 
 import { UseAvailablePageAttributesSearch as useAvailablePageAttributeSearch } from "../../searches/useAvailablePageAttributesSearch";
-import { PageTypeDetailsPage, PageTypeForm } from "../components/PageTypeDetailsPage";
-import { usePageTypeDelete } from "../hooks/usePageTypeDelete";
 import { pageTypeListUrl, pageTypeUrl, PageTypeUrlQueryParams } from "../urls";
+import { NotFoundPage } from "../../components/NotFoundPage/NotFoundPage";
+import { TypeDeleteWarningDialog } from "../../components/TypeDeleteWarningDialog/TypeDeleteWarningDialog";
+import { useNotifier } from "../../hooks/useNotifier/useNotifier";
+import { PageTypeDetailsPage, PageTypeForm } from "../components/PageTypeDetailsPage/PageTypeDetailsPage";
+import { usePageTypeDelete } from "../hooks/usePageTypeDelete/usePageTypeDelete";
 
 interface PageTypeDetailsProps {
   id: string;

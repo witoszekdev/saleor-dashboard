@@ -1,9 +1,8 @@
-import { Rule } from "@dashboard/discounts/models";
-
 import { mapConditionToOption, splitConditions } from "../../utils";
-import { RuleSummaryChips } from "../RuleSummaryChips";
-import { RuleSummaryTooltip } from "../RuleSummaryTooltip";
 import { useEnrichConditions } from "./useEnrichConditions";
+import { Rule } from "../../../../../../../../models/Rule";
+import { RuleSummaryChips } from "../RuleSummaryChips/RuleSummaryChips";
+import { RuleSummaryTooltip } from "../RuleSummaryTooltip/RuleSummaryTooltip";
 
 interface RuleChipsProps {
   rule: Rule;

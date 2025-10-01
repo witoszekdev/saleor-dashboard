@@ -1,14 +1,13 @@
 import { useUser } from "@dashboard/auth";
-import { PermissionData } from "@dashboard/permissionGroups/components/PermissionGroupDetailsPage";
 import { Box, Text } from "@saleor/macaw-ui-next";
 import { ChangeEvent } from "react";
 import * as React from "react";
 import { useIntl } from "react-intl";
-
-import { Header } from "./components/Header";
-import { PermissionsExceeded } from "./components/PermissionExeeded";
-import { PermissionList } from "./components/PermissionList";
 import { messages } from "./messages";
+import { PermissionData } from "../../permissionGroups/components/PermissionGroupDetailsPage/PermissionGroupDetailsPage";
+import { Header } from "./components/Header/Header";
+import { PermissionsExceeded } from "./components/PermissionExeeded/PermissionExeeded";
+import { PermissionList } from "./components/PermissionList/PermissionList";
 
 interface AccountPermissionsProps {
   permissions: PermissionData[];

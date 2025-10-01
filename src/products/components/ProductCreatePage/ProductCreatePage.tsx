@@ -10,11 +10,7 @@ import { TopNav } from "@dashboard/components/AppLayout/TopNav";
 import { AssignAttributeValueDialog } from "@dashboard/components/AssignAttributeValueDialog";
 import { AttributeInput, Attributes } from "@dashboard/components/Attributes";
 import { ChannelsAvailability as ChannelsAvailabilityCard } from "@dashboard/components/ChannelsAvailabilityCard";
-import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import { DetailPageLayout } from "@dashboard/components/Layouts";
-import { Metadata } from "@dashboard/components/Metadata";
 import { Savebar } from "@dashboard/components/Savebar";
-import { SeoForm } from "@dashboard/components/SeoForm";
 import {
   PermissionEnum,
   ProductChannelListingErrorFragment,
@@ -32,7 +28,6 @@ import {
 import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { useStateFromProps } from "@dashboard/hooks/useStateFromProps";
 import { ProductOrganization } from "@dashboard/products/components/ProductOrganization/ProductOrganization";
-import { ProductVariantPrice } from "@dashboard/products/components/ProductVariantPrice";
 import { ProductCreateUrlQueryParams, productListUrl } from "@dashboard/products/urls";
 import { getChoices } from "@dashboard/products/utils/data";
 import { getChoicesWithAncestors } from "@dashboard/products/utils/utils";
@@ -42,16 +37,21 @@ import { Box, Option } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
 
 import { FetchMoreProps, RelayToFlat } from "../../../types";
-import { ProductDetailsForm } from "../ProductDetailsForm";
-import { ProductShipping } from "../ProductShipping";
-import { ProductStocks } from "../ProductStocks";
-import { ProductTaxes } from "../ProductTaxes";
 import {
   ProductCreateData,
   ProductCreateForm,
   ProductCreateFormData,
   ProductCreateHandlers,
 } from "./form";
+import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
+import { Metadata } from "../../../components/Metadata/Metadata";
+import { SeoForm } from "../../../components/SeoForm/SeoForm";
+import { ProductVariantPrice } from "../ProductVariantPrice/ProductVariantPrice";
+import { ProductDetailsForm } from "../ProductDetailsForm/ProductDetailsForm";
+import { ProductShipping } from "../ProductShipping/ProductShipping";
+import { ProductStocks } from "../ProductStocks/ProductStocks";
+import { ProductTaxes } from "../ProductTaxes/ProductTaxes";
 
 interface ProductCreatePageProps {
   errors: ProductErrorWithAttributesFragment[];

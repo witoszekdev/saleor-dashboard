@@ -2,11 +2,8 @@
 import { categoryUrl } from "@dashboard/categories/urls";
 import { DashboardCard } from "@dashboard/components/Card";
 import { Checkbox } from "@dashboard/components/Checkbox";
-import { ResponsiveTable } from "@dashboard/components/ResponsiveTable";
 import { TableButtonWrapper } from "@dashboard/components/TableButtonWrapper/TableButtonWrapper";
-import { TableHead } from "@dashboard/components/TableHead";
 import { TablePaginationWithContext } from "@dashboard/components/TablePagination";
-import { TableRowLink } from "@dashboard/components/TableRowLink";
 import { CategoryWithTotalProductsFragment } from "@dashboard/graphql";
 import { TableBody, TableCell, TableFooter } from "@material-ui/core";
 import { DeleteIcon, IconButton } from "@saleor/macaw-ui";
@@ -17,6 +14,9 @@ import { renderCollection } from "../../../misc";
 import { ListActions, ListProps } from "../../../types";
 import { messages } from "./messages";
 import { useStyles } from "./styles";
+import { ResponsiveTable } from "../../../components/ResponsiveTable/ResponsiveTable";
+import { TableHead } from "../../../components/TableHead/TableHead";
+import { TableRowLink } from "../../../components/TableRowLink/TableRowLink";
 
 interface DiscountCategoriesProps extends ListProps, ListActions {
   categories: CategoryWithTotalProductsFragment[];

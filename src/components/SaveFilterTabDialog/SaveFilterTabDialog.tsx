@@ -1,4 +1,3 @@
-import { ConfirmButton, ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import { DashboardModal } from "@dashboard/components/Modal";
 import { buttonMessages } from "@dashboard/intl";
 import { TextField } from "@material-ui/core";
@@ -6,7 +5,8 @@ import { useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
 import { BackButton } from "../BackButton";
-import { Form } from "../Form";
+import { ConfirmButton, ConfirmButtonTransitionState } from "../ConfirmButton/ConfirmButton";
+import { Form } from "../Form/Form";
 
 export interface SaveFilterTabDialogFormData {
   name: string;

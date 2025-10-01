@@ -1,11 +1,10 @@
 import { useIntl } from "react-intl";
-
-import { ProductCreateData } from "../components/ProductCreatePage";
 import {
   ProductVariantType,
   validateProductCreateData,
   validateProductVariant,
 } from "./validation";
+import { ProductCreateData } from "../components/ProductCreatePage/form";
 
 jest.mock("react-intl", () => ({
   useIntl: jest.fn(() => ({

@@ -5,17 +5,16 @@ import {
   useUpdateCategoryTranslationsMutation,
 } from "@dashboard/graphql";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { useShop } from "@dashboard/hooks/useShop";
 import { commonMessages } from "@dashboard/intl";
 import { extractMutationErrors } from "@dashboard/misc";
 import { stringifyQs } from "@dashboard/utils/urls";
 import { OutputData } from "@editorjs/editorjs";
 import { useIntl } from "react-intl";
-
-import { TranslationsCategoriesPage } from "../components/TranslationsCategoriesPage";
 import { TranslationField, TranslationInputFieldName } from "../types";
 import { getParsedTranslationInputData } from "../utils";
+import { useNotifier } from "../../hooks/useNotifier/useNotifier";
+import { TranslationsCategoriesPage } from "../components/TranslationsCategoriesPage/TranslationsCategoriesPage";
 
 type HandleSubmitData = string | OutputData;
 

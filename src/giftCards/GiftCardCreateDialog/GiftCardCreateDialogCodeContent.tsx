@@ -1,11 +1,11 @@
 import { DashboardModal } from "@dashboard/components/Modal";
 import { useClipboard } from "@dashboard/hooks/useClipboard";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { buttonMessages } from "@dashboard/intl";
 import { Button, Text } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
 
 import { giftCardCreateMessages as messages } from "./messages";
+import { useNotifier } from "../../hooks/useNotifier/useNotifier";
 
 interface GiftCardCreateDialogCodeContentProps {
   cardCode: string;

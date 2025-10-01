@@ -6,17 +6,16 @@ import {
   useUpdatePageTranslationsMutation,
 } from "@dashboard/graphql";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { useShop } from "@dashboard/hooks/useShop";
 import { commonMessages } from "@dashboard/intl";
 import { extractMutationErrors } from "@dashboard/misc";
 import { stringifyQs } from "@dashboard/utils/urls";
 import { OutputData } from "@editorjs/editorjs";
 import { useIntl } from "react-intl";
-
-import { TranslationsPagesPage } from "../components/TranslationsPagesPage";
 import { PageTranslationInputFieldName, TranslationField } from "../types";
 import { getAttributeValueTranslationsInputData, getParsedTranslationInputData } from "../utils";
+import { useNotifier } from "../../hooks/useNotifier/useNotifier";
+import { TranslationsPagesPage } from "../components/TranslationsPagesPage/TranslationsPagesPage";
 
 export interface TranslationsPagesQueryParams {
   activeField: string;

@@ -2,11 +2,11 @@ import { ChannelsAvailabilityDialog } from "@dashboard/components/ChannelsAvaila
 import { ChannelFragment } from "@dashboard/graphql";
 import { useStateFromProps } from "@dashboard/hooks/useStateFromProps";
 import { DialogProps } from "@dashboard/types";
-import { arrayDiff } from "@dashboard/utils/arrays";
-import { toggle } from "@dashboard/utils/lists";
 import { useIntl } from "react-intl";
 
 import { ProductUpdateData } from "./types";
+import { arrayDiff } from "../../../utils/arrays/arrays";
+import { toggle } from "../../../utils/lists/lists";
 
 export type ProductChannelsListingDialogSubmit = (
   update: Record<"added" | "removed", string[]>,

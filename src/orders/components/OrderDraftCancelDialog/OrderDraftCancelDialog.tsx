@@ -1,11 +1,11 @@
 import { ActionDialog } from "@dashboard/components/ActionDialog";
-import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import { FormSpacer } from "@dashboard/components/FormSpacer";
 import { OrderErrorFragment } from "@dashboard/graphql";
-import { useModalDialogErrors } from "@dashboard/hooks/useModalDialogErrors";
 import { getOrderErrorMessage } from "@dashboard/utils/errors/order";
 import { Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
+import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import { useModalDialogErrors } from "../../../hooks/useModalDialogErrors/useModalDialogErrors";
 
 interface OrderDraftCancelDialogProps {
   confirmButtonState: ConfirmButtonTransitionState;

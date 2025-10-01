@@ -1,8 +1,6 @@
 import { DashboardCard } from "@dashboard/components/Card";
 import { DateTime } from "@dashboard/components/Date";
 import { Money } from "@dashboard/components/Money";
-import { ResponsiveTable } from "@dashboard/components/ResponsiveTable";
-import { TableRowLink } from "@dashboard/components/TableRowLink";
 import { CustomerDetailsQuery } from "@dashboard/graphql";
 import { OrderPaymentStatusPill } from "@dashboard/orders/components/OrderPaymentSummaryCard/components/OrderPaymentStatusPill";
 import { orderUrl } from "@dashboard/orders/urls";
@@ -13,6 +11,8 @@ import { FormattedMessage, useIntl } from "react-intl";
 import { Link } from "react-router-dom";
 
 import { renderCollection } from "../../../misc";
+import { ResponsiveTable } from "../../../components/ResponsiveTable/ResponsiveTable";
+import { TableRowLink } from "../../../components/TableRowLink/TableRowLink";
 
 const textRightStyle = sprinkles({
   textAlign: "right",

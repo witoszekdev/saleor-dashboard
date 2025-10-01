@@ -1,8 +1,6 @@
 // @ts-strict-ignore
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
 import { DashboardCard } from "@dashboard/components/Card";
-import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import { Form } from "@dashboard/components/Form";
 import { Grid } from "@dashboard/components/Grid";
 import { Savebar } from "@dashboard/components/Savebar";
 import { ProductMediaType } from "@dashboard/graphql";
@@ -13,8 +11,9 @@ import { TextField } from "@material-ui/core";
 import { makeStyles } from "@saleor/macaw-ui";
 import { Skeleton, vars } from "@saleor/macaw-ui-next";
 import { defineMessages, useIntl } from "react-intl";
-
-import { ProductMediaNavigation } from "../ProductMediaNavigation";
+import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import { Form } from "../../../components/Form/Form";
+import { ProductMediaNavigation } from "../ProductMediaNavigation/ProductMediaNavigation";
 
 const messages = defineMessages({
   editMedia: {

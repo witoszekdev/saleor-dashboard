@@ -2,11 +2,7 @@
 import { AccountPermissions } from "@dashboard/components/AccountPermissions";
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
 import { CardSpacer } from "@dashboard/components/CardSpacer";
-import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import { Form } from "@dashboard/components/Form";
-import { DetailPageLayout } from "@dashboard/components/Layouts";
 import { Savebar } from "@dashboard/components/Savebar";
-import { WebhooksList } from "@dashboard/custom-apps/components/WebhooksList";
 import { CustomAppUrls } from "@dashboard/custom-apps/urls";
 import { ExtensionsUrls } from "@dashboard/extensions/urls";
 import { useFlag } from "@dashboard/featureFlags";
@@ -22,11 +18,14 @@ import { getFormErrors } from "@dashboard/utils/errors";
 import { getAppErrorMessage } from "@dashboard/utils/errors/app";
 import { Button } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
-
-import { CustomAppDefaultToken } from "../CustomAppDefaultToken";
-import { CustomAppInformation } from "../CustomAppInformation";
-import { CustomAppTokens } from "../CustomAppTokens";
 import { useStyles } from "./styles";
+import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import { Form } from "../../../components/Form/Form";
+import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
+import { WebhooksList } from "../WebhooksList/WebhooksList";
+import { CustomAppDefaultToken } from "../CustomAppDefaultToken/CustomAppDefaultToken";
+import { CustomAppInformation } from "../CustomAppInformation/CustomAppInformation";
+import { CustomAppTokens } from "../CustomAppTokens/CustomAppTokens";
 
 export interface CustomAppDetailsPageFormData {
   hasFullAccess: boolean;

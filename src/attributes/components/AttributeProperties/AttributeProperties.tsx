@@ -8,8 +8,7 @@ import { getFormErrors } from "@dashboard/utils/errors";
 import { getAttributeErrorMessage } from "@dashboard/utils/errors/attribute";
 import { Box, Checkbox, Input, Paragraph, Text, Toggle } from "@saleor/macaw-ui-next";
 import { defineMessages, FormattedMessage, useIntl } from "react-intl";
-
-import { AttributePageFormData } from "../AttributePage";
+import { AttributePageFormData } from "../AttributePage/AttributePage";
 
 const messages = defineMessages({
   availableInGrid: {

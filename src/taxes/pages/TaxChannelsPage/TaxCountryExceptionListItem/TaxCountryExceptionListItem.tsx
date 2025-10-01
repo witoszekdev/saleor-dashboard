@@ -1,15 +1,15 @@
 // @ts-strict-ignore
 import { ControlledCheckbox } from "@dashboard/components/ControlledCheckbox";
-import { Select } from "@dashboard/components/Select";
 import { TaxConfigurationUpdateInput } from "@dashboard/graphql";
 import { FormChange } from "@dashboard/hooks/useForm";
-import { LegacyFlowWarning } from "@dashboard/taxes/components";
 import { Divider } from "@material-ui/core";
 import { ListItem, ListItemCell } from "@saleor/macaw-ui";
 import { Box, Button, Option, TrashBinIcon } from "@saleor/macaw-ui-next";
 
 import { useStyles } from "../styles";
 import { TaxCountryConfiguration } from "../TaxChannelsPage";
+import { Select } from "../../../../components/Select/Select";
+import { LegacyFlowWarning } from "../../../components/LegacyFlowWarning";
 
 interface TaxCountryExceptionListItemProps {
   country: TaxCountryConfiguration | undefined;

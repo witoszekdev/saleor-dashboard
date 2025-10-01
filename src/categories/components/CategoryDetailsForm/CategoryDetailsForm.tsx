@@ -1,6 +1,5 @@
 import { DashboardCard } from "@dashboard/components/Card";
 import { FormSpacer } from "@dashboard/components/FormSpacer";
-import { RichTextEditor } from "@dashboard/components/RichTextEditor";
 import { RichTextEditorLoading } from "@dashboard/components/RichTextEditor/RichTextEditorLoading";
 import { ProductErrorFragment } from "@dashboard/graphql";
 import { commonMessages } from "@dashboard/intl";
@@ -10,6 +9,7 @@ import { OutputData } from "@editorjs/editorjs";
 import { TextField } from "@material-ui/core";
 import * as React from "react";
 import { useIntl } from "react-intl";
+import { RichTextEditor } from "../../../components/RichTextEditor/RichTextEditor";
 
 interface CategoryDetailsFormProps {
   data: {

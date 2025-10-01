@@ -1,7 +1,6 @@
 // @ts-strict-ignore
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
 import { CardSpacer } from "@dashboard/components/CardSpacer";
-import { DetailPageLayout } from "@dashboard/components/Layouts";
 import { FulfillmentStatus, OrderErrorFragment } from "@dashboard/graphql";
 import { SubmitPromise } from "@dashboard/hooks/useForm";
 import { renderCollection } from "@dashboard/misc";
@@ -9,16 +8,16 @@ import { OrderRefundData } from "@dashboard/orders/types";
 import { orderUrl } from "@dashboard/orders/urls";
 import { Fragment } from "react";
 import { useIntl } from "react-intl";
-
-import { OrderRefund } from "../OrderRefund";
-import { OrderRefundFulfilledProducts } from "../OrderRefundFulfilledProducts";
-import { OrderRefundUnfulfilledProducts } from "../OrderRefundUnfulfilledProducts";
-import { PaymentSubmitCard } from "../OrderReturnPage/components/PaymentSubmitCard";
 import {
   getMiscellaneousAmountValues,
   getRefundProductsAmountValues,
 } from "../OrderReturnPage/components/PaymentSubmitCard/utils";
 import { OrderRefundForm, OrderRefundSubmitData, OrderRefundType } from "./form";
+import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
+import { OrderRefund } from "../OrderRefund/OrderRefund";
+import { OrderRefundFulfilledProducts } from "../OrderRefundFulfilledProducts/OrderRefundFulfilledProducts";
+import { OrderRefundUnfulfilledProducts } from "../OrderRefundUnfulfilledProducts/OrderRefundUnfulfilledProducts";
+import { PaymentSubmitCard } from "../OrderReturnPage/components/PaymentSubmitCard/PaymentSubmitCard";
 
 export const refundFulfilledStatuses = [
   FulfillmentStatus.FULFILLED,

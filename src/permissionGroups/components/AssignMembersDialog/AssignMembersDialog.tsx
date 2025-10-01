@@ -1,11 +1,6 @@
 // @ts-strict-ignore
 import { BackButton } from "@dashboard/components/BackButton";
-import { ConfirmButton, ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import { InfiniteScroll } from "@dashboard/components/InfiniteScroll";
 import { DashboardModal } from "@dashboard/components/Modal";
-import { ResponsiveTable } from "@dashboard/components/ResponsiveTable";
-import { TableRowLink } from "@dashboard/components/TableRowLink";
-import { UserAvatar } from "@dashboard/components/UserAvatar";
 import { SearchStaffMembersQuery } from "@dashboard/graphql";
 import { useSearchQuery } from "@dashboard/hooks/useSearchQuery";
 import { buttonMessages } from "@dashboard/intl";
@@ -18,6 +13,11 @@ import { useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
 import { messages } from "./messages";
+import { ConfirmButton, ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import { InfiniteScroll } from "../../../components/InfiniteScroll/InfiniteScroll";
+import { ResponsiveTable } from "../../../components/ResponsiveTable/ResponsiveTable";
+import { TableRowLink } from "../../../components/TableRowLink/TableRowLink";
+import { UserAvatar } from "../../../components/UserAvatar/UserAvatar";
 
 const useStyles = makeStyles(
   theme => ({

@@ -1,5 +1,4 @@
 import { CardTitle as DefaultCardTitle } from "@dashboard/components/CardTitle";
-import { HorizontalSpacer } from "@dashboard/components/HorizontalSpacer";
 import { FulfillmentStatus } from "@dashboard/graphql";
 import { StatusType } from "@dashboard/types";
 import { CircleIndicator } from "@saleor/macaw-ui";
@@ -10,6 +9,7 @@ import { FormattedMessage, useIntl } from "react-intl";
 import { orderTitleMessages } from "./messages";
 import { useStyles } from "./styles";
 import { getOrderTitleMessage } from "./utils";
+import { HorizontalSpacer } from "../../../components/HorizontalSpacer/HorizontalSpacer";
 
 export type CardTitleStatus = FulfillmentStatus | "unfulfilled";
 

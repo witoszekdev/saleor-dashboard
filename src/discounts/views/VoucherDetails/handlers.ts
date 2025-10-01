@@ -1,7 +1,6 @@
 // @ts-strict-ignore
 import { FetchResult } from "@apollo/client";
 import { ChannelVoucherData } from "@dashboard/channels/utils";
-import { VoucherDetailsPageFormData } from "@dashboard/discounts/components/VoucherDetailsPage";
 import { getChannelsVariables } from "@dashboard/discounts/handlers";
 import { DiscountTypeEnum, RequirementsPicker } from "@dashboard/discounts/types";
 import {
@@ -14,6 +13,7 @@ import {
   VoucherUpdateMutationVariables,
 } from "@dashboard/graphql";
 import { joinDateTime } from "@dashboard/misc";
+import { VoucherDetailsPageFormData } from "../../components/VoucherDetailsPage/VoucherDetailsPage";
 
 export function createUpdateHandler(
   voucher: VoucherDetailsFragment,

@@ -11,7 +11,6 @@ import {
   useMenuUpdateMutation,
 } from "@dashboard/graphql";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { pageUrl } from "@dashboard/modeling/urls";
 import { languageEntityUrl, TranslatableEntities } from "@dashboard/translations/urls";
 import { useCachedLocales } from "@dashboard/translations/useCachedLocales";
@@ -20,13 +19,7 @@ import { FormattedMessage, useIntl } from "react-intl";
 import { categoryUrl } from "../../../categories/urls";
 import { collectionUrl } from "../../../collections/urls";
 import { extractMutationErrors, maybe } from "../../../misc";
-import { MenuDetailsPage, MenuDetailsSubmitData } from "../../components/MenuDetailsPage";
 import { findNode, getNode } from "../../components/MenuDetailsPage/tree";
-import {
-  MenuItemDialog,
-  MenuItemDialogFormData,
-  MenuItemType,
-} from "../../components/MenuItemDialog";
 import {
   getItemId,
   getItemType,
@@ -42,6 +35,10 @@ import {
   getMoves,
   getRemoveIds,
 } from "./utils";
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
+import { MenuDetailsPage, MenuDetailsSubmitData } from "../../components/MenuDetailsPage/MenuDetailsPage";
+import { MenuItemDialog } from "../../components/MenuItemDialog/MenuItemDialog";
+import { MenuItemDialogFormData, MenuItemType } from "../../components/MenuItemDialog/types";
 
 interface MenuDetailsProps {
   id: string;

@@ -1,6 +1,5 @@
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
 import { DashboardCard } from "@dashboard/components/Card";
-import { ListPageLayout } from "@dashboard/components/Layouts";
 import { configurationMenuUrl } from "@dashboard/configuration";
 import { PermissionGroupFragment } from "@dashboard/graphql";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
@@ -10,7 +9,8 @@ import { FormattedMessage, useIntl } from "react-intl";
 
 import { PageListProps, SortPage } from "../../../types";
 import { permissionGroupAddUrl, PermissionGroupListUrlSortField } from "../../urls";
-import { PermissionGroupListDatagrid } from "../PermissionGroupListDatagrid";
+import { ListPageLayout } from "../../../components/Layouts/List/index";
+import { PermissionGroupListDatagrid } from "../PermissionGroupListDatagrid/PermissionGroupListDatagrid";
 
 interface PermissionGroupListPageProps
   extends PageListProps,

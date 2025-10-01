@@ -1,16 +1,13 @@
 import { WindowTitle } from "@dashboard/components/WindowTitle";
 import { CountryCode, useWarehouseCreateMutation } from "@dashboard/graphql";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { useShop } from "@dashboard/hooks/useShop";
 import { commonMessages } from "@dashboard/intl";
 import { extractMutationErrors, findValueInEnum, getMutationStatus } from "@dashboard/misc";
-import {
-  WarehouseCreatePage,
-  WarehouseCreatePageFormData,
-} from "@dashboard/warehouses/components/WarehouseCreatePage";
 import { warehouseUrl } from "@dashboard/warehouses/urls";
 import { useIntl } from "react-intl";
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
+import { WarehouseCreatePage, WarehouseCreatePageFormData } from "../../components/WarehouseCreatePage/WarehouseCreatePage";
 
 const WarehouseCreate = () => {
   const intl = useIntl();

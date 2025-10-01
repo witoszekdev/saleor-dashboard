@@ -1,12 +1,6 @@
 // @ts-strict-ignore
-import { AppActivateDialog } from "@dashboard/apps/components/AppActivateDialog";
-import { AppDeactivateDialog } from "@dashboard/apps/components/AppDeactivateDialog";
 import { appMessages } from "@dashboard/apps/messages";
-import { NotFoundPage } from "@dashboard/components/NotFoundPage";
 import { WindowTitle } from "@dashboard/components/WindowTitle";
-import { TokenCreateDialog } from "@dashboard/custom-apps/components/TokenCreateDialog";
-import { TokenDeleteDialog } from "@dashboard/custom-apps/components/TokenDeleteDialog";
-import { WebhookDeleteDialog } from "@dashboard/custom-apps/components/WebhookDeleteDialog";
 import {
   CustomAppDetailsUrlDialog,
   CustomAppDetailsUrlQueryParams,
@@ -26,7 +20,6 @@ import {
   WebhookDeleteMutation,
 } from "@dashboard/graphql";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { useShop } from "@dashboard/hooks/useShop";
 import { commonMessages } from "@dashboard/intl";
 import { extractMutationErrors, getStringOrPlaceholder } from "@dashboard/misc";
@@ -34,11 +27,14 @@ import { getAppErrorMessage } from "@dashboard/utils/errors/app";
 import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
 import { useEffect } from "react";
 import { useIntl } from "react-intl";
-
-import {
-  CustomAppDetailsPage,
-  CustomAppDetailsPageFormData,
-} from "../../components/CustomAppDetailsPage";
+import { AppActivateDialog } from "../../../apps/components/AppActivateDialog/AppActivateDialog";
+import { AppDeactivateDialog } from "../../../apps/components/AppDeactivateDialog/AppDeactivateDialog";
+import { NotFoundPage } from "../../../components/NotFoundPage/NotFoundPage";
+import { TokenCreateDialog } from "../../components/TokenCreateDialog/TokenCreateDialog";
+import { TokenDeleteDialog } from "../../components/TokenDeleteDialog/TokenDeleteDialog";
+import { WebhookDeleteDialog } from "../../components/WebhookDeleteDialog/WebhookDeleteDialog";
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
+import { CustomAppDetailsPage, CustomAppDetailsPageFormData } from "../../components/CustomAppDetailsPage/CustomAppDetailsPage";
 
 interface OrderListProps {
   id: string;

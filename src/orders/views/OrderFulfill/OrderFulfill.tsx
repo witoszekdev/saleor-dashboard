@@ -7,12 +7,7 @@ import {
   useOrderFulfillSettingsQuery,
 } from "@dashboard/graphql";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { getMutationErrors } from "@dashboard/misc";
-import {
-  OrderFulfillPage,
-  OrderFulfillSubmitData,
-} from "@dashboard/orders/components/OrderFulfillPage";
 import {
   orderFulfillUrl,
   OrderFulfillUrlDialog,
@@ -21,6 +16,8 @@ import {
 } from "@dashboard/orders/urls";
 import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
 import { useIntl } from "react-intl";
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
+import { OrderFulfillPage, OrderFulfillSubmitData } from "../../components/OrderFulfillPage/OrderFulfillPage";
 
 interface OrderFulfillProps {
   orderId: string;

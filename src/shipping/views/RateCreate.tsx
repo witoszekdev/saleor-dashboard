@@ -6,8 +6,6 @@ import { PostalCodeRuleInclusionTypeEnum, useShippingZoneChannelsQuery } from "@
 import { useChannels } from "@dashboard/hooks/useChannels";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { sectionNames } from "@dashboard/intl";
-import { ShippingZonePostalCodeRangeDialog } from "@dashboard/shipping/components/ShippingZonePostalCodeRangeDialog";
-import { ShippingZoneRatesCreatePage } from "@dashboard/shipping/components/ShippingZoneRatesCreatePage";
 import { useShippingRateCreator } from "@dashboard/shipping/handlers";
 import {
   shippingRateCreateUrl,
@@ -26,6 +24,8 @@ import { MinMax } from "@dashboard/types";
 import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
 import { useReducer } from "react";
 import { useIntl } from "react-intl";
+import { ShippingZonePostalCodeRangeDialog } from "../components/ShippingZonePostalCodeRangeDialog/ShippingZonePostalCodeRangeDialog";
+import { ShippingZoneRatesCreatePage } from "../components/ShippingZoneRatesCreatePage/ShippingZoneRatesCreatePage";
 
 const FORM_ID = Symbol("shipping-zone-rates-create-form-id");
 

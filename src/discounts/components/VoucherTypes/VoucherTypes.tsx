@@ -1,14 +1,13 @@
 import { DashboardCard } from "@dashboard/components/Card";
 import { Grid } from "@dashboard/components/Grid";
-import { RadioGroupField } from "@dashboard/components/RadioGroupField";
 import { DiscountTypeEnum } from "@dashboard/discounts/types";
 import { DiscountErrorFragment } from "@dashboard/graphql";
 import { getFormErrors } from "@dashboard/utils/errors";
 import { getDiscountErrorMessage } from "@dashboard/utils/errors/discounts";
 import * as React from "react";
 import { useIntl } from "react-intl";
-
-import { VoucherDetailsPageFormData } from "../VoucherDetailsPage";
+import { RadioGroupField } from "../../../components/RadioGroupField/RadioGroupField";
+import { VoucherDetailsPageFormData } from "../VoucherDetailsPage/VoucherDetailsPage";
 
 interface VoucherTypesProps {
   data: VoucherDetailsPageFormData;

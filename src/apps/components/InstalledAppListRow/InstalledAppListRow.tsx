@@ -3,7 +3,6 @@ import { InstalledApp } from "@dashboard/apps/types";
 import { AppPaths, AppUrls } from "@dashboard/apps/urls";
 import { isAppInTunnel } from "@dashboard/apps/utils";
 import { Link } from "@dashboard/components/Link";
-import { StopPropagation } from "@dashboard/components/StopPropagation";
 import { useFlag } from "@dashboard/featureFlags";
 import { Box, Chip, List, sprinkles, Text } from "@saleor/macaw-ui-next";
 import { useState } from "react";
@@ -16,6 +15,7 @@ import { AppRowWebhookIssueAlert } from "../AppAlerts/AppRowWebhookIssueAlert";
 import { AppAvatar } from "../AppAvatar/AppAvatar";
 import { AppManifestUrl } from "./AppManifestUrl";
 import { messages } from "./messages";
+import { StopPropagation } from "../../../components/StopPropagation/StopPropagation";
 
 const InstalledAppListRow = (props: InstalledApp) => {
   const { enabled: appAlertsEnabled } = useFlag("app_alerts"); // Note: when removing clean up tests

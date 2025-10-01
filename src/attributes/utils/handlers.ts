@@ -21,11 +21,11 @@ import {
 } from "@dashboard/hooks/useFormset";
 import { AttributeValuesMetadata } from "@dashboard/products/utils/data";
 import { FetchMoreProps, ReorderEvent } from "@dashboard/types";
-import { move, toggle } from "@dashboard/utils/lists";
 import isEqual from "lodash/isEqual";
 import uniqBy from "lodash/uniqBy";
 
 import { getFileValuesToUploadFromAttributes, isFileValueUnused } from "./data";
+import { move, toggle } from "../../utils/lists/lists";
 
 export function createAttributeChangeHandler(
   attributesFormData: UseFormsetOutput<AttributeInputData>,

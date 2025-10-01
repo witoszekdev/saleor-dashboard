@@ -1,5 +1,5 @@
-import { Rule } from "@dashboard/discounts/models";
 import { ChannelFragment, RewardTypeEnum, RewardValueTypeEnum } from "@dashboard/graphql";
+import { Rule } from "../../models/Rule";
 
 export const channels = [
   // Apollo mocks only work with test channel

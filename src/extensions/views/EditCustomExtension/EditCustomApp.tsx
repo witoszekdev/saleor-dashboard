@@ -1,10 +1,6 @@
 // @ts-strict-ignore
 import { useApolloClient } from "@apollo/client";
-import { NotFoundPage } from "@dashboard/components/NotFoundPage";
 import { WindowTitle } from "@dashboard/components/WindowTitle";
-import { AppActivateDialog } from "@dashboard/extensions/components/AppActivateDialog";
-import { AppDeactivateDialog } from "@dashboard/extensions/components/AppDeactivateDialog";
-import { AppDeleteDialog } from "@dashboard/extensions/components/AppDeleteDialog";
 import { appMessages, notifyMessages } from "@dashboard/extensions/messages";
 import { EXTENSION_LIST_QUERY } from "@dashboard/extensions/queries";
 import { getAppInstallErrorMessage, getCustomAppErrorMessage } from "@dashboard/extensions/utils";
@@ -24,7 +20,6 @@ import {
 } from "@dashboard/graphql";
 import { useHasManagedAppsPermission } from "@dashboard/hooks/useHasManagedAppsPermission";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { useShop } from "@dashboard/hooks/useShop";
 import { commonMessages } from "@dashboard/intl";
 import { extractMutationErrors, getStringOrPlaceholder, parseLogMessage } from "@dashboard/misc";
@@ -37,13 +32,15 @@ import {
   CustomExtensionDetailsUrlQueryParams,
   ExtensionsUrls,
 } from "../../urls";
-import {
-  CustomExtensionDetailsPage,
-  CustomExtensionDetailsPageFormData,
-} from "./components/CustomExtensionDetailsPage";
-import { TokenCreateDialog } from "./components/TokenCreateDialog";
-import { TokenDeleteDialog } from "./components/TokenDeleteDialog";
-import { WebhookDeleteDialog } from "./components/WebhookDeleteDialog";
+import { NotFoundPage } from "../../../components/NotFoundPage/NotFoundPage";
+import { AppActivateDialog } from "../../components/AppActivateDialog/AppActivateDialog";
+import { AppDeactivateDialog } from "../../components/AppDeactivateDialog/AppDeactivateDialog";
+import { AppDeleteDialog } from "../../components/AppDeleteDialog/AppDeleteDialog";
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
+import { CustomExtensionDetailsPage, CustomExtensionDetailsPageFormData } from "./components/CustomExtensionDetailsPage/CustomExtensionDetailsPage";
+import { TokenCreateDialog } from "./components/TokenCreateDialog/TokenCreateDialog";
+import { TokenDeleteDialog } from "./components/TokenDeleteDialog/TokenDeleteDialog";
+import { WebhookDeleteDialog } from "./components/WebhookDeleteDialog/WebhookDeleteDialog";
 
 interface OrderListProps {
   id: string;

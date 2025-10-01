@@ -1,7 +1,5 @@
 // @ts-strict-ignore
 import { DashboardCard } from "@dashboard/components/Card";
-import { ResponsiveTable } from "@dashboard/components/ResponsiveTable";
-import { TableRowLink } from "@dashboard/components/TableRowLink";
 import { DiscountErrorFragment } from "@dashboard/graphql";
 import { renderCollection } from "@dashboard/misc";
 import { getFormErrors } from "@dashboard/utils/errors";
@@ -9,11 +7,12 @@ import { getDiscountErrorMessage } from "@dashboard/utils/errors/discounts";
 import { TableBody, TableCell, TableHead } from "@material-ui/core";
 import { Skeleton, Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
-
-import { SaleDetailsPageFormData } from "../SaleDetailsPage";
 import { SaleValueTextField } from "./SaleValueTextField";
 import { useStyles } from "./styles";
 import { SaleValueInputOnChangeType } from "./types";
+import { ResponsiveTable } from "../../../components/ResponsiveTable/ResponsiveTable";
+import { TableRowLink } from "../../../components/TableRowLink/TableRowLink";
+import { SaleDetailsPageFormData } from "../SaleDetailsPage/SaleDetailsPage";
 
 interface SaleValueProps {
   data: SaleDetailsPageFormData;

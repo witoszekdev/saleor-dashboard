@@ -1,5 +1,4 @@
 import { AppPaths } from "@dashboard/apps/urls";
-import { EventTime } from "@dashboard/components/EventTime";
 import { Link } from "@dashboard/components/Link";
 import { AppListItemFragment } from "@dashboard/graphql";
 import { ExclamationIcon } from "@dashboard/icons/ExclamationIcon";
@@ -9,6 +8,7 @@ import { FormattedMessage } from "react-intl";
 
 import { AlertExclamationIcon } from "../AppAlerts/AlertExclamationIcon";
 import { getLatestFailedAttemptFromWebhooks } from "./utils";
+import { EventTime } from "../../../components/EventTime/EventTime";
 
 interface AppRowWebhookIssueAlertProps {
   app: AppListItemFragment;

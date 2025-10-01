@@ -5,9 +5,8 @@ import { sectionNames } from "@dashboard/intl";
 import { FetchMoreProps, RelayToFlat, ReorderAction } from "@dashboard/types";
 import { Text } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
-
-import { AssignmentList } from "../AssignmentList";
 import { messages } from "./messages";
+import { AssignmentList } from "../AssignmentList/AssignmentList";
 
 interface WarehousesProps {
   addWarehouse: (id: string) => void;

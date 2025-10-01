@@ -1,6 +1,6 @@
 import { Handler, NoopValuesHandler } from "../../API/Handler";
-import { FilterElement } from "../../FilterElement";
 import { BaseMappableQueryVarsBuilder } from "./BaseMappableQueryVarsBuilder";
+import { FilterElement } from "../../FilterElement/FilterElement";
 
 type OrderCustomerFilterQueryPart = {
   user?: { eq: string };

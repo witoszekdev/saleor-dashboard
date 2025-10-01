@@ -4,12 +4,12 @@ import {
   DatagridChange,
   DatagridChangeOpts,
 } from "@dashboard/components/Datagrid/hooks/useDatagridChange";
-import { Locale } from "@dashboard/components/Locale";
 import {
   ChannelFragment,
   ProductChannelListingAddInput,
   ProductFragment,
 } from "@dashboard/graphql";
+import { Locale } from "../../../components/Locale/Locale";
 
 const getFractionDigits = (locale: Locale, currency: string) => {
   try {

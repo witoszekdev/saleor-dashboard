@@ -5,9 +5,7 @@ import {
   useOrderRefundMutation,
 } from "@dashboard/graphql";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { extractMutationErrors } from "@dashboard/misc";
-import { OrderRefundPage } from "@dashboard/orders/components/OrderRefundPage";
 import {
   OrderRefundAmountCalculationMode,
   OrderRefundSubmitData,
@@ -15,6 +13,8 @@ import {
 } from "@dashboard/orders/components/OrderRefundPage/form";
 import { orderUrl } from "@dashboard/orders/urls";
 import { useIntl } from "react-intl";
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
+import { OrderRefundPage } from "../../components/OrderRefundPage/OrderRefundPage";
 
 const getAutomaticallyCalculatedProductsRefundInput = (formData: OrderRefundSubmitData) => ({
   fulfillmentLines: formData.refundedFulfilledProductQuantities

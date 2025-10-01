@@ -1,6 +1,5 @@
 // @ts-strict-ignore
 import { DashboardCard } from "@dashboard/components/Card";
-import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import { Grid } from "@dashboard/components/Grid";
 import { Hr } from "@dashboard/components/Hr";
 import { TablePaginationWithContext } from "@dashboard/components/TablePagination";
@@ -19,6 +18,7 @@ import { FormattedMessage } from "react-intl";
 import { TranslationFieldsLong } from "./TranslationFieldsLong";
 import { TranslationFieldsRich } from "./TranslationFieldsRich";
 import { TranslationFieldsShort } from "./TranslationFieldsShort";
+import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
 
 type Pagination = Pick<ListProps, Exclude<keyof ListProps, "getRowHref" | "disabled">>;
 

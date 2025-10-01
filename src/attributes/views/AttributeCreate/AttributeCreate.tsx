@@ -9,19 +9,13 @@ import {
 import { useListSettings } from "@dashboard/hooks/useListSettings";
 import { getMaxPage, useLocalPageInfo } from "@dashboard/hooks/useLocalPageInfo";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { getMutationErrors, getStringOrPlaceholder } from "@dashboard/misc";
 import { ListViews, ReorderEvent } from "@dashboard/types";
 import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
 import { createMetadataCreateHandler } from "@dashboard/utils/handlers/metadataCreateHandler";
-import { add, isSelected, move, remove, updateAtIndex } from "@dashboard/utils/lists";
 import { useEffect, useState } from "react";
 import { useIntl } from "react-intl";
 import { slugify } from "slugify";
-
-import { AttributePage, AttributePageFormData } from "../../components/AttributePage";
-import { AttributeValueDeleteDialog } from "../../components/AttributeValueDeleteDialog";
-import { AttributeValueEditDialog } from "../../components/AttributeValueEditDialog";
 import {
   attributeAddUrl,
   AttributeAddUrlDialog,
@@ -29,6 +23,11 @@ import {
   attributeUrl,
 } from "../../urls";
 import { AttributeValueEditDialogFormData, getAttributeData } from "../../utils/data";
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
+import { add, isSelected, move, remove, updateAtIndex } from "../../../utils/lists/lists";
+import { AttributePage, AttributePageFormData } from "../../components/AttributePage/AttributePage";
+import { AttributeValueDeleteDialog } from "../../components/AttributeValueDeleteDialog/AttributeValueDeleteDialog";
+import { AttributeValueEditDialog } from "../../components/AttributeValueEditDialog/AttributeValueEditDialog";
 
 type ParamId = number | undefined;
 

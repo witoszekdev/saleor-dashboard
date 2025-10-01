@@ -5,11 +5,11 @@ import {
 } from "@dashboard/channels/utils";
 import { ChannelsAvailabilityDialog } from "@dashboard/components/ChannelsAvailabilityDialog";
 import { FormsetData } from "@dashboard/hooks/useFormset";
-import { useModalDialogOpen } from "@dashboard/hooks/useModalDialogOpen";
-import { toggle } from "@dashboard/utils/lists";
 import { useState } from "react";
 
 import { ProductChannelListing } from "../types";
+import { useModalDialogOpen } from "../../../../hooks/useModalDialogOpen/useModalDialogOpen";
+import { toggle } from "../../../../utils/lists/lists";
 
 interface VariantChannelsDialogProps {
   channelListings: ProductChannelListing;

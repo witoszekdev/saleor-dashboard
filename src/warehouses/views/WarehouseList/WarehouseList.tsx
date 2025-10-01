@@ -1,12 +1,8 @@
-import { DeleteFilterTabDialog } from "@dashboard/components/DeleteFilterTabDialog";
-import { SaveFilterTabDialog } from "@dashboard/components/SaveFilterTabDialog";
 import { useShopLimitsQuery } from "@dashboard/components/Shop/queries";
 import { WindowTitle } from "@dashboard/components/WindowTitle";
 import { useWarehouseDeleteMutation, useWarehouseListQuery } from "@dashboard/graphql";
-import { useFilterPresets } from "@dashboard/hooks/useFilterPresets";
 import { useListSettings } from "@dashboard/hooks/useListSettings";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { usePaginationReset } from "@dashboard/hooks/usePaginationReset";
 import {
   createPaginationState,
@@ -21,8 +17,6 @@ import { createFilterHandlers } from "@dashboard/utils/handlers/filterHandlers";
 import { createSortHandler } from "@dashboard/utils/handlers/sortHandler";
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { getSortParams } from "@dashboard/utils/sort";
-import { WarehouseDeleteDialog } from "@dashboard/warehouses/components/WarehouseDeleteDialog";
-import { WarehouseListPage } from "@dashboard/warehouses/components/WarehouseListPage";
 import {
   warehouseListUrl,
   WarehouseListUrlDialog,
@@ -33,6 +27,12 @@ import { useIntl } from "react-intl";
 
 import { getFilterVariables, storageUtils } from "./filters";
 import { getSortQueryVariables } from "./sort";
+import { DeleteFilterTabDialog } from "../../../components/DeleteFilterTabDialog/DeleteFilterTabDialog";
+import { SaveFilterTabDialog } from "../../../components/SaveFilterTabDialog/SaveFilterTabDialog";
+import { useFilterPresets } from "../../../hooks/useFilterPresets/useFilterPresets";
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
+import { WarehouseDeleteDialog } from "../../components/WarehouseDeleteDialog/WarehouseDeleteDialog";
+import { WarehouseListPage } from "../../components/WarehouseListPage/WarehouseListPage";
 
 interface WarehouseListProps {
   params: WarehouseListUrlQueryParams;

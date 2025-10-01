@@ -3,7 +3,6 @@ import { createCollectionChannels, createCollectionChannelsData } from "@dashboa
 import { ActionDialog } from "@dashboard/components/ActionDialog";
 import { useAppChannel } from "@dashboard/components/AppLayout/AppChannelContext";
 import { ChannelsAvailabilityDialog } from "@dashboard/components/ChannelsAvailabilityDialog";
-import { NotFoundPage } from "@dashboard/components/NotFoundPage";
 import { WindowTitle } from "@dashboard/components/WindowTitle";
 import {
   CollectionInput,
@@ -18,9 +17,7 @@ import {
 import { useChannels } from "@dashboard/hooks/useChannels";
 import { useLocalStorage } from "@dashboard/hooks/useLocalStorage";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { commonMessages, errorMessages } from "@dashboard/intl";
-import { arrayDiff } from "@dashboard/utils/arrays";
 import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
 import { createMetadataUpdateHandler } from "@dashboard/utils/handlers/metadataUpdateHandler";
 import { getParsedDataForJsonStringField } from "@dashboard/utils/richText/misc";
@@ -36,6 +33,9 @@ import {
   CollectionUrlQueryParams,
 } from "../urls";
 import { COLLECTION_DETAILS_FORM_ID } from "./consts";
+import { NotFoundPage } from "../../components/NotFoundPage/NotFoundPage";
+import { useNotifier } from "../../hooks/useNotifier/useNotifier";
+import { arrayDiff } from "../../utils/arrays/arrays";
 
 interface CollectionDetailsProps {
   id: string;

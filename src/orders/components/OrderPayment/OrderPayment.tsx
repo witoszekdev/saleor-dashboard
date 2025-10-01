@@ -1,5 +1,4 @@
 import { DashboardCard } from "@dashboard/components/Card";
-import { HorizontalSpacer } from "@dashboard/components/HorizontalSpacer";
 import { Money } from "@dashboard/components/Money";
 import { OrderAction, OrderDetailsFragment, OrderStatus } from "@dashboard/graphql";
 import { getDiscountTypeLabel } from "@dashboard/orders/utils/data";
@@ -9,10 +8,11 @@ import { clsx } from "clsx";
 import { FormattedMessage, useIntl } from "react-intl";
 
 import { OrderPaymentStatusPill } from "../OrderPaymentSummaryCard/components/OrderPaymentStatusPill";
-import { OrderUsedGiftCards } from "../OrderUsedGiftCards";
 import { orderPaymentMessages, paymentButtonMessages } from "./messages";
 import { useStyles } from "./styles";
 import { extractRefundedAmount, getDiscountAmount } from "./utils";
+import { HorizontalSpacer } from "../../../components/HorizontalSpacer/HorizontalSpacer";
+import { OrderUsedGiftCards } from "../OrderUsedGiftCards/OrderUsedGiftCards";
 
 interface OrderPaymentProps {
   order: OrderDetailsFragment;

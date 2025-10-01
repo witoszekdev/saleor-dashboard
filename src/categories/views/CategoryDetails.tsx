@@ -1,5 +1,4 @@
 import { ActionDialog } from "@dashboard/components/ActionDialog";
-import { NotFoundPage } from "@dashboard/components/NotFoundPage";
 import { WindowTitle } from "@dashboard/components/WindowTitle";
 import {
   CategoryBulkDeleteMutation,
@@ -20,7 +19,6 @@ import {
   useSectionLocalPaginationState,
 } from "@dashboard/hooks/useLocalPaginator";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { PaginatorContext } from "@dashboard/hooks/usePaginator";
 import { useRowSelection } from "@dashboard/hooks/useRowSelection";
 import { commonMessages, errorMessages } from "@dashboard/intl";
@@ -43,6 +41,8 @@ import {
 } from "../components/CategoryUpdatePage/CategoryUpdatePage";
 import { CategoryUpdateData } from "../components/CategoryUpdatePage/form";
 import { categoryListUrl, categoryUrl, CategoryUrlDialog, CategoryUrlQueryParams } from "../urls";
+import { NotFoundPage } from "../../components/NotFoundPage/NotFoundPage";
+import { useNotifier } from "../../hooks/useNotifier/useNotifier";
 
 interface CategoryDetailsProps {
   params: CategoryUrlQueryParams;

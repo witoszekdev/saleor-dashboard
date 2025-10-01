@@ -1,10 +1,10 @@
-import { FilterElement, FilterElementRegular } from "@dashboard/components/Filter";
 import { StaffMemberStatus, StaffUserInput } from "@dashboard/graphql";
 import { findValueInEnum } from "@dashboard/misc";
-import { StaffFilterKeys, StaffListFilterOpts } from "@dashboard/staff/components/StaffListPage";
-
-import { createFilterTabUtils, getSingleEnumValueQueryParam } from "../../../utils/filters";
 import { StaffListUrlFilters, StaffListUrlFiltersEnum } from "../../urls";
+import { FilterElement, FilterElementRegular } from "../../../components/Filter/types";
+import { StaffFilterKeys, StaffListFilterOpts } from "../../components/StaffListPage/filters";
+import { createFilterTabUtils } from "../../../utils/filters/storage";
+import { getSingleEnumValueQueryParam } from "../../../utils/filters/filters";
 
 const STAFF_FILTERS_KEY = "staffFilters";
 

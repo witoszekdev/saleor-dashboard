@@ -5,16 +5,15 @@ import {
   useUpdateShippingMethodTranslationsMutation,
 } from "@dashboard/graphql";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { useShop } from "@dashboard/hooks/useShop";
 import { commonMessages } from "@dashboard/intl";
 import { extractMutationErrors } from "@dashboard/misc";
 import { stringifyQs } from "@dashboard/utils/urls";
 import { useIntl } from "react-intl";
-
-import { TranslationsShippingMethodPage } from "../components/TranslationsShippingMethodPage";
 import { TranslationField, TranslationInputFieldName } from "../types";
 import { getParsedTranslationInputData } from "../utils";
+import { useNotifier } from "../../hooks/useNotifier/useNotifier";
+import { TranslationsShippingMethodPage } from "../components/TranslationsShippingMethodPage/TranslationsShippingMethodPage";
 
 export interface TranslationsShippingMethodQueryParams {
   activeField: string;

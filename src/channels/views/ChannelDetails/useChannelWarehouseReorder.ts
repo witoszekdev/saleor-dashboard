@@ -1,9 +1,9 @@
 import { ChannelWarehouse } from "@dashboard/channels/pages/ChannelDetailsPage/types";
 import { calculateItemsOrderMoves } from "@dashboard/channels/views/ChannelDetails/handlers";
 import { useChannelReorderWarehousesMutation, WarehouseFragment } from "@dashboard/graphql";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { getChannelsErrorMessage } from "@dashboard/utils/errors/channels";
 import { useIntl } from "react-intl";
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
 
 export const useChannelWarehousesReorder = () => {
   const notify = useNotifier();

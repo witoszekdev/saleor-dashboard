@@ -1,6 +1,4 @@
-import { ResponsiveTable } from "@dashboard/components/ResponsiveTable";
 import { TablePaginationWithContext } from "@dashboard/components/TablePagination";
-import { TableRowLink } from "@dashboard/components/TableRowLink";
 import { TableBody, TableCell, TableFooter, TableHead } from "@material-ui/core";
 import { makeStyles } from "@saleor/macaw-ui";
 import { Skeleton } from "@saleor/macaw-ui-next";
@@ -9,6 +7,8 @@ import { FormattedMessage, useIntl } from "react-intl";
 
 import { maybe, renderCollection } from "../../../misc";
 import { ListProps } from "../../../types";
+import { ResponsiveTable } from "../../../components/ResponsiveTable/ResponsiveTable";
+import { TableRowLink } from "../../../components/TableRowLink/TableRowLink";
 
 export interface TranslatableEntity {
   id: string;

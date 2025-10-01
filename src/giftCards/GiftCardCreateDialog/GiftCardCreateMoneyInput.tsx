@@ -1,5 +1,4 @@
 // @ts-strict-ignore
-import { TextWithSelectField } from "@dashboard/components/TextWithSelectField";
 import { ChangeEvent, FormChange } from "@dashboard/hooks/useForm";
 import { useLocalStorage } from "@dashboard/hooks/useLocalStorage";
 import { mapSingleValueNodeToChoice } from "@dashboard/utils/maps";
@@ -14,6 +13,7 @@ import {
 import { getGiftCardErrorMessage } from "../GiftCardUpdate/messages";
 import { useChannelCurrenciesWithCache } from "../hooks/useChannelCurrenciesWithCache";
 import { giftCardCreateMessages as messages } from "./messages";
+import { TextWithSelectField } from "../../components/TextWithSelectField/TextWithSelectField";
 
 interface GiftCardCreateMoneyInputProps {
   change: FormChange;

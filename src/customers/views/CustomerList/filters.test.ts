@@ -1,14 +1,14 @@
-import { createFilterStructure } from "@dashboard/customers/components/CustomerListPage";
 import { CustomerListUrlFilters } from "@dashboard/customers/urls";
 import { date } from "@dashboard/fixtures";
 import { PermissionEnum } from "@dashboard/graphql";
-import { getFilterQueryParams } from "@dashboard/utils/filters";
 import { stringifyQs } from "@dashboard/utils/urls";
 import { getExistingKeys, setFilterOptsStatus } from "@test/filters";
 import { config } from "@test/intl";
 import { createIntl } from "react-intl";
 
 import { getFilterQueryParam, getFilterVariables } from "./filters";
+import { createFilterStructure } from "../../components/CustomerListPage/filters";
+import { getFilterQueryParams } from "../../../utils/filters/filters";
 
 describe("Filtering query params", () => {
   it("should be empty object if no params given", () => {

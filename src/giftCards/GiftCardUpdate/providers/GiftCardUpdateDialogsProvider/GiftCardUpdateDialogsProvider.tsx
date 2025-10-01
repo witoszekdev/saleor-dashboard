@@ -5,11 +5,10 @@ import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
 import { createContext } from "react";
 import * as React from "react";
-
-import { GiftCardResendCodeDialog } from "../../GiftCardResendCodeDialog";
-import { GiftCardUpdateBalanceDialog } from "../../GiftCardUpdateBalanceDialog";
 import { GiftCardUpdatePageActionParamsEnum, GiftCardUpdatePageUrlQueryParams } from "../../types";
 import { useGiftCardDetails } from "../GiftCardDetailsProvider/hooks/useGiftCardDetails";
+import { GiftCardResendCodeDialog } from "../../GiftCardResendCodeDialog/GiftCardResendCodeDialog";
+import { GiftCardUpdateBalanceDialog } from "../../GiftCardUpdateBalanceDialog/GiftCardUpdateBalanceDialog";
 
 interface GiftCardUpdateDialogsProviderProps {
   children: React.ReactNode;

@@ -1,17 +1,16 @@
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
 import { CardSpacer } from "@dashboard/components/CardSpacer";
-import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import { DetailPageLayout } from "@dashboard/components/Layouts";
-import { Metadata } from "@dashboard/components/Metadata";
 import { Savebar } from "@dashboard/components/Savebar";
-import { SeoForm } from "@dashboard/components/SeoForm";
 import { ProductErrorFragment } from "@dashboard/graphql";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { Box } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
-
-import { CategoryDetailsForm } from "../../components/CategoryDetailsForm";
 import { CategoryCreateData, CategoryCreateForm } from "./form";
+import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
+import { Metadata } from "../../../components/Metadata/Metadata";
+import { SeoForm } from "../../../components/SeoForm/SeoForm";
+import { CategoryDetailsForm } from "../CategoryDetailsForm/CategoryDetailsForm";
 
 interface CategoryCreatePageProps {
   errors: ProductErrorFragment[];

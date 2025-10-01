@@ -5,7 +5,7 @@ import { RouteComponentProps, Switch } from "react-router-dom";
 
 import { MenuListUrlQueryParams, MenuListUrlSortField, menuPath, structuresListPath } from "./urls";
 import { MenuDetails as MenuDetailsComponent } from "./views/MenuDetails";
-import { MenuList as MenuListComponent } from "./views/MenuList";
+import { MenuList as MenuListComponent } from "./views/MenuList/MenuList";
 
 const MenuList = () => {
   const qs = parseQs(location.search.substr(1)) as any;

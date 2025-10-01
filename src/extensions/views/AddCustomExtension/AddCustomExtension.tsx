@@ -1,9 +1,6 @@
 import { TopNav } from "@dashboard/components/AppLayout";
 import { Callout, calloutTitleMessages } from "@dashboard/components/Callout";
-import { HookFormInput } from "@dashboard/components/HookFormInput";
-import { DetailPageLayout } from "@dashboard/components/Layouts";
 import { Savebar } from "@dashboard/components/Savebar";
-import { ExternalLinkUnstyled } from "@dashboard/extensions/components/ExternalLinkUnstyled";
 import { ExtensionsUrls } from "@dashboard/extensions/urls";
 import { CUSTOM_EXTENSIONS_DOCS_URL } from "@dashboard/links";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -21,6 +18,9 @@ import { usePermissions } from "./hooks/usePermissions";
 import { useUserAppCreationPermissions } from "./hooks/useUserAppCreationPermissions";
 import { useUserPermissionSet } from "./hooks/useUserPermissionMap";
 import { getNoPermissionsObject } from "./utils";
+import { HookFormInput } from "../../../components/HookFormInput/HookFormInput";
+import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
+import { ExternalLinkUnstyled } from "../../components/ExternalLinkUnstyled/ExternalLinkUnstyled";
 
 const createFormSchema = (intl: IntlShape) => {
   return z.object({

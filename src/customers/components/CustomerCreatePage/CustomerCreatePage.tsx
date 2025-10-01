@@ -2,9 +2,6 @@
 import { createCountryHandler } from "@dashboard/components/AddressEdit/createCountryHandler";
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
 import { CardSpacer } from "@dashboard/components/CardSpacer";
-import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import { Form } from "@dashboard/components/Form";
-import { DetailPageLayout } from "@dashboard/components/Layouts";
 import { Savebar } from "@dashboard/components/Savebar";
 import { customerListUrl } from "@dashboard/customers/urls";
 import { AccountErrorFragment, AddressInput, CustomerCreateDataQuery } from "@dashboard/graphql";
@@ -19,8 +16,11 @@ import { useIntl } from "react-intl";
 
 import { AddressTypeInput } from "../../types";
 import { CustomerCreateAddress } from "../CustomerCreateAddress/CustomerCreateAddress";
-import { CustomerCreateDetails } from "../CustomerCreateDetails";
 import { CustomerCreateNote } from "../CustomerCreateNote/CustomerCreateNote";
+import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import { Form } from "../../../components/Form/Form";
+import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
+import { CustomerCreateDetails } from "../CustomerCreateDetails/CustomerCreateDetails";
 
 export interface CustomerCreatePageFormData {
   customerFirstName: string;

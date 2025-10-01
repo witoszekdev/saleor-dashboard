@@ -1,9 +1,6 @@
-import { DeactivatedText } from "@dashboard/apps/components/DeactivatedText";
 import { useContextualLink } from "@dashboard/components/AppLayout/ContextualLinks/useContextualLink";
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
-import { ListPageLayout } from "@dashboard/components/Layouts";
 import { TableButtonWrapper } from "@dashboard/components/TableButtonWrapper/TableButtonWrapper";
-import { TableRowLink } from "@dashboard/components/TableRowLink";
 import { configurationMenuUrl } from "@dashboard/configuration";
 import { CustomAppUrls } from "@dashboard/custom-apps/urls";
 import { AppListItemFragment } from "@dashboard/graphql";
@@ -14,9 +11,11 @@ import { TableBody, TableCell } from "@material-ui/core";
 import { ResponsiveTable } from "@saleor/macaw-ui";
 import { Box, Button, Text, TrashBinIcon } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
-
-import { CustomAppsSkeleton } from "../CustomAppsSkeleton";
 import { useStyles } from "./styles";
+import { DeactivatedText } from "../../../apps/components/DeactivatedText/DeactivatedText";
+import { ListPageLayout } from "../../../components/Layouts/List/index";
+import { TableRowLink } from "../../../components/TableRowLink/TableRowLink";
+import { CustomAppsSkeleton } from "../CustomAppsSkeleton/CustomAppsSkeleton";
 
 interface CustomAppListPageProps {
   appsList: AppListItemFragment[];

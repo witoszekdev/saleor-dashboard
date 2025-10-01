@@ -2,7 +2,6 @@
 import { DashboardCard } from "@dashboard/components/Card";
 import { CollectionWithDividers } from "@dashboard/components/CollectionWithDividers";
 import { DashboardModal } from "@dashboard/components/Modal";
-import { VerticalSpacer } from "@dashboard/components/VerticalSpacer";
 import { useCustomerDetails } from "@dashboard/customers/hooks/useCustomerDetails";
 import { GiftCardCreateDialogContent } from "@dashboard/giftCards/GiftCardCreateDialog/GiftCardCreateDialogContent";
 import { getExtendedGiftCard } from "@dashboard/giftCards/GiftCardUpdate/providers/GiftCardDetailsProvider/utils";
@@ -18,6 +17,7 @@ import { Link } from "react-router-dom";
 import { CustomerGiftCardsCardListItem } from "./CustomerGiftCardsCardListItem";
 import { giftCardCustomerCardMessages as messages } from "./messages";
 import { CUSTOMER_GIFT_CARD_LIST_QUERY } from "./queries";
+import { VerticalSpacer } from "../../../components/VerticalSpacer/VerticalSpacer";
 
 const CustomerGiftCardsCard = () => {
   const intl = useIntl();

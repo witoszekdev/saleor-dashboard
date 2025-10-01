@@ -1,8 +1,6 @@
 import { useApolloClient } from "@apollo/client";
-import { AppDeleteDialog } from "@dashboard/apps/components/AppDeleteDialog";
 import { appMessages } from "@dashboard/apps/messages";
 import { EXTENSION_LIST_QUERY } from "@dashboard/apps/queries";
-import { NotFoundPage } from "@dashboard/components/NotFoundPage";
 import { ExtensionsPaths } from "@dashboard/extensions/urls";
 import { useFlag } from "@dashboard/featureFlags";
 import {
@@ -13,16 +11,17 @@ import {
 } from "@dashboard/graphql";
 import { useHasManagedAppsPermission } from "@dashboard/hooks/useHasManagedAppsPermission";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { getAppErrorMessage } from "@dashboard/utils/errors/app";
 import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
 import { useIntl } from "react-intl";
-
-import { AppActivateDialog } from "../../components/AppActivateDialog";
-import { AppDeactivateDialog } from "../../components/AppDeactivateDialog";
-import { AppDetailsPage } from "../../components/AppDetailsPage";
 import { AppDetailsUrlDialog, AppDetailsUrlQueryParams, AppPaths, AppUrls } from "../../urls";
 import { messages } from "./messages";
+import { AppDeleteDialog } from "../../components/AppDeleteDialog/AppDeleteDialog";
+import { NotFoundPage } from "../../../components/NotFoundPage/NotFoundPage";
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
+import { AppActivateDialog } from "../../components/AppActivateDialog/AppActivateDialog";
+import { AppDeactivateDialog } from "../../components/AppDeactivateDialog/AppDeactivateDialog";
+import { AppDetailsPage } from "../../components/AppDetailsPage/AppDetailsPage";
 
 interface Props {
   id: string;

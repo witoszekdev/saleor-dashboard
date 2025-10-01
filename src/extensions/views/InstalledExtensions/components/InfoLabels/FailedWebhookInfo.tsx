@@ -1,5 +1,4 @@
 import { WARNING_ICON_COLOR } from "@dashboard/colors";
-import { EventTime } from "@dashboard/components/EventTime";
 import { Link } from "@dashboard/components/Link";
 import { infoMessages } from "@dashboard/extensions/messages";
 import { ExclamationIcon } from "@dashboard/icons/ExclamationIcon";
@@ -7,6 +6,7 @@ import { Box, Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage } from "react-intl";
 
 import { InfoLabelsContainer } from "../InfoLabels/InfoLabelsContainer";
+import { EventTime } from "../../../../../components/EventTime/EventTime";
 
 interface FailedWebhookInfoProps {
   date: string;

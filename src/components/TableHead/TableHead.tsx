@@ -1,5 +1,4 @@
 // @ts-strict-ignore
-import { TableRowLink } from "@dashboard/components/TableRowLink";
 import { TableCell, TableHead as MuiTableHead } from "@material-ui/core";
 import { TableHeadProps as MuiTableHeadProps } from "@material-ui/core/TableHead";
 import { makeStyles } from "@saleor/macaw-ui";
@@ -10,6 +9,7 @@ import { FormattedMessage } from "react-intl";
 
 import { Node } from "../../types";
 import { Checkbox } from "../Checkbox";
+import { TableRowLink } from "../TableRowLink/TableRowLink";
 
 interface TableHeadProps extends MuiTableHeadProps {
   colSpan: number;

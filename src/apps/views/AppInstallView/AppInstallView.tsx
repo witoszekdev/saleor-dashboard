@@ -1,12 +1,9 @@
-import { AppInstallErrorPage } from "@dashboard/apps/components/AppInstallErrorPage";
-import { AppInstallPage } from "@dashboard/apps/components/AppInstallPage";
 import { AppInstallUrlQueryParams, AppUrls, MANIFEST_ATTR } from "@dashboard/apps/urls";
 import { WindowTitle } from "@dashboard/components/WindowTitle";
 import { useFlag } from "@dashboard/featureFlags";
 import { useAppFetchMutation, useAppInstallMutation } from "@dashboard/graphql";
 import { useLocalStorage } from "@dashboard/hooks/useLocalStorage";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { extractMutationErrors } from "@dashboard/misc";
 import { getAppErrorMessage } from "@dashboard/utils/errors/app";
 import { PropsWithChildren, useEffect } from "react";
@@ -14,6 +11,9 @@ import { useIntl } from "react-intl";
 import { RouteComponentProps } from "react-router-dom";
 
 import { messages } from "./messages";
+import { AppInstallErrorPage } from "../../components/AppInstallErrorPage/AppInstallErrorPage";
+import { AppInstallPage } from "../../components/AppInstallPage/AppInstallPage";
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
 
 interface Props extends RouteComponentProps {
   params: AppInstallUrlQueryParams;

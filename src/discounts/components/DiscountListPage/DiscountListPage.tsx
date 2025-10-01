@@ -4,8 +4,6 @@ import { SearchInput } from "@dashboard/components/AppLayout/ListFilters/compone
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
 import { ButtonGroupWithDropdown } from "@dashboard/components/ButtonGroupWithDropdown";
 import { DashboardCard } from "@dashboard/components/Card";
-import { FilterPresetsSelect } from "@dashboard/components/FilterPresetsSelect";
-import { ListPageLayout } from "@dashboard/components/Layouts";
 import {
   discountAddUrl,
   DiscountListUrlSortField,
@@ -26,8 +24,9 @@ import { Box, Button, ChevronRightIcon } from "@saleor/macaw-ui-next";
 import { useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 import { useLocation } from "react-router";
-
-import { DiscountListDatagrid } from "../DiscountListDatagrid";
+import { FilterPresetsSelect } from "../../../components/FilterPresetsSelect/FilterPresetsSelect";
+import { ListPageLayout } from "../../../components/Layouts/List/index";
+import { DiscountListDatagrid } from "../DiscountListDatagrid/DiscountListDatagrid";
 
 interface DiscountListPageProps
   extends PageListProps,

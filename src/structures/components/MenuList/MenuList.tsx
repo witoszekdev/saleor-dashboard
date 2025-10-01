@@ -1,13 +1,8 @@
 // @ts-strict-ignore
 import { DashboardCard } from "@dashboard/components/Card";
 import { Checkbox } from "@dashboard/components/Checkbox";
-import { IconButtonTableCell } from "@dashboard/components/IconButtonTableCell";
-import { ResponsiveTable } from "@dashboard/components/ResponsiveTable";
 import { TableButtonWrapper } from "@dashboard/components/TableButtonWrapper/TableButtonWrapper";
-import { TableCellHeader } from "@dashboard/components/TableCellHeader";
-import { TableHead } from "@dashboard/components/TableHead";
 import { TablePaginationWithContext } from "@dashboard/components/TablePagination";
-import { TableRowLink } from "@dashboard/components/TableRowLink";
 import { MenuFragment } from "@dashboard/graphql";
 import { maybe, renderCollection } from "@dashboard/misc";
 import { MenuListUrlSortField, menuUrl } from "@dashboard/structures/urls";
@@ -17,6 +12,11 @@ import { TableBody, TableCell, TableFooter } from "@material-ui/core";
 import { DeleteIcon, makeStyles } from "@saleor/macaw-ui";
 import { Skeleton } from "@saleor/macaw-ui-next";
 import { FormattedMessage } from "react-intl";
+import { IconButtonTableCell } from "../../../components/IconButtonTableCell/IconButtonTableCell";
+import { ResponsiveTable } from "../../../components/ResponsiveTable/ResponsiveTable";
+import { TableCellHeader } from "../../../components/TableCellHeader/TableCellHeader";
+import { TableHead } from "../../../components/TableHead/TableHead";
+import { TableRowLink } from "../../../components/TableRowLink/TableRowLink";
 
 interface MenuListProps extends ListProps, ListActions, SortPage<MenuListUrlSortField> {
   menus: MenuFragment[];

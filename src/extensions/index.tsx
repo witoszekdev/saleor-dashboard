@@ -8,9 +8,6 @@ import {
   ExtensionInstallQueryParams,
   ExtensionsPaths,
 } from "@dashboard/extensions/urls";
-import { ExploreExtensions } from "@dashboard/extensions/views/ExploreExtensions";
-import { InstallCustomExtension } from "@dashboard/extensions/views/InstallCustomExtension";
-import { InstalledExtensions } from "@dashboard/extensions/views/InstalledExtensions";
 import { useFlag } from "@dashboard/featureFlags";
 import { PermissionEnum } from "@dashboard/graphql";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
@@ -22,14 +19,17 @@ import { useIntl } from "react-intl";
 import { RouteComponentProps, Switch } from "react-router-dom";
 
 import { useCustomAppToken } from "./hooks/useCustomAppToken";
-import { AddCustomExtension } from "./views/AddCustomExtension";
-import { AddCustomExtensionWebhook } from "./views/AddCustomExtensionWebhook";
-import { EditCustomExtension } from "./views/EditCustomExtension";
-import { EditCustomExtensionWebhook } from "./views/EditCustomExtensionWebhook";
-import { EditManifestExtension } from "./views/EditManifestExtension";
-import { EditManifestExtensionPermissions } from "./views/EditManifestExtensionPermissions";
-import { EditPluginExtension } from "./views/EditPluginExtension";
-import { ViewManifestExtensionIframe } from "./views/ViewManifestExtension";
+import { ExploreExtensions } from "./views/ExploreExtensions/ExploreExtensions";
+import { InstallCustomExtension } from "./views/InstallCustomExtension/InstallCustomExtension";
+import { InstalledExtensions } from "./views/InstalledExtensions/InstalledExtensions";
+import { AddCustomExtension } from "./views/AddCustomExtension/AddCustomExtension";
+import { AddCustomExtensionWebhook } from "./views/AddCustomExtensionWebhook/AddCustomExtensionWebhook";
+import { EditCustomExtension } from "./views/EditCustomExtension/EditCustomApp";
+import { EditCustomExtensionWebhook } from "./views/EditCustomExtensionWebhook/EditCustomExtensionWebhook";
+import { EditManifestExtension } from "./views/EditManifestExtension/AppManageView";
+import { EditManifestExtensionPermissions } from "./views/EditManifestExtensionPermissions/EditManifestExtensionPermissions";
+import { EditPluginExtension } from "./views/EditPluginExtension/EditPluginExtension";
+import { ViewManifestExtensionIframe } from "./views/ViewManifestExtension/ViewManifestExtensionIframe";
 
 const ExploreExtensionsView = () => {
   return <ExploreExtensions />;

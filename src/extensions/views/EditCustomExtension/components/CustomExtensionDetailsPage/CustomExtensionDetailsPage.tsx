@@ -2,9 +2,6 @@
 import { AccountPermissions } from "@dashboard/components/AccountPermissions";
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
 import { CardSpacer } from "@dashboard/components/CardSpacer";
-import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import { Form } from "@dashboard/components/Form";
-import { DetailPageLayout } from "@dashboard/components/Layouts";
 import { Savebar } from "@dashboard/components/Savebar";
 import { AppHeaderOptions } from "@dashboard/extensions/components/AppHeaderOptions";
 import { appMessages } from "@dashboard/extensions/messages";
@@ -21,11 +18,13 @@ import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { getFormErrors } from "@dashboard/utils/errors";
 import { Tooltip } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
-
-import { CustomExtensionDefaultToken } from "../CustomExtensionDefaultToken";
-import { CustomExtensionInformation } from "../CustomExtensionInformation";
-import { CustomExtensionTokens } from "../CustomExtensionTokens";
-import { WebhooksList } from "../WebhooksList";
+import { ConfirmButtonTransitionState } from "../../../../../components/ConfirmButton/ConfirmButton";
+import { Form } from "../../../../../components/Form/Form";
+import { DetailPageLayout } from "../../../../../components/Layouts/Detail/index";
+import { CustomExtensionDefaultToken } from "../CustomExtensionDefaultToken/CustomExtensionDefaultToken";
+import { CustomExtensionInformation } from "../CustomExtensionInformation/CustomExtensionInformation";
+import { CustomExtensionTokens } from "../CustomExtensionTokens/CustomExtensionTokens";
+import { WebhooksList } from "../WebhooksList/WebhooksList";
 
 export interface CustomExtensionDetailsPageFormData {
   hasFullAccess: boolean;

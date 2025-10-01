@@ -2,7 +2,6 @@
 import { AddressEdit } from "@dashboard/components/AddressEdit";
 import { CardSpacer } from "@dashboard/components/CardSpacer";
 import { FormSpacer } from "@dashboard/components/FormSpacer";
-import { CustomerAddressChoiceCard } from "@dashboard/customers/components/CustomerAddressChoiceCard";
 import { AddressTypeInput } from "@dashboard/customers/types";
 import { AccountErrorFragment, AddressFragment, OrderErrorFragment } from "@dashboard/graphql";
 import { FormChange } from "@dashboard/hooks/useForm";
@@ -15,6 +14,7 @@ import { useIntl } from "react-intl";
 import { AddressInputOptionEnum } from "./form";
 import { addressEditMessages } from "./messages";
 import { useStyles } from "./styles";
+import { CustomerAddressChoiceCard } from "../../../customers/components/CustomerAddressChoiceCard/CustomerAddressChoiceCard";
 
 export interface OrderCustomerAddressEditProps {
   loading: boolean;

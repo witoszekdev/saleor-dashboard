@@ -1,5 +1,4 @@
 // @ts-strict-ignore
-import { updateAtIndex } from "@dashboard/utils/lists";
 import { EditableGridCell, Item } from "@glideapps/glide-data-grid";
 import {
   createContext,
@@ -13,6 +12,7 @@ import {
 } from "react";
 
 import { AvailableColumn } from "../types";
+import { updateAtIndex } from "../../../utils/lists/lists";
 
 export interface DatagridChange {
   data: any;

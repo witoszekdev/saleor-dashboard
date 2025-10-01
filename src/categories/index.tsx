@@ -16,7 +16,7 @@ import {
 } from "./urls";
 import { CategoryCreateView } from "./views/CategoryCreate";
 import { CategoryDetails as CategoryDetailsView } from "./views/CategoryDetails";
-import { CategoryList as CategoryListComponent } from "./views/CategoryList";
+import { CategoryList as CategoryListComponent } from "./views/CategoryList/CategoryList";
 
 interface CategoryDetailsRouteParams {
   id: string;

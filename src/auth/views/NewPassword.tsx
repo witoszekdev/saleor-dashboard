@@ -4,9 +4,8 @@ import { useAuth } from "@saleor/sdk";
 import { parse as parseQs } from "qs";
 import { useState } from "react";
 import { RouteComponentProps } from "react-router";
-
-import { NewPasswordPage, NewPasswordPageFormData } from "../components/NewPasswordPage";
 import { NewPasswordUrlQueryParams } from "../urls";
+import { NewPasswordPage, NewPasswordPageFormData } from "../components/NewPasswordPage/NewPasswordPage";
 
 const NewPassword = ({ location }: RouteComponentProps) => {
   const navigate = useNavigator();

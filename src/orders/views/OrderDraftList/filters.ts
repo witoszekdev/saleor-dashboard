@@ -1,19 +1,11 @@
 // @ts-strict-ignore
-import { FilterElement } from "@dashboard/components/Filter";
 import { OrderDraftFilterInput } from "@dashboard/graphql";
 import { maybe } from "@dashboard/misc";
-import {
-  OrderDraftFilterKeys,
-  OrderDraftListFilterOpts,
-} from "@dashboard/orders/components/OrderDraftListPage";
-
-import {
-  createFilterTabUtils,
-  getGteLteVariables,
-  getMinMaxQueryParam,
-  getSingleValueQueryParam,
-} from "../../../utils/filters";
 import { OrderDraftListUrlFilters, OrderDraftListUrlFiltersEnum } from "../../urls";
+import { FilterElement } from "../../../components/Filter/types";
+import { OrderDraftFilterKeys, OrderDraftListFilterOpts } from "../../components/OrderDraftListPage/filters";
+import { createFilterTabUtils } from "../../../utils/filters/storage";
+import { getGteLteVariables, getMinMaxQueryParam, getSingleValueQueryParam } from "../../../utils/filters/filters";
 
 const ORDER_DRAFT_FILTERS_KEY = "orderDraftFilters";
 

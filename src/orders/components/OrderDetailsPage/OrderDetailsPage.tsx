@@ -3,11 +3,7 @@ import { FetchResult } from "@apollo/client";
 import { AppWidgets } from "@dashboard/apps/components/AppWidgets/AppWidgets";
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
 import { CardSpacer } from "@dashboard/components/CardSpacer";
-import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import { useDevModeContext } from "@dashboard/components/DevModePanel/hooks";
-import { Form } from "@dashboard/components/Form";
-import { DetailPageLayout } from "@dashboard/components/Layouts";
-import { Metadata, MetadataIdSchema } from "@dashboard/components/Metadata";
 import { Savebar } from "@dashboard/components/Savebar";
 import { extensionMountPoints } from "@dashboard/extensions/extensionMountPoints";
 import { getExtensionsItemsForOrderDetails } from "@dashboard/extensions/getExtensionsItems";
@@ -29,16 +25,8 @@ import { Divider } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
 
 import { getMutationErrors, maybe } from "../../../misc";
-import { OrderChannelSectionCard } from "../OrderChannelSectionCard";
-import { OrderCustomer } from "../OrderCustomer";
-import { OrderCustomerNote } from "../OrderCustomerNote";
 import { OrderDraftDetails } from "../OrderDraftDetails/OrderDraftDetails";
-import { FormData as OrderDraftDetailsProductsFormData } from "../OrderDraftDetailsProducts";
-import { OrderFulfilledProductsCard } from "../OrderFulfilledProductsCard";
-import { FormData as HistoryFormData, OrderHistory } from "../OrderHistory";
-import { OrderInvoiceList } from "../OrderInvoiceList";
 import { OrderPaymentOrTransaction } from "../OrderPaymentOrTransaction/OrderPaymentOrTransaction";
-import { OrderUnfulfilledProductsCard } from "../OrderUnfulfilledProductsCard";
 import { messages } from "./messages";
 import { Title } from "./Title";
 import {
@@ -47,6 +35,19 @@ import {
   filteredConditionalItems,
   hasAnyItemsReplaceable,
 } from "./utils";
+import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import { Form } from "../../../components/Form/Form";
+import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
+import { Metadata } from "../../../components/Metadata/Metadata";
+import { MetadataIdSchema } from "../../../components/Metadata/types";
+import { OrderChannelSectionCard } from "../OrderChannelSectionCard/OrderChannelSectionCard";
+import { OrderCustomer } from "../OrderCustomer/OrderCustomer";
+import { OrderCustomerNote } from "../OrderCustomerNote/OrderCustomerNote";
+import { FormData as OrderDraftDetailsProductsFormData } from "../OrderDraftDetailsProducts/OrderDraftDetailsProducts";
+import { OrderFulfilledProductsCard } from "../OrderFulfilledProductsCard/OrderFulfilledProductsCard";
+import { FormData as HistoryFormData, OrderHistory } from "../OrderHistory/OrderHistory";
+import { OrderInvoiceList } from "../OrderInvoiceList/OrderInvoiceList";
+import { OrderUnfulfilledProductsCard } from "../OrderUnfulfilledProductsCard/OrderUnfulfilledProductsCard";
 
 interface OrderDetailsPageProps {
   order: OrderDetailsFragment | OrderDetailsFragment;

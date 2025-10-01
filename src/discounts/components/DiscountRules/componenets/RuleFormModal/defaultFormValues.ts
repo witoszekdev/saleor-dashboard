@@ -1,5 +1,5 @@
-import { Rule } from "@dashboard/discounts/models";
 import { PromotionTypeEnum, RewardTypeEnum, RewardValueTypeEnum } from "@dashboard/graphql";
+import { Rule } from "../../../../models/Rule";
 
 const defaultFormValues: Rule = {
   id: "",

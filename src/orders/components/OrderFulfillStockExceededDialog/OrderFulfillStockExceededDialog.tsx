@@ -1,9 +1,6 @@
 // @ts-strict-ignore
 import { ActionDialog } from "@dashboard/components/ActionDialog";
 import { CardSpacer } from "@dashboard/components/CardSpacer";
-import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import { ResponsiveTable } from "@dashboard/components/ResponsiveTable";
-import { TableRowLink } from "@dashboard/components/TableRowLink";
 import { FulfillmentFragment, OrderFulfillLineFragment } from "@dashboard/graphql";
 import { renderCollection } from "@dashboard/misc";
 import {
@@ -14,10 +11,12 @@ import {
 import { TableBody, TableCell, TableHead } from "@material-ui/core";
 import { Text } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
-
-import { OrderFulfillStockExceededDialogLine } from "../OrderFulfillStockExceededDialogLine";
 import { stockExceededDialogMessages as messages } from "./messages";
 import { useStyles } from "./styles";
+import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import { ResponsiveTable } from "../../../components/ResponsiveTable/ResponsiveTable";
+import { TableRowLink } from "../../../components/TableRowLink/TableRowLink";
+import { OrderFulfillStockExceededDialogLine } from "../OrderFulfillStockExceededDialogLine/OrderFulfillStockExceededDialogLine";
 
 interface OrderFulfillStockExceededDialogProps {
   lines: Array<FulfillmentFragment["lines"][0] | OrderFulfillLineFragment>;

@@ -8,8 +8,7 @@ import { TextField } from "@material-ui/core";
 import { makeStyles } from "@saleor/macaw-ui";
 import * as React from "react";
 import { useIntl } from "react-intl";
-
-import { CustomerCreatePageFormData } from "../CustomerCreatePage";
+import { CustomerCreatePageFormData } from "../CustomerCreatePage/CustomerCreatePage";
 
 const useStyles = makeStyles(
   theme => ({

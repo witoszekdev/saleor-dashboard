@@ -1,15 +1,12 @@
 // @ts-strict-ignore
 import { DashboardCard } from "@dashboard/components/Card";
-import {
-  GiftCardSettingsExpirySelect,
-  GiftCardSettingsExpirySelectProps,
-} from "@dashboard/giftCards/components/GiftCardSettingsExpirySelect";
 import { makeStyles } from "@saleor/macaw-ui";
 import * as React from "react";
 import { useIntl } from "react-intl";
 
 import { GiftCardSettingsFormData } from "../types";
 import { giftCardExpirySettingsCard as messages } from "./messages";
+import { GiftCardSettingsExpirySelect, GiftCardSettingsExpirySelectProps } from "../../components/GiftCardSettingsExpirySelect/GiftCardSettingsExpirySelect";
 
 interface GiftCardExpirySettingsCardProps
   extends Pick<GiftCardSettingsExpirySelectProps, "errors"> {

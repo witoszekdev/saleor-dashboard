@@ -1,12 +1,10 @@
 // @ts-strict-ignore
-import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import {
   MoneyFragment,
   OrderDetailsFragment,
   useOrderLineDiscountRemoveMutation,
   useOrderLineDiscountUpdateMutation,
 } from "@dashboard/graphql";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { getDefaultNotifierSuccessErrorData } from "@dashboard/hooks/useNotifier/utils";
 import { getById } from "@dashboard/misc";
 import { OrderDiscountCommonInput } from "@dashboard/orders/components/OrderDiscountCommonModal/types";
@@ -20,6 +18,8 @@ import {
   OrderLineDiscountData,
 } from "./types";
 import { getOrderLineDiscount, getParsedDiscountData, useDiscountDialog } from "./utils";
+import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
 
 export interface OrderLineDiscountContextConsumerProps extends OrderDiscountConsumerCommonProps {
   addOrderLineDiscount: (data: OrderDiscountCommonInput) => void;

@@ -1,6 +1,4 @@
 import { BackButton } from "@dashboard/components/BackButton";
-import { ConfirmButton, ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import { Form } from "@dashboard/components/Form";
 import { Grid } from "@dashboard/components/Grid";
 import { DashboardModal } from "@dashboard/components/Modal";
 import { commonMessages } from "@dashboard/intl";
@@ -8,6 +6,8 @@ import { DialogProps, MinMax } from "@dashboard/types";
 import { TextField } from "@material-ui/core";
 import { Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
+import { ConfirmButton, ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import { Form } from "../../../components/Form/Form";
 
 interface ShippingZonePostalCodeRangeDialogProps extends DialogProps {
   confirmButtonState: ConfirmButtonTransitionState;

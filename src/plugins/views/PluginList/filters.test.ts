@@ -1,17 +1,14 @@
-import { FieldType } from "@dashboard/components/Filter";
 import { PluginConfigurationType } from "@dashboard/graphql";
-import {
-  createFilterStructure,
-  PluginFilterKeys,
-} from "@dashboard/plugins/components/PluginsListPage";
 import { PluginListUrlFilters } from "@dashboard/plugins/urls";
-import { getFilterQueryParams } from "@dashboard/utils/filters";
 import { stringifyQs } from "@dashboard/utils/urls";
 import { getExistingKeys } from "@test/filters";
 import { config } from "@test/intl";
 import { createIntl } from "react-intl";
 
 import { getFilterQueryParam, getFilterVariables } from "./filters";
+import { FieldType } from "../../../components/Filter/types";
+import { createFilterStructure, PluginFilterKeys } from "../../components/PluginsListPage/filters";
+import { getFilterQueryParams } from "../../../utils/filters/filters";
 
 describe("Filtering query params", () => {
   it("should be empty object if no params given", () => {

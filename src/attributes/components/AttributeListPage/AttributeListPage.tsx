@@ -1,9 +1,7 @@
 import { attributeAddUrl, AttributeListUrlSortField } from "@dashboard/attributes/urls";
-import { ListFilters } from "@dashboard/components/AppLayout/ListFilters";
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
 import { BulkDeleteButton } from "@dashboard/components/BulkDeleteButton";
 import { DashboardCard } from "@dashboard/components/Card";
-import { FilterPresetsSelect } from "@dashboard/components/FilterPresetsSelect";
 import { configurationMenuUrl } from "@dashboard/configuration";
 import { useFlag } from "@dashboard/featureFlags";
 import { AttributeFragment } from "@dashboard/graphql";
@@ -14,8 +12,10 @@ import { useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
 import { FilterPagePropsWithPresets, PageListProps, SortPage } from "../../../types";
-import { AttributeListDatagrid } from "../AttributeListDatagrid";
 import { AttributeFilterKeys, AttributeListFilterOpts, createFilterStructure } from "./filters";
+import { ListFilters } from "../../../components/AppLayout/ListFilters/ListFilters";
+import { FilterPresetsSelect } from "../../../components/FilterPresetsSelect/FilterPresetsSelect";
+import { AttributeListDatagrid } from "../AttributeListDatagrid/AttributeListDatagrid";
 
 interface AttributeListPageProps
   extends PageListProps,

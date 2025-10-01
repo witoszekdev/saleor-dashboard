@@ -1,8 +1,8 @@
 import { ActionDialog } from "@dashboard/components/ActionDialog";
-import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import { useIntl } from "react-intl";
 
 import { productVariantEndPreorderDialogMessages } from "./messages";
+import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
 
 interface ProductVariantEndPreorderDialogProps {
   confirmButtonState: ConfirmButtonTransitionState;

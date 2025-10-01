@@ -1,4 +1,3 @@
-import { ConditionalProductFilterProvider } from "@dashboard/components/ConditionalFilter/context";
 import { Route } from "@dashboard/components/Router";
 import { sectionNames } from "@dashboard/intl";
 import { asSortParams } from "@dashboard/utils/sort";
@@ -24,12 +23,13 @@ import {
   ProductVariantEditUrlQueryParams,
   productVariantLegacyEditPath,
 } from "./urls";
-import { ProductCreateView as ProductCreateComponent } from "./views/ProductCreate";
 import { ProductImage as ProductImageComponent } from "./views/ProductImage";
-import { ProductList as ProductListComponent } from "./views/ProductList";
-import { ProductUpdate as ProductUpdateComponent } from "./views/ProductUpdate";
-import { ProductVariant as ProductVariantComponent } from "./views/ProductVariant";
 import { ProductVariant as ProductVariantCreateComponent } from "./views/ProductVariantCreate";
+import { ConditionalProductFilterProvider } from "../components/ConditionalFilter/context/provider";
+import { ProductCreateView as ProductCreateComponent } from "./views/ProductCreate/ProductCreate";
+import { ProductList as ProductListComponent } from "./views/ProductList/ProductList";
+import { ProductUpdate as ProductUpdateComponent } from "./views/ProductUpdate/ProductUpdate";
+import { ProductVariant as ProductVariantComponent } from "./views/ProductVariant/ProductVariant";
 
 interface MatchParams {
   id?: string;

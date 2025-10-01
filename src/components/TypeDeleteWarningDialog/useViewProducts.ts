@@ -2,10 +2,9 @@ import { productListPath } from "@dashboard/products/urls";
 import { stringify } from "qs";
 import { useMemo } from "react";
 import urljoin from "url-join";
-
-import { FilterElement } from "../ConditionalFilter/FilterElement";
 import { prepareStructure } from "../ConditionalFilter/ValueProvider/utils";
 import { TypeBaseData } from "./types";
+import { FilterElement } from "../ConditionalFilter/FilterElement/FilterElement";
 
 export interface ProductTypeBaseData extends TypeBaseData {
   slug: string;

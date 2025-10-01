@@ -6,7 +6,7 @@ import { ReactNode } from "react";
 import { InlineSVG as SVG } from "react-inlinesvg";
 
 import { useUser } from "..";
-import { LoginLoading } from "./LoginLoading";
+import { LoginLoading } from "./LoginLoading/LoginLoading";
 
 const useStyles = makeStyles(
   theme => ({

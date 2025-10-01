@@ -4,10 +4,9 @@ import {
 } from "@dashboard/components/ConditionalFilter/API/Handler";
 import { ProductTypeEnum } from "@dashboard/graphql";
 import { useIntl } from "react-intl";
-
-import { FilterContainer } from "../../FilterElement";
 import { FilterAPIProvider } from "../FilterAPIProvider";
 import { getFilterElement } from "../utils";
+import { FilterContainer } from "../../FilterElement/FilterElement";
 
 export const useProductTypesFilterAPIProvider = (): FilterAPIProvider => {
   const intl = useIntl();

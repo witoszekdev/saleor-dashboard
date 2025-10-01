@@ -1,7 +1,6 @@
 // @ts-strict-ignore
 import { DashboardCard } from "@dashboard/components/Card";
 import { ControlledCheckbox } from "@dashboard/components/ControlledCheckbox";
-import { VerticalSpacer } from "@dashboard/components/VerticalSpacer";
 import { ShippingErrorFragment } from "@dashboard/graphql";
 import { ChangeEvent } from "@dashboard/hooks/useForm";
 import { useShop } from "@dashboard/hooks/useShop";
@@ -12,6 +11,7 @@ import { Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 
 import { useStyles } from "./styles";
+import { VerticalSpacer } from "../../../components/VerticalSpacer/VerticalSpacer";
 
 interface OrderWeightProps {
   disabled: boolean;

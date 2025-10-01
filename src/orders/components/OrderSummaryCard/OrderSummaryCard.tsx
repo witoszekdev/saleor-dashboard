@@ -4,12 +4,11 @@ import { getDiscountTypeLabel } from "@dashboard/orders/utils/data";
 import { OrderDetailsViewModel } from "@dashboard/orders-v2/order-details-view-model";
 import { makeStyles } from "@saleor/macaw-ui";
 import { FormattedMessage, useIntl } from "react-intl";
-
-import { OrderUsedGiftCards } from "../OrderUsedGiftCards";
 import { orderSummaryMessages } from "./messages";
 import { SummaryLine } from "./SummaryLine";
 import { SummaryList } from "./SummaryList";
 import { extractOrderGiftCardUsedAmount, getDeliveryMethodName, getTaxTypeText } from "./utils";
+import { OrderUsedGiftCards } from "../OrderUsedGiftCards/OrderUsedGiftCards";
 
 interface OrderPaymentProps {
   order: OrderDetailsFragment;

@@ -19,14 +19,12 @@ import {
   useCustomerAddressesQuery,
 } from "@dashboard/graphql";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-import { CustomerEditData } from "@dashboard/orders/components/OrderCustomer";
 import { OrderCustomerAddressesEditDialogOutput } from "@dashboard/orders/components/OrderCustomerAddressesEditDialog/types";
 import {
   CustomerChangeActionEnum,
   OrderCustomerChangeData,
 } from "@dashboard/orders/components/OrderCustomerChangeDialog/form";
 import { OrderCustomerChangeDialog } from "@dashboard/orders/components/OrderCustomerChangeDialog/OrderCustomerChangeDialog";
-import { OrderMetadataDialog } from "@dashboard/orders/components/OrderMetadataDialog";
 import { getVariantSearchAddress, isAnyAddressEditModalOpen } from "@dashboard/orders/utils/data";
 import { OrderDiscountProvider } from "@dashboard/products/components/OrderDiscountProviders/OrderDiscountProvider";
 import { OrderLineDiscountProvider } from "@dashboard/products/components/OrderDiscountProviders/OrderLineDiscountProvider";
@@ -41,10 +39,12 @@ import { extractMutationErrors, getStringOrPlaceholder } from "../../../../misc"
 import { productUrl } from "../../../../products/urls";
 import { OrderAddressFields } from "../../../components/OrderAddressFields/OrderAddressFields";
 import { OrderDraftCancelDialog } from "../../../components/OrderDraftCancelDialog/OrderDraftCancelDialog";
-import { OrderDraftPage } from "../../../components/OrderDraftPage";
-import { OrderProductAddDialog } from "../../../components/OrderProductAddDialog";
-import { OrderShippingMethodEditDialog } from "../../../components/OrderShippingMethodEditDialog";
 import { orderDraftListUrl, OrderUrlDialog, OrderUrlQueryParams } from "../../../urls";
+import { CustomerEditData } from "../../../components/OrderCustomer/OrderCustomer";
+import { OrderMetadataDialog } from "../../../components/OrderMetadataDialog/OrderMetadataDialog";
+import { OrderDraftPage } from "../../../components/OrderDraftPage/OrderDraftPage";
+import { OrderProductAddDialog } from "../../../components/OrderProductAddDialog/OrderProductAddDialog";
+import { OrderShippingMethodEditDialog } from "../../../components/OrderShippingMethodEditDialog/OrderShippingMethodEditDialog";
 
 interface OrderDraftDetailsProps {
   id: string;

@@ -1,7 +1,6 @@
 // @ts-strict-ignore
 import { RecursiveMenuItem } from "@dashboard/structures/types";
-
-import { TreeOperation } from "../MenuItems";
+import { TreeOperation } from "../MenuItems/tree";
 
 export function findNode(tree: RecursiveMenuItem[], id: string): number[] {
   const foundNodeIndex = tree.findIndex(node => node.id === id);

@@ -1,9 +1,9 @@
 import { ApolloClient } from "@apollo/client";
 
 import { Handler } from "../../API/Handler";
-import { FilterElement } from "../../FilterElement";
 import { QueryVarsBuilderUtils } from "../utils";
 import { BothApiQueryVarsBuilder, FilterQuery } from "./types";
+import { FilterElement } from "../../FilterElement/FilterElement";
 
 /** This class is used when we need a simple rename from FilterElement value
  * to different query variables

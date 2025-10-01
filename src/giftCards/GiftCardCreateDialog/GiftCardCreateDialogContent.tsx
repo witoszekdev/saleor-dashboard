@@ -2,7 +2,6 @@
 import { DashboardModal } from "@dashboard/components/Modal";
 import { GiftCardCreateInput, useGiftCardCreateMutation } from "@dashboard/graphql";
 import { useCurrentDate } from "@dashboard/hooks/useCurrentDate";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { DialogProps } from "@dashboard/types";
 import { useState } from "react";
 import { useIntl } from "react-intl";
@@ -12,6 +11,7 @@ import { GiftCardCreateDialogForm, GiftCardCreateFormData } from "./GiftCardCrea
 import { giftCardCreateMessages as messages } from "./messages";
 import { GiftCardCreateFormCustomer } from "./types";
 import { getGiftCardCreateOnCompletedMessage, getGiftCardExpiryInputData } from "./utils";
+import { useNotifier } from "../../hooks/useNotifier/useNotifier";
 
 interface GiftCardCreateDialogContentProps extends Pick<DialogProps, "onClose"> {
   refetchQueries: string[];

@@ -1,8 +1,5 @@
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
-import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import { Form } from "@dashboard/components/Form";
 import { FormSpacer } from "@dashboard/components/FormSpacer";
-import { DetailPageLayout } from "@dashboard/components/Layouts";
 import { Savebar } from "@dashboard/components/Savebar";
 import {
   createAsyncEventsSelectHandler,
@@ -24,14 +21,16 @@ import { parse, print } from "graphql";
 import { useEffect, useState } from "react";
 import * as React from "react";
 import { useIntl } from "react-intl";
-
-import { PermissionAlert } from "./components/PermissionAlert";
-import { WebhookEvents } from "./components/WebhookEvents/";
-import { WebhookHeaders } from "./components/WebhookHeaders";
-import { WebhookInfo } from "./components/WebhookInfo";
-import { WebhookSubscriptionQuery } from "./components/WebhookSubscriptionQuery";
 import { getHeaderTitle, messages } from "./messages";
 import { getWebhookFormInitialFormValues } from "./webhookForm";
+import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import { Form } from "../../../components/Form/Form";
+import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
+import { PermissionAlert } from "./components/PermissionAlert/PermissionAlert";
+import { WebhookEvents } from "./components/WebhookEvents/WebhookEvents";
+import { WebhookHeaders } from "./components/WebhookHeaders/WebhookHeaders";
+import { WebhookInfo } from "./components/WebhookInfo/WebhookInfo";
+import { WebhookSubscriptionQuery } from "./components/WebhookSubscriptionQuery/WebhookSubscriptionQuery";
 
 export interface WebhookFormData {
   syncEvents: WebhookEventTypeSyncEnum[];

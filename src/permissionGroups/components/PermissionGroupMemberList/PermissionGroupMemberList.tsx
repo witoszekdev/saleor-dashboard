@@ -1,11 +1,6 @@
 // @ts-strict-ignore
 import { DashboardCard } from "@dashboard/components/Card";
 import { Checkbox } from "@dashboard/components/Checkbox";
-import { ResponsiveTable } from "@dashboard/components/ResponsiveTable";
-import { TableCellHeader } from "@dashboard/components/TableCellHeader";
-import { TableHead } from "@dashboard/components/TableHead";
-import { TableRowLink } from "@dashboard/components/TableRowLink";
-import { UserAvatar } from "@dashboard/components/UserAvatar";
 import { PermissionGroupMemberFragment } from "@dashboard/graphql";
 import { commonStatusMessages } from "@dashboard/intl";
 import { getUserInitials, getUserName, renderCollection, stopPropagation } from "@dashboard/misc";
@@ -18,6 +13,11 @@ import { makeStyles } from "@saleor/macaw-ui";
 import { Box, Button, Skeleton, Text, TrashBinIcon, vars } from "@saleor/macaw-ui-next";
 import { clsx } from "clsx";
 import { FormattedMessage, useIntl } from "react-intl";
+import { ResponsiveTable } from "../../../components/ResponsiveTable/ResponsiveTable";
+import { TableCellHeader } from "../../../components/TableCellHeader/TableCellHeader";
+import { TableHead } from "../../../components/TableHead/TableHead";
+import { TableRowLink } from "../../../components/TableRowLink/TableRowLink";
+import { UserAvatar } from "../../../components/UserAvatar/UserAvatar";
 
 const useStyles = makeStyles(
   theme => ({

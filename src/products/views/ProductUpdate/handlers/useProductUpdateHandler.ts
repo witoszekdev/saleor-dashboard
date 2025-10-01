@@ -26,7 +26,6 @@ import {
   useUpdateMetadataMutation,
   useUpdatePrivateMetadataMutation,
 } from "@dashboard/graphql";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { commonMessages } from "@dashboard/intl";
 import { getMutationErrors } from "@dashboard/misc";
 import { ProductUpdateSubmitData } from "@dashboard/products/components/ProductUpdatePage/types";
@@ -47,6 +46,7 @@ import {
   getProductUpdateVariables,
   hasProductChannelsUpdate,
 } from "./utils";
+import { useNotifier } from "../../../../hooks/useNotifier/useNotifier";
 
 export type UseProductUpdateHandlerError =
   | ProductErrorWithAttributesFragment

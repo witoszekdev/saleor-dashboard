@@ -1,10 +1,7 @@
 // @ts-strict-ignore
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
 import { CardSpacer } from "@dashboard/components/CardSpacer";
-import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import { Form } from "@dashboard/components/Form";
 import { Grid } from "@dashboard/components/Grid";
-import { DetailPageLayout } from "@dashboard/components/Layouts";
 import { Savebar } from "@dashboard/components/Savebar";
 import { ExtensionsUrls } from "@dashboard/extensions/urls";
 import { useFlag } from "@dashboard/featureFlags";
@@ -20,11 +17,13 @@ import { getStringOrPlaceholder } from "@dashboard/misc";
 import { pluginListUrl } from "@dashboard/plugins/urls";
 import { isSecretField } from "@dashboard/plugins/utils";
 import { useIntl } from "react-intl";
-
-import { PluginAuthorization } from "../PluginAuthorization";
-import { PluginDetailsChannelsCard } from "../PluginDetailsChannelsCard";
-import { PluginInfo } from "../PluginInfo";
-import { PluginSettings } from "../PluginSettings";
+import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import { Form } from "../../../components/Form/Form";
+import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
+import { PluginAuthorization } from "../PluginAuthorization/PluginAuthorization";
+import { PluginDetailsChannelsCard } from "../PluginDetailsChannelsCard/PluginDetailsChannelsCard";
+import { PluginInfo } from "../PluginInfo/PluginInfo";
+import { PluginSettings } from "../PluginSettings/PluginSettings";
 
 export interface PluginDetailsPageFormData {
   active: boolean;

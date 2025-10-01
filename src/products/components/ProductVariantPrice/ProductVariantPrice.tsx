@@ -5,9 +5,6 @@ import {
   ChannelPriceArgs,
 } from "@dashboard/channels/utils";
 import { DashboardCard } from "@dashboard/components/Card";
-import { PriceField } from "@dashboard/components/PriceField";
-import { ResponsiveTable } from "@dashboard/components/ResponsiveTable";
-import { TableRowLink } from "@dashboard/components/TableRowLink";
 import { ProductChannelListingErrorFragment, ProductErrorFragment } from "@dashboard/graphql";
 import { renderCollection } from "@dashboard/misc";
 import { getFormChannelError, getFormChannelErrors, getFormErrors } from "@dashboard/utils/errors";
@@ -15,6 +12,9 @@ import { getProductErrorMessage } from "@dashboard/utils/errors/product";
 import { TableBody, TableCell, TableHead } from "@material-ui/core";
 import { Skeleton, sprinkles, Text, vars } from "@saleor/macaw-ui-next";
 import { FormattedMessage, MessageDescriptor, useIntl } from "react-intl";
+import { PriceField } from "../../../components/PriceField/PriceField";
+import { ResponsiveTable } from "../../../components/ResponsiveTable/ResponsiveTable";
+import { TableRowLink } from "../../../components/TableRowLink/TableRowLink";
 
 interface ProductVariantPriceProps {
   productVariantChannelListings?: ChannelData[];

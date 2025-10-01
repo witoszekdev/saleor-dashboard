@@ -4,7 +4,6 @@ import {
   useRefundSettingsQuery,
 } from "@dashboard/graphql";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import {
   OrderTransactionRefundError,
   OrderTransactionRefundPage,
@@ -19,6 +18,7 @@ import {
   handleRefundCreateComplete,
   prepareRefundAddLines,
 } from "./handlers";
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
 
 interface OrderTransactionRefundCreateProps {
   orderId: string;

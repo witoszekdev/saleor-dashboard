@@ -1,12 +1,9 @@
 // @ts-strict-ignore
-import { ListFilters } from "@dashboard/components/AppLayout/ListFilters";
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
 import { BulkDeleteButton } from "@dashboard/components/BulkDeleteButton";
 import { ButtonGroupWithDropdown } from "@dashboard/components/ButtonGroupWithDropdown";
 import { DashboardCard } from "@dashboard/components/Card";
 import { getByName } from "@dashboard/components/Filter/utils";
-import { FilterPresetsSelect } from "@dashboard/components/FilterPresetsSelect";
-import { ListPageLayout } from "@dashboard/components/Layouts";
 import { voucherAddUrl, VoucherListUrlSortField } from "@dashboard/discounts/urls";
 import { extensionMountPoints } from "@dashboard/extensions/extensionMountPoints";
 import {
@@ -27,9 +24,11 @@ import {
 import { Box, Button, ChevronRightIcon } from "@saleor/macaw-ui-next";
 import { useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
-
-import { VoucherListDatagrid } from "../VoucherListDatagrid";
 import { createFilterStructure, VoucherFilterKeys, VoucherListFilterOpts } from "./filters";
+import { ListFilters } from "../../../components/AppLayout/ListFilters/ListFilters";
+import { FilterPresetsSelect } from "../../../components/FilterPresetsSelect/FilterPresetsSelect";
+import { ListPageLayout } from "../../../components/Layouts/List/index";
+import { VoucherListDatagrid } from "../VoucherListDatagrid/VoucherListDatagrid";
 
 interface VoucherListPageProps
   extends PageListProps,

@@ -4,7 +4,7 @@ import { Skeleton } from "@saleor/macaw-ui-next";
 import { useRef, useState } from "react";
 
 import { PluginAvailabilityStatus } from "./PluginAvailabilityStatus";
-import { PluginAvailabilityStatusPopup } from "./PluginAvailabilityStatusPopup";
+import { PluginAvailabilityStatusPopup } from "./PluginAvailabilityStatusPopup/PluginAvailabilityStatusPopup";
 
 interface PluginChannelAvailabilityCellProps {
   plugin: PluginBaseFragment;

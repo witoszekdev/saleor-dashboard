@@ -1,4 +1,3 @@
-import { VerticalSpacer } from "@dashboard/components/VerticalSpacer";
 import { getGiftCardErrorMessage } from "@dashboard/giftCards/GiftCardUpdate/messages";
 import { useGiftCardUpdate as useGiftCardUpdateForm } from "@dashboard/giftCards/GiftCardUpdate/providers/GiftCardUpdateFormProvider/hooks/useGiftCardUpdateForm";
 import { useStateFromProps } from "@dashboard/hooks/useStateFromProps";
@@ -9,6 +8,7 @@ import { useIntl } from "react-intl";
 
 import { giftCardExpirySelectMessages as messages } from "./messages";
 import { useGiftCardExpirySelectStyles as useStyles } from "./styles";
+import { VerticalSpacer } from "../../../components/VerticalSpacer/VerticalSpacer";
 
 const GiftCardUpdateExpirySelect = () => {
   const intl = useIntl();

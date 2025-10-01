@@ -1,6 +1,5 @@
 import { ActionDialog, ActionDialogProps } from "@dashboard/components/ActionDialog";
 import { DeleteWarningDialogConsentContent } from "@dashboard/components/TypeDeleteWarningDialog/DeleteWarningDialogConsentContent";
-import { GiftCardsListConsumerProps } from "@dashboard/giftCards/GiftCardsList/providers/GiftCardListProvider";
 import { ExtendedGiftCard } from "@dashboard/giftCards/GiftCardUpdate/providers/GiftCardDetailsProvider/types";
 import { GiftCardDataFragment } from "@dashboard/graphql";
 import { getById } from "@dashboard/misc";
@@ -9,6 +8,7 @@ import { useEffect, useMemo, useState } from "react";
 import { useIntl } from "react-intl";
 
 import { giftCardDeleteDialogMessages as messages } from "./messages";
+import { GiftCardsListConsumerProps } from "../../GiftCardsList/providers/GiftCardListProvider/GiftCardListProvider";
 
 export const SINGLE = 1;
 

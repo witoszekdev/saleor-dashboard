@@ -1,8 +1,8 @@
-import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import { buttonMessages } from "@dashboard/intl";
 import { FormattedMessage, useIntl } from "react-intl";
 
 import { ActionDialog } from "../ActionDialog";
+import { ConfirmButtonTransitionState } from "../ConfirmButton/ConfirmButton";
 
 interface DeleteFilterTabDialogProps {
   confirmButtonState: ConfirmButtonTransitionState;

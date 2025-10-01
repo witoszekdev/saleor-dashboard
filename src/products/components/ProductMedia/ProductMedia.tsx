@@ -1,7 +1,5 @@
 // @ts-strict-ignore
 import { DashboardCard } from "@dashboard/components/Card";
-import { ImageUpload } from "@dashboard/components/ImageUpload";
-import { MediaTile } from "@dashboard/components/MediaTile";
 import { ProductMediaFragment, ProductMediaType } from "@dashboard/graphql";
 import { ReorderAction } from "@dashboard/types";
 import { createMultiFileUploadHandler } from "@dashboard/utils/handlers/multiFileUploadHandler";
@@ -11,6 +9,8 @@ import { FormattedMessage, useIntl } from "react-intl";
 import { SortableContainer, SortableElement } from "react-sortable-hoc";
 
 import { messages } from "./messages";
+import { ImageUpload } from "../../../components/ImageUpload/ImageUpload";
+import { MediaTile } from "../../../components/MediaTile/MediaTile";
 
 interface SortableMediaProps {
   media: {

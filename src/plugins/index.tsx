@@ -16,8 +16,8 @@ import {
   pluginPath,
   PluginUrlQueryParams,
 } from "./urls";
-import { PluginsList as PluginsListComponent } from "./views/PluginList";
 import { PluginsDetails as PluginsDetailsComponent } from "./views/PluginsDetails";
+import { PluginsList as PluginsListComponent } from "./views/PluginList/PluginList";
 
 const PluginList = ({ location }: RouteComponentProps<any>) => {
   const qs = parseQs(location.search.substr(1)) as any;

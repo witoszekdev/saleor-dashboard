@@ -1,8 +1,6 @@
 import { Button } from "@dashboard/components/Button";
 import { DashboardCard } from "@dashboard/components/Card";
 import { Hr } from "@dashboard/components/Hr";
-import { ImageUpload } from "@dashboard/components/ImageUpload";
-import { MediaTile } from "@dashboard/components/MediaTile";
 import { CategoryDetailsFragment } from "@dashboard/graphql";
 import { commonMessages } from "@dashboard/intl";
 import { TextField } from "@material-ui/core";
@@ -12,6 +10,8 @@ import * as React from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
 import { CategoryUpdateData } from "../CategoryUpdatePage/form";
+import { ImageUpload } from "../../../components/ImageUpload/ImageUpload";
+import { MediaTile } from "../../../components/MediaTile/MediaTile";
 
 const useStyles = makeStyles(
   theme => ({

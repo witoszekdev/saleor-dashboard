@@ -1,6 +1,4 @@
-import { ResponsiveTable } from "@dashboard/components/ResponsiveTable";
 import { TablePaginationWithContext } from "@dashboard/components/TablePagination";
-import { TableRowLink } from "@dashboard/components/TableRowLink";
 import { PluginBaseFragment } from "@dashboard/graphql";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { renderCollection } from "@dashboard/misc";
@@ -16,6 +14,8 @@ import { pluginsMiscMessages } from "./messages";
 import { PluginChannelAvailabilityCell } from "./PluginChannelAvailabilityCell";
 import { PluginChannelConfigurationCell } from "./PluginChannelConfigurationCell";
 import { PluginListTableHead } from "./PluginListTableHead";
+import { ResponsiveTable } from "../../../components/ResponsiveTable/ResponsiveTable";
+import { TableRowLink } from "../../../components/TableRowLink/TableRowLink";
 
 const useStyles = makeStyles(
   () => ({

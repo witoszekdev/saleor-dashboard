@@ -15,9 +15,9 @@ import { previousPagePath } from "../../consts";
 import { useFetchManifest } from "../../hooks/useFetchManifest";
 import { useInstallApp } from "../../hooks/useInstallApp";
 import { ExtensionInstallFormData } from "../../types";
-import { InstallSectionData } from "../InstallSectionData";
 import { InstallTopNav } from "../InstallTopNav";
 import { ManifestUrlForm } from "../ManifestUrlForm/ManifestUrlForm";
+import { InstallSectionData } from "../InstallSectionData/InstallSectionData";
 
 export const InstallCustomExtensionFromForm = ({
   control,

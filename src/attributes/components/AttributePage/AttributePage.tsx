@@ -16,9 +16,6 @@ import { useUser } from "@dashboard/auth";
 import { hasPermission } from "@dashboard/auth/misc";
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
 import { CardSpacer } from "@dashboard/components/CardSpacer";
-import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import { Form } from "@dashboard/components/Form";
-import { DetailPageLayout } from "@dashboard/components/Layouts";
 import { Metadata } from "@dashboard/components/Metadata/Metadata";
 import { MetadataFormData } from "@dashboard/components/Metadata/types";
 import { Savebar } from "@dashboard/components/Savebar";
@@ -51,12 +48,14 @@ import { Option } from "@saleor/macaw-ui-next";
 import * as React from "react";
 import { useIntl } from "react-intl";
 import { slugify } from "slugify";
-
-import { AttributeDetails } from "../AttributeDetails";
-import { AttributeOrganization } from "../AttributeOrganization";
-import { AttributeProperties } from "../AttributeProperties";
 import { AttributeReferenceTypesSection } from "../AttributeReferenceTypesSection/AttributeReferenceTypesSection";
-import { AttributeValues } from "../AttributeValues";
+import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import { Form } from "../../../components/Form/Form";
+import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
+import { AttributeDetails } from "../AttributeDetails/AttributeDetails";
+import { AttributeOrganization } from "../AttributeOrganization/AttributeOrganization";
+import { AttributeProperties } from "../AttributeProperties/AttributeProperties";
+import { AttributeValues } from "../AttributeValues/AttributeValues";
 
 interface AttributePageProps {
   attribute?: AttributeDetailsFragment | null | undefined;

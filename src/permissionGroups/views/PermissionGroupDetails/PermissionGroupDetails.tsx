@@ -11,13 +11,10 @@ import {
 } from "@dashboard/graphql";
 import { useBulkActions } from "@dashboard/hooks/useBulkActions";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { useShop } from "@dashboard/hooks/useShop";
 import { useStateFromProps } from "@dashboard/hooks/useStateFromProps";
 import { commonMessages } from "@dashboard/intl";
 import { extractMutationErrors, getStringOrPlaceholder } from "@dashboard/misc";
-import { MembersErrorDialog } from "@dashboard/permissionGroups/components/MembersErrorDialog";
-import { PermissionGroupDeleteDialog } from "@dashboard/permissionGroups/components/PermissionGroupDeleteDialog";
 import { UseStaffMemberSearch as useStaffMemberSearch } from "@dashboard/searches/useStaffMemberSearch";
 import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
 import { createSortHandler } from "@dashboard/utils/handlers/sortHandler";
@@ -25,13 +22,6 @@ import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { getSortParams } from "@dashboard/utils/sort";
 import { useState } from "react";
 import { useIntl } from "react-intl";
-
-import { AssignMembersDialog } from "../../components/AssignMembersDialog";
-import {
-  PermissionGroupDetailsPage,
-  PermissionGroupDetailsPageFormData,
-} from "../../components/PermissionGroupDetailsPage";
-import { UnassignMembersDialog } from "../../components/UnassignMembersDialog";
 import {
   permissionGroupDetailsUrl,
   PermissionGroupDetailsUrlDialog,
@@ -45,6 +35,12 @@ import {
   permissionsDiff,
   usersDiff,
 } from "../../utils";
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
+import { MembersErrorDialog } from "../../components/MembersErrorDialog/MembersErrorDialog";
+import { PermissionGroupDeleteDialog } from "../../components/PermissionGroupDeleteDialog/PermissionGroupDeleteDialog";
+import { AssignMembersDialog } from "../../components/AssignMembersDialog/AssignMembersDialog";
+import { PermissionGroupDetailsPage, PermissionGroupDetailsPageFormData } from "../../components/PermissionGroupDetailsPage/PermissionGroupDetailsPage";
+import { UnassignMembersDialog } from "../../components/UnassignMembersDialog/UnassignMembersDialog";
 
 interface PermissionGroupDetailsProps {
   id: string;

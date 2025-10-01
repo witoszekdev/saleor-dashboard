@@ -1,5 +1,5 @@
-import { LocaleConsumer } from "../Locale";
 import { formatPercantage } from "./utils";
+import { LocaleConsumer } from "../Locale/Locale";
 
 interface PercentProps {
   amount: number;

@@ -1,10 +1,10 @@
-import { useDiscountRulesContext } from "@dashboard/discounts/components/DiscountRules/context";
-import { Rule } from "@dashboard/discounts/models";
 import { Option, Select } from "@saleor/macaw-ui-next";
 import { useController, useFormContext } from "react-hook-form";
 import { useIntl } from "react-intl";
 
 import { getRewardTypeOptions } from "./rewardTypeOptions";
+import { useDiscountRulesContext } from "../../../../context/consumer";
+import { Rule } from "../../../../../../models/Rule";
 
 export const RuleRewardTypeSelect = () => {
   const intl = useIntl();

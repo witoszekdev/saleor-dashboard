@@ -1,9 +1,6 @@
 import { BackButton } from "@dashboard/components/BackButton";
 import { Checkbox } from "@dashboard/components/Checkbox";
-import { InfiniteScroll } from "@dashboard/components/InfiniteScroll";
 import { DashboardModal } from "@dashboard/components/Modal";
-import { ResponsiveTable } from "@dashboard/components/ResponsiveTable";
-import { TableRowLink } from "@dashboard/components/TableRowLink";
 import { WarehouseFragment } from "@dashboard/graphql";
 import { useSearchQuery } from "@dashboard/hooks/useSearchQuery";
 import { CircularProgress, TableBody, TableCell, TableRow, TextField } from "@material-ui/core";
@@ -11,6 +8,9 @@ import { ConfirmButton } from "@saleor/macaw-ui";
 import { Button, Option, sprinkles, Text } from "@saleor/macaw-ui-next";
 import { useState } from "react";
 import { useIntl } from "react-intl";
+import { InfiniteScroll } from "../../../../components/InfiniteScroll/InfiniteScroll";
+import { ResponsiveTable } from "../../../../components/ResponsiveTable/ResponsiveTable";
+import { TableRowLink } from "../../../../components/TableRowLink/TableRowLink";
 
 interface ProductStocksAssignWarehousesProps {
   warehousesToAssign: WarehouseFragment[];

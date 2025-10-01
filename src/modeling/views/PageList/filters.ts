@@ -1,13 +1,14 @@
 // @ts-strict-ignore
-import { FilterElement, IFilter } from "@dashboard/components/Filter";
 import { SearchWithFetchMoreProps } from "@dashboard/giftCards/GiftCardsList/GiftCardListSearchAndFilters/types";
 import { SearchPageTypesQuery } from "@dashboard/graphql";
 import { PageListUrlFilters } from "@dashboard/modeling/urls";
 import { AutocompleteFilterOpts, FilterOpts } from "@dashboard/types";
-import { createFilterTabUtils, getMultipleValueQueryParam } from "@dashboard/utils/filters";
 import { createAutocompleteField } from "@dashboard/utils/filters/fields";
 import { mapNodeToChoice, mapSingleValueNodeToChoice } from "@dashboard/utils/maps";
 import { defineMessages, IntlShape } from "react-intl";
+import { FilterElement, IFilter } from "../../../components/Filter/types";
+import { createFilterTabUtils } from "../../../utils/filters/storage";
+import { getMultipleValueQueryParam } from "../../../utils/filters/filters";
 
 export enum PageListFilterKeys {
   pageTypes = "pageTypes",

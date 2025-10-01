@@ -2,7 +2,6 @@
 import { ActionDialog } from "@dashboard/components/ActionDialog";
 import { useAppChannel } from "@dashboard/components/AppLayout/AppChannelContext";
 import { AttributeInput } from "@dashboard/components/Attributes";
-import { NotFoundPage } from "@dashboard/components/NotFoundPage";
 import { useShopLimitsQuery } from "@dashboard/components/Shop/queries";
 import { WindowTitle } from "@dashboard/components/WindowTitle";
 import { DEFAULT_INITIAL_SEARCH_DATA, VALUES_PAGINATE_BY } from "@dashboard/config";
@@ -16,7 +15,6 @@ import {
 } from "@dashboard/graphql";
 import { getSearchFetchMoreProps } from "@dashboard/hooks/makeTopLevelSearch/utils";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { commonMessages, errorMessages } from "@dashboard/intl";
 import { useSearchAttributeValuesSuggestions } from "@dashboard/searches/useAttributeValueSearch";
 import { UseCategorySearch as useCategorySearch } from "@dashboard/searches/useCategorySearch";
@@ -33,7 +31,6 @@ import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { FormattedMessage, useIntl } from "react-intl";
 
 import { getMutationState } from "../../../misc";
-import { ProductUpdatePage } from "../../components/ProductUpdatePage";
 import {
   productListUrl,
   productUrl,
@@ -44,6 +41,9 @@ import {
 import { createImageReorderHandler, createImageUploadHandler } from "./handlers";
 import { useProductUpdateHandler } from "./handlers/useProductUpdateHandler";
 import { productUpdatePageMessages as messages } from "./messages";
+import { NotFoundPage } from "../../../components/NotFoundPage/NotFoundPage";
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
+import { ProductUpdatePage } from "../../components/ProductUpdatePage/ProductUpdatePage";
 
 interface ProductUpdateProps {
   id: string;

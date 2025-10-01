@@ -2,15 +2,12 @@
 import { useUserAccessibleChannels } from "@dashboard/auth/hooks/useUserAccessibleChannels";
 import { useContextualLink } from "@dashboard/components/AppLayout/ContextualLinks/useContextualLink";
 import { LimitsInfo } from "@dashboard/components/AppLayout/LimitsInfo";
-import { ListFilters } from "@dashboard/components/AppLayout/ListFilters";
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
 import { ButtonGroupWithDropdown } from "@dashboard/components/ButtonGroupWithDropdown";
 import { DashboardCard } from "@dashboard/components/Card";
 import { useConditionalFilterContext } from "@dashboard/components/ConditionalFilter";
 import { createOrderQueryVariables } from "@dashboard/components/ConditionalFilter/queryVariables";
 import { useDevModeContext } from "@dashboard/components/DevModePanel/hooks";
-import { FilterPresetsSelect } from "@dashboard/components/FilterPresetsSelect";
-import { ListPageLayout } from "@dashboard/components/Layouts";
 import { extensionMountPoints } from "@dashboard/extensions/extensionMountPoints";
 import {
   getExtensionItemsForOverviewCreate,
@@ -35,7 +32,10 @@ import { useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
 import { OrderLimitReached } from "../OrderLimitReached";
-import { OrderListDatagrid } from "../OrderListDatagrid";
+import { ListFilters } from "../../../components/AppLayout/ListFilters/ListFilters";
+import { FilterPresetsSelect } from "../../../components/FilterPresetsSelect/FilterPresetsSelect";
+import { ListPageLayout } from "../../../components/Layouts/List/index";
+import { OrderListDatagrid } from "../OrderListDatagrid/OrderListDatagrid";
 
 interface OrderListPageProps
   extends PageListProps,

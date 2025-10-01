@@ -1,18 +1,17 @@
-import { Rule } from "@dashboard/discounts/models";
 import { CommonError } from "@dashboard/utils/errors/common";
 import { Box, Text } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
-
-import { useDiscountRulesContext } from "../../context";
 import { messages } from "../../messages";
 import { getCurencySymbol } from "../../utils";
-import { Placeholder } from "../Placeholder";
-import { RuleActions } from "./components/RuleActions";
-import { RuleLabel } from "./components/RuleLabel";
-import { RuleListContainer } from "./components/RuleListContainer";
-import { RuleListLoading } from "./components/RuleListLoading";
-import { RuleSummary } from "./components/RuleSummary";
-import { RuleWrapper } from "./components/RuleWrapper";
+import { Rule } from "../../../../models/Rule";
+import { useDiscountRulesContext } from "../../context/consumer";
+import { Placeholder } from "../Placeholder/Placeholder";
+import { RuleActions } from "./components/RuleActions/RuleActions";
+import { RuleLabel } from "./components/RuleLabel/RuleLabel";
+import { RuleListContainer } from "./components/RuleListContainer/RuleListContainer";
+import { RuleListLoading } from "./components/RuleListLoading/RuleListLoading";
+import { RuleSummary } from "./components/RuleSummary/RuleSummary";
+import { RuleWrapper } from "./components/RuleWrapper/RuleWrapper";
 
 interface RulesListProps<ErrorCode> {
   rules: Rule[];

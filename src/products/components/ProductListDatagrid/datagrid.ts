@@ -23,7 +23,6 @@ import {
 import { ThumbnailCellProps } from "@dashboard/components/Datagrid/customCells/ThumbnailCell";
 import { GetCellContentOpts } from "@dashboard/components/Datagrid/Datagrid";
 import { AvailableColumn } from "@dashboard/components/Datagrid/types";
-import { Locale } from "@dashboard/components/Locale";
 import {
   AvailableColumnAttributesQuery,
   Exact,
@@ -43,6 +42,7 @@ import { IntlShape } from "react-intl";
 
 import { getAttributeIdFromColumnValue } from "../ProductListPage/utils";
 import { categoryMetaGroups, columnsMessages } from "./messages";
+import { Locale } from "../../../components/Locale/Locale";
 
 export const productListStaticColumnAdapter = ({
   intl,

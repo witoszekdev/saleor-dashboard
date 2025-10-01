@@ -1,11 +1,8 @@
 // @ts-strict-ignore
 import { BackButton } from "@dashboard/components/BackButton";
 import { Combobox } from "@dashboard/components/Combobox";
-import { ConfirmButton, ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import { DashboardModal } from "@dashboard/components/Modal";
 import { MenuErrorFragment } from "@dashboard/graphql";
-import { useModalDialogErrors } from "@dashboard/hooks/useModalDialogErrors";
-import { useModalDialogOpen } from "@dashboard/hooks/useModalDialogOpen";
 import { buttonMessages } from "@dashboard/intl";
 import { getFieldError, getFormErrors } from "@dashboard/utils/errors";
 import { getMenuErrorMessage } from "@dashboard/utils/errors/menu";
@@ -14,11 +11,13 @@ import { Box, Input, Text } from "@saleor/macaw-ui-next";
 import { useEffect } from "react";
 import { Controller, useForm } from "react-hook-form";
 import { FormattedMessage, useIntl } from "react-intl";
-
-import { MenuItemDialogLinkValue } from "./MenuItemDialogLinkValue";
 import { getLinkTypeOptions } from "./options";
 import { MenuItemDialogFormData } from "./types";
 import { getValidationSchema } from "./validationSchema";
+import { ConfirmButton, ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import { useModalDialogErrors } from "../../../hooks/useModalDialogErrors/useModalDialogErrors";
+import { useModalDialogOpen } from "../../../hooks/useModalDialogOpen/useModalDialogOpen";
+import { MenuItemDialogLinkValue } from "./MenuItemDialogLinkValue/MenuItemDialogLinkValue";
 
 interface MenuItemDialogProps {
   confirmButtonState: ConfirmButtonTransitionState;

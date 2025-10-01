@@ -1,13 +1,9 @@
 import { ActionDialog } from "@dashboard/components/ActionDialog";
 import { useAppChannel } from "@dashboard/components/AppLayout/AppChannelContext";
-import { DeleteFilterTabDialog } from "@dashboard/components/DeleteFilterTabDialog";
-import { SaveFilterTabDialog } from "@dashboard/components/SaveFilterTabDialog";
 import { WindowTitle } from "@dashboard/components/WindowTitle";
 import { SaleFragment, useSaleBulkDeleteMutation, useSaleListQuery } from "@dashboard/graphql";
-import { useFilterPresets } from "@dashboard/hooks/useFilterPresets";
 import { useListSettings } from "@dashboard/hooks/useListSettings";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { usePaginationReset } from "@dashboard/hooks/usePaginationReset";
 import {
   createPaginationState,
@@ -25,11 +21,14 @@ import { getSortParams } from "@dashboard/utils/sort";
 import isEqual from "lodash/isEqual";
 import { useCallback, useEffect, useMemo } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
-
-import { SaleListPage } from "../../components/SaleListPage";
 import { saleListUrl, SaleListUrlDialog, SaleListUrlQueryParams } from "../../urls";
 import { getFilterOpts, getFilterQueryParam, getFilterVariables, storageUtils } from "./filters";
 import { canBeSorted, DEFAULT_SORT_KEY, getSortQueryVariables } from "./sort";
+import { DeleteFilterTabDialog } from "../../../components/DeleteFilterTabDialog/DeleteFilterTabDialog";
+import { SaveFilterTabDialog } from "../../../components/SaveFilterTabDialog/SaveFilterTabDialog";
+import { useFilterPresets } from "../../../hooks/useFilterPresets/useFilterPresets";
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
+import { SaleListPage } from "../../components/SaleListPage/SaleListPage";
 
 interface SaleListProps {
   params: SaleListUrlQueryParams;

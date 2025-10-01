@@ -1,4 +1,3 @@
-import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import { DashboardModal } from "@dashboard/components/Modal";
 import { SearchProductsQuery } from "@dashboard/graphql";
 import { Container, DialogProps, FetchMoreProps, RelayToFlat } from "@dashboard/types";
@@ -8,6 +7,7 @@ import { AssignContainerDialogProps } from "../AssignContainerDialog";
 import { AssignVariantDialogMulti } from "./AssignVariantDialogMulti";
 import { AssignVariantDialogSingle } from "./AssignVariantDialogSingle";
 import { messages } from "./messages";
+import { ConfirmButtonTransitionState } from "../ConfirmButton/ConfirmButton";
 
 interface AssignVariantDialogProps extends FetchMoreProps, DialogProps {
   confirmButtonState: ConfirmButtonTransitionState;

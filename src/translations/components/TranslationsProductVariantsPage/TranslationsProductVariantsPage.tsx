@@ -21,7 +21,7 @@ import { Box } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
 
 import { ProductContextSwitcher } from "../ProductContextSwitcher/ProductContextSwitcher";
-import { TranslationFields } from "../TranslationFields";
+import { TranslationFields } from "../TranslationFields/TranslationFields";
 
 interface TranslationsProductsPageProps extends TranslationsEntitiesPageProps {
   data: ProductVariantTranslationFragment;

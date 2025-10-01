@@ -12,10 +12,9 @@ import { createSortHandler } from "@dashboard/utils/handlers/sortHandler";
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { getSortParams } from "@dashboard/utils/sort";
 import { useMemo } from "react";
-
-import { PermissionGroupListPage } from "../../components/PermissionGroupListPage";
 import { permissionGroupListUrl, PermissionGroupListUrlQueryParams } from "../../urls";
 import { getSortQueryVariables } from "./sort";
+import { PermissionGroupListPage } from "../../components/PermissionGroupListPage/PermissionGroupListPage";
 
 interface PermissionGroupListProps {
   params: PermissionGroupListUrlQueryParams;

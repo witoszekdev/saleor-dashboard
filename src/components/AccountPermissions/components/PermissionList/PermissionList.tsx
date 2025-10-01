@@ -1,10 +1,10 @@
-import { PermissionData } from "@dashboard/permissionGroups/components/PermissionGroupDetailsPage";
 import { Box, Checkbox, Skeleton, Text, Tooltip } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
 
 import { messages } from "../../messages";
 import { hasPermissionSelected } from "../../utils";
 import styles from "./PermissionList.module.css";
+import { PermissionData } from "../../../../permissionGroups/components/PermissionGroupDetailsPage/PermissionGroupDetailsPage";
 
 interface PermissionListProps {
   permissions: PermissionData[];

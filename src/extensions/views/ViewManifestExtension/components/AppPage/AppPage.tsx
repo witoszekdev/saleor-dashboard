@@ -1,13 +1,12 @@
 import { borderHeight, topBarHeight } from "@dashboard/components/AppLayout/consts";
-import { DetailPageLayout } from "@dashboard/components/Layouts";
 import { APP_VERSION } from "@dashboard/config";
 import { ExtensionsUrls } from "@dashboard/extensions/urls";
 import { AppQuery } from "@dashboard/graphql";
 import { useShop } from "@dashboard/hooks/useShop";
 import { Box } from "@saleor/macaw-ui-next";
-
-import { AppFrame } from "../AppFrame";
 import { AppPageNav } from "./AppPageNav";
+import { DetailPageLayout } from "../../../../../components/Layouts/Detail/index";
+import { AppFrame } from "../AppFrame/AppFrame";
 
 interface AppPageProps {
   data: AppQuery["app"];

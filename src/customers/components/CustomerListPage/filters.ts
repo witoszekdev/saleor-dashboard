@@ -1,10 +1,10 @@
 // @ts-strict-ignore
-import { IFilter } from "@dashboard/components/Filter";
 import { hasPermissions } from "@dashboard/components/RequirePermissions";
 import { PermissionEnum, UserFragment } from "@dashboard/graphql";
 import { FilterOpts, MinMax } from "@dashboard/types";
 import { createDateField, createNumberField } from "@dashboard/utils/filters/fields";
 import { defineMessages, IntlShape } from "react-intl";
+import { IFilter } from "../../../components/Filter/types";
 
 export enum CustomerFilterKeys {
   joined = "joined",

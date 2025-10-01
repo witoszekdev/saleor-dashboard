@@ -1,8 +1,6 @@
 // @ts-strict-ignore
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
 import { CardSpacer } from "@dashboard/components/CardSpacer";
-import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import { DetailPageLayout } from "@dashboard/components/Layouts";
 import {
   OrderDetailsFragment,
   OrderErrorFragment,
@@ -17,8 +15,6 @@ import { Fragment } from "react";
 import { useIntl } from "react-intl";
 
 import { calculateCanRefundShipping } from "../OrderGrantRefundPage/utils";
-import { TransactionSubmitCard } from "./components";
-import { PaymentSubmitCard } from "./components/PaymentSubmitCard";
 import { getReturnProductsAmountValues } from "./components/PaymentSubmitCard/utils";
 import { OrderRefundSubmitData, OrderReturnForm as OrderRefundForm } from "./form";
 import { orderReturnMessages } from "./messages";
@@ -29,6 +25,10 @@ import {
   getUnfulfilledLines,
   getWaitingFulfillments,
 } from "./utils";
+import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
+import { TransactionSubmitCard } from "./components/TransactionSubmitCard/index";
+import { PaymentSubmitCard } from "./components/PaymentSubmitCard/PaymentSubmitCard";
 
 interface OrderReturnPageProps {
   order: OrderDetailsFragment | undefined | null;

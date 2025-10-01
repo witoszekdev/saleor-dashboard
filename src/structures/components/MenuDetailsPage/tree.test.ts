@@ -2,8 +2,8 @@
 import { RecursiveMenuItem } from "@dashboard/structures/types";
 
 import { menu } from "../../fixtures";
-import { TreeOperation } from "../MenuItems";
 import { computeRelativeTree } from "./tree";
+import { TreeOperation } from "../MenuItems/tree";
 
 const relativeOutput: RecursiveMenuItem[][] = [
   // no moves

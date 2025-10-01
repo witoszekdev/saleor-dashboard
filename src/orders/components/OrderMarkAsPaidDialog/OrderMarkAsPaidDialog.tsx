@@ -1,12 +1,12 @@
 import { ActionDialog } from "@dashboard/components/ActionDialog";
-import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import { OrderErrorFragment } from "@dashboard/graphql";
-import { useModalDialogErrors } from "@dashboard/hooks/useModalDialogErrors";
 import { getOrderErrorMessage } from "@dashboard/utils/errors/order";
 import { TextField } from "@material-ui/core";
 import { Box, Text } from "@saleor/macaw-ui-next";
 import * as React from "react";
 import { FormattedMessage, useIntl } from "react-intl";
+import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import { useModalDialogErrors } from "../../../hooks/useModalDialogErrors/useModalDialogErrors";
 
 interface OrderMarkAsPaidDialogProps {
   confirmButtonState: ConfirmButtonTransitionState;

@@ -1,5 +1,4 @@
 import { ControlledCheckbox } from "@dashboard/components/ControlledCheckbox";
-import { VerticalSpacer } from "@dashboard/components/VerticalSpacer";
 import { getGiftCardSettingsErrorMessage } from "@dashboard/giftCards/GiftCardSettings/messages";
 import { GiftCardSettingsErrorFragment, TimePeriodTypeEnum } from "@dashboard/graphql";
 import { FormChange } from "@dashboard/hooks/useForm";
@@ -8,6 +7,7 @@ import { FormattedMessage, useIntl } from "react-intl";
 
 import { TimePeriodField } from "../TimePeriodField/TimePeriodField";
 import { giftCardSettingsExpirySelectMessages as messages } from "./messages";
+import { VerticalSpacer } from "../../../components/VerticalSpacer/VerticalSpacer";
 
 export interface GiftCardSettingsExpirySelectProps {
   change: FormChange;

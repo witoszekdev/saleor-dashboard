@@ -8,7 +8,6 @@ import {
   useRefundSettingsQuery,
 } from "@dashboard/graphql";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { extractMutationErrors } from "@dashboard/misc";
 import {
   OrderTransactionRefundError,
@@ -26,6 +25,7 @@ import {
 } from "../OrderTransactionRefundCreate/handlers";
 import { handleRefundEditComplete } from "./handlers";
 import { transactionRefundEditMessages } from "./messages";
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
 
 interface OrderTransactionRefundProps {
   orderId: string;

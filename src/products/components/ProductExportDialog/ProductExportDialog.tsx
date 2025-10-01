@@ -1,7 +1,5 @@
 // @ts-strict-ignore
 import { Button } from "@dashboard/components/Button";
-import { ConfirmButton, ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import { makeCreatorSteps, Step } from "@dashboard/components/CreatorSteps";
 import { DashboardModal } from "@dashboard/components/Modal";
 import {
   ChannelFragment,
@@ -11,13 +9,10 @@ import {
   WarehouseFragment,
 } from "@dashboard/graphql";
 import { FormChange, useForm } from "@dashboard/hooks/useForm";
-import { useModalDialogErrors } from "@dashboard/hooks/useModalDialogErrors";
-import { useModalDialogOpen } from "@dashboard/hooks/useModalDialogOpen";
 import { useWizard } from "@dashboard/hooks/useWizard";
 import { buttonMessages } from "@dashboard/intl";
 import { DialogProps, FetchMoreProps, RelayToFlat } from "@dashboard/types";
 import { getExportErrorMessage } from "@dashboard/utils/errors/export";
-import { toggle } from "@dashboard/utils/lists";
 import { mapNodeToChoice } from "@dashboard/utils/maps";
 import { Box, Option, Text } from "@saleor/macaw-ui-next";
 import { useState } from "react";
@@ -31,6 +26,11 @@ import {
   warehouseNamePrefix,
 } from "./ProductExportDialogInfo";
 import { exportSettingsInitialFormData } from "./types";
+import { ConfirmButton, ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import { makeCreatorSteps, Step } from "../../../components/CreatorSteps/CreatorSteps";
+import { useModalDialogErrors } from "../../../hooks/useModalDialogErrors/useModalDialogErrors";
+import { useModalDialogOpen } from "../../../hooks/useModalDialogOpen/useModalDialogOpen";
+import { toggle } from "../../../utils/lists/lists";
 
 enum ProductExportStep {
   INFO = 0,

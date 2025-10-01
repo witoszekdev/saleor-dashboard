@@ -5,7 +5,6 @@ import {
   readonlyTextCell,
 } from "@dashboard/components/Datagrid/customCells/cells";
 import { AvailableColumn } from "@dashboard/components/Datagrid/types";
-import { Locale } from "@dashboard/components/Locale";
 import { VoucherListUrlSortField } from "@dashboard/discounts/urls";
 import { VoucherFragment } from "@dashboard/graphql";
 import { Sort } from "@dashboard/types";
@@ -15,6 +14,7 @@ import moment from "moment";
 import { IntlShape } from "react-intl";
 
 import { columnsMessages } from "./messages";
+import { Locale } from "../../../components/Locale/Locale";
 
 export const vouchersListStaticColumnsAdapter = (
   intl: IntlShape,

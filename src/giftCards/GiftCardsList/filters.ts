@@ -1,14 +1,6 @@
 // @ts-strict-ignore
-import { FilterElement, IFilter } from "@dashboard/components/Filter";
 import { GiftCardFilterInput, SearchCustomersQuery, SearchProductsQuery } from "@dashboard/graphql";
 import { RelayToFlat } from "@dashboard/types";
-import {
-  createFilterTabUtils,
-  dedupeFilter,
-  getMinMaxQueryParam,
-  getMultipleValueQueryParam,
-  getSingleValueQueryParam,
-} from "@dashboard/utils/filters";
 import {
   createAutocompleteField,
   createNumberField,
@@ -30,6 +22,9 @@ import {
   GiftCardStatusFilterEnum,
   SearchWithFetchMoreProps,
 } from "./types";
+import { FilterElement, IFilter } from "../../components/Filter/types";
+import { createFilterTabUtils } from "../../utils/filters/storage";
+import { dedupeFilter, getMinMaxQueryParam, getMultipleValueQueryParam, getSingleValueQueryParam } from "../../utils/filters/filters";
 
 const GIFT_CARD_FILTERS_KEY = "giftCardFilters";
 

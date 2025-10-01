@@ -2,7 +2,6 @@ import { TopNav } from "@dashboard/components/AppLayout";
 import { useContextualLink } from "@dashboard/components/AppLayout/ContextualLinks/useContextualLink";
 import { SearchInput } from "@dashboard/components/AppLayout/ListFilters/components/SearchInput";
 import { DashboardCard } from "@dashboard/components/Card";
-import { ListPageLayout } from "@dashboard/components/Layouts";
 import { headerTitles, messages } from "@dashboard/extensions/messages";
 import {
   ExtensionsListUrlDialog,
@@ -13,16 +12,16 @@ import { useInstalledExtensionsFilter } from "@dashboard/extensions/views/Instal
 import { useHasManagedAppsPermission } from "@dashboard/hooks/useHasManagedAppsPermission";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
-import { useOnboarding } from "@dashboard/welcomePage/WelcomePageOnboarding/onboardingContext";
 import { Box, ChevronRightIcon, Text } from "@saleor/macaw-ui-next";
 import { useEffect } from "react";
 import { useIntl } from "react-intl";
-
-import { AddExtensionDropdown } from "./components/AddExtensionDropdown";
 import { DeleteFailedInstallationDialog } from "./components/DeleteFailedInstallationDialog";
-import { InstalledExtensionsList } from "./components/InstalledExtensionsList";
 import { useInstalledExtensions } from "./hooks/useInstalledExtensions";
 import { usePendingInstallation } from "./hooks/usePendingInstallation";
+import { ListPageLayout } from "../../../components/Layouts/List/index";
+import { useOnboarding } from "../../../welcomePage/WelcomePageOnboarding/onboardingContext/OnboardingContext";
+import { AddExtensionDropdown } from "./components/AddExtensionDropdown/AddExtensionDropdown";
+import { InstalledExtensionsList } from "./components/InstalledExtensionsList/InstalledExtensionsList";
 
 export interface InstalledExtensionsProps {
   params: ExtensionsListUrlQueryParams;

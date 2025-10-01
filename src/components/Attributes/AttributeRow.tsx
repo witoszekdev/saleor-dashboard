@@ -14,17 +14,17 @@ import {
   getSingleDisplayValue,
   getTruncatedTextValue,
 } from "@dashboard/components/Attributes/utils";
-import { FileUploadField } from "@dashboard/components/FileUploadField";
-import { RichTextEditor } from "@dashboard/components/RichTextEditor";
-import { SortableChipsField } from "@dashboard/components/SortableChipsField";
 import { AttributeInputTypeEnum } from "@dashboard/graphql";
 import { Box, Input, Select, Text } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
 
 import { Combobox, Multiselect } from "../Combobox";
-import { DateTimeField } from "../DateTimeField";
 import { SingleReferenceField } from "./SingleReferenceField";
 import { AttributeRowProps } from "./types";
+import { FileUploadField } from "../FileUploadField/FileUploadField";
+import { RichTextEditor } from "../RichTextEditor/RichTextEditor";
+import { SortableChipsField } from "../SortableChipsField/SortableChipsField";
+import { DateTimeField } from "../DateTimeField/DateTimeField";
 
 const AttributeRow = ({
   attribute,

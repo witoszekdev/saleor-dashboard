@@ -2,7 +2,6 @@ import { useUserAccessibleChannels } from "@dashboard/auth/hooks/useUserAccessib
 import { TopNav } from "@dashboard/components/AppLayout";
 import { LimitsInfo } from "@dashboard/components/AppLayout/LimitsInfo";
 import { ButtonGroupWithDropdown } from "@dashboard/components/ButtonGroupWithDropdown";
-import { FilterPresetsSelect } from "@dashboard/components/FilterPresetsSelect";
 import { extensionMountPoints } from "@dashboard/extensions/extensionMountPoints";
 import {
   getExtensionItemsForOverviewCreate,
@@ -15,6 +14,7 @@ import { FilterPresetsProps } from "@dashboard/types";
 import { hasLimits, isLimitReached } from "@dashboard/utils/limits";
 import { Box, Button, ChevronRightIcon, Tooltip } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
+import { FilterPresetsSelect } from "../../../components/FilterPresetsSelect/FilterPresetsSelect";
 
 interface OrderDraftListHeaderProps extends FilterPresetsProps {
   limits: RefreshLimitsQuery["shop"]["limits"];

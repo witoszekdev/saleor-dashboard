@@ -1,6 +1,6 @@
 import { ReorderInput } from "@dashboard/graphql";
 import { Node } from "@dashboard/types";
-import { move } from "@dashboard/utils/lists";
+import { move } from "../../../utils/lists/lists";
 
 export function calculateItemsOrderMoves<T extends Node>(
   itemsInputOrder: T[],

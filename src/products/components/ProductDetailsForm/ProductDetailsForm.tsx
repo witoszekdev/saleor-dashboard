@@ -1,6 +1,5 @@
 // @ts-strict-ignore
 import { DashboardCard } from "@dashboard/components/Card";
-import { RichTextEditor } from "@dashboard/components/RichTextEditor";
 import { RichTextEditorLoading } from "@dashboard/components/RichTextEditor/RichTextEditorLoading";
 import { ProductErrorFragment } from "@dashboard/graphql";
 import { commonMessages } from "@dashboard/intl";
@@ -9,6 +8,7 @@ import { useRichTextContext } from "@dashboard/utils/richText/context";
 import { OutputData } from "@editorjs/editorjs";
 import { Box, Input } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
+import { RichTextEditor } from "../../../components/RichTextEditor/RichTextEditor";
 
 interface ProductDetailsFormProps {
   data: {

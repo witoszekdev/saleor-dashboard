@@ -10,7 +10,6 @@ import {
 import { useBulkActions } from "@dashboard/hooks/useBulkActions";
 import { useListSettings } from "@dashboard/hooks/useListSettings";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { usePaginationReset } from "@dashboard/hooks/usePaginationReset";
 import {
   createPaginationState,
@@ -25,11 +24,11 @@ import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { getSortParams } from "@dashboard/utils/sort";
 import { useMemo } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
-
-import { MenuCreateDialog } from "../../components/MenuCreateDialog";
-import { MenuListPage } from "../../components/MenuListPage";
 import { menuListUrl, MenuListUrlQueryParams, menuUrl } from "../../urls";
 import { getSortQueryVariables } from "./sort";
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
+import { MenuCreateDialog } from "../../components/MenuCreateDialog/MenuCreateDialog";
+import { MenuListPage } from "../../components/MenuListPage/MenuListPage";
 
 interface MenuListProps {
   params: MenuListUrlQueryParams;

@@ -1,9 +1,4 @@
-import { ConfirmButton, ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import { InfiniteScroll } from "@dashboard/components/InfiniteScroll";
 import { DashboardModal } from "@dashboard/components/Modal";
-import { ResponsiveTable } from "@dashboard/components/ResponsiveTable";
-import { TableRowLink } from "@dashboard/components/TableRowLink";
-import { useModalDialogOpen } from "@dashboard/hooks/useModalDialogOpen";
 import { useSearchQuery } from "@dashboard/hooks/useSearchQuery";
 import { Container, FetchMoreProps } from "@dashboard/types";
 import { CircularProgress, Radio, TableBody, TableCell, TextField } from "@material-ui/core";
@@ -12,6 +7,11 @@ import { useState } from "react";
 
 import { BackButton } from "../BackButton";
 import { useStyles } from "./styles";
+import { ConfirmButton, ConfirmButtonTransitionState } from "../ConfirmButton/ConfirmButton";
+import { InfiniteScroll } from "../InfiniteScroll/InfiniteScroll";
+import { ResponsiveTable } from "../ResponsiveTable/ResponsiveTable";
+import { TableRowLink } from "../TableRowLink/TableRowLink";
+import { useModalDialogOpen } from "../../hooks/useModalDialogOpen/useModalDialogOpen";
 
 type Labels = Record<"confirmBtn" | "title" | "label" | "placeholder", string>;
 

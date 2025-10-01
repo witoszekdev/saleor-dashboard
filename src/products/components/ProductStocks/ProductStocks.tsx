@@ -1,7 +1,6 @@
 // @ts-strict-ignore
 import { ChannelData } from "@dashboard/channels/utils";
 import { DashboardCard } from "@dashboard/components/Card";
-import { TableRowLink } from "@dashboard/components/TableRowLink";
 import { ProductErrorFragment, WarehouseFragment } from "@dashboard/graphql";
 import { FormChange } from "@dashboard/hooks/useForm";
 import { FormsetAtomicData, FormsetChange } from "@dashboard/hooks/useFormset";
@@ -17,6 +16,7 @@ import { FormattedMessage, useIntl } from "react-intl";
 import { ProductStocksAssignWarehouses } from "./components/ProductStocksAssignWarehouses";
 import { messages } from "./messages";
 import { WarehouseInformationMessage } from "./WarehouseInformationMessage";
+import { TableRowLink } from "../../../components/TableRowLink/TableRowLink";
 
 export interface ProductStockFormsetData {
   quantityAllocated: number;

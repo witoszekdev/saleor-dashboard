@@ -1,4 +1,3 @@
-import { ConfirmButton, ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import { buttonMessages } from "@dashboard/intl";
 import { DialogProps } from "@dashboard/types";
 import { Box } from "@saleor/macaw-ui-next";
@@ -8,6 +7,7 @@ import { useIntl } from "react-intl";
 import { BackButton } from "../BackButton";
 import { DashboardModal, DashboardModalContentSize } from "../Modal";
 import { ActionDialogVariant } from "./types";
+import { ConfirmButton, ConfirmButtonTransitionState } from "../ConfirmButton/ConfirmButton";
 
 export interface ActionDialogProps extends DialogProps {
   children?: React.ReactNode;

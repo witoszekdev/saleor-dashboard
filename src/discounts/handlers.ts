@@ -4,11 +4,6 @@ import {
   validateSalePrice,
   validateVoucherPrice,
 } from "@dashboard/channels/utils";
-import {
-  ChannelSaleFormData,
-  SaleDetailsPageFormData,
-} from "@dashboard/discounts/components/SaleDetailsPage";
-import { VoucherDetailsPageFormData } from "@dashboard/discounts/components/VoucherDetailsPage";
 import { DiscountTypeEnum, RequirementsPicker } from "@dashboard/discounts/types";
 import {
   DiscountErrorCode,
@@ -18,9 +13,10 @@ import {
 } from "@dashboard/graphql";
 import { ChangeEvent, FormChange, SubmitPromise } from "@dashboard/hooks/useForm";
 import { RequireOnlyOne } from "@dashboard/misc";
-import { arrayDiff } from "@dashboard/utils/arrays";
-
 import { getAddedChannelsInputFromFormData } from "./data";
+import { ChannelSaleFormData, SaleDetailsPageFormData } from "./components/SaleDetailsPage/SaleDetailsPage";
+import { VoucherDetailsPageFormData } from "./components/VoucherDetailsPage/VoucherDetailsPage";
+import { arrayDiff } from "../utils/arrays/arrays";
 
 interface ChannelArgs {
   discountValue: string;

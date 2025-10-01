@@ -1,10 +1,8 @@
 import { CardTitle } from "@dashboard/components/CardTitle";
 import { ControlledCheckbox } from "@dashboard/components/ControlledCheckbox";
 import { Grid } from "@dashboard/components/Grid";
-import { Select } from "@dashboard/components/Select";
 import { TaxConfigurationUpdateInput } from "@dashboard/graphql";
 import { FormChange } from "@dashboard/hooks/useForm";
-import { LegacyFlowWarning } from "@dashboard/taxes/components";
 import { taxesMessages } from "@dashboard/taxes/messages";
 import {
   Card,
@@ -20,6 +18,8 @@ import { FormattedMessage, useIntl } from "react-intl";
 
 import { TaxConfigurationFormData } from "../TaxChannelsPage";
 import { useStyles } from "./styles";
+import { Select } from "../../../../components/Select/Select";
+import { LegacyFlowWarning } from "../../../components/LegacyFlowWarning";
 
 interface TaxSettingsCardProps {
   values: TaxConfigurationFormData;

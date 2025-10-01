@@ -1,14 +1,14 @@
-import { AppPage } from "@dashboard/apps/components/AppPage";
 import { appMessages } from "@dashboard/apps/messages";
 import { AppPaths, AppUrls } from "@dashboard/apps/urls";
-import { NotFoundPage } from "@dashboard/components/NotFoundPage";
 import { useAppQuery } from "@dashboard/graphql";
 import { useHasManagedAppsPermission } from "@dashboard/hooks/useHasManagedAppsPermission";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { useCallback } from "react";
 import { useIntl } from "react-intl";
 import { useLocation } from "react-router";
+import { AppPage } from "../../components/AppPage/AppPage";
+import { NotFoundPage } from "../../../components/NotFoundPage/NotFoundPage";
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
 
 interface AppProps {
   id: string;

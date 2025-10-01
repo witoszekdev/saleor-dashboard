@@ -1,7 +1,6 @@
 import { getAppMountUri } from "@dashboard/config";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-
-import { ResetPasswordSuccessPage } from "../components/ResetPasswordSuccessPage";
+import { ResetPasswordSuccessPage } from "../components/ResetPasswordSuccessPage/ResetPasswordSuccessPage";
 
 const ResetPasswordSuccessView = () => {
   const navigate = useNavigator();

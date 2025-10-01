@@ -1,12 +1,8 @@
 // @ts-strict-ignore
 import { DashboardCard } from "@dashboard/components/Card";
 import { Checkbox } from "@dashboard/components/Checkbox";
-import { ResponsiveTable } from "@dashboard/components/ResponsiveTable";
 import { TableButtonWrapper } from "@dashboard/components/TableButtonWrapper/TableButtonWrapper";
-import { TableCellAvatar } from "@dashboard/components/TableCellAvatar";
-import { TableHead } from "@dashboard/components/TableHead";
 import { TablePaginationWithContext } from "@dashboard/components/TablePagination";
-import { TableRowLink } from "@dashboard/components/TableRowLink";
 import { SaleDetailsFragment, VoucherDetailsFragment } from "@dashboard/graphql";
 import { productVariantEditPath } from "@dashboard/products/urls";
 import { getLoadableList, mapEdgesToItems } from "@dashboard/utils/maps";
@@ -19,6 +15,10 @@ import { maybe, renderCollection } from "../../../misc";
 import { ListActions, ListProps } from "../../../types";
 import { messages } from "./messages";
 import { useStyles } from "./styles";
+import { ResponsiveTable } from "../../../components/ResponsiveTable/ResponsiveTable";
+import { TableCellAvatar } from "../../../components/TableCellAvatar/TableCellAvatar";
+import { TableHead } from "../../../components/TableHead/TableHead";
+import { TableRowLink } from "../../../components/TableRowLink/TableRowLink";
 
 interface SaleVariantsProps extends ListProps, ListActions {
   variants: SaleDetailsFragment["variants"] | VoucherDetailsFragment["variants"];

@@ -1,9 +1,9 @@
-import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import { Savebar } from "@dashboard/components/Savebar";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { commonMessages } from "@dashboard/intl";
 import { useFormContext } from "react-hook-form";
 import { useIntl } from "react-intl";
+import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
 
 interface DiscountSavebarProps {
   disabled: boolean;

@@ -1,17 +1,17 @@
 import { useApolloClient } from "@apollo/client";
-import { MetadataFormData } from "@dashboard/components/Metadata";
 import {
   OrderLinesMetadataDocument,
   useUpdateMetadataMutation,
   useUpdatePrivateMetadataMutation,
 } from "@dashboard/graphql";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { commonMessages } from "@dashboard/intl";
 import { createMetadataUpdateHandler } from "@dashboard/utils/handlers/metadataUpdateHandler";
 import { useMemo, useRef, useState } from "react";
 import { useIntl } from "react-intl";
 
 import { OrderMetadataDialogData } from "./OrderMetadataDialog";
+import { MetadataFormData } from "../../../components/Metadata/types";
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
 
 export const useHandleOrderLineMetadataSubmit = ({
   initialData,

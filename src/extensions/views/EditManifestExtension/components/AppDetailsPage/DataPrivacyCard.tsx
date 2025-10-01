@@ -1,8 +1,8 @@
-import { ExternalLinkNext } from "@dashboard/components/ExternalLink";
 import { Box, BoxProps, Skeleton, Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 
 import { Messages as messages } from "./messages";
+import { ExternalLinkNext } from "../../../../../components/ExternalLink/ExternalLink";
 
 type DataPrivacyCardProps = {
   dataPrivacyUrl?: string | null;

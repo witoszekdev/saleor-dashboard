@@ -5,8 +5,7 @@ import {
   GridCellKind,
   ProvideEditorCallback,
 } from "@glideapps/glide-data-grid";
-
-import { Locale } from "../../Locale";
+import { Locale } from "../../Locale/Locale";
 
 export const numberCellEmptyValue = Symbol("number-cell-empty-value");
 export interface NumberCellProps {

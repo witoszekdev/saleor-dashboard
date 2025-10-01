@@ -1,6 +1,6 @@
-import { LocaleContext } from "@dashboard/components/Locale";
 import moment from "moment-timezone";
 import { useContext } from "react";
+import { LocaleContext } from "../components/Locale/Locale";
 
 export type LocalizeDate = (date: string, format?: string) => string;
 

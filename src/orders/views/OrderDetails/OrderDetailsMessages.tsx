@@ -28,7 +28,6 @@ import {
 } from "@dashboard/graphql";
 import { useLocale } from "@dashboard/hooks/useLocale";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { getOrderErrorMessage } from "@dashboard/utils/errors/order";
 import {
   getOrderTransactionErrorMessage,
@@ -41,6 +40,7 @@ import * as React from "react";
 import { useIntl } from "react-intl";
 
 import { orderUrl, OrderUrlQueryParams } from "../../urls";
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
 
 interface OrderDetailsMessages {
   children: (props: {

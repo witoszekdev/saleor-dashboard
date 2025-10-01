@@ -1,4 +1,3 @@
-import { Locale } from "@dashboard/components/Locale";
 import {
   CustomCell,
   CustomRenderer,
@@ -9,6 +8,7 @@ import {
 
 import { usePriceField } from "../../../PriceField/usePriceField";
 import { hasDiscountValue } from "./utils";
+import { Locale } from "../../../Locale/Locale";
 
 interface MoneyCellProps {
   readonly kind: "money-cell";

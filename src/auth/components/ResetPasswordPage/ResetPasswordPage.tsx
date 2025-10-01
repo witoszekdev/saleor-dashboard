@@ -1,5 +1,4 @@
 import { useLastLoginMethod } from "@dashboard/auth/hooks/useLastLoginMethod";
-import { Form } from "@dashboard/components/Form";
 import { FormSpacer } from "@dashboard/components/FormSpacer";
 import { getAppMountUri } from "@dashboard/config";
 import { AccountErrorCode } from "@dashboard/graphql";
@@ -10,6 +9,7 @@ import { ArrowLeftIcon, Box, Button, Paragraph, Text } from "@saleor/macaw-ui-ne
 import { FormattedMessage, useIntl } from "react-intl";
 
 import { ChangingPasswordWarning } from "../ChangingPasswordWarning";
+import { Form } from "../../../components/Form/Form";
 
 export interface ResetPasswordPageFormData {
   email: string;

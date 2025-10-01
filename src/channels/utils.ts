@@ -1,7 +1,3 @@
-import {
-  ChannelSaleFormData,
-  SaleDetailsPageFormData,
-} from "@dashboard/discounts/components/SaleDetailsPage";
 import { RequirementsPicker } from "@dashboard/discounts/types";
 import {
   ChannelDetailsFragment,
@@ -18,6 +14,7 @@ import { RequireOnlyOne } from "@dashboard/misc";
 import { validatePrice } from "@dashboard/products/utils/validation";
 import { mapNodeToChoice } from "@dashboard/utils/maps";
 import uniqBy from "lodash/uniqBy";
+import { ChannelSaleFormData, SaleDetailsPageFormData } from "../discounts/components/SaleDetailsPage/SaleDetailsPage";
 
 export interface Channel {
   id: string;

@@ -1,9 +1,6 @@
 // @ts-strict-ignore
 import { ActionDialog } from "@dashboard/components/ActionDialog";
 import { useAppChannel } from "@dashboard/components/AppLayout/AppChannelContext";
-import { useConditionalFilterContext } from "@dashboard/components/ConditionalFilter/context";
-import { DeleteFilterTabDialog } from "@dashboard/components/DeleteFilterTabDialog";
-import { SaveFilterTabDialog } from "@dashboard/components/SaveFilterTabDialog";
 import { useShopLimitsQuery } from "@dashboard/components/Shop/queries";
 import {
   DEFAULT_INITIAL_PAGINATION_DATA,
@@ -24,10 +21,8 @@ import {
 } from "@dashboard/graphql";
 import { useBackgroundTask } from "@dashboard/hooks/useBackgroundTask";
 import { useFilterHandlers } from "@dashboard/hooks/useFilterHandlers";
-import { useFilterPresets } from "@dashboard/hooks/useFilterPresets";
 import { useListSettings } from "@dashboard/hooks/useListSettings";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { usePaginationReset } from "@dashboard/hooks/usePaginationReset";
 import {
   createPaginationState,
@@ -36,12 +31,10 @@ import {
 } from "@dashboard/hooks/usePaginator";
 import { useRowSelection } from "@dashboard/hooks/useRowSelection";
 import { commonMessages } from "@dashboard/intl";
-import { ProductExportDialog } from "@dashboard/products/components/ProductExportDialog";
 import {
   getAttributeIdFromColumnValue,
   isAttributeColumnValue,
 } from "@dashboard/products/components/ProductListPage/utils";
-import { ProductTypePickerDialog } from "@dashboard/products/components/ProductTypePickerDialog";
 import {
   productAddUrl,
   productListUrl,
@@ -58,12 +51,19 @@ import { getSortUrlVariables } from "@dashboard/utils/sort";
 import isEqual from "lodash/isEqual";
 import { useCallback, useEffect, useMemo } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
-
-import { ProductFilterKeys, ProductListPage } from "../../components/ProductListPage";
 import { ProductsExportParameters } from "./export";
 import { getFilterQueryParam, getFilterVariables, storageUtils } from "./filters";
 import { DEFAULT_SORT_KEY, getSortQueryVariables } from "./sort";
 import { obtainChannelFromFilter } from "./utils";
+import { useConditionalFilterContext } from "../../../components/ConditionalFilter/context/consumer";
+import { DeleteFilterTabDialog } from "../../../components/DeleteFilterTabDialog/DeleteFilterTabDialog";
+import { SaveFilterTabDialog } from "../../../components/SaveFilterTabDialog/SaveFilterTabDialog";
+import { useFilterPresets } from "../../../hooks/useFilterPresets/useFilterPresets";
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
+import { ProductExportDialog } from "../../components/ProductExportDialog/ProductExportDialog";
+import { ProductTypePickerDialog } from "../../components/ProductTypePickerDialog/ProductTypePickerDialog";
+import { ProductFilterKeys } from "../../components/ProductListPage/filters";
+import { ProductListPage } from "../../components/ProductListPage/ProductListPage";
 
 interface ProductListProps {
   params: ProductListUrlQueryParams;

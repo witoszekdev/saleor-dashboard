@@ -1,7 +1,7 @@
 import { Handler, NoopValuesHandler } from "../../API/Handler";
-import { FilterElement } from "../../FilterElement";
 import { QueryVarsBuilderUtils } from "../utils";
 import { WhereOnlyQueryVarsBuilder } from "./types";
+import { FilterElement } from "../../FilterElement/FilterElement";
 
 type AddressFilterQueryPart = {
   billingAddress?: {

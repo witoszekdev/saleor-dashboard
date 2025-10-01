@@ -1,5 +1,4 @@
 import { AttributeInput } from "../../../graphql";
-import { FilterElement } from "../FilterElement";
 import {
   ConditionValue,
   isItemOption,
@@ -7,6 +6,7 @@ import {
   ItemOption,
 } from "../FilterElement/ConditionValue";
 import { StaticQueryPart } from "./types";
+import { FilterElement } from "../FilterElement/FilterElement";
 
 type ProcessedConditionValue =
   | string

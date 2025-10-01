@@ -1,5 +1,6 @@
-import { isArrayOfOptions, Rule } from "@dashboard/discounts/models";
 import { Option } from "@saleor/macaw-ui-next";
+import { isArrayOfOptions } from "../../models/Condition";
+import { Rule } from "../../models/Rule";
 
 export const getCurrentConditionsValuesLabels = (rule: Rule[]) => {
   return rule

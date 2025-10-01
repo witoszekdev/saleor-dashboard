@@ -1,9 +1,9 @@
 import { DiscountStatusEnum, VoucherFilterInput } from "@dashboard/graphql";
 
 import { Handler, NoopValuesHandler } from "../../API/Handler";
-import { FilterElement } from "../../FilterElement";
 import { isItemOption, isItemOptionArray } from "../../FilterElement/ConditionValue";
 import { FilterOnlyQueryVarsBuilder } from "./types";
+import { FilterElement } from "../../FilterElement/FilterElement";
 
 /**
  * `voucherStatus` needs to be renamed to `status` in query

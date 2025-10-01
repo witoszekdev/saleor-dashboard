@@ -6,14 +6,10 @@ import {
 } from "@dashboard/attributes/views/AttributeList/filters";
 import { useConditionalFilterContext } from "@dashboard/components/ConditionalFilter";
 import { createAttributesQueryVariables } from "@dashboard/components/ConditionalFilter/queryVariables";
-import { DeleteFilterTabDialog } from "@dashboard/components/DeleteFilterTabDialog";
-import { SaveFilterTabDialog } from "@dashboard/components/SaveFilterTabDialog";
 import { useFlag } from "@dashboard/featureFlags";
 import { useAttributeBulkDeleteMutation, useAttributeListQuery } from "@dashboard/graphql";
-import { useFilterPresets } from "@dashboard/hooks/useFilterPresets";
 import { useListSettings } from "@dashboard/hooks/useListSettings";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { usePaginationReset } from "@dashboard/hooks/usePaginationReset";
 import {
   createPaginationState,
@@ -30,11 +26,14 @@ import { getSortParams } from "@dashboard/utils/sort";
 import isEqual from "lodash/isEqual";
 import { useCallback, useMemo } from "react";
 import { useIntl } from "react-intl";
-
-import { AttributeBulkDeleteDialog } from "../../components/AttributeBulkDeleteDialog";
-import { AttributeListPage } from "../../components/AttributeListPage";
 import { attributeListUrl, AttributeListUrlDialog, AttributeListUrlQueryParams } from "../../urls";
 import { getSortQueryVariables } from "./sort";
+import { DeleteFilterTabDialog } from "../../../components/DeleteFilterTabDialog/DeleteFilterTabDialog";
+import { SaveFilterTabDialog } from "../../../components/SaveFilterTabDialog/SaveFilterTabDialog";
+import { useFilterPresets } from "../../../hooks/useFilterPresets/useFilterPresets";
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
+import { AttributeBulkDeleteDialog } from "../../components/AttributeBulkDeleteDialog/AttributeBulkDeleteDialog";
+import { AttributeListPage } from "../../components/AttributeListPage/AttributeListPage";
 
 interface AttributeListProps {
   params: AttributeListUrlQueryParams;

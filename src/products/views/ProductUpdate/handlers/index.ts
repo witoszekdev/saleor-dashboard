@@ -7,8 +7,8 @@ import {
   ProductVariantReorderMutationFn,
 } from "@dashboard/graphql";
 import { ReorderEvent } from "@dashboard/types";
-import { move } from "@dashboard/utils/lists";
 import { arrayMove } from "react-sortable-hoc";
+import { move } from "../../../../utils/lists/lists";
 
 export function createImageUploadHandler(
   id: string,

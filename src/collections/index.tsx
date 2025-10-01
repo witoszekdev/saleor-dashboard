@@ -18,7 +18,7 @@ import {
 } from "./urls";
 import { CollectionCreate as CollectionCreateView } from "./views/CollectionCreate";
 import { CollectionDetails as CollectionDetailsView } from "./views/CollectionDetails";
-import { CollectionList as CollectionListView } from "./views/CollectionList";
+import { CollectionList as CollectionListView } from "./views/CollectionList/CollectionList";
 
 const CollectionList = ({ location }: RouteComponentProps<{}>) => {
   const qs = parseQs(location.search.substr(1)) as any;

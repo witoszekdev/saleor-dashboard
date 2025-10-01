@@ -6,7 +6,6 @@ import {
   useOrderTransactionRequestActionMutation,
 } from "@dashboard/graphql";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { refundSavebarMessages } from "@dashboard/orders/components/OrderTransactionRefundPage/messages";
 import { orderUrl } from "@dashboard/orders/urls";
 import {
@@ -19,6 +18,7 @@ import { FormProvider, useForm } from "react-hook-form";
 import { useIntl } from "react-intl";
 
 import { getValidationSchema, ManualRefundForm } from "./manualRefundValidationSchema";
+import { useNotifier } from "../../../../../hooks/useNotifier/useNotifier";
 
 interface OrderManualTransactionRefundFormProps {
   children: ReactNode;

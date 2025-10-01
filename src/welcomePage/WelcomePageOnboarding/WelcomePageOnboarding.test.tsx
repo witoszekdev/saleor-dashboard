@@ -6,9 +6,9 @@ import userEvent from "@testing-library/user-event";
 import * as React from "react";
 
 import { onboardingCompletedMock, onboardingInitState } from "./mocks";
-import { OnboardingProvider } from "./onboardingContext";
 import { useOnboardingStorage } from "./onboardingContext/useOnboardingStorage";
 import { WelcomePageOnboarding } from "./WelcomePageOnboarding";
+import { OnboardingProvider } from "./onboardingContext/OnboardingContext";
 
 jest.mock("@dashboard/components/Router/useRouteChange", () => ({
   useRouteChange: () => ({

@@ -6,7 +6,6 @@ import {
   TransactionActionEnum,
   TransactionItemFragment,
 } from "@dashboard/graphql";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { ThemeProvider as LegacyThemeProvider } from "@saleor/macaw-ui";
 import { ThemeProvider } from "@saleor/macaw-ui-next";
 import { render, screen } from "@testing-library/react";
@@ -15,6 +14,7 @@ import { ReactNode } from "react";
 import { BrowserRouter } from "react-router-dom";
 
 import { OrderManualTransactionRefundPage } from "./OrderManualTransactionRefundPage";
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
 
 jest.mock("@dashboard/hooks/useNavigator", () => () => jest.fn);
 jest.mock("@dashboard/components/Savebar");

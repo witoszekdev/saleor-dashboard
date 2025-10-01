@@ -26,17 +26,11 @@ import { useBulkActions } from "@dashboard/hooks/useBulkActions";
 import { useChannels } from "@dashboard/hooks/useChannels";
 import { useLocalPaginationState, useLocalPaginator } from "@dashboard/hooks/useLocalPaginator";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { PaginatorContext } from "@dashboard/hooks/usePaginator";
 import { commonMessages, sectionNames } from "@dashboard/intl";
 import { getById, getByUnmatchingId } from "@dashboard/misc";
 import { UseProductSearch as useProductSearch } from "@dashboard/searches/useProductSearch";
-import { DeleteShippingRateDialog } from "@dashboard/shipping/components/DeleteShippingRateDialog";
-import { ShippingMethodProductsAddDialog } from "@dashboard/shipping/components/ShippingMethodProductsAddDialog";
-import { ShippingZonePostalCodeRangeDialog } from "@dashboard/shipping/components/ShippingZonePostalCodeRangeDialog";
-import { ShippingZoneRatesPage } from "@dashboard/shipping/components/ShippingZoneRatesPage";
 import { ShippingZoneRateUpdateFormData } from "@dashboard/shipping/components/ShippingZoneRatesPage/types";
-import { UnassignDialog } from "@dashboard/shipping/components/UnassignDialog";
 import {
   getShippingMethodChannelVariables,
   getUpdateShippingPriceRateVariables,
@@ -62,6 +56,12 @@ import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { ShippingMethodPostalCodeRule } from "@saleor/sdk/dist/apollo/types";
 import { useReducer } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
+import { useNotifier } from "../../hooks/useNotifier/useNotifier";
+import { DeleteShippingRateDialog } from "../components/DeleteShippingRateDialog/DeleteShippingRateDialog";
+import { ShippingMethodProductsAddDialog } from "../components/ShippingMethodProductsAddDialog/ShippingMethodProductsAddDialog";
+import { ShippingZonePostalCodeRangeDialog } from "../components/ShippingZonePostalCodeRangeDialog/ShippingZonePostalCodeRangeDialog";
+import { ShippingZoneRatesPage } from "../components/ShippingZoneRatesPage/ShippingZoneRatesPage";
+import { UnassignDialog } from "../components/UnassignDialog/UnassignDialog";
 
 const FORM_ID = Symbol("shipping-zone-rates-details-form-id");
 

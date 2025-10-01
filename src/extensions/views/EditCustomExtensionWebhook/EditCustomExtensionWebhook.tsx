@@ -1,4 +1,3 @@
-import { NotFoundPage } from "@dashboard/components/NotFoundPage";
 import { WindowTitle } from "@dashboard/components/WindowTitle";
 import { ExtensionsUrls } from "@dashboard/extensions/urls";
 import {
@@ -6,13 +5,13 @@ import {
   useWebhookUpdateMutation,
   WebhookEventTypeAsyncEnum,
 } from "@dashboard/graphql";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { commonMessages } from "@dashboard/intl";
 import { extractMutationErrors, getStringOrPlaceholder } from "@dashboard/misc";
 import { useIntl } from "react-intl";
-
-import { WebhookDetailsPage, WebhookFormData } from "../../components/WebhookDetailsPage";
 import { useAvailableEvents } from "../../hooks/useAvailableEvents";
+import { NotFoundPage } from "../../../components/NotFoundPage/NotFoundPage";
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
+import { WebhookDetailsPage, WebhookFormData } from "../../components/WebhookDetailsPage/WebhookDetailsPage";
 
 interface EditCustomExtensionWebhookProps {
   id: string;

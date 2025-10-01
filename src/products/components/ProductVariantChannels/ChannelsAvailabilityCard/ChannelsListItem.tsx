@@ -1,12 +1,12 @@
 // @ts-strict-ignore
 import { DashboardCard } from "@dashboard/components/Card";
-import { Divider } from "@dashboard/components/Divider";
 import { useDateLocalize } from "@dashboard/hooks/useDateLocalize";
 import { Text } from "@saleor/macaw-ui-next";
 import { Fragment } from "react";
 import { useIntl } from "react-intl";
 
 import { variantDetailsChannelsAvailabilityCardMessages as messages } from "./../messages";
+import { Divider } from "../../../../components/Divider/Divider";
 
 interface ChannelsListItemProps {
   id: string;

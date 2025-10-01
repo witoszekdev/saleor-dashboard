@@ -6,13 +6,12 @@ import { asSortParams } from "@dashboard/utils/sort";
 import { parse as parseQs } from "qs";
 import { useIntl } from "react-intl";
 import { RouteComponentProps, Switch } from "react-router-dom";
-
-import { GiftCardSettingsPage as GiftCardSettings } from "./GiftCardSettings";
-import { GiftCardsList as GiftCardListComponent } from "./GiftCardsList";
 import { GiftCardListUrlQueryParams, GiftCardUrlSortField } from "./GiftCardsList/types";
-import { GiftCardUpdate as GiftCardUpdateComponent } from "./GiftCardUpdate";
 import { GiftCardUpdatePageUrlQueryParams } from "./GiftCardUpdate/types";
 import { giftCardPath, giftCardSettingsUrl, giftCardsListPath } from "./urls";
+import { GiftCardSettingsPage as GiftCardSettings } from "./GiftCardSettings/GiftCardSettingsPage";
+import { GiftCardsList as GiftCardListComponent } from "./GiftCardsList/GiftCardsList";
+import { GiftCardUpdate as GiftCardUpdateComponent } from "./GiftCardUpdate/GiftCardUpdate";
 
 const GiftCardUpdatePage = ({ match }: RouteComponentProps<{ id: string }>) => {
   const qs = parseQs(location.search.substr(1));

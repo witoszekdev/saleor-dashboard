@@ -11,7 +11,6 @@ import { ChangeEvent, FormChange } from "@dashboard/hooks/useForm";
 import { useSearchQuery } from "@dashboard/hooks/useSearchQuery";
 import { sectionNames } from "@dashboard/intl";
 import { FetchMoreProps } from "@dashboard/types";
-import { toggle } from "@dashboard/utils/lists";
 import { Button, CircularProgress, FormControlLabel, TextField } from "@material-ui/core";
 import { makeStyles } from "@saleor/macaw-ui";
 import { Option, Text } from "@saleor/macaw-ui-next";
@@ -19,6 +18,7 @@ import { PropsWithChildren } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
 import { useProductExportFieldMessages } from "./messages";
+import { toggle } from "../../../utils/lists/lists";
 
 export const attributeNamePrefix = "attribute-";
 export const warehouseNamePrefix = "warehouse-";

@@ -1,7 +1,4 @@
 import { TopNav } from "@dashboard/components/AppLayout";
-import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import { DetailPageLayout } from "@dashboard/components/Layouts";
-import { Rule } from "@dashboard/discounts/models";
 import { DiscoutFormData } from "@dashboard/discounts/types";
 import { extensionMountPoints } from "@dashboard/extensions/extensionMountPoints";
 import { getExtensionsItemsForDiscountDetails } from "@dashboard/extensions/getExtensionsItems";
@@ -16,13 +13,15 @@ import {
 import { getFormErrors } from "@dashboard/utils/errors";
 import { CommonError, getCommonFormFieldErrorMessage } from "@dashboard/utils/errors/common";
 import { useIntl } from "react-intl";
-
-import { DiscountDatesWithController } from "../DiscountDates";
-import { DiscountDescription } from "../DiscountDescription";
-import { DiscountDetailsForm } from "../DiscountDetailsForm";
-import { DiscountGeneralInfo } from "../DiscountGeneralInfo";
-import { DiscountRules } from "../DiscountRules";
-import { DiscountSavebar } from "../DiscountSavebar";
+import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
+import { Rule } from "../../models/Rule";
+import { DiscountDatesWithController } from "../DiscountDates/DiscountDatesWithController";
+import { DiscountDescription } from "../DiscountDescription/DiscountDescription";
+import { DiscountDetailsForm } from "../DiscountDetailsForm/DiscountDetailsForm";
+import { DiscountGeneralInfo } from "../DiscountGeneralInfo/DiscountGeneralInfo";
+import { DiscountRules } from "../DiscountRules/DiscountRules";
+import { DiscountSavebar } from "../DiscountSavebar/DiscountSavebar";
 
 interface DiscountDetailsPageProps {
   channels: ChannelFragment[];

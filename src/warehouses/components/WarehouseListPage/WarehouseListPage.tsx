@@ -1,8 +1,6 @@
 import { SearchInput } from "@dashboard/components/AppLayout/ListFilters/components/SearchInput";
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
 import { DashboardCard } from "@dashboard/components/Card";
-import { FilterPresetsSelect } from "@dashboard/components/FilterPresetsSelect";
-import { ListPageLayout } from "@dashboard/components/Layouts";
 import { LimitReachedAlert } from "@dashboard/components/LimitReachedAlert";
 import { configurationMenuUrl } from "@dashboard/configuration";
 import { RefreshLimitsQuery, WarehouseWithShippingFragment } from "@dashboard/graphql";
@@ -15,8 +13,9 @@ import { warehouseAddUrl, WarehouseListUrlSortField } from "@dashboard/warehouse
 import { Box, Button, ChevronRightIcon } from "@saleor/macaw-ui-next";
 import { useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
-
-import { WarehouseList } from "../WarehouseList";
+import { FilterPresetsSelect } from "../../../components/FilterPresetsSelect/FilterPresetsSelect";
+import { ListPageLayout } from "../../../components/Layouts/List/index";
+import { WarehouseList } from "../WarehouseList/WarehouseList";
 
 interface WarehouseListPageProps
   extends PageListProps,

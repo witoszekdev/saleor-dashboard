@@ -6,7 +6,6 @@ import {
   DatagridChangeOpts,
   UseDatagridChangeState,
 } from "@dashboard/components/Datagrid/hooks/useDatagridChange";
-import { MetadataFormData } from "@dashboard/components/Metadata";
 import {
   MetadataErrorFragment,
   ProductChannelListingUpdateInput,
@@ -30,6 +29,7 @@ import { OutputData } from "@editorjs/editorjs";
 import { Option } from "@saleor/macaw-ui-next";
 
 import { ProductChannelsListingDialogSubmit } from "./ProductChannelsListingsDialog";
+import { MetadataFormData } from "../../../components/Metadata/types";
 
 export interface ProductUpdateFormData extends MetadataFormData {
   category: string | null;

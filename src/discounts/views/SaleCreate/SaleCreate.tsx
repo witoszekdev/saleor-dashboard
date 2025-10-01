@@ -4,8 +4,6 @@ import { createSortedSaleData } from "@dashboard/channels/utils";
 import { useAppChannel } from "@dashboard/components/AppLayout/AppChannelContext";
 import { ChannelsAvailabilityDialog } from "@dashboard/components/ChannelsAvailabilityDialog";
 import { WindowTitle } from "@dashboard/components/WindowTitle";
-import { SaleCreatePage } from "@dashboard/discounts/components/SaleCreatePage";
-import { ChannelSaleFormData } from "@dashboard/discounts/components/SaleDetailsPage";
 import {
   saleAddUrl,
   SaleCreateUrlQueryParams,
@@ -20,7 +18,6 @@ import {
 } from "@dashboard/graphql";
 import { useChannels } from "@dashboard/hooks/useChannels";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { commonMessages } from "@dashboard/intl";
 import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
 import { createMetadataCreateHandler } from "@dashboard/utils/handlers/metadataCreateHandler";
@@ -28,6 +25,9 @@ import { useIntl } from "react-intl";
 
 import { SALE_CREATE_FORM_ID } from "./consts";
 import { createHandler } from "./handlers";
+import { SaleCreatePage } from "../../components/SaleCreatePage/SaleCreatePage";
+import { ChannelSaleFormData } from "../../components/SaleDetailsPage/SaleDetailsPage";
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
 
 interface SaleCreateProps {
   params: SaleCreateUrlQueryParams;

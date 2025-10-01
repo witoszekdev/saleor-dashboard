@@ -1,10 +1,10 @@
 import { useApolloClient } from "@apollo/client";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { PropsWithChildren } from "react";
 import { useIntl } from "react-intl";
 
 import { UserContext } from "./";
 import { useAuthProvider } from "./hooks/useAuthProvider";
+import { useNotifier } from "../hooks/useNotifier/useNotifier";
 
 const AuthProvider = ({ children }: PropsWithChildren) => {
   const apolloClient = useApolloClient();

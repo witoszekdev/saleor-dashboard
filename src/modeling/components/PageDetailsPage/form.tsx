@@ -18,7 +18,6 @@ import {
 } from "@dashboard/attributes/utils/handlers";
 import { AttributeInput } from "@dashboard/components/Attributes";
 import { useExitFormDialog } from "@dashboard/components/Form/useExitFormDialog";
-import { MetadataFormData } from "@dashboard/components/Metadata";
 import {
   PageDetailsFragment,
   PageErrorWithAttributesFragment,
@@ -59,6 +58,7 @@ import { useRichText } from "@dashboard/utils/richText/useRichText";
 import { OutputData } from "@editorjs/editorjs";
 import { useEffect, useState } from "react";
 import * as React from "react";
+import { MetadataFormData } from "../../../components/Metadata/types";
 
 export interface PageFormData extends MetadataFormData {
   isPublished: boolean;

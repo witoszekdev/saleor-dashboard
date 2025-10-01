@@ -1,7 +1,6 @@
 import { parse, ParsedQs } from "qs";
 
 import { InitialProductStateResponse } from "../../API/initialState/product/InitialProductStateResponse";
-import { FilterContainer, FilterElement } from "../../FilterElement";
 import { FilterProviderType, InitialResponseType } from "../../types";
 import { UrlEntry, UrlToken } from "../UrlToken";
 import {
@@ -25,6 +24,7 @@ import {
   toVouchersFetchingParams,
   VoucherFetchingParams,
 } from "./fetchingParams";
+import { FilterContainer, FilterElement } from "../../FilterElement/FilterElement";
 
 const toFlatUrlTokens = (p: UrlToken[], c: TokenArray[number]) => {
   if (typeof c === "string") {

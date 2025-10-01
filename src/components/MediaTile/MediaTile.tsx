@@ -1,9 +1,9 @@
-import { IconButton } from "@dashboard/components/IconButton";
 import { CircularProgress } from "@material-ui/core";
 import { DeleteIcon, EditIcon, makeStyles } from "@saleor/macaw-ui";
 import { vars } from "@saleor/macaw-ui-next";
 import { clsx } from "clsx";
 import * as React from "react";
+import { IconButton } from "../IconButton/IconButton";
 
 const useStyles = makeStyles(
   theme => ({

@@ -12,12 +12,9 @@ import { AssignAttributeValueDialog } from "@dashboard/components/AssignAttribut
 import { AttributeInput, Attributes } from "@dashboard/components/Attributes";
 import { CardSpacer } from "@dashboard/components/CardSpacer";
 import { ChannelsAvailability as ChannelsAvailabilityCard } from "@dashboard/components/ChannelsAvailabilityCard";
-import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import { useDevModeContext } from "@dashboard/components/DevModePanel/hooks";
-import { DetailPageLayout } from "@dashboard/components/Layouts";
 import { Metadata } from "@dashboard/components/Metadata/Metadata";
 import { Savebar } from "@dashboard/components/Savebar";
-import { SeoForm } from "@dashboard/components/SeoForm";
 import { extensionMountPoints } from "@dashboard/extensions/extensionMountPoints";
 import { getExtensionsItemsForProductDetails } from "@dashboard/extensions/getExtensionsItems";
 import { useExtensions } from "@dashboard/extensions/hooks/useExtensions";
@@ -43,7 +40,6 @@ import { SubmitPromise } from "@dashboard/hooks/useForm";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { useStateFromProps } from "@dashboard/hooks/useStateFromProps";
 import { maybe } from "@dashboard/misc";
-import { ProductExternalMediaDialog } from "@dashboard/products/components/ProductExternalMediaDialog";
 import { ProductOrganization } from "@dashboard/products/components/ProductOrganization/ProductOrganization";
 import { mapByChannel } from "@dashboard/products/components/ProductUpdatePage/utils";
 import { defaultGraphiQLQuery } from "@dashboard/products/queries";
@@ -60,14 +56,18 @@ import { useMemo, useState } from "react";
 import { useIntl } from "react-intl";
 
 import { AttributeValuesMetadata, getChoices } from "../../utils/data";
-import { ProductDetailsForm } from "../ProductDetailsForm";
-import { ProductMedia } from "../ProductMedia";
-import { ProductTaxes } from "../ProductTaxes";
-import { ProductVariants } from "../ProductVariants";
 import { ProductUpdateForm } from "./form";
 import { messages } from "./messages";
 import { ProductChannelsListingsDialog } from "./ProductChannelsListingsDialog";
 import { ProductUpdateData, ProductUpdateHandlers, ProductUpdateSubmitData } from "./types";
+import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
+import { SeoForm } from "../../../components/SeoForm/SeoForm";
+import { ProductExternalMediaDialog } from "../ProductExternalMediaDialog/ProductExternalMediaDialog";
+import { ProductDetailsForm } from "../ProductDetailsForm/ProductDetailsForm";
+import { ProductMedia } from "../ProductMedia/ProductMedia";
+import { ProductTaxes } from "../ProductTaxes/ProductTaxes";
+import { ProductVariants } from "../ProductVariants/ProductVariants";
 
 interface ProductUpdatePageProps {
   channels: ChannelFragment[];

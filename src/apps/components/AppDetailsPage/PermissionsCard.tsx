@@ -1,4 +1,3 @@
-import { AppPermissionsDialog } from "@dashboard/apps/components/AppPermissionsDialog";
 import { ButtonWithTooltip } from "@dashboard/components/ButtonWithTooltip";
 import { PermissionEnum } from "@dashboard/graphql";
 import { useHasManagedAppsPermission } from "@dashboard/hooks/useHasManagedAppsPermission";
@@ -8,6 +7,7 @@ import { PropsWithChildren, useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
 import { Messages as messages } from "./messages";
+import { AppPermissionsDialog } from "../AppPermissionsDialog/AppPermissionsDialog";
 
 type PermissionsCardProps = {
   permissions: Array<{

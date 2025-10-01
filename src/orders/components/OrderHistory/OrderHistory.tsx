@@ -1,7 +1,6 @@
 // @ts-strict-ignore
 import { FetchResult } from "@apollo/client";
 import { DashboardCard } from "@dashboard/components/Card";
-import { Form } from "@dashboard/components/Form";
 import {
   Timeline,
   TimelineAddNote,
@@ -20,6 +19,7 @@ import { HistoryComponentLoader } from "./HistoryComponentLoader";
 import { LinkedTimelineEvent } from "./LinkedTimelineEvent";
 import { getEventMessage } from "./messages";
 import { getEventSecondaryTitle, isTimelineEventOfType } from "./utils";
+import { Form } from "../../../components/Form/Form";
 
 export interface FormData {
   message: string;

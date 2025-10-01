@@ -1,9 +1,9 @@
-import { IFilter } from "@dashboard/components/Filter";
 import { DiscountStatusEnum, DiscountValueTypeEnum } from "@dashboard/graphql";
 import { FilterOpts, MinMax } from "@dashboard/types";
 import { createDateField, createOptionsField } from "@dashboard/utils/filters/fields";
 import { Option } from "@saleor/macaw-ui-next";
 import { defineMessages, IntlShape } from "react-intl";
+import { IFilter } from "../../../components/Filter/types";
 
 export enum SaleFilterKeys {
   saleType = "saleType",

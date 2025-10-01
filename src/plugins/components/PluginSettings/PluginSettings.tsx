@@ -9,8 +9,7 @@ import { SvgIcon as InfoIcon } from "@material-ui/icons/Info";
 import { Box, Tooltip } from "@saleor/macaw-ui-next";
 import * as React from "react";
 import { useIntl } from "react-intl";
-
-import { PluginDetailsPageFormData } from "../PluginsDetailsPage";
+import { PluginDetailsPageFormData } from "../PluginsDetailsPage/PluginsDetailsPage";
 
 interface PluginSettingsProps {
   data: PluginDetailsPageFormData;

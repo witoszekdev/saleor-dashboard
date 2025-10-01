@@ -1,6 +1,5 @@
 import { TreeItemComponentProps } from "@dashboard/components/SortableTree/types";
 import { buttonMessages } from "@dashboard/intl";
-import { MenuItemType } from "@dashboard/structures/components/MenuItemDialog";
 import { RecursiveMenuItem } from "@dashboard/structures/types";
 import { TranslationsButton } from "@dashboard/translations/components/TranslationsButton/TranslationsButton";
 import { UniqueIdentifier } from "@dnd-kit/core";
@@ -8,6 +7,7 @@ import { Box, Button, EditIcon, GripIcon, Text, TrashBinIcon } from "@saleor/mac
 import { FormattedMessage } from "react-intl";
 
 import { getItemId, getItemType } from "./utils";
+import { MenuItemType } from "../MenuItemDialog/types";
 
 interface TreeItemProps extends TreeItemComponentProps<RecursiveMenuItem> {
   onClick: (id: UniqueIdentifier, menuItemType: MenuItemType) => void;

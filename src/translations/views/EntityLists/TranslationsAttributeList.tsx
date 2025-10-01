@@ -1,11 +1,11 @@
 // @ts-strict-ignore
 import { useAttributeTranslationsQuery } from "@dashboard/graphql";
 import { PaginatorContext, usePaginator } from "@dashboard/hooks/usePaginator";
-import { TranslationsEntitiesList } from "@dashboard/translations/components/TranslationsEntitiesList";
 import { languageEntityUrl, TranslatableEntities } from "@dashboard/translations/urls";
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 
 import { TranslationsEntityListProps } from "./types";
+import { TranslationsEntitiesList } from "../../components/TranslationsEntitiesList/TranslationsEntitiesList";
 
 const TranslationsAttributeList = ({ params, variables }: TranslationsEntityListProps) => {
   const { data, loading } = useAttributeTranslationsQuery({

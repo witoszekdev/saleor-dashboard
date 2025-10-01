@@ -1,8 +1,5 @@
-import { ResponsiveTable } from "@dashboard/components/ResponsiveTable";
 import { TableButtonWrapper } from "@dashboard/components/TableButtonWrapper/TableButtonWrapper";
-import { TableCellHeader } from "@dashboard/components/TableCellHeader";
 import { TablePaginationWithContext } from "@dashboard/components/TablePagination";
-import { TableRowLink } from "@dashboard/components/TableRowLink";
 import { WarehouseWithShippingFragment } from "@dashboard/graphql";
 import { getPrevLocationState } from "@dashboard/hooks/useBackLinkWithState";
 import { renderCollection } from "@dashboard/misc";
@@ -15,6 +12,9 @@ import { makeStyles } from "@saleor/macaw-ui";
 import { Button, Skeleton, TrashBinIcon } from "@saleor/macaw-ui-next";
 import { FormattedMessage } from "react-intl";
 import { useLocation } from "react-router";
+import { ResponsiveTable } from "../../../components/ResponsiveTable/ResponsiveTable";
+import { TableCellHeader } from "../../../components/TableCellHeader/TableCellHeader";
+import { TableRowLink } from "../../../components/TableRowLink/TableRowLink";
 
 const useStyles = makeStyles(
   theme => ({

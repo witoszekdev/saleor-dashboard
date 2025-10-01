@@ -1,7 +1,6 @@
 // @ts-strict-ignore
-import { update } from "@dashboard/utils/lists";
-
 import { FieldType, IFilter, IFilterElementMutableDataGeneric } from "./types";
+import { update } from "../../utils/lists/lists";
 
 type FilterReducerActionType = "clear" | "merge" | "reset" | "set-property";
 export interface FilterReducerAction<K extends string, T extends FieldType> {

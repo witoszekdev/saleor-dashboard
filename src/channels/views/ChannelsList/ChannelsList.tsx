@@ -7,14 +7,13 @@ import {
   useChannelsQuery,
 } from "@dashboard/graphql";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { getChannelsErrorMessage } from "@dashboard/utils/errors/channels";
 import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
 import { useIntl } from "react-intl";
-
-import { ChannelDeleteDialog } from "../../components/ChannelDeleteDialog";
-import { ChannelsListPage } from "../../pages/ChannelsListPage";
 import { channelsListUrl, ChannelsListUrlDialog, ChannelsListUrlQueryParams } from "../../urls";
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
+import { ChannelDeleteDialog } from "../../components/ChannelDeleteDialog/ChannelDeleteDialog";
+import { ChannelsListPage } from "../../pages/ChannelsListPage/ChannelsListPage";
 
 interface ChannelsListProps {
   params: ChannelsListUrlQueryParams;

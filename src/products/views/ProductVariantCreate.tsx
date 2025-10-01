@@ -5,7 +5,6 @@ import {
   prepareAttributesInput,
 } from "@dashboard/attributes/utils/handlers";
 import { AttributeInput } from "@dashboard/components/Attributes";
-import { NotFoundPage } from "@dashboard/components/NotFoundPage";
 import { WindowTitle } from "@dashboard/components/WindowTitle";
 import { DEFAULT_INITIAL_SEARCH_DATA } from "@dashboard/config";
 import {
@@ -18,7 +17,6 @@ import {
   useVariantCreateMutation,
 } from "@dashboard/graphql";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { useShop } from "@dashboard/hooks/useShop";
 import { UseCategorySearch as useCategorySearch } from "@dashboard/searches/useCategorySearch";
 import { UseCollectionSearch as useCollectionSearch } from "@dashboard/searches/useCollectionSearch";
@@ -44,6 +42,8 @@ import {
 } from "../urls";
 import { variantCreateMessages as messages } from "./messages";
 import { createVariantReorderHandler } from "./ProductUpdate/handlers";
+import { NotFoundPage } from "../../components/NotFoundPage/NotFoundPage";
+import { useNotifier } from "../../hooks/useNotifier/useNotifier";
 
 interface ProductVariantCreateProps {
   productId: string;

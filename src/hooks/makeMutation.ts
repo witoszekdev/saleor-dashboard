@@ -14,8 +14,7 @@ import { MutationResultAdditionalProps } from "@dashboard/types";
 import { GqlErrors, hasError } from "@dashboard/utils/api";
 import { DocumentNode } from "graphql";
 import { useIntl } from "react-intl";
-
-import { useNotifier } from "./useNotifier";
+import { useNotifier } from "./useNotifier/useNotifier";
 
 export type MutationResultWithOpts<TData> = MutationResult<TData> & MutationResultAdditionalProps;
 

@@ -1,9 +1,6 @@
 // @ts-strict-ignore
 import { AccountPermissions } from "@dashboard/components/AccountPermissions";
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
-import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import { Form } from "@dashboard/components/Form";
-import { DetailPageLayout } from "@dashboard/components/Layouts";
 import { Savebar } from "@dashboard/components/Savebar";
 import { CustomAppUrls } from "@dashboard/custom-apps/urls";
 import { AppErrorFragment, PermissionEnum, PermissionFragment } from "@dashboard/graphql";
@@ -12,8 +9,10 @@ import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { getFormErrors } from "@dashboard/utils/errors";
 import { getAppErrorMessage } from "@dashboard/utils/errors/app";
 import { useIntl } from "react-intl";
-
-import { CustomAppInformation } from "../CustomAppInformation";
+import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import { Form } from "../../../components/Form/Form";
+import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
+import { CustomAppInformation } from "../CustomAppInformation/CustomAppInformation";
 
 export interface CustomAppCreatePageFormData {
   hasFullAccess: boolean;

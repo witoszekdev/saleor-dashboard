@@ -1,4 +1,3 @@
-import { Rule } from "@dashboard/discounts/models";
 import { DiscoutFormData } from "@dashboard/discounts/types";
 import { useLabelMapsContext } from "@dashboard/discounts/views/DiscountDetails/context/context";
 import {
@@ -18,6 +17,7 @@ import { useIntl } from "react-intl";
 
 import { getValidationSchema } from "../DiscountCreateForm/validationSchema";
 import { useRulesHandlers } from "./hooks/useRulesHandlers";
+import { Rule } from "../../models/Rule";
 
 interface DiscountDetailsFormRenderProps {
   rulesErrors: Array<CommonError<any>>;

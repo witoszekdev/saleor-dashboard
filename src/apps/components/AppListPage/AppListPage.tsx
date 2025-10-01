@@ -10,11 +10,7 @@ import { ListProps } from "@dashboard/types";
 import { Box, Skeleton, sprinkles, Text } from "@saleor/macaw-ui-next";
 import { useCallback } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
-
-import { AllAppList } from "../AllAppList";
-import { InstalledAppList } from "../InstalledAppList";
 import { InstallWithManifestFormButton } from "../InstallWithManifestFormButton";
-import { MarketplaceAlert } from "../MarketplaceAlert";
 import { messages } from "./messages";
 import { MissingAppsFooter } from "./MissingAppsFooter";
 import { useStyles } from "./styles";
@@ -25,6 +21,9 @@ import {
   getVerifiedInstalledApps,
   resolveSectionsAvailability,
 } from "./utils";
+import { AllAppList } from "../AllAppList/AllAppList";
+import { InstalledAppList } from "../InstalledAppList/InstalledAppList";
+import { MarketplaceAlert } from "../MarketplaceAlert/MarketplaceAlert";
 
 interface AppListPageProps extends AppListPageSections, ListProps {
   marketplaceError?: Error;

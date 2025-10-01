@@ -1,8 +1,5 @@
 import { DashboardCard } from "@dashboard/components/Card";
-import { ResponsiveTable } from "@dashboard/components/ResponsiveTable";
-import { SortableTableBody, SortableTableRow } from "@dashboard/components/SortableTable";
 import { TablePagination } from "@dashboard/components/TablePagination";
-import { TableRowLink } from "@dashboard/components/TableRowLink";
 import {
   AttributeInputTypeEnum,
   AttributeValueFragment,
@@ -14,6 +11,10 @@ import { TableCell, TableFooter, TableHead } from "@material-ui/core";
 import { makeStyles } from "@saleor/macaw-ui";
 import { Box, Button, Skeleton, TrashBinIcon } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
+import { ResponsiveTable } from "../../../components/ResponsiveTable/ResponsiveTable";
+import { SortableTableBody } from "../../../components/SortableTable/SortableTableBody";
+import { SortableTableRow } from "../../../components/SortableTable/SortableTableRow";
+import { TableRowLink } from "../../../components/TableRowLink/TableRowLink";
 
 interface AttributeValuesProps
   extends Pick<ListProps, Exclude<keyof ListProps, "getRowHref">>,

@@ -1,6 +1,5 @@
-import { FilterElement, IFilter } from "@dashboard/components/Filter";
-
 import { getSelectedFilterAmount } from "./utils";
+import { FilterElement, IFilter } from "../../Filter/types";
 
 describe("getSelectedFilterAmount", () => {
   it("should return 0 when no selected filters", () => {

@@ -1,7 +1,6 @@
 // @ts-strict-ignore
 import { useUser } from "@dashboard/auth";
 import { ActionDialog } from "@dashboard/components/ActionDialog";
-import { NotFoundPage } from "@dashboard/components/NotFoundPage";
 import { hasPermissions } from "@dashboard/components/RequirePermissions";
 import { WindowTitle } from "@dashboard/components/WindowTitle";
 import { DEFAULT_INITIAL_SEARCH_DATA } from "@dashboard/config";
@@ -17,9 +16,11 @@ import {
   StaffDetailsPage,
 } from "../components/StaffDetailsPage/StaffDetailsPage";
 import { StaffPasswordResetDialog } from "../components/StaffPasswordResetDialog/StaffPasswordResetDialog";
-import { useProfileOperations, useStaffUserOperations } from "../hooks";
 import { staffListUrl, staffMemberDetailsUrl, StaffMemberDetailsUrlQueryParams } from "../urls";
 import { groupsDiff } from "../utils";
+import { NotFoundPage } from "../../components/NotFoundPage/NotFoundPage";
+import { useProfileOperations } from "../hooks/useProfileOperations";
+import { useStaffUserOperations } from "../hooks/useStaffUserOperations";
 
 interface OrderListProps {
   id: string;

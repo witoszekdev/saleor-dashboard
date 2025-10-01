@@ -7,15 +7,12 @@ import { useState } from "react";
 import { FormattedMessage } from "react-intl";
 
 import { VoucherCodesAddButton } from "../VoucherCodesAddButton/VoucherCodesAddButton";
-import { VoucherCodesDatagrid, VoucherCodesDatagridProps } from "../VoucherCodesDatagrid";
-import { VoucherCodesDeleteDialog } from "../VoucherCodesDeleteDialog";
-import {
-  GenerateMultipleVoucherCodeFormData,
-  VoucherCodesGenerateDialog,
-} from "../VoucherCodesGenerateDialog";
-import { VoucherCodesManualDialog } from "../VoucherCodesManualDialog";
 import { VoucherCodesUrlDialog } from "./types";
 import { hasSavedVoucherCodesToDelete } from "./utils";
+import { VoucherCodesDatagrid, VoucherCodesDatagridProps } from "../VoucherCodesDatagrid/VoucherCodesDatagrid";
+import { VoucherCodesDeleteDialog } from "../VoucherCodesDeleteDialog/VoucherCodesDeleteDialog";
+import { GenerateMultipleVoucherCodeFormData, VoucherCodesGenerateDialog } from "../VoucherCodesGenerateDialog/VoucherCodesGenerateDialog";
+import { VoucherCodesManualDialog } from "../VoucherCodesManualDialog/VoucherCodesManualDialog";
 
 export interface VoucherCodesProps extends VoucherCodesDatagridProps {
   selectedCodesIds: string[];

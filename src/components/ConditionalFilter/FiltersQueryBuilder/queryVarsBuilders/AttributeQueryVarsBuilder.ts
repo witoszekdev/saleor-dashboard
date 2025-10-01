@@ -12,7 +12,6 @@ import {
   ProductsHandler,
   ProductVariantHandler,
 } from "../../API/Handler";
-import { FilterElement } from "../../FilterElement";
 import {
   ConditionValue,
   isItemOption,
@@ -20,6 +19,7 @@ import {
 } from "../../FilterElement/ConditionValue";
 import { QueryVarsBuilderUtils } from "../utils";
 import { WhereOnlyQueryVarsBuilder } from "./types";
+import { FilterElement } from "../../FilterElement/FilterElement";
 
 type AttributeFilterQueryPart = { attributes?: AttributeInput[] };
 

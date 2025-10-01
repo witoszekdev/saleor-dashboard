@@ -1,9 +1,9 @@
-import { IFilter } from "@dashboard/components/Filter";
 import { ProductTypeConfigurable, ProductTypeEnum } from "@dashboard/graphql";
 import { commonMessages } from "@dashboard/intl";
 import { FilterOpts } from "@dashboard/types";
 import { createOptionsField } from "@dashboard/utils/filters/fields";
 import { defineMessages, IntlShape } from "react-intl";
+import { IFilter } from "../../../components/Filter/types";
 
 export enum ProductTypeFilterKeys {
   configurable = "configurable",

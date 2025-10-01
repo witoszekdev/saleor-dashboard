@@ -21,7 +21,6 @@ import {
 } from "@dashboard/channels/utils";
 import { AttributeInput } from "@dashboard/components/Attributes";
 import { useExitFormDialog } from "@dashboard/components/Form/useExitFormDialog";
-import { MetadataFormData } from "@dashboard/components/Metadata";
 import {
   ProductErrorWithAttributesFragment,
   ProductVariantCreateDataQuery,
@@ -60,12 +59,12 @@ import { useMultipleRichText } from "@dashboard/utils/richText/useMultipleRichTe
 import { useEffect, useState } from "react";
 import * as React from "react";
 import { useIntl } from "react-intl";
-
-import { ProductStockFormsetData, ProductStockInput } from "../ProductStocks";
 import {
   concatChannelsBySelection,
   createChannelsWithPreorderInfo,
 } from "../ProductVariantChannels/formOpretations";
+import { MetadataFormData } from "../../../components/Metadata/types";
+import { ProductStockFormsetData, ProductStockInput } from "../ProductStocks/ProductStocks";
 
 interface ProductVariantCreateFormData extends MetadataFormData {
   sku: string;

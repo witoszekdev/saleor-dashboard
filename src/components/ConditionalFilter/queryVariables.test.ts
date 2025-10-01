@@ -4,8 +4,6 @@ import {
   ProductTypeConfigurable,
   ProductTypeEnum,
 } from "@dashboard/graphql";
-
-import { Condition, FilterContainer, FilterElement } from "./FilterElement";
 import { ConditionOptions } from "./FilterElement/ConditionOptions";
 import { ConditionSelected } from "./FilterElement/ConditionSelected";
 import { ExpressionValue } from "./FilterElement/FilterElement";
@@ -20,6 +18,8 @@ import {
   createStaffMembersQueryVariables,
   createVoucherQueryVariables,
 } from "./queryVariables";
+import { Condition } from "./FilterElement/Condition";
+import { FilterContainer, FilterElement } from "./FilterElement/FilterElement";
 
 describe("ConditionalFilter / queryVariables / createProductQueryVariables", () => {
   it("should return empty variables for empty filters", () => {

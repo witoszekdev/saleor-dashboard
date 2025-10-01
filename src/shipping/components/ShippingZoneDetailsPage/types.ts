@@ -1,5 +1,5 @@
-import { MetadataFormData } from "@dashboard/components/Metadata";
 import { Option } from "@saleor/macaw-ui-next";
+import { MetadataFormData } from "../../../components/Metadata/types";
 
 export interface ShippingZoneUpdateFormData extends MetadataFormData {
   name: string;

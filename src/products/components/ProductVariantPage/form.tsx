@@ -21,7 +21,6 @@ import {
 } from "@dashboard/channels/utils";
 import { AttributeInput } from "@dashboard/components/Attributes";
 import { useExitFormDialog } from "@dashboard/components/Form/useExitFormDialog";
-import { MetadataFormData } from "@dashboard/components/Metadata";
 import {
   ProductErrorWithAttributesFragment,
   ProductVariantFragment,
@@ -57,7 +56,6 @@ import {
 } from "@dashboard/products/utils/handlers";
 import { validateProductVariant } from "@dashboard/products/utils/validation";
 import { FetchMoreProps, RelayToFlat, ReorderEvent } from "@dashboard/types";
-import { arrayDiff } from "@dashboard/utils/arrays";
 import { mapMetadataItemToInput } from "@dashboard/utils/maps";
 import { getMetadata } from "@dashboard/utils/metadata/getMetadata";
 import { useMetadataChangeTrigger } from "@dashboard/utils/metadata/useMetadataChangeTrigger";
@@ -65,12 +63,13 @@ import { useMultipleRichText } from "@dashboard/utils/richText/useMultipleRichTe
 import { useEffect, useState } from "react";
 import * as React from "react";
 import { useIntl } from "react-intl";
-
-import { ProductStockInput } from "../ProductStocks";
 import {
   concatChannelsBySelection,
   extractChannelPricesFromVariantChannel,
 } from "../ProductVariantChannels/formOpretations";
+import { MetadataFormData } from "../../../components/Metadata/types";
+import { arrayDiff } from "../../../utils/arrays/arrays";
+import { ProductStockInput } from "../ProductStocks/ProductStocks";
 
 interface ProductVariantUpdateFormData extends MetadataFormData {
   sku: string;

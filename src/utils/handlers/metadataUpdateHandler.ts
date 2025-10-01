@@ -9,10 +9,9 @@ import {
   UpdatePrivateMetadataMutationVariables,
 } from "@dashboard/graphql";
 import { SubmitPromise } from "@dashboard/hooks/useForm";
-import { arrayDiff } from "@dashboard/utils/arrays";
-
 import { filterMetadataArray } from "./filterMetadataArray";
 import { areMetadataArraysEqual } from "./metadataUpdateHelpers";
+import { arrayDiff } from "../arrays/arrays";
 
 export interface ObjectWithMetadata {
   id: string;

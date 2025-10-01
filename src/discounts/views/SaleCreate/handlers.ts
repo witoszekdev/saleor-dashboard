@@ -1,6 +1,5 @@
 // @ts-strict-ignore
 import { FetchResult } from "@apollo/client";
-import { FormData } from "@dashboard/discounts/components/SaleCreatePage";
 import { getSaleChannelsVariables } from "@dashboard/discounts/handlers";
 import {
   DiscountValueTypeEnum,
@@ -11,6 +10,7 @@ import {
   SaleType,
 } from "@dashboard/graphql";
 import { decimal, extractMutationErrors, getMutationErrors, joinDateTime } from "@dashboard/misc";
+import { FormData } from "../../components/SaleCreatePage/SaleCreatePage";
 
 function discountValueTypeEnum(type: SaleType): DiscountValueTypeEnum {
   return type.toString() === DiscountValueTypeEnum.FIXED

@@ -14,8 +14,8 @@ import { Button } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 
 import { maybe } from "../../../misc";
-import { OrderDraftDetailsProducts } from "../OrderDraftDetailsProducts";
-import { OrderDraftDetailsSummary } from "../OrderDraftDetailsSummary";
+import { OrderDraftDetailsProducts } from "../OrderDraftDetailsProducts/OrderDraftDetailsProducts";
+import { OrderDraftDetailsSummary } from "../OrderDraftDetailsSummary/OrderDraftDetailsSummary";
 
 interface OrderDraftDetailsProps {
   order: OrderDetailsFragment;

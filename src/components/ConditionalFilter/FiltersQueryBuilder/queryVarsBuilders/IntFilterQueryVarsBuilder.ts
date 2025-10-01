@@ -1,9 +1,9 @@
 import { IntFilterInput } from "@dashboard/graphql";
 
 import { Handler, NoopValuesHandler } from "../../API/Handler";
-import { FilterElement } from "../../FilterElement";
 import { QueryVarsBuilderUtils } from "../utils";
 import { BaseMappableQueryVarsBuilder } from "./BaseMappableQueryVarsBuilder";
+import { FilterElement } from "../../FilterElement/FilterElement";
 
 const SUPPORTED_INT_FILTERS = new Set(["linesCount", "number"] as const);
 

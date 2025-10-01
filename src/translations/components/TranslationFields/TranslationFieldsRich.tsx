@@ -1,6 +1,4 @@
 // @ts-strict-ignore
-import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import { RichTextEditor } from "@dashboard/components/RichTextEditor";
 import { RichTextEditorContent } from "@dashboard/components/RichTextEditor/RichTextEditorContent";
 import { RichTextEditorLoading } from "@dashboard/components/RichTextEditor/RichTextEditorLoading";
 import { SubmitPromise } from "@dashboard/hooks/useForm";
@@ -10,6 +8,8 @@ import { FormattedMessage, useIntl } from "react-intl";
 
 import { TranslationFieldsSave } from "./TranslationFieldsSave";
 import { useRichTextSubmit } from "./useRichTextSubmit";
+import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import { RichTextEditor } from "../../../components/RichTextEditor/RichTextEditor";
 
 interface TranslationFieldsRichProps {
   disabled: boolean;

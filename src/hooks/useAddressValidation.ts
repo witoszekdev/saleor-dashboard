@@ -7,8 +7,8 @@ import {
   AddressTypeEnum,
 } from "@dashboard/graphql";
 import { transformFormToAddressInput } from "@dashboard/misc";
-import { add, remove } from "@dashboard/utils/lists";
 import { useState } from "react";
+import { add, remove } from "../utils/lists/lists";
 
 interface UseAddressValidation<TInput, TOutput> {
   errors: AccountErrorFragment[];

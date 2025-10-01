@@ -2,11 +2,7 @@
 import { attributeUrl } from "@dashboard/attributes/urls";
 import { DashboardCard } from "@dashboard/components/Card";
 import { Checkbox } from "@dashboard/components/Checkbox";
-import { ResponsiveTable } from "@dashboard/components/ResponsiveTable";
-import { SortableTableBody, SortableTableRow } from "@dashboard/components/SortableTable";
 import { TableButtonWrapper } from "@dashboard/components/TableButtonWrapper/TableButtonWrapper";
-import { TableHead } from "@dashboard/components/TableHead";
-import { TableRowLink } from "@dashboard/components/TableRowLink";
 import { AttributeFragment, AttributeTypeEnum } from "@dashboard/graphql";
 import { renderCollection } from "@dashboard/misc";
 import { ListActions, ReorderAction } from "@dashboard/types";
@@ -14,6 +10,11 @@ import { TableCell } from "@material-ui/core";
 import { makeStyles } from "@saleor/macaw-ui";
 import { Button, Skeleton, TrashBinIcon } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
+import { ResponsiveTable } from "../../../components/ResponsiveTable/ResponsiveTable";
+import { SortableTableBody } from "../../../components/SortableTable/SortableTableBody";
+import { SortableTableRow } from "../../../components/SortableTable/SortableTableRow";
+import { TableHead } from "../../../components/TableHead/TableHead";
+import { TableRowLink } from "../../../components/TableRowLink/TableRowLink";
 
 const useStyles = makeStyles(
   {

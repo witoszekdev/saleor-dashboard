@@ -1,6 +1,5 @@
 import { moneyCell, readonlyTextCell } from "@dashboard/components/Datagrid/customCells/cells";
 import { AvailableColumn } from "@dashboard/components/Datagrid/types";
-import { Locale } from "@dashboard/components/Locale";
 import { OrderDraft } from "@dashboard/orders/types";
 import { Sort } from "@dashboard/types";
 import { getColumnSortDirectionIcon } from "@dashboard/utils/columns/getColumnSortDirectionIcon";
@@ -9,6 +8,7 @@ import moment from "moment";
 import { IntlShape } from "react-intl";
 
 import { columnsMessages } from "./messages";
+import { Locale } from "../../../components/Locale/Locale";
 
 export const orderDraftListStaticColumnsAdapter = (
   intl: IntlShape,

@@ -1,5 +1,5 @@
-import { TypeDeleteMessages } from "@dashboard/components/TypeDeleteWarningDialog";
 import { Ids } from "@dashboard/types";
+import { TypeDeleteMessages } from "../../../components/TypeDeleteWarningDialog/TypeDeleteWarningDialog";
 
 export interface UseTypeDeleteData extends TypeDeleteMessages {
   isOpen: boolean;

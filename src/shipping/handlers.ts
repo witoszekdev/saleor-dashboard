@@ -14,7 +14,6 @@ import {
   useShippingMethodChannelListingUpdateMutation,
 } from "@dashboard/graphql";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { commonMessages } from "@dashboard/intl";
 import { extractMutationErrors, getMutationState } from "@dashboard/misc";
 import { getParsedDataForJsonStringField } from "@dashboard/utils/richText/misc";
@@ -23,6 +22,7 @@ import { useIntl } from "react-intl";
 
 import { ShippingZoneRateCommonFormData } from "./components/ShippingZoneRatesPage/types";
 import { shippingRateEditUrl } from "./urls";
+import { useNotifier } from "../hooks/useNotifier/useNotifier";
 
 export const createChannelsChangeHandler =
   (

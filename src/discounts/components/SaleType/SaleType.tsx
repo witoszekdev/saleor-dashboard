@@ -1,11 +1,10 @@
 import { DashboardCard } from "@dashboard/components/Card";
-import { RadioGroupField, RadioGroupFieldChoice } from "@dashboard/components/RadioGroupField";
 import { SaleType as SaleTypeEnum } from "@dashboard/graphql";
 import { FormChange } from "@dashboard/hooks/useForm";
 import { makeStyles } from "@saleor/macaw-ui";
 import { IntlShape, useIntl } from "react-intl";
-
-import { SaleDetailsPageFormData } from "../SaleDetailsPage";
+import { RadioGroupField, RadioGroupFieldChoice } from "../../../components/RadioGroupField/RadioGroupField";
+import { SaleDetailsPageFormData } from "../SaleDetailsPage/SaleDetailsPage";
 
 interface SaleTypeProps {
   data: SaleDetailsPageFormData;

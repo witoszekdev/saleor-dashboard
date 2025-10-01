@@ -2,10 +2,6 @@
 import { DashboardCard } from "@dashboard/components/Card";
 import { ControlledCheckbox } from "@dashboard/components/ControlledCheckbox";
 import { FormSpacer } from "@dashboard/components/FormSpacer";
-import { RadioGroupField } from "@dashboard/components/RadioGroupField";
-import { ResponsiveTable } from "@dashboard/components/ResponsiveTable";
-import { TableHead } from "@dashboard/components/TableHead";
-import { TableRowLink } from "@dashboard/components/TableRowLink";
 import { ChannelInput } from "@dashboard/discounts/handlers";
 import { DiscountTypeEnum } from "@dashboard/discounts/types";
 import { DiscountErrorFragment } from "@dashboard/graphql";
@@ -18,8 +14,12 @@ import * as React from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
 import { translateVoucherTypes } from "../../translations";
-import { VoucherDetailsPageFormData } from "../VoucherDetailsPage";
 import { useStyles } from "./styles";
+import { RadioGroupField } from "../../../components/RadioGroupField/RadioGroupField";
+import { ResponsiveTable } from "../../../components/ResponsiveTable/ResponsiveTable";
+import { TableHead } from "../../../components/TableHead/TableHead";
+import { TableRowLink } from "../../../components/TableRowLink/TableRowLink";
+import { VoucherDetailsPageFormData } from "../VoucherDetailsPage/VoucherDetailsPage";
 
 interface VoucherValueProps {
   data: VoucherDetailsPageFormData;

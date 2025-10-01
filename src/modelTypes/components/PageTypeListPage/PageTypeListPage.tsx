@@ -2,8 +2,6 @@ import { SearchInput } from "@dashboard/components/AppLayout/ListFilters/compone
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
 import { ButtonGroupWithDropdown } from "@dashboard/components/ButtonGroupWithDropdown";
 import { DashboardCard } from "@dashboard/components/Card";
-import { FilterPresetsSelect } from "@dashboard/components/FilterPresetsSelect";
-import { ListPageLayout } from "@dashboard/components/Layouts";
 import { extensionMountPoints } from "@dashboard/extensions/extensionMountPoints";
 import {
   getExtensionItemsForOverviewCreate,
@@ -25,7 +23,9 @@ import {
   SortPage,
   TabPageProps,
 } from "../../../types";
-import { PageTypeList } from "../PageTypeList";
+import { FilterPresetsSelect } from "../../../components/FilterPresetsSelect/FilterPresetsSelect";
+import { ListPageLayout } from "../../../components/Layouts/List/index";
+import { PageTypeList } from "../PageTypeList/PageTypeList";
 
 interface PageTypeListPageProps
   extends PageListProps,

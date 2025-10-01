@@ -1,5 +1,4 @@
 import { DashboardCard } from "@dashboard/components/Card";
-import { Divider } from "@dashboard/components/Divider";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { sectionNames } from "@dashboard/intl";
 import { productVariantAddUrl } from "@dashboard/products/urls";
@@ -16,6 +15,7 @@ import { VariantItem } from "./components/ProductVariantItem";
 import { useVariantDrag } from "./hooks/useVariantDrag";
 import { messages } from "./messages";
 import { ProductVariantItem } from "./types";
+import { Divider } from "../../../components/Divider/Divider";
 
 interface ProductVariantNavigationProps {
   current?: string;

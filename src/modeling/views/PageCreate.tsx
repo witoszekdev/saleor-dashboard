@@ -17,7 +17,6 @@ import {
 } from "@dashboard/graphql";
 import { getSearchFetchMoreProps } from "@dashboard/hooks/makeTopLevelSearch/utils";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { getMutationErrors } from "@dashboard/misc";
 import { UseCategorySearch as useCategorySearch } from "@dashboard/searches/useCategorySearch";
 import { UseCollectionSearch as useCollectionSearch } from "@dashboard/searches/useCollectionSearch";
@@ -31,10 +30,10 @@ import { createMetadataCreateHandler } from "@dashboard/utils/handlers/metadataC
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { getParsedDataForJsonStringField } from "@dashboard/utils/richText/misc";
 import { useIntl } from "react-intl";
-
-import { PageDetailsPage } from "../components/PageDetailsPage";
 import { PageSubmitData } from "../components/PageDetailsPage/form";
 import { pageCreateUrl, PageCreateUrlQueryParams, pageUrl } from "../urls";
+import { useNotifier } from "../../hooks/useNotifier/useNotifier";
+import { PageDetailsPage } from "../components/PageDetailsPage/PageDetailsPage";
 
 interface PageCreateProps {
   id: string;

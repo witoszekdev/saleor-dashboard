@@ -1,5 +1,4 @@
 import { Combobox } from "@dashboard/components/Combobox";
-import { createEmptyCodition, Rule } from "@dashboard/discounts/models";
 import { PromotionTypeEnum, RewardValueTypeEnum } from "@dashboard/graphql";
 import { ChangeEvent } from "@dashboard/hooks/useForm";
 import { commonMessages } from "@dashboard/intl";
@@ -11,13 +10,14 @@ import { Box, Input, Option } from "@saleor/macaw-ui-next";
 import { useEffect, useMemo } from "react";
 import { useController, useFormContext } from "react-hook-form";
 import { useIntl } from "react-intl";
-
-import { useDiscountRulesContext } from "../../context";
 import { getCurencySymbol } from "../../utils";
-import { RuleConditions } from "./components/RuleConditions";
-import { RuleDescription } from "./components/RuleDescription";
 import { RuleInputWrapper } from "./components/RuleInputWrapper/RuleInputWrapper";
-import { RuleReward } from "./components/RuleReward";
+import { createEmptyCodition } from "../../../../models/Condition";
+import { Rule } from "../../../../models/Rule";
+import { useDiscountRulesContext } from "../../context/consumer";
+import { RuleConditions } from "./components/RuleConditions/RuleConditions";
+import { RuleDescription } from "./components/RuleDescription/RuleDescription";
+import { RuleReward } from "./components/RuleReward/RuleReward";
 
 interface RuleFormProps<ErrorCode> {
   errors: Array<CommonError<ErrorCode>>;

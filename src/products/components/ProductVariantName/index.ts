@@ -1,1 +1,0 @@
-export { ProductVariantName } from "./ProductVariantName";

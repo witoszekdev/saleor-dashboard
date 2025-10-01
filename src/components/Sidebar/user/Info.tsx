@@ -1,9 +1,9 @@
 import { useUser } from "@dashboard/auth";
-import { UserAvatar } from "@dashboard/components/UserAvatar";
 import { getUserInitials, getUserName } from "@dashboard/misc";
 import { Box, Text } from "@saleor/macaw-ui-next";
 
 import { UserControls } from "./Controls";
+import { UserAvatar } from "../../UserAvatar/UserAvatar";
 
 export const UserInfo = () => {
   const { user } = useUser();

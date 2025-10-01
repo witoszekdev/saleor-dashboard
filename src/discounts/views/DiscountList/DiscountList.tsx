@@ -1,11 +1,8 @@
 import { useConditionalFilterContext } from "@dashboard/components/ConditionalFilter";
 import { createDiscountsQueryVariables } from "@dashboard/components/ConditionalFilter/queryVariables";
-import { DeleteFilterTabDialog } from "@dashboard/components/DeleteFilterTabDialog";
-import { SaveFilterTabDialog } from "@dashboard/components/SaveFilterTabDialog";
 import { WindowTitle } from "@dashboard/components/WindowTitle";
 import { DiscountListPage } from "@dashboard/discounts/components/DiscountListPage/DiscountListPage";
 import { PromotionFragment, usePromotionsListQuery } from "@dashboard/graphql";
-import { useFilterPresets } from "@dashboard/hooks/useFilterPresets";
 import { useListSettings } from "@dashboard/hooks/useListSettings";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { usePaginationReset } from "@dashboard/hooks/usePaginationReset";
@@ -31,6 +28,9 @@ import {
 } from "../../discountsUrls";
 import { storageUtils } from "./filters";
 import { canBeSorted, DEFAULT_SORT_KEY, getSortQueryVariables } from "./sort";
+import { DeleteFilterTabDialog } from "../../../components/DeleteFilterTabDialog/DeleteFilterTabDialog";
+import { SaveFilterTabDialog } from "../../../components/SaveFilterTabDialog/SaveFilterTabDialog";
+import { useFilterPresets } from "../../../hooks/useFilterPresets/useFilterPresets";
 
 interface DiscountListProps {
   params: DiscountListUrlQueryParams;

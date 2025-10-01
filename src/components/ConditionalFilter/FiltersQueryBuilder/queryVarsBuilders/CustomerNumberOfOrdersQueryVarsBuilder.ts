@@ -1,8 +1,8 @@
 import { Handler, NoopValuesHandler } from "../../API/Handler";
-import { FilterElement } from "../../FilterElement";
 import { isItemOption } from "../../FilterElement/ConditionValue";
 import { QueryVarsBuilderUtils } from "../utils";
 import { BothApiQueryVarsBuilder } from "./types";
+import { FilterElement } from "../../FilterElement/FilterElement";
 
 export class CustomerNumberOfOrdersQueryVarsBuilder
   implements BothApiQueryVarsBuilder<{ numberOfOrders?: { gte: string; lte: string } }>

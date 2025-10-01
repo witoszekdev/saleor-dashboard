@@ -1,6 +1,6 @@
-import { GiftCardListSearchAndFilters } from "./GiftCardListSearchAndFilters";
-import { GiftCardsListDatagrid } from "./GiftCardsListDatagrid";
-import { GiftCardsListHeader } from "./GiftCardsListHeader";
+import { GiftCardListSearchAndFilters } from "./GiftCardListSearchAndFilters/GiftCardListSearchAndFilters";
+import { GiftCardsListDatagrid } from "./GiftCardsListDatagrid/GiftCardsListDatagrid";
+import { GiftCardsListHeader } from "./GiftCardsListHeader/GiftCardsListHeader";
 
 const GiftCardsListPage = () => (
   <>

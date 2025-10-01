@@ -1,18 +1,14 @@
 // @ts-strict-ignore
 import { useCreateShippingZoneMutation, useShopCountriesQuery } from "@dashboard/graphql";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { useShop } from "@dashboard/hooks/useShop";
 import { commonMessages } from "@dashboard/intl";
 import { extractMutationErrors } from "@dashboard/misc";
 import { mapCountriesToCountriesCodes } from "@dashboard/utils/maps";
 import { useIntl } from "react-intl";
-
-import {
-  ShippingZoneCreateFormData,
-  ShippingZoneCreatePage,
-} from "../components/ShippingZoneCreatePage";
 import { shippingZoneUrl } from "../urls";
+import { useNotifier } from "../../hooks/useNotifier/useNotifier";
+import { ShippingZoneCreateFormData, ShippingZoneCreatePage } from "../components/ShippingZoneCreatePage/ShippingZoneCreatePage";
 
 const ShippingZoneCreate = () => {
   const navigate = useNavigator();

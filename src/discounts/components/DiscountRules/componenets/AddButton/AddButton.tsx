@@ -1,8 +1,7 @@
 import { Button, PlusIcon } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
-
-import { useDiscountRulesContext } from "../../context";
 import { messages } from "../../messages";
+import { useDiscountRulesContext } from "../../context/consumer";
 
 interface AddButtonProps {
   onClick: () => void;

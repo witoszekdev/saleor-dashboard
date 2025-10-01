@@ -1,7 +1,6 @@
 // @ts-strict-ignore
 import { ControlledCheckbox } from "@dashboard/components/ControlledCheckbox";
 import { Hr } from "@dashboard/components/Hr";
-import { RadioSwitchField } from "@dashboard/components/RadioSwitchField";
 import { useCurrentDate } from "@dashboard/hooks/useCurrentDate";
 import { useDateLocalize } from "@dashboard/hooks/useDateLocalize";
 import { ChangeEvent } from "@dashboard/hooks/useForm";
@@ -20,6 +19,7 @@ import { FormSpacer } from "../FormSpacer";
 import { DateVisibilitySelector } from "./DateVisibilitySelector";
 import { visibilityCardMessages } from "./messages";
 import { isAvailableOrPublished } from "./utils";
+import { RadioSwitchField } from "../RadioSwitchField/RadioSwitchField";
 
 const useStyles = makeStyles(
   theme => ({

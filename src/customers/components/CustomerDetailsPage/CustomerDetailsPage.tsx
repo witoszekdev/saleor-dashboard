@@ -3,9 +3,6 @@ import { AppWidgets } from "@dashboard/apps/components/AppWidgets/AppWidgets";
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
 import { Backlink } from "@dashboard/components/Backlink";
 import { CardSpacer } from "@dashboard/components/CardSpacer";
-import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import { Form } from "@dashboard/components/Form";
-import { DetailPageLayout } from "@dashboard/components/Layouts";
 import { Metadata } from "@dashboard/components/Metadata/Metadata";
 import { MetadataFormData } from "@dashboard/components/Metadata/types";
 import { RequirePermissions } from "@dashboard/components/RequirePermissions";
@@ -27,11 +24,14 @@ import { Divider } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
 
 import { getUserName } from "../../../misc";
-import { CustomerAddresses } from "../CustomerAddresses";
-import { CustomerDetails } from "../CustomerDetails";
-import { CustomerInfo } from "../CustomerInfo";
-import { CustomerOrders } from "../CustomerOrders";
-import { CustomerStats } from "../CustomerStats";
+import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import { Form } from "../../../components/Form/Form";
+import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
+import { CustomerAddresses } from "../CustomerAddresses/CustomerAddresses";
+import { CustomerDetails } from "../CustomerDetails/CustomerDetails";
+import { CustomerInfo } from "../CustomerInfo/CustomerInfo";
+import { CustomerOrders } from "../CustomerOrders/CustomerOrders";
+import { CustomerStats } from "../CustomerStats/CustomerStats";
 
 export interface CustomerDetailsPageFormData extends MetadataFormData {
   firstName: string;

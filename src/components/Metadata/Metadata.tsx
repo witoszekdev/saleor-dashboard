@@ -1,6 +1,5 @@
 import { MetadataInput } from "@dashboard/graphql";
 import { ChangeEvent } from "@dashboard/hooks/useForm";
-import { removeAtIndex, updateAtIndex } from "@dashboard/utils/lists";
 import { Box, BoxProps } from "@saleor/macaw-ui-next";
 import { memo } from "react";
 
@@ -8,6 +7,7 @@ import { MetadataCard, MetadataCardProps } from "./MetadataCard";
 import { MetadataLoadingCard } from "./MetadataLoadingCard";
 import { EventDataAction, EventDataField } from "./types";
 import { getDataKey, parseEventData } from "./utils";
+import { removeAtIndex, updateAtIndex } from "../../utils/lists/lists";
 
 export interface MetadataProps
   extends Omit<MetadataCardProps, "data" | "isPrivate">,

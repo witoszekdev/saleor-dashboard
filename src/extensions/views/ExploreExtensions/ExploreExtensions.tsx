@@ -2,15 +2,15 @@ import { TopNav } from "@dashboard/components/AppLayout";
 import { useContextualLink } from "@dashboard/components/AppLayout/ContextualLinks/useContextualLink";
 import { SearchInput } from "@dashboard/components/AppLayout/ListFilters/components/SearchInput";
 import { DashboardCard } from "@dashboard/components/Card";
-import { ListPageLayout } from "@dashboard/components/Layouts";
 import { Box, ChevronRightIcon, Text } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
 
 import { headerTitles, messages } from "../../messages";
 import { ExploreExtensionsActions } from "./components/ExploreExtensionsActions";
-import { ExtensionsList } from "./components/ExtensionsList";
 import { useExploreExtensions } from "./hooks/useExploreExtensions";
 import { useExtensionsFilter } from "./hooks/useExtenstionsFilter";
+import { ListPageLayout } from "../../../components/Layouts/List/index";
+import { ExtensionsList } from "./components/ExtensionsList/ExtensionsList";
 
 export const ExploreExtensions = () => {
   const intl = useIntl();

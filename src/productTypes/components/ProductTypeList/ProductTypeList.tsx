@@ -1,10 +1,6 @@
 // @ts-strict-ignore
 import { Checkbox } from "@dashboard/components/Checkbox";
-import { ResponsiveTable } from "@dashboard/components/ResponsiveTable";
-import { TableCellHeader } from "@dashboard/components/TableCellHeader";
-import { TableHead } from "@dashboard/components/TableHead";
 import { TablePaginationWithContext } from "@dashboard/components/TablePagination";
-import { TableRowLink } from "@dashboard/components/TableRowLink";
 import { ProductTypeFragment } from "@dashboard/graphql";
 import { getPrevLocationState } from "@dashboard/hooks/useBackLinkWithState";
 import { ProductTypeListUrlSortField, productTypeUrl } from "@dashboard/productTypes/urls";
@@ -17,6 +13,10 @@ import { useLocation } from "react-router";
 
 import { maybe, renderCollection } from "../../../misc";
 import { ListActions, ListProps, SortPage } from "../../../types";
+import { ResponsiveTable } from "../../../components/ResponsiveTable/ResponsiveTable";
+import { TableCellHeader } from "../../../components/TableCellHeader/TableCellHeader";
+import { TableHead } from "../../../components/TableHead/TableHead";
+import { TableRowLink } from "../../../components/TableRowLink/TableRowLink";
 
 const useStyles = makeStyles(
   theme => ({

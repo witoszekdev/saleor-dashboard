@@ -15,11 +15,11 @@ import {
   CustomAppListUrlQueryParams,
   CustomAppPaths,
 } from "./urls";
-import { CustomAppCreate as CustomAppCreateView } from "./views/CustomAppCreate";
-import { CustomAppDetails as CustomAppDetailsView } from "./views/CustomAppDetails";
 import { CustomAppList as CustomAppListView } from "./views/CustomAppList";
 import { CustomAppWebhookCreate as CustomAppWebhookCreateView } from "./views/CustomAppWebhookCreate";
 import { CustomAppWebhookDetails as CustomAppWebhookDetailsView } from "./views/CustomAppWebhookDetails";
+import { CustomAppCreate as CustomAppCreateView } from "./views/CustomAppCreate/CustomAppCreate";
+import { CustomAppDetails as CustomAppDetailsView } from "./views/CustomAppDetails/CustomAppDetails";
 
 interface MatchParams {
   appId?: string;

@@ -1,16 +1,16 @@
 import { useAppChannel } from "@dashboard/components/AppLayout/AppChannelContext";
 import { WindowTitle } from "@dashboard/components/WindowTitle";
-import { DiscountCreatePage } from "@dashboard/discounts/components/DiscountCreatePage";
 import { discountListUrl, discountUrl } from "@dashboard/discounts/discountsUrls";
 import { usePromotionCreateMutation } from "@dashboard/graphql";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { commonMessages } from "@dashboard/intl";
 import { getMutationErrors } from "@dashboard/misc";
 import { useIntl } from "react-intl";
 
 import { EmpptyLabelsMapsProvider } from "../DiscountDetails/context/provider";
 import { useDiscountCreate } from "./handlers";
+import { DiscountCreatePage } from "../../components/DiscountCreatePage/DiscountCreatePage";
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
 
 export const DiscountCreate = () => {
   const { availableChannels } = useAppChannel(false);

@@ -1,9 +1,8 @@
 // @ts-strict-ignore
 import { ThemeProvider } from "@saleor/macaw-ui";
 import { render, screen } from "@testing-library/react";
-
-import { TimezoneProvider } from "../Timezone";
 import { Date } from "./Date";
+import { TimezoneProvider } from "../Timezone/Timezone";
 
 const testDate = "2018-04-07";
 const expectedDate = "Apr 7, 2018";

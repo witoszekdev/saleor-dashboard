@@ -5,7 +5,6 @@ import { AppAvatar } from "@dashboard/apps/components/AppAvatar/AppAvatar";
 import { DashboardCard } from "@dashboard/components/Card";
 import { CardSpacer } from "@dashboard/components/CardSpacer";
 import { Hr } from "@dashboard/components/Hr";
-import { DetailPageLayout } from "@dashboard/components/Layouts";
 import { AppFetchMutation, AppInstallMutation } from "@dashboard/graphql";
 import { SubmitPromise } from "@dashboard/hooks/useForm";
 import { buttonMessages } from "@dashboard/intl";
@@ -16,6 +15,7 @@ import { FormattedMessage, useIntl } from "react-intl";
 
 import { Messages as messages } from "./messages";
 import { useStyles } from "./styles";
+import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
 
 interface AppInstallPageProps {
   data: NonNullable<AppFetchMutation["appFetchManifest"]>["manifest"];

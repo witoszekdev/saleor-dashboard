@@ -1,6 +1,5 @@
-import { MetadataFormData } from "@dashboard/components/Metadata";
-
 import { createMetadataUpdateHandler, ObjectWithMetadata } from "./metadataUpdateHandler";
+import { MetadataFormData } from "../../components/Metadata/types";
 
 describe("createMetadataUpdateHandler", () => {
   it("should return array of errors when update function return errors", async () => {

@@ -1,20 +1,19 @@
 import { DashboardCard } from "@dashboard/components/Card";
-import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import { Rule } from "@dashboard/discounts/models";
 import { useLabelMapsContext } from "@dashboard/discounts/views/DiscountDetails/context/context";
 import { ChannelFragment, PromotionTypeEnum } from "@dashboard/graphql";
 import { CommonError } from "@dashboard/utils/errors/common";
 import { useEffect, useMemo, useState } from "react";
 import { useIntl } from "react-intl";
-
-import { AddButton } from "./componenets/AddButton";
 import { RuleDeleteModal } from "./componenets/RuleDeleteModal/RuleDeleteModal";
-import { RuleForm } from "./componenets/RuleForm";
-import { RuleFormModal } from "./componenets/RuleFormModal";
-import { RulesList } from "./componenets/RulesList";
-import { DiscountRulesContextProvider } from "./context";
 import { useGraphQLPlayground } from "./hooks/useGraphQLPlayground";
 import { messages } from "./messages";
+import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import { Rule } from "../../models/Rule";
+import { AddButton } from "./componenets/AddButton/AddButton";
+import { RuleForm } from "./componenets/RuleForm/RuleForm";
+import { RuleFormModal } from "./componenets/RuleFormModal/RuleFormModal";
+import { RulesList } from "./componenets/RulesList/RulesList";
+import { DiscountRulesContextProvider } from "./context/provider";
 
 export type DiscountRulesErrors<ErrorCode> = Array<CommonError<ErrorCode> & { index?: number }>;
 

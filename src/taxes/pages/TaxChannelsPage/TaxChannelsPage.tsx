@@ -1,12 +1,8 @@
 // @ts-strict-ignore
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
 import { CardTitle } from "@dashboard/components/CardTitle";
-import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import { Form } from "@dashboard/components/Form";
 import { Grid } from "@dashboard/components/Grid";
-import { DetailPageLayout } from "@dashboard/components/Layouts";
 import { Savebar } from "@dashboard/components/Savebar";
-import { VerticalSpacer } from "@dashboard/components/VerticalSpacer";
 import { configurationMenuUrl } from "@dashboard/configuration";
 import {
   CountryCode,
@@ -16,8 +12,6 @@ import {
   TaxConfigurationUpdateInput,
 } from "@dashboard/graphql";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-import { TaxCountryDialog } from "@dashboard/taxes/components/TaxCountryDialog";
-import { TaxPageTitle } from "@dashboard/taxes/components/TaxPageTitle";
 import { taxesMessages } from "@dashboard/taxes/messages";
 import { isLastElement } from "@dashboard/taxes/utils/utils";
 import { Card, CardContent, Divider } from "@material-ui/core";
@@ -27,10 +21,16 @@ import { FormattedMessage, useIntl } from "react-intl";
 
 import { getSelectedTaxStrategy, getTaxAppId, getTaxCalculationStrategy } from "./helpers";
 import { useStyles } from "./styles";
-import { TaxChannelsMenu } from "./TaxChannelsMenu";
-import { TaxCountryExceptionListItem } from "./TaxCountryExceptionListItem";
-import { TaxSettingsCard } from "./TaxSettingsCard";
 import { useTaxStrategyChoices } from "./useTaxStrategyChoices";
+import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import { Form } from "../../../components/Form/Form";
+import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
+import { VerticalSpacer } from "../../../components/VerticalSpacer/VerticalSpacer";
+import { TaxCountryDialog } from "../../components/TaxCountryDialog/TaxCountryDialog";
+import { TaxPageTitle } from "../../components/TaxPageTitle/TaxPageTitle";
+import { TaxChannelsMenu } from "./TaxChannelsMenu/TaxChannelsMenu";
+import { TaxCountryExceptionListItem } from "./TaxCountryExceptionListItem/TaxCountryExceptionListItem";
+import { TaxSettingsCard } from "./TaxSettingsCard/TaxSettingsCard";
 
 interface TaxChannelsPageProps {
   taxConfigurations: TaxConfigurationFragment[] | undefined;

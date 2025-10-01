@@ -3,10 +3,6 @@ import { createCountryHandler } from "@dashboard/components/AddressEdit/createCo
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
 import { DashboardCard } from "@dashboard/components/Card";
 import { CompanyAddressInput } from "@dashboard/components/CompanyAddressInput";
-import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import { Form } from "@dashboard/components/Form";
-import { DetailPageLayout } from "@dashboard/components/Layouts";
-import { PageSectionHeader } from "@dashboard/components/PageSectionHeader";
 import { Savebar } from "@dashboard/components/Savebar";
 import { configurationMenuUrl } from "@dashboard/configuration";
 import { ShopErrorFragment, SiteSettingsQuery } from "@dashboard/graphql";
@@ -19,9 +15,12 @@ import { createSingleAutocompleteSelectHandler } from "@dashboard/utils/handlers
 import { mapCountriesToChoices } from "@dashboard/utils/maps";
 import { Box, Checkbox, Divider, Text } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
-
-import { SiteCheckoutSettingsCard } from "../SiteCheckoutSettingsCard";
 import { messages } from "./messages";
+import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import { Form } from "../../../components/Form/Form";
+import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
+import { PageSectionHeader } from "../../../components/PageSectionHeader/PageSectionHeader";
+import { SiteCheckoutSettingsCard } from "../SiteCheckoutSettingsCard/SiteCheckoutSettingsCard";
 
 interface SiteSettingsPageAddressFormData {
   city: string;

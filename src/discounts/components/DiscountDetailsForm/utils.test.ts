@@ -1,6 +1,5 @@
-import { Rule } from "@dashboard/discounts/models";
-
 import { getCurrentConditionsValuesLabels } from "./utils";
+import { Rule } from "../../models/Rule";
 
 describe("getCurrentConditionsValuesLabels", () => {
   it("should return empty object if no rules", () => {

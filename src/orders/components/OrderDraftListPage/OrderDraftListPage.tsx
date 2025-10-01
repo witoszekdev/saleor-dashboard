@@ -1,5 +1,4 @@
 // @ts-strict-ignore
-import { ListFilters } from "@dashboard/components/AppLayout/ListFilters";
 import { BulkDeleteButton } from "@dashboard/components/BulkDeleteButton";
 import { DashboardCard } from "@dashboard/components/Card";
 import { useFlag } from "@dashboard/featureFlags";
@@ -10,11 +9,11 @@ import { isLimitReached } from "@dashboard/utils/limits";
 import { Box } from "@saleor/macaw-ui-next";
 import { useState } from "react";
 import { useIntl } from "react-intl";
-
-import { OrderDraftListDatagrid } from "../OrderDraftListDatagrid";
 import { OrderDraftListHeader } from "../OrderDraftListHeader/OrderDraftListHeader";
 import { OrderLimitReached } from "../OrderLimitReached";
 import { createFilterStructure, OrderDraftFilterKeys, OrderDraftListFilterOpts } from "./filters";
+import { ListFilters } from "../../../components/AppLayout/ListFilters/ListFilters";
+import { OrderDraftListDatagrid } from "../OrderDraftListDatagrid/OrderDraftListDatagrid";
 
 interface OrderDraftListPageProps
   extends PageListProps,

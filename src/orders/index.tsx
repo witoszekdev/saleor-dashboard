@@ -31,19 +31,19 @@ import {
   orderTransactionRefundPath,
   OrderUrlQueryParams,
 } from "./urls";
-import { OrderDetails as OrderDetailsComponent } from "./views/OrderDetails";
-import { OrderDraftList as OrderDraftListComponent } from "./views/OrderDraftList";
-import { OrderEditGrantRefund as OrderGrantRefundEditComponent } from "./views/OrderEditGrantRefund";
-import { OrderFulfill as OrderFulfillComponent } from "./views/OrderFulfill";
-import { OrderGrantRefund as OrderGrantRefundComponent } from "./views/OrderGrantRefund";
-import { OrderList as OrderListComponent } from "./views/OrderList";
-import { OrderManualTransactionRefund as OrderManualTransactionRefundComponent } from "./views/OrderManualTransactionRefund";
-import { OrderRefund as OrderRefundComponent } from "./views/OrderRefund";
-import { OrderReturn as OrderReturnComponent } from "./views/OrderReturn";
-import { OrderSendRefund as OrderSendRefundComponent } from "./views/OrderSendRefund";
 import { OrderSettings } from "./views/OrderSettings";
-import { OrderTransactionRefund as OrderTransactionRefundCreateComponent } from "./views/OrderTransactionRefundCreate";
-import { OrderTransactionRefund as OrderTransactionRefundEditComponent } from "./views/OrderTransactionRefundEdit";
+import { OrderDetails as OrderDetailsComponent } from "./views/OrderDetails/OrderDetails";
+import { OrderDraftList as OrderDraftListComponent } from "./views/OrderDraftList/OrderDraftList";
+import { OrderEditGrantRefund as OrderGrantRefundEditComponent } from "./views/OrderEditGrantRefund/OrderEditGrantRefund";
+import { OrderFulfill as OrderFulfillComponent } from "./views/OrderFulfill/OrderFulfill";
+import { OrderGrantRefund as OrderGrantRefundComponent } from "./views/OrderGrantRefund/OrderGrantRefund";
+import { OrderList as OrderListComponent } from "./views/OrderList/OrderList";
+import { OrderManualTransactionRefund as OrderManualTransactionRefundComponent } from "./views/OrderManualTransactionRefund/OrderManualTransactionRefund";
+import { OrderRefund as OrderRefundComponent } from "./views/OrderRefund/OrderRefund";
+import { OrderReturn as OrderReturnComponent } from "./views/OrderReturn/OrderReturn";
+import { OrderSendRefund as OrderSendRefundComponent } from "./views/OrderSendRefund/OrderSendRefund";
+import { OrderTransactionRefund as OrderTransactionRefundCreateComponent } from "./views/OrderTransactionRefundCreate/OrderTransactionRefundCreate";
+import { OrderTransactionRefund as OrderTransactionRefundEditComponent } from "./views/OrderTransactionRefundEdit/OrderTransactionRefundEdit";
 
 interface MatchParams {
   id?: string;

@@ -6,13 +6,7 @@ import { ChannelVoucherData } from "@dashboard/channels/utils";
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
 import { CardSpacer } from "@dashboard/components/CardSpacer";
 import { ChannelsAvailability as ChannelsAvailabilityCard } from "@dashboard/components/ChannelsAvailabilityCard";
-import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import { CountryList } from "@dashboard/components/CountryList";
-import { Form } from "@dashboard/components/Form";
-import { DetailPageLayout } from "@dashboard/components/Layouts";
-import { Metadata, MetadataFormData } from "@dashboard/components/Metadata";
 import { Savebar } from "@dashboard/components/Savebar";
-import { Tab, TabContainer } from "@dashboard/components/Tab";
 import {
   createChannelsChangeHandler,
   createDiscountTypeChangeHandler,
@@ -47,20 +41,28 @@ import { FormattedMessage, useIntl } from "react-intl";
 
 import { splitDateTime } from "../../../misc";
 import { ChannelProps, ListProps, TabListActions } from "../../../types";
-import { DiscountCategories } from "../DiscountCategories";
-import { DiscountCollections } from "../DiscountCollections";
-import { DiscountDates } from "../DiscountDates";
-import { DiscountProducts } from "../DiscountProducts";
-import { DiscountVariants } from "../DiscountVariants";
-import { VoucherCodes } from "../VoucherCodes";
 import { VoucherCode } from "../VoucherCodesDatagrid/types";
-import { GenerateMultipleVoucherCodeFormData } from "../VoucherCodesGenerateDialog";
-import { VoucherInfo } from "../VoucherInfo";
-import { VoucherLimits } from "../VoucherLimits";
-import { VoucherRequirements } from "../VoucherRequirements";
-import { VoucherSummary } from "../VoucherSummary";
-import { VoucherTypes } from "../VoucherTypes";
-import { VoucherValue } from "../VoucherValue";
+import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import { CountryList } from "../../../components/CountryList/CountryList";
+import { Form } from "../../../components/Form/Form";
+import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
+import { Metadata } from "../../../components/Metadata/Metadata";
+import { MetadataFormData } from "../../../components/Metadata/types";
+import { Tab } from "../../../components/Tab/Tab";
+import { TabContainer } from "../../../components/Tab/TabContainer";
+import { DiscountCategories } from "../DiscountCategories/DiscountCategories";
+import { DiscountCollections } from "../DiscountCollections/DiscountCollections";
+import { DiscountDates } from "../DiscountDates/DiscountDates";
+import { DiscountProducts } from "../DiscountProducts/DiscountProducts";
+import { DiscountVariants } from "../DiscountVariants/DiscountVariants";
+import { VoucherCodes } from "../VoucherCodes/VoucherCodes";
+import { GenerateMultipleVoucherCodeFormData } from "../VoucherCodesGenerateDialog/VoucherCodesGenerateDialog";
+import { VoucherInfo } from "../VoucherInfo/VoucherInfo";
+import { VoucherLimits } from "../VoucherLimits/VoucherLimits";
+import { VoucherRequirements } from "../VoucherRequirements/VoucherRequirements";
+import { VoucherSummary } from "../VoucherSummary/VoucherSummary";
+import { VoucherTypes } from "../VoucherTypes/VoucherTypes";
+import { VoucherValue } from "../VoucherValue/VoucherValue";
 
 export enum VoucherDetailsPageTab {
   categories = "categories",

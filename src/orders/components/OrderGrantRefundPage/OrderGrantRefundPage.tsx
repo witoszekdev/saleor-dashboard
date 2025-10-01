@@ -1,9 +1,6 @@
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
 import { DashboardCard } from "@dashboard/components/Card";
-import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import { DetailPageLayout } from "@dashboard/components/Layouts";
 import { formatMoneyAmount } from "@dashboard/components/Money";
-import { PriceField } from "@dashboard/components/PriceField";
 import { Savebar } from "@dashboard/components/Savebar";
 import {
   OrderDetailsGrantedRefundFragment,
@@ -37,6 +34,9 @@ import {
   getRefundAmountValue,
   prepareLineData,
 } from "./utils";
+import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
+import { PriceField } from "../../../components/PriceField/PriceField";
 
 interface OrderGrantRefundPageProps {
   order?: OrderDetailsGrantRefundFragment;

@@ -1,7 +1,7 @@
-import { IFilter } from "@dashboard/components/Filter";
 import { FilterOpts, MinMax } from "@dashboard/types";
 import { createDateField, createTextField } from "@dashboard/utils/filters/fields";
 import { defineMessages, IntlShape } from "react-intl";
+import { IFilter } from "../../../components/Filter/types";
 
 export enum OrderDraftFilterKeys {
   created = "created",

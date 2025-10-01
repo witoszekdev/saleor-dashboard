@@ -15,7 +15,7 @@ import {
   StaffMemberDetailsUrlQueryParams,
 } from "./urls";
 import { StaffDetailsView } from "./views/StaffDetails";
-import { StaffList as StaffListComponent } from "./views/StaffList";
+import { StaffList as StaffListComponent } from "./views/StaffList/StaffList";
 
 const StaffList = () => {
   const qs = parseQs(location.search.substr(1)) as any;

@@ -1,6 +1,4 @@
 import { Money } from "@dashboard/components/Money";
-import { TableCellAvatar } from "@dashboard/components/TableCellAvatar";
-import { TableRowLink } from "@dashboard/components/TableRowLink";
 import { OrderLineGrantRefundFragment } from "@dashboard/graphql";
 import { renderCollection } from "@dashboard/misc";
 import { Table, TableBody, TableCell, TableHead } from "@material-ui/core";
@@ -11,6 +9,8 @@ import { FormattedMessage } from "react-intl";
 import { useGrantRefundContext } from "../context";
 import { grantRefundPageMessages, productCardMessages } from "../messages";
 import { useProductsCardStyles } from "../styles";
+import { TableCellAvatar } from "../../../../components/TableCellAvatar/TableCellAvatar";
+import { TableRowLink } from "../../../../components/TableRowLink/TableRowLink";
 
 interface ProductsCardProps {
   title: React.ReactNode;

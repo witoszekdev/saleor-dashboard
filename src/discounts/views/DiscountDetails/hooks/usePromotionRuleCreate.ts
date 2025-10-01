@@ -6,9 +6,9 @@ import {
   PromotionRuleDetailsFragment,
   usePromotionRuleCreateMutation,
 } from "@dashboard/graphql";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { commonMessages } from "@dashboard/intl";
 import { useIntl } from "react-intl";
+import { useNotifier } from "../../../../hooks/useNotifier/useNotifier";
 
 export const usePromotionRuleCreate = (id: string) => {
   const intl = useIntl();

@@ -3,12 +3,8 @@ import { hasPermission } from "@dashboard/auth/misc";
 import { categoryListPath, categoryUrl } from "@dashboard/categories/urls";
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
 import { CardSpacer } from "@dashboard/components/CardSpacer";
-import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import { DetailPageLayout } from "@dashboard/components/Layouts";
 import { Metadata } from "@dashboard/components/Metadata/Metadata";
 import { Savebar } from "@dashboard/components/Savebar";
-import { SeoForm } from "@dashboard/components/SeoForm";
-import { Tab, TabContainer } from "@dashboard/components/Tab";
 import { extensionMountPoints } from "@dashboard/extensions/extensionMountPoints";
 import { getExtensionsItemsForCategoryDetails } from "@dashboard/extensions/getExtensionsItems";
 import { useExtensions } from "@dashboard/extensions/hooks/useExtensions";
@@ -24,11 +20,16 @@ import { Box, sprinkles } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 
 import { ListProps, ListViews, RelayToFlat } from "../../../types";
-import { CategoryDetailsForm } from "../../components/CategoryDetailsForm";
-import { CategoryBackground } from "../CategoryBackground";
-import { CategoryProducts } from "../CategoryProducts";
-import { CategorySubcategories } from "../CategorySubcategories";
 import { CategoryUpdateData, CategoryUpdateForm } from "./form";
+import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
+import { SeoForm } from "../../../components/SeoForm/SeoForm";
+import { Tab } from "../../../components/Tab/Tab";
+import { TabContainer } from "../../../components/Tab/TabContainer";
+import { CategoryDetailsForm } from "../CategoryDetailsForm/CategoryDetailsForm";
+import { CategoryBackground } from "../CategoryBackground/CategoryBackground";
+import { CategoryProducts } from "../CategoryProducts/CategoryProducts";
+import { CategorySubcategories } from "../CategorySubcategories/CategorySubcategories";
 
 export enum CategoryPageTab {
   categories = "categories",

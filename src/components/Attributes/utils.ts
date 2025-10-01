@@ -1,7 +1,5 @@
 // @ts-strict-ignore
 import { AttributeInput } from "@dashboard/components/Attributes/Attributes";
-import { FileChoiceType } from "@dashboard/components/FileUploadField";
-import { SortableChipsFieldValueType } from "@dashboard/components/SortableChipsField";
 import {
   AttributeValueFragment,
   PageErrorWithAttributesFragment,
@@ -12,6 +10,8 @@ import { getPageErrorMessage } from "@dashboard/utils/errors/page";
 import { getEntityUrl } from "@dashboard/utils/maps";
 import { Option } from "@saleor/macaw-ui-next";
 import { IntlShape } from "react-intl";
+import { FileChoiceType } from "../FileUploadField/FileUploadField";
+import { SortableChipsFieldValueType } from "../SortableChipsField/SortableChipsField";
 
 export function getSingleChoices(values: AttributeValueFragment[]): Option[] {
   return values.map(value => ({

@@ -8,8 +8,7 @@ import { getDiscountErrorMessage } from "@dashboard/utils/errors/discounts";
 import { TextField } from "@material-ui/core";
 import * as React from "react";
 import { useIntl } from "react-intl";
-
-import { VoucherDetailsPageFormData } from "../VoucherDetailsPage";
+import { VoucherDetailsPageFormData } from "../VoucherDetailsPage/VoucherDetailsPage";
 
 interface VoucherDatesProps {
   data: VoucherDetailsPageFormData;

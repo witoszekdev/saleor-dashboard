@@ -4,15 +4,15 @@ import {
   useOrderGrantRefundAddMutation,
 } from "@dashboard/graphql";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { extractMutationErrors } from "@dashboard/misc";
-import { OrderGrantRefundPage } from "@dashboard/orders/components/OrderGrantRefundPage";
 import { OrderGrantRefundFormData } from "@dashboard/orders/components/OrderGrantRefundPage/form";
 import { orderUrl } from "@dashboard/orders/urls";
 import { useIntl } from "react-intl";
 
 import { squashLines } from "../OrderReturn/useRefundWithinReturn";
 import { orderGrantRefundMessages } from "./messages";
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
+import { OrderGrantRefundPage } from "../../components/OrderGrantRefundPage/OrderGrantRefundPage";
 
 interface OrderGrantRefundProps {
   orderId: string;

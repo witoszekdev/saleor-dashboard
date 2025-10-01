@@ -1,11 +1,8 @@
 // @ts-strict-ignore
 import { BackButton } from "@dashboard/components/BackButton";
-import { ConfirmButton, ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import { Form } from "@dashboard/components/Form";
 import { DashboardModal } from "@dashboard/components/Modal";
 import { SearchPermissionGroupsQuery, StaffErrorFragment } from "@dashboard/graphql";
 import { SubmitPromise } from "@dashboard/hooks/useForm";
-import { useModalDialogErrors } from "@dashboard/hooks/useModalDialogErrors";
 import { commonMessages } from "@dashboard/intl";
 import { FetchMoreProps, RelayToFlat, SearchPageProps } from "@dashboard/types";
 import { getFormErrors } from "@dashboard/utils/errors";
@@ -14,6 +11,9 @@ import { Box } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 
 import { ExtendedFormHelperTextProps } from "./types";
+import { ConfirmButton, ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import { Form } from "../../../components/Form/Form";
+import { useModalDialogErrors } from "../../../hooks/useModalDialogErrors/useModalDialogErrors";
 
 export interface AddMemberFormData {
   email: string;

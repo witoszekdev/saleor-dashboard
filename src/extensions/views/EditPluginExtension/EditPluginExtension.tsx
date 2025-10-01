@@ -9,7 +9,6 @@ import {
   usePluginUpdateMutation,
 } from "@dashboard/graphql";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { useStateFromProps } from "@dashboard/hooks/useStateFromProps";
 import { commonMessages } from "@dashboard/intl";
 import { extractMutationErrors } from "@dashboard/misc";
@@ -19,6 +18,7 @@ import { FormattedMessage, useIntl } from "react-intl";
 import { PluginDetailsPageFormData, PluginsDetailsPage } from "./components/PluginsDetailsPage";
 import { PluginSecretFieldDialog } from "./components/PluginSecretFieldDialog";
 import { getConfigByChannelId, isPluginGlobal, isSecretField } from "./utils";
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
 
 interface PluginsDetailsProps {
   id: string;

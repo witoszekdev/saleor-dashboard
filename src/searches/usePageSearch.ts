@@ -5,7 +5,7 @@ import {
   SearchPagesQuery,
   SearchPagesQueryVariables,
 } from "@dashboard/graphql";
-import { makeTopLevelSearch } from "@dashboard/hooks/makeTopLevelSearch";
+import { makeTopLevelSearch } from "../hooks/makeTopLevelSearch/makeTopLevelSearch";
 
 export const searchPages = gql`
   query SearchPages($after: String, $first: Int!, $query: String!, $where: PageWhereInput) {

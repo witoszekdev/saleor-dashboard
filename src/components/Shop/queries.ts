@@ -5,7 +5,7 @@ import {
   RefreshLimitsQueryVariables,
   useRefreshLimitsQuery,
 } from "@dashboard/graphql";
-import { QueryHookOptions } from "@dashboard/hooks/graphql";
+import { QueryHookOptions } from "../../hooks/makeQuery";
 
 export const shopInfo = gql`
   query ShopInfo {

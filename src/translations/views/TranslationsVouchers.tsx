@@ -5,16 +5,16 @@ import {
   useVoucherTranslationDetailsQuery,
 } from "@dashboard/graphql";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { useShop } from "@dashboard/hooks/useShop";
 import { commonMessages } from "@dashboard/intl";
 import { stringifyQs } from "@dashboard/utils/urls";
 import { useIntl } from "react-intl";
 
 import { extractMutationErrors, maybe } from "../../misc";
-import { TranslationsVouchersPage } from "../components/TranslationsVouchersPage";
 import { TranslationField, TranslationInputFieldName } from "../types";
 import { getParsedTranslationInputData } from "../utils";
+import { useNotifier } from "../../hooks/useNotifier/useNotifier";
+import { TranslationsVouchersPage } from "../components/TranslationsVouchersPage/TranslationsVouchersPage";
 
 export interface TranslationsVouchersQueryParams {
   activeField: string;

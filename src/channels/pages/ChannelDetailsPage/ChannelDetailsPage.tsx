@@ -1,14 +1,8 @@
 // @ts-strict-ignore
-import { ChannelAllocationStrategy } from "@dashboard/channels/components/ChannelAllocationStrategy";
-import { ShippingZones } from "@dashboard/channels/components/ShippingZones";
-import { Warehouses } from "@dashboard/channels/components/Warehouses";
 import { channelsListUrl } from "@dashboard/channels/urls";
 import { validateChannelFormData } from "@dashboard/channels/validation";
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
 import { CardSpacer } from "@dashboard/components/CardSpacer";
-import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import { Form } from "@dashboard/components/Form";
-import { DetailPageLayout } from "@dashboard/components/Layouts";
 import { RequirePermissions } from "@dashboard/components/RequirePermissions";
 import { Savebar } from "@dashboard/components/Savebar";
 import {
@@ -26,7 +20,6 @@ import {
   MarkAsPaidStrategyEnum,
   TransactionFlowStrategyEnum,
 } from "@dashboard/graphql/types.generated";
-import { SearchData } from "@dashboard/hooks/makeTopLevelSearch";
 import { getParsedSearchData } from "@dashboard/hooks/makeTopLevelSearch/utils";
 import { SubmitPromise } from "@dashboard/hooks/useForm";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
@@ -37,8 +30,6 @@ import { mapCountriesToChoices } from "@dashboard/utils/maps";
 import { Option } from "@saleor/macaw-ui-next";
 import { useState } from "react";
 import { useIntl } from "react-intl";
-
-import { ChannelForm, FormData } from "../../components/ChannelForm";
 import { ChannelStatus } from "../../components/ChannelStatus/ChannelStatus";
 import {
   createShippingZoneAddHandler,
@@ -48,6 +39,14 @@ import {
   createWarehouseReorderHandler,
 } from "./handlers";
 import { ChannelShippingZones, ChannelWarehouses } from "./types";
+import { ChannelAllocationStrategy } from "../../components/ChannelAllocationStrategy/ChannelAllocationStrategy";
+import { ShippingZones } from "../../components/ShippingZones/ShippingZones";
+import { Warehouses } from "../../components/Warehouses/Warehouses";
+import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import { Form } from "../../../components/Form/Form";
+import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
+import { SearchData } from "../../../hooks/makeTopLevelSearch/makeTopLevelSearch";
+import { ChannelForm, FormData } from "../../components/ChannelForm/ChannelForm";
 
 interface ChannelDetailsPageProps<TErrors extends ChannelErrorFragment[]> {
   channel?: ChannelDetailsFragment;

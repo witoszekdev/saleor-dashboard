@@ -12,10 +12,7 @@ import {
   VariantAttributeScope,
 } from "@dashboard/components/Attributes";
 import { CardSpacer } from "@dashboard/components/CardSpacer";
-import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import { Grid } from "@dashboard/components/Grid";
-import { DetailPageLayout } from "@dashboard/components/Layouts";
-import { Metadata } from "@dashboard/components/Metadata";
 import { Savebar } from "@dashboard/components/Savebar";
 import {
   ProductErrorWithAttributesFragment,
@@ -34,20 +31,22 @@ import { productUrl } from "@dashboard/products/urls";
 import { Container, FetchMoreProps, RelayToFlat, ReorderAction } from "@dashboard/types";
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { defineMessages, useIntl } from "react-intl";
-
-import { ProductShipping } from "../ProductShipping";
-import { ProductStocks } from "../ProductStocks";
 import { useManageChannels } from "../ProductVariantChannels/useManageChannels";
 import { VariantChannelsDialog } from "../ProductVariantChannels/VariantChannelsDialog";
 import { ProductVariantCheckoutSettings } from "../ProductVariantCheckoutSettings/ProductVariantCheckoutSettings";
-import { ProductVariantName } from "../ProductVariantName";
-import { ProductVariantNavigation } from "../ProductVariantNavigation";
-import { ProductVariantPrice } from "../ProductVariantPrice";
 import {
   ProductVariantCreateData,
   ProductVariantCreateForm,
   ProductVariantCreateHandlers,
 } from "./form";
+import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
+import { Metadata } from "../../../components/Metadata/Metadata";
+import { ProductShipping } from "../ProductShipping/ProductShipping";
+import { ProductStocks } from "../ProductStocks/ProductStocks";
+import { ProductVariantName } from "../ProductVariantName/ProductVariantName";
+import { ProductVariantNavigation } from "../ProductVariantNavigation/ProductVariantNavigation";
+import { ProductVariantPrice } from "../ProductVariantPrice/ProductVariantPrice";
 
 const messages = defineMessages({
   attributesHeader: {

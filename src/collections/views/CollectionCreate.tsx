@@ -13,7 +13,6 @@ import {
 } from "@dashboard/graphql";
 import { useChannels } from "@dashboard/hooks/useChannels";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { commonMessages } from "@dashboard/intl";
 import { getMutationErrors } from "@dashboard/misc";
 import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
@@ -25,6 +24,7 @@ import { CollectionCreatePage } from "../components/CollectionCreatePage/Collect
 import { CollectionCreateData } from "../components/CollectionCreatePage/form";
 import { collectionAddUrl, CollectionCreateUrlQueryParams, collectionUrl } from "../urls";
 import { COLLECTION_CREATE_FORM_ID } from "./consts";
+import { useNotifier } from "../../hooks/useNotifier/useNotifier";
 
 interface CollectionCreateProps {
   params: CollectionCreateUrlQueryParams;

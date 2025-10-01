@@ -1,5 +1,5 @@
-import { NotFoundPage } from "./components/NotFoundPage";
 import { useNavigator } from "./hooks/useNavigator";
+import { NotFoundPage } from "./components/NotFoundPage/NotFoundPage";
 
 export const NotFound = () => {
   const navigate = useNavigator();

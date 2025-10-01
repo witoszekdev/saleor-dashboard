@@ -1,5 +1,4 @@
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
-import { HorizontalSpacer } from "@dashboard/components/HorizontalSpacer";
 import { extensionMountPoints } from "@dashboard/extensions/extensionMountPoints";
 import { getExtensionsItemsForGiftCardDetails } from "@dashboard/extensions/getExtensionsItems";
 import { useExtensions } from "@dashboard/extensions/hooks/useExtensions";
@@ -17,6 +16,7 @@ import { useGiftCardUpdateDialogs } from "../providers/GiftCardUpdateDialogsProv
 import { GiftCardEnableDisableSection } from "./GiftCardEnableDisableSection";
 import { giftCardUpdatePageHeaderMessages as messages } from "./messages";
 import { useStyles } from "./styles";
+import { HorizontalSpacer } from "../../../components/HorizontalSpacer/HorizontalSpacer";
 
 const GiftCardUpdatePageHeader = () => {
   const classes = useStyles();

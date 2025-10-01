@@ -4,9 +4,7 @@ import {
   useOrderDetailsQuery,
 } from "@dashboard/graphql";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { extractMutationErrors } from "@dashboard/misc";
-import { OrderRefundPage as OrderReturnPage } from "@dashboard/orders/components/OrderReturnPage";
 import { OrderReturnFormData } from "@dashboard/orders/components/OrderReturnPage/form";
 import { orderHasTransactions } from "@dashboard/orders/types";
 import { orderUrl } from "@dashboard/orders/urls";
@@ -16,6 +14,8 @@ import { useIntl } from "react-intl";
 import { messages } from "./messages";
 import { useRefundWithinReturn } from "./useRefundWithinReturn";
 import { getSuccessMessage, ReturnFormDataParser } from "./utils";
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
+import { OrderRefundPage as OrderReturnPage } from "../../components/OrderReturnPage/OrderReturnPage";
 
 interface OrderReturnProps {
   orderId: string;

@@ -6,8 +6,6 @@ import {
   PermissionGroupDetailsFragment,
   UserFragment,
 } from "@dashboard/graphql";
-
-import { PermissionGroupDetailsPageFormData } from "./components/PermissionGroupDetailsPage";
 import { permissionGroup, permissionGroupWithChannels } from "./fixtures";
 import {
   arePermissionsExceeded,
@@ -21,6 +19,7 @@ import {
   permissionsDiff,
   usersDiff,
 } from "./utils";
+import { PermissionGroupDetailsPageFormData } from "./components/PermissionGroupDetailsPage/PermissionGroupDetailsPage";
 
 describe("Permission group utils", () => {
   describe("channelDiff", () => {

@@ -2,7 +2,6 @@
 import { DashboardCard } from "@dashboard/components/Card";
 import { Grid } from "@dashboard/components/Grid";
 import { Hr } from "@dashboard/components/Hr";
-import { Pill } from "@dashboard/components/Pill";
 import { WebhookEventTypeAsyncEnum, WebhookEventTypeSyncEnum } from "@dashboard/graphql";
 import { ChangeEvent } from "@dashboard/hooks/useForm";
 import { capitalize } from "@dashboard/misc";
@@ -25,6 +24,7 @@ import { FormattedMessage, useIntl } from "react-intl";
 import { messages } from "./messages";
 import { useStyles } from "./styles";
 import { EventTypes, getEventName } from "./utils";
+import { Pill } from "../../../components/Pill/Pill";
 
 interface WebhookEventsProps {
   data: {

@@ -1,9 +1,9 @@
-import { MenuItem, SubMenu } from "@dashboard/components/SubMenu";
 import { ArrowDownIcon, Box, Button, PlusIcon, Popover } from "@saleor/macaw-ui-next";
 import { useCallback, useMemo, useState } from "react";
 import { useIntl } from "react-intl";
 
 import { messages } from "./messages";
+import { MenuItem, SubMenu } from "../../../components/SubMenu/SubMenu";
 
 interface VoucherCodesAddButtonProps {
   onMultiCodesGenerate: () => void;

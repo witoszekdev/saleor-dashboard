@@ -9,7 +9,7 @@ import * as React from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
 import { DashboardCard } from "../Card";
-import { UserAvatar } from "../UserAvatar";
+import { UserAvatar } from "../UserAvatar/UserAvatar";
 
 const useStyles = makeStyles(
   theme => ({

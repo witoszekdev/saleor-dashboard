@@ -1,6 +1,4 @@
 import { DashboardCard } from "@dashboard/components/Card";
-import { ConfirmButton, ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import { PriceField } from "@dashboard/components/PriceField";
 import {
   OrderDetailsFragment,
   OrderGrantRefundCreateErrorFragment,
@@ -18,6 +16,8 @@ import { submitCardMessages } from "./messages";
 import { RefundShipmentCheckbox } from "./RefundShipmentCheckbox";
 import { SendRefundCheckbox } from "./SendRefundCheckbox";
 import { TransactionSelector } from "./TransactionSelector";
+import { ConfirmButton, ConfirmButtonTransitionState } from "../../../../../components/ConfirmButton/ConfirmButton";
+import { PriceField } from "../../../../../components/PriceField/PriceField";
 
 interface TransactionSubmitCardProps {
   disabled: boolean;

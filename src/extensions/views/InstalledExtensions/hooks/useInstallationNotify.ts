@@ -1,6 +1,6 @@
 import { notifyMessages } from "@dashboard/extensions/messages";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { useIntl } from "react-intl";
+import { useNotifier } from "../../../../hooks/useNotifier/useNotifier";
 
 export const useInstallationNotify = () => {
   const intl = useIntl();

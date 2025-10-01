@@ -1,11 +1,11 @@
 import * as dashboardConfig from "@dashboard/config";
-import { UseNotifierResult } from "@dashboard/hooks/useNotifier";
 import { renderHook } from "@testing-library/react-hooks";
 import * as ReactIntl from "react-intl";
 import { IntlShape } from "react-intl";
 
 import * as ExternalAppContext from "../ExternalAppContext";
 import { AppActionsHandler } from "./appActionsHandler";
+import { UseNotifierResult } from "../../../../../hooks/useNotifier/useNotifier";
 
 jest.mock("@dashboard/config", () => {
   const actualModule = jest.requireActual("@dashboard/config");

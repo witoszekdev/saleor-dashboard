@@ -1,6 +1,4 @@
 // @ts-strict-ignore
-import { ResponsiveTable } from "@dashboard/components/ResponsiveTable";
-import { TableRowLink } from "@dashboard/components/TableRowLink";
 import { CountryFragment } from "@dashboard/graphql";
 import { TableBody, TableCell } from "@material-ui/core";
 import { SvgIcon as ArrowDropDownIcon } from "@material-ui/icons/ArrowDropDown";
@@ -13,6 +11,8 @@ import { FormattedMessage } from "react-intl";
 import { getStringOrPlaceholder } from "../../misc";
 import { DashboardCard } from "../Card";
 import { groupCountriesByStartingLetter } from "./utils";
+import { ResponsiveTable } from "../ResponsiveTable/ResponsiveTable";
+import { TableRowLink } from "../TableRowLink/TableRowLink";
 
 interface CountryListProps {
   countries: CountryFragment[];

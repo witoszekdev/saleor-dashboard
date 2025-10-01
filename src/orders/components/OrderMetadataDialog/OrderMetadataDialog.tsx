@@ -1,6 +1,4 @@
 import { ButtonWithLoader } from "@dashboard/components/ButtonWithLoader/ButtonWithLoader";
-import { MetadataFormData, MetadataNoMemo } from "@dashboard/components/Metadata";
-import { MetadataHookForm } from "@dashboard/components/MetadataHookForm";
 import { DashboardModal } from "@dashboard/components/Modal";
 import { OrderLinesMetadataQuery } from "@dashboard/graphql";
 import { buttonMessages } from "@dashboard/intl";
@@ -15,6 +13,9 @@ import { OrderLineDetails } from "./OrderLineDetails/OrderLineDetails";
 import { TEST_ID_ORDER_LINE_METADATA, TEST_ID_PRODUCT_VARIANT_METADATA } from "./test-ids";
 import { useHandleOrderLineMetadataSubmit } from "./useHandleSubmit";
 import { useMetadataValues } from "./useMetadataValues";
+import { MetadataFormData } from "../../../components/Metadata/types";
+import { MetadataNoMemo } from "../../../components/Metadata/Metadata";
+import { MetadataHookForm } from "../../../components/MetadataHookForm/MetadataHookForm";
 
 export type OrderMetadataDialogData = NonNullable<OrderLinesMetadataQuery["order"]>["lines"][0];
 

@@ -1,8 +1,6 @@
 // @ts-strict-ignore
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
-import { Form } from "@dashboard/components/Form";
 import { Grid } from "@dashboard/components/Grid";
-import { DetailPageLayout } from "@dashboard/components/Layouts";
 import { Savebar } from "@dashboard/components/Savebar";
 import {
   GiftCardSettingsExpiryTypeEnum,
@@ -16,11 +14,13 @@ import { Box, Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 
 import { giftCardsListPath } from "../urls";
-import { GiftCardExpirySettingsCard } from "./GiftCardExpirySettingsCard";
 import { giftCardExpirySettingsCard as expirySettingsMessages } from "./GiftCardExpirySettingsCard/messages";
 import { giftCardSettingsPageMessages as messages } from "./messages";
 import { GiftCardSettingsFormData } from "./types";
 import { getGiftCardSettingsInputData } from "./utils";
+import { Form } from "../../components/Form/Form";
+import { DetailPageLayout } from "../../components/Layouts/Detail/index";
+import { GiftCardExpirySettingsCard } from "./GiftCardExpirySettingsCard/GiftCardExpirySettingsCard";
 
 const GiftCardSettingsPage = () => {
   const intl = useIntl();

@@ -1,10 +1,10 @@
 import { useGiftCardActivateMutation, useGiftCardDeactivateMutation } from "@dashboard/graphql";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { commonErrorMessages } from "@dashboard/utils/errors/common";
 import { useIntl } from "react-intl";
 
 import { GIFT_CARD_DETAILS_QUERY } from "../../queries";
 import { giftCardEnableDisableSectionMessages as messages } from "../messages";
+import { useNotifier } from "../../../../hooks/useNotifier/useNotifier";
 
 interface useGiftCardActivateToggleProps {
   onActivateActionComplete?: () => void | undefined;

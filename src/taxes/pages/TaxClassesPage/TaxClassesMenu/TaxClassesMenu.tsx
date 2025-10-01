@@ -1,5 +1,4 @@
 import { CardTitle } from "@dashboard/components/CardTitle";
-import { ListItemLink } from "@dashboard/components/ListItemLink";
 import { TaxClassFragment } from "@dashboard/graphql";
 import { taxesMessages } from "@dashboard/taxes/messages";
 import { taxClassesListUrl } from "@dashboard/taxes/urls";
@@ -12,6 +11,7 @@ import { Fragment } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
 import { useStyles } from "../../TaxCountriesPage/TaxCountriesMenu/styles";
+import { ListItemLink } from "../../../../components/ListItemLink/ListItemLink";
 
 interface TaxClassesMenuProps {
   taxClasses: TaxClassFragment[] | undefined;

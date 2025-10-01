@@ -1,12 +1,12 @@
 // @ts-strict-ignore
 import { useProductTranslationsQuery } from "@dashboard/graphql";
 import { PaginatorContext, usePaginator } from "@dashboard/hooks/usePaginator";
-import { TranslationsEntitiesList } from "@dashboard/translations/components/TranslationsEntitiesList";
 import { languageEntityUrl, TranslatableEntities } from "@dashboard/translations/urls";
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 
 import { TranslationsEntityListProps } from "./types";
 import { sumCompleted } from "./utils";
+import { TranslationsEntitiesList } from "../../components/TranslationsEntitiesList/TranslationsEntitiesList";
 
 const TranslationsProductList = ({ params, variables }: TranslationsEntityListProps) => {
   const { data, loading } = useProductTranslationsQuery({

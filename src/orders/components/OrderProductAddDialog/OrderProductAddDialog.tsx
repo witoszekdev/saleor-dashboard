@@ -1,16 +1,9 @@
 // @ts-strict-ignore
 import { BackButton } from "@dashboard/components/BackButton";
 import { Checkbox } from "@dashboard/components/Checkbox";
-import { ConfirmButton, ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import { FormSpacer } from "@dashboard/components/FormSpacer";
-import { InfiniteScroll } from "@dashboard/components/InfiniteScroll";
 import { DashboardModal } from "@dashboard/components/Modal";
-import { ResponsiveTable } from "@dashboard/components/ResponsiveTable";
-import { TableCellAvatar } from "@dashboard/components/TableCellAvatar";
-import { TableRowLink } from "@dashboard/components/TableRowLink";
 import { OrderErrorFragment, SearchOrderVariantQuery } from "@dashboard/graphql";
-import { useModalDialogErrors } from "@dashboard/hooks/useModalDialogErrors";
-import { useModalDialogOpen } from "@dashboard/hooks/useModalDialogOpen";
 import { useSearchQuery } from "@dashboard/hooks/useSearchQuery";
 import { buttonMessages } from "@dashboard/intl";
 import { maybe, renderCollection } from "@dashboard/misc";
@@ -25,6 +18,13 @@ import { OrderPriceLabel } from "../OrderPriceLabel/OrderPriceLabel";
 import { messages } from "./messages";
 import { useStyles } from "./styles";
 import { hasAllVariantsSelected, isVariantSelected, onProductAdd, onVariantAdd } from "./utils";
+import { ConfirmButton, ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import { InfiniteScroll } from "../../../components/InfiniteScroll/InfiniteScroll";
+import { ResponsiveTable } from "../../../components/ResponsiveTable/ResponsiveTable";
+import { TableCellAvatar } from "../../../components/TableCellAvatar/TableCellAvatar";
+import { TableRowLink } from "../../../components/TableRowLink/TableRowLink";
+import { useModalDialogErrors } from "../../../hooks/useModalDialogErrors/useModalDialogErrors";
+import { useModalDialogOpen } from "../../../hooks/useModalDialogOpen/useModalDialogOpen";
 
 interface OrderProductAddDialogProps extends FetchMoreProps {
   confirmButtonState: ConfirmButtonTransitionState;

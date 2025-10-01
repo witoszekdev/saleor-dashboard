@@ -1,14 +1,10 @@
 import { useConditionalFilterContext } from "@dashboard/components/ConditionalFilter";
 import { createProductTypesQueryVariables } from "@dashboard/components/ConditionalFilter/queryVariables";
-import { DeleteFilterTabDialog } from "@dashboard/components/DeleteFilterTabDialog";
-import { SaveFilterTabDialog } from "@dashboard/components/SaveFilterTabDialog";
 import { useFlag } from "@dashboard/featureFlags";
 import { useProductTypeBulkDeleteMutation, useProductTypeListQuery } from "@dashboard/graphql";
 import { useBulkActions } from "@dashboard/hooks/useBulkActions";
-import { useFilterPresets } from "@dashboard/hooks/useFilterPresets";
 import { useListSettings } from "@dashboard/hooks/useListSettings";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { usePaginationReset } from "@dashboard/hooks/usePaginationReset";
 import {
   createPaginationState,
@@ -16,7 +12,6 @@ import {
   usePaginator,
 } from "@dashboard/hooks/usePaginator";
 import { commonMessages } from "@dashboard/intl";
-import { useProductTypeDelete } from "@dashboard/productTypes/hooks/useProductTypeDelete";
 import { ListViews } from "@dashboard/types";
 import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
 import { createFilterHandlers } from "@dashboard/utils/handlers/filterHandlers";
@@ -29,7 +24,6 @@ import { useIntl } from "react-intl";
 
 import { TypeDeleteWarningDialog } from "../../../components/TypeDeleteWarningDialog/TypeDeleteWarningDialog";
 import { maybe } from "../../../misc";
-import { ProductTypeListPage } from "../../components/ProductTypeListPage";
 import {
   productTypeListUrl,
   ProductTypeListUrlDialog,
@@ -37,6 +31,12 @@ import {
 } from "../../urls";
 import { getFilterOpts, getFilterQueryParam, getFilterVariables, storageUtils } from "./filters";
 import { getSortQueryVariables } from "./sort";
+import { DeleteFilterTabDialog } from "../../../components/DeleteFilterTabDialog/DeleteFilterTabDialog";
+import { SaveFilterTabDialog } from "../../../components/SaveFilterTabDialog/SaveFilterTabDialog";
+import { useFilterPresets } from "../../../hooks/useFilterPresets/useFilterPresets";
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
+import { useProductTypeDelete } from "../../hooks/useProductTypeDelete/useProductTypeDelete";
+import { ProductTypeListPage } from "../../components/ProductTypeListPage/ProductTypeListPage";
 
 interface ProductTypeListProps {
   params: ProductTypeListUrlQueryParams;

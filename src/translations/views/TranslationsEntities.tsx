@@ -7,7 +7,6 @@ import { useMemo } from "react";
 
 import { PAGINATE_BY } from "../../config";
 import { maybe } from "../../misc";
-import { TranslationsEntitiesListPage } from "../components/TranslationsEntitiesListPage";
 import { LanguageEntitiesUrlQueryParams, TranslatableEntities } from "../urls";
 import { TranslationsAttributeList } from "./EntityLists/TranslationsAttributeList";
 import { TranslationsCategoryList } from "./EntityLists/TranslationsCategoryList";
@@ -18,6 +17,7 @@ import { TranslationsProductList } from "./EntityLists/TranslationsProductList";
 import { TranslationsSaleList } from "./EntityLists/TranslationsSaleList";
 import { TranslationsShippingMethodList } from "./EntityLists/TranslationsShippingMethodList";
 import { TranslationsVoucherList } from "./EntityLists/TranslationsVoucherList";
+import { TranslationsEntitiesListPage } from "../components/TranslationsEntitiesListPage/TranslationsEntitiesListPage";
 
 interface TranslationsEntitiesProps {
   language: string;

@@ -2,7 +2,6 @@ import { AppPaths } from "@dashboard/apps/urls";
 import { getAppMountUri } from "@dashboard/config";
 import { ExtensionsUrls } from "@dashboard/extensions/urls";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import {
   DashboardEventFactory,
   DispatchResponseEvent,
@@ -16,8 +15,9 @@ import { useIntl } from "react-intl";
 import urlJoin from "url-join";
 
 import { createAppsDebug } from "../../utils/apps-debug";
-import { useExternalApp } from "../ExternalAppContext";
 import { usePostToExtension } from "./usePostToExtension";
+import { useNotifier } from "../../../../../hooks/useNotifier/useNotifier";
+import { useExternalApp } from "../ExternalAppContext/ExternalAppContext";
 
 const debug = createAppsDebug("appActionsHandler");
 const createResponseStatus = (actionId: string, ok: boolean): DispatchResponseEvent => ({

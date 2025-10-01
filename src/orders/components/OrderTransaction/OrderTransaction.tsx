@@ -3,11 +3,10 @@ import { DashboardCard } from "@dashboard/components/Card";
 import { TransactionActionEnum } from "@dashboard/graphql";
 import { TransactionFakeEvent } from "@dashboard/orders/types";
 import * as React from "react";
-
-import { OrderTransactionCardTitle } from "./components";
-import { TransactionEvents } from "./components/TransactionEvents";
 import { ExtendedOrderTransaction } from "./types";
 import { getTransactionEvents } from "./utils";
+import { OrderTransactionCardTitle } from "./components/CardTitle/index";
+import { TransactionEvents } from "./components/TransactionEvents/TransactionEvents";
 
 export interface OrderTransactionProps {
   transaction: ExtendedOrderTransaction;

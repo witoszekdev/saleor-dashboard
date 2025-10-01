@@ -5,7 +5,7 @@ import {
   SearchShippingZonesQuery,
   SearchShippingZonesQueryVariables,
 } from "@dashboard/graphql";
-import { makeTopLevelSearch } from "@dashboard/hooks/makeTopLevelSearch";
+import { makeTopLevelSearch } from "../hooks/makeTopLevelSearch/makeTopLevelSearch";
 
 export const searchShippingZones = gql`
   query SearchShippingZones(

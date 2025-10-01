@@ -1,6 +1,5 @@
 // @ts-strict-ignore
 import { ActionDialog } from "@dashboard/components/ActionDialog";
-import { NotFoundPage } from "@dashboard/components/NotFoundPage";
 import { WindowTitle } from "@dashboard/components/WindowTitle";
 import {
   useRemoveCustomerMutation,
@@ -9,19 +8,16 @@ import {
   useUpdatePrivateMetadataMutation,
 } from "@dashboard/graphql";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { commonMessages } from "@dashboard/intl";
 import { extractMutationErrors, getStringOrPlaceholder } from "@dashboard/misc";
 import { createMetadataUpdateHandler } from "@dashboard/utils/handlers/metadataUpdateHandler";
 import { FormattedMessage, useIntl } from "react-intl";
-
-import {
-  CustomerDetailsPage,
-  CustomerDetailsPageFormData,
-} from "../components/CustomerDetailsPage";
 import { useCustomerDetails } from "../hooks/useCustomerDetails";
 import { CustomerDetailsProvider } from "../providers/CustomerDetailsProvider";
 import { customerListUrl, customerUrl, CustomerUrlQueryParams } from "../urls";
+import { NotFoundPage } from "../../components/NotFoundPage/NotFoundPage";
+import { useNotifier } from "../../hooks/useNotifier/useNotifier";
+import { CustomerDetailsPage, CustomerDetailsPageFormData } from "../components/CustomerDetailsPage/CustomerDetailsPage";
 
 interface CustomerDetailsViewProps {
   id: string;

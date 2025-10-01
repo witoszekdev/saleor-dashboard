@@ -1,16 +1,12 @@
 import { newPasswordUrl } from "@dashboard/auth/urls";
 import { useConditionalFilterContext } from "@dashboard/components/ConditionalFilter";
 import { createStaffMembersQueryVariables } from "@dashboard/components/ConditionalFilter/queryVariables";
-import { DeleteFilterTabDialog } from "@dashboard/components/DeleteFilterTabDialog";
-import { SaveFilterTabDialog } from "@dashboard/components/SaveFilterTabDialog";
 import { useShopLimitsQuery } from "@dashboard/components/Shop/queries";
 import { DEFAULT_INITIAL_SEARCH_DATA } from "@dashboard/config";
 import { useFlag } from "@dashboard/featureFlags";
 import { useStaffListQuery, useStaffMemberAddMutation } from "@dashboard/graphql";
-import { useFilterPresets } from "@dashboard/hooks/useFilterPresets";
 import { useListSettings } from "@dashboard/hooks/useListSettings";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { usePaginationReset } from "@dashboard/hooks/usePaginationReset";
 import {
   createPaginationState,
@@ -26,13 +22,9 @@ import { createSortHandler } from "@dashboard/utils/handlers/sortHandler";
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { getSortParams } from "@dashboard/utils/sort";
 import { getAppMountUriForRedirect } from "@dashboard/utils/urls";
-import { useOnboarding } from "@dashboard/welcomePage/WelcomePageOnboarding/onboardingContext";
 import { useMemo } from "react";
 import { useIntl } from "react-intl";
 import urlJoin from "url-join";
-
-import { AddMemberFormData, StaffAddMemberDialog } from "../../components/StaffAddMemberDialog";
-import { StaffListPage } from "../../components/StaffListPage";
 import {
   staffListUrl,
   StaffListUrlDialog,
@@ -41,6 +33,13 @@ import {
 } from "../../urls";
 import { getFilterOpts, getFilterQueryParam, getFilterVariables, storageUtils } from "./filters";
 import { getSortQueryVariables } from "./sort";
+import { DeleteFilterTabDialog } from "../../../components/DeleteFilterTabDialog/DeleteFilterTabDialog";
+import { SaveFilterTabDialog } from "../../../components/SaveFilterTabDialog/SaveFilterTabDialog";
+import { useFilterPresets } from "../../../hooks/useFilterPresets/useFilterPresets";
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
+import { useOnboarding } from "../../../welcomePage/WelcomePageOnboarding/onboardingContext/OnboardingContext";
+import { AddMemberFormData, StaffAddMemberDialog } from "../../components/StaffAddMemberDialog/StaffAddMemberDialog";
+import { StaffListPage } from "../../components/StaffListPage/StaffListPage";
 
 interface StaffListProps {
   params: StaffListUrlQueryParams;

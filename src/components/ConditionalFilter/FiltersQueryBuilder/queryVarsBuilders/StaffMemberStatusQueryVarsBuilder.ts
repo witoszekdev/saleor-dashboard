@@ -1,6 +1,6 @@
 import { Handler, NoopValuesHandler } from "../../API/Handler";
-import { FilterElement } from "../../FilterElement";
 import { BaseMappableQueryVarsBuilder } from "./BaseMappableQueryVarsBuilder";
+import { FilterElement } from "../../FilterElement/FilterElement";
 
 /** `staffMemberStatus` needs to be renamed to `status` in query */
 export class StaffMemberStatusQueryVarsBuilder extends BaseMappableQueryVarsBuilder {

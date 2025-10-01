@@ -1,5 +1,4 @@
 import { AppUrls } from "@dashboard/apps/urls";
-import { UserAvatar } from "@dashboard/components/UserAvatar";
 import { ExtensionsUrls } from "@dashboard/extensions/urls";
 import { useFlag } from "@dashboard/featureFlags";
 import { AppAvatarFragment, StaffMemberAvatarFragment } from "@dashboard/graphql";
@@ -7,6 +6,7 @@ import { getUserInitials, getUserName } from "@dashboard/misc";
 import { staffMemberDetailsUrl } from "@dashboard/staff/urls";
 import { Box } from "@saleor/macaw-ui-next";
 import { Link } from "react-router-dom";
+import { UserAvatar } from "../../../../../../components/UserAvatar/UserAvatar";
 
 interface EventCreatedByProps {
   createdBy: StaffMemberAvatarFragment | AppAvatarFragment | null;

@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
-
-import { FilterContainer, FilterElement } from "./FilterElement";
 import { FilterValueProvider } from "./FilterValueProvider";
+import { FilterContainer, FilterElement } from "./FilterElement/FilterElement";
 
 type StateCallback = (el: FilterElement) => void;
 type Element = FilterContainer[number];

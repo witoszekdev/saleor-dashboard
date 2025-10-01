@@ -1,10 +1,10 @@
 import { TopNav } from "@dashboard/components/AppLayout";
-import { ExternalLinkUnstyled } from "@dashboard/extensions/components/ExternalLinkUnstyled";
 import { messages } from "@dashboard/extensions/messages";
 import { MANIFEST_FORMAT_DOCS_URL } from "@dashboard/links";
 import { FormattedMessage } from "react-intl";
 
 import { previousPagePath } from "../consts";
+import { ExternalLinkUnstyled } from "../../../components/ExternalLinkUnstyled/ExternalLinkUnstyled";
 
 export const InstallTopNav = ({
   title,

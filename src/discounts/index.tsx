@@ -26,15 +26,15 @@ import {
   voucherPath,
   VoucherUrlQueryParams,
 } from "./urls";
-import { DiscountCreate } from "./views/DiscountCreate";
-import { DiscountDetails } from "./views/DiscountDetails";
-import { DiscountList } from "./views/DiscountList";
 import { SaleCreateView as SaleCreateViewComponent } from "./views/SaleCreate/SaleCreate";
-import { SaleDetails as SaleDetailsViewComponent } from "./views/SaleDetails";
-import { SaleList as SaleListViewComponent } from "./views/SaleList";
-import { VoucherCreateView as VoucherCreateViewComponent } from "./views/VoucherCreate";
-import { VoucherDetails as VoucherDetailsViewComponent } from "./views/VoucherDetails";
-import { VoucherList as VoucherListViewComponent } from "./views/VoucherList";
+import { DiscountCreate } from "./views/DiscountCreate/DiscountCreate";
+import { DiscountDetails } from "./views/DiscountDetails/DiscountDetails";
+import { DiscountList } from "./views/DiscountList/DiscountList";
+import { SaleDetails as SaleDetailsViewComponent } from "./views/SaleDetails/SaleDetails";
+import { SaleList as SaleListViewComponent } from "./views/SaleList/SaleList";
+import { VoucherCreateView as VoucherCreateViewComponent } from "./views/VoucherCreate/VoucherCreate";
+import { VoucherDetails as VoucherDetailsViewComponent } from "./views/VoucherDetails/VoucherDetails";
+import { VoucherList as VoucherListViewComponent } from "./views/VoucherList/VoucherList";
 
 const SaleListView = () => {
   const qs = parseQs(location.search.substr(1)) as any;

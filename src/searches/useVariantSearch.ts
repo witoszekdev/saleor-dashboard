@@ -5,7 +5,7 @@ import {
   SearchVariantsWithProductDataDocument,
   SearchVariantsWithProductDataQueryVariables,
 } from "@dashboard/graphql";
-import { makeTopLevelSearch, SearchData } from "@dashboard/hooks/makeTopLevelSearch";
+import { makeTopLevelSearch, SearchData } from "../hooks/makeTopLevelSearch/makeTopLevelSearch";
 
 export const searchVariants = gql`
   query SearchVariants($after: String, $first: Int!, $query: String!, $channel: String) {

@@ -1,11 +1,11 @@
-import { Locale } from "@dashboard/components/Locale";
 import { formatMoney } from "@dashboard/components/Money";
 import { formatPercantage } from "@dashboard/components/Percent/utils";
-import { Rule } from "@dashboard/discounts/models";
 import { RewardTypeEnum, RewardValueTypeEnum } from "@dashboard/graphql";
 import { useLocale } from "@dashboard/hooks/useLocale";
 import { Chip } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
+import { Locale } from "../../../../../../../../../components/Locale/Locale";
+import { Rule } from "../../../../../../../../models/Rule";
 
 interface RuleValueChipsProps {
   rule: Rule;

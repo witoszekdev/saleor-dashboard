@@ -1,7 +1,5 @@
 // @ts-strict-ignore
 import { useApolloClient } from "@apollo/client";
-import { MetadataIdSchema } from "@dashboard/components/Metadata";
-import { NotFoundPage } from "@dashboard/components/NotFoundPage";
 import { Task } from "@dashboard/containers/BackgroundTasks/types";
 import {
   JobStatusEnum,
@@ -13,7 +11,6 @@ import {
 } from "@dashboard/graphql";
 import { useBackgroundTask } from "@dashboard/hooks/useBackgroundTask";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { commonMessages } from "@dashboard/intl";
 import { createOrderMetadataIdSchema } from "@dashboard/orders/components/OrderDetailsPage/utils";
 import { getOrderErrorMessage } from "@dashboard/utils/errors/order";
@@ -28,6 +25,9 @@ import { OrderDraftDetails } from "./OrderDraftDetails";
 import { OrderNormalDetails } from "./OrderNormalDetails";
 import { OrderUnconfirmedDetails } from "./OrderUnconfirmedDetails";
 import { useOrderDetails } from "./useOrderDetails";
+import { MetadataIdSchema } from "../../../components/Metadata/types";
+import { NotFoundPage } from "../../../components/NotFoundPage/NotFoundPage";
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
 
 interface OrderDetailsProps {
   id: string;

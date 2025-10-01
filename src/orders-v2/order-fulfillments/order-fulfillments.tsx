@@ -1,5 +1,4 @@
 import { FulfillmentFragment } from "@dashboard/graphql";
-import { OrderDetailsDatagrid } from "@dashboard/orders/components/OrderDetailsDatagrid";
 import { warehouseUrl } from "@dashboard/warehouses/urls";
 import { Box, Button, PropsWithBox, Text } from "@saleor/macaw-ui-next";
 import { CodeXml } from "lucide-react";
@@ -10,6 +9,7 @@ import { UnderlineLink } from "../underline-link";
 import { OrderFulfillmentTrackingNumberButton } from "./order-fulfillment-change-tracking-number";
 import { OrderFulfillmentStatusIcon } from "./order-fulfillment-status-icon";
 import { OrderFulfillmentTrackingNumber } from "./order-fulfillment-tracking-number";
+import { OrderDetailsDatagrid } from "../../orders/components/OrderDetailsDatagrid/OrderDetailsDatagrid";
 
 type Props = PropsWithBox<{
   fulfillments: FulfillmentFragment[];

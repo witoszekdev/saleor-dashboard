@@ -1,7 +1,6 @@
 // @ts-strict-ignore
 import { Debounce } from "@dashboard/components/Debounce";
 import { DashboardModal } from "@dashboard/components/Modal";
-import { TableRowLink } from "@dashboard/components/TableRowLink";
 import { OrderFulfillLineFragment, WarehouseFragment } from "@dashboard/graphql";
 import { buttonMessages } from "@dashboard/intl";
 import { getById } from "@dashboard/misc";
@@ -24,6 +23,7 @@ import { FormattedMessage, useIntl } from "react-intl";
 
 import { changeWarehouseDialogMessages as messages } from "./messages";
 import { useStyles } from "./styles";
+import { TableRowLink } from "../../../components/TableRowLink/TableRowLink";
 
 interface OrderChangeWarehouseDialogProps {
   open: boolean;

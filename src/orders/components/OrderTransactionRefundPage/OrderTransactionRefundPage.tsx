@@ -1,9 +1,7 @@
 import { useUserPermissions } from "@dashboard/auth/hooks/useUserPermissions";
 import { TopNav } from "@dashboard/components/AppLayout";
 import { DashboardCard } from "@dashboard/components/Card";
-import { DetailPageLayout } from "@dashboard/components/Layouts";
 import { Link } from "@dashboard/components/Link";
-import { Pill } from "@dashboard/components/Pill";
 import { hasPermissions } from "@dashboard/components/RequirePermissions";
 import { Savebar } from "@dashboard/components/Savebar";
 import {
@@ -47,6 +45,8 @@ import {
   RefundQuantityChange,
   useRecalculateTotalAmount,
 } from "./utils";
+import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
+import { Pill } from "../../../components/Pill/Pill";
 
 export interface OrderTransactionRefundError {
   field: string;

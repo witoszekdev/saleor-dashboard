@@ -1,6 +1,5 @@
 import { GridTable } from "@dashboard/components/GridTable";
 import { Money } from "@dashboard/components/Money";
-import { UserAvatar } from "@dashboard/components/UserAvatar";
 import { getUserInitials, getUserName, User } from "@dashboard/misc";
 import { refundGridMessages } from "@dashboard/orders/components/OrderDetailsRefundTable/messages";
 import { orderTransactionRefundEditUrl } from "@dashboard/orders/urls";
@@ -11,10 +10,10 @@ import {
 import { Box, Button, EditIcon, Text, Tooltip } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 import { Link } from "react-router-dom";
-
-import { EventTime } from "../OrderTransaction/components/TransactionEvents/components";
 import { OrderTransactionRefundStatusPill } from "../OrderTransactionRefundPage/components/OrderTransactionRefundStatusPill/OrderTransactionRefundStatusPill";
 import { getGrantedRefundStatusMessage, getNotEditableRefundMessage } from "./utils";
+import { UserAvatar } from "../../../components/UserAvatar/UserAvatar";
+import { EventTime } from "../OrderTransaction/components/TransactionEvents/components/EventTime";
 
 interface OrderDetailsRefundLineProps {
   refund: OrderRefundDisplay;

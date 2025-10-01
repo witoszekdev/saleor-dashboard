@@ -1,8 +1,9 @@
 import { ChannelsAction } from "@dashboard/channels/urls";
 import { Channel } from "@dashboard/channels/utils";
-import { useExitFormDialog, WithFormId } from "@dashboard/components/Form";
 import { useListActions } from "@dashboard/hooks/useListActions";
 import { useStateFromProps } from "@dashboard/hooks/useStateFromProps";
+import { useExitFormDialog } from "../components/Form/useExitFormDialog";
+import { WithFormId } from "../components/Form/types";
 
 interface Modal {
   openModal: (action: ChannelsAction) => void;

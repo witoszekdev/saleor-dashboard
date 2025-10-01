@@ -2,10 +2,10 @@
 import { getGiftCardErrorMessage } from "@dashboard/giftCards/GiftCardUpdate/messages";
 import { DeleteGiftCardMutation, useDeleteGiftCardMutation } from "@dashboard/graphql";
 import { MutationResultWithOpts } from "@dashboard/hooks/makeMutation";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { useIntl } from "react-intl";
 
 import { giftCardDeleteDialogMessages as messages } from "./messages";
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
 
 interface UseGiftCardSingleDeleteProps {
   onDeleteGiftCard: () => void;

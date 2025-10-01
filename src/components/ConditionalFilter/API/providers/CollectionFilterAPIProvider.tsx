@@ -1,9 +1,8 @@
 import { ApolloClient, useApolloClient } from "@apollo/client";
-
-import { FilterContainer, FilterElement } from "../../FilterElement";
 import { FilterAPIProvider } from "../FilterAPIProvider";
 import { BooleanValuesHandler, ChannelHandler, Handler, NoopValuesHandler } from "../Handler";
 import { getFilterElement } from "../utils";
+import { FilterContainer, FilterElement } from "../../FilterElement/FilterElement";
 
 const createAPIHandler = (
   selectedRow: FilterElement,

@@ -2,7 +2,6 @@
 import { WebhookEventTypeAsyncEnum, WebhookEventTypeSyncEnum } from "@dashboard/graphql";
 import { ChangeEvent } from "@dashboard/hooks/useForm";
 import { capitalize } from "@dashboard/misc";
-import { toggle } from "@dashboard/utils/lists";
 import {
   DocumentNode,
   FieldNode,
@@ -17,9 +16,9 @@ import {
 import isEmpty from "lodash/isEmpty";
 import { Dispatch, SetStateAction } from "react";
 import * as React from "react";
-
-import { WebhookFormData } from "./components/WebhookDetailsPage";
 import { filterSelectedAsyncEvents, IntrospectionNode } from "./utils";
+import { toggle } from "../utils/lists/lists";
+import { WebhookFormData } from "./components/WebhookDetailsPage/WebhookDetailsPage";
 
 interface CreateSyncEventsSelectHandler {
   change: (event: ChangeEvent, cb?: () => void) => void;

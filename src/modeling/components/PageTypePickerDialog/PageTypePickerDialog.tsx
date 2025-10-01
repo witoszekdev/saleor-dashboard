@@ -1,7 +1,5 @@
 import { Combobox } from "@dashboard/components/Combobox";
-import { ConfirmButton, ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import { DashboardModal } from "@dashboard/components/Modal";
-import { useModalDialogOpen } from "@dashboard/hooks/useModalDialogOpen";
 import { useStateFromProps } from "@dashboard/hooks/useStateFromProps";
 import { buttonMessages } from "@dashboard/intl";
 import { FetchMoreProps } from "@dashboard/types";
@@ -9,6 +7,8 @@ import { Button, Option } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 
 import { messages } from "./messages";
+import { ConfirmButton, ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import { useModalDialogOpen } from "../../../hooks/useModalDialogOpen/useModalDialogOpen";
 
 interface PageTypePickerDialogProps {
   confirmButtonState: ConfirmButtonTransitionState;

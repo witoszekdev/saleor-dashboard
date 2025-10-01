@@ -15,9 +15,9 @@ import {
   PermissionGroupListUrlQueryParams,
   PermissionGroupListUrlSortField,
 } from "./urls";
-import { PermissionGroupCreate } from "./views/PermissionGroupCreate";
-import { PermissionGroupDetails as PermissionGroupDetailsComponent } from "./views/PermissionGroupDetails";
-import { PermissionGroupList as PermissionGroupListComponent } from "./views/PermissionGroupList";
+import { PermissionGroupCreate } from "./views/PermissionGroupCreate/PermissionGroupCreate";
+import { PermissionGroupDetails as PermissionGroupDetailsComponent } from "./views/PermissionGroupDetails/PermissionGroupDetails";
+import { PermissionGroupList as PermissionGroupListComponent } from "./views/PermissionGroupList/PermissionGroupList";
 
 const permissionGroupList = () => {
   const qs = parseQs(location.search.substr(1)) as any;

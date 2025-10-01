@@ -1,6 +1,4 @@
 // @ts-strict-ignore
-import { ConfirmButton } from "@dashboard/components/ConfirmButton";
-import { PriceField } from "@dashboard/components/PriceField";
 import {
   OrderDetailsFragment,
   TransactionActionEnum,
@@ -11,10 +9,11 @@ import { Button, makeStyles } from "@saleor/macaw-ui";
 import { Text } from "@saleor/macaw-ui-next";
 import * as React from "react";
 import { FormattedMessage, useIntl } from "react-intl";
-
-import { OrderTransaction } from "../../OrderTransaction";
 import { refundPageMessages } from "../messages";
 import { useOrderSendRefund } from "./useOrderSendRefund";
+import { ConfirmButton } from "../../../../components/ConfirmButton/ConfirmButton";
+import { PriceField } from "../../../../components/PriceField/PriceField";
+import { OrderTransaction } from "../../OrderTransaction/OrderTransaction";
 
 interface TransactionCardProps {
   transaction: TransactionItemFragment;

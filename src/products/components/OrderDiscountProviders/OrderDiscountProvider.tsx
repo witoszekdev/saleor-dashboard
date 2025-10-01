@@ -1,5 +1,4 @@
 // @ts-strict-ignore
-import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import {
   MoneyFragment,
   OrderDetailsFragment,
@@ -7,7 +6,6 @@ import {
   useOrderDiscountDeleteMutation,
   useOrderDiscountUpdateMutation,
 } from "@dashboard/graphql";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { getDefaultNotifierSuccessErrorData } from "@dashboard/hooks/useNotifier/utils";
 import { OrderDiscountCommonInput } from "@dashboard/orders/components/OrderDiscountCommonModal/types";
 import { createContext } from "react";
@@ -16,6 +14,8 @@ import { useIntl } from "react-intl";
 
 import { OrderDiscountConsumerCommonProps, OrderDiscountData } from "./types";
 import { getManualOrderDiscount, getParsedDiscountData, useDiscountDialog } from "./utils";
+import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
 
 export interface OrderDiscountContextConsumerProps extends OrderDiscountConsumerCommonProps {
   orderDiscountAddStatus: ConfirmButtonTransitionState;

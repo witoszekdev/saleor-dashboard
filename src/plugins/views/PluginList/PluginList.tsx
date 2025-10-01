@@ -1,9 +1,4 @@
 // @ts-strict-ignore
-import { DeleteFilterTabDialog } from "@dashboard/components/DeleteFilterTabDialog";
-import {
-  SaveFilterTabDialog,
-  SaveFilterTabDialogFormData,
-} from "@dashboard/components/SaveFilterTabDialog";
 import { usePluginsQuery } from "@dashboard/graphql";
 import { useChannelsSearchWithLoadMore } from "@dashboard/hooks/useChannelsSearchWithLoadMore";
 import { useListSettings } from "@dashboard/hooks/useListSettings";
@@ -36,6 +31,8 @@ import {
   saveFilterTab,
 } from "./filters";
 import { getSortQueryVariables } from "./sort";
+import { DeleteFilterTabDialog } from "../../../components/DeleteFilterTabDialog/DeleteFilterTabDialog";
+import { SaveFilterTabDialog, SaveFilterTabDialogFormData } from "../../../components/SaveFilterTabDialog/SaveFilterTabDialog";
 
 interface PluginsListProps {
   params: PluginListUrlQueryParams;

@@ -7,7 +7,6 @@ import {
 } from "@dashboard/graphql";
 import { useListSettings } from "@dashboard/hooks/useListSettings";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { usePaginationReset } from "@dashboard/hooks/usePaginationReset";
 import {
   createPaginationState,
@@ -25,14 +24,14 @@ import { Text } from "@saleor/macaw-ui-next";
 import isEqual from "lodash/isEqual";
 import { useCallback, useMemo } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
-
-import { ShippingWeightUnitDialog } from "../components/ShippingWeightUnitDialog";
-import { ShippingZonesListPage } from "../components/ShippingZonesListPage";
 import {
   shippingZonesListUrl,
   ShippingZonesListUrlDialog,
   ShippingZonesListUrlQueryParams,
 } from "../urls";
+import { useNotifier } from "../../hooks/useNotifier/useNotifier";
+import { ShippingWeightUnitDialog } from "../components/ShippingWeightUnitDialog/ShippingWeightUnitDialog";
+import { ShippingZonesListPage } from "../components/ShippingZonesListPage/ShippingZonesListPage";
 
 interface ShippingZonesListProps {
   params: ShippingZonesListUrlQueryParams;

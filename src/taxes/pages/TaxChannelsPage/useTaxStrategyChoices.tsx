@@ -4,8 +4,9 @@ import { useFlag } from "@dashboard/featureFlags";
 import { TaxCalculationStrategy, useTaxStrategyChoicesQuery } from "@dashboard/graphql";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { Box, Button, ExternalLinkIcon, Option, Text } from "@saleor/macaw-ui-next";
-
-import { FlatTaxRateLabel, PluginLabel, TaxAppLabel } from "../../components";
+import { FlatTaxRateLabel } from "../../components/FlatTaxRateLabel";
+import { PluginLabel } from "../../components/PluginLabel";
+import { TaxAppLabel } from "../../components/TaxAppLabel";
 
 const flatTaxRateChoice = {
   label: <FlatTaxRateLabel />,

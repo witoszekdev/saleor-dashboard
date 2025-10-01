@@ -1,4 +1,3 @@
-import { AppInProgressDeleteDialog } from "@dashboard/apps/components/AppInProgressDeleteDialog";
 import { AppListPage } from "@dashboard/apps/components/AppListPage/AppListPage";
 import { AppListContext, AppListContextValues } from "@dashboard/apps/context";
 import { useActiveAppsInstallations } from "@dashboard/apps/hooks/useActiveAppsInstallations";
@@ -19,7 +18,6 @@ import { useHasManagedAppsPermission } from "@dashboard/hooks/useHasManagedAppsP
 import { useListSettings } from "@dashboard/hooks/useListSettings";
 import { useLocalPaginationState, useLocalPaginator } from "@dashboard/hooks/useLocalPaginator";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { PaginatorContext } from "@dashboard/hooks/usePaginator";
 import { ListViews } from "@dashboard/types";
 import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
@@ -28,6 +26,8 @@ import { PropsWithChildren, useMemo } from "react";
 import { useIntl } from "react-intl";
 
 import { messages } from "./messages";
+import { AppInProgressDeleteDialog } from "../../components/AppInProgressDeleteDialog/AppInProgressDeleteDialog";
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
 
 interface Props {
   params: AppListUrlQueryParams;

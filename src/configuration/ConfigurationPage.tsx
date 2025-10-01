@@ -1,7 +1,6 @@
 // @ts-strict-ignore
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
 import { DashboardCard } from "@dashboard/components/Card";
-import { DetailPageLayout } from "@dashboard/components/Layouts";
 import { ExtensionsUrls } from "@dashboard/extensions/urls";
 import { useFlag } from "@dashboard/featureFlags";
 import { UserFragment } from "@dashboard/graphql";
@@ -14,11 +13,11 @@ import { NavigationCard } from "@saleor/macaw-ui";
 import { Box, Button, Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 import { Link } from "react-router-dom";
-
-import { VersionInfo } from "../components/VersionInfo";
 import { useStyles } from "./styles";
 import { MenuSection } from "./types";
 import { hasUserMenuItemPermissions } from "./utils";
+import { DetailPageLayout } from "../components/Layouts/Detail/index";
+import { VersionInfo } from "../components/VersionInfo/VersionInfo";
 
 interface VersionInfo {
   dashboardVersion: string;

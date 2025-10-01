@@ -4,10 +4,10 @@ import { Box } from "@saleor/macaw-ui-next";
 import * as React from "react";
 
 import { DevModePanel } from "../DevModePanel/DevModePanel";
-import { NavigatorSearch } from "../NavigatorSearch";
 import { useSavebarRef } from "../Savebar/SavebarRefContext";
-import { Sidebar } from "../Sidebar";
 import { useStyles } from "./styles";
+import { NavigatorSearch } from "../NavigatorSearch/NavigatorSearch";
+import { Sidebar } from "../Sidebar/Sidebar";
 
 interface AppLayoutProps {
   children: React.ReactNode;

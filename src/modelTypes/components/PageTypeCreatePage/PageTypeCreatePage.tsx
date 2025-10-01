@@ -1,9 +1,5 @@
 // @ts-strict-ignore
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
-import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import { Form } from "@dashboard/components/Form";
-import { DetailPageLayout } from "@dashboard/components/Layouts";
-import { Metadata, MetadataFormData } from "@dashboard/components/Metadata";
 import { Savebar } from "@dashboard/components/Savebar";
 import { PageErrorFragment } from "@dashboard/graphql";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
@@ -12,6 +8,11 @@ import { useMetadataChangeTrigger } from "@dashboard/utils/metadata/useMetadataC
 import { useIntl } from "react-intl";
 
 import { PageTypeDetails } from "../PageTypeDetails/PageTypeDetails";
+import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import { Form } from "../../../components/Form/Form";
+import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
+import { Metadata } from "../../../components/Metadata/Metadata";
+import { MetadataFormData } from "../../../components/Metadata/types";
 
 export interface PageTypeForm extends MetadataFormData {
   name: string;

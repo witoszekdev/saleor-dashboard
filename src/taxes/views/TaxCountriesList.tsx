@@ -8,16 +8,12 @@ import {
   useTaxCountryConfigurationUpdateMutation,
 } from "@dashboard/graphql";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { useShop } from "@dashboard/hooks/useShop";
 import { commonMessages } from "@dashboard/intl";
 import { createDialogActionHandlers } from "@dashboard/utils/handlers/dialogActionHandlers";
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { useMemo, useState } from "react";
 import { useIntl } from "react-intl";
-
-import { TaxCountryDialog } from "../components/TaxCountryDialog";
-import { TaxCountriesPage } from "../pages/TaxCountriesPage";
 import {
   taxCountriesListUrl,
   TaxesUrlDialog,
@@ -27,6 +23,9 @@ import {
 } from "../urls";
 import { useTaxUrlRedirect } from "../utils/useTaxUrlRedirect";
 import { excludeExistingCountries, mapUndefinedTaxRatesToCountries } from "../utils/utils";
+import { useNotifier } from "../../hooks/useNotifier/useNotifier";
+import { TaxCountryDialog } from "../components/TaxCountryDialog/TaxCountryDialog";
+import { TaxCountriesPage } from "../pages/TaxCountriesPage/TaxCountriesPage";
 
 interface TaxCountriesListProps {
   id: string | undefined;

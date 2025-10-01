@@ -1,4 +1,3 @@
-import { ListItemLink } from "@dashboard/components/ListItemLink";
 import { TaxConfigurationFragment } from "@dashboard/graphql";
 import { taxesMessages } from "@dashboard/taxes/messages";
 import { taxConfigurationListUrl } from "@dashboard/taxes/urls";
@@ -11,6 +10,7 @@ import { Fragment } from "react";
 import { FormattedMessage } from "react-intl";
 
 import { useStyles } from "./styles";
+import { ListItemLink } from "../../../../components/ListItemLink/ListItemLink";
 
 interface TaxChannelsMenuProps {
   configurations: TaxConfigurationFragment[] | undefined;

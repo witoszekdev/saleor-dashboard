@@ -5,11 +5,11 @@ import {
   useUserAvatarUpdateMutation,
 } from "@dashboard/graphql";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { commonMessages, errorMessages } from "@dashboard/intl";
 import { useIntl } from "react-intl";
 
 import { staffMemberDetailsUrl } from "../urls";
+import { useNotifier } from "../../hooks/useNotifier/useNotifier";
 
 interface UseUserMutationProps {
   refetch: () => void;

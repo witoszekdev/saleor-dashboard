@@ -1,8 +1,4 @@
 import { Hr } from "@dashboard/components/Hr";
-import {
-  NewRadioGroupField as RadioGroupField,
-  RadioGroupFieldChoice,
-} from "@dashboard/components/RadioGroupField";
 import { ExportErrorFragment, ExportScope, FileTypesEnum } from "@dashboard/graphql";
 import { ChangeEvent } from "@dashboard/hooks/useForm";
 import { getFormErrors } from "@dashboard/utils/errors";
@@ -11,6 +7,7 @@ import { Text } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
 
 import { ExportSettingsInput } from "./types";
+import { NewRadioGroupField as RadioGroupField, RadioGroupFieldChoice } from "../../../components/RadioGroupField/RadioGroupField";
 
 export type ExportItemsQuantity = Record<"all" | "filter", number>;
 

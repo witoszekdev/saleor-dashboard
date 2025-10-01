@@ -1,5 +1,4 @@
 import { ButtonWithLoader } from "@dashboard/components/ButtonWithLoader/ButtonWithLoader";
-import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import { DashboardModal } from "@dashboard/components/Modal";
 import { TransactionActionEnum } from "@dashboard/graphql";
 import { buttonMessages } from "@dashboard/intl";
@@ -8,6 +7,7 @@ import { FormattedMessage, useIntl } from "react-intl";
 
 import { mapActionToMessage } from "../OrderTransaction/utils";
 import { messages } from "./messages";
+import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
 
 interface OrderTransactionActionDialogProps {
   open: boolean;

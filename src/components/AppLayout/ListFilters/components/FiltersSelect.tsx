@@ -1,11 +1,4 @@
 // @ts-strict-ignore
-import {
-  FilterContent,
-  FilterElement,
-  FilterErrorMessages,
-  IFilter,
-  InvalidFilters,
-} from "@dashboard/components/Filter";
 import { useFilter } from "@dashboard/components/Filter/useFilter";
 import { extractInvalidFilters } from "@dashboard/components/Filter/utils";
 import { ClickAwayListener, Grow, Popper } from "@material-ui/core";
@@ -14,6 +7,8 @@ import { useMemo, useRef, useState } from "react";
 import { FormattedMessage } from "react-intl";
 
 import { getSelectedFilterAmount } from "../utils";
+import { FilterContent } from "../../../Filter/FilterContent/index";
+import { FilterElement, FilterErrorMessages, IFilter, InvalidFilters } from "../../../Filter/types";
 
 interface FilterProps<TFilterKeys extends string = string> {
   currencySymbol?: string;

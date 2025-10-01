@@ -1,10 +1,10 @@
 import { useShippingMethodTranslationsQuery } from "@dashboard/graphql";
 import { PaginatorContext, usePaginator } from "@dashboard/hooks/usePaginator";
-import { TranslationsEntitiesList } from "@dashboard/translations/components/TranslationsEntitiesList";
 import { languageEntityUrl, TranslatableEntities } from "@dashboard/translations/urls";
 
 import { TranslationsEntityListProps } from "./types";
 import { mapTranslationsToEntities } from "./utils";
+import { TranslationsEntitiesList } from "../../components/TranslationsEntitiesList/TranslationsEntitiesList";
 
 const TranslationsShippingMethodList = ({ params, variables }: TranslationsEntityListProps) => {
   const { data, loading } = useShippingMethodTranslationsQuery({

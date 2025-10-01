@@ -4,7 +4,6 @@ import { Date } from "@dashboard/components/Date";
 import { FormSpacer } from "@dashboard/components/FormSpacer";
 import { Hr } from "@dashboard/components/Hr";
 import { Money } from "@dashboard/components/Money";
-import { Percent } from "@dashboard/components/Percent";
 import { DiscountValueTypeEnum, VoucherDetailsFragment } from "@dashboard/graphql";
 import { commonMessages } from "@dashboard/intl";
 import { ChannelProps } from "@dashboard/types";
@@ -12,6 +11,7 @@ import { Skeleton, Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 
 import { translateVoucherTypes } from "../../translations";
+import { Percent } from "../../../components/Percent/Percent";
 
 interface VoucherSummaryProps extends ChannelProps {
   voucher: VoucherDetailsFragment;

@@ -1,4 +1,3 @@
-import { Rule } from "@dashboard/discounts/models";
 import { DiscoutFormData } from "@dashboard/discounts/types";
 import { PromotionTypeEnum } from "@dashboard/graphql";
 import { RichTextContext } from "@dashboard/utils/richText/context";
@@ -11,6 +10,7 @@ import { useIntl } from "react-intl";
 import { useRulesHandlers } from "./hooks/useRulesHandlers";
 import { initialFormValues } from "./initialFormValues";
 import { getValidationSchema } from "./validationSchema";
+import { Rule } from "../../models/Rule";
 
 interface CreateFormRenderProps {
   rules: Rule[];

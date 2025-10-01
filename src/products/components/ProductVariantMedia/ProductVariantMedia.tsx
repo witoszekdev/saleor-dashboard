@@ -1,9 +1,9 @@
 // @ts-strict-ignore
 import { DashboardCard } from "@dashboard/components/Card";
-import { MediaTile } from "@dashboard/components/MediaTile";
 import { ProductMediaFragment } from "@dashboard/graphql";
 import { Box, Button, Skeleton, Text } from "@saleor/macaw-ui-next";
 import { defineMessages, useIntl } from "react-intl";
+import { MediaTile } from "../../../components/MediaTile/MediaTile";
 
 const messages = defineMessages({
   chooseMedia: {

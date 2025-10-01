@@ -1,6 +1,4 @@
 // @ts-strict-ignore
-import { TableCellAvatar } from "@dashboard/components/TableCellAvatar";
-import { TableRowLink } from "@dashboard/components/TableRowLink";
 import { FulfillmentFragment, OrderFulfillLineFragment } from "@dashboard/graphql";
 import {
   getAttributesCaption,
@@ -12,6 +10,8 @@ import { TableCell } from "@material-ui/core";
 import { Text } from "@saleor/macaw-ui-next";
 
 import { useStyles } from "../OrderFulfillStockExceededDialog/styles";
+import { TableCellAvatar } from "../../../components/TableCellAvatar/TableCellAvatar";
+import { TableRowLink } from "../../../components/TableRowLink/TableRowLink";
 
 interface OrderFulfillStockExceededDialogLineProps {
   line: OrderFulfillLineFragment | FulfillmentFragment["lines"][0];

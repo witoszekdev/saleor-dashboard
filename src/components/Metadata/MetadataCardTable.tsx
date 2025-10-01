@@ -1,4 +1,3 @@
-import { TableRowLink } from "@dashboard/components/TableRowLink";
 import { MetadataInput } from "@dashboard/graphql";
 import { FormChange } from "@dashboard/hooks/useForm";
 import { Table, TableBody, TableCell, TableHead } from "@material-ui/core";
@@ -7,6 +6,7 @@ import { FormattedMessage } from "react-intl";
 
 import { EventDataAction } from "./types";
 import { nameInputPrefix, nameSeparator, valueInputPrefix } from "./utils";
+import { TableRowLink } from "../TableRowLink/TableRowLink";
 
 interface MetadataCardTableProps {
   data: MetadataInput[];

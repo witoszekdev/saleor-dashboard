@@ -3,12 +3,7 @@ import { ChannelSaleData, validateSalePrice } from "@dashboard/channels/utils";
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
 import { CardSpacer } from "@dashboard/components/CardSpacer";
 import { ChannelsAvailability as ChannelsAvailabilityCard } from "@dashboard/components/ChannelsAvailabilityCard";
-import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import { Form } from "@dashboard/components/Form";
-import { DetailPageLayout } from "@dashboard/components/Layouts";
-import { Metadata, MetadataFormData } from "@dashboard/components/Metadata";
 import { Savebar } from "@dashboard/components/Savebar";
-import { Tab, TabContainer } from "@dashboard/components/Tab";
 import {
   createSaleChannelsChangeHandler,
   createSaleUpdateHandler,
@@ -34,15 +29,22 @@ import { useIntl } from "react-intl";
 
 import { splitDateTime } from "../../../misc";
 import { ChannelProps, ListProps, TabListActions } from "../../../types";
-import { DiscountCategories } from "../DiscountCategories";
-import { DiscountCollections } from "../DiscountCollections";
-import { DiscountDates } from "../DiscountDates";
-import { DiscountProducts } from "../DiscountProducts";
-import { DiscountVariants } from "../DiscountVariants";
-import { SaleInfo } from "../SaleInfo";
-import { SaleSummary } from "../SaleSummary";
-import { SaleType } from "../SaleType";
-import { SaleValue } from "../SaleValue";
+import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import { Form } from "../../../components/Form/Form";
+import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
+import { Metadata } from "../../../components/Metadata/Metadata";
+import { MetadataFormData } from "../../../components/Metadata/types";
+import { Tab } from "../../../components/Tab/Tab";
+import { TabContainer } from "../../../components/Tab/TabContainer";
+import { DiscountCategories } from "../DiscountCategories/DiscountCategories";
+import { DiscountCollections } from "../DiscountCollections/DiscountCollections";
+import { DiscountDates } from "../DiscountDates/DiscountDates";
+import { DiscountProducts } from "../DiscountProducts/DiscountProducts";
+import { DiscountVariants } from "../DiscountVariants/DiscountVariants";
+import { SaleInfo } from "../SaleInfo/SaleInfo";
+import { SaleSummary } from "../SaleSummary/SaleSummary";
+import { SaleType } from "../SaleType/SaleType";
+import { SaleValue } from "../SaleValue/SaleValue";
 
 export interface ChannelSaleFormData extends ChannelSaleData {
   percentageValue: string;

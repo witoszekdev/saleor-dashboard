@@ -1,7 +1,6 @@
 import { useUserPermissions } from "@dashboard/auth/hooks/useUserPermissions";
 import { TopNav } from "@dashboard/components/AppLayout";
 import { DashboardCard } from "@dashboard/components/Card";
-import { DetailPageLayout } from "@dashboard/components/Layouts";
 import { Link } from "@dashboard/components/Link";
 import { hasPermissions } from "@dashboard/components/RequirePermissions";
 import { PermissionEnum, TransactionItemFragment, useModelsOfTypeQuery } from "@dashboard/graphql";
@@ -16,12 +15,12 @@ import { Ripple } from "@dashboard/ripples/components/Ripple";
 import { Box, Select, Skeleton, Text } from "@saleor/macaw-ui-next";
 import { useController, useFormContext } from "react-hook-form";
 import { FormattedMessage, useIntl } from "react-intl";
-
-import { OrderManualTransactionRefundAmount } from "./components/OrderManualTransactionRefundAmount";
-import { OrderManualTransactionRefundForm } from "./components/OrderManualTransactionRefundForm";
-import { OrderManualTransactionRefundTiles } from "./components/OrderManualTransactionRefundTiles";
 import { OrderManualTransactionRefundWarning } from "./components/OrderManualTransactionRefundWarning/OrderManualTransactionRefundWarning";
 import { messages } from "./messages";
+import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
+import { OrderManualTransactionRefundAmount } from "./components/OrderManualTransactionRefundAmount/OrderManualTransactionRefundAmount";
+import { OrderManualTransactionRefundForm } from "./components/OrderManualTransactionRefundForm/OrderManualTransactionRefundForm";
+import { OrderManualTransactionRefundTiles } from "./components/OrderManualTransactionRefundTiles/OrderManualTransactionRefundTiles";
 
 interface OrderManualTransactionRefundProps {
   orderId: string;

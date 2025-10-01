@@ -1,6 +1,5 @@
 // @ts-strict-ignore
 import { Checkbox } from "@dashboard/components/Checkbox";
-import { ConfirmButton, ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import { FormSpacer } from "@dashboard/components/FormSpacer";
 import { DashboardModal } from "@dashboard/components/Modal";
 import { AddressTypeInput } from "@dashboard/customers/types";
@@ -14,7 +13,6 @@ import {
 } from "@dashboard/graphql";
 import { useAddressValidation } from "@dashboard/hooks/useAddressValidation";
 import { SubmitPromise } from "@dashboard/hooks/useForm";
-import { useModalDialogErrors } from "@dashboard/hooks/useModalDialogErrors";
 import { buttonMessages } from "@dashboard/intl";
 import { getById, transformAddressToAddressInput } from "@dashboard/misc";
 import { mapCountriesToChoices } from "@dashboard/utils/maps";
@@ -37,6 +35,8 @@ import {
   OrderCustomerSearchAddressState,
 } from "./types";
 import { getAddressEditProps, hasPreSubmitErrors, validateDefaultAddress } from "./utils";
+import { ConfirmButton, ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import { useModalDialogErrors } from "../../../hooks/useModalDialogErrors/useModalDialogErrors";
 
 export interface OrderCustomerAddressesEditDialogProps {
   open: boolean;

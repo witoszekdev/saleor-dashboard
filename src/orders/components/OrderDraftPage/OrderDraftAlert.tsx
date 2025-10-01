@@ -5,10 +5,9 @@ import { sprinkles } from "@saleor/macaw-ui-next";
 import { clsx } from "clsx";
 import { FormattedMessage, MessageDescriptor, useIntl } from "react-intl";
 import { Link } from "react-router-dom";
-
-import { OrderAlerts } from "../OrderAlerts";
 import { alertMessages } from "./messages";
 import { useAlertStyles } from "./styles";
+import { OrderAlerts } from "../OrderAlerts/OrderAlerts";
 
 const getAlerts = (
   order?: OrderDetailsFragment,

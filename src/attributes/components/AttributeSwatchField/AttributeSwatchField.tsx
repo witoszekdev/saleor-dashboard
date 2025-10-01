@@ -1,7 +1,6 @@
 import { inputTypeMessages } from "@dashboard/attributes/components/AttributeDetails/messages";
 import { AttributeValueEditDialogFormData } from "@dashboard/attributes/utils/data";
 import { ColorPicker, ColorPickerProps } from "@dashboard/components/ColorPicker";
-import { FileUploadField } from "@dashboard/components/FileUploadField";
 import { SimpleRadioGroupField } from "@dashboard/components/SimpleRadioGroupField";
 import { UseFormResult } from "@dashboard/hooks/useForm";
 import { Box, Skeleton } from "@saleor/macaw-ui-next";
@@ -11,6 +10,7 @@ import { FormattedMessage, useIntl } from "react-intl";
 import { swatchFieldMessages } from "./messages";
 import { useColorProcessing } from "./useColorProcessing";
 import { useFileProcessing } from "./useFileProcessing";
+import { FileUploadField } from "../../../components/FileUploadField/FileUploadField";
 
 type AttributeSwatchFieldProps<T> = Pick<
   UseFormResult<T>,

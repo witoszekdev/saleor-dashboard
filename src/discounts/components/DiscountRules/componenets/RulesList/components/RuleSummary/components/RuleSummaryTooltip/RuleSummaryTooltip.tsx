@@ -2,7 +2,7 @@ import { Box, Chip, Option, Tooltip } from "@saleor/macaw-ui-next";
 import { FormattedMessage } from "react-intl";
 
 import { messages } from "../../../../../../messages";
-import { RuleSummaryChips } from "../RuleSummaryChips";
+import { RuleSummaryChips } from "../RuleSummaryChips/RuleSummaryChips";
 
 interface RuleSummaryTooltipProps {
   conditionsValues: Option[];

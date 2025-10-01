@@ -1,7 +1,5 @@
 import { useAppChannel } from "@dashboard/components/AppLayout/AppChannelContext";
 import { WindowTitle } from "@dashboard/components/WindowTitle";
-import { DiscountDeleteModal } from "@dashboard/discounts/components/DiscountDeleteModal";
-import { DiscountDetailsPage } from "@dashboard/discounts/components/DiscountDetailsPage";
 import { discountSalesListPath, DiscountUrlQueryParams } from "@dashboard/discounts/discountsUrls";
 import { useBackLinkWithState } from "@dashboard/hooks/useBackLinkWithState";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
@@ -18,6 +16,8 @@ import { usePromotionRuleCreate } from "./hooks/usePromotionRuleCreate";
 import { usePromotionRuleDelete } from "./hooks/usePromotionRuleDelete";
 import { usePromotionRuleUpdate } from "./hooks/usePromotionRuleUpdate";
 import { usePromotionUpdate } from "./hooks/usePromotionUpdate";
+import { DiscountDeleteModal } from "../../components/DiscountDeleteModal/DiscountDeleteModal";
+import { DiscountDetailsPage } from "../../components/DiscountDetailsPage/DiscountDetailsPage";
 
 interface DiscountDetailsProps {
   id: string;

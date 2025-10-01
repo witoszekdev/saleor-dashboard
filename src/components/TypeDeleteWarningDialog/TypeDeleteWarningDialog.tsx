@@ -1,16 +1,15 @@
 // @ts-strict-ignore
-import { ConfirmButton, ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import { buttonMessages } from "@dashboard/intl";
 import { getById } from "@dashboard/misc";
 import { Box, Spinner } from "@saleor/macaw-ui-next";
 import { useState } from "react";
 import { useIntl } from "react-intl";
 import { Link } from "react-router-dom";
-
-import { DeleteButton } from "../DeleteButton";
 import { DashboardModal } from "../Modal";
 import { DeleteWarningDialogConsentContent } from "./DeleteWarningDialogConsentContent";
 import { CommonTypeDeleteWarningMessages, TypeBaseData, TypeDeleteWarningMessages } from "./types";
+import { ConfirmButton, ConfirmButtonTransitionState } from "../ConfirmButton/ConfirmButton";
+import { DeleteButton } from "../DeleteButton/DeleteButton";
 
 export interface TypeDeleteMessages {
   baseMessages: CommonTypeDeleteWarningMessages;

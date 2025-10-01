@@ -1,5 +1,3 @@
-import { NewRadioGroupField as RadioGroupField } from "@dashboard/components/RadioGroupField";
-import { TimePeriodField } from "@dashboard/giftCards/components/TimePeriodField";
 import {
   GiftCardBulkCreateFormErrors,
   GiftCardCreateCommonFormData,
@@ -13,6 +11,8 @@ import { Box, Checkbox, Input, Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage, MessageDescriptor, useIntl } from "react-intl";
 
 import { giftCardCreateExpirySelectMessages as messages } from "./messages";
+import { NewRadioGroupField as RadioGroupField } from "../../../components/RadioGroupField/RadioGroupField";
+import { TimePeriodField } from "../../components/TimePeriodField/TimePeriodField";
 
 interface UntranslatedOption {
   label: MessageDescriptor;

@@ -1,5 +1,4 @@
 import { DashboardCard } from "@dashboard/components/Card";
-import { NewRadioGroupField as RadioGroupField } from "@dashboard/components/RadioGroupField";
 import { AllocationStrategyEnum, StockSettingsInput } from "@dashboard/graphql";
 import { ChangeEvent } from "@dashboard/hooks/useForm";
 import { SvgIcon as HelpOutline } from "@material-ui/icons/HelpOutline";
@@ -8,6 +7,7 @@ import { FormattedMessage } from "react-intl";
 
 import { messages } from "./messages";
 import { useStyles } from "./styles";
+import { NewRadioGroupField as RadioGroupField } from "../../../components/RadioGroupField/RadioGroupField";
 
 const strategyOptions = [
   {

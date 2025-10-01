@@ -1,5 +1,5 @@
-import { VerticalSpacer } from "@dashboard/components/VerticalSpacer";
 import { Box, Text } from "@saleor/macaw-ui-next";
+import { VerticalSpacer } from "../VerticalSpacer/VerticalSpacer";
 
 interface PageSectionHeaderProps {
   title?: string;

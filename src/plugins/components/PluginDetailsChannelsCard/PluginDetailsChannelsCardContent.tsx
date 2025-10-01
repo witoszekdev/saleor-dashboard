@@ -1,7 +1,6 @@
 // @ts-strict-ignore
 import { DashboardCard } from "@dashboard/components/Card";
 import { CollectionWithDividers } from "@dashboard/components/CollectionWithDividers";
-import { Pill } from "@dashboard/components/Pill";
 import { PluginsDetailsFragment } from "@dashboard/graphql";
 import {
   getPluginStatusColor,
@@ -13,6 +12,7 @@ import { Skeleton, Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage, useIntl } from "react-intl";
 
 import { pluginDetailsChannelsCardMessages as messages } from "./messages";
+import { Pill } from "../../../components/Pill/Pill";
 
 const useStyles = makeStyles(
   theme => ({

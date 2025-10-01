@@ -1,6 +1,4 @@
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
-import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import { DetailPageLayout } from "@dashboard/components/Layouts";
 import { Savebar } from "@dashboard/components/Savebar";
 import { OrderSettingsFragment, ShopOrderSettingsFragment } from "@dashboard/graphql";
 import { SubmitPromise } from "@dashboard/hooks/useForm";
@@ -8,11 +6,12 @@ import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { orderListUrl } from "@dashboard/orders/urls";
 import { Box } from "@saleor/macaw-ui-next";
 import { useIntl } from "react-intl";
-
-import { OrderFulfillmentSettings } from "../OrderFulfillmentSettings";
 import { OrderSettings } from "../OrderSettings/OrderSettings";
 import { OrderSettingsForm } from "./form";
 import { OrderSettingsFormData } from "./types";
+import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
+import { OrderFulfillmentSettings } from "../OrderFulfillmentSettings/OrderFulfillmentSettings";
 
 interface OrderSettingsPageProps {
   orderSettings: OrderSettingsFragment;

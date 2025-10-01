@@ -1,11 +1,11 @@
 import { ActionDialogProps } from "@dashboard/components/ActionDialog";
-import { useGiftCardList } from "@dashboard/giftCards/GiftCardsList/providers/GiftCardListProvider";
 import { GIFT_CARD_LIST_QUERY } from "@dashboard/giftCards/GiftCardsList/queries";
 import { DialogProps } from "@dashboard/types";
 
 import { GiftCardDeleteDialogContent, SINGLE } from "./GiftCardDeleteDialogContent";
 import { useGiftCardBulkDelete } from "./useGiftCardBulkDelete";
 import { useGiftCardSingleDelete } from "./useGiftCardSingleDelete";
+import { useGiftCardList } from "../../GiftCardsList/providers/GiftCardListProvider/GiftCardListProvider";
 
 interface GiftCardDeleteDialogProps extends DialogProps {
   refetchQueries?: string[];

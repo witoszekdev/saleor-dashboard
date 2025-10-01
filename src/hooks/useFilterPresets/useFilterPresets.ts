@@ -1,13 +1,13 @@
-import { SaveFilterTabDialogFormData } from "@dashboard/components/SaveFilterTabDialog";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
 import {
   getActiveTabIndexAfterTabDelete,
   getNextUniqueTabName,
 } from "@dashboard/products/views/ProductList/utils";
-import { GetFilterTabsOutput, StorageUtils } from "@dashboard/utils/filters";
 import { prepareQs } from "@dashboard/utils/filters/qs";
 import { stringify } from "qs";
 import { useState } from "react";
+import { SaveFilterTabDialogFormData } from "../../components/SaveFilterTabDialog/SaveFilterTabDialog";
+import { GetFilterTabsOutput, StorageUtils } from "../../utils/filters/storage";
 
 export interface UseFilterPresets {
   presetIdToDelete: number | null;

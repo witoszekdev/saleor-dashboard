@@ -5,10 +5,10 @@ import { AppPermissionsDialogMessages } from "@dashboard/apps/components/AppPerm
 import { useGetAvailableAppPermissions } from "@dashboard/apps/hooks/useGetAvailableAppPermissions";
 import { DashboardModal } from "@dashboard/components/Modal";
 import { PermissionEnum, useAppQuery, useAppUpdatePermissionsMutation } from "@dashboard/graphql";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { Box, Skeleton, Text } from "@saleor/macaw-ui-next";
 import { useEffect } from "react";
 import { useIntl } from "react-intl";
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
 
 const messages = AppPermissionsDialogMessages.dialogRoot;
 

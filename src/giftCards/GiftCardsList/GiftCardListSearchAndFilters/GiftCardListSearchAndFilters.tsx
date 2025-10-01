@@ -1,9 +1,6 @@
 // @ts-strict-ignore
 import { useAppChannel } from "@dashboard/components/AppLayout/AppChannelContext";
-import { ListFilters } from "@dashboard/components/AppLayout/ListFilters";
 import { BulkDeleteButton } from "@dashboard/components/BulkDeleteButton";
-import { DeleteFilterTabDialog } from "@dashboard/components/DeleteFilterTabDialog";
-import { SaveFilterTabDialog } from "@dashboard/components/SaveFilterTabDialog";
 import { DEFAULT_INITIAL_SEARCH_DATA } from "@dashboard/config";
 import { useFlag } from "@dashboard/featureFlags";
 import { useGiftCardCurrenciesQuery } from "@dashboard/graphql";
@@ -18,14 +15,17 @@ import compact from "lodash/compact";
 import { FormattedMessage, useIntl } from "react-intl";
 
 import { createFilterStructure, getFilterOpts } from "../filters";
-import { GiftCardListBulkActions } from "../GiftCardListBulkActions";
-import { useGiftCardListDialogs } from "../providers/GiftCardListDialogsProvider";
-import { useGiftCardList } from "../providers/GiftCardListProvider";
 import { GiftCardListActionParamsEnum } from "../types";
 import {
   giftCardListFilterErrorMessages as errorMessages,
   giftCardListSearchAndFiltersMessages as messages,
 } from "./messages";
+import { ListFilters } from "../../../components/AppLayout/ListFilters/ListFilters";
+import { DeleteFilterTabDialog } from "../../../components/DeleteFilterTabDialog/DeleteFilterTabDialog";
+import { SaveFilterTabDialog } from "../../../components/SaveFilterTabDialog/SaveFilterTabDialog";
+import { GiftCardListBulkActions } from "../GiftCardListBulkActions/GiftCardListBulkActions";
+import { useGiftCardListDialogs } from "../providers/GiftCardListDialogsProvider/GiftCardListDialogsProvider";
+import { useGiftCardList } from "../providers/GiftCardListProvider/GiftCardListProvider";
 
 const GiftCardListSearchAndFilters = () => {
   const intl = useIntl();

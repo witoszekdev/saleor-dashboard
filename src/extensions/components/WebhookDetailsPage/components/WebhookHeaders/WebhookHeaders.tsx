@@ -1,5 +1,4 @@
 import { DashboardCard } from "@dashboard/components/Card";
-import { TableRowLink } from "@dashboard/components/TableRowLink";
 import { FormChange } from "@dashboard/hooks/useForm";
 import { Table, TableCell, TableHead } from "@material-ui/core";
 import { Button, ChervonDownIcon, Skeleton, Text } from "@saleor/macaw-ui-next";
@@ -12,6 +11,7 @@ import { messages } from "./messages";
 import { useStyles } from "./styles";
 import { hasEmptyHeader, mapHeaders, stringifyHeaders } from "./utils";
 import { WebhookHeadersTableBody } from "./WebhookHeadersTableBody";
+import { TableRowLink } from "../../../../../components/TableRowLink/TableRowLink";
 
 export interface WebhookHeadersProps {
   data: WebhookFormData;

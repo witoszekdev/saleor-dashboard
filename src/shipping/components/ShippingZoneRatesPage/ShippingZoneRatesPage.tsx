@@ -2,9 +2,6 @@ import { ChannelShippingData } from "@dashboard/channels/utils";
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
 import { CardSpacer } from "@dashboard/components/CardSpacer";
 import { ChannelsAvailability as ChannelsAvailabilityCard } from "@dashboard/components/ChannelsAvailabilityCard";
-import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
-import { WithFormId } from "@dashboard/components/Form";
-import { DetailPageLayout } from "@dashboard/components/Layouts";
 import { Metadata } from "@dashboard/components/Metadata/Metadata";
 import { Savebar } from "@dashboard/components/Savebar";
 import {
@@ -23,11 +20,6 @@ import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { useStateUpdate } from "@dashboard/hooks/useStateUpdate";
 import { validatePrice } from "@dashboard/products/utils/validation";
 import { handleTaxClassChange } from "@dashboard/productTypes/handlers";
-import { OrderValue } from "@dashboard/shipping/components/OrderValue";
-import { OrderWeight } from "@dashboard/shipping/components/OrderWeight";
-import { PricingCard } from "@dashboard/shipping/components/PricingCard";
-import { ShippingMethodProducts } from "@dashboard/shipping/components/ShippingMethodProducts";
-import { ShippingRateInfo } from "@dashboard/shipping/components/ShippingRateInfo";
 import { createChannelsChangeHandler } from "@dashboard/shipping/handlers";
 import { FetchMoreProps, ListActions, ListProps } from "@dashboard/types";
 import { mapEdgesToItems, mapMetadataItemToInput } from "@dashboard/utils/maps";
@@ -35,10 +27,17 @@ import { useMetadataChangeTrigger } from "@dashboard/utils/metadata/useMetadataC
 import { RichTextContext } from "@dashboard/utils/richText/context";
 import { useRichText } from "@dashboard/utils/richText/useRichText";
 import { FormEventHandler, useMemo } from "react";
-
-import { ShippingMethodTaxes } from "../ShippingMethodTaxes";
-import { ShippingZonePostalCodes } from "../ShippingZonePostalCodes";
 import { ShippingZoneRateUpdateFormData } from "./types";
+import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import { WithFormId } from "../../../components/Form/types";
+import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
+import { OrderValue } from "../OrderValue/OrderValue";
+import { OrderWeight } from "../OrderWeight/OrderWeight";
+import { PricingCard } from "../PricingCard/PricingCard";
+import { ShippingMethodProducts } from "../ShippingMethodProducts/ShippingMethodProducts";
+import { ShippingRateInfo } from "../ShippingRateInfo/ShippingRateInfo";
+import { ShippingMethodTaxes } from "../ShippingMethodTaxes/ShippingMethodTaxes";
+import { ShippingZonePostalCodes } from "../ShippingZonePostalCodes/ShippingZonePostalCodes";
 
 interface ShippingZoneRatesPageProps
   extends Pick<ListProps, Exclude<keyof ListProps, "getRowHref">>,

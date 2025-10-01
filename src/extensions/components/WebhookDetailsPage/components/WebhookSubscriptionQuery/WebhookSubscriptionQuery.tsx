@@ -2,7 +2,6 @@
 import "graphiql/graphiql.min.css";
 
 import { DashboardCard } from "@dashboard/components/Card";
-import { GraphiQL } from "@dashboard/components/GraphiQL";
 import { WebhookErrorFragment } from "@dashboard/graphql";
 import { getFormErrors } from "@dashboard/utils/errors";
 import { useExplorerPlugin } from "@graphiql/plugin-explorer";
@@ -12,6 +11,7 @@ import { defineMessages, useIntl } from "react-intl";
 
 import { WebhookFormData } from "../../WebhookDetailsPage";
 import { useStyles } from "./styles";
+import { GraphiQL } from "../../../../../components/GraphiQL/GraphiQL";
 
 const messages = defineMessages({
   title: {

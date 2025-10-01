@@ -1,4 +1,3 @@
-import { mapAPIRuleToForm, Rule } from "@dashboard/discounts/models";
 import { sortRules } from "@dashboard/discounts/utils";
 import {
   PromotionDetailsFragment,
@@ -9,6 +8,8 @@ import { CommonError } from "@dashboard/utils/errors/common";
 import { useEffect, useState } from "react";
 
 import { getCurrentConditionsValuesLabels } from "../utils";
+import { mapAPIRuleToForm } from "../../../models/transformRule";
+import { Rule } from "../../../models/Rule";
 
 interface UseRulesHandlersProps {
   data: PromotionDetailsFragment | undefined | null;

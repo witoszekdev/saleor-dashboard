@@ -4,11 +4,10 @@ import { OrderLineFragment } from "@dashboard/graphql";
 import { commonMessages } from "@dashboard/intl";
 import { Button, Text } from "@saleor/macaw-ui-next";
 import { FormattedMessage } from "react-intl";
-
-import { OrderCardTitle } from "../OrderCardTitle";
-import { OrderDetailsDatagrid } from "../OrderDetailsDatagrid";
 import { useStyles } from "./styles";
 import { toLineWithUnfulfilledQuantity } from "./utils";
+import { OrderCardTitle } from "../OrderCardTitle/OrderCardTitle";
+import { OrderDetailsDatagrid } from "../OrderDetailsDatagrid/OrderDetailsDatagrid";
 
 interface OrderUnfulfilledProductsCardProps {
   showFulfillmentAction: boolean;

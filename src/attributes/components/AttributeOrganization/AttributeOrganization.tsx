@@ -4,8 +4,7 @@ import { makeStyles } from "@saleor/macaw-ui";
 import { Box, RadioGroup, Text } from "@saleor/macaw-ui-next";
 import * as React from "react";
 import { defineMessages, FormattedMessage, useIntl } from "react-intl";
-
-import { AttributePageFormData } from "../AttributePage";
+import { AttributePageFormData } from "../AttributePage/AttributePage";
 
 interface AttributeOrganizationProps {
   canChangeType: boolean;

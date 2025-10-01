@@ -1,11 +1,8 @@
 // @ts-strict-ignore
 import { TopNav } from "@dashboard/components/AppLayout/TopNav";
 import { CardTitle } from "@dashboard/components/CardTitle";
-import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import { Grid } from "@dashboard/components/Grid";
-import { DetailPageLayout } from "@dashboard/components/Layouts";
 import { Savebar } from "@dashboard/components/Savebar";
-import { VerticalSpacer } from "@dashboard/components/VerticalSpacer";
 import { configurationMenuUrl } from "@dashboard/configuration";
 import {
   CountryCode,
@@ -15,7 +12,6 @@ import {
 import { SubmitPromise } from "@dashboard/hooks/useForm";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
 import { parseQuery } from "@dashboard/orders/components/OrderCustomerAddressesEditDialog/utils";
-import { TaxPageTitle } from "@dashboard/taxes/components/TaxPageTitle";
 import { taxesMessages } from "@dashboard/taxes/messages";
 import { isLastElement } from "@dashboard/taxes/utils/utils";
 import { Card, CardContent, Divider, InputAdornment, TextField } from "@material-ui/core";
@@ -31,11 +27,14 @@ import {
 import { Box, Skeleton } from "@saleor/macaw-ui-next";
 import { Fragment, useMemo, useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
-
-import { TaxInput } from "../../components/TaxInput";
 import { TaxCountriesForm } from "./form";
 import { useStyles } from "./styles";
-import { TaxCountriesMenu } from "./TaxCountriesMenu";
+import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
+import { DetailPageLayout } from "../../../components/Layouts/Detail/index";
+import { VerticalSpacer } from "../../../components/VerticalSpacer/VerticalSpacer";
+import { TaxPageTitle } from "../../components/TaxPageTitle/TaxPageTitle";
+import { TaxInput } from "../../components/TaxInput/TaxInput";
+import { TaxCountriesMenu } from "./TaxCountriesMenu/TaxCountriesMenu";
 
 interface TaxCountriesPageProps {
   countryTaxesData: TaxCountryConfigurationFragment[] | undefined;

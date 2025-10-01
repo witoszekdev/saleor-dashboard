@@ -2,11 +2,11 @@ import { ChannelData } from "@dashboard/channels/utils";
 import { ColumnCategory } from "@dashboard/components/Datagrid/ColumnPicker/useColumns";
 import { AvailableColumn } from "@dashboard/components/Datagrid/types";
 import { AttributeInputTypeEnum, ProductFragment, WarehouseFragment } from "@dashboard/graphql";
-import { useClientPagination } from "@dashboard/hooks/useClientPagination";
 import { useState } from "react";
 import { IntlShape } from "react-intl";
 
 import { messages } from "./messages";
+import { useClientPagination } from "../../../hooks/useClientPagination/useClientPagination";
 
 export const variantsStaticColumnsAdapter = (intl: IntlShape) => [
   {

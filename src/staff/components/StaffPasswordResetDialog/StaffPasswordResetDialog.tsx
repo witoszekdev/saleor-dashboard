@@ -2,14 +2,14 @@ import { ChangingPasswordWarning } from "@dashboard/auth/components/ChangingPass
 import { useLastLoginMethod } from "@dashboard/auth/hooks/useLastLoginMethod";
 import { getNewPasswordResetRedirectUrl } from "@dashboard/auth/utils";
 import { BackButton } from "@dashboard/components/BackButton";
-import { ConfirmButton } from "@dashboard/components/ConfirmButton";
 import { DashboardModal } from "@dashboard/components/Modal";
 import { useRequestPasswordResetMutation } from "@dashboard/graphql";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { DialogProps } from "@dashboard/types";
 import { Box, Input, Paragraph } from "@saleor/macaw-ui-next";
 import React from "react";
 import { FormattedMessage, useIntl } from "react-intl";
+import { ConfirmButton } from "../../../components/ConfirmButton/ConfirmButton";
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
 
 export const StaffPasswordResetDialog: React.FC<DialogProps> = ({ open, onClose }) => {
   const intl = useIntl();

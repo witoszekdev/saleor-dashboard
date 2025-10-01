@@ -1,5 +1,4 @@
 import { TopNavWrapper } from "@dashboard/components/AppLayout";
-import { DetailPageLayout } from "@dashboard/components/Layouts";
 import { OrderDetailsFragment } from "@dashboard/graphql";
 import { Divider } from "@saleor/macaw-ui-next";
 
@@ -14,6 +13,7 @@ import { OrderCustomerNote } from "./order-notes";
 import { OrderRefunds } from "./order-refunds/order-refunds";
 import { OrderRefundsViewModel } from "./order-refunds/order-refunds-view-model";
 import { OrderSummary } from "./order-summary/order-summary";
+import { DetailPageLayout } from "../components/Layouts/Detail/index";
 
 export const OrderDetailsPage = ({ order }: { order: OrderDetailsFragment }) => {
   return (

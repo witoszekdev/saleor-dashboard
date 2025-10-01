@@ -3,22 +3,18 @@ import { useAppChannel } from "@dashboard/components/AppLayout/AppChannelContext
 import { WindowTitle } from "@dashboard/components/WindowTitle";
 import { usePermissionGroupCreateMutation } from "@dashboard/graphql";
 import { useNavigator } from "@dashboard/hooks/useNavigator";
-import { useNotifier } from "@dashboard/hooks/useNotifier";
 import { useShop } from "@dashboard/hooks/useShop";
 import { extractMutationErrors } from "@dashboard/misc";
-import { PermissionData } from "@dashboard/permissionGroups/components/PermissionGroupDetailsPage";
 import { useMemo } from "react";
 import { useIntl } from "react-intl";
-
-import {
-  PermissionGroupCreateFormData,
-  PermissionGroupCreatePage,
-} from "../../components/PermissionGroupCreatePage";
 import { permissionGroupDetailsUrl } from "../../urls";
 import {
   checkIfUserHasRestictedAccessToChannels,
   getUserAccessibleChannelsOptions,
 } from "../../utils";
+import { useNotifier } from "../../../hooks/useNotifier/useNotifier";
+import { PermissionData } from "../../components/PermissionGroupDetailsPage/PermissionGroupDetailsPage";
+import { PermissionGroupCreateFormData, PermissionGroupCreatePage } from "../../components/PermissionGroupCreatePage/PermissionGroupCreatePage";
 
 export const PermissionGroupCreate = () => {
   const navigate = useNavigator();

@@ -1,7 +1,5 @@
 // @ts-strict-ignore
 import { DashboardCard } from "@dashboard/components/Card";
-import { ResponsiveTable } from "@dashboard/components/ResponsiveTable";
-import { TableRowLink } from "@dashboard/components/TableRowLink";
 import { LanguageFragment } from "@dashboard/graphql";
 import { languageEntitiesUrl } from "@dashboard/translations/urls";
 import { TableBody, TableCell } from "@material-ui/core";
@@ -11,6 +9,8 @@ import { clsx } from "clsx";
 import { FormattedMessage } from "react-intl";
 
 import { maybe, renderCollection } from "../../../misc";
+import { ResponsiveTable } from "../../../components/ResponsiveTable/ResponsiveTable";
+import { TableRowLink } from "../../../components/TableRowLink/TableRowLink";
 
 interface TranslationsLanguageListProps {
   languages: LanguageFragment[];
