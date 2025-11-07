@@ -1,6 +1,6 @@
-import { ConfirmButton, ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import { ConditionalFilters } from "@dashboard/components/ConditionalFilter";
 import { useConditionalFilterContext } from "@dashboard/components/ConditionalFilter/context";
+import { ConfirmButton, ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import { InfiniteScroll } from "@dashboard/components/InfiniteScroll";
 import { DashboardModal } from "@dashboard/components/Modal";
 import ResponsiveTable from "@dashboard/components/ResponsiveTable";
@@ -61,16 +61,8 @@ export const AssignProductDialogSingle = (props: AssignProductDialogSingleProps)
   const [selectedProductId, setSelectedProductId] = useState<string>(selectedId ?? "");
   const [isFilterOpen, setIsFilterOpen] = useState(false);
 
-  // Try to access ConditionalFilter context if available
-  let conditionalFilterContext;
-
-  try {
-    conditionalFilterContext = useConditionalFilterContext();
-  } catch {
-    // Context not available - modal not wrapped with provider
-    conditionalFilterContext = null;
-  }
-
+  // Access ConditionalFilter context (provided by AssignAttributeValueDialog wrapper)
+  const conditionalFilterContext = useConditionalFilterContext();
   const { valueProvider, containerState } = conditionalFilterContext || {};
 
   useEffect(() => {
@@ -113,7 +105,7 @@ export const AssignProductDialogSingle = (props: AssignProductDialogSingleProps)
   return (
     <>
       <Box display="flex" gap={2} alignItems="flex-end">
-        <Box flexGrow={1}>
+        <Box flexGrow="1">
           <TextField
             name="query"
             value={query}
@@ -133,7 +125,7 @@ export const AssignProductDialogSingle = (props: AssignProductDialogSingleProps)
               <DropdownButton data-test-id="filters-button">
                 {intl.formatMessage(
                   {
-                    id: "9YazHG",
+                    id: "ZcpkEs",
                     defaultMessage: "Filters{count, plural, =0 {} other { ({count})}}",
                   },
                   {
@@ -178,7 +170,7 @@ export const AssignProductDialogSingle = (props: AssignProductDialogSingleProps)
                         }}
                       >
                         {intl.formatMessage({
-                          id: "47FYwb",
+                          id: "rbrahO",
                           defaultMessage: "Close",
                         })}
                       </Button>

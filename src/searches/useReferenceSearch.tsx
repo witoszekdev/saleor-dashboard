@@ -1,12 +1,8 @@
 import { FilterContainer } from "@dashboard/components/ConditionalFilter/FilterElement";
-import {
-  createPageQueryVariables,
-  createProductQueryVariables,
-} from "@dashboard/components/ConditionalFilter/queryVariables";
+import { createProductQueryVariables } from "@dashboard/components/ConditionalFilter/queryVariables";
 import { DEFAULT_INITIAL_SEARCH_DATA } from "@dashboard/config";
 import {
   AttributeDetailsFragment,
-  PageFilterInput,
   ProductWhereInput,
   VariantAttributeFragment,
 } from "@dashboard/graphql";
@@ -64,24 +60,6 @@ const mergeProductWhereFilters = (
   };
 };
 
-/**
- * Merges the reference type filter with conditional filter variables for pages
- */
-const mergePageFilters = (
-  referenceTypeFilter: PageFilterInput | undefined,
-  conditionalFilter: PageFilterInput,
-): PageFilterInput => {
-  if (!referenceTypeFilter) {
-    return conditionalFilter;
-  }
-
-  // For PageFilterInput, we need to merge the properties
-  return {
-    ...referenceTypeFilter,
-    ...conditionalFilter,
-  };
-};
-
 export const useReferenceProductSearch = (
   refAttr: AttributeWithReferenceTypes | undefined,
   filterContainer?: FilterContainer,
@@ -105,8 +83,8 @@ export const useReferenceProductSearch = (
 
     return {
       ...baseVariables,
-      ...conditionalFilterVars,
       where: mergedWhere,
+      ...(conditionalFilterVars.channel?.eq ? { channel: conditionalFilterVars.channel.eq } : {}),
     };
   }, [baseVariables, filterContainer]);
 
@@ -115,7 +93,7 @@ export const useReferenceProductSearch = (
 
 export const useReferencePageSearch = (
   refAttr: AttributeWithReferenceTypes | undefined,
-  filterContainer?: FilterContainer,
+  _filterContainer?: FilterContainer,
 ) => {
   const ids = useMemo(() => getAllowedReferenceTypeIds(refAttr, ReferenceType.PageType), [refAttr]);
   const baseVariables = useMemo(
@@ -123,19 +101,9 @@ export const useReferencePageSearch = (
     [ids],
   );
 
-  const variables = useMemo(() => {
-    if (!filterContainer || filterContainer.length === 0) {
-      return baseVariables;
-    }
-
-    const conditionalFilterVars = createPageQueryVariables(filterContainer);
-    const mergedWhere = mergePageFilters(baseVariables.where, conditionalFilterVars);
-
-    return {
-      ...baseVariables,
-      where: mergedWhere,
-    };
-  }, [baseVariables, filterContainer]);
-
-  return usePageSearch({ variables });
+  // Note: PageFilterInput and PageWhereInput are incompatible types
+  // The search query uses PageWhereInput but conditional filters create PageFilterInput
+  // For now, we only support the base reference type filtering for pages
+  // TODO: Add support for conditional filters when PageWhereInput filter conversion is available
+  return usePageSearch({ variables: baseVariables });
 };
