@@ -1,5 +1,5 @@
-import { FilterContainer } from "@dashboard/components/ConditionalFilter/FilterElement";
 import { createProductQueryVariables } from "@dashboard/components/ConditionalFilter/queryVariables";
+import { TokenArray } from "@dashboard/components/ConditionalFilter/ValueProvider/TokenArray";
 import { DEFAULT_INITIAL_SEARCH_DATA } from "@dashboard/config";
 import {
   AttributeDetailsFragment,
@@ -9,6 +9,7 @@ import {
 import usePageSearch from "@dashboard/searches/usePageSearch";
 import useProductSearch from "@dashboard/searches/useProductSearch";
 import { useMemo } from "react";
+import { useLocation } from "react-router";
 
 enum ReferenceType {
   ProductType = "ProductType",
@@ -60,10 +61,8 @@ const mergeProductWhereFilters = (
   };
 };
 
-export const useReferenceProductSearch = (
-  refAttr: AttributeWithReferenceTypes | undefined,
-  filterContainer?: FilterContainer,
-) => {
+export const useReferenceProductSearch = (refAttr: AttributeWithReferenceTypes | undefined) => {
+  const location = useLocation();
   const ids = useMemo(
     () => getAllowedReferenceTypeIds(refAttr, ReferenceType.ProductType),
     [refAttr],
@@ -72,6 +71,40 @@ export const useReferenceProductSearch = (
     () => buildReferenceSearchVariables(ids, ReferenceWhereKey.ProductType),
     [ids],
   );
+
+  // Read filter container from URL when modal is open (action=assign-attribute-value)
+  const filterContainer = useMemo(() => {
+    const params = new URLSearchParams(location.search);
+
+    // Only parse filters if the assign attribute modal is open
+    if (params.get("action") !== "assign-attribute-value") {
+      return undefined;
+    }
+
+    // Remove non-filter params
+    params.delete("action");
+    params.delete("id");
+    params.delete("asc");
+    params.delete("sort");
+    params.delete("activeTab");
+    params.delete("query");
+    params.delete("before");
+    params.delete("after");
+
+    const urlString = params.toString();
+
+    if (!urlString) {
+      return undefined;
+    }
+
+    try {
+      const tokenArray = new TokenArray(urlString);
+
+      return tokenArray.asFilterValueFromEmpty();
+    } catch {
+      return undefined;
+    }
+  }, [location.search]);
 
   const variables = useMemo(() => {
     if (!filterContainer || filterContainer.length === 0) {
@@ -91,10 +124,7 @@ export const useReferenceProductSearch = (
   return useProductSearch({ variables });
 };
 
-export const useReferencePageSearch = (
-  refAttr: AttributeWithReferenceTypes | undefined,
-  _filterContainer?: FilterContainer,
-) => {
+export const useReferencePageSearch = (refAttr: AttributeWithReferenceTypes | undefined) => {
   const ids = useMemo(() => getAllowedReferenceTypeIds(refAttr, ReferenceType.PageType), [refAttr]);
   const baseVariables = useMemo(
     () => buildReferenceSearchVariables(ids, ReferenceWhereKey.PageType),
