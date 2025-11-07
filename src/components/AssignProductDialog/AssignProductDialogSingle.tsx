@@ -7,7 +7,7 @@ import ResponsiveTable from "@dashboard/components/ResponsiveTable";
 import TableCellAvatar from "@dashboard/components/TableCellAvatar";
 import TableRowLink from "@dashboard/components/TableRowLink";
 import useModalDialogOpen from "@dashboard/hooks/useModalDialogOpen";
-import useSearchQuery from "@dashboard/hooks/useSearchQuery";
+import useSearchQueryFromUrl from "@dashboard/hooks/useSearchQueryFromUrl";
 import { maybe } from "@dashboard/misc";
 import { Container, FetchMoreProps } from "@dashboard/types";
 import { CircularProgress, Radio, TableBody, TableCell, TextField } from "@material-ui/core";
@@ -57,7 +57,7 @@ export const AssignProductDialogSingle = (props: AssignProductDialogSingleProps)
   } = props;
   const classes = useStyles(props);
   const intl = useIntl();
-  const [query, onQueryChange, queryReset] = useSearchQuery(onFetch);
+  const [query, onQueryChange, queryReset] = useSearchQueryFromUrl(onFetch);
   const [selectedProductId, setSelectedProductId] = useState<string>(selectedId ?? "");
   const [isFilterOpen, setIsFilterOpen] = useState(false);
 

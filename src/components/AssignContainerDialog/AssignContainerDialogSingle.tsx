@@ -6,7 +6,7 @@ import { DashboardModal } from "@dashboard/components/Modal";
 import ResponsiveTable from "@dashboard/components/ResponsiveTable";
 import TableRowLink from "@dashboard/components/TableRowLink";
 import useModalDialogOpen from "@dashboard/hooks/useModalDialogOpen";
-import useSearchQuery from "@dashboard/hooks/useSearchQuery";
+import useSearchQueryFromUrl from "@dashboard/hooks/useSearchQueryFromUrl";
 import { Container, FetchMoreProps } from "@dashboard/types";
 import { CircularProgress, Radio, TableBody, TableCell, TextField } from "@material-ui/core";
 import { Box, Button, DropdownButton, Popover, Text } from "@saleor/macaw-ui-next";
@@ -50,7 +50,7 @@ export const AssignContainerDialogSingle = (props: AssignContainerDialogSinglePr
   } = props;
   const classes = useStyles(props);
   const intl = useIntl();
-  const [query, onQueryChange, queryReset] = useSearchQuery(onFetch);
+  const [query, onQueryChange, queryReset] = useSearchQueryFromUrl(onFetch);
   const [selectedContainerId, setSelectedContainerId] = useState<string>(selectedId ?? "");
   const [isFilterOpen, setIsFilterOpen] = useState(false);
 

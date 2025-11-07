@@ -9,7 +9,7 @@ import TableCellAvatar from "@dashboard/components/TableCellAvatar";
 import TableRowLink from "@dashboard/components/TableRowLink";
 import { SearchProductsQuery } from "@dashboard/graphql";
 import useModalDialogOpen from "@dashboard/hooks/useModalDialogOpen";
-import useSearchQuery from "@dashboard/hooks/useSearchQuery";
+import useSearchQueryFromUrl from "@dashboard/hooks/useSearchQueryFromUrl";
 import { maybe, renderCollection } from "@dashboard/misc";
 import { Container, FetchMoreProps, RelayToFlat } from "@dashboard/types";
 import { CircularProgress, Radio, TableBody, TableCell, TextField } from "@material-ui/core";
@@ -53,7 +53,7 @@ export const AssignVariantDialogSingle = (props: AssignVariantDialogSingleProps)
   } = props;
   const classes = useStyles(props);
   const intl = useIntl();
-  const [query, onQueryChange, queryReset] = useSearchQuery(onFetch);
+  const [query, onQueryChange, queryReset] = useSearchQueryFromUrl(onFetch);
   const [selectedVariantId, setSelectedVariantId] = useState<string>(selectedId ?? "");
   const [isFilterOpen, setIsFilterOpen] = useState(false);
 
