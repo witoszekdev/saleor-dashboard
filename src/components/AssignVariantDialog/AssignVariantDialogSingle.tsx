@@ -1,4 +1,6 @@
 import { ConfirmButton, ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
+import { ConditionalFilters } from "@dashboard/components/ConditionalFilter";
+import { useConditionalFilterContext } from "@dashboard/components/ConditionalFilter/context";
 import { InfiniteScroll } from "@dashboard/components/InfiniteScroll";
 import { DashboardModal } from "@dashboard/components/Modal";
 import Money from "@dashboard/components/Money";
@@ -11,7 +13,7 @@ import useSearchQuery from "@dashboard/hooks/useSearchQuery";
 import { maybe, renderCollection } from "@dashboard/misc";
 import { Container, FetchMoreProps, RelayToFlat } from "@dashboard/types";
 import { CircularProgress, Radio, TableBody, TableCell, TextField } from "@material-ui/core";
-import { Text } from "@saleor/macaw-ui-next";
+import { Box, Button, DropdownButton, Popover, Text } from "@saleor/macaw-ui-next";
 import { Fragment, useMemo, useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
@@ -53,6 +55,19 @@ export const AssignVariantDialogSingle = (props: AssignVariantDialogSingleProps)
   const intl = useIntl();
   const [query, onQueryChange, queryReset] = useSearchQuery(onFetch);
   const [selectedVariantId, setSelectedVariantId] = useState<string>(selectedId ?? "");
+  const [isFilterOpen, setIsFilterOpen] = useState(false);
+
+  // Try to access ConditionalFilter context if available
+  let conditionalFilterContext;
+
+  try {
+    conditionalFilterContext = useConditionalFilterContext();
+  } catch {
+    // Context not available - modal not wrapped with provider
+    conditionalFilterContext = null;
+  }
+
+  const { valueProvider, containerState } = conditionalFilterContext || {};
 
   const handleClose = () => {
     queryReset();
@@ -104,18 +119,85 @@ export const AssignVariantDialogSingle = (props: AssignVariantDialogSingleProps)
 
   return (
     <>
-      <TextField
-        name="query"
-        value={query}
-        onChange={onQueryChange}
-        label={intl.formatMessage(messages.assignVariantDialogSearch)}
-        placeholder={intl.formatMessage(messages.assignVariantDialogContent)}
-        fullWidth
-        InputProps={{
-          autoComplete: "off",
-          endAdornment: loading && <CircularProgress size={16} />,
-        }}
-      />
+      <Box display="flex" gap={2} alignItems="flex-end">
+        <Box flexGrow={1}>
+          <TextField
+            name="query"
+            value={query}
+            onChange={onQueryChange}
+            label={intl.formatMessage(messages.assignVariantDialogSearch)}
+            placeholder={intl.formatMessage(messages.assignVariantDialogContent)}
+            fullWidth
+            InputProps={{
+              autoComplete: "off",
+              endAdornment: loading && <CircularProgress size={16} />,
+            }}
+          />
+        </Box>
+        {conditionalFilterContext && (
+          <Popover open={isFilterOpen} onOpenChange={setIsFilterOpen}>
+            <Popover.Trigger>
+              <DropdownButton data-test-id="filters-button">
+                {intl.formatMessage(
+                  {
+                    id: "9YazHG",
+                    defaultMessage: "Filters{count, plural, =0 {} other { ({count})}}",
+                  },
+                  {
+                    count: valueProvider?.count || 0,
+                  },
+                )}
+              </DropdownButton>
+            </Popover.Trigger>
+            <Popover.Content align="start" onInteractOutside={() => containerState?.clearEmpty()}>
+              <Box
+                __minHeight="250px"
+                __minWidth="636px"
+                display="grid"
+                __gridTemplateRows="auto 1fr"
+              >
+                <Popover.Arrow fill="default1" />
+                <Box
+                  paddingTop={3}
+                  paddingX={3}
+                  paddingBottom={1.5}
+                  display="flex"
+                  gap={1}
+                  alignItems="center"
+                  justifyContent="space-between"
+                  backgroundColor="default1"
+                  borderTopLeftRadius={2}
+                  borderTopRightRadius={2}
+                >
+                  <Text>
+                    {intl.formatMessage({
+                      id: "zSOvI0",
+                      defaultMessage: "Filters",
+                    })}
+                  </Text>
+                  <Box display="flex" alignItems="center" gap={2}>
+                    <Popover.Close>
+                      <Button
+                        variant="tertiary"
+                        onClick={() => {
+                          containerState?.clearEmpty();
+                          setIsFilterOpen(false);
+                        }}
+                      >
+                        {intl.formatMessage({
+                          id: "47FYwb",
+                          defaultMessage: "Close",
+                        })}
+                      </Button>
+                    </Popover.Close>
+                  </Box>
+                </Box>
+                <ConditionalFilters onClose={() => setIsFilterOpen(false)} />
+              </Box>
+            </Popover.Content>
+          </Popover>
+        )}
+      </Box>
 
       <InfiniteScroll
         id={scrollableTargetId}

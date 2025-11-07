@@ -1,5 +1,15 @@
+import { FilterContainer } from "@dashboard/components/ConditionalFilter/FilterElement";
+import {
+  createPageQueryVariables,
+  createProductQueryVariables,
+} from "@dashboard/components/ConditionalFilter/queryVariables";
 import { DEFAULT_INITIAL_SEARCH_DATA } from "@dashboard/config";
-import { AttributeDetailsFragment, VariantAttributeFragment } from "@dashboard/graphql";
+import {
+  AttributeDetailsFragment,
+  PageFilterInput,
+  ProductWhereInput,
+  VariantAttributeFragment,
+} from "@dashboard/graphql";
 import usePageSearch from "@dashboard/searches/usePageSearch";
 import useProductSearch from "@dashboard/searches/useProductSearch";
 import { useMemo } from "react";
@@ -37,25 +47,95 @@ const buildReferenceSearchVariables = (
   ...(allowedIds?.length ? { where: { [whereKey]: { oneOf: allowedIds } } } : {}),
 });
 
-export const useReferenceProductSearch = (refAttr: AttributeWithReferenceTypes | undefined) => {
+/**
+ * Merges the reference type filter with conditional filter variables
+ */
+const mergeProductWhereFilters = (
+  referenceTypeFilter: ProductWhereInput | undefined,
+  conditionalFilter: ProductWhereInput,
+): ProductWhereInput => {
+  if (!referenceTypeFilter) {
+    return conditionalFilter;
+  }
+
+  // Merge both filters using AND operator
+  return {
+    AND: [referenceTypeFilter, conditionalFilter].filter(Boolean),
+  };
+};
+
+/**
+ * Merges the reference type filter with conditional filter variables for pages
+ */
+const mergePageFilters = (
+  referenceTypeFilter: PageFilterInput | undefined,
+  conditionalFilter: PageFilterInput,
+): PageFilterInput => {
+  if (!referenceTypeFilter) {
+    return conditionalFilter;
+  }
+
+  // For PageFilterInput, we need to merge the properties
+  return {
+    ...referenceTypeFilter,
+    ...conditionalFilter,
+  };
+};
+
+export const useReferenceProductSearch = (
+  refAttr: AttributeWithReferenceTypes | undefined,
+  filterContainer?: FilterContainer,
+) => {
   const ids = useMemo(
     () => getAllowedReferenceTypeIds(refAttr, ReferenceType.ProductType),
     [refAttr],
   );
-  const variables = useMemo(
+  const baseVariables = useMemo(
     () => buildReferenceSearchVariables(ids, ReferenceWhereKey.ProductType),
     [ids],
   );
 
+  const variables = useMemo(() => {
+    if (!filterContainer || filterContainer.length === 0) {
+      return baseVariables;
+    }
+
+    const conditionalFilterVars = createProductQueryVariables(filterContainer);
+    const mergedWhere = mergeProductWhereFilters(baseVariables.where, conditionalFilterVars);
+
+    return {
+      ...baseVariables,
+      ...conditionalFilterVars,
+      where: mergedWhere,
+    };
+  }, [baseVariables, filterContainer]);
+
   return useProductSearch({ variables });
 };
 
-export const useReferencePageSearch = (refAttr: AttributeWithReferenceTypes | undefined) => {
+export const useReferencePageSearch = (
+  refAttr: AttributeWithReferenceTypes | undefined,
+  filterContainer?: FilterContainer,
+) => {
   const ids = useMemo(() => getAllowedReferenceTypeIds(refAttr, ReferenceType.PageType), [refAttr]);
-  const variables = useMemo(
+  const baseVariables = useMemo(
     () => buildReferenceSearchVariables(ids, ReferenceWhereKey.PageType),
     [ids],
   );
+
+  const variables = useMemo(() => {
+    if (!filterContainer || filterContainer.length === 0) {
+      return baseVariables;
+    }
+
+    const conditionalFilterVars = createPageQueryVariables(filterContainer);
+    const mergedWhere = mergePageFilters(baseVariables.where, conditionalFilterVars);
+
+    return {
+      ...baseVariables,
+      where: mergedWhere,
+    };
+  }, [baseVariables, filterContainer]);
 
   return usePageSearch({ variables });
 };

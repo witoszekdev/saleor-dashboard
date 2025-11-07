@@ -1,4 +1,8 @@
 import {
+  ConditionalPageFilterProvider,
+  ConditionalProductFilterProvider,
+} from "@dashboard/components/ConditionalFilter/context";
+import {
   AttributeEntityTypeEnum,
   AttributeInputTypeEnum,
   SearchCategoriesQuery,
@@ -7,6 +11,7 @@ import {
 } from "@dashboard/graphql";
 import { RelayToFlat } from "@dashboard/types";
 import { defineMessages, useIntl } from "react-intl";
+import { useLocation } from "react-router";
 
 import AssignCategoryDialog from "../AssignCategoryDialog";
 import AssignCollectionDialog from "../AssignCollectionDialog";
@@ -80,6 +85,7 @@ const AssignAttributeValueDialog = ({
   ...rest
 }: AssignAttributeValueDialogProps) => {
   const intl = useIntl();
+  const location = useLocation();
   const filteredProducts = filterProductsByAttributeValues(products, attribute);
   const filteredPages = filterPagesByAttributeValues(pages, attribute);
   const filteredCollections = filterCollectionsByAttributeValues(collections, attribute);
@@ -88,40 +94,46 @@ const AssignAttributeValueDialog = ({
   switch (entityType) {
     case AttributeEntityTypeEnum.PAGE:
       return (
-        <AssignContainerDialog
-          containers={
-            filteredPages?.map(page => ({
-              id: page.id,
-              name: page.title,
-            })) ?? []
-          }
-          emptyMessage={intl.formatMessage(pagesMessages.noPagesFound)}
-          labels={{
-            confirmBtn: intl.formatMessage(pagesMessages.confirmBtn),
-            label: intl.formatMessage(pagesMessages.searchLabel),
-            placeholder: intl.formatMessage(pagesMessages.searchPlaceholder),
-            title: intl.formatMessage(pagesMessages.header),
-            ...labels,
-          }}
-          {...getSingleOrMultipleDialogProps(attribute)}
-          {...rest}
-        />
+        <ConditionalPageFilterProvider locationSearch={location.search}>
+          <AssignContainerDialog
+            containers={
+              filteredPages?.map(page => ({
+                id: page.id,
+                name: page.title,
+              })) ?? []
+            }
+            emptyMessage={intl.formatMessage(pagesMessages.noPagesFound)}
+            labels={{
+              confirmBtn: intl.formatMessage(pagesMessages.confirmBtn),
+              label: intl.formatMessage(pagesMessages.searchLabel),
+              placeholder: intl.formatMessage(pagesMessages.searchPlaceholder),
+              title: intl.formatMessage(pagesMessages.header),
+              ...labels,
+            }}
+            {...getSingleOrMultipleDialogProps(attribute)}
+            {...rest}
+          />
+        </ConditionalPageFilterProvider>
       );
     case AttributeEntityTypeEnum.PRODUCT:
       return (
-        <AssignProductDialog
-          products={filteredProducts ?? []}
-          {...getSingleOrMultipleDialogProps(attribute)}
-          {...rest}
-        />
+        <ConditionalProductFilterProvider locationSearch={location.search}>
+          <AssignProductDialog
+            products={filteredProducts ?? []}
+            {...getSingleOrMultipleDialogProps(attribute)}
+            {...rest}
+          />
+        </ConditionalProductFilterProvider>
       );
     case AttributeEntityTypeEnum.PRODUCT_VARIANT:
       return (
-        <AssignVariantDialog
-          products={filteredProducts}
-          {...getSingleOrMultipleDialogProps(attribute)}
-          {...rest}
-        />
+        <ConditionalProductFilterProvider locationSearch={location.search}>
+          <AssignVariantDialog
+            products={filteredProducts}
+            {...getSingleOrMultipleDialogProps(attribute)}
+            {...rest}
+          />
+        </ConditionalProductFilterProvider>
       );
     case AttributeEntityTypeEnum.COLLECTION:
       return (
