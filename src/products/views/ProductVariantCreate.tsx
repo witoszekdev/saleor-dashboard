@@ -32,6 +32,7 @@ import createMetadataCreateHandler from "@dashboard/utils/handlers/metadataCreat
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { warehouseAddPath } from "@dashboard/warehouses/urls";
 import { useIntl } from "react-intl";
+import { useLocation } from "react-router-dom";
 
 import { getMutationErrors, weight } from "../../misc";
 import { ProductVariantCreateData } from "../components/ProductVariantCreatePage/form";
@@ -55,6 +56,7 @@ const ProductVariant = ({ productId, params }: ProductVariantCreateProps) => {
   const notify = useNotifier();
   const shop = useShop();
   const intl = useIntl();
+  const location = useLocation();
 
   const {
     loadMore: fetchMoreWarehouses,
@@ -306,6 +308,7 @@ const ProductVariant = ({ productId, params }: ProductVariantCreateProps) => {
         fetchMoreAttributeValues={fetchMoreAttributeValues}
         onCloseDialog={() => navigate(productVariantAddUrl(productId))}
         onAttributeSelectBlur={searchAttributeReset}
+        locationSearch={location.search}
       />
     </>
   );

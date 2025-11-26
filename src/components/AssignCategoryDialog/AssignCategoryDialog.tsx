@@ -1,7 +1,10 @@
 // @ts-strict-ignore
 import { useIntl } from "react-intl";
 
-import AssignContainerDialog, { AssignContainerDialogProps } from "../AssignContainerDialog";
+import AssignContainerDialog, {
+  AssignContainerDialogProps,
+  ContainerEntityType,
+} from "../AssignContainerDialog";
 import { messages } from "./messages";
 
 type Categories = {
@@ -13,9 +16,17 @@ interface AssignCategoryDialogProps
   extends Omit<AssignContainerDialogProps, "containers" | "labels"> {
   categories: Categories | null;
   labels?: Partial<AssignContainerDialogProps["labels"]>;
+  entityType?: ContainerEntityType;
+  locationSearch?: string;
 }
 
-const AssignCategoryDialog = ({ categories, labels, ...rest }: AssignCategoryDialogProps) => {
+const AssignCategoryDialog = ({
+  categories,
+  labels,
+  entityType,
+  locationSearch,
+  ...rest
+}: AssignCategoryDialogProps) => {
   const intl = useIntl();
 
   return (
@@ -29,6 +40,8 @@ const AssignCategoryDialog = ({ categories, labels, ...rest }: AssignCategoryDia
         confirmBtn: intl.formatMessage(messages.confirmButton),
         ...labels,
       }}
+      entityType={entityType}
+      locationSearch={locationSearch}
       {...rest}
     />
   );

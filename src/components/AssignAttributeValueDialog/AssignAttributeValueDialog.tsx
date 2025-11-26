@@ -55,6 +55,7 @@ type AssignAttributeValueDialogProps = AssignProductDialogProps & {
   pages: RelayToFlat<SearchPagesQuery["search"]>;
   collections: RelayToFlat<SearchCollectionsQuery["search"]>;
   categories: RelayToFlat<SearchCategoriesQuery["search"]>;
+  locationSearch?: string;
 };
 
 const getSingleOrMultipleDialogProps = (attribute: AttributeInput) => {
@@ -77,6 +78,7 @@ const AssignAttributeValueDialog = ({
   categories,
   attribute,
   labels,
+  locationSearch,
   ...rest
 }: AssignAttributeValueDialogProps) => {
   const intl = useIntl();
@@ -103,6 +105,8 @@ const AssignAttributeValueDialog = ({
             title: intl.formatMessage(pagesMessages.header),
             ...labels,
           }}
+          entityType="page"
+          locationSearch={locationSearch}
           {...getSingleOrMultipleDialogProps(attribute)}
           {...rest}
         />
@@ -111,6 +115,7 @@ const AssignAttributeValueDialog = ({
       return (
         <AssignProductDialog
           products={filteredProducts ?? []}
+          locationSearch={locationSearch}
           {...getSingleOrMultipleDialogProps(attribute)}
           {...rest}
         />
@@ -119,6 +124,7 @@ const AssignAttributeValueDialog = ({
       return (
         <AssignVariantDialog
           products={filteredProducts}
+          locationSearch={locationSearch}
           {...getSingleOrMultipleDialogProps(attribute)}
           {...rest}
         />
@@ -127,6 +133,8 @@ const AssignAttributeValueDialog = ({
       return (
         <AssignCollectionDialog
           collections={filteredCollections}
+          entityType="collection"
+          locationSearch={locationSearch}
           {...getSingleOrMultipleDialogProps(attribute)}
           {...rest}
         />
@@ -135,6 +143,8 @@ const AssignAttributeValueDialog = ({
       return (
         <AssignCategoryDialog
           categories={filteredCategories}
+          entityType="category"
+          locationSearch={locationSearch}
           {...getSingleOrMultipleDialogProps(attribute)}
           {...rest}
         />

@@ -1,4 +1,5 @@
 import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
+import { ConditionalProductFilterProvider } from "@dashboard/components/ConditionalFilter";
 import { DashboardModal } from "@dashboard/components/Modal";
 import { Container, DialogProps, FetchMoreProps } from "@dashboard/types";
 import { FormattedMessage } from "react-intl";
@@ -23,10 +24,11 @@ export interface AssignProductDialogProps extends FetchMoreProps, DialogProps {
   };
   selectionMode?: "single" | "multiple";
   selectedId?: string;
+  locationSearch?: string;
 }
 
 const AssignProductDialog = (props: AssignProductDialogProps) => {
-  const { selectionMode = "multiple", ...restProps } = props;
+  const { selectionMode = "multiple", locationSearch = "", ...restProps } = props;
 
   const { open, onClose } = props;
 
@@ -40,11 +42,13 @@ const AssignProductDialog = (props: AssignProductDialogProps) => {
         <DashboardModal.Header>
           <FormattedMessage {...messages.assignVariantDialogHeader} />
         </DashboardModal.Header>
-        {selectionMode === "single" ? (
-          <AssignProductDialogSingle {...restProps} />
-        ) : (
-          <AssignProductDialogMulti {...restProps} />
-        )}
+        <ConditionalProductFilterProvider locationSearch={locationSearch}>
+          {selectionMode === "single" ? (
+            <AssignProductDialogSingle {...restProps} />
+          ) : (
+            <AssignProductDialogMulti {...restProps} />
+          )}
+        </ConditionalProductFilterProvider>
       </DashboardModal.Content>
     </DashboardModal>
   );

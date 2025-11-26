@@ -113,6 +113,7 @@ interface ProductVariantCreatePageProps {
   fetchMoreWarehouses: () => void;
   searchWarehousesResult: QueryResult<SearchWarehousesQuery>;
   searchWarehouses: (query: string) => void;
+  locationSearch?: string;
 }
 
 export const ProductVariantCreatePage = ({
@@ -149,6 +150,7 @@ export const ProductVariantCreatePage = ({
   fetchMoreWarehouses,
   searchWarehousesResult,
   searchWarehouses,
+  locationSearch,
 }: ProductVariantCreatePageProps) => {
   const intl = useIntl();
   const navigate = useNavigator();
@@ -353,6 +355,7 @@ export const ProductVariantCreatePage = ({
                   onSubmit={attributeValues =>
                     handleAssignReferenceAttribute(attributeValues, data, handlers)
                   }
+                  locationSearch={locationSearch}
                 />
               )}
               {product && (

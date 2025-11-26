@@ -1,4 +1,5 @@
 import { ConfirmButton, ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
+import { ModalExpressionFilters } from "@dashboard/components/ConditionalFilter";
 import { InfiniteScroll } from "@dashboard/components/InfiniteScroll";
 import { DashboardModal } from "@dashboard/components/Modal";
 import Money from "@dashboard/components/Money";
@@ -11,7 +12,7 @@ import useSearchQuery from "@dashboard/hooks/useSearchQuery";
 import { maybe, renderCollection } from "@dashboard/misc";
 import { Container, FetchMoreProps, RelayToFlat } from "@dashboard/types";
 import { CircularProgress, Radio, TableBody, TableCell, TextField } from "@material-ui/core";
-import { Text } from "@saleor/macaw-ui-next";
+import { Box, Text } from "@saleor/macaw-ui-next";
 import { Fragment, useMemo, useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
@@ -116,6 +117,10 @@ export const AssignVariantDialogSingle = (props: AssignVariantDialogSingleProps)
           endAdornment: loading && <CircularProgress size={16} />,
         }}
       />
+
+      <Box paddingTop={2}>
+        <ModalExpressionFilters />
+      </Box>
 
       <InfiniteScroll
         id={scrollableTargetId}

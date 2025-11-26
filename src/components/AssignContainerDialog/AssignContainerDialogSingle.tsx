@@ -1,4 +1,8 @@
 import { ConfirmButton, ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
+import {
+  ModalExpressionFilters,
+  useConditionalFilterContext,
+} from "@dashboard/components/ConditionalFilter";
 import { InfiniteScroll } from "@dashboard/components/InfiniteScroll";
 import { DashboardModal } from "@dashboard/components/Modal";
 import ResponsiveTable from "@dashboard/components/ResponsiveTable";
@@ -7,7 +11,7 @@ import useModalDialogOpen from "@dashboard/hooks/useModalDialogOpen";
 import useSearchQuery from "@dashboard/hooks/useSearchQuery";
 import { Container, FetchMoreProps } from "@dashboard/types";
 import { CircularProgress, Radio, TableBody, TableCell, TextField } from "@material-ui/core";
-import { Text } from "@saleor/macaw-ui-next";
+import { Box, Text } from "@saleor/macaw-ui-next";
 import { useState } from "react";
 
 import BackButton from "../BackButton";
@@ -49,6 +53,16 @@ export const AssignContainerDialogSingle = (props: AssignContainerDialogSinglePr
   const [query, onQueryChange, queryReset] = useSearchQuery(onFetch);
   const [selectedContainerId, setSelectedContainerId] = useState<string>(selectedId ?? "");
 
+  // Check if we have a filter context (only present when entity type supports filtering)
+  let hasFilterContext = false;
+  try {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    useConditionalFilterContext();
+    hasFilterContext = true;
+  } catch {
+    // Context not available, that's fine
+  }
+
   const handleClose = () => {
     queryReset();
     onClose();
@@ -86,6 +100,12 @@ export const AssignContainerDialogSingle = (props: AssignContainerDialogSinglePr
           endAdornment: loading && <CircularProgress size={16} />,
         }}
       />
+
+      {hasFilterContext && (
+        <Box paddingTop={2}>
+          <ModalExpressionFilters />
+        </Box>
+      )}
 
       <InfiniteScroll
         id={scrollableTargetId}

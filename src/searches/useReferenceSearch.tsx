@@ -1,5 +1,10 @@
 import { DEFAULT_INITIAL_SEARCH_DATA } from "@dashboard/config";
-import { AttributeDetailsFragment, VariantAttributeFragment } from "@dashboard/graphql";
+import {
+  AttributeDetailsFragment,
+  PageWhereInput,
+  ProductWhereInput,
+  VariantAttributeFragment,
+} from "@dashboard/graphql";
 import usePageSearch from "@dashboard/searches/usePageSearch";
 import useProductSearch from "@dashboard/searches/useProductSearch";
 import { useMemo } from "react";
@@ -32,29 +37,44 @@ const getAllowedReferenceTypeIds = (
 const buildReferenceSearchVariables = (
   allowedIds: string[] | undefined,
   whereKey: ReferenceWhereKey,
-) => ({
-  ...DEFAULT_INITIAL_SEARCH_DATA,
-  ...(allowedIds?.length ? { where: { [whereKey]: { oneOf: allowedIds } } } : {}),
-});
+  additionalWhere?: ProductWhereInput | PageWhereInput,
+) => {
+  const baseWhere = allowedIds?.length ? { [whereKey]: { oneOf: allowedIds } } : {};
+  const mergedWhere =
+    additionalWhere && Object.keys(additionalWhere).length > 0
+      ? { ...baseWhere, ...additionalWhere }
+      : baseWhere;
 
-export const useReferenceProductSearch = (refAttr: AttributeWithReferenceTypes | undefined) => {
+  return {
+    ...DEFAULT_INITIAL_SEARCH_DATA,
+    ...(Object.keys(mergedWhere).length > 0 ? { where: mergedWhere } : {}),
+  };
+};
+
+export const useReferenceProductSearch = (
+  refAttr: AttributeWithReferenceTypes | undefined,
+  additionalWhere?: ProductWhereInput,
+) => {
   const ids = useMemo(
     () => getAllowedReferenceTypeIds(refAttr, ReferenceType.ProductType),
     [refAttr],
   );
   const variables = useMemo(
-    () => buildReferenceSearchVariables(ids, ReferenceWhereKey.ProductType),
-    [ids],
+    () => buildReferenceSearchVariables(ids, ReferenceWhereKey.ProductType, additionalWhere),
+    [ids, additionalWhere],
   );
 
   return useProductSearch({ variables });
 };
 
-export const useReferencePageSearch = (refAttr: AttributeWithReferenceTypes | undefined) => {
+export const useReferencePageSearch = (
+  refAttr: AttributeWithReferenceTypes | undefined,
+  additionalWhere?: PageWhereInput,
+) => {
   const ids = useMemo(() => getAllowedReferenceTypeIds(refAttr, ReferenceType.PageType), [refAttr]);
   const variables = useMemo(
-    () => buildReferenceSearchVariables(ids, ReferenceWhereKey.PageType),
-    [ids],
+    () => buildReferenceSearchVariables(ids, ReferenceWhereKey.PageType, additionalWhere),
+    [ids, additionalWhere],
   );
 
   return usePageSearch({ variables });

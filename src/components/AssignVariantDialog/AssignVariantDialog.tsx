@@ -1,4 +1,5 @@
 import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
+import { ConditionalProductFilterProvider } from "@dashboard/components/ConditionalFilter";
 import { DashboardModal } from "@dashboard/components/Modal";
 import { SearchProductsQuery } from "@dashboard/graphql";
 import { Container, DialogProps, FetchMoreProps, RelayToFlat } from "@dashboard/types";
@@ -18,10 +19,11 @@ interface AssignVariantDialogProps extends FetchMoreProps, DialogProps {
   labels?: Partial<AssignContainerDialogProps["labels"]>;
   selectionMode?: "single" | "multiple";
   selectedId?: string;
+  locationSearch?: string;
 }
 
 const AssignVariantDialog = (props: AssignVariantDialogProps) => {
-  const { selectionMode = "multiple", ...restProps } = props;
+  const { selectionMode = "multiple", locationSearch = "", ...restProps } = props;
 
   const { open, onClose } = props;
 
@@ -36,11 +38,13 @@ const AssignVariantDialog = (props: AssignVariantDialogProps) => {
           <FormattedMessage {...messages.assignVariantDialogHeader} />
         </DashboardModal.Header>
 
-        {selectionMode === "single" ? (
-          <AssignVariantDialogSingle {...restProps} />
-        ) : (
-          <AssignVariantDialogMulti {...restProps} />
-        )}
+        <ConditionalProductFilterProvider locationSearch={locationSearch}>
+          {selectionMode === "single" ? (
+            <AssignVariantDialogSingle {...restProps} />
+          ) : (
+            <AssignVariantDialogMulti {...restProps} />
+          )}
+        </ConditionalProductFilterProvider>
       </DashboardModal.Content>
     </DashboardModal>
   );
