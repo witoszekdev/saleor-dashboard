@@ -51,6 +51,7 @@ import { warehouseAddPath } from "@dashboard/warehouses/urls";
 import { useOnboarding } from "@dashboard/welcomePage/WelcomePageOnboarding/onboardingContext";
 import { useEffect, useState } from "react";
 import { useIntl } from "react-intl";
+import { useLocation } from "react-router";
 
 import { PRODUCT_CREATE_FORM_ID } from "./consts";
 import { createHandler } from "./handlers";
@@ -65,6 +66,7 @@ const ProductCreateView = ({ params }: ProductCreateProps) => {
   const shop = useShop();
   const { markOnboardingStepAsCompleted } = useOnboarding();
   const intl = useIntl();
+  const location = useLocation();
   const [productCreateComplete, setProductCreateComplete] = useState(false);
   const selectedProductTypeId = params["product-type-id"];
   const handleSelectProductType = (productTypeId: string) =>
@@ -353,6 +355,7 @@ const ProductCreateView = ({ params }: ProductCreateProps) => {
         fetchMoreWarehouses={fetchMoreWarehouses}
         searchWarehousesResult={searchWarehousesResult}
         searchWarehouses={searchWarehouses}
+        locationSearch={location.search}
       />
     </>
   );

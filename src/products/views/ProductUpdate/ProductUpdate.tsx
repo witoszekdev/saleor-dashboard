@@ -31,6 +31,7 @@ import useAttributeValueSearchHandler from "@dashboard/utils/handlers/attributeV
 import createDialogActionHandlers from "@dashboard/utils/handlers/dialogActionHandlers";
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { FormattedMessage, useIntl } from "react-intl";
+import { useLocation } from "react-router";
 
 import { getMutationState } from "../../../misc";
 import ProductUpdatePage from "../../components/ProductUpdatePage";
@@ -54,6 +55,7 @@ const ProductUpdate = ({ id, params }: ProductUpdateProps) => {
   const navigate = useNavigator();
   const notify = useNotifier();
   const intl = useIntl();
+  const location = useLocation();
   const {
     loadMore: loadMoreCategories,
     search: searchCategories,
@@ -281,6 +283,7 @@ const ProductUpdate = ({ id, params }: ProductUpdateProps) => {
         onCloseDialog={() => navigate(productUrl(id), { resetScroll: false })}
         onAttributeSelectBlur={searchAttributeReset}
         onAttributeValuesSearch={getAttributeValuesSuggestions}
+        locationSearch={location.search}
       />
       <ActionDialog
         open={params.action === "remove"}

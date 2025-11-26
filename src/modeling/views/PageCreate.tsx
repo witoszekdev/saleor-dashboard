@@ -31,6 +31,7 @@ import createMetadataCreateHandler from "@dashboard/utils/handlers/metadataCreat
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { getParsedDataForJsonStringField } from "@dashboard/utils/richText/misc";
 import { useIntl } from "react-intl";
+import { useLocation } from "react-router";
 
 import PageDetailsPage from "../components/PageDetailsPage";
 import { PageSubmitData } from "../components/PageDetailsPage/form";
@@ -45,6 +46,7 @@ const PageCreate = ({ params }: PageCreateProps) => {
   const navigate = useNavigator();
   const notify = useNotifier();
   const intl = useIntl();
+  const location = useLocation();
   const [updateMetadata] = useUpdateMetadataMutation({});
   const [updatePrivateMetadata] = useUpdatePrivateMetadataMutation({});
   const selectedPageTypeId = params["page-type-id"];
@@ -234,6 +236,7 @@ const PageCreate = ({ params }: PageCreateProps) => {
         selectedPageType={selectedPageType?.pageType}
         onSelectPageType={handleSelectPageTypeId}
         onAttributeSelectBlur={searchAttributeReset}
+        locationSearch={location.search}
       />
     </>
   );

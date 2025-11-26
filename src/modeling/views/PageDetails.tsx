@@ -42,6 +42,7 @@ import createMetadataUpdateHandler from "@dashboard/utils/handlers/metadataUpdat
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { getParsedDataForJsonStringField } from "@dashboard/utils/richText/misc";
 import { FormattedMessage, useIntl } from "react-intl";
+import { useLocation } from "react-router";
 
 import { getStringOrPlaceholder, maybe } from "../../misc";
 import PageDetailsPage from "../components/PageDetailsPage";
@@ -79,6 +80,7 @@ const PageDetails = ({ id, params }: PageDetailsProps) => {
   const navigate = useNavigator();
   const notify = useNotifier();
   const intl = useIntl();
+  const location = useLocation();
   const [updateMetadata] = useUpdateMetadataMutation({});
   const [updatePrivateMetadata] = useUpdatePrivateMetadataMutation({});
   const pageDetails = usePageDetailsQuery({
@@ -249,6 +251,7 @@ const PageDetails = ({ id, params }: PageDetailsProps) => {
         fetchMoreAttributeValues={fetchMoreAttributeValues}
         onCloseDialog={() => navigate(pageUrl(id))}
         onAttributeSelectBlur={searchAttributeReset}
+        locationSearch={location.search}
       />
       <ActionDialog
         open={params.action === "remove"}

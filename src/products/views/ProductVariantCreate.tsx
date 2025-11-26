@@ -32,7 +32,7 @@ import createMetadataCreateHandler from "@dashboard/utils/handlers/metadataCreat
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { warehouseAddPath } from "@dashboard/warehouses/urls";
 import { useIntl } from "react-intl";
-import { useLocation } from "react-router-dom";
+import { useLocation } from "react-router";
 
 import { getMutationErrors, weight } from "../../misc";
 import { ProductVariantCreateData } from "../components/ProductVariantCreatePage/form";

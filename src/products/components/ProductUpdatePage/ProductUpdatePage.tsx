@@ -124,6 +124,7 @@ interface ProductUpdatePageProps {
   onImageUpload: (file: File) => any;
   onMediaUrlUpload: (mediaUrl: string) => any;
   onSeoClick?: () => any;
+  locationSearch?: string;
 }
 
 const ProductUpdatePage = ({
@@ -178,6 +179,7 @@ const ProductUpdatePage = ({
   refetch,
   onCloseDialog,
   onAttributeSelectBlur,
+  locationSearch,
 }: ProductUpdatePageProps) => {
   // Cache inner form data so it can be passed into App when modal is opened
   const dataCache = useRef<ProductUpdateData | null>(null);
@@ -585,6 +587,7 @@ const ProductUpdatePage = ({
                     handlers,
                   )
                 }
+                locationSearch={locationSearch}
               />
             )}
 

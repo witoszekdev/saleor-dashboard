@@ -79,6 +79,7 @@ interface PageDetailsPageProps {
   onCloseDialog: () => void;
   onSelectPageType?: (pageTypeId: string) => void;
   onAttributeSelectBlur: () => void;
+  locationSearch?: string;
 }
 
 const PageDetailsPage = ({
@@ -112,6 +113,7 @@ const PageDetailsPage = ({
   onCloseDialog,
   onSelectPageType,
   onAttributeSelectBlur,
+  locationSearch,
 }: PageDetailsPageProps) => {
   const intl = useIntl();
   const { lastUsedLocaleOrFallback } = useCachedLocales();
@@ -295,6 +297,7 @@ const PageDetailsPage = ({
                 onSubmit={attributeValues =>
                   handleAssignReferenceAttribute(attributeValues, data, handlers)
                 }
+                locationSearch={locationSearch}
               />
             )}
           </DetailPageLayout>

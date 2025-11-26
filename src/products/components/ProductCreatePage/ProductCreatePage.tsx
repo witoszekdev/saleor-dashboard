@@ -101,6 +101,7 @@ interface ProductCreatePageProps {
   fetchMoreWarehouses: () => void;
   searchWarehousesResult: QueryResult<SearchWarehousesQuery>;
   searchWarehouses: (query: string) => void;
+  locationSearch?: string;
 }
 
 const ProductCreatePage = ({
@@ -152,6 +153,7 @@ const ProductCreatePage = ({
   fetchMoreWarehouses,
   searchWarehousesResult,
   searchWarehouses,
+  locationSearch,
 }: ProductCreatePageProps) => {
   const intl = useIntl();
   const navigate = useNavigator();
@@ -401,6 +403,7 @@ const ProductCreatePage = ({
                 onSubmit={attributeValues =>
                   handleAssignReferenceAttribute(attributeValues, data, handlers)
                 }
+                locationSearch={locationSearch}
               />
             )}
           </DetailPageLayout>

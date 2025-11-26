@@ -122,6 +122,7 @@ interface ProductVariantPageProps {
   fetchMoreWarehouses: () => void;
   searchWarehousesResult: QueryResult<SearchWarehousesQuery>;
   searchWarehouses: (query: string) => void;
+  locationSearch?: string;
 }
 
 export const ProductVariantPage = ({
@@ -165,6 +166,7 @@ export const ProductVariantPage = ({
   fetchMoreWarehouses,
   searchWarehousesResult,
   searchWarehouses,
+  locationSearch,
 }: ProductVariantPageProps) => {
   const intl = useIntl();
   const { user } = useUser();
@@ -417,6 +419,7 @@ export const ProductVariantPage = ({
                     onSubmit={attributeValues =>
                       handleAssignReferenceAttribute(attributeValues, data, handlers)
                     }
+                    locationSearch={locationSearch}
                   />
                 )}
                 {variant && (

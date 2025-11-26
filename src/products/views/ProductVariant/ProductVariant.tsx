@@ -54,6 +54,7 @@ import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { warehouseAddPath } from "@dashboard/warehouses/urls";
 import { useEffect, useState } from "react";
 import { useIntl } from "react-intl";
+import { useLocation } from "react-router";
 
 import ProductVariantDeleteDialog from "../../components/ProductVariantDeleteDialog";
 import { ProductVariantUpdateSubmitData } from "../../components/ProductVariantPage/form";
@@ -77,6 +78,7 @@ const ProductVariant = ({ variantId, params }: ProductUpdateProps) => {
   const navigate = useNavigator();
   const notify = useNotifier();
   const intl = useIntl();
+  const location = useLocation();
   const [errors, setErrors] = useState<ProductErrorWithAttributesFragment[]>([]);
 
   useEffect(() => {
@@ -346,6 +348,7 @@ const ProductVariant = ({ variantId, params }: ProductUpdateProps) => {
         fetchMoreAttributeValues={fetchMoreAttributeValues}
         onCloseDialog={() => navigate(productVariantEditUrl(variantId))}
         onAttributeSelectBlur={searchAttributeReset}
+        locationSearch={location.search}
       />
       <ProductVariantDeleteDialog
         confirmButtonState={deleteVariantOpts.status}
