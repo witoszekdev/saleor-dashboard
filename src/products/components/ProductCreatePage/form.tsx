@@ -59,6 +59,7 @@ import {
   validateProductCreateData,
 } from "@dashboard/products/utils/validation";
 import { PRODUCT_CREATE_FORM_ID } from "@dashboard/products/views/ProductCreate/consts";
+import { ReferenceProductFilterVariables } from "@dashboard/searches/types";
 import { FetchMoreProps, RelayToFlat, ReorderEvent } from "@dashboard/types";
 import createMultiselectChangeHandler from "@dashboard/utils/handlers/multiselectChangeHandler";
 import createSingleAutocompleteSelectHandler from "@dashboard/utils/handlers/singleAutocompleteSelectChangeHandler";
@@ -68,7 +69,7 @@ import { useMultipleRichText } from "@dashboard/utils/richText/useMultipleRichTe
 import useRichText from "@dashboard/utils/richText/useRichText";
 import { OutputData } from "@editorjs/editorjs";
 import { Option } from "@saleor/macaw-ui-next";
-import { Dispatch, ReactNode, SetStateAction, useEffect, useState } from "react";
+import { Dispatch, ReactNode, SetStateAction, useCallback, useEffect, useState } from "react";
 import { useIntl } from "react-intl";
 
 import { ProductStockFormsetData, ProductStockInput } from "../ProductStocks";
@@ -126,6 +127,7 @@ export interface ProductCreateHandlers
   fetchReferences: (value: string) => void;
   fetchMoreReferences: FetchMoreProps;
   selectAttributeReferenceAdditionalData: FormsetAdditionalDataChange<AttributeValuesMetadata[]>;
+  changeReferenceFilters: (filters: ReferenceProductFilterVariables) => void;
 }
 interface UseProductCreateFormOutput
   extends CommonUseFormResultWithHandlers<ProductCreateData, ProductCreateHandlers>,
@@ -161,6 +163,7 @@ interface UseProductCreateFormOpts
   assignReferencesAttributeId?: string;
   selectedProductType?: ProductTypeQuery["productType"];
   onSelectProductType: (productTypeId: string) => void;
+  setReferenceProductFilters?: (filters: ReferenceProductFilterVariables) => void;
 }
 
 interface ProductCreateFormProps extends UseProductCreateFormOpts {
@@ -267,6 +270,12 @@ function useProductCreateForm(
     opts.fetchMoreReferenceProducts,
     opts.fetchMoreReferenceCategories,
     opts.fetchMoreReferenceCollections,
+  );
+  const handleReferenceFiltersChange = useCallback(
+    (filters: ReferenceProductFilterVariables) => {
+      opts.setReferenceProductFilters?.(filters);
+    },
+    [opts.setReferenceProductFilters],
   );
   const handleAttributeFileChange = createAttributeFileChangeHandler(
     attributes.change,
@@ -435,6 +444,7 @@ function useProductCreateForm(
       selectCollection: handleCollectionSelect,
       selectProductType: handleProductTypeSelect,
       selectTaxClass: handleTaxClassSelect,
+      changeReferenceFilters: handleReferenceFiltersChange,
     },
     submit,
     isSaveDisabled,

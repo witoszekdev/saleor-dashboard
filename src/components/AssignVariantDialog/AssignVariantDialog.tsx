@@ -1,7 +1,14 @@
+import {
+  ConditionalProductDialogFilterProvider,
+  useConditionalFilterContext,
+} from "@dashboard/components/ConditionalFilter";
+import { createProductQueryVariables } from "@dashboard/components/ConditionalFilter/queryVariables";
 import { ConfirmButtonTransitionState } from "@dashboard/components/ConfirmButton";
 import { DashboardModal } from "@dashboard/components/Modal";
-import { SearchProductsQuery } from "@dashboard/graphql";
+import { ProductWhereInput, SearchProductsQuery } from "@dashboard/graphql";
+import { ReferenceProductFilterVariables } from "@dashboard/searches/types";
 import { Container, DialogProps, FetchMoreProps, RelayToFlat } from "@dashboard/types";
+import { useEffect } from "react";
 import { FormattedMessage } from "react-intl";
 
 import { AssignContainerDialogProps } from "../AssignContainerDialog";
@@ -18,12 +25,34 @@ interface AssignVariantDialogProps extends FetchMoreProps, DialogProps {
   labels?: Partial<AssignContainerDialogProps["labels"]>;
   selectionMode?: "single" | "multiple";
   selectedId?: string;
+  enableFilters?: boolean;
+  onFilterChange?: (variables: ReferenceProductFilterVariables) => void;
 }
 
-const AssignVariantDialog = (props: AssignVariantDialogProps) => {
-  const { selectionMode = "multiple", ...restProps } = props;
+const AssignVariantDialogContent = (props: AssignVariantDialogProps) => {
+  const {
+    selectionMode = "multiple",
+    enableFilters = false,
+    onFilterChange,
+    onClose,
+    open,
+    ...restProps
+  } = props;
+  const { valueProvider } = useConditionalFilterContext();
 
-  const { open, onClose } = props;
+  useEffect(() => {
+    if (!enableFilters || !onFilterChange) {
+      return;
+    }
+
+    const queryVars = createProductQueryVariables(valueProvider.value);
+    const { channel, ...whereFilters } = queryVars;
+    const hasWhereFilters = Object.keys(whereFilters).length > 0;
+    const where = hasWhereFilters ? (whereFilters as ProductWhereInput) : undefined;
+    const channelSlug = channel?.eq;
+
+    onFilterChange({ where, channel: channelSlug });
+  }, [enableFilters, onFilterChange, valueProvider.value]);
 
   const handleClose = () => {
     onClose();
@@ -37,12 +66,30 @@ const AssignVariantDialog = (props: AssignVariantDialogProps) => {
         </DashboardModal.Header>
 
         {selectionMode === "single" ? (
-          <AssignVariantDialogSingle {...restProps} />
+          <AssignVariantDialogSingle
+            enableFilters={enableFilters}
+            onClose={onClose}
+            open={open}
+            {...restProps}
+          />
         ) : (
-          <AssignVariantDialogMulti {...restProps} />
+          <AssignVariantDialogMulti
+            enableFilters={enableFilters}
+            onClose={onClose}
+            open={open}
+            {...restProps}
+          />
         )}
       </DashboardModal.Content>
     </DashboardModal>
+  );
+};
+
+const AssignVariantDialog = (props: AssignVariantDialogProps) => {
+  return (
+    <ConditionalProductDialogFilterProvider>
+      <AssignVariantDialogContent {...props} />
+    </ConditionalProductDialogFilterProvider>
   );
 };
 

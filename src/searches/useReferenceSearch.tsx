@@ -1,8 +1,14 @@
 import { DEFAULT_INITIAL_SEARCH_DATA } from "@dashboard/config";
-import { AttributeDetailsFragment, VariantAttributeFragment } from "@dashboard/graphql";
+import {
+  AttributeDetailsFragment,
+  ProductWhereInput,
+  VariantAttributeFragment,
+} from "@dashboard/graphql";
 import usePageSearch from "@dashboard/searches/usePageSearch";
 import useProductSearch from "@dashboard/searches/useProductSearch";
-import { useMemo } from "react";
+import { useCallback, useMemo, useState } from "react";
+
+import { ReferenceProductFilterVariables } from "./types";
 
 enum ReferenceType {
   ProductType = "ProductType",
@@ -37,17 +43,59 @@ const buildReferenceSearchVariables = (
   ...(allowedIds?.length ? { where: { [whereKey]: { oneOf: allowedIds } } } : {}),
 });
 
+const mergeWhereInputs = (
+  baseWhere?: ProductWhereInput,
+  filters?: ProductWhereInput,
+): ProductWhereInput | undefined => {
+  if (!baseWhere) {
+    return filters;
+  }
+
+  if (!filters) {
+    return baseWhere;
+  }
+
+  return {
+    AND: [baseWhere, filters],
+  };
+};
+
 export const useReferenceProductSearch = (refAttr: AttributeWithReferenceTypes | undefined) => {
   const ids = useMemo(
     () => getAllowedReferenceTypeIds(refAttr, ReferenceType.ProductType),
     [refAttr],
   );
-  const variables = useMemo(
+  const baseVariables = useMemo(
     () => buildReferenceSearchVariables(ids, ReferenceWhereKey.ProductType),
     [ids],
   );
 
-  return useProductSearch({ variables });
+  const [filters, setFilters] = useState<ProductWhereInput | undefined>();
+  const [channel, setChannel] = useState<string | undefined>();
+
+  const variables = useMemo(
+    () => ({
+      ...baseVariables,
+      where: mergeWhereInputs(baseVariables.where as ProductWhereInput | undefined, filters),
+      channel: channel ?? (baseVariables as { channel?: string }).channel,
+    }),
+    [baseVariables, filters, channel],
+  );
+
+  const searchHook = useProductSearch({ variables });
+
+  const setFilterVariables = useCallback(
+    ({ where, channel: channelSlug }: ReferenceProductFilterVariables) => {
+      setFilters(where);
+      setChannel(channelSlug);
+    },
+    [],
+  );
+
+  return {
+    ...searchHook,
+    setFilterVariables,
+  };
 };
 
 export const useReferencePageSearch = (refAttr: AttributeWithReferenceTypes | undefined) => {

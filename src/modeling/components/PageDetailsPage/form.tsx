@@ -46,6 +46,7 @@ import {
 import { createPageTypeSelectHandler } from "@dashboard/modeling/utils/handlers";
 import { validatePageCreateData } from "@dashboard/modeling/utils/validation";
 import { AttributeValuesMetadata } from "@dashboard/products/utils/data";
+import { ReferenceProductFilterVariables } from "@dashboard/searches/types";
 import { FetchMoreProps, RelayToFlat, ReorderEvent } from "@dashboard/types";
 import getPublicationData from "@dashboard/utils/data/getPublicationData";
 import { mapMetadataItemToInput } from "@dashboard/utils/maps";
@@ -55,7 +56,7 @@ import { RichTextContext } from "@dashboard/utils/richText/context";
 import { useMultipleRichText } from "@dashboard/utils/richText/useMultipleRichText";
 import useRichText from "@dashboard/utils/richText/useRichText";
 import { OutputData } from "@editorjs/editorjs";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import * as React from "react";
 
 export interface PageFormData extends MetadataFormData {
@@ -89,6 +90,7 @@ export interface PageUpdateHandlers {
   reorderAttributeValue: FormsetChange<ReorderEvent>;
   fetchReferences: (value: string) => void;
   fetchMoreReferences: FetchMoreProps;
+  changeReferenceFilters: (filters: ReferenceProductFilterVariables) => void;
 }
 
 interface UsePageUpdateFormOutput
@@ -117,6 +119,7 @@ interface UsePageFormOpts {
   assignReferencesAttributeId?: string;
   selectedPageType?: PageDetailsFragment["pageType"];
   onSelectPageType: (pageTypeId: string) => void;
+  setReferenceProductFilters?: (filters: ReferenceProductFilterVariables) => void;
 }
 
 interface PageFormProps extends UsePageFormOpts {
@@ -211,6 +214,12 @@ function usePageForm(
     opts.fetchMoreReferenceProducts,
     opts.fetchMoreReferenceCategories,
     opts.fetchMoreReferenceCollections,
+  );
+  const handleReferenceFiltersChange = useCallback(
+    (filters: ReferenceProductFilterVariables) => {
+      opts.setReferenceProductFilters?.(filters);
+    },
+    [opts.setReferenceProductFilters],
   );
   const handleAttributeFileChange = createAttributeFileChangeHandler(
     attributes.change,
@@ -307,6 +316,7 @@ function usePageForm(
       selectAttributeReference: handleAttributeReferenceChange,
       selectAttributeReferenceAdditionalData: handleAttributeMetadataChange,
       selectPageType: handlePageTypeSelect,
+      changeReferenceFilters: handleReferenceFiltersChange,
     },
     submit,
     isSaveDisabled,

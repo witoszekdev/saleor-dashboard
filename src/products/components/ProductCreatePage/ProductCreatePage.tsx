@@ -36,6 +36,7 @@ import { ProductVariantPrice } from "@dashboard/products/components/ProductVaria
 import { ProductCreateUrlQueryParams, productListUrl } from "@dashboard/products/urls";
 import { getChoices } from "@dashboard/products/utils/data";
 import { getChoicesWithAncestors } from "@dashboard/products/utils/utils";
+import { ReferenceProductFilterVariables } from "@dashboard/searches/types";
 import { Container } from "@dashboard/types";
 import { mapEdgesToItems } from "@dashboard/utils/maps";
 import { Box, Option } from "@saleor/macaw-ui-next";
@@ -94,6 +95,7 @@ interface ProductCreatePageProps {
   fetchMoreReferenceProducts?: FetchMoreProps;
   fetchMoreReferenceCategories?: FetchMoreProps;
   fetchMoreReferenceCollections?: FetchMoreProps;
+  setReferenceProductFilters?: (filters: ReferenceProductFilterVariables) => void;
   onAttributeSelectBlur: () => void;
   onCloseDialog: (currentParams?: ProductCreateUrlQueryParams) => void;
   onSelectProductType: (productTypeId: string) => void;
@@ -143,6 +145,7 @@ const ProductCreatePage = ({
   fetchReferenceCategories,
   fetchMoreReferenceCategories,
   fetchReferenceCollections,
+  setReferenceProductFilters,
   fetchMoreReferenceCollections,
   fetchAttributeValues,
   fetchMoreAttributeValues,
@@ -209,6 +212,7 @@ const ProductCreatePage = ({
       fetchMoreReferencePages={fetchMoreReferencePages}
       fetchReferenceProducts={fetchReferenceProducts}
       fetchMoreReferenceProducts={fetchMoreReferenceProducts}
+      setReferenceProductFilters={setReferenceProductFilters}
       fetchReferenceCategories={fetchReferenceCategories}
       fetchMoreReferenceCategories={fetchMoreReferenceCategories}
       fetchReferenceCollections={fetchReferenceCollections}
@@ -398,6 +402,8 @@ const ProductCreatePage = ({
                 onFetchMore={handlers.fetchMoreReferences?.onFetchMore}
                 loading={handlers.fetchMoreReferences?.loading}
                 onClose={closeDialog}
+                enableFilters
+                onFilterChange={handlers.changeReferenceFilters}
                 onSubmit={attributeValues =>
                   handleAssignReferenceAttribute(attributeValues, data, handlers)
                 }

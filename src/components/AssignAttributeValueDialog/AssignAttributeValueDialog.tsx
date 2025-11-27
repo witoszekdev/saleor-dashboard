@@ -77,6 +77,8 @@ const AssignAttributeValueDialog = ({
   categories,
   attribute,
   labels,
+  enableFilters: enableProductFilters,
+  onFilterChange: onProductFilterChange,
   ...rest
 }: AssignAttributeValueDialogProps) => {
   const intl = useIntl();
@@ -111,6 +113,8 @@ const AssignAttributeValueDialog = ({
       return (
         <AssignProductDialog
           products={filteredProducts ?? []}
+          enableFilters={enableProductFilters}
+          onFilterChange={onProductFilterChange}
           {...getSingleOrMultipleDialogProps(attribute)}
           {...rest}
         />
@@ -119,6 +123,8 @@ const AssignAttributeValueDialog = ({
       return (
         <AssignVariantDialog
           products={filteredProducts}
+          enableFilters={enableProductFilters}
+          onFilterChange={onProductFilterChange}
           {...getSingleOrMultipleDialogProps(attribute)}
           {...rest}
         />

@@ -31,6 +31,7 @@ import {
   getProductUpdatePageFormData,
 } from "@dashboard/products/utils/data";
 import { PRODUCT_UPDATE_FORM_ID } from "@dashboard/products/views/ProductUpdate/consts";
+import { ReferenceProductFilterVariables } from "@dashboard/searches/types";
 import createMultiselectChangeHandler from "@dashboard/utils/handlers/multiselectChangeHandler";
 import createSingleAutocompleteSelectHandler from "@dashboard/utils/handlers/singleAutocompleteSelectChangeHandler";
 import getMetadata from "@dashboard/utils/metadata/getMetadata";
@@ -171,6 +172,12 @@ export function useProductUpdateForm(
     opts.setSelectedTaxClass,
     opts.taxClasses,
   );
+  const handleReferenceFiltersChange = useCallback(
+    (filters: ReferenceProductFilterVariables) => {
+      opts.setReferenceProductFilters?.(filters);
+    },
+    [opts.setReferenceProductFilters],
+  );
   const changeMetadata = makeMetadataChangeHandler(handleChange);
   const data: ProductUpdateData = {
     ...formData,
@@ -294,6 +301,7 @@ export function useProductUpdateForm(
       selectCategory: handleCategorySelect,
       selectCollection: handleCollectionSelect,
       selectTaxClass: handleTaxClassSelect,
+      changeReferenceFilters: handleReferenceFiltersChange,
       updateChannelList: handleChannelListUpdate,
     },
     submit,

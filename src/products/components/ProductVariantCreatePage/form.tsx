@@ -52,10 +52,11 @@ import {
   getChannelsInput,
 } from "@dashboard/products/utils/handlers";
 import { validateProductVariant } from "@dashboard/products/utils/validation";
+import { ReferenceProductFilterVariables } from "@dashboard/searches/types";
 import { FetchMoreProps, RelayToFlat, ReorderEvent } from "@dashboard/types";
 import useMetadataChangeTrigger from "@dashboard/utils/metadata/useMetadataChangeTrigger";
 import { useMultipleRichText } from "@dashboard/utils/richText/useMultipleRichText";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import * as React from "react";
 import { useIntl } from "react-intl";
 
@@ -98,6 +99,7 @@ interface UseProductVariantCreateFormOpts {
   fetchReferenceCollections?: (data: string) => void;
   fetchMoreReferenceCollections?: FetchMoreProps;
   assignReferencesAttributeId?: string;
+  setReferenceProductFilters?: (filters: ReferenceProductFilterVariables) => void;
 }
 
 export interface ProductVariantCreateHandlers
@@ -116,6 +118,7 @@ export interface ProductVariantCreateHandlers
   fetchReferences: (value: string) => void;
   fetchMoreReferences: FetchMoreProps;
   selectAttributeReferenceAdditionalData: FormsetAdditionalDataChange<AttributeValuesMetadata[]>;
+  changeReferenceFilters: (filters: ReferenceProductFilterVariables) => void;
 }
 
 interface UseProductVariantCreateFormOutput
@@ -210,6 +213,12 @@ function useProductVariantCreateForm(
     opts.fetchMoreReferenceProducts,
     opts.fetchMoreReferenceCategories,
     opts.fetchMoreReferenceCollections,
+  );
+  const handleReferenceFiltersChange = useCallback(
+    (filters: ReferenceProductFilterVariables) => {
+      opts.setReferenceProductFilters?.(filters);
+    },
+    [opts.setReferenceProductFilters],
   );
   const handleAttributeFileChange = createAttributeFileChangeHandler(
     attributes.change,
@@ -321,6 +330,7 @@ function useProductVariantCreateForm(
       selectAttributeMultiple: handleAttributeMultiChange,
       selectAttributeReference: handleAttributeReferenceChange,
       selectAttributeReferenceAdditionalData: handleAttributeMetadataChange,
+      changeReferenceFilters: handleReferenceFiltersChange,
     },
     submit,
     isSaveDisabled,

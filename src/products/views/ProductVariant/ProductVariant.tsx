@@ -244,6 +244,7 @@ const ProductVariant = ({ variantId, params }: ProductUpdateProps) => {
     loadMore: loadMoreProducts,
     search: searchProducts,
     result: searchProductsOpts,
+    setFilterVariables: setProductReferenceFilters,
   } = useReferenceProductSearch(refAttr);
 
   const {
@@ -338,6 +339,7 @@ const ProductVariant = ({ variantId, params }: ProductUpdateProps) => {
         fetchMoreReferencePages={fetchMoreReferencePages}
         fetchReferenceProducts={searchProducts}
         fetchMoreReferenceProducts={fetchMoreReferenceProducts}
+        setReferenceProductFilters={setProductReferenceFilters}
         fetchReferenceCategories={searchCategories}
         fetchMoreReferenceCategories={fetchMoreReferenceCategories}
         fetchReferenceCollections={searchCollections}
